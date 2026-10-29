@@ -1,0 +1,114 @@
+{
+  "verified_at": "2026-10-25T03:22:19.250589+08:00",
+  "scope": "Only ACP jobs and supervised CCI/DNAT used for this SuperMimic reproduction;not a claim about all workspace resources",
+  "resource_release_verified": true,
+  "method": "SenseCore visible console terminal states and empty CCI instance list;DNAT row unbound",
+  "acp_jobs": [
+    {
+      "name": "supermimic-prep-[account]-1024a",
+      "uid": "59fb8038f71e4724bfb159752f53cdb2",
+      "status": "已停止",
+      "gpu_count": 0
+    },
+    {
+      "name": "supermimic-net-[account]-1024a",
+      "uid": "0d88d01b7e4540dd99f2a1c5c27575ac",
+      "status": "成功",
+      "gpu_count": 0
+    },
+    {
+      "name": "supermimic-prep-[account]-1024b",
+      "uid": "9b3211f26b1e43d8993b49e1f5ea50d6",
+      "status": "已停止",
+      "gpu_count": 0
+    },
+    {
+      "name": "supermimic-prep-[account]-1024c",
+      "uid": "747451fe8a1242fca806f7c750d71592",
+      "status": "失败",
+      "gpu_count": 0
+    },
+    {
+      "name": "supermimic-check-[account]-1025d",
+      "uid": "8f96601d12a74295affca30f06664ee5",
+      "status": "success",
+      "gpu_count": 0
+    },
+    {
+      "name": "supermimic-smoke-[account]-1025a",
+      "uid": "58ac8965c8ae464e8c3e33f2975c63c7",
+      "status": "success",
+      "gpu_count": 1
+    },
+    {
+      "name": "supermimic-read-[account]-1025e",
+      "uid": "befab8a530cc43ad8cc9f8a916a3f64a",
+      "status": "success",
+      "gpu_count": 0
+    },
+    {
+      "name": "supermimic-lafan1-[account]-1025b",
+      "uid": "326031cb98534e689683959ff28ad7aa",
+      "status": "success",
+      "gpu_count": 1
+    },
+    {
+      "name": "supermimic-progress-[account]-1025f",
+      "uid": "4c512e516ceb4337b0f8ba315fe32806",
+      "status": "success",
+      "gpu_count": 0
+    }
+  ],
+  "cci": {
+    "name": "midi-native-prep-[account]",
+    "uid": "21cd0ad52d104386bb572414d99249d1",
+    "cluster": "debug_cluster",
+    "state": "已停止",
+    "replicas": "0/1",
+    "instance_rows": 0,
+    "original_startup_command_restored_exact": true,
+    "original_command_bytes": 1651,
+    "original_command_sha256": "2c81f1b1fc679c393562231dcb6ab0d7b24532c1b959375eaebf138fe149d6f4",
+    "configured_gpus": 0,
+    "actual_cpu_max": "200000 100000",
+    "actual_memory_max": 8589934592,
+    "outer_spec_label_not_actual_cgroup": true,
+    "school_stop_helper_available": false,
+    "manual_console_stop_verified": true
+  },
+  "dnat": {
+    "name": "dnat-zhicheng-fb300263",
+    "state": "未绑定",
+    "external_port": 10076,
+    "target_instance": null,
+    "target_ip": null,
+    "target_port": null
+  },
+  "results_ssh": {
+    "fingerprint": "SHA256:gfmT+vhKapffEsJPsSt9mzx9ELYMD6tYeFgbrWKkbfU",
+    "compared_against": "current trusted CCI console log before accepting host",
+    "strict_host_checking": true,
+    "computing_node_ssh_used": false,
+    "transfer_processes_complete": true
+  },
+  "screenshots": {
+    "resource-final-acp.jpg": {
+      "bytes": 115103,
+      "sha256": "74be0f601cce5cef088e3f530986c190ffa04e54e0d3006ab799bd5950fcfea5"
+    },
+    "resource-final-cci.jpg": {
+      "bytes": 146927,
+      "sha256": "fd76b8f48c92820e3484ae1b37283a8c43c4d7cf6b6e54bdb46f1915f26f2f36"
+    },
+    "resource-final-dnat.jpg": {
+      "bytes": 99277,
+      "sha256": "96dabe9a20b94c7a85a3b31b65214dccc1b93fb5e071cbf5d34b736fc2f6b484"
+    }
+  },
+  "temporary_config_backups_removed_after_exact_restore": [
+    "[local]/private-cci-original-startup.txt",
+    "[local]/supermimic-cci-original-20261025.txt"
+  ],
+  "cloud_result_summary_preserved": "resource_release_verified=false was recorded before cleanup;frozen source files not rewritten",
+  "cloud_data_deleted": false
+}

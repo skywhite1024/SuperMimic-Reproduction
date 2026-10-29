@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "iteration": 12000,
+  "sim_steps": 123142144,
+  "state_hashes": {
+    "wm": "ca4979ec1f5ebb128e86e75f2f9c10f4c448548b9c63d084d0a3a6fabafc6d3b",
+    "pi": "44ae108488382271aa1c283d3a0c533eddfce795878c0d5335b1fb8093f1d2e7",
+    "critic": "f25606b694537eee18bde82063b887c0e5a71cdafab291613b57ea127ef79c66",
+    "opt_wm": "ab6f08b4382556a12abed328aa88bb90297c0d8a7b2ec0870d4ba0958c9bdd36",
+    "opt_pi": "1b23700188db4b9e0a30dfc0c5e21ff31525064bf5ce05b5a4398145151a0270",
+    "opt_v": "5b728ded91ef024744020a8eaa56bb09f4f760a91a6c54a4b2c2f816042926a8"
+  },
+  "full_optimizer_moments_checked": true,
+  "replay_size_before_rewarm": 0,
+  "first_iteration_lr": 0.00019889921923957766,
+  "rng_and_replay_bit_exact": false
+}

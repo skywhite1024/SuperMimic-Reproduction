@@ -1,0 +1,185 @@
+{
+  "frozen_at": "2026-10-27T10:04:50.218662+00:00",
+  "repository": "https://github.com/lez666/chunwan-flip",
+  "commit": "c493a897f2ca81153e980a65ee6f0faf7cb07487",
+  "csv_count_actual": 15,
+  "readme_count_claim_reported": 16,
+  "readme_and_actual_count_discrepancy": true,
+  "source_contract_to_verify": {
+    "fps": 30,
+    "columns": 36,
+    "root_position_units": "metres",
+    "up_axis": "Z",
+    "quaternion_order": "xyzw",
+    "joint_order": "Unitree G1 SDK 29 joints"
+  },
+  "BONES_route": "paused; no BONES files requested",
+  "files": [
+    {
+      "path": "data/143_34_stageii_unitree_g1.csv",
+      "git_blob": "3e843abfbb603ded86dbcd7579649d407e345a09",
+      "bytes": 357949,
+      "sha256": "e6e539638e9a07881b92088f170813ada16b94a3d40a7bd600a057681debb969",
+      "training_status_before_phase": "not_trained",
+      "unified_policy_acceptance": "not_evaluated",
+      "single_clip_018000_acceptance": "not_evaluated",
+      "semantics_status": "pending_primary_source_audit",
+      "source_url": "https://github.com/lez666/chunwan-flip/blob/c493a897f2ca81153e980a65ee6f0faf7cb07487/data/143_34_stageii_unitree_g1.csv"
+    },
+    {
+      "path": "data/85_06_stageii_unitree_g1.csv",
+      "git_blob": "c1eb4eec3dc431d550c7391d40b6970eb622f2b5",
+      "bytes": 216405,
+      "sha256": "7ba8cfc8526355b8e654152d7067626902b4557153ca8142df3bd4d6ff50ffad",
+      "training_status_before_phase": "not_trained",
+      "unified_policy_acceptance": "not_evaluated",
+      "single_clip_018000_acceptance": "not_evaluated",
+      "semantics_status": "pending_primary_source_audit",
+      "source_url": "https://github.com/lez666/chunwan-flip/blob/c493a897f2ca81153e980a65ee6f0faf7cb07487/data/85_06_stageii_unitree_g1.csv"
+    },
+    {
+      "path": "data/85_07_stageii_unitree_g1.csv",
+      "git_blob": "df49542028687109beee7581870dc13c3dfcc8a0",
+      "bytes": 218290,
+      "sha256": "ac3e6ceefa302f6ae39234029b33ef75f893389aac54c401313232c1f45e65e0",
+      "training_status_before_phase": "not_trained",
+      "unified_policy_acceptance": "not_evaluated",
+      "single_clip_018000_acceptance": "not_evaluated",
+      "semantics_status": "pending_primary_source_audit",
+      "source_url": "https://github.com/lez666/chunwan-flip/blob/c493a897f2ca81153e980a65ee6f0faf7cb07487/data/85_07_stageii_unitree_g1.csv"
+    },
+    {
+      "path": "data/88_03_stageii_unitree_g1.csv",
+      "git_blob": "17929d2b19372af60760a3eb5109eac82a85ef4d",
+      "bytes": 80157,
+      "sha256": "effe560fa1e6f234127860ce4345a024b0723033b15a175b0eb26c25e53ac04f",
+      "training_status_before_phase": "not_trained",
+      "unified_policy_acceptance": "not_evaluated",
+      "single_clip_018000_acceptance": "not_evaluated",
+      "semantics_status": "pending_primary_source_audit",
+      "source_url": "https://github.com/lez666/chunwan-flip/blob/c493a897f2ca81153e980a65ee6f0faf7cb07487/data/88_03_stageii_unitree_g1.csv"
+    },
+    {
+      "path": "data/88_06_stageii_unitree_g1.csv",
+      "git_blob": "5b01496ace921a39dceeadd92a9a198ffb02af8c",
+      "bytes": 104540,
+      "sha256": "9db50d28922734d13cc3b9c4ef0c93ac021ca21cc5fc0b0337ea71e0c0864280",
+      "training_status_before_phase": "not_trained",
+      "unified_policy_acceptance": "not_evaluated",
+      "single_clip_018000_acceptance": "not_evaluated",
+      "semantics_status": "pending_primary_source_audit",
+      "source_url": "https://github.com/lez666/chunwan-flip/blob/c493a897f2ca81153e980a65ee6f0faf7cb07487/data/88_06_stageii_unitree_g1.csv"
+    },
+    {
+      "path": "data/88_07_stageii_unitree_g1.csv",
+      "git_blob": "58ecad8227f173e24f5e100b10c8c69df3fb649e",
+      "bytes": 70525,
+      "sha256": "b8cfbb0470486e625bcc3b840fa33437c333ebe3a9fef8ef83655f07dbc7cc7d",
+      "training_status_before_phase": "not_trained",
+      "unified_policy_acceptance": "not_evaluated",
+      "single_clip_018000_acceptance": "not_evaluated",
+      "semantics_status": "pending_primary_source_audit",
+      "source_url": "https://github.com/lez666/chunwan-flip/blob/c493a897f2ca81153e980a65ee6f0faf7cb07487/data/88_07_stageii_unitree_g1.csv"
+    },
+    {
+      "path": "data/88_08_stageii_unitree_g1.csv",
+      "git_blob": "8e477657ff4fdc61ef4fc44466ceeb3f0052eb07",
+      "bytes": 131459,
+      "sha256": "35d1e39cfdb18e8f644752add1d24ce1e4616b0eb735ecd256bb6a647113884d",
+      "training_status_before_phase": "trained_single_clip_specialist",
+      "unified_policy_acceptance": "not_evaluated",
+      "single_clip_018000_acceptance": "passed_original_inversion_upright_gate",
+      "semantics_status": "pending_primary_source_audit",
+      "source_url": "https://github.com/lez666/chunwan-flip/blob/c493a897f2ca81153e980a65ee6f0faf7cb07487/data/88_08_stageii_unitree_g1.csv"
+    },
+    {
+      "path": "data/88_09_stageii_unitree_g1.csv",
+      "git_blob": "1e08ba8b9743a72bde119a0de3d16f859b6e0abd",
+      "bytes": 171478,
+      "sha256": "1a8150467b7d97cee4e846dcbcf095c94edb7304125913b8b5b95e3a2984a86a",
+      "training_status_before_phase": "not_trained",
+      "unified_policy_acceptance": "not_evaluated",
+      "single_clip_018000_acceptance": "not_evaluated",
+      "semantics_status": "pending_primary_source_audit",
+      "source_url": "https://github.com/lez666/chunwan-flip/blob/c493a897f2ca81153e980a65ee6f0faf7cb07487/data/88_09_stageii_unitree_g1.csv"
+    },
+    {
+      "path": "data/88_10_stageii_unitree_g1.csv",
+      "git_blob": "58172add0e896c271c26c74771341c2c4d6260b1",
+      "bytes": 212900,
+      "sha256": "de0ed92338ca289c79566a44b3851b6339a902831ddce3c332f8ded71771ba6a",
+      "training_status_before_phase": "not_trained",
+      "unified_policy_acceptance": "not_evaluated",
+      "single_clip_018000_acceptance": "not_evaluated",
+      "semantics_status": "pending_primary_source_audit",
+      "source_url": "https://github.com/lez666/chunwan-flip/blob/c493a897f2ca81153e980a65ee6f0faf7cb07487/data/88_10_stageii_unitree_g1.csv"
+    },
+    {
+      "path": "data/88_11_stageii_unitree_g1.csv",
+      "git_blob": "e906113b483fc6b264b8d299c60ab95b6ad305f8",
+      "bytes": 928475,
+      "sha256": "65e3f1f3705fb67a9a99d11883f4d782e273d583f119db24003a3f06ad67bebb",
+      "training_status_before_phase": "not_trained",
+      "unified_policy_acceptance": "not_evaluated",
+      "single_clip_018000_acceptance": "not_evaluated",
+      "semantics_status": "pending_primary_source_audit",
+      "source_url": "https://github.com/lez666/chunwan-flip/blob/c493a897f2ca81153e980a65ee6f0faf7cb07487/data/88_11_stageii_unitree_g1.csv"
+    },
+    {
+      "path": "data/89_01_stageii_unitree_g1.csv",
+      "git_blob": "f4afdd987787b71314ca2314e82ed8b7ef21661c",
+      "bytes": 1066626,
+      "sha256": "b40a494abfd397f6e69c56af1964b202c55ff34d81f8d88d7363601b11af68bb",
+      "training_status_before_phase": "not_trained",
+      "unified_policy_acceptance": "not_evaluated",
+      "single_clip_018000_acceptance": "not_evaluated",
+      "semantics_status": "pending_primary_source_audit",
+      "source_url": "https://github.com/lez666/chunwan-flip/blob/c493a897f2ca81153e980a65ee6f0faf7cb07487/data/89_01_stageii_unitree_g1.csv"
+    },
+    {
+      "path": "data/90_08_stageii_unitree_g1.csv",
+      "git_blob": "0d1eedb493fd3b39604eb1e5b67040a5a4d5dd2a",
+      "bytes": 153130,
+      "sha256": "a78ccc948537be58585e292915a08f481e4a9c21a19377d4b8c6ecb74dbf123b",
+      "training_status_before_phase": "not_trained",
+      "unified_policy_acceptance": "not_evaluated",
+      "single_clip_018000_acceptance": "not_evaluated",
+      "semantics_status": "pending_primary_source_audit",
+      "source_url": "https://github.com/lez666/chunwan-flip/blob/c493a897f2ca81153e980a65ee6f0faf7cb07487/data/90_08_stageii_unitree_g1.csv"
+    },
+    {
+      "path": "data/90_14_stageii_unitree_g1.csv",
+      "git_blob": "29c194a3c3b645c0da07da48c7513316ebe3f91a",
+      "bytes": 190976,
+      "sha256": "a2433a4431140eb1e06566a4e3d6990697b9f676afdee56965409ed77fdb9bfd",
+      "training_status_before_phase": "not_trained",
+      "unified_policy_acceptance": "not_evaluated",
+      "single_clip_018000_acceptance": "not_evaluated",
+      "semantics_status": "pending_primary_source_audit",
+      "source_url": "https://github.com/lez666/chunwan-flip/blob/c493a897f2ca81153e980a65ee6f0faf7cb07487/data/90_14_stageii_unitree_g1.csv"
+    },
+    {
+      "path": "data/90_15_stageii_unitree_g1.csv",
+      "git_blob": "2f79dad11fbdc80c8d664c242ecceb9c10a0fda0",
+      "bytes": 271721,
+      "sha256": "eefb7ce4c23c32eba51586f9ae41dd942b627a404b58cb07c2d0c4a20278083a",
+      "training_status_before_phase": "not_trained",
+      "unified_policy_acceptance": "not_evaluated",
+      "single_clip_018000_acceptance": "not_evaluated",
+      "semantics_status": "pending_primary_source_audit",
+      "source_url": "https://github.com/lez666/chunwan-flip/blob/c493a897f2ca81153e980a65ee6f0faf7cb07487/data/90_15_stageii_unitree_g1.csv"
+    },
+    {
+      "path": "data/90_19_stageii_unitree_g1.csv",
+      "git_blob": "edb8786b7b4fffa8c59a5ad1afc5e98ad1b6ea22",
+      "bytes": 237828,
+      "sha256": "4f0d75d03c9260351817082457d70c58b8f248eadb298b062316344cc055ac09",
+      "training_status_before_phase": "not_trained",
+      "unified_policy_acceptance": "not_evaluated",
+      "single_clip_018000_acceptance": "not_evaluated",
+      "semantics_status": "pending_primary_source_audit",
+      "source_url": "https://github.com/lez666/chunwan-flip/blob/c493a897f2ca81153e980a65ee6f0faf7cb07487/data/90_19_stageii_unitree_g1.csv"
+    }
+  ],
+  "denominator_policy": "All frozen CSVs retained in manifest, including unsuitable or failed references. No unrecorded filtering."
+}

@@ -1,0 +1,21 @@
+{
+  "status": "complete_archive_verified_CCI_stopped_empty_DNAT_unbound_original_command_restored",
+  "label": "stage3-4000",
+  "prepared_at": "2026-10-27T16:20:28.055180+00:00",
+  "deadline_epoch": 1793119828,
+  "deadline_at": "2026-10-28T00:50:28+08:00",
+  "gpu_count": 0,
+  "cpu_cores": 2,
+  "memory_gib": 8,
+  "script_sha256": "cb86bba78fb0b5912ebcd820c0fe19435bfaa78a632cf950a585dec0fb2d2902",
+  "command_sha256": "845637349cc2debe0842ac9a17cb33f5fec7e537ebaf9c9accc82b5a59cfdd3c",
+  "application": "midi-native-prep-[account]",
+  "uid": "21cd0ad52d104386bb572414d99249d1",
+  "manual_attended_stop_empty_instances_and_DNAT_unbind_required": true,
+  "fresh_original_command_backup_before_change_required": true,
+  "program_exit_does_not_release_CCI": true,
+  "original_command_restoration_and_published_hash_readback_required": true,
+  "trusted_console_public_host_key_and_fingerprint_required_before_strict_SSH": true,
+  "completed_at": "2026-10-28T00:48:34.260607+08:00",
+  "final_resource_verification": "evidence/final-resource-verification-stage3.json"
+}

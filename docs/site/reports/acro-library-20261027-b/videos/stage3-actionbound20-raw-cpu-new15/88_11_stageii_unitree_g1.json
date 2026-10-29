@@ -1,0 +1,23 @@
+{
+  "clip": "88_11_stageii_unitree_g1",
+  "file": "videos/stage3-actionbound20-raw-cpu-new15/88_11_stageii_unitree_g1.mp4",
+  "bytes": 11490304,
+  "sha256": "2f730da38c34e440ffee25c6def51b6773bd034f6c8098ef9de9b62a79639118",
+  "frames": 843,
+  "fps": 25,
+  "video_seconds": 33.72,
+  "physical_window_seconds": 33.7,
+  "complete_decode_passed": true,
+  "source_run": "stage3-actionbound20-raw-cpu-new15",
+  "only_retained_actual_physics_states_rendered": true,
+  "reference_display_offset_m": [
+    0,
+    1.5,
+    0
+  ],
+  "fog_disabled_for_failed_tail_visibility": true,
+  "reference_version_or_variant": "raw",
+  "original_hard_gate_passed": true,
+  "tracking_quality_passed": true,
+  "contact_sheet": "evidence/stage3-actionbound20-raw-cpu-new15-88_11_stageii_unitree_g1-contact-sheet.jpg"
+}

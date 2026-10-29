@@ -1,0 +1,29 @@
+{
+  "status": "archive_and_all_manifest_files_verified",
+  "verified_at": "2026-10-27T12:54:17.939672+00:00",
+  "archive_bytes": 720218317,
+  "archive_sha256": "56dc9d1072c6649ed3325a4cb14390e87a8f3f1c2631004fe1a85230c470f326",
+  "file_count": 44,
+  "cloud_source_preserved": true,
+  "published_run_policy_evidence": [
+    "evidence/checkpoint-inventory-4000.json",
+    "evidence/cloud-runtime-versions-4000.json",
+    "evidence/gpu-stage-4000.json",
+    "evidence/parent-18k-receipt.json",
+    "evidence/preparation-ready.json",
+    "policy/initial-18k-101d.pt",
+    "policy/unified-h100-4000.pt",
+    "runs/initial101d-cuda-all55/summary.json",
+    "runs/initial101d-cuda-all55/trajectory.npz",
+    "runs/unified-h100-4000/args.json",
+    "runs/unified-h100-4000/final-full.pt",
+    "runs/unified-h100-4000/proof.json",
+    "runs/unified-h100-4000/train_log.csv",
+    "runs/unified-h100-4000/train_log_schema.json",
+    "runs/unified-h100-4000/train_log_with_header.csv",
+    "runs/unified4000-cuda-all55/summary.json",
+    "runs/unified4000-cuda-all55/trajectory.npz"
+  ],
+  "archive": "downloaded\\unified4000\\unified-h100-4000-results.tar.gz",
+  "manual_resource_release_verified_separately": true
+}

@@ -1,0 +1,23 @@
+{
+  "summary": {
+    "source": "/mnt/afs/[account]/SuperMimic/interactive-g1-20261027-a/assets/acro-candidates/88_08_stageii_unitree_g1.csv",
+    "source_sha256": "35d1e39cfdb18e8f644752add1d24ce1e4616b0eb735ecd256bb6a647113884d",
+    "checkpoint": "/mnt/afs/[account]/SuperMimic/interactive-g1-20261027-a/runs/acro-h100-2000/final-full.pt",
+    "elapsed_seconds": 4.72,
+    "post_initialization_resets": 0,
+    "hard_failure_frames": 0,
+    "first_hard_failure_s": null,
+    "max_root_error_m": 0.44695788621902466,
+    "body_global_mean_m": 0.18185084551340533,
+    "inversion_observed": true,
+    "landing_last_half_second_upright": true,
+    "passed": true,
+    "reference_not_BONES": true,
+    "scope": "one new public acrobatic reference; reference-source claims and numerical audit in evidence/acro-candidate-audit.json",
+    "success_gate": "zero original hard-gate failures; robot Rzz<-0.5 during reference inversion; final 0.5s Rzz>0.8 and pelvis>0.55m; no resets"
+  },
+  "trajectory_bytes": 101576,
+  "trajectory_sha256": "79410e58006a383066f892993968320c45b24a335f230a093a63a16fd98b3ef9",
+  "chunks": 36,
+  "full_checkpoint_sha256": "fa2393c901488591c05f64c6f9c61ae918779159bf0d470aac3ffcfcc0b6beab"
+}

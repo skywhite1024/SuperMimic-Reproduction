@@ -1,0 +1,40 @@
+{
+  "best": {
+    "iteration": 16000,
+    "checkpoint": "/mnt/afs/[account]/SuperMimic/lafan1-20261024/experiments/continuation-20261025-a/policy/ckpt_016000.pt",
+    "checkpoint_sha256": "44d68af11306f839fe1b4b37cd042f1eae7df116adaabd69bd8db593a16d334e",
+    "result": "/mnt/afs/[account]/SuperMimic/lafan1-20261024/experiments/continuation-20261025-a/evaluations/016000.json",
+    "macro": 0.8474919199943542,
+    "frame_weighted": 0.8493778705596924,
+    "failed": [],
+    "n_failed": 0,
+    "wall_seconds": 359.819806560874,
+    "confirmation": false
+  },
+  "highest_macro": {
+    "iteration": 16000,
+    "checkpoint": "/mnt/afs/[account]/SuperMimic/lafan1-20261024/experiments/continuation-20261025-a/policy/ckpt_016000.pt",
+    "checkpoint_sha256": "44d68af11306f839fe1b4b37cd042f1eae7df116adaabd69bd8db593a16d334e",
+    "result": "/mnt/afs/[account]/SuperMimic/lafan1-20261024/experiments/continuation-20261025-a/evaluations/016000.json",
+    "macro": 0.8474919199943542,
+    "frame_weighted": 0.8493778705596924,
+    "failed": [],
+    "n_failed": 0,
+    "wall_seconds": 359.819806560874,
+    "confirmation": false
+  },
+  "final": {
+    "iteration": 16000,
+    "checkpoint": "/mnt/afs/[account]/SuperMimic/lafan1-20261024/experiments/continuation-20261025-a/policy/ckpt_016000.pt",
+    "checkpoint_sha256": "44d68af11306f839fe1b4b37cd042f1eae7df116adaabd69bd8db593a16d334e",
+    "result": "/mnt/afs/[account]/SuperMimic/lafan1-20261024/experiments/continuation-20261025-a/evaluations/016000.json",
+    "macro": 0.8474919199943542,
+    "frame_weighted": 0.8493778705596924,
+    "failed": [],
+    "n_failed": 0,
+    "wall_seconds": 359.819806560874,
+    "confirmation": false
+  },
+  "best_rule": "fewest failed clips,then highest macro return,then latest iteration",
+  "target_confirmed": true
+}

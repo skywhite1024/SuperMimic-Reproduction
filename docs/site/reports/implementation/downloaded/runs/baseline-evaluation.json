@@ -1,0 +1,345 @@
+{
+  "norm_return": 0.8028135299682617,
+  "norm_return_framew": 0.8094083070755005,
+  "n_failed": 3,
+  "failed": [
+    "dance2_subject4",
+    "fallAndGetUp1_subject5",
+    "fallAndGetUp2_subject3"
+  ],
+  "per_clip": {
+    "dance1_subject1": {
+      "norm_return": 0.8248189687728882,
+      "steps": 6573,
+      "failed": false,
+      "full_clip_steps": 6573,
+      "normalization_denominator": 657.3000000000001,
+      "reward_sum": 542.1535081744195
+    },
+    "dance1_subject2": {
+      "norm_return": 0.8047018647193909,
+      "steps": 6573,
+      "failed": false,
+      "full_clip_steps": 6573,
+      "normalization_denominator": 657.3000000000001,
+      "reward_sum": 528.9305356800556
+    },
+    "dance1_subject3": {
+      "norm_return": 0.8924090266227722,
+      "steps": 6573,
+      "failed": false,
+      "full_clip_steps": 6573,
+      "normalization_denominator": 657.3000000000001,
+      "reward_sum": 586.5804531991482
+    },
+    "dance2_subject1": {
+      "norm_return": 0.8114035129547119,
+      "steps": 11283,
+      "failed": false,
+      "full_clip_steps": 11283,
+      "normalization_denominator": 1128.3,
+      "reward_sum": 915.5065836668014
+    },
+    "dance2_subject2": {
+      "norm_return": 0.8205187320709229,
+      "steps": 11283,
+      "failed": false,
+      "full_clip_steps": 11283,
+      "normalization_denominator": 1128.3,
+      "reward_sum": 925.7912853956223
+    },
+    "dance2_subject3": {
+      "norm_return": 0.8571851849555969,
+      "steps": 11283,
+      "failed": false,
+      "full_clip_steps": 11283,
+      "normalization_denominator": 1128.3,
+      "reward_sum": 967.1620441854
+    },
+    "dance2_subject4": {
+      "norm_return": 0.21886016428470612,
+      "steps": 3047,
+      "failed": true,
+      "full_clip_steps": 11283,
+      "normalization_denominator": 1128.3,
+      "reward_sum": 246.9399233624339
+    },
+    "dance2_subject5": {
+      "norm_return": 0.8432520627975464,
+      "steps": 11283,
+      "failed": false,
+      "full_clip_steps": 11283,
+      "normalization_denominator": 1128.3,
+      "reward_sum": 951.4413024544715
+    },
+    "fallAndGetUp1_subject1": {
+      "norm_return": 0.7793145775794983,
+      "steps": 8410,
+      "failed": false,
+      "full_clip_steps": 8410,
+      "normalization_denominator": 841.0,
+      "reward_sum": 655.4035597443581
+    },
+    "fallAndGetUp1_subject4": {
+      "norm_return": 0.7607077360153198,
+      "steps": 8410,
+      "failed": false,
+      "full_clip_steps": 8410,
+      "normalization_denominator": 841.0,
+      "reward_sum": 639.755205988884
+    },
+    "fallAndGetUp1_subject5": {
+      "norm_return": 0.1526980996131897,
+      "steps": 1709,
+      "failed": true,
+      "full_clip_steps": 8410,
+      "normalization_denominator": 841.0,
+      "reward_sum": 128.41910177469254
+    },
+    "fallAndGetUp2_subject2": {
+      "norm_return": 0.7718930840492249,
+      "steps": 8195,
+      "failed": false,
+      "full_clip_steps": 8195,
+      "normalization_denominator": 819.5,
+      "reward_sum": 632.5663823783398
+    },
+    "fallAndGetUp2_subject3": {
+      "norm_return": 0.6605904698371887,
+      "steps": 7051,
+      "failed": true,
+      "full_clip_steps": 8195,
+      "normalization_denominator": 819.5,
+      "reward_sum": 541.3538900315762
+    },
+    "fallAndGetUp3_subject1": {
+      "norm_return": 0.8071335554122925,
+      "steps": 5108,
+      "failed": false,
+      "full_clip_steps": 5108,
+      "normalization_denominator": 510.8,
+      "reward_sum": 412.283820104599
+    },
+    "fight1_subject2": {
+      "norm_return": 0.8179602026939392,
+      "steps": 12243,
+      "failed": false,
+      "full_clip_steps": 12243,
+      "normalization_denominator": 1224.3,
+      "reward_sum": 1001.4286761581898
+    },
+    "fight1_subject3": {
+      "norm_return": 0.819597601890564,
+      "steps": 12243,
+      "failed": false,
+      "full_clip_steps": 12243,
+      "normalization_denominator": 1224.3,
+      "reward_sum": 1003.4333439946174
+    },
+    "fight1_subject5": {
+      "norm_return": 0.8443610072135925,
+      "steps": 12243,
+      "failed": false,
+      "full_clip_steps": 12243,
+      "normalization_denominator": 1224.3,
+      "reward_sum": 1033.7511811316012
+    },
+    "fightAndSports1_subject1": {
+      "norm_return": 0.8088785409927368,
+      "steps": 12256,
+      "failed": false,
+      "full_clip_steps": 12256,
+      "normalization_denominator": 1225.6000000000001,
+      "reward_sum": 991.3615398406984
+    },
+    "fightAndSports1_subject4": {
+      "norm_return": 0.8270069360733032,
+      "steps": 12256,
+      "failed": false,
+      "full_clip_steps": 12256,
+      "normalization_denominator": 1225.6000000000001,
+      "reward_sum": 1013.5797008514405
+    },
+    "jumps1_subject1": {
+      "norm_return": 0.8380364179611206,
+      "steps": 12221,
+      "failed": false,
+      "full_clip_steps": 12221,
+      "normalization_denominator": 1222.1000000000001,
+      "reward_sum": 1024.1643063902857
+    },
+    "jumps1_subject2": {
+      "norm_return": 0.8105526566505432,
+      "steps": 12221,
+      "failed": false,
+      "full_clip_steps": 12221,
+      "normalization_denominator": 1222.1000000000001,
+      "reward_sum": 990.576401692629
+    },
+    "jumps1_subject5": {
+      "norm_return": 0.8228411078453064,
+      "steps": 12221,
+      "failed": false,
+      "full_clip_steps": 12221,
+      "normalization_denominator": 1222.1000000000001,
+      "reward_sum": 1005.594117897749
+    },
+    "run1_subject2": {
+      "norm_return": 0.8407820463180542,
+      "steps": 11890,
+      "failed": false,
+      "full_clip_steps": 11890,
+      "normalization_denominator": 1189.0,
+      "reward_sum": 999.6898530721664
+    },
+    "run1_subject5": {
+      "norm_return": 0.8163450360298157,
+      "steps": 11890,
+      "failed": false,
+      "full_clip_steps": 11890,
+      "normalization_denominator": 1189.0,
+      "reward_sum": 970.6342478394508
+    },
+    "run2_subject1": {
+      "norm_return": 0.8305087089538574,
+      "steps": 12240,
+      "failed": false,
+      "full_clip_steps": 12240,
+      "normalization_denominator": 1224.0,
+      "reward_sum": 1016.5426597595215
+    },
+    "run2_subject4": {
+      "norm_return": 0.8262693881988525,
+      "steps": 12240,
+      "failed": false,
+      "full_clip_steps": 12240,
+      "normalization_denominator": 1224.0,
+      "reward_sum": 1011.3537311553955
+    },
+    "sprint1_subject2": {
+      "norm_return": 0.8380101323127747,
+      "steps": 13655,
+      "failed": false,
+      "full_clip_steps": 13655,
+      "normalization_denominator": 1365.5,
+      "reward_sum": 1144.3028356730938
+    },
+    "sprint1_subject4": {
+      "norm_return": 0.8205896019935608,
+      "steps": 13655,
+      "failed": false,
+      "full_clip_steps": 13655,
+      "normalization_denominator": 1365.5,
+      "reward_sum": 1120.5151015222073
+    },
+    "walk1_subject1": {
+      "norm_return": 0.8816426992416382,
+      "steps": 13065,
+      "failed": false,
+      "full_clip_steps": 13065,
+      "normalization_denominator": 1306.5,
+      "reward_sum": 1151.8661865592003
+    },
+    "walk1_subject2": {
+      "norm_return": 0.8873627185821533,
+      "steps": 13065,
+      "failed": false,
+      "full_clip_steps": 13065,
+      "normalization_denominator": 1306.5,
+      "reward_sum": 1159.3393918275833
+    },
+    "walk1_subject5": {
+      "norm_return": 0.8855365514755249,
+      "steps": 13065,
+      "failed": false,
+      "full_clip_steps": 13065,
+      "normalization_denominator": 1306.5,
+      "reward_sum": 1156.9535045027733
+    },
+    "walk2_subject1": {
+      "norm_return": 0.8622987866401672,
+      "steps": 11908,
+      "failed": false,
+      "full_clip_steps": 11908,
+      "normalization_denominator": 1190.8,
+      "reward_sum": 1026.825395131111
+    },
+    "walk2_subject3": {
+      "norm_return": 0.8696860671043396,
+      "steps": 11908,
+      "failed": false,
+      "full_clip_steps": 11908,
+      "normalization_denominator": 1190.8,
+      "reward_sum": 1035.6221687078475
+    },
+    "walk2_subject4": {
+      "norm_return": 0.8905394077301025,
+      "steps": 11908,
+      "failed": false,
+      "full_clip_steps": 11908,
+      "normalization_denominator": 1190.8,
+      "reward_sum": 1060.454326725006
+    },
+    "walk3_subject1": {
+      "norm_return": 0.863069474697113,
+      "steps": 12330,
+      "failed": false,
+      "full_clip_steps": 12330,
+      "normalization_denominator": 1233.0,
+      "reward_sum": 1064.1646623015404
+    },
+    "walk3_subject2": {
+      "norm_return": 0.9022536277770996,
+      "steps": 12330,
+      "failed": false,
+      "full_clip_steps": 12330,
+      "normalization_denominator": 1233.0,
+      "reward_sum": 1112.4787230491638
+    },
+    "walk3_subject3": {
+      "norm_return": 0.8139966726303101,
+      "steps": 12330,
+      "failed": false,
+      "full_clip_steps": 12330,
+      "normalization_denominator": 1233.0,
+      "reward_sum": 1003.6578973531723
+    },
+    "walk3_subject4": {
+      "norm_return": 0.8644526600837708,
+      "steps": 12330,
+      "failed": false,
+      "full_clip_steps": 12330,
+      "normalization_denominator": 1233.0,
+      "reward_sum": 1065.8701298832893
+    },
+    "walk3_subject5": {
+      "norm_return": 0.893325686454773,
+      "steps": 12330,
+      "failed": false,
+      "full_clip_steps": 12330,
+      "normalization_denominator": 1233.0,
+      "reward_sum": 1101.470571398735
+    },
+    "walk4_subject1": {
+      "norm_return": 0.9311503171920776,
+      "steps": 8195,
+      "failed": false,
+      "full_clip_steps": 8195,
+      "normalization_denominator": 819.5,
+      "reward_sum": 763.0776849389076
+    }
+  },
+  "checkpoint_sha256": "8b3b36ed67a39da526b2de3717291d2a9f8dba570071a80b052d2eb3c8bf3305",
+  "wall_seconds": 342.9261472374201,
+  "backend": "mjwarp",
+  "seed": 0,
+  "first_frame": true,
+  "deterministic_policy": true,
+  "observation_noise": false,
+  "action_noise": false,
+  "domain_randomization": false,
+  "friction": 1.0,
+  "normalization": "full resampled clip length minus one, including early failure",
+  "community_baseline": true,
+  "strict_paper_reproduction": false
+}

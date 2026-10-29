@@ -1,0 +1,25 @@
+{
+  "status": "prepared_not_submitted",
+  "cloud_root": "/mnt/afs/USER_ID/SuperMimic/lafan1-20261024/experiments/continuation-20261025-a",
+  "files": {
+    "audit_common.py": "5b00638b2704df376509eb2a3952d4183dccfc38081f413fed8f80865785cda0",
+    "preflight.py": "e0b712a7955289a304492896781ef17a2763e0b42cca9d7a746e8e70994df148",
+    "train_continuation.py": "61136c96f526581b4d6a94e502df88506020ba1e838ecdeb13e7c17b5bc9c2f2",
+    "run_experiment.py": "e1548e307202f4567bb073bf88eadae4e1193ec050bf8fee134e03d4ee1edde5",
+    "diagnose.py": "191cedd66fbca83be7630855c0052c53818415215f164a160db262cc3a369666",
+    "collect_continuation.py": "15a2949c1789e80e9846754e5c934f03c445b12bc7dfed91cc78f2b5cecc8294",
+    "frozen.json": "a175158630e5973e27d91b43fd5701ca48ae370cb411aec17c57294cb73730ac"
+  },
+  "cpu_command_sha256": "76e8a602dd3e8509207b4977160ea6aebc3d821c0501737681a1e5799125505a",
+  "gpu_command_sha256": "b54ea2ad2db6f8c68c55f92cd07c4ed2376bb2408752cad0ca26a3ee33660079",
+  "gpu_config": {
+    "gpus": 1,
+    "cpus": 4,
+    "memory_gib": 64,
+    "replicas": 1,
+    "max_restarts": 0,
+    "node_ssh": false
+  },
+  "finite_cpu_seconds": 190,
+  "finite_gpu_program_upper_seconds": 10740
+}

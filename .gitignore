@@ -1,0 +1,30 @@
+# Runtime outputs and local configuration; docs/site contains the published evidence copies.
+**/.venv/
+**/.asset-venv/
+**/__pycache__/
+**/*.py[cod]
+.pytest_cache/
+**/.ruff_cache/
+**/*.egg-info/
+**/runs/
+**/downloaded/
+**/cache/
+**/wheels/
+**/policy/
+**/*.pt
+**/*.npz
+**/*.tar.gz
+**/.env
+**/.env.*
+!**/.env.example
+artifacts/downloads/
+artifacts/release/
+data-cache/
+# Third-party data is downloaded explicitly, never silently redistributed with Git.
+acro-library-20261027-b/data/*.csv
+acro-library-20261027-b/ground-calibration-v1/data/
+**/references*/**/sequence.csv
+**/continuous*/**/sequence.csv
+**/*.generated
+# Report result JSONs under runs/ and other evidence folders are intentional public artifacts.
+!docs/site/**

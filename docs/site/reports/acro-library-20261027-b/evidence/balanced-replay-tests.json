@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "checks": [
+    "equal clip mass despite unequal occupancy",
+    "fixed old failure priority 3:1",
+    "100000 actual PI and WM draws",
+    "circular histories and episode padding",
+    "native done masks",
+    "storage unchanged by sampling",
+    "native valid-start consumption counted separately",
+    "missing clip renormalization",
+    "absent group stops",
+    "clip-end horizon exclusion"
+  ],
+  "observed_pi_fraction": [
+    0.2991200089454651,
+    0.30039000511169434,
+    0.29971998929977417,
+    0.1007699966430664
+  ],
+  "observed_wm_fraction": [
+    0.2995699942111969,
+    0.30017000436782837,
+    0.3005400002002716,
+    0.09972000122070312
+  ]
+}

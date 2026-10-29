@@ -1,0 +1,145 @@
+{
+  "status": "video_decode_passed",
+  "decoder_package": "0.6.0",
+  "ffmpeg_version": "7.1-essentials_build-www.gyan.dev",
+  "videos": [
+    {
+      "file": "[local]/dance2_subject4.mp4",
+      "status": "all_frames_decoded",
+      "frames": 250,
+      "fps": 25.0,
+      "duration_seconds": 10.0,
+      "metadata": {
+        "ffmpeg_version": "7.1-essentials_build-www.gyan.dev built with gcc 14.2.0 (Rev1, Built by MSYS2 project)",
+        "codec": "h264",
+        "pix_fmt": "yuv420p(progressive)",
+        "fps": 25.0,
+        "source_size": [
+          960,
+          540
+        ],
+        "size": [
+          960,
+          540
+        ],
+        "rotate": 0,
+        "duration": 10.0
+      },
+      "shorter_than_requested_15s": true,
+      "samples": [
+        {
+          "frame": 0,
+          "time_seconds": 0.0,
+          "rgb_sha256": "6ae2c764fee60bacbd66e957513bb3c9e3205b65397242df35f7bf305e3b757f",
+          "pixel_std": 49.044941527832165,
+          "path": "[local]/dance2_subject4-0000.png"
+        },
+        {
+          "frame": 50,
+          "time_seconds": 2.0,
+          "rgb_sha256": "a9bba103a8a1613b8d7794f494ee01c5fd4258886fd366369037f55fa3df94a6",
+          "pixel_std": 49.073942092642376,
+          "path": "[local]/dance2_subject4-0050.png"
+        }
+      ],
+      "sampled_visual_motion": true
+    },
+    {
+      "file": "[local]/fallAndGetUp1_subject1.mp4",
+      "status": "all_frames_decoded",
+      "frames": 375,
+      "fps": 25.0,
+      "duration_seconds": 15.0,
+      "metadata": {
+        "ffmpeg_version": "7.1-essentials_build-www.gyan.dev built with gcc 14.2.0 (Rev1, Built by MSYS2 project)",
+        "codec": "h264",
+        "pix_fmt": "yuv420p(progressive)",
+        "fps": 25.0,
+        "source_size": [
+          960,
+          540
+        ],
+        "size": [
+          960,
+          540
+        ],
+        "rotate": 0,
+        "duration": 15.0
+      },
+      "shorter_than_requested_15s": false,
+      "samples": [
+        {
+          "frame": 0,
+          "time_seconds": 0.0,
+          "rgb_sha256": "32abc6fb84806e0ff795a0b8fd29886aed551aeb45d8619c5ff312a9d066334b",
+          "pixel_std": 49.81455368831858,
+          "path": "[local]/fallAndGetUp1_subject1-0000.png"
+        },
+        {
+          "frame": 50,
+          "time_seconds": 2.0,
+          "rgb_sha256": "3b87110e8b8fc6a943bd673d72d7ba82e62f54417ec27537f1a84d9e6bc29010",
+          "pixel_std": 49.78981415312231,
+          "path": "[local]/fallAndGetUp1_subject1-0050.png"
+        },
+        {
+          "frame": 250,
+          "time_seconds": 10.0,
+          "rgb_sha256": "dc20a7312ce4a0baa1abf6b1a997b6075de727b514bfad718605e0fc9b893ee5",
+          "pixel_std": 50.252145627250016,
+          "path": "[local]/fallAndGetUp1_subject1-0250.png"
+        }
+      ],
+      "sampled_visual_motion": true
+    },
+    {
+      "file": "[local]/jumps1_subject1.mp4",
+      "status": "all_frames_decoded",
+      "frames": 375,
+      "fps": 25.0,
+      "duration_seconds": 15.0,
+      "metadata": {
+        "ffmpeg_version": "7.1-essentials_build-www.gyan.dev built with gcc 14.2.0 (Rev1, Built by MSYS2 project)",
+        "codec": "h264",
+        "pix_fmt": "yuv420p(progressive)",
+        "fps": 25.0,
+        "source_size": [
+          960,
+          540
+        ],
+        "size": [
+          960,
+          540
+        ],
+        "rotate": 0,
+        "duration": 15.0
+      },
+      "shorter_than_requested_15s": false,
+      "samples": [
+        {
+          "frame": 0,
+          "time_seconds": 0.0,
+          "rgb_sha256": "620c2398c3a424eb075060fe957818ec725cbf71c8682a37e562b2b4145e0f40",
+          "pixel_std": 49.57040427609282,
+          "path": "[local]/jumps1_subject1-0000.png"
+        },
+        {
+          "frame": 50,
+          "time_seconds": 2.0,
+          "rgb_sha256": "1f0cc06c183d626db4c7eb41e016e292b813b33ef95d7ca5237495ad6a483443",
+          "pixel_std": 49.5813362070869,
+          "path": "[local]/jumps1_subject1-0050.png"
+        },
+        {
+          "frame": 250,
+          "time_seconds": 10.0,
+          "rgb_sha256": "ee05a2eb174c33f247dd67c04391b283e3ca50dcacfe51037d2d001cc39dcf44",
+          "pixel_std": 49.243195236698945,
+          "path": "[local]/jumps1_subject1-0250.png"
+        }
+      ],
+      "sampled_visual_motion": true
+    }
+  ],
+  "boundary": "Decoding and sampled visual inspection do not replace tracking evaluation."
+}

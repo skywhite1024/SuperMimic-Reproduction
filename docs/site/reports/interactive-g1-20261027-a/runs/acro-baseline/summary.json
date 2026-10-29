@@ -1,0 +1,12 @@
+{
+  "source": "[local]/88_08_stageii_unitree_g1.csv",
+  "checkpoint": "preserved 16000",
+  "elapsed_seconds": 4.72,
+  "post_initialization_resets": 0,
+  "hard_failure_frames": 73,
+  "first_hard_failure_s": 2.48,
+  "max_root_error_m": 1.4077465534210205,
+  "passed": false,
+  "reference_not_BONES": true,
+  "scope": "new untrained acrobatic clip; reference-source claims and numerical audit in evidence/acro-candidate-audit.json"
+}

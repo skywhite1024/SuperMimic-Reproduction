@@ -1,0 +1,45 @@
+{
+  "iterations": 22000,
+  "buffer_steps": 300,
+  "utd": 0.4,
+  "horizon": 32,
+  "goal_frames": 10,
+  "hist": 10,
+  "z_dim": 32,
+  "wm_hidden": [
+    2048,
+    2048,
+    2048
+  ],
+  "policy_hidden": [
+    2048,
+    1024,
+    512,
+    256
+  ],
+  "critic_hidden": [
+    256,
+    128
+  ],
+  "wm_window": 8,
+  "wm_batches": 4,
+  "wm_batch": 512,
+  "pi_batch": 512,
+  "lr": 5e-05,
+  "gamma": 0.99,
+  "lam": 0.95,
+  "action_noise": 0.1,
+  "critic_epochs": 2,
+  "critic_minibatches": 2,
+  "no_critic": false,
+  "warmup_steps": 64,
+  "wm_only_iters": 18800,
+  "lr_decay_iters": 250000,
+  "ckpt_every": 500,
+  "log_every": 50,
+  "log_backend": "tensorboard",
+  "seed": 0,
+  "amp": "bf16",
+  "compile": false,
+  "test_hidden_dims": null
+}

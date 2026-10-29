@@ -1,0 +1,11 @@
+{
+  "pinned_learner_sha256": "c2b12fdf94be102ffadfb343b9372069d32cb660b2f05b66e836351b328361f4",
+  "native_policy_update_sha256": "8df66ef77b4802238bbd1e8c1954b3f6d97393029c7a3e9b63a1914985b5bf26",
+  "native_method_restored_byte_identically_by_reversing_two_edits": true,
+  "changes": [
+    "Keep clean real replay observation history before native observation noise.",
+    "Add training-only frozen-teacher action MSE anchors to the existing actor loss, before its single backward/optimizer step."
+  ],
+  "native_world_model_critic_and_optimizer_step_logic_preserved": true,
+  "derived_file_sha256": "8a39435dd52ceb3a6026abda50427021e75ade553f4b6ec50c56b16dd5534915"
+}

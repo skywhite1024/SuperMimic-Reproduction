@@ -1,0 +1,113 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SuperMimic BONES-SEED 复现准备状态</title>
+<style>body{font:16px/1.7 system-ui,"Microsoft YaHei",sans-serif;margin:0;background:#f4f6f9;color:#172b42}main{max-width:1080px;margin:auto;padding:40px 28px 80px}h1{font-size:32px;line-height:1.3}h2{margin-top:38px;font-size:23px}.state{background:#fff3cf;border-left:5px solid #c98611;padding:20px 24px;border-radius:8px}.meta{color:#526579;font-size:14px}table{border-collapse:collapse;width:100%;background:white;font-size:14px}th,td{padding:12px 14px;text-align:left;border-bottom:1px solid #dce3eb;vertical-align:top}th{background:#e8eef5}a{color:#126aa6}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#e8eef5;padding:18px;border-radius:8px;font-size:13px}details{background:white;margin-top:16px;padding:14px 20px;border-radius:8px}.cards{display:flex;gap:16px;flex-wrap:wrap;margin:22px 0}.card{background:white;padding:18px 22px;flex:1;min-width:190px;border-radius:8px}.card strong{font-size:28px;display:block}code{overflow-wrap:anywhere}@media(max-width:600px){main{padding:22px 15px}table{font-size:12px}th,td{padding:8px}h1{font-size:27px}}</style>
+<main><p class="meta">2026-10-26 · 独立阶段 bones-seed-20261026-a · 准备记录</p><style>.public-nav{display:flex;gap:20px;align-items:center;flex-wrap:wrap;padding:13px 18px;background:#172c31;color:#edf5f2;border-radius:8px;font:14px system-ui;margin:18px 0}.public-nav a{color:#d7eee5}.public-nav span{flex:1}.public-snapshot,.public-omission{padding:12px 16px;border-left:3px solid #b27d43;background:#fbf6ec;font:14px/1.7 system-ui;color:#4d4639}video{max-width:100%;height:auto}table{max-width:none}pre{white-space:pre-wrap;overflow-wrap:anywhere}img{max-width:100%;height:auto}</style><nav class="public-nav"><a href="../../../index.html">← 实验报告目录</a><span>BONES-SEED 准备记录</span><a href="../../../artifact-notes.html">公开版说明</a></nav><p class="public-snapshot">历史实验快照 · 保留原有数值、失败项与固定分母。视频为完整时长的网页播放副本；原始文件哈希描述本地原件。整体目标尚未完成。</p><h1>SuperMimic · BONES-SEED 复现准备</h1>
+<div class="state"><strong>数据访问已获批；原始归档、真实训练与全库评测尚未完成。</strong><br>CPU 准备任务已失败退出：HF 公共接口 20 秒连接失败，PyPI 返回 200，GitHub 克隆发生 TLS 中断。没有启动 GPU，也没有向镜像发送凭据。<br>官方原始数据下载 CDN 被内置浏览器策略阻止，等待本人独立获得的授权归档路径。</div>
+<div class="cards"><div class="card"><strong>16 / 16</strong>本地 CPU 回归测试通过</div><div class="card"><strong>0</strong>本阶段 GPU 作业 / GPU·时</div><div class="card"><strong>待执行</strong>真实 BONES 数据与模型验收</div></div>
+<p><a href="https://huggingface.co/datasets/bones-studio/seed">打开数据访问页面</a> · <a href="https://bones.studio/info/seed-license">查看数据许可</a> · <a href="../../implementation/continuation-20261025-a/report/continuation-comparison.html">保留的 LAFAN1 16000 结果报告</a></p>
+<h2>已完成与仍待验证</h2><table><thead><tr><th>修正 / 准备</th><th>已有证据</th><th>未完成的运行验证</th></tr></thead><tbody><tr><td>full playback return denominator, full-length weighting, coverage/failure consistency</td><td>CPU accounting regressions</td><td>actual simulator terminal-frame contract and full library</td></tr><tr><td>compact-library benchmark path and incremental per-clip progress ledger</td><td>syntax and CPU compact packing</td><td>GPU benchmark integration</td></tr><tr><td>fresh-replay warm restart, absolute LR decay, fractional update accumulator, rank-local RNG/sampler state, atomic full checkpoint</td><td>real CPU Adam/tensor/replay regressions</td><td>complete SuperMimic loop exit/reload on allocated GPUs</td></tr><tr><td>NCCL-only distributed execution with distinct GPU UUID validation; no /proc-based GPU allocation inference</td><td>syntax and source inspection</td><td>actual NCCL/rank/model/optimizer synchronization and throughput</td></tr><tr><td>source-bound per-raw-clip ledger, strict manifest selection, bounded-memory compact builder and synthetic-data origin separation</td><td>synthetic CPU end-to-end conversion/filter/pack/resume</td><td>licensed actual BONES corpus</td></tr></tbody></table>
+<h2>本地测试</h2><p>Python 3.12.14，Torch 2.14.1+cpu，MuJoCo 3.16.0。测试使用合成 G1 动作，没有将合成样本当作 BONES 数据。足底胶囊公式对 20 个姿态、14 个足部几何体逐项与 MuJoCo 平面有符号距离核对。</p><table><thead><tr><th>测试组</th><th>数量</th><th>结果</th></tr></thead><tbody><tr><td>test_accounting.py</td><td>7</td><td>通过</td></tr><tr><td>test_recovery.py</td><td>5</td><td>通过</td></tr><tr><td>test_conversion.py</td><td>4</td><td>通过</td></tr></tbody></table>
+<h2>数据身份与论文对照</h2><p>公开 G1 归档：23,499,973,647 字节；版本 <code>2f59b2077b9da34dd4e43618e705c7cb962c9a66</code>；SHA256 <code>52580ea8bced72ea9e2ff1e7b68f01c51c7f1099581e9a46b7c87e1dec106d8a</code>。本轮已确认访问获批，仍未取得受限原始数据内容。</p>
+<table><thead><tr><th>范围</th><th>原始动作</th><th>名称过滤后</th><th>可行性过滤后</th><th>时长</th></tr></thead><tbody><tr><td>论文参考</td><td>142,220</td><td>129,667</td><td>129,514</td><td>264.56 h</td></tr><tr><td>社区文档自报，非本轮结果</td><td>142,220</td><td>130,137</td><td>129,943</td><td>263.75 h</td></tr><tr><td>本轮真实 BONES 实测</td><td colspan="4">未执行；不得用参考数量代填。</td></tr></tbody></table>
+<p>固定源代码后记录每条原始动作的哈希、转换与过滤结果；保留失败、完整分母，以及帧数口径和转移时长口径。社区筛选规则与论文描述仍有差异，不以调阈值强行对齐动作数。</p>
+<h2>下一阶段的有限执行</h2><ol><li>独立取得授权归档后，验证固定版本、大小和哈希；完成全量清单、120→50 Hz 转换和过滤审计。</li><li>隔离安装 mjlab / MuJoCo-Warp 3.16 环境，保留旧 Uni / MuJoCo 3.11 环境。</li><li>先 1 张、再 2 张 H100，分别验证真实采样、WM / policy / critic 更新、完整保存、退出与恢复。每项程序外层上限 20 分钟；检验不同 GPU UUID、NCCL 和模型/Adam 同步，据实测选资源。</li><li>正式作业另设迭代与时间上限，保留分段检查点、失败账本和卡时记录。账户总并发上限 4 张；仍需现场核对配额与学院规则。</li><li>全库首帧确定性回放后才报告正式结果。参考目标为完整库归一化回报 ≥0.90、失败 ≤25；子集结果只作诊断。</li></ol>
+<h2>已保留的 LAFAN1 基线</h2><p>16000 检查点的主评测宏平均 0.84749，独立重载确认 0.84773，均为 0/40 失败。它是社区 G1/LAFAN1 基线，并非 BONES 全库或论文等价复现。本次重新核对两个检查点 SHA256，与既有记录一致。</p>
+<details><summary>本地验证原始记录</summary><pre>{
+  &quot;observed_at&quot;: &quot;2026-10-26T05:44:48.816292+00:00&quot;,
+  &quot;status&quot;: &quot;passed&quot;,
+  &quot;test_count&quot;: 16,
+  &quot;groups&quot;: [
+    {
+      &quot;file&quot;: &quot;test_accounting.py&quot;,
+      &quot;exit_code&quot;: 0,
+      &quot;expected_tests&quot;: 7,
+      &quot;seconds&quot;: 0.10501859989017248,
+      &quot;log_sha256&quot;: &quot;7d27da530f53fa879955fb209c873ceaec6d7cd46ae7568ce97390b46560febb&quot;
+    },
+    {
+      &quot;file&quot;: &quot;test_recovery.py&quot;,
+      &quot;exit_code&quot;: 0,
+      &quot;expected_tests&quot;: 5,
+      &quot;seconds&quot;: 2.2838094998151064,
+      &quot;log_sha256&quot;: &quot;7300aded4410177874c6ab56d411979ff8d5038010b68ba494cbd54fca5a0936&quot;
+    },
+    {
+      &quot;file&quot;: &quot;test_conversion.py&quot;,
+      &quot;exit_code&quot;: 0,
+      &quot;expected_tests&quot;: 4,
+      &quot;seconds&quot;: 3.7432960998266935,
+      &quot;log_sha256&quot;: &quot;9e1fb9c966e7a24244e4a6e8d0bf312811e548235c90f0eb0f773d84ac99ecd6&quot;
+    }
+  ],
+  &quot;parsed_python_files&quot;: 55,
+  &quot;bash_syntax&quot;: {
+    &quot;executed&quot;: true,
+    &quot;exit_code&quot;: 0,
+    &quot;output&quot;: &quot;&quot;
+  },
+  &quot;python&quot;: &quot;3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]&quot;,
+  &quot;packages&quot;: {
+    &quot;torch&quot;: &quot;2.14.1+cpu&quot;,
+    &quot;numpy&quot;: &quot;2.3.5&quot;,
+    &quot;mujoco&quot;: &quot;3.16.0&quot;,
+    &quot;scipy&quot;: &quot;1.17.0&quot;,
+    &quot;pandas&quot;: &quot;3.0.0&quot;,
+    &quot;tyro&quot;: &quot;1.0.13&quot;
+  },
+  &quot;limitations&quot;: [
+    &quot;CPU synthetic fixtures only&quot;,
+    &quot;no gated BONES data downloaded&quot;,
+    &quot;no MuJoCo-Warp/CUDA/NCCL execution&quot;,
+    &quot;full training-loop save/resume and terminal-frame timing still need runtime acceptance&quot;
+  ]
+}</pre></details>
+<details><summary>仍需明确的实现差异</summary><pre>[
+  &quot;community name-filter list is not the complete paper list&quot;,
+  &quot;upright/standing/still filter thresholds are community choices&quot;,
+  &quot;fp16 compact reference storage is an explicit implementation choice&quot;,
+  &quot;frame-count versus transition-duration hours are recorded separately&quot;,
+  &quot;warm restart does not restore replay/simulator trajectories and is not bitwise continuation&quot;,
+  &quot;paper&#x27;s iteration interpretation is not independently resolved; report environment steps and optimizer updates separately&quot;
+]</pre></details>
+<p class="meta">来源：<a href="https://arxiv.org/abs/2610.28480">SuperMimic 论文</a>；<a href="https://github.com/CuboiLeo/SuperMimic-Reproduced">社区实现</a>，固定 d9be385；本地测试日志与执行台账。生成时间 2026-10-26T05:46:02.732295+00:00。</p><h2>2026-10-26 云端有限检查与镜像调查</h2><p>作业 <code>supermimic-bones-deps-[account]-1026c</code>，UID <code>d6b43072d232411f859a6829dbcfc1ea</code>；0 GPU / 4 vCPU / 16GiB / 单副本 / 重启 0；平台创建 15:40:16，终态失败更新时间 15:42:34（+08:00）。依赖安装与训练均未开始。</p><p><a href="https://hf-mirror.com/">HF-Mirror</a> 说明部分受限仓库需要官方授权及 Token；这份 BONES 归档是否可用、是否已有缓存、是否节省代理流量，均未实测。<a href="https://bones.studio/datasets/seed">作者官网</a>目前下载入口指向 Hugging Face，未查到作者公布的国内镜像。没有向第三方传送 Token。</p><details><summary>实际 CPU 与网络日志摘录</summary><pre>{
+  &quot;name&quot;: &quot;supermimic-bones-deps-[account]-1026c&quot;,
+  &quot;uid&quot;: &quot;d6b43072d232411f859a6829dbcfc1ea&quot;,
+  &quot;created_at&quot;: &quot;2026-10-26T15:40:16+08:00&quot;,
+  &quot;terminal_updated_at&quot;: &quot;2026-10-26T15:42:34+08:00&quot;,
+  &quot;status&quot;: &quot;failed&quot;,
+  &quot;workspace&quot;: &quot;share-space&quot;,
+  &quot;cluster&quot;: &quot;computing_cluster/share-cluster&quot;,
+  &quot;gpu_count&quot;: 0,
+  &quot;vcpus&quot;: 4,
+  &quot;memory_gib&quot;: 16,
+  &quot;replicas&quot;: 1,
+  &quot;max_restarts&quot;: 0,
+  &quot;node_ssh_enabled&quot;: false,
+  &quot;program_limit_seconds&quot;: 1200,
+  &quot;command&quot;: &quot;cpu-dependencies-20261026c.command.txt&quot;,
+  &quot;command_sha256&quot;: &quot;525e80705ab944be04e57b466653aa5bc86ddd03164dbf19bed531671d13399b&quot;,
+  &quot;command_copyback&quot;: &quot;all 2905 characters read back from the browser editor and inspected&quot;,
+  &quot;actual_cpu_max&quot;: &quot;400000 100000&quot;,
+  &quot;actual_memory_max&quot;: &quot;17179869184&quot;,
+  &quot;public_network&quot;: {
+    &quot;huggingface_public_metadata&quot;: {
+      &quot;error_type&quot;: &quot;URLError&quot;,
+      &quot;seconds&quot;: 20.033,
+      &quot;authenticated&quot;: false
+    },
+    &quot;pypi_public_index&quot;: {
+      &quot;status&quot;: 200,
+      &quot;seconds&quot;: 8.372,
+      &quot;authenticated&quot;: false
+    },
+    &quot;github_clone&quot;: {
+      &quot;status&quot;: &quot;failed&quot;,
+      &quot;error&quot;: &quot;GnuTLS recv error (-110): The TLS connection was non-properly terminated.&quot;
+    }
+  },
+  &quot;dependency_installation_started&quot;: false,
+  &quot;gated_data_requested&quot;: false,
+  &quot;credential_transmission&quot;: false,
+  &quot;gpu_hours&quot;: 0,
+  &quot;evidence_kind&quot;: &quot;live console DOM and platform offline logs; screenshot displayed in conversation&quot;,
+  &quot;afs_receipts_read_back_in_later_job&quot;: false
+}</pre></details><p class="meta">最新台账更新时间：2026-10-26T07:45:15.316744+00:00。旧准备归档保留为历史快照，不包含本次新证据。</p></main></html>

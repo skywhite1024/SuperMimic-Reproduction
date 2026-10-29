@@ -1,0 +1,149 @@
+{
+  "stage": "basic_12_sequences_and_single_hands_supported_flip_verified_followup_library_preparation",
+  "target_video": "[local]/飞书20261027-144917.mp4",
+  "new_training_started": true,
+  "bones_route_paused": true,
+  "max_concurrent_account_gpus": 4,
+  "acceptance_pending": [
+    "unified goal-conditioned tracking over new 15-clip library with 40-clip LAFAN1 regression",
+    "continuous 120-second new-motion integration with no resets",
+    "remaining target-video airborne/90/180/360 motion coverage"
+  ],
+  "baseline": "evidence/baseline-preservation.json",
+  "training_device": {
+    "global_position_adapter": "cpu",
+    "acro_specialist": "cuda"
+  },
+  "cloud_gpu_jobs_started": 1,
+  "continuous_baseline": "runs/baseline/summary.json",
+  "baseline_video": "videos/baseline-seed0.mp4",
+  "video_validation": "evidence/video-verification.json",
+  "acro_baseline": "runs/acro-baseline/summary.json",
+  "rejected_zero_shot_goal_feedback": "runs/goal-feedback/summary.json",
+  "pilot_training": {
+    "label": "global-cpu-pilot",
+    "new_iterations": 300,
+    "environments": 16,
+    "status": "completed_rejected_after_all_six_failed",
+    "observation_dim": 101,
+    "initial_identity_test": "runs/global-position/initial-full.json"
+  },
+  "updated_at": "2026-10-27T10:05:50.595366+00:00",
+  "baseline_all_six": {
+    "hard_gate_passed": 5,
+    "failed": 1,
+    "resets_after_t0": 0,
+    "failed_seed": 5,
+    "first_failure_s": 51.22
+  },
+  "global_pilot_300": "training updates completed but physical retest regressed all six; rejected",
+  "global_adapter_150": "XY improved but WM running-normalizer freeze audit failed; record preserved",
+  "active_local_work": [],
+  "cloud_stage": {
+    "status": "failed",
+    "name": "supermimic-sequence-prep-[account]-1027a",
+    "uid": "4a549eab39a84a8584ea627302d65e86",
+    "submitted_at": "2026-10-27T15:59:42+08:00",
+    "gpu_count": 0,
+    "vcpus": 4,
+    "memory_gib": 16,
+    "replicas": 1,
+    "max_restarts": 0,
+    "command_sha256": "8323e3dae02ab9bfd21988036e979dd6f8301a4b8297781ca7ec02d1f88ba48b",
+    "failure_details": "offline log pending; do not infer preparation succeeded"
+  },
+  "preview": {
+    "port": 64727,
+    "bind": "[network address]",
+    "parent_pid": 9160,
+    "script": "scripts/preview_server.py",
+    "loopback_only": true
+  },
+  "report": "continuous-demo.html",
+  "global_adapter_600": {
+    "proof": "runs/global-adapter-600/proof.json",
+    "new_updates_since_150": 450,
+    "full_model_freeze_passed": true,
+    "physical_retest": "runs/global-adapter-600/summary.json",
+    "hard_gate_passed": 5,
+    "failed": 1,
+    "failed_seed": 5,
+    "first_failure_s": 50.32,
+    "all_six_resets": 0,
+    "velocity_matching_retest": "runs/global-adapter-600-velocity-matched/summary.json",
+    "velocity_matching_passed": 5,
+    "velocity_matching_failed_seed": 2,
+    "velocity_matching_first_failure_s": 63.16
+  },
+  "lookahead": {
+    "fixed_six": "runs/global-adapter-600-lookahead/summary.json",
+    "fresh_six": "runs/global-adapter-600-lookahead-fresh/summary.json",
+    "hard_gate_passed": 12,
+    "trials": 12,
+    "post_initialization_resets": 0,
+    "planner": "scripts/compose_lookahead.py",
+    "reference_identity": "all original source order and segment durations preserved; source-window starts replanned offline with one fixed algorithm for every sequence",
+    "not_an_acrobatics_acceptance": true
+  },
+  "improved_video": "videos/global-adapter-600-lookahead-seed0.mp4",
+  "improved_video_validation": "evidence/video-global-adapter-600-lookahead-seed0.json",
+  "acro_specialist": {
+    "code": "scripts/train_acro.py",
+    "cpu_engineering": "runs/acro-cpu-engineering/proof.json",
+    "status": "single 88_08 passed original inversion/upright-ending gate; full trajectory recovered and verified",
+    "cloud_gpu_submitted": true,
+    "job": "supermimic-acro-[account]-1027d1",
+    "submitted_at": "2026-10-27T16:42:01+08:00",
+    "gpus": 1,
+    "vcpus": 4,
+    "memory_gib": 64,
+    "replicas": 1,
+    "max_restarts": 0,
+    "maximum_seconds": 7200,
+    "command_sha256": "53094ff4c336dc6997e76eca13a0eb3e9f27cb100e8a0ce63eaf2bfa0e1a721f",
+    "uid": "fbb7c4815bc944b2a6665801552be5de",
+    "last_observed_checkpoint_iteration": 18000,
+    "last_observed_checkpoint_at": "2026-10-27T17:00:27.822+08:00",
+    "actual_gpu": "NVIDIA H100 80GB HBM3",
+    "new_updates_confirmed_at_least": 2000,
+    "platform_state": "success",
+    "platform_updated_at": "2026-10-27T17:07:30+08:00",
+    "hard_failure_frames_observed": 0,
+    "observed_root_error_peak_m": 0.44695788621902,
+    "full_physical_acceptance_verified": true,
+    "scope": "one hands-supported backward flip specialist; no unified-policy or airborne-backflip coverage claim",
+    "contact_audit": "evidence/acro-h100-contact-audit.json",
+    "video": "videos/acro-h100-2000-retest.mp4",
+    "training_proof": "runs/acro-h100-2000/proof.json"
+  },
+  "cloud_stage_b": {
+    "name": "supermimic-sequence-prep-[account]-1027b",
+    "uid": "65c036d0e51e4a18a4d116fad246c9f3",
+    "submitted_at": "2026-10-27T16:16:29+08:00",
+    "gpu_count": 0,
+    "status": "failed",
+    "details": "Normalized core source checks passed; stopped at missing scipy in sequence composition. No GPU used."
+  },
+  "acro_cpu_cloud": {
+    "job": "supermimic-acro-prep-[account]-1027c",
+    "submitted_at": "2026-10-27T16:25:35+08:00",
+    "status": "success",
+    "gpu_count": 0,
+    "command_sha256": "baf420201fc7dfd0a81763e24dbf3c74a907eed5f58b6ada17caa860229562a2",
+    "old_environment_modified": false
+  },
+  "pre_gpu_resource_check": {
+    "tasks_in_current_list": 67,
+    "all_terminal": true,
+    "gpus_queued_or_running_before_submission": 0,
+    "account_cap_from_user": 4
+  },
+  "basic_deployment": {
+    "status": "local_package_verified_not_uploaded",
+    "receipt": "deployment/package-receipt.json",
+    "action_identity": "deployment/action-identity.json",
+    "reconstruction": "policy/reconstruction-proof.json"
+  },
+  "next_phase": "../acro-library-20261027-b",
+  "resource_final": "evidence/resource-final-20261027.json"
+}

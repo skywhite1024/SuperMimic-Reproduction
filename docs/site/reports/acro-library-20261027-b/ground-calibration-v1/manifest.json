@@ -1,0 +1,166 @@
+{
+  "variant": "ground-calibration-v1",
+  "created_at": "2026-10-27T11:35:27.687927+00:00",
+  "source_commit": "c493a897f2ca81153e980a65ee6f0faf7cb07487",
+  "denominator": 15,
+  "modified_clips": 2,
+  "method": "Only 90_14 and 90_15: subtract median minimum collision-geometry clearance over the first 0.5 seconds, leaving 5 mm clearance; one constant Z translation for the whole clip",
+  "raw_ground_audit_sha256": "b4fb271771787bf2bc55769ed4786def38f72e2fa3b40b98014921a144c036c0",
+  "raw_library_unchanged": true,
+  "current_raw_GPU_training_changed": false,
+  "joints_orientation_XY_timing_unchanged": true,
+  "remaining_hand_support_penetration_or_dynamics_not_repaired": true,
+  "status": "local_controlled_ablation_not_formal_acceptance",
+  "files": [
+    {
+      "path": "ground-calibration-v1/data/143_34_stageii_unitree_g1.csv",
+      "clip": "143_34_stageii_unitree_g1",
+      "raw_sha256": "e6e539638e9a07881b92088f170813ada16b94a3d40a7bd600a057681debb969",
+      "sha256": "e6e539638e9a07881b92088f170813ada16b94a3d40a7bd600a057681debb969",
+      "constant_root_z_shift_m": 0.0,
+      "all_other_columns_identical": true,
+      "frame_count_unchanged": true,
+      "physical_acceptance": "not_evaluated"
+    },
+    {
+      "path": "ground-calibration-v1/data/85_06_stageii_unitree_g1.csv",
+      "clip": "85_06_stageii_unitree_g1",
+      "raw_sha256": "7ba8cfc8526355b8e654152d7067626902b4557153ca8142df3bd4d6ff50ffad",
+      "sha256": "7ba8cfc8526355b8e654152d7067626902b4557153ca8142df3bd4d6ff50ffad",
+      "constant_root_z_shift_m": 0.0,
+      "all_other_columns_identical": true,
+      "frame_count_unchanged": true,
+      "physical_acceptance": "not_evaluated"
+    },
+    {
+      "path": "ground-calibration-v1/data/85_07_stageii_unitree_g1.csv",
+      "clip": "85_07_stageii_unitree_g1",
+      "raw_sha256": "ac3e6ceefa302f6ae39234029b33ef75f893389aac54c401313232c1f45e65e0",
+      "sha256": "ac3e6ceefa302f6ae39234029b33ef75f893389aac54c401313232c1f45e65e0",
+      "constant_root_z_shift_m": 0.0,
+      "all_other_columns_identical": true,
+      "frame_count_unchanged": true,
+      "physical_acceptance": "not_evaluated"
+    },
+    {
+      "path": "ground-calibration-v1/data/88_03_stageii_unitree_g1.csv",
+      "clip": "88_03_stageii_unitree_g1",
+      "raw_sha256": "effe560fa1e6f234127860ce4345a024b0723033b15a175b0eb26c25e53ac04f",
+      "sha256": "effe560fa1e6f234127860ce4345a024b0723033b15a175b0eb26c25e53ac04f",
+      "constant_root_z_shift_m": 0.0,
+      "all_other_columns_identical": true,
+      "frame_count_unchanged": true,
+      "physical_acceptance": "not_evaluated"
+    },
+    {
+      "path": "ground-calibration-v1/data/88_06_stageii_unitree_g1.csv",
+      "clip": "88_06_stageii_unitree_g1",
+      "raw_sha256": "9db50d28922734d13cc3b9c4ef0c93ac021ca21cc5fc0b0337ea71e0c0864280",
+      "sha256": "9db50d28922734d13cc3b9c4ef0c93ac021ca21cc5fc0b0337ea71e0c0864280",
+      "constant_root_z_shift_m": 0.0,
+      "all_other_columns_identical": true,
+      "frame_count_unchanged": true,
+      "physical_acceptance": "not_evaluated"
+    },
+    {
+      "path": "ground-calibration-v1/data/88_07_stageii_unitree_g1.csv",
+      "clip": "88_07_stageii_unitree_g1",
+      "raw_sha256": "b8cfbb0470486e625bcc3b840fa33437c333ebe3a9fef8ef83655f07dbc7cc7d",
+      "sha256": "b8cfbb0470486e625bcc3b840fa33437c333ebe3a9fef8ef83655f07dbc7cc7d",
+      "constant_root_z_shift_m": 0.0,
+      "all_other_columns_identical": true,
+      "frame_count_unchanged": true,
+      "physical_acceptance": "not_evaluated"
+    },
+    {
+      "path": "ground-calibration-v1/data/88_08_stageii_unitree_g1.csv",
+      "clip": "88_08_stageii_unitree_g1",
+      "raw_sha256": "35d1e39cfdb18e8f644752add1d24ce1e4616b0eb735ecd256bb6a647113884d",
+      "sha256": "35d1e39cfdb18e8f644752add1d24ce1e4616b0eb735ecd256bb6a647113884d",
+      "constant_root_z_shift_m": 0.0,
+      "all_other_columns_identical": true,
+      "frame_count_unchanged": true,
+      "physical_acceptance": "not_evaluated"
+    },
+    {
+      "path": "ground-calibration-v1/data/88_09_stageii_unitree_g1.csv",
+      "clip": "88_09_stageii_unitree_g1",
+      "raw_sha256": "1a8150467b7d97cee4e846dcbcf095c94edb7304125913b8b5b95e3a2984a86a",
+      "sha256": "1a8150467b7d97cee4e846dcbcf095c94edb7304125913b8b5b95e3a2984a86a",
+      "constant_root_z_shift_m": 0.0,
+      "all_other_columns_identical": true,
+      "frame_count_unchanged": true,
+      "physical_acceptance": "not_evaluated"
+    },
+    {
+      "path": "ground-calibration-v1/data/88_10_stageii_unitree_g1.csv",
+      "clip": "88_10_stageii_unitree_g1",
+      "raw_sha256": "de0ed92338ca289c79566a44b3851b6339a902831ddce3c332f8ded71771ba6a",
+      "sha256": "de0ed92338ca289c79566a44b3851b6339a902831ddce3c332f8ded71771ba6a",
+      "constant_root_z_shift_m": 0.0,
+      "all_other_columns_identical": true,
+      "frame_count_unchanged": true,
+      "physical_acceptance": "not_evaluated"
+    },
+    {
+      "path": "ground-calibration-v1/data/88_11_stageii_unitree_g1.csv",
+      "clip": "88_11_stageii_unitree_g1",
+      "raw_sha256": "65e3f1f3705fb67a9a99d11883f4d782e273d583f119db24003a3f06ad67bebb",
+      "sha256": "65e3f1f3705fb67a9a99d11883f4d782e273d583f119db24003a3f06ad67bebb",
+      "constant_root_z_shift_m": 0.0,
+      "all_other_columns_identical": true,
+      "frame_count_unchanged": true,
+      "physical_acceptance": "not_evaluated"
+    },
+    {
+      "path": "ground-calibration-v1/data/89_01_stageii_unitree_g1.csv",
+      "clip": "89_01_stageii_unitree_g1",
+      "raw_sha256": "b40a494abfd397f6e69c56af1964b202c55ff34d81f8d88d7363601b11af68bb",
+      "sha256": "b40a494abfd397f6e69c56af1964b202c55ff34d81f8d88d7363601b11af68bb",
+      "constant_root_z_shift_m": 0.0,
+      "all_other_columns_identical": true,
+      "frame_count_unchanged": true,
+      "physical_acceptance": "not_evaluated"
+    },
+    {
+      "path": "ground-calibration-v1/data/90_08_stageii_unitree_g1.csv",
+      "clip": "90_08_stageii_unitree_g1",
+      "raw_sha256": "a78ccc948537be58585e292915a08f481e4a9c21a19377d4b8c6ecb74dbf123b",
+      "sha256": "a78ccc948537be58585e292915a08f481e4a9c21a19377d4b8c6ecb74dbf123b",
+      "constant_root_z_shift_m": 0.0,
+      "all_other_columns_identical": true,
+      "frame_count_unchanged": true,
+      "physical_acceptance": "not_evaluated"
+    },
+    {
+      "path": "ground-calibration-v1/data/90_14_stageii_unitree_g1.csv",
+      "clip": "90_14_stageii_unitree_g1",
+      "raw_sha256": "a2433a4431140eb1e06566a4e3d6990697b9f676afdee56965409ed77fdb9bfd",
+      "sha256": "193f9c875d1e05d6caa76fb31f0553cebf75ee9b580fdfb5100273c1f31b7d03",
+      "constant_root_z_shift_m": -0.17948946635816748,
+      "all_other_columns_identical": true,
+      "frame_count_unchanged": true,
+      "physical_acceptance": "not_evaluated"
+    },
+    {
+      "path": "ground-calibration-v1/data/90_15_stageii_unitree_g1.csv",
+      "clip": "90_15_stageii_unitree_g1",
+      "raw_sha256": "eefb7ce4c23c32eba51586f9ae41dd942b627a404b58cb07c2d0c4a20278083a",
+      "sha256": "b32ec8f3b8d1d48621c5f09c081e04c37ecb624e8c7e42d7eecc2a8f7933a9eb",
+      "constant_root_z_shift_m": -0.17119543505442636,
+      "all_other_columns_identical": true,
+      "frame_count_unchanged": true,
+      "physical_acceptance": "not_evaluated"
+    },
+    {
+      "path": "ground-calibration-v1/data/90_19_stageii_unitree_g1.csv",
+      "clip": "90_19_stageii_unitree_g1",
+      "raw_sha256": "4f0d75d03c9260351817082457d70c58b8f248eadb298b062316344cc055ac09",
+      "sha256": "4f0d75d03c9260351817082457d70c58b8f248eadb298b062316344cc055ac09",
+      "constant_root_z_shift_m": 0.0,
+      "all_other_columns_identical": true,
+      "frame_count_unchanged": true,
+      "physical_acceptance": "not_evaluated"
+    }
+  ]
+}

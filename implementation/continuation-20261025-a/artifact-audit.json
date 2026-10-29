@@ -1,0 +1,119 @@
+{
+  "status": "downloaded_artifacts_audited",
+  "evaluations": [
+    {
+      "file": "016000-confirm.json",
+      "macro": 0.8477334976196289,
+      "failed": 0,
+      "all40_full_denominators_passed": true
+    },
+    {
+      "file": "016000.json",
+      "macro": 0.8474919199943542,
+      "failed": 0,
+      "all40_full_denominators_passed": true
+    }
+  ],
+  "checkpoints": [
+    {
+      "file": "ckpt_016000.pt",
+      "bytes": 71781957,
+      "zip_crc_passed": true
+    },
+    {
+      "file": "full_016000.pt",
+      "bytes": 218547553,
+      "zip_crc_passed": true
+    }
+  ],
+  "resume_actual_updates_verified": true,
+  "full_optimizer_load_identity_verified": true,
+  "final_full_checkpoint_CPU_deserialization_and_state_identity_verified": true,
+  "videos": [
+    {
+      "file": "dance2_subject4.mp4",
+      "frames": 375,
+      "duration_seconds": 15.0,
+      "size": [
+        960,
+        540
+      ],
+      "status": "all_frames_decoded",
+      "samples": [
+        {
+          "frame": 0,
+          "rgb_sha256": "079f9c00fbb62fbf628bdc11fdcb3882288d9a71b1420bedf4da970c104a7d90",
+          "path": "[local]/dance2_subject4-0000.png"
+        },
+        {
+          "frame": 50,
+          "rgb_sha256": "b9adccbb58a234926eede1cad062efc84c67c22ea66a763e31f403d902485764",
+          "path": "[local]/dance2_subject4-0050.png"
+        },
+        {
+          "frame": 250,
+          "rgb_sha256": "136a841abd933831d6b1861b8cb55cc0c5ddaf03d5b16920c92afd6d9b0ab4a8",
+          "path": "[local]/dance2_subject4-0250.png"
+        }
+      ]
+    },
+    {
+      "file": "fallAndGetUp1_subject5.mp4",
+      "frames": 375,
+      "duration_seconds": 15.0,
+      "size": [
+        960,
+        540
+      ],
+      "status": "all_frames_decoded",
+      "samples": [
+        {
+          "frame": 0,
+          "rgb_sha256": "1a3ca5366d716018aada5ba092c3ab3dc4722446c53b0edd4fed7c568f3ae63b",
+          "path": "[local]/fallAndGetUp1_subject5-0000.png"
+        },
+        {
+          "frame": 50,
+          "rgb_sha256": "b085768c09cd541b71aa532838645272660762e6e7f2e0548dfac475fc532ac2",
+          "path": "[local]/fallAndGetUp1_subject5-0050.png"
+        },
+        {
+          "frame": 250,
+          "rgb_sha256": "44a1991f8104e5a4d9230ed93e3c7ebd1a7e4fa36fad65ee267f785805734b47",
+          "path": "[local]/fallAndGetUp1_subject5-0250.png"
+        }
+      ]
+    },
+    {
+      "file": "fallAndGetUp2_subject3.mp4",
+      "frames": 375,
+      "duration_seconds": 15.0,
+      "size": [
+        960,
+        540
+      ],
+      "status": "all_frames_decoded",
+      "samples": [
+        {
+          "frame": 0,
+          "rgb_sha256": "55e1d4d9f4e5546ce115b54d6000f13e7e4cbd432396f094d325dbdc6e4be1af",
+          "path": "[local]/fallAndGetUp2_subject3-0000.png"
+        },
+        {
+          "frame": 50,
+          "rgb_sha256": "badd3c83100a70548db93c1f7cddf1d560bb715b26f910402d8ce581c5968fb7",
+          "path": "[local]/fallAndGetUp2_subject3-0050.png"
+        },
+        {
+          "frame": 250,
+          "rgb_sha256": "bdb3f3f776425e25f0d85aff02b73a2c92120d95820be6123521934a37984d15",
+          "path": "[local]/fallAndGetUp2_subject3-0250.png"
+        }
+      ]
+    }
+  ],
+  "all_frames_decoded": 1125,
+  "auxiliary_independent_diagnostics_used": true,
+  "local_model_inference_executed": false,
+  "boundary": "Container CRC and byte hashes complement actual cloud model loading;evaluation remains the quality test. Auxiliary numerical replay differences remain separately recorded."
+}

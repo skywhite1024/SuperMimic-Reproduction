@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "frozen_at": "2026-10-27T19:16:00+08:00",
+  "purpose": "Engineering acceptance for reference-conditioned simulated G1 tracking; these thresholds are project criteria, not paper benchmark claims.",
+  "new_library_denominator": 15,
+  "new_clips_not_previously_trained": 14,
+  "old_lafan_denominator": 40,
+  "one_policy_required": true,
+  "initialization": "Reference frame zero only; no controlled robot state writes or resets afterwards",
+  "new_clip_tracking": {
+    "hard_failure_frames_max": 0,
+    "norm_return_original_min": 0.65,
+    "root_xy_rmse_m_max": 0.35,
+    "root_xy_peak_m_max": 0.75,
+    "body_global_mean_m_max": 0.25,
+    "body_local_mean_m_max": 0.15,
+    "yaw_rmse_deg_max": 30.0,
+    "root_orientation_geodesic_rmse_deg_max": 35.0,
+    "reference_inversion_frame_coverage_min": 0.7,
+    "upright_reference_ending_requires_last_half_second_pelvis_min_m": 0.55,
+    "upright_reference_ending_requires_last_half_second_Rzz_min": 0.8
+  },
+  "old_lafan_regression": {
+    "hard_failed_clips_max": 0,
+    "macro_return_drop_from_matched_original_16k_max": 0.03,
+    "comparison_requires_same_backend_and_precision": true
+  },
+  "continuous": {
+    "sequence_seconds": 120,
+    "frozen_seeds": [0, 1, 2],
+    "all_sequences_retained": true,
+    "post_initialization_resets_max": 0,
+    "sequence_order_and_transforms_frozen_before_candidate_evaluation": true,
+    "include_all_15_new_library_entries_in_fixed_schedules": true,
+    "report_transition_and_full_sequence_metrics": true,
+    "separate_final_standstill_hold_required_before_static_standing_claim": true
+  },
+  "interpretation": [
+    "Original hard-gate pass alone does not establish learned tracking quality",
+    "Every failed or unsuitable raw clip remains in the denominator",
+    "Body-pose tracking of 89_01 does not establish object balancing",
+    "CMU 88_08 is a hands-supported backward flip; no generic airborne backflip claim",
+    "Contact geometry is diagnostic, not measured contact force or guaranteed contact fidelity",
+    "90/180/360 target-video types require individual matching and physical verification",
+    "A moving upright ending is not static standing"
+  ]
+}

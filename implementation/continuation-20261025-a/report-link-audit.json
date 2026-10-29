@@ -1,0 +1,27 @@
+{
+  "status": "all_local_report_links_resolve",
+  "verified_at": "2026-10-26T11:34:45.094616+08:00",
+  "links": [
+    "evaluation-trajectory.png",
+    "../diagnostic-analysis.json",
+    "dance2_subject4-diagnostic.png",
+    "../downloaded/postprocess-20261026-a/videos/dance2_subject4.mp4",
+    "fallAndGetUp1_subject5-diagnostic.png",
+    "../downloaded/postprocess-20261026-a/videos/fallAndGetUp1_subject5.mp4",
+    "fallAndGetUp2_subject3-diagnostic.png",
+    "../downloaded/postprocess-20261026-a/videos/fallAndGetUp2_subject3.mp4",
+    "../budget-ledger.json",
+    "../final-resource-verification.json",
+    "../downloaded/evidence/full-final-readback.json",
+    "../execution.json",
+    "../downloaded/selection.json",
+    "../downloaded/evidence/loaded-identity.json",
+    "../downloaded/evidence/resume-acceptance.json",
+    "../downloaded/evaluations/index.json",
+    "../local-transfer-verification.json",
+    "../README.md",
+    "../downloaded/policy/ckpt_016000.pt",
+    "../downloaded/policy/full_016000.pt"
+  ],
+  "HTML_sha256": "732fc6b89a90fc2d615919a2e83924cc508c4f5cf834d091d0d1d3d6845fcabc"
+}

@@ -1,0 +1,819 @@
+{
+  "stage": "local_ablation_complete_next_cloud_trial_requires_current_location_network_and_resource_check",
+  "created_at": "2026-10-27T18:16:20.76663+08:00",
+  "scope": "Learn remaining 14 public clips with one reference-conditioned policy; retain 88_08 and rehearse all 40 old LAFAN1 clips.",
+  "library_commit": "c493a897f2ca81153e980a65ee6f0faf7cb07487",
+  "new_library_denominator": 15,
+  "new_clips_not_previously_trained": 14,
+  "old_lafan_denominator": 40,
+  "target_policy_count": 1,
+  "architecture": "101D extension of the accepted 99D acro checkpoint; exact old action identity at zero-initialized XY columns must pass before training",
+  "parent_full_checkpoint": "/mnt/afs/[account]/SuperMimic/interactive-g1-20261027-a/runs/acro-h100-2000/final-full.pt",
+  "parent_full_sha256": "fa2393c901488591c05f64c6f9c61ae918779159bf0d470aac3ffcfcc0b6beab",
+  "normalizer_policy": "Freeze all old normalizer tensors; train WM, policy and critic weights.",
+  "sampling": {
+    "new_library_mass": 0.6,
+    "old_lafan_mass": 0.4,
+    "within_group": "equal prior mass per clip; native priority inside clip"
+  },
+  "resource_cap_gpus": 4,
+  "initial_resource_plan_gpus": 1,
+  "finite_training_stage": {
+    "new_updates": 4000,
+    "wm_warmup_updates": 800,
+    "max_program_seconds": 7200,
+    "num_envs": 1024
+  },
+  "BONES_route": "paused",
+  "live_gpu_jobs_this_phase": 0,
+  "evaluation": [
+    "all 15 raw references from frame zero, retain full failed tails",
+    "matched original reward/gates/denominator on all 40 LAFAN1 clips",
+    "pre-frozen multiple 120-second continuous references after unified skill acceptance"
+  ],
+  "limitations": [
+    "No robot, object manipulation, terrain or human-video frontend in this phase",
+    "No claim of all 90/180/360 target types until specifically matched and tested",
+    "Training resets allowed; physical acceptance only t0 initialization"
+  ],
+  "score_contract": {
+    "version": 2,
+    "absolute_score_difference": 0,
+    "failure_v1_preserved": true,
+    "passed": 4,
+    "cases": 4
+  },
+  "cpu_preparation_job": {
+    "ssh_between_nodes": false,
+    "maximum_seconds": 900,
+    "vcpus": 4,
+    "gpu_count": 0,
+    "name": "supermimic-unified-prep-[account]-1027e",
+    "memory_gib": 16,
+    "max_restarts": 0,
+    "status": "failed_at_expected_digest_guard_before_data_or_training",
+    "uid": "89dea96bf23e4914879812f52237675f"
+  },
+  "parent_18k_baseline": {
+    "limitations": "Original hard gate only, not tracking quality or static landing acceptance",
+    "groups": {
+      "new": {
+        "denominator": 15,
+        "passed": 4,
+        "macro_return_original": 0.2947262603285102,
+        "frame_weighted_return_original": 0.20214185700576956
+      },
+      "lafan": {
+        "denominator": 40,
+        "passed": 2,
+        "macro_return_original": 0.1728335402905941,
+        "frame_weighted_return_original": 0.1841068964430438
+      }
+    },
+    "forgetting_observed_on_old_lafan": true,
+    "resets": 0,
+    "file": "runs/parent-18k-all55-v3/summary.json"
+  },
+  "cpu_preparation_job_e2": {
+    "uid": "49b52554b09943b39e4aef42001bbdd4",
+    "status": "success",
+    "vcpus": 4,
+    "max_restarts": 0,
+    "memory_gib": 16,
+    "gpu_count": 0,
+    "created_at": "2026-10-27T19:05:23+08:00",
+    "name": "supermimic-unified-prep-[account]-1027e2"
+  },
+  "gpu_job": {
+    "maximum_seconds": 7200,
+    "name": "supermimic-unified-[account]-1027f1",
+    "gpu_count": 1,
+    "replicas": 1,
+    "created_at": "2026-10-27T19:12:14+08:00",
+    "max_restarts": 0,
+    "node_ssh": false,
+    "memory_gib": 64,
+    "program_sha256": "cbab8d9cca1d99e1683225cff60709d23d8060d22eb05bd5a38cf3ee281bd72b",
+    "uid": "d1114457879042919b98134caaa13590",
+    "running_observed_update": "2026-10-27T19:12:33+08:00",
+    "cluster": "computing_cluster/share-cluster",
+    "workspace": "share-space",
+    "status": "success",
+    "vcpus": 4,
+    "actual_hardware": {
+      "cpu_max": "400000 100000",
+      "gpu": "NVIDIA H100 80GB HBM3",
+      "memory_max": 68719476736
+    },
+    "latest_checkpoint_observed": "ckpt_022000.pt",
+    "new_updates_observed": 4000,
+    "platform_terminal_updated_at": "2026-10-27T20:17:39+08:00",
+    "complete_post_evaluation_result": "pending_personal_AFS_retrieval",
+    "full_checkpoint_sha256": "56a6714aa7e79f063f4089c7860a1d00195601f178223bf42b65acd0e587910e",
+    "full_program_wall_seconds": 3890.1217099390924
+  },
+  "old_16k_baseline": {
+    "groups": {
+      "new": {
+        "denominator": 15,
+        "passed": 5,
+        "macro_return_original": 0.4601412716011206,
+        "frame_weighted_return_original": 0.48848994132215284
+      },
+      "lafan": {
+        "denominator": 40,
+        "passed": 40,
+        "macro_return_original": 0.8445121318101882,
+        "frame_weighted_return_original": 0.846424410830169
+      }
+    },
+    "resets": 0,
+    "file": "runs/old-16k-all55-v3/summary.json"
+  },
+  "initial101d_cuda_baseline": {
+    "lafan": {
+      "macro_return_original": 0.14233767737168818,
+      "denominator": 40,
+      "passed": 3
+    },
+    "precision": "bf16 policy on CUDA, same original base reward",
+    "new": {
+      "macro_return_original": 0.29384307290310974,
+      "denominator": 15,
+      "passed": 3
+    },
+    "source": "evidence/gpu-1027f1-latest-log.txt",
+    "resets": 0
+  },
+  "continuous_frozen": {
+    "robot_resets_allowed_after_t0": 0,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "physical_execution": "all_3_complete_full_120s_1_pass_2_fail_zero_resets",
+    "seconds_each": 120,
+    "segments_total": 65,
+    "new_raw_clip_union": 15,
+    "index": "continuous-frozen-v1/index.json",
+    "passed_original_hard_gate": 1,
+    "candidate_result": "runs/unified4000-frozen-continuous-v1/summary.json"
+  },
+  "ground_calibration_ablation": {
+    "denominator": 2,
+    "parent18k_corrected_passed": 0,
+    "status": "local_ablation_only",
+    "raw_library_unchanged": true,
+    "manifest": "ground-calibration-v1/manifest.json",
+    "version": "ground-calibration-v1",
+    "first_failures_after_correction_s": [
+      4.36,
+      2.46
+    ],
+    "modified_clips": 2,
+    "raw_GPU_recipe_unchanged": true
+  },
+  "physical_contact_baseline": {
+    "full_failed_tails_included": true,
+    "contact_force_measured": false,
+    "new_denominator": 15,
+    "file": "runs/parent-18k-all55-v3/contact-review.json"
+  },
+  "contact_acceptance": {
+    "prior_model_combined_passed": 2,
+    "file": "contact-acceptance-contract.json",
+    "defined_before_candidate_assessment": true,
+    "raw_denominator": 15,
+    "contact_force_measured": false
+  },
+  "old_lafan_identity": {
+    "file": "old-lafan-manifest.json",
+    "cloud_post_stage_recheck": "planned_during_collection",
+    "all_40_local_hashes_match_original": true,
+    "source_revision": "ce1572906efe6157840e8474d5a0d7aa87481e74"
+  },
+  "updated_at": "2026-10-27T17:31:49.827003+00:00",
+  "training_proof_from_console": "evidence/unified4000-update-proof-from-live-log.json",
+  "unified4000_cuda": {
+    "groups": {
+      "new": {
+        "denominator": 15,
+        "passed": 13,
+        "macro_return_original": 0.6391665081183115,
+        "frame_weighted_return_original": 0.6927553193833033
+      },
+      "lafan": {
+        "denominator": 40,
+        "passed": 39,
+        "macro_return_original": 0.8971124827861786,
+        "frame_weighted_return_original": 0.9002095355870798
+      }
+    },
+    "post_initialization_resets": 0,
+    "hard_gate_failures": [
+      {
+        "clip": "90_14_stageii_unitree_g1",
+        "group": "new",
+        "first_original_hard_failure_s": 4.24,
+        "norm_return_original": 0.3795726001262665
+      },
+      {
+        "clip": "90_15_stageii_unitree_g1",
+        "group": "new",
+        "first_original_hard_failure_s": 4.16,
+        "norm_return_original": 0.15087366104125977
+      },
+      {
+        "clip": "jumps1_subject2",
+        "group": "lafan",
+        "first_original_hard_failure_s": 212.96,
+        "norm_return_original": 0.7501579523086548
+      }
+    ],
+    "tracking_quality_and_contact": "pending_full_trajectory_retrieval",
+    "source": "evidence/unified4000-cuda-summary-from-afs.json"
+  },
+  "retrieval": {
+    "status": "archive_and_all_44_files_verified_resources_released",
+    "cpu_cci": "midi-native-prep-[account]",
+    "attended": true,
+    "actual_cpu_cores": 2,
+    "actual_memory_gib": 8,
+    "gpu_count": 0,
+    "manual_stop_pending": false,
+    "dnat_unbind_pending": false,
+    "host_fingerprint_console_and_ssh_matched": "SHA256:ByRyOkCkhpE7CPfoKXlE2xsboWyR+VjNzrDADJ5fRcE",
+    "resource_verification": "evidence/final-resource-verification-4000.json"
+  },
+  "unified4000_cpu": {
+    "groups": {
+      "new": {
+        "denominator": 15,
+        "passed": 13,
+        "macro_return_original": 0.6402784019708634,
+        "frame_weighted_return_original": 0.6927627889168042
+      },
+      "lafan": {
+        "denominator": 40,
+        "passed": 40,
+        "macro_return_original": 0.8966946423053741,
+        "frame_weighted_return_original": 0.9000463173952105
+      }
+    },
+    "source": "runs/unified4000-cpu-all55/summary.json",
+    "post_initialization_resets": 0
+  },
+  "new_quality": {
+    "run": "unified4000-cuda-all55",
+    "new_denominator": 15,
+    "tracking_contract_sha256": "0036d9f100203e9d25990c47dfb5666508672fafbea60156a33fb63e56c1dcb1",
+    "contact_contract_sha256": "b3b52cbe3bb45696ca0e9de603db4d01270bc275ff376c2f2a3c370d171390a8",
+    "original_hard_gate_passed": 13,
+    "tracking_quality_passed": 8,
+    "contact_review_passed": 11,
+    "combined_engineering_passed": 8
+  },
+  "full_goal_complete": false,
+  "next_stage": {
+    "status": "success",
+    "reference_variant": "ground-calibration-v1",
+    "changes": "Two previously frozen constant root-Z translations only; retain 15 raw metrics separately",
+    "new_updates": 4000,
+    "world_model_warmup_updates": 400,
+    "gpu_count": 1,
+    "rehearsal_old_clips": 40,
+    "sampling_mass": {
+      "new": 0.6,
+      "old": 0.4
+    },
+    "architecture_and_training_losses_unchanged": true,
+    "thresholds_unchanged": true,
+    "job_name": "supermimic-unified-stage2-[account]-1027g1",
+    "uid": "73c088ad52ec49c1aa10dfd33e7a848f",
+    "created_at": "2026-10-27T21:15:46+08:00",
+    "memory_gib": 64,
+    "vcpus": 4,
+    "max_restarts": 0,
+    "command_sha256": "433f77094f5be302128732119bfa5800f2ffe366662151d2113ffe6cddc068f0",
+    "maximum_program_seconds": 7200,
+    "platform_running_updated_at": "2026-10-27T21:17:36+08:00",
+    "actual_hardware": {
+      "gpu": "NVIDIA H100 80GB HBM3",
+      "cpu_max": "400000 100000",
+      "memory_max": 68719476736
+    },
+    "initial_checkpoint_hash_verified": true,
+    "all_pinned_reference_and_code_hashes_verified": true,
+    "latest_log": "evidence/stage2-latest-log.txt",
+    "new_updates_observed": 4000,
+    "latest_checkpoint_observed": "ckpt_026000.pt",
+    "continuous_contract": "continuous-acceptance-contract-v1.json",
+    "continuous_contract_defined_before_stage2_evaluation": true,
+    "last_console_log_read_at": "2026-10-27T22:13:22.201967+08:00",
+    "training_update_proof": "evidence/stage2-update-proof-from-console.json",
+    "platform_terminal_updated_at": "2026-10-27T22:20:22+08:00",
+    "complete_archive_readback": "pending",
+    "corrected_groups_from_console": {
+      "new": {
+        "denominator": 15,
+        "passed": 15,
+        "macro_return_original": 0.7053599576155345,
+        "frame_weighted_return_original": 0.7643992096767703
+      },
+      "lafan": {
+        "denominator": 40,
+        "passed": 38,
+        "macro_return_original": 0.8970376357436181,
+        "frame_weighted_return_original": 0.9023697926813825
+      }
+    },
+    "recovery": {
+      "status": "archive_and_all61_files_verified_resources_released",
+      "gpus": 0,
+      "configured_cpus": 2,
+      "configured_memory_gib": 8,
+      "manual_stop_empty_instances_dnat_unbind_required": true,
+      "deadline": "2026-10-27T22:50:39+08:00",
+      "archive_bytes": 467907846,
+      "archive_sha256": "327c8a346e10a2f451305eac5c1690960ef33f9206782db7c0293532d7e600ca",
+      "resource_verification": "evidence/final-resource-verification-stage2.json"
+    },
+    "physical_assessment": {
+      "corrected_new_combined_passed": 7,
+      "raw_new_combined_passed": 7,
+      "new_denominator": 15,
+      "old_CPU_regression_passed": false,
+      "old_CPU_groups": {
+        "new": {
+          "denominator": 15,
+          "passed": 15,
+          "macro_return_original": 0.715977584818999,
+          "frame_weighted_return_original": 0.7664286265029392
+        },
+        "lafan": {
+          "denominator": 40,
+          "passed": 38,
+          "macro_return_original": 0.8789855513721705,
+          "frame_weighted_return_original": 0.8839857497093115
+        }
+      },
+      "old_CUDA_original_hard_gate_passed_all40": false,
+      "old_CUDA_group": {
+        "denominator": 40,
+        "passed": 38,
+        "macro_return_original": 0.8970376357436181,
+        "frame_weighted_return_original": 0.9023697926813825
+      },
+      "raw_continuous_engineering_passed": 1,
+      "corrected_continuous_engineering_passed": 1,
+      "continuous_denominator": 3,
+      "all_failed_tails_retained": true,
+      "raw_reference_goal_complete": false,
+      "corrected_variant_goal_complete": false,
+      "paper_equivalent_reproduction_claimed": false,
+      "cloud_resource_release_verified_separately": true,
+      "video_generation_pending": false
+    }
+  },
+  "videos_stage1": {
+    "new_clips": 15,
+    "frozen_120s_sequences": 3,
+    "all_complete_decode_passed": true,
+    "failed_tails_retained": true,
+    "visual_inspection": "all15 montage plus detailed 88_07 and failed sequence seed2 sheets; not frame-by-frame annotation"
+  },
+  "continuous_corrected_ablation": {
+    "reference_version": "continuous-corrected-v1",
+    "passed_original_hard_gate": 1,
+    "denominator": 3,
+    "full_physical_seconds": 360,
+    "post_initialization_resets": 0,
+    "no_training_on_evaluation_sequences": true
+  },
+  "replay_sampling_diagnostic": {
+    "source": "evidence/replay-occupancy-cpu-diagnostic.json",
+    "separate_CPU_diagnostic_not_formal_GPU_buffer": true,
+    "observed_new_reset_fraction": 0.594855305466238,
+    "new_replay_frame_fraction": 0.3155468702316284,
+    "new_valid_policy_start_fraction": 0.2890453636646271,
+    "trained_model_tensors_unchanged": true
+  },
+  "stage3_preparation": {
+    "status": "real_engineering_verified_and_fixed_bootstrap_job_running",
+    "scope": "One deployed 101D policy over the same 15 calibrated references and unchanged 40 LAFAN1 clips",
+    "candidate_change": "Balance actual replay batch sampling by group and clip; give a fixed higher replay prior to old clips failed in stage2",
+    "basis": "separate_CPU_replay_occupancy_diagnostic_and_stage2_strict_quality_and_regression_failures",
+    "normalizers_architecture_reference_files_rewards_and_thresholds": "unchanged",
+    "do_not_submit_before_implementation_and_real_engineering_check": true,
+    "gpu_plan": 1,
+    "plan": "stage3-plan.json",
+    "old_failed_clip_union": [
+      "dance2_subject4",
+      "fallAndGetUp2_subject3",
+      "jumps1_subject2"
+    ],
+    "failed_attempt": {
+      "uid": "eab5761492094cb2936994b21d3a6f0d",
+      "name": "supermimic-unified-replay-[account]-1027h1",
+      "created_at": "2026-10-27T23:10:05+08:00",
+      "terminal_updated_at": "2026-10-27T23:10:22+08:00",
+      "status": "failed",
+      "phase": "bootstrap_before_training",
+      "training_started": false,
+      "error": "FileNotFoundError acceptance-contract.json at plan file hash preflight",
+      "evidence": "evidence/stage3-h1-startup-failure-log-dom.txt"
+    },
+    "engineering_proof": "runs/engineering-stage3-cpu-6/proof.json"
+  },
+  "stage3": {
+    "status": "success",
+    "uid": "65ad9922faf64151b3aab392a9e54f35",
+    "job_name": "supermimic-unified-replay-[account]-1027h2",
+    "created_at": "2026-10-27T23:20:13+08:00",
+    "platform_running_updated_at": "2026-10-27T23:20:25+08:00",
+    "gpu_count": 1,
+    "vcpus": 4,
+    "memory_gib": 64,
+    "replicas": 1,
+    "max_restarts": 0,
+    "node_ssh": false,
+    "new_updates": 4000,
+    "wm_only_updates": 400,
+    "maximum_program_seconds": 7200,
+    "initial_full_checkpoint": "runs/unified-h100-stage2-4000/final-full.pt",
+    "initial_full_sha256": "807d5fac7ca128f892c950fa379133231cd5f741e83075ed017d105b2eec6eec",
+    "plan": "stage3-plan.json",
+    "command_sha256": "4e5d690435b0c7b8119351bb2a5ea443ab499eba5ae43aeddb33d6cdd2c20ca8",
+    "new_actual_replay_group_mass": 0.6,
+    "old_actual_replay_group_mass": 0.4,
+    "old_failure_replay_priorities": {
+      "dance2_subject4": 3,
+      "fallAndGetUp2_subject3": 3,
+      "jumps1_subject2": 3
+    },
+    "real_CPU_six_updates_verified": true,
+    "physical_acceptance": "pending",
+    "actual_hardware": {
+      "gpu_count": 1,
+      "gpu_name": "NVIDIA H100 80GB HBM3",
+      "cpu_max": "400000 100000",
+      "memory_max": "68719476736",
+      "new_updates": 4000,
+      "wm_only_updates": 400,
+      "num_envs": 1024,
+      "maximum_program_seconds": 7200,
+      "reference_variant": "ground-calibration-v1",
+      "new_denominator": 15,
+      "old_denominator": 40,
+      "thresholds_unchanged": true,
+      "one_policy": true,
+      "actual_replay_group_mass": {
+        "new": 0.6,
+        "lafan": 0.4
+      },
+      "old_failure_replay_priorities": {
+        "dance2_subject4": 3,
+        "fallAndGetUp2_subject3": 3,
+        "jumps1_subject2": 3
+      }
+    },
+    "pinned_source_and_all_reference_hashes_verified": true,
+    "initial_checkpoint_hash_verified": true,
+    "latest_log": "evidence/stage3-latest-log.txt",
+    "screenshot_capture": "unavailable; actual DOM and program log retained",
+    "latest_checkpoint_observed": "ckpt_030000.pt",
+    "new_updates_observed": 4000,
+    "last_console_log_read_at": "2026-10-28T00:09:31.041313+08:00",
+    "training_update_proof": "evidence/stage3-update-proof-from-console.json",
+    "actual_replay_sampling_from_cloud_proof": {
+      "wm_starts": {
+        "count": 8192000,
+        "new_fraction": 0.6002672119140625,
+        "all55_positive": true
+      },
+      "wm_unmasked_transitions": {
+        "count": 62823697,
+        "new_fraction": 0.5859579546870666,
+        "all55_positive": true
+      },
+      "pi_proposed": {
+        "count": 3686400,
+        "new_fraction": 0.5994159613715278,
+        "all55_positive": true
+      },
+      "pi_consumed": {
+        "count": 1843200,
+        "new_fraction": 0.5995562065972222,
+        "all55_positive": true
+      }
+    },
+    "normalizers_unchanged_verified_in_cloud": true,
+    "three_network_hashes_changed_in_cloud": true,
+    "new_training_wall_seconds": 2717.007743407041,
+    "complete_archive_readback": "verified_all65_manifest_files",
+    "platform_terminal_updated_at": "2026-10-28T00:18:05+08:00",
+    "recovery": {
+      "status": "archive_and_all65_files_verified_resources_released",
+      "window": "evidence/cci-stage3-4000-retrieval-window.json",
+      "manual_stop_empty_list_unbind_restore_required": true,
+      "archive_bytes": 468211711,
+      "archive_sha256": "e0c58160914973d0d4db1aca1fb96c0a8cd573e3c3673eab61118a67ff2df90c",
+      "manifest_files": 65,
+      "actual_cpu_max": "200000 100000",
+      "actual_memory_max": 8589934592,
+      "resource_verification": "evidence/final-resource-verification-stage3.json"
+    },
+    "program_receipt_from_AFS": {
+      "status": "updates_corrected55_and_raw15_evaluation_complete",
+      "config": {
+        "gpu_count": 1,
+        "gpu_name": "NVIDIA H100 80GB HBM3",
+        "cpu_max": "400000 100000",
+        "memory_max": "68719476736",
+        "new_updates": 4000,
+        "wm_only_updates": 400,
+        "num_envs": 1024,
+        "maximum_program_seconds": 7200,
+        "reference_variant": "ground-calibration-v1",
+        "new_denominator": 15,
+        "old_denominator": 40,
+        "thresholds_unchanged": true,
+        "one_policy": true,
+        "actual_replay_group_mass": {
+          "new": 0.6,
+          "lafan": 0.4
+        },
+        "old_failure_replay_priorities": {
+          "dance2_subject4": 3,
+          "fallAndGetUp2_subject3": 3,
+          "jumps1_subject2": 3
+        }
+      },
+      "initial_full_sha256": "807d5fac7ca128f892c950fa379133231cd5f741e83075ed017d105b2eec6eec",
+      "plan_sha256": "f6fdb336a1e71aa972676e1ccdae39694e9cdbe126f246855eeef92892796fa0",
+      "wall_seconds": 3436.426617525518,
+      "full_checkpoint_sha256": "93bb8b830145c54092518eba8db1fb020d020eb72cdad1b619b4fc5470cc213d",
+      "corrected": {
+        "new": {
+          "denominator": 15,
+          "passed": 12,
+          "macro_return_original": 0.7083112557729085,
+          "frame_weighted_return_original": 0.7729641064203079
+        },
+        "lafan": {
+          "denominator": 40,
+          "passed": 38,
+          "macro_return_original": 0.8712465930730104,
+          "frame_weighted_return_original": 0.8759206691855234
+        }
+      },
+      "raw_new": {
+        "new": {
+          "denominator": 15,
+          "passed": 10,
+          "macro_return_original": 0.6552405258019766,
+          "frame_weighted_return_original": 0.7298598482898909
+        }
+      },
+      "full_goal_complete": false,
+      "physical_quality_and_continuous_assessment": "pending_local_full_trajectory_review"
+    },
+    "corrected_groups": {
+      "new": {
+        "denominator": 15,
+        "passed": 12,
+        "macro_return_original": 0.7083112557729085,
+        "frame_weighted_return_original": 0.7729641064203079
+      },
+      "lafan": {
+        "denominator": 40,
+        "passed": 38,
+        "macro_return_original": 0.8712465930730104,
+        "frame_weighted_return_original": 0.8759206691855234
+      }
+    },
+    "raw_new_groups": {
+      "new": {
+        "denominator": 15,
+        "passed": 10,
+        "macro_return_original": 0.6552405258019766,
+        "frame_weighted_return_original": 0.7298598482898909
+      }
+    },
+    "new_hard_gate_failed_clips": [
+      [
+        "88_07_stageii_unitree_g1",
+        1.54
+      ],
+      [
+        "88_08_stageii_unitree_g1",
+        3.2
+      ],
+      [
+        "88_09_stageii_unitree_g1",
+        4.74
+      ],
+      [
+        "dance1_subject1",
+        107.38
+      ],
+      [
+        "dance2_subject4",
+        60.84
+      ]
+    ],
+    "full_checkpoint_sha256": "93bb8b830145c54092518eba8db1fb020d020eb72cdad1b619b4fc5470cc213d",
+    "assessment_snapshot_before_videos_complete": {
+      "runs": {
+        "unified-stage3-corrected-cuda-all55": {
+          "groups": {
+            "new": {
+              "denominator": 15,
+              "passed": 12,
+              "macro_return_original": 0.7083112557729085,
+              "frame_weighted_return_original": 0.7729641064203079
+            },
+            "lafan": {
+              "denominator": 40,
+              "passed": 38,
+              "macro_return_original": 0.8712465930730104,
+              "frame_weighted_return_original": 0.8759206691855234
+            }
+          },
+          "combined_new_passed": 11,
+          "tracking_new_passed": 12,
+          "contact_new_passed": 11,
+          "old_failed": [
+            [
+              "dance1_subject1",
+              107.38
+            ],
+            [
+              "dance2_subject4",
+              60.84
+            ]
+          ]
+        },
+        "unified-stage3-raw-cuda-new15": {
+          "groups": {
+            "new": {
+              "denominator": 15,
+              "passed": 10,
+              "macro_return_original": 0.6552405258019766,
+              "frame_weighted_return_original": 0.7298598482898909
+            }
+          },
+          "combined_new_passed": 7,
+          "tracking_new_passed": 9,
+          "contact_new_passed": 9,
+          "old_failed": []
+        },
+        "unified-stage3-corrected-cpu-all55": {
+          "groups": {
+            "new": {
+              "denominator": 15,
+              "passed": 13,
+              "macro_return_original": 0.6982599155356487,
+              "frame_weighted_return_original": 0.7661714792460517
+            },
+            "lafan": {
+              "denominator": 40,
+              "passed": 37,
+              "macro_return_original": 0.8688684366643429,
+              "frame_weighted_return_original": 0.8734605255161546
+            }
+          },
+          "combined_new_passed": 10,
+          "tracking_new_passed": 11,
+          "contact_new_passed": 11,
+          "old_failed": [
+            [
+              "dance1_subject1",
+              107.34
+            ],
+            [
+              "dance2_subject4",
+              59.92
+            ],
+            [
+              "jumps1_subject2",
+              240.8
+            ]
+          ]
+        }
+      },
+      "raw_continuous_strict_passed": 0,
+      "corrected_continuous_strict_passed": 0,
+      "continuous_denominator": 3,
+      "full_goal_complete": false,
+      "video_generation_still_running": true
+    },
+    "next_diagnostic": {
+      "status": "running_local_CPU_same_weight_action_bound_ablation",
+      "plan": "action-bound-consistency-v1-plan.json",
+      "run": "stage3-actionbound20-corrected-cpu-all55",
+      "changes": "Apply the training-collection action bound [-20,20] to physical deployment output; preserve every unbounded result",
+      "cloud_gpus_requested": 0,
+      "new_training_updates": 0
+    },
+    "physical_assessment": {
+      "corrected_new_combined_passed": 11,
+      "raw_new_combined_passed": 7,
+      "new_denominator": 15,
+      "old_CPU_regression_passed": false,
+      "old_CPU_groups": {
+        "new": {
+          "denominator": 15,
+          "passed": 13,
+          "macro_return_original": 0.6982599155356487,
+          "frame_weighted_return_original": 0.7661714792460517
+        },
+        "lafan": {
+          "denominator": 40,
+          "passed": 37,
+          "macro_return_original": 0.8688684366643429,
+          "frame_weighted_return_original": 0.8734605255161546
+        }
+      },
+      "old_CUDA_original_hard_gate_passed_all40": false,
+      "old_CUDA_group": {
+        "denominator": 40,
+        "passed": 38,
+        "macro_return_original": 0.8712465930730104,
+        "frame_weighted_return_original": 0.8759206691855234
+      },
+      "raw_continuous_engineering_passed": 0,
+      "corrected_continuous_engineering_passed": 0,
+      "continuous_denominator": 3,
+      "all_failed_tails_retained": true,
+      "raw_reference_goal_complete": false,
+      "corrected_variant_goal_complete": false,
+      "paper_equivalent_reproduction_claimed": false,
+      "cloud_resource_release_verified_separately": true,
+      "video_generation_pending": false
+    }
+  },
+  "action_bound_ablation": {
+    "status": "all_numeric_video_and_hash_checks_complete",
+    "controller_variant": "action-output-bound-20-v1",
+    "checkpoint_weights_unchanged": true,
+    "training_updates": 0,
+    "device": "cpu",
+    "cuda_variant_assessed": false,
+    "corrected_new_strict_before_after": [
+      10,
+      10
+    ],
+    "raw_new_strict_before_after": [
+      8,
+      8
+    ],
+    "old40_hard_gate_before_after": [
+      37,
+      37
+    ],
+    "continuous_raw_strict_before_after": [
+      0,
+      0
+    ],
+    "continuous_corrected_strict_before_after": [
+      0,
+      0
+    ],
+    "all3_first_failure_times_unchanged_s": [
+      9.16,
+      6.82,
+      40.98
+    ],
+    "initial_continuous_failure_cause_explained_by_output_overshoot": false,
+    "plan": "action-bound-consistency-v1-plan.json",
+    "extension_plan": "action-bound-consistency-v1-extension-plan.json",
+    "matched_comparison": "evidence/action-bound-matched-comparison.json",
+    "report": "action-bound-ablation-report.html",
+    "local_completion_receipt": "evidence/action-bound-completion.json",
+    "video_count": 39,
+    "verification": "evidence/action-bound-final-verification.json",
+    "continuous_failure_figure": "figures/continuous-first-failure-diagnostic.png"
+  },
+  "next_controlled_trial": {
+    "status": "prepared_not_submitted_pending_current_location_network_confirmation_and_resource_checks",
+    "plan": "retention-trial-v1-plan.json",
+    "startup_command": "deployment/gpu-retention-v1-1028.command.txt",
+    "new_updates_maximum": 1000,
+    "wm_only_updates": 200,
+    "requested_gpu_count": 1,
+    "maximum_program_seconds": 5400,
+    "engineering": "runs/engineering-retention-v2-cpu-6/proof.json",
+    "six_real_CPU_updates_verified": true,
+    "all3_networks_changed": true,
+    "frozen_teachers_and_norms_unchanged": true,
+    "single_PI_optimizer_step_per_joint_update": true,
+    "exact_bounded_loaded_policy_output_readback": true,
+    "automatic_extension_allowed": false,
+    "current_location_network_confirmation": "pending",
+    "last_prior_confirmation_date": "2026-10-27",
+    "fresh_all_account_resource_check": "required_before_submission",
+    "reference_or_physics_changed": false
+  }
+}

@@ -1,0 +1,5 @@
+# Preserve source/data provenance hashes identically on Windows and Linux.
+* -text
+*.mp4 binary
+*.png binary
+*.jpg binary

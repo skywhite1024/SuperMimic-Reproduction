@@ -1,0 +1,20 @@
+{
+  "status": "checkpoint_container_integrity_passed",
+  "checkpoint_sha256": "8b3b36ed67a39da526b2de3717291d2a9f8dba570071a80b052d2eb3c8bf3305",
+  "cloud_model_load_and_evaluation_completed": true,
+  "local_inference_executed": false,
+  "files": [
+    {
+      "file": "ckpt_012000.pt",
+      "bytes": 71781957,
+      "zip_entries": 52,
+      "zip_crc_passed": true
+    },
+    {
+      "file": "last.pt",
+      "bytes": 218547105,
+      "zip_entries": 181,
+      "zip_crc_passed": true
+    }
+  ]
+}

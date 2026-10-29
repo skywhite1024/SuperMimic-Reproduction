@@ -1,0 +1,264 @@
+{
+  "status": "all39_ablation_videos_and_all_fixed_comparisons_verified",
+  "updated_at": "2026-10-27T17:31:49.825305+00:00",
+  "video_count": 39,
+  "video_files": [
+    {
+      "receipt": "videos\\stage3-actionbound20-corrected-cpu-all55\\143_34_stageii_unitree_g1.json",
+      "file": "videos/stage3-actionbound20-corrected-cpu-all55/143_34_stageii_unitree_g1.mp4",
+      "sha256": "632be75dcda4a2f6ec97bf5728ce4dab2ccbc30a3f28b496529b6809020b8e4f",
+      "frames": 325
+    },
+    {
+      "receipt": "videos\\stage3-actionbound20-corrected-cpu-all55\\85_06_stageii_unitree_g1.json",
+      "file": "videos/stage3-actionbound20-corrected-cpu-all55/85_06_stageii_unitree_g1.mp4",
+      "sha256": "2e67eb6d91cc48517d1274a74883ba2825221ae7f6812ec9c3d5350e187f25c7",
+      "frames": 196
+    },
+    {
+      "receipt": "videos\\stage3-actionbound20-corrected-cpu-all55\\85_07_stageii_unitree_g1.json",
+      "file": "videos/stage3-actionbound20-corrected-cpu-all55/85_07_stageii_unitree_g1.mp4",
+      "sha256": "ac78dd6ea4c50d6e9d8efce6a449b40becdb85fb41da129aac52749ef0ed0f1e",
+      "frames": 198
+    },
+    {
+      "receipt": "videos\\stage3-actionbound20-corrected-cpu-all55\\88_03_stageii_unitree_g1.json",
+      "file": "videos/stage3-actionbound20-corrected-cpu-all55/88_03_stageii_unitree_g1.mp4",
+      "sha256": "567667c2a1586e7df5f9f5ab1ae67342b1ab998675f200620d07c10567d9a58b",
+      "frames": 72
+    },
+    {
+      "receipt": "videos\\stage3-actionbound20-corrected-cpu-all55\\88_06_stageii_unitree_g1.json",
+      "file": "videos/stage3-actionbound20-corrected-cpu-all55/88_06_stageii_unitree_g1.mp4",
+      "sha256": "0cce130c07a611f1e096c86a143f464761b2f40f590c9b5baaa0aa9f30fb4f00",
+      "frames": 95
+    },
+    {
+      "receipt": "videos\\stage3-actionbound20-corrected-cpu-all55\\88_07_stageii_unitree_g1.json",
+      "file": "videos/stage3-actionbound20-corrected-cpu-all55/88_07_stageii_unitree_g1.mp4",
+      "sha256": "dc0f78a5640ecf0056d82ed88b4e61abb6a77cc57ca43925bfcbd5e5fe0ec003",
+      "frames": 64
+    },
+    {
+      "receipt": "videos\\stage3-actionbound20-corrected-cpu-all55\\88_08_stageii_unitree_g1.json",
+      "file": "videos/stage3-actionbound20-corrected-cpu-all55/88_08_stageii_unitree_g1.mp4",
+      "sha256": "66c91a11688f24c38b12c5fa3deb84f027cc36be312048f5ed04d4a99ed7c3fa",
+      "frames": 119
+    },
+    {
+      "receipt": "videos\\stage3-actionbound20-corrected-cpu-all55\\88_09_stageii_unitree_g1.json",
+      "file": "videos/stage3-actionbound20-corrected-cpu-all55/88_09_stageii_unitree_g1.mp4",
+      "sha256": "f497358381a84b129bac58216e0f624f39a019ca26a29b8b862c27e7ccaa2cf7",
+      "frames": 156
+    },
+    {
+      "receipt": "videos\\stage3-actionbound20-corrected-cpu-all55\\88_10_stageii_unitree_g1.json",
+      "file": "videos/stage3-actionbound20-corrected-cpu-all55/88_10_stageii_unitree_g1.mp4",
+      "sha256": "a909ef722294a6e3fb0df776f7b3fe8097fb16c819d28bbd144c8981bfdb5095",
+      "frames": 193
+    },
+    {
+      "receipt": "videos\\stage3-actionbound20-corrected-cpu-all55\\88_11_stageii_unitree_g1.json",
+      "file": "videos/stage3-actionbound20-corrected-cpu-all55/88_11_stageii_unitree_g1.mp4",
+      "sha256": "a8079e071bfbb3e0cea54d32e7b017a8a2fff26925097d0fd388d0825ed1d222",
+      "frames": 843
+    },
+    {
+      "receipt": "videos\\stage3-actionbound20-corrected-cpu-all55\\89_01_stageii_unitree_g1.json",
+      "file": "videos/stage3-actionbound20-corrected-cpu-all55/89_01_stageii_unitree_g1.mp4",
+      "sha256": "b535902208c5c9804f6dfef057b779d0237b1c81b3b5c29d5e965b45e5ca4bf7",
+      "frames": 970
+    },
+    {
+      "receipt": "videos\\stage3-actionbound20-corrected-cpu-all55\\90_08_stageii_unitree_g1.json",
+      "file": "videos/stage3-actionbound20-corrected-cpu-all55/90_08_stageii_unitree_g1.mp4",
+      "sha256": "660f1fd4054ba9d4166504782936981667fa915c077840df2efe98fc74467e4f",
+      "frames": 139
+    },
+    {
+      "receipt": "videos\\stage3-actionbound20-corrected-cpu-all55\\90_14_stageii_unitree_g1.json",
+      "file": "videos/stage3-actionbound20-corrected-cpu-all55/90_14_stageii_unitree_g1.mp4",
+      "sha256": "9b6cb834093e6a48304c48135a758c6eb85bf37f67a76fe54bb6bb8d41a31050",
+      "frames": 173
+    },
+    {
+      "receipt": "videos\\stage3-actionbound20-corrected-cpu-all55\\90_15_stageii_unitree_g1.json",
+      "file": "videos/stage3-actionbound20-corrected-cpu-all55/90_15_stageii_unitree_g1.mp4",
+      "sha256": "4165d55927f557b2c32090482cd5fc6efef477792513d0671e63f8cc1bc6120e",
+      "frames": 246
+    },
+    {
+      "receipt": "videos\\stage3-actionbound20-corrected-cpu-all55\\90_19_stageii_unitree_g1.json",
+      "file": "videos/stage3-actionbound20-corrected-cpu-all55/90_19_stageii_unitree_g1.mp4",
+      "sha256": "de3791548412a0bc41e3d1dac3b10024e76e673fb6fa11199f6c0a293559d98a",
+      "frames": 216
+    },
+    {
+      "receipt": "videos\\stage3-actionbound20-corrected-cpu-all55\\dance1_subject1.json",
+      "file": "videos/stage3-actionbound20-corrected-cpu-all55/dance1_subject1.mp4",
+      "sha256": "1d23d6fb3662241ab20b73fee3d05ae57ab771c8dcbff68a1e2ba15d90d74b6a",
+      "frames": 3287
+    },
+    {
+      "receipt": "videos\\stage3-actionbound20-corrected-cpu-all55\\dance2_subject4.json",
+      "file": "videos/stage3-actionbound20-corrected-cpu-all55/dance2_subject4.mp4",
+      "sha256": "448d8e90a91ee77732f08ff8b5c49c815f7790a4e11c7e40d76f7735cada0663",
+      "frames": 5642
+    },
+    {
+      "receipt": "videos\\stage3-actionbound20-corrected-cpu-all55\\jumps1_subject2.json",
+      "file": "videos/stage3-actionbound20-corrected-cpu-all55/jumps1_subject2.mp4",
+      "sha256": "615b8fe7bc27a59c8f17400c48dcc08ff6b2dd607f79a36b7cf7b81dde5e7df9",
+      "frames": 6111
+    },
+    {
+      "receipt": "videos\\stage3-actionbound20-raw-cpu-new15\\143_34_stageii_unitree_g1.json",
+      "file": "videos/stage3-actionbound20-raw-cpu-new15/143_34_stageii_unitree_g1.mp4",
+      "sha256": "dcfbb6d94770eb8ec31c70d1188e90af6bc9c02a8dc53404127a2daf5d8d67dc",
+      "frames": 325
+    },
+    {
+      "receipt": "videos\\stage3-actionbound20-raw-cpu-new15\\85_06_stageii_unitree_g1.json",
+      "file": "videos/stage3-actionbound20-raw-cpu-new15/85_06_stageii_unitree_g1.mp4",
+      "sha256": "b5c14c0d19400da889033fb7e89ef45ca15891562cc6673e8d96d2d7cdbf2ff8",
+      "frames": 196
+    },
+    {
+      "receipt": "videos\\stage3-actionbound20-raw-cpu-new15\\85_07_stageii_unitree_g1.json",
+      "file": "videos/stage3-actionbound20-raw-cpu-new15/85_07_stageii_unitree_g1.mp4",
+      "sha256": "407e2ea950b8c30509deb775693c56339e725bab12c4c0dee56ebbb42c229937",
+      "frames": 198
+    },
+    {
+      "receipt": "videos\\stage3-actionbound20-raw-cpu-new15\\88_03_stageii_unitree_g1.json",
+      "file": "videos/stage3-actionbound20-raw-cpu-new15/88_03_stageii_unitree_g1.mp4",
+      "sha256": "150bdf3986d77993a71a7450091114eef37efc61a3354a594e6e418c5ebc63e3",
+      "frames": 72
+    },
+    {
+      "receipt": "videos\\stage3-actionbound20-raw-cpu-new15\\88_06_stageii_unitree_g1.json",
+      "file": "videos/stage3-actionbound20-raw-cpu-new15/88_06_stageii_unitree_g1.mp4",
+      "sha256": "b2d3e1fa97ca9128cbbc4bb4ccc2bea907edf4ca6183ec4738f99eb7d5668073",
+      "frames": 95
+    },
+    {
+      "receipt": "videos\\stage3-actionbound20-raw-cpu-new15\\88_07_stageii_unitree_g1.json",
+      "file": "videos/stage3-actionbound20-raw-cpu-new15/88_07_stageii_unitree_g1.mp4",
+      "sha256": "67a709bae1dae3c4167f22764cce495948d528912c7b7731aeef3da2ba34e584",
+      "frames": 64
+    },
+    {
+      "receipt": "videos\\stage3-actionbound20-raw-cpu-new15\\88_08_stageii_unitree_g1.json",
+      "file": "videos/stage3-actionbound20-raw-cpu-new15/88_08_stageii_unitree_g1.mp4",
+      "sha256": "fe8e10c0c7c5fcfbdbc1b3e74704b8bec6825ee163aa8966fc968a81ca518e65",
+      "frames": 119
+    },
+    {
+      "receipt": "videos\\stage3-actionbound20-raw-cpu-new15\\88_09_stageii_unitree_g1.json",
+      "file": "videos/stage3-actionbound20-raw-cpu-new15/88_09_stageii_unitree_g1.mp4",
+      "sha256": "95ed752518a1244b79d0e02e6de3538e24a55d4277d54205386a016425f2e03f",
+      "frames": 156
+    },
+    {
+      "receipt": "videos\\stage3-actionbound20-raw-cpu-new15\\88_10_stageii_unitree_g1.json",
+      "file": "videos/stage3-actionbound20-raw-cpu-new15/88_10_stageii_unitree_g1.mp4",
+      "sha256": "1f8cf80755e65fe2fe7619605bf5cbb61d065b9ba7b1f685126f6a7ff7db367b",
+      "frames": 193
+    },
+    {
+      "receipt": "videos\\stage3-actionbound20-raw-cpu-new15\\88_11_stageii_unitree_g1.json",
+      "file": "videos/stage3-actionbound20-raw-cpu-new15/88_11_stageii_unitree_g1.mp4",
+      "sha256": "2f730da38c34e440ffee25c6def51b6773bd034f6c8098ef9de9b62a79639118",
+      "frames": 843
+    },
+    {
+      "receipt": "videos\\stage3-actionbound20-raw-cpu-new15\\89_01_stageii_unitree_g1.json",
+      "file": "videos/stage3-actionbound20-raw-cpu-new15/89_01_stageii_unitree_g1.mp4",
+      "sha256": "674cc148823eebca32e2b31d00d738e64ab434e31ff2d980e4ff68dc61c43f1e",
+      "frames": 970
+    },
+    {
+      "receipt": "videos\\stage3-actionbound20-raw-cpu-new15\\90_08_stageii_unitree_g1.json",
+      "file": "videos/stage3-actionbound20-raw-cpu-new15/90_08_stageii_unitree_g1.mp4",
+      "sha256": "5f631df287307025024e3ffa6d15e6cb98a2a2a6d0dd0f63989f6dbd7420df91",
+      "frames": 139
+    },
+    {
+      "receipt": "videos\\stage3-actionbound20-raw-cpu-new15\\90_14_stageii_unitree_g1.json",
+      "file": "videos/stage3-actionbound20-raw-cpu-new15/90_14_stageii_unitree_g1.mp4",
+      "sha256": "1f28ec37a5f3968fb69b8a23d5900de468e24304ea7c05392c95396291fa0b16",
+      "frames": 173
+    },
+    {
+      "receipt": "videos\\stage3-actionbound20-raw-cpu-new15\\90_15_stageii_unitree_g1.json",
+      "file": "videos/stage3-actionbound20-raw-cpu-new15/90_15_stageii_unitree_g1.mp4",
+      "sha256": "1d7e3b4c5d2e80301f60f44f466a386235584f083e670cf8d84cce3fbb0091ea",
+      "frames": 246
+    },
+    {
+      "receipt": "videos\\stage3-actionbound20-raw-cpu-new15\\90_19_stageii_unitree_g1.json",
+      "file": "videos/stage3-actionbound20-raw-cpu-new15/90_19_stageii_unitree_g1.mp4",
+      "sha256": "2a83331740d40adf5a7f994f2ba3a4c7a43a266fafeaf91d6e95f0a27262777a",
+      "frames": 216
+    },
+    {
+      "receipt": "videos\\stage3-actionbound20-frozen-continuous-v1\\seed-0.json",
+      "file": "videos/stage3-actionbound20-frozen-continuous-v1/seed-0.mp4",
+      "sha256": "571c3ba83848d2a34e116ee8be5a37577165170a4363da10f117af00c1ad84be",
+      "frames": 3001
+    },
+    {
+      "receipt": "videos\\stage3-actionbound20-frozen-continuous-v1\\seed-1.json",
+      "file": "videos/stage3-actionbound20-frozen-continuous-v1/seed-1.mp4",
+      "sha256": "0a02a11ebcbe750fe354b3e5e0261347222de02dd667f7b0aa53a6b3967fc0de",
+      "frames": 3001
+    },
+    {
+      "receipt": "videos\\stage3-actionbound20-frozen-continuous-v1\\seed-2.json",
+      "file": "videos/stage3-actionbound20-frozen-continuous-v1/seed-2.mp4",
+      "sha256": "a18bf9814a532032bdc45024e846348c6ef529729f83aea554fea6a918eb80cd",
+      "frames": 3001
+    },
+    {
+      "receipt": "videos\\stage3-actionbound20-corrected-continuous-v1\\seed-0.json",
+      "file": "videos/stage3-actionbound20-corrected-continuous-v1/seed-0.mp4",
+      "sha256": "d1a97eb3b023570d9b7c6dba4248395b8cdb5f5172194e04c631fd7086feec3f",
+      "frames": 3001
+    },
+    {
+      "receipt": "videos\\stage3-actionbound20-corrected-continuous-v1\\seed-1.json",
+      "file": "videos/stage3-actionbound20-corrected-continuous-v1/seed-1.mp4",
+      "sha256": "42c7d59922ead58502e8740db5122ddc421ea2b31f85b5fc7c7cd830972418de",
+      "frames": 3001
+    },
+    {
+      "receipt": "videos\\stage3-actionbound20-corrected-continuous-v1\\seed-2.json",
+      "file": "videos/stage3-actionbound20-corrected-continuous-v1/seed-2.mp4",
+      "sha256": "cfbfc25d3c4787a174628c25a448dd21d3cfd7ebdee89563ec3dc5a1ebd9bc5a",
+      "frames": 3001
+    }
+  ],
+  "bound_source_evidence": {
+    "stage3-actionbound20-corrected-cpu-all55": {
+      "summary_sha256": "9886d62b94522f427033d3908c24d00bcba2a0d3abb3ea4a892942a470ca1181",
+      "trajectory_sha256": "7543e7482202de661e68d302ab96035efb11fdf2be46765751357c4c2e2d22d0"
+    },
+    "stage3-actionbound20-raw-cpu-new15": {
+      "summary_sha256": "8339dbaaf0f49152f89f6780559a7186ee8d1f4ab14431d8a7290021330e8b41",
+      "trajectory_sha256": "11f0a618e716aa0723d767a978b2173fc383583f656857f87ab9760736b01b9b"
+    },
+    "stage3-actionbound20-frozen-continuous-v1": {
+      "summary_sha256": "1684e3e3cbb248953c44723e1f656b8976487db1088701734f580c80e72981d9",
+      "trajectory_sha256": "8f2be5e79c65917b7a694e5d4caa9c96ab67f3c4dd9a520e9c15fe4ee347e5c5"
+    },
+    "stage3-actionbound20-corrected-continuous-v1": {
+      "summary_sha256": "c9ca2b4899dcac8f3ebd0a189f5afb502154c8d938bbd213d0598c1214fb2a19",
+      "trajectory_sha256": "5c61364db7646b6fe9693f1cdf91d026955109de0334fc810f8e9c6ecb5ec12d"
+    }
+  },
+  "checkpoint_weights_unchanged": true,
+  "all_original_denominators_and_thresholds_preserved": true,
+  "formal_updates_in_ablation": 0,
+  "cloud_resources_started": 0,
+  "current_cloud_eligibility": "pending_current_location_network_confirmation_and_resource_preflight"
+}

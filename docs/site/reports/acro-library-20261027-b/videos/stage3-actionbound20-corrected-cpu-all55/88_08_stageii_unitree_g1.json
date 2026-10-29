@@ -1,0 +1,23 @@
+{
+  "clip": "88_08_stageii_unitree_g1",
+  "file": "videos/stage3-actionbound20-corrected-cpu-all55/88_08_stageii_unitree_g1.mp4",
+  "bytes": 1703690,
+  "sha256": "66c91a11688f24c38b12c5fa3deb84f027cc36be312048f5ed04d4a99ed7c3fa",
+  "frames": 119,
+  "fps": 25,
+  "video_seconds": 4.76,
+  "physical_window_seconds": 4.72,
+  "complete_decode_passed": true,
+  "source_run": "stage3-actionbound20-corrected-cpu-all55",
+  "only_retained_actual_physics_states_rendered": true,
+  "reference_display_offset_m": [
+    0,
+    1.5,
+    0
+  ],
+  "fog_disabled_for_failed_tail_visibility": true,
+  "reference_version_or_variant": "ground-calibration-v1",
+  "original_hard_gate_passed": false,
+  "tracking_quality_passed": false,
+  "contact_sheet": "evidence/stage3-actionbound20-corrected-cpu-all55-88_08_stageii_unitree_g1-contact-sheet.jpg"
+}

@@ -1,0 +1,23 @@
+{
+  "clip": "dance2_subject4",
+  "file": "videos/stage3-actionbound20-corrected-cpu-all55/dance2_subject4.mp4",
+  "bytes": 78723359,
+  "sha256": "448d8e90a91ee77732f08ff8b5c49c815f7790a4e11c7e40d76f7735cada0663",
+  "frames": 5642,
+  "fps": 25,
+  "video_seconds": 225.68,
+  "physical_window_seconds": 225.66,
+  "complete_decode_passed": true,
+  "source_run": "stage3-actionbound20-corrected-cpu-all55",
+  "only_retained_actual_physics_states_rendered": true,
+  "reference_display_offset_m": [
+    0,
+    1.5,
+    0
+  ],
+  "fog_disabled_for_failed_tail_visibility": true,
+  "reference_version_or_variant": "ground-calibration-v1",
+  "original_hard_gate_passed": false,
+  "tracking_quality_passed": false,
+  "contact_sheet": "evidence/stage3-actionbound20-corrected-cpu-all55-dance2_subject4-contact-sheet.jpg"
+}

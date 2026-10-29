@@ -1,0 +1,37 @@
+{
+  "source_commit": "faf7818e8abac3ec6abb8f00e6e904d3577f800b",
+  "dataset_revision": "ce1572906efe6157840e8474d5a0d7aa87481e74",
+  "base_files": {
+    "evidence/source-files.json": "ac553ceb0f0edfd39e5fd16c91dd6f0ab4ae62080fa7056e8a4c8bce7f86fcf6",
+    "evidence/asset-downloads.json": "7b11d15769d720d858230bb862f7c78765657cef816500f4455466b1d2947ffb",
+    "evidence/environment.json": "7c25896ae907e135aa7655b38366cba2ad2ba1b27fe293e76d545c33ca4f60f7",
+    "runs/baseline-seed0/last.pt": "8770016fac48e4938203f77c8e2cd55b553171d2bc3134b7cbb40b2c53f6b1f1",
+    "runs/baseline-seed0/ckpt_012000.pt": "8b3b36ed67a39da526b2de3717291d2a9f8dba570071a80b052d2eb3c8bf3305",
+    "runs/baseline-seed0/args.json": "fa5ecacb07d5d992e00857400d0d57047a5583b3ad3516dc2432ad2361572e86",
+    "runs/baseline-seed0/run_config.json": "0f8f473b70430fd56025f3729ae498f9f53b326e0fcefe5384a819e38418a1cf",
+    "runs/baseline-evaluation.json": "40917232135ced45a2f847ce82bafd0cdf5ce13395a9454e1f879a87ce372014",
+    "evaluate_audited_v2.py": "929c399bf52ab3dfeb1ec594c7cb24229de8138652ebcf5a19f74ce15370b802",
+    "train_audited_v2.py": "36046e017c778e8ecbf7265177ff05b5ea823a1b64eb25a90a74223afae5378c",
+    "run_gpu_v3.py": "447d6ac05e8c8d6d871cde406ea606593a9039e736ac1f035b421c6547d8d87a"
+  },
+  "only_training_change": "extend total iterations to 24000 from full 12000 checkpoint",
+  "seed": 0,
+  "num_envs": 4096,
+  "horizon": 32,
+  "amp": "bf16",
+  "compile": true,
+  "lr": 0.0002,
+  "lr_decay_iters": 250000,
+  "evaluation_iterations": [
+    16000,
+    20000,
+    24000
+  ],
+  "community_acceptance_target": {
+    "macro_at_least": 0.82,
+    "n_failed": 0
+  },
+  "target_is_not_attributed_to_paper_failure_count": true,
+  "gpu_budget_seconds_first_program": 10740,
+  "gpu_hours_total_cap_new_experiments": 6
+}

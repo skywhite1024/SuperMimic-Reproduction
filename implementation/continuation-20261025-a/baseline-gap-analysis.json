@@ -1,0 +1,27 @@
+{
+  "scope": "Analytical decomposition of the unchanged all40 baseline,not a replacement quality metric",
+  "all40_macro": 0.8028135299682617,
+  "all40_gap_to_point82": 0.017186470031738232,
+  "failed_clips": {
+    "dance2_subject4": {
+      "normalized_return": 0.21886016428470612,
+      "failure_time_seconds": 60.94,
+      "full_seconds": 225.66,
+      "macro_deficit_vs_point82_contribution": 0.015028495892882346
+    },
+    "fallAndGetUp1_subject5": {
+      "normalized_return": 0.1526980996131897,
+      "failure_time_seconds": 34.18,
+      "full_seconds": 168.20000000000002,
+      "macro_deficit_vs_point82_contribution": 0.016682547509670256
+    },
+    "fallAndGetUp2_subject3": {
+      "normalized_return": 0.6605904698371887,
+      "failure_time_seconds": 141.02,
+      "full_seconds": 163.9,
+      "macro_deficit_vs_point82_contribution": 0.003985238254070281
+    }
+  },
+  "three_failed_clips_macro_deficit_contribution_sum": 0.035696281656622884,
+  "boundary": "No claims about physical failure cause before instrumented trajectories are available."
+}

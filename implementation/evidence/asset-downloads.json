@@ -1,0 +1,462 @@
+{
+  "dataset": "lvhaidong/LAFAN1_Retargeting_Dataset",
+  "revision": "ce1572906efe6157840e8474d5a0d7aa87481e74",
+  "files": [
+    {
+      "remote": "g1/dance1_subject1.csv",
+      "path": "src/unisupermimic/assets/motions/g1/lafan1_supermimic/dance1_subject1.csv",
+      "bytes": 1348661,
+      "sha256": "e2a369e92e5ad076c5acffff7bce53157a0e6cd9e7e9f6a08dadfb1eb2928d8f"
+    },
+    {
+      "remote": "g1/dance1_subject2.csv",
+      "path": "src/unisupermimic/assets/motions/g1/lafan1_supermimic/dance1_subject2.csv",
+      "bytes": 1352694,
+      "sha256": "3c2d37391ab08af18224f7a63ea55f1cd83480bdec779c320acb4d0b3062633e"
+    },
+    {
+      "remote": "g1/dance1_subject3.csv",
+      "path": "src/unisupermimic/assets/motions/g1/lafan1_supermimic/dance1_subject3.csv",
+      "bytes": 1349707,
+      "sha256": "983ab290f7ac70fcd4baa56ea5321bc48522f613980986e4a0a83c884b940884"
+    },
+    {
+      "remote": "g1/dance2_subject1.csv",
+      "path": "src/unisupermimic/assets/motions/g1/lafan1_supermimic/dance2_subject1.csv",
+      "bytes": 2313604,
+      "sha256": "f8611569a28fff323577ccb53021b0b189114510a284f76b234fc6e0e9f089e1"
+    },
+    {
+      "remote": "g1/dance2_subject2.csv",
+      "path": "src/unisupermimic/assets/motions/g1/lafan1_supermimic/dance2_subject2.csv",
+      "bytes": 2321777,
+      "sha256": "85af86f623b3f7cf329bed84088382989f11df11025d305ad5aa1600e8f6828a"
+    },
+    {
+      "remote": "g1/dance2_subject3.csv",
+      "path": "src/unisupermimic/assets/motions/g1/lafan1_supermimic/dance2_subject3.csv",
+      "bytes": 2313921,
+      "sha256": "487bcfa3710811acf6fcb2b6c916a79cec8e84fb5494b9b04361c0800852d83a"
+    },
+    {
+      "remote": "g1/dance2_subject4.csv",
+      "path": "src/unisupermimic/assets/motions/g1/lafan1_supermimic/dance2_subject4.csv",
+      "bytes": 2315855,
+      "sha256": "e057410a0e7ec0618f58a5d5eceafe686ca292c9ad4dd3c4068eaad15283a46f"
+    },
+    {
+      "remote": "g1/dance2_subject5.csv",
+      "path": "src/unisupermimic/assets/motions/g1/lafan1_supermimic/dance2_subject5.csv",
+      "bytes": 2314214,
+      "sha256": "2d10031bb293d20ccf6fd8aa76e00d4a5d8dc92cba5f59773d48cc9c8b25637f"
+    },
+    {
+      "remote": "g1/fallAndGetUp1_subject1.csv",
+      "path": "src/unisupermimic/assets/motions/g1/lafan1_supermimic/fallAndGetUp1_subject1.csv",
+      "bytes": 1725253,
+      "sha256": "97e98a9cac5150917bc5a2ca3517759a3f3c380582cde5e92ad663c1e0553e12"
+    },
+    {
+      "remote": "g1/fallAndGetUp1_subject4.csv",
+      "path": "src/unisupermimic/assets/motions/g1/lafan1_supermimic/fallAndGetUp1_subject4.csv",
+      "bytes": 1723485,
+      "sha256": "5e9cf9acddc62a8646151567fffac09c7e088186d87a9a8543743cac517ddf0b"
+    },
+    {
+      "remote": "g1/fallAndGetUp1_subject5.csv",
+      "path": "src/unisupermimic/assets/motions/g1/lafan1_supermimic/fallAndGetUp1_subject5.csv",
+      "bytes": 1725138,
+      "sha256": "55a22ca723f26170aae8529ccb26dbda9bf2cb816b4f29eed3c57260dadb05ca"
+    },
+    {
+      "remote": "g1/fallAndGetUp2_subject2.csv",
+      "path": "src/unisupermimic/assets/motions/g1/lafan1_supermimic/fallAndGetUp2_subject2.csv",
+      "bytes": 1677557,
+      "sha256": "49ae9726ae176b10b1213b441535946ffcca93586e1091e8398e239f4a049a47"
+    },
+    {
+      "remote": "g1/fallAndGetUp2_subject3.csv",
+      "path": "src/unisupermimic/assets/motions/g1/lafan1_supermimic/fallAndGetUp2_subject3.csv",
+      "bytes": 1678683,
+      "sha256": "fa6e33725a450789160c8f3220b0a5e9001798f023fd14e3ff6c230a0829d75d"
+    },
+    {
+      "remote": "g1/fallAndGetUp3_subject1.csv",
+      "path": "src/unisupermimic/assets/motions/g1/lafan1_supermimic/fallAndGetUp3_subject1.csv",
+      "bytes": 1043143,
+      "sha256": "fc00701411a270a9ab61c321ba836ba36437c61630c65f8fe276ac851f23ccd7"
+    },
+    {
+      "remote": "g1/fight1_subject2.csv",
+      "path": "src/unisupermimic/assets/motions/g1/lafan1_supermimic/fight1_subject2.csv",
+      "bytes": 2524033,
+      "sha256": "c9ae5b9d90258061dfc79f617eaded73f2dde581fe37ac2d8e6b229c1a4a0ecb"
+    },
+    {
+      "remote": "g1/fight1_subject3.csv",
+      "path": "src/unisupermimic/assets/motions/g1/lafan1_supermimic/fight1_subject3.csv",
+      "bytes": 2512647,
+      "sha256": "013b7219ddbbb37d17483d2bd0c28ae3d4307c2fec6d4180feed27c65d2acfcd"
+    },
+    {
+      "remote": "g1/fight1_subject5.csv",
+      "path": "src/unisupermimic/assets/motions/g1/lafan1_supermimic/fight1_subject5.csv",
+      "bytes": 2531701,
+      "sha256": "d1490265b7b8ee5ac488853a3933ebdaee8ba6c9ecb5ef300146330b51b8c0dc"
+    },
+    {
+      "remote": "g1/fightAndSports1_subject1.csv",
+      "path": "src/unisupermimic/assets/motions/g1/lafan1_supermimic/fightAndSports1_subject1.csv",
+      "bytes": 2521797,
+      "sha256": "076c2614df1a155e52c2b14074da8aa3b209176d930d2e3ffd059a9e9847fdc2"
+    },
+    {
+      "remote": "g1/fightAndSports1_subject4.csv",
+      "path": "src/unisupermimic/assets/motions/g1/lafan1_supermimic/fightAndSports1_subject4.csv",
+      "bytes": 2516936,
+      "sha256": "83e2f3ec77ab9d3edc43c73e1894b0be2d9d0b2361098294bb178ab5cf32a1d9"
+    },
+    {
+      "remote": "g1/jumps1_subject1.csv",
+      "path": "src/unisupermimic/assets/motions/g1/lafan1_supermimic/jumps1_subject1.csv",
+      "bytes": 2502300,
+      "sha256": "3f55c1a0f87564044a71817d62dc2a40aa76332aa1cab3f1c817333a197c78c2"
+    },
+    {
+      "remote": "g1/jumps1_subject2.csv",
+      "path": "src/unisupermimic/assets/motions/g1/lafan1_supermimic/jumps1_subject2.csv",
+      "bytes": 2501224,
+      "sha256": "fde765a738e3aa586be3694163795502d4dc932757178956f4512e7c9d317a58"
+    },
+    {
+      "remote": "g1/jumps1_subject5.csv",
+      "path": "src/unisupermimic/assets/motions/g1/lafan1_supermimic/jumps1_subject5.csv",
+      "bytes": 2509391,
+      "sha256": "2f678d598faa9746aff778e92518970f51f0b1e08a10f05d0423a7cda3b9183c"
+    },
+    {
+      "remote": "g1/run1_subject2.csv",
+      "path": "src/unisupermimic/assets/motions/g1/lafan1_supermimic/run1_subject2.csv",
+      "bytes": 2445458,
+      "sha256": "ec02af4447a62214a6fec6afff60c75d0ecc8f80f8fb45e3cd4119fed9ceac8d"
+    },
+    {
+      "remote": "g1/run1_subject5.csv",
+      "path": "src/unisupermimic/assets/motions/g1/lafan1_supermimic/run1_subject5.csv",
+      "bytes": 2439981,
+      "sha256": "eacc38d7d6f5d7f32bfefcdf5d91510fea5f815000be870f91cc6e3483a126f6"
+    },
+    {
+      "remote": "g1/run2_subject1.csv",
+      "path": "src/unisupermimic/assets/motions/g1/lafan1_supermimic/run2_subject1.csv",
+      "bytes": 2509227,
+      "sha256": "ae64767c4b4e8f59578c22c5848cefc569923fea8bd3755c8dfb02b5313773da"
+    },
+    {
+      "remote": "g1/run2_subject4.csv",
+      "path": "src/unisupermimic/assets/motions/g1/lafan1_supermimic/run2_subject4.csv",
+      "bytes": 2510023,
+      "sha256": "2f0331426b74be03e87a2364733f8bf3262debdea54ab2c5059c2b707cff06f7"
+    },
+    {
+      "remote": "g1/sprint1_subject2.csv",
+      "path": "src/unisupermimic/assets/motions/g1/lafan1_supermimic/sprint1_subject2.csv",
+      "bytes": 2803922,
+      "sha256": "7babbd9d0a3cebf040709cb75fbf4268e925e337a2d44600dcce3d3b2d24a818"
+    },
+    {
+      "remote": "g1/sprint1_subject4.csv",
+      "path": "src/unisupermimic/assets/motions/g1/lafan1_supermimic/sprint1_subject4.csv",
+      "bytes": 2790147,
+      "sha256": "96d207b15323ef823274aa73ea1c2aaea7e98b4fe0f6de217332763bdf04ce00"
+    },
+    {
+      "remote": "g1/walk1_subject1.csv",
+      "path": "src/unisupermimic/assets/motions/g1/lafan1_supermimic/walk1_subject1.csv",
+      "bytes": 2670866,
+      "sha256": "68c7887438e94f1f3d9ebacd3a8ce59251a22c7b05129a0f5d7cacaedc48c28d"
+    },
+    {
+      "remote": "g1/walk1_subject2.csv",
+      "path": "src/unisupermimic/assets/motions/g1/lafan1_supermimic/walk1_subject2.csv",
+      "bytes": 2679529,
+      "sha256": "f8e6ccd5df574dcc5343a0a83d12efddfb5b34578b8b2f00582cb8098ed7fffc"
+    },
+    {
+      "remote": "g1/walk1_subject5.csv",
+      "path": "src/unisupermimic/assets/motions/g1/lafan1_supermimic/walk1_subject5.csv",
+      "bytes": 2666583,
+      "sha256": "5421216dfbd2f16a90b5a7a52d4530b6269f7f9407f7ccfd09b5e5d3a72117af"
+    },
+    {
+      "remote": "g1/walk2_subject1.csv",
+      "path": "src/unisupermimic/assets/motions/g1/lafan1_supermimic/walk2_subject1.csv",
+      "bytes": 2435737,
+      "sha256": "51cf310f14ecbb8be1f41ea09345df0c89024ff884fb9ab881cac339f820c787"
+    },
+    {
+      "remote": "g1/walk2_subject3.csv",
+      "path": "src/unisupermimic/assets/motions/g1/lafan1_supermimic/walk2_subject3.csv",
+      "bytes": 2434750,
+      "sha256": "43a4342a9534ebb49e0dd9ef11ff40bf8a11d4925dac86352ebc7e7ae1220644"
+    },
+    {
+      "remote": "g1/walk2_subject4.csv",
+      "path": "src/unisupermimic/assets/motions/g1/lafan1_supermimic/walk2_subject4.csv",
+      "bytes": 2437156,
+      "sha256": "d8e8d0383a64f0277218c0c490d55e4fcc20bd14776c0c8772f38a0cd4b88679"
+    },
+    {
+      "remote": "g1/walk3_subject1.csv",
+      "path": "src/unisupermimic/assets/motions/g1/lafan1_supermimic/walk3_subject1.csv",
+      "bytes": 2516748,
+      "sha256": "22ab870d9957a62c1dfe3c1ec0a8a9af84c6c965065fff6fc936c3fac21d16eb"
+    },
+    {
+      "remote": "g1/walk3_subject2.csv",
+      "path": "src/unisupermimic/assets/motions/g1/lafan1_supermimic/walk3_subject2.csv",
+      "bytes": 2534462,
+      "sha256": "55e8b8fe0e6a9a62b1f437985c4456055d750c75f46a17adbcbe3392fd33c674"
+    },
+    {
+      "remote": "g1/walk3_subject3.csv",
+      "path": "src/unisupermimic/assets/motions/g1/lafan1_supermimic/walk3_subject3.csv",
+      "bytes": 2524188,
+      "sha256": "2819b75eceef11856e9c3e7aea931eafcd03dddb0d5c1f68353ba0b3dd9fc574"
+    },
+    {
+      "remote": "g1/walk3_subject4.csv",
+      "path": "src/unisupermimic/assets/motions/g1/lafan1_supermimic/walk3_subject4.csv",
+      "bytes": 2519731,
+      "sha256": "11a79dd8c534a562b99abdb42a221064b2b2166948d088f7ca9b63ac13f25368"
+    },
+    {
+      "remote": "g1/walk3_subject5.csv",
+      "path": "src/unisupermimic/assets/motions/g1/lafan1_supermimic/walk3_subject5.csv",
+      "bytes": 2557372,
+      "sha256": "2f2878a45d6345d78d5f7a1d35ab05cc96cf5d22b1be822bb4b07eab99096b85"
+    },
+    {
+      "remote": "g1/walk4_subject1.csv",
+      "path": "src/unisupermimic/assets/motions/g1/lafan1_supermimic/walk4_subject1.csv",
+      "bytes": 1687675,
+      "sha256": "03fe681190873e70d2b5635dc35aa228084136fcd61f1a0dcfcd6c25e12cdbaa"
+    },
+    {
+      "remote": "robot_description/g1/g1_29dof_rev_1_0.urdf",
+      "path": "src/unisupermimic/assets/robots/g1/assets/supermimic/g1_29dof_rev_1_0.urdf",
+      "bytes": 36227,
+      "sha256": "824ce02c2c1e489aa8dece47a10fe02d1872289c0e6d01ba51abd291e66b7b2c"
+    },
+    {
+      "remote": "robot_description/g1/meshes/head_link.STL",
+      "path": "src/unisupermimic/assets/robots/g1/assets/head_link.STL",
+      "bytes": 932784,
+      "sha256": "005fb67fbd3eff94aa8bf4a6e83238174e9f91b6721f7111594322f223724411"
+    },
+    {
+      "remote": "robot_description/g1/meshes/left_ankle_pitch_link.STL",
+      "path": "src/unisupermimic/assets/robots/g1/assets/left_ankle_pitch_link.STL",
+      "bytes": 71184,
+      "sha256": "d49e3abc6f5b12e532062cd575b87b5ef40cd2a3fc18f54a1ca5bba4f773d51d"
+    },
+    {
+      "remote": "robot_description/g1/meshes/left_ankle_roll_link.STL",
+      "path": "src/unisupermimic/assets/robots/g1/assets/left_ankle_roll_link.STL",
+      "bytes": 653384,
+      "sha256": "c4092af943141d4d9f74232f3cfa345afc6565f46a077793b8ae0e68b39dc33f"
+    },
+    {
+      "remote": "robot_description/g1/meshes/left_elbow_link.STL",
+      "path": "src/unisupermimic/assets/robots/g1/assets/left_elbow_link.STL",
+      "bytes": 88784,
+      "sha256": "fa752198accd104d5c4c3a01382e45165b944fbbc5acce085059223324e5bed3"
+    },
+    {
+      "remote": "robot_description/g1/meshes/left_hip_pitch_link.STL",
+      "path": "src/unisupermimic/assets/robots/g1/assets/left_hip_pitch_link.STL",
+      "bytes": 181684,
+      "sha256": "4725168105ee768ee31638ef22b53f6be2d7641bfd7cfefe803488d884776fa4"
+    },
+    {
+      "remote": "robot_description/g1/meshes/left_hip_roll_link.STL",
+      "path": "src/unisupermimic/assets/robots/g1/assets/left_hip_roll_link.STL",
+      "bytes": 192184,
+      "sha256": "91f25922ee8a7c3152790051bebad17b4d9cd243569c38fe340285ff93a97acf"
+    },
+    {
+      "remote": "robot_description/g1/meshes/left_hip_yaw_link.STL",
+      "path": "src/unisupermimic/assets/robots/g1/assets/left_hip_yaw_link.STL",
+      "bytes": 296284,
+      "sha256": "a16d88aa6ddac8083aa7ad55ed317bea44b1fa003d314fba88965b7ed0f3b55b"
+    },
+    {
+      "remote": "robot_description/g1/meshes/left_knee_link.STL",
+      "path": "src/unisupermimic/assets/robots/g1/assets/left_knee_link.STL",
+      "bytes": 854884,
+      "sha256": "8d92b9e3d3a636761150bb8025e32514c4602b91c7028d523ee42b3e632de477"
+    },
+    {
+      "remote": "robot_description/g1/meshes/left_rubber_hand.STL",
+      "path": "src/unisupermimic/assets/robots/g1/assets/left_rubber_hand.STL",
+      "bytes": 2287484,
+      "sha256": "cff2221a690fa69303f61fce68f2d155c1517b52efb6ca9262dd56e0bc6e70fe"
+    },
+    {
+      "remote": "robot_description/g1/meshes/left_shoulder_pitch_link.STL",
+      "path": "src/unisupermimic/assets/robots/g1/assets/left_shoulder_pitch_link.STL",
+      "bytes": 176784,
+      "sha256": "f0d1cfd02fcf0d42f95e678eeca33da3afbcc366ffba5c052847773ec4f31d52"
+    },
+    {
+      "remote": "robot_description/g1/meshes/left_shoulder_roll_link.STL",
+      "path": "src/unisupermimic/assets/robots/g1/assets/left_shoulder_roll_link.STL",
+      "bytes": 400284,
+      "sha256": "fb9df21687773522598dc384f1a2945c7519f11cbc8bd372a49170316d6eee88"
+    },
+    {
+      "remote": "robot_description/g1/meshes/left_shoulder_yaw_link.STL",
+      "path": "src/unisupermimic/assets/robots/g1/assets/left_shoulder_yaw_link.STL",
+      "bytes": 249184,
+      "sha256": "1aa97e9748e924336567992181f78c7cd0652fd52a4afcca3df6b2ef6f9e712e"
+    },
+    {
+      "remote": "robot_description/g1/meshes/left_wrist_pitch_link.STL",
+      "path": "src/unisupermimic/assets/robots/g1/assets/left_wrist_pitch_link.STL",
+      "bytes": 85984,
+      "sha256": "b251d8e05047f695d0f536cd78c11973cfa4e78d08cfe82759336cc3471de3a9"
+    },
+    {
+      "remote": "robot_description/g1/meshes/left_wrist_roll_link.STL",
+      "path": "src/unisupermimic/assets/robots/g1/assets/left_wrist_roll_link.STL",
+      "bytes": 356184,
+      "sha256": "edc387c9a0ba8c2237e9b296d32531426fabeb6f53e58df45c76106bca74148c"
+    },
+    {
+      "remote": "robot_description/g1/meshes/left_wrist_yaw_link.STL",
+      "path": "src/unisupermimic/assets/robots/g1/assets/left_wrist_yaw_link.STL",
+      "bytes": 318684,
+      "sha256": "83f8fb3a726bf9613d65dd14f0f447cb918c3c95b3938042a0c9c09749267d3b"
+    },
+    {
+      "remote": "robot_description/g1/meshes/logo_link.STL",
+      "path": "src/unisupermimic/assets/robots/g1/assets/logo_link.STL",
+      "bytes": 243384,
+      "sha256": "8571a0a19bc4916fa55f91449f51d5fdefd751000054865a842449429d5f155b"
+    },
+    {
+      "remote": "robot_description/g1/meshes/pelvis.STL",
+      "path": "src/unisupermimic/assets/robots/g1/assets/pelvis.STL",
+      "bytes": 1060884,
+      "sha256": "5ba6bbc888e630550140d3c26763f10206da8c8bd30ed886b8ede41c61f57a31"
+    },
+    {
+      "remote": "robot_description/g1/meshes/pelvis_contour_link.STL",
+      "path": "src/unisupermimic/assets/robots/g1/assets/pelvis_contour_link.STL",
+      "bytes": 1805184,
+      "sha256": "5cc5c2c7a312329e3feeb2b03d3fc09fc29705bd01864f6767e51be959662420"
+    },
+    {
+      "remote": "robot_description/g1/meshes/right_ankle_pitch_link.STL",
+      "path": "src/unisupermimic/assets/robots/g1/assets/right_ankle_pitch_link.STL",
+      "bytes": 71184,
+      "sha256": "15be426539ec1be70246d4d82a168806db64a41301af8b35c197a33348c787a9"
+    },
+    {
+      "remote": "robot_description/g1/meshes/right_ankle_roll_link.STL",
+      "path": "src/unisupermimic/assets/robots/g1/assets/right_ankle_roll_link.STL",
+      "bytes": 653784,
+      "sha256": "4b66222ea56653e627711b56d0a8949b4920da5df091da0ceb343f54e884e3a5"
+    },
+    {
+      "remote": "robot_description/g1/meshes/right_elbow_link.STL",
+      "path": "src/unisupermimic/assets/robots/g1/assets/right_elbow_link.STL",
+      "bytes": 88784,
+      "sha256": "1be925d7aa268bb8fddf5362b9173066890c7d32092c05638608126e59d1e2ab"
+    },
+    {
+      "remote": "robot_description/g1/meshes/right_hip_pitch_link.STL",
+      "path": "src/unisupermimic/assets/robots/g1/assets/right_hip_pitch_link.STL",
+      "bytes": 181284,
+      "sha256": "e4f3c99d7f4a7d34eadbef9461fc66e3486cb5442db1ec50c86317d459f1a9c6"
+    },
+    {
+      "remote": "robot_description/g1/meshes/right_hip_roll_link.STL",
+      "path": "src/unisupermimic/assets/robots/g1/assets/right_hip_roll_link.STL",
+      "bytes": 192684,
+      "sha256": "4c254ef66a356f492947f360dd931965477b631e3fcc841f91ccc46d945d54f6"
+    },
+    {
+      "remote": "robot_description/g1/meshes/right_hip_yaw_link.STL",
+      "path": "src/unisupermimic/assets/robots/g1/assets/right_hip_yaw_link.STL",
+      "bytes": 296284,
+      "sha256": "e479c2936ca2057e9eb2f7dff6c189b7419d7b8484dea0b298cbb36a2a6aa668"
+    },
+    {
+      "remote": "robot_description/g1/meshes/right_knee_link.STL",
+      "path": "src/unisupermimic/assets/robots/g1/assets/right_knee_link.STL",
+      "bytes": 852284,
+      "sha256": "63c4008449c9bbe701a6e2b557b7a252e90cf3a5abcf54cee46862b9a69f8ec8"
+    },
+    {
+      "remote": "robot_description/g1/meshes/right_rubber_hand.STL",
+      "path": "src/unisupermimic/assets/robots/g1/assets/right_rubber_hand.STL",
+      "bytes": 2192684,
+      "sha256": "99533b778bca6246144fa511bb9d4e555e075c641f2a0251e04372869cd99d67"
+    },
+    {
+      "remote": "robot_description/g1/meshes/right_shoulder_pitch_link.STL",
+      "path": "src/unisupermimic/assets/robots/g1/assets/right_shoulder_pitch_link.STL",
+      "bytes": 176784,
+      "sha256": "24cdb387e0128dfe602770a81c56cdce3a0181d34d039a11d1aaf8819b7b8c02"
+    },
+    {
+      "remote": "robot_description/g1/meshes/right_shoulder_roll_link.STL",
+      "path": "src/unisupermimic/assets/robots/g1/assets/right_shoulder_roll_link.STL",
+      "bytes": 401884,
+      "sha256": "962b97c48f9ce9e8399f45dd9522e0865d19aa9fd299406b2d475a8fc4a53e81"
+    },
+    {
+      "remote": "robot_description/g1/meshes/right_shoulder_yaw_link.STL",
+      "path": "src/unisupermimic/assets/robots/g1/assets/right_shoulder_yaw_link.STL",
+      "bytes": 249984,
+      "sha256": "a0b76489271da0c72461a344c9ffb0f0c6e64f019ea5014c1624886c442a2fe5"
+    },
+    {
+      "remote": "robot_description/g1/meshes/right_wrist_pitch_link.STL",
+      "path": "src/unisupermimic/assets/robots/g1/assets/right_wrist_pitch_link.STL",
+      "bytes": 79584,
+      "sha256": "d22f8f3b3127f15a63e5be1ee273cd5075786c3142f1c3d9f76cbf43d2a26477"
+    },
+    {
+      "remote": "robot_description/g1/meshes/right_wrist_roll_link.STL",
+      "path": "src/unisupermimic/assets/robots/g1/assets/right_wrist_roll_link.STL",
+      "bytes": 356084,
+      "sha256": "a7ee9212ff5b94d6cb7f52bb1bbf3f352194d5b598acff74f4c77d340c5b344f"
+    },
+    {
+      "remote": "robot_description/g1/meshes/right_wrist_yaw_link.STL",
+      "path": "src/unisupermimic/assets/robots/g1/assets/right_wrist_yaw_link.STL",
+      "bytes": 341484,
+      "sha256": "bc9dece2d12509707e0057ba2e48df8f3d56db0c79410212963a25e8a50f61a6"
+    },
+    {
+      "remote": "robot_description/g1/meshes/torso_link_rev_1_0.STL",
+      "path": "src/unisupermimic/assets/robots/g1/assets/torso_link_rev_1_0.STL",
+      "bytes": 2570584,
+      "sha256": "11ddb46f2098efbbd8816b1d65893632d8e78be936376c7cdcd6771899ccc723"
+    },
+    {
+      "remote": "robot_description/g1/meshes/waist_roll_link_rev_1_0.STL",
+      "path": "src/unisupermimic/assets/robots/g1/assets/waist_roll_link_rev_1_0.STL",
+      "bytes": 85884,
+      "sha256": "b67c347a05abc3e8ddae600d98a082bee273bb39f8e651647708b0a7140a8a97"
+    },
+    {
+      "remote": "robot_description/g1/meshes/waist_yaw_link_rev_1_0.STL",
+      "path": "src/unisupermimic/assets/robots/g1/assets/waist_yaw_link_rev_1_0.STL",
+      "bytes": 619984,
+      "sha256": "ec6db442b11f25eed898b5add07940c85d804f300de24dcbd264ccd8be7d554c"
+    }
+  ]
+}

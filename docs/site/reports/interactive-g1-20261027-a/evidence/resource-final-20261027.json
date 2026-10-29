@@ -1,0 +1,34 @@
+{
+  "verified_at": "2026-10-27T10:05:50.595366+00:00",
+  "scope": "ACP and attended CCI/DNAT used for interactive-g1 phase; not a claim about every other workspace resource",
+  "acp": {
+    "name": "supermimic-acro-[account]-1027d1",
+    "uid": "fbb7c4815bc944b2a6665801552be5de",
+    "status": "success",
+    "updated_at": "2026-10-27T17:07:30+08:00",
+    "requested_gpus": 1,
+    "initial_running_observed_at": "2026-10-27T16:42:44+08:00",
+    "observed_start_to_terminal_gpu_hours": 0.4127777777777778,
+    "billing_rule_not_inferred": true
+  },
+  "cci": {
+    "name": "midi-native-prep-[account]",
+    "uid": "21cd0ad52d104386bb572414d99249d1",
+    "status": "stopped",
+    "replicas": "0/1",
+    "instances_empty": true,
+    "actual_cpu_max": "200000 100000",
+    "actual_memory_max": 8589934592,
+    "original_command_persisted_sha256": "2c81f1b1fc679c393562231dcb6ab0d7b24532c1b959375eaebf138fe149d6f4",
+    "original_command_restored_and_read_back_exact": true,
+    "manual_console_stop_verified": true
+  },
+  "dnat": {
+    "name": "dnat-zhicheng-fb300263",
+    "external_port": 10076,
+    "state": "unbound",
+    "destination": null
+  },
+  "verification_method": "fresh console DOM and actual SSH cgroup read; prior screenshots not reused",
+  "resource_release_verified": true
+}

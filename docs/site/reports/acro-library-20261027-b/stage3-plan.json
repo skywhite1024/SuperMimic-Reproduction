@@ -1,0 +1,69 @@
+{
+  "status": "frozen_before_engineering_and_stage3_evaluation",
+  "frozen_at": "2026-10-27T14:54:34.791332+00:00",
+  "initial_full_checkpoint": "runs/unified-h100-stage2-4000/final-full.pt",
+  "initial_full_sha256": "807d5fac7ca128f892c950fa379133231cd5f741e83075ed017d105b2eec6eec",
+  "new_updates": 4000,
+  "world_model_only_updates": 400,
+  "gpu_count": 1,
+  "num_envs": 1024,
+  "maximum_seconds": 7200,
+  "new_clip_denominator": 15,
+  "old_lafan_denominator": 40,
+  "reference_variant": "ground-calibration-v1",
+  "change": "Balance actual world-model window starts and eligible policy replay starts by group then clip; unchanged stored data, history padding and loss masks",
+  "new_actual_replay_group_mass": 0.6,
+  "old_actual_replay_group_mass": 0.4,
+  "new_within_group": "equal available clip mass",
+  "old_failure_replay_priorities": {
+    "dance2_subject4": 3,
+    "fallAndGetUp2_subject3": 3,
+    "jumps1_subject2": 3
+  },
+  "old_other_priority": 1,
+  "reset_prior_and_native_within_clip_priority": "unchanged .6/.4 reset prior",
+  "unchanged": [
+    "architecture",
+    "normalizer tensors",
+    "optimizer recipe",
+    "training losses and rewards",
+    "all reference files and times",
+    "all acceptance thresholds and denominators",
+    "frozen continuous evaluation sequences"
+  ],
+  "diagnostic_scope": "Prior occupancy percentages were measured in a separate CPU collection diagnostic, not the formal GPU replay buffer",
+  "missing_clips": "renormalize only within group; stop if either group absent; retain minimum availability and actual consumed counts",
+  "seed": 27,
+  "formal_sampling_acceptance": "all55 clips consumed, aggregate new fraction within .015 of .6 in both WM starts and consumed policy starts",
+  "evaluation": [
+    "corrected CUDA all55",
+    "raw CUDA new15",
+    "corrected CPU all55",
+    "raw and calibrated existing 3x120s zero-reset with full tails",
+    "fixed tracking/contact and continuous contracts",
+    "failure videos and HTML",
+    "resource release verification"
+  ],
+  "stop_conditions": [
+    "finite 4000 updates",
+    "7200 second overall timeout",
+    "nonfinite training or identity/shape failure",
+    "missing replay group",
+    "sampling/readback/normalizer assertion failure"
+  ],
+  "files": {
+    "scripts/balanced_replay.py": "c8700818bafc0c45db2300a996c2e762bebbf5cb4c6c9e9fb327f8b848897197",
+    "scripts/train_replay_stage3.py": "0741ebca012f532b1d4287ba4f892d80ae2e14056013ee807c40a85c7a9b4782",
+    "scripts/stage2_references.py": "6459c841ec67e41a6c1f8a4f33919045b957c7d5161db7620450c129a6d71c8a",
+    "scripts/balanced_sampling.py": "ad6db997aebed92745450d2009ce6887b7690cc2e93752e0b07bba60c6a7b49b",
+    "scripts/runtime.py": "e06f87f6f1b58d2035c3de8b178f8f46f5f888faddf75a022374c9b3f0f7e0e1",
+    "scripts/global_model.py": "962dacd788304d954cd032e0c5bf98ad83298b56a703c9c882e289c4d93f4312",
+    "scripts/evaluate_library.py": "a41d07c9eb6a2e3859b8704f6c654bf3df2c3d98c801ceafe93f0ee8d5900438",
+    "scripts/evaluate_ground_variant.py": "485dc2a9f6e9dc54ca7461859a32d3d5dc80739413147cfd6214f8c040ef0b15",
+    "stage2-plan.json": "435afa722fb962dcf7b7c889901f89c82470a6d0dedf1fe29fb54dd0b0d5da98",
+    "ground-calibration-v1/manifest.json": "cf5113137ad83bc7dfa9f16f2032a396f3b4be7ad61e1e630231e84db19bd990",
+    "acceptance-contract.json": "0036d9f100203e9d25990c47dfb5666508672fafbea60156a33fb63e56c1dcb1",
+    "contact-acceptance-contract.json": "b3b52cbe3bb45696ca0e9de603db4d01270bc275ff376c2f2a3c370d171390a8",
+    "continuous-acceptance-contract-v1.json": "9f986fbc647865312b6b1346b8c11da5d00a1ce8020ef96efc8da5339b4f73ce"
+  }
+}

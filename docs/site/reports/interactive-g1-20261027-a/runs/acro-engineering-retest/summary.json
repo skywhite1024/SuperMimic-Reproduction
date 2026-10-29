@@ -1,0 +1,17 @@
+{
+  "source": "[local]/88_08_stageii_unitree_g1.csv",
+  "source_sha256": "35d1e39cfdb18e8f644752add1d24ce1e4616b0eb735ecd256bb6a647113884d",
+  "checkpoint": "[local]/final-full.pt",
+  "elapsed_seconds": 4.72,
+  "post_initialization_resets": 0,
+  "hard_failure_frames": 117,
+  "first_hard_failure_s": 2.38,
+  "max_root_error_m": 1.1923190355300903,
+  "body_global_mean_m": 0.5126583768668208,
+  "inversion_observed": true,
+  "landing_last_half_second_upright": false,
+  "passed": false,
+  "reference_not_BONES": true,
+  "scope": "one new public acrobatic reference; reference-source claims and numerical audit in evidence/acro-candidate-audit.json",
+  "success_gate": "zero original hard-gate failures; robot Rzz<-0.5 during reference inversion; final 0.5s Rzz>0.8 and pelvis>0.55m; no resets"
+}

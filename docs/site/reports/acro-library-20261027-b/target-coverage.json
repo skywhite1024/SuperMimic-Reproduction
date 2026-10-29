@@ -1,0 +1,110 @@
+{
+  "target_video": "[local]/飞书20261027-144917.mp4",
+  "target_video_sha256": "d2eedb587c7b92a51519bc1e596522df86a4100e144accfa81592eb0c2f71829",
+  "target_duration_seconds": 120,
+  "target_visual_system_labels": [
+    "ELF",
+    "EmbodiChain",
+    "Dexsim FastRT"
+  ],
+  "target_visual_labels_prove_SuperMimic_training_origin": false,
+  "current_scope": "One G1 reference-conditioned tracking policy over the fixed public 15-clip library, retaining all 40 old LAFAN1 clips; simulation and retained physical rollouts",
+  "BONES_full_library_route": "paused",
+  "human_video_to_robot_frontend": "not_implemented",
+  "coverage": [
+    {
+      "target_component": "continuous running, walking, dancing and jumping",
+      "evidence": "Earlier basic-motion stage passed 12 frozen 120-second sequences with zero resets; reference clips are LAFAN1, not exact target-video clip identities",
+      "same_unified_new_policy_verification": {
+        "old_individual_CPU_passed": 40,
+        "old_individual_CUDA_passed": 39,
+        "old_denominator": 40,
+        "raw_frozen_120s_passed": 1,
+        "raw_frozen_denominator": 3,
+        "zero_resets": true,
+        "exact_target_clip_identity_matched": false
+      }
+    },
+    {
+      "target_component": "hands-supported backward flip",
+      "library_candidate": "88_08_stageii_unitree_g1",
+      "prior_evidence": "99D single-clip specialist completed 4.72 seconds with inversion and upright ending checks, zero resets; ending still moving",
+      "same_unified_new_policy_verification": {
+        "original_hard_gate": true,
+        "original_score": 0.5785329937934875,
+        "strict_combined": false,
+        "tracking_failed_checks": [
+          "norm_return_original"
+        ],
+        "zero_resets": true,
+        "source": "runs/unified4000-cuda-all55/combined-assessment.json"
+      },
+      "generic_airborne_backflip_equivalence": false
+    },
+    {
+      "target_component": "side flip and front hand flip",
+      "library_candidates": [
+        "90_08_stageii_unitree_g1",
+        "90_14_stageii_unitree_g1",
+        "90_15_stageii_unitree_g1"
+      ],
+      "status": "side_flip_90_08_strict_combined_passed_front_hand_flips_90_14_and_90_15_failed_stage2_pending",
+      "raw_reference_ground_clearance_issue": [
+        "90_14_stageii_unitree_g1",
+        "90_15_stageii_unitree_g1"
+      ],
+      "first_stage_results": [
+        {
+          "clip": "90_08_stageii_unitree_g1",
+          "original_hard_gate": true,
+          "original_score": 0.6734532117843628,
+          "strict_combined": true,
+          "first_failure_s": null
+        },
+        {
+          "clip": "90_14_stageii_unitree_g1",
+          "original_hard_gate": false,
+          "original_score": 0.3795726001262665,
+          "strict_combined": false,
+          "first_failure_s": 4.24
+        },
+        {
+          "clip": "90_15_stageii_unitree_g1",
+          "original_hard_gate": false,
+          "original_score": 0.15087366104125977,
+          "strict_combined": false,
+          "first_failure_s": 4.16
+        }
+      ]
+    },
+    {
+      "target_component": "target-video 90 degree flip labels",
+      "exact_reference_match": "not_verified",
+      "physical_angle_and_landing_match": "not_verified"
+    },
+    {
+      "target_component": "target-video 180 degree flip labels",
+      "exact_reference_match": "not_verified",
+      "physical_angle_and_landing_match": "not_verified"
+    },
+    {
+      "target_component": "target-video 360 degree flip labels",
+      "exact_reference_match": "not_verified",
+      "physical_angle_and_landing_match": "not_verified"
+    },
+    {
+      "target_component": "long static standstill after a flip",
+      "status": "not_verified_for_direct_flip_landing; raw continuous seed0 met its terminal hold diagnostic, after intervening motions"
+    }
+  ],
+  "interpretation": "Cumulative orientation travel, source names containing flip, or learning all 15 public clips alone do not prove exact 90/180/360 target-video coverage. Individual raw-library acceptance, original-library regression, continuous-sequence performance and target-video coverage must be reported separately.",
+  "updated_at": "2026-10-27T21:46:22.052379+08:00",
+  "current_candidate": "stage1-unified4000",
+  "next_candidate": "stage2-training-in-progress",
+  "first_stage_evidence": [
+    "runs/unified4000-cuda-all55/summary.json",
+    "runs/unified4000-cpu-all55/summary.json",
+    "runs/unified4000-cuda-all55/combined-assessment.json",
+    "runs/unified4000-frozen-continuous-v1/summary.json"
+  ]
+}

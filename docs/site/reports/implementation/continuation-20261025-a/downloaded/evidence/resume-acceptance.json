@@ -1,0 +1,75 @@
+{
+  "passed": true,
+  "before": {
+    "iteration": 12000,
+    "sim_steps": 123142144,
+    "wm": {
+      "sha256_parameters": "c32206d22e4596cdb640a73e4bbf884b30e47d306cbe443a4990cac5b706c7c6",
+      "sha256_state": "989688ce535197ae1fff1d4a3f3a8e80bf0d4295b6baae0d3c5861ceb2d8bb6b",
+      "finite": true
+    },
+    "policy": {
+      "sha256_parameters": "58bec9a9222cac78ac76f1c4d274196b95b287e0a8041a82ec9f405b4448bc11",
+      "sha256_state": "a1ecb809d3140a03585f15db2ade27ecab12ff2c01605d67c688557cd7d22949",
+      "finite": true
+    },
+    "critic": {
+      "sha256_parameters": "49bd3a889e42479e695ad5ef0e5848772b608d0da01f7a056d93fdd14732c40c",
+      "sha256_state": "b2156a1bbdbba422b9009f60cc40ab6307cc86c6565dd68b24a87c62352f3c29",
+      "finite": true
+    },
+    "wm_optimizer": {
+      "min": 120000,
+      "max": 120000,
+      "states": 14
+    },
+    "policy_optimizer": {
+      "min": 11500,
+      "max": 11500,
+      "states": 20
+    },
+    "critic_optimizer": {
+      "min": 230000,
+      "max": 230000,
+      "states": 6
+    }
+  },
+  "after": {
+    "iteration": 12005,
+    "sim_steps": 123453440,
+    "wm": {
+      "sha256_parameters": "20ee09ebee6bcc79a164bbdcfee332b6a7214c93d2c75aa99fb807778c63777b",
+      "sha256_state": "bd5b30be148e64578421a9f33794c5c48bd63979de4e07e82dd7206c2dd902f0",
+      "finite": true
+    },
+    "policy": {
+      "sha256_parameters": "e37c02f2a966befd44de67d887effa89e7bb9cd32b384d2ee4f70feef3452313",
+      "sha256_state": "861375abb12e1fc0e6d2aaedc2874e7e26f99ab220144c247313aabcd05e7426",
+      "finite": true
+    },
+    "critic": {
+      "sha256_parameters": "56fbd646e8344ff109617b393ff304204e3ad635aa886c4e3aa06206859eb59c",
+      "sha256_state": "9d9b22a0e9c38ea182fa427460b378a00d2ba6278208bbdf269df5836a32ada0",
+      "finite": true
+    },
+    "wm_optimizer": {
+      "min": 120050,
+      "max": 120050,
+      "states": 14
+    },
+    "policy_optimizer": {
+      "min": 11505,
+      "max": 11505,
+      "states": 20
+    },
+    "critic_optimizer": {
+      "min": 230100,
+      "max": 230100,
+      "states": 6
+    }
+  },
+  "replay_size_after_rewarm": 66,
+  "warmup_before_first_update_verified": true,
+  "first_lr_matches_absolute_iteration": true,
+  "optimizer_moments_load_identity": true
+}

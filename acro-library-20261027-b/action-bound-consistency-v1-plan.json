@@ -1,0 +1,20 @@
+{
+  "status": "frozen_before_first_action_bound_candidate_assessment",
+  "frozen_at": "2026-10-28T00:56:07.093482+08:00",
+  "checkpoint": "policy/unified-h100-stage3-4000.pt",
+  "checkpoint_sha256": "4aa7a15f8475d54064db33b3333b772e4976f3ac133f98c03a7e39e49604e3b3",
+  "controller_variant": "action-output-bound-20-v1",
+  "diagnostic_change": "Apply the existing collection-time [-20,20] action bound to deployment output; weights/reference files/physics/reward/thresholds unchanged",
+  "scope": "local CPU complete55 controlled ablation; no training updates and no new cloud resource",
+  "new_denominator": 15,
+  "old_denominator": 40,
+  "reference_variant": "ground-calibration-v1",
+  "preserve_all_unbounded_results": true,
+  "basis": "pinned learner.collect clamps to[-20,20]; pinned imagined policy and native evaluation/environment do not; retained outputs exceed20",
+  "script_sha256": "bd10764b6e9ab98a247fe62160cff83ccbbd02fb46b5efc3a4e6742543575d99",
+  "contracts": {
+    "acceptance-contract.json": "0036d9f100203e9d25990c47dfb5666508672fafbea60156a33fb63e56c1dcb1",
+    "contact-acceptance-contract.json": "b3b52cbe3bb45696ca0e9de603db4d01270bc275ff376c2f2a3c370d171390a8",
+    "continuous-acceptance-contract-v1.json": "9f986fbc647865312b6b1346b8c11da5d00a1ce8020ef96efc8da5339b4f73ce"
+  }
+}

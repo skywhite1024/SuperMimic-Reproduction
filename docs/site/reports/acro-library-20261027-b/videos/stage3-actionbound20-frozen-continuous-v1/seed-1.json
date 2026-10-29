@@ -1,0 +1,23 @@
+{
+  "clip": "seed-1",
+  "file": "videos/stage3-actionbound20-frozen-continuous-v1/seed-1.mp4",
+  "bytes": 42770974,
+  "sha256": "0a02a11ebcbe750fe354b3e5e0261347222de02dd667f7b0aa53a6b3967fc0de",
+  "frames": 3001,
+  "fps": 25,
+  "video_seconds": 120.04,
+  "physical_window_seconds": 120.0,
+  "complete_decode_passed": true,
+  "source_run": "stage3-actionbound20-frozen-continuous-v1",
+  "only_retained_actual_physics_states_rendered": true,
+  "reference_display_offset_m": [
+    0,
+    1.5,
+    0
+  ],
+  "fog_disabled_for_failed_tail_visibility": true,
+  "reference_version_or_variant": "raw",
+  "original_hard_gate_passed": false,
+  "tracking_quality_passed": null,
+  "contact_sheet": "evidence/stage3-actionbound20-frozen-continuous-v1-seed-1-contact-sheet.jpg"
+}

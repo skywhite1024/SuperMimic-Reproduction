@@ -1,0 +1,111 @@
+{
+  "status": "compiled_local_runtime_collision_inventory_complete",
+  "scope": "local CPU model; no force, rollout, or hardware validation",
+  "simulation_steps": 0,
+  "model_modified": false,
+  "robot_files": {
+    "scene_supermimic.xml": "53ac19daf68ececc8689105df275f00cbc5811dda9f7bb0d013b58f6e76ed637",
+    "supermimic.xml": "78e9f3a256002378c46da2dd0d6bd71f640ff6e38ef6ea299951b4f36ce1b8c9"
+  },
+  "geometries": [
+    {
+      "body": "left_wrist_roll_link",
+      "geom": "",
+      "contype": 0,
+      "conaffinity": 0,
+      "floor_collision_mask_compatible": false
+    },
+    {
+      "body": "left_wrist_roll_link",
+      "geom": "left_wrist_roll_link_collision",
+      "contype": 1,
+      "conaffinity": 0,
+      "floor_collision_mask_compatible": true
+    },
+    {
+      "body": "left_wrist_pitch_link",
+      "geom": "",
+      "contype": 0,
+      "conaffinity": 0,
+      "floor_collision_mask_compatible": false
+    },
+    {
+      "body": "left_wrist_pitch_link",
+      "geom": "left_wrist_pitch_link_collision",
+      "contype": 1,
+      "conaffinity": 0,
+      "floor_collision_mask_compatible": true
+    },
+    {
+      "body": "left_wrist_yaw_link",
+      "geom": "",
+      "contype": 0,
+      "conaffinity": 0,
+      "floor_collision_mask_compatible": false
+    },
+    {
+      "body": "left_wrist_yaw_link",
+      "geom": "left_wrist_yaw_link_collision",
+      "contype": 1,
+      "conaffinity": 0,
+      "floor_collision_mask_compatible": true
+    },
+    {
+      "body": "left_rubber_hand",
+      "geom": "",
+      "contype": 0,
+      "conaffinity": 0,
+      "floor_collision_mask_compatible": false
+    },
+    {
+      "body": "right_wrist_roll_link",
+      "geom": "",
+      "contype": 0,
+      "conaffinity": 0,
+      "floor_collision_mask_compatible": false
+    },
+    {
+      "body": "right_wrist_roll_link",
+      "geom": "right_wrist_roll_link_collision",
+      "contype": 1,
+      "conaffinity": 0,
+      "floor_collision_mask_compatible": true
+    },
+    {
+      "body": "right_wrist_pitch_link",
+      "geom": "",
+      "contype": 0,
+      "conaffinity": 0,
+      "floor_collision_mask_compatible": false
+    },
+    {
+      "body": "right_wrist_pitch_link",
+      "geom": "right_wrist_pitch_link_collision",
+      "contype": 1,
+      "conaffinity": 0,
+      "floor_collision_mask_compatible": true
+    },
+    {
+      "body": "right_wrist_yaw_link",
+      "geom": "",
+      "contype": 0,
+      "conaffinity": 0,
+      "floor_collision_mask_compatible": false
+    },
+    {
+      "body": "right_wrist_yaw_link",
+      "geom": "right_wrist_yaw_link_collision",
+      "contype": 1,
+      "conaffinity": 0,
+      "floor_collision_mask_compatible": true
+    },
+    {
+      "body": "right_rubber_hand",
+      "geom": "",
+      "contype": 0,
+      "conaffinity": 0,
+      "floor_collision_mask_compatible": false
+    }
+  ],
+  "interpretation": "Rubber hand visuals and wrist collision meshes must be distinguished; collision masks alone do not establish support forces or dynamic feasibility."
+}

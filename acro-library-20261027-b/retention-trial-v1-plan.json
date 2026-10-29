@@ -1,0 +1,76 @@
+{
+  "status": "frozen_before_v2_engineering_and_cuda_candidate_assessment",
+  "frozen_at": "2026-10-27T17:24:11.919029+00:00",
+  "scope": "One1000-update candidate,200WM-only then800joint. No automatic extension; distinct controller/objective variant.",
+  "initial_full_sha256": "93bb8b830145c54092518eba8db1fb020d020eb72cdad1b619b4fc5470cc213d",
+  "initial_full": "runs/unified-h100-stage3-4000/final-full.pt",
+  "old_teacher_local": "../implementation/continuation-20261025-a/downloaded/policy/full_016000.pt",
+  "new_teacher_local": "runs/unified-h100-stage2-4000/final-full.pt",
+  "old_teacher_cloud": "/mnt/afs/USER_ID/SuperMimic/lafan1-20261024/experiments/continuation-20261025-a/policy/full_016000.pt",
+  "new_teacher_cloud": "/mnt/afs/USER_ID/SuperMimic/acro-library-20261027-b/runs/unified-h100-stage2-4000/final-full.pt",
+  "old_teacher_sha256": "0afcca9af97bd9db1f2dd083875898f962acab0b0a70c7313b221e575b70b05b",
+  "new_teacher_sha256": "807d5fac7ca128f892c950fa379133231cd5f741e83075ed017d105b2eec6eec",
+  "native_learner_sha256": "c2b12fdf94be102ffadfb343b9372069d32cb660b2f05b66e836351b328361f4",
+  "protected_new": [
+    "88_07_stageii_unitree_g1",
+    "88_08_stageii_unitree_g1",
+    "88_09_stageii_unitree_g1"
+  ],
+  "old_weight": 0.1,
+  "new_weight": 0.05,
+  "action_output_bound": [
+    -20,
+    20
+  ],
+  "old_failure_replay_priorities": {
+    "dance2_subject4": 3,
+    "fallAndGetUp2_subject3": 3,
+    "jumps1_subject2": 3
+  },
+  "files": {
+    "scripts/retention_components.py": "1ecb22f73afc1cf759d4de682a6180aae2e683fd8911d8d6c6e9c09161dc3013",
+    "scripts/retention_learner.py": "8a39435dd52ceb3a6026abda50427021e75ade553f4b6ec50c56b16dd5534915",
+    "scripts/train_retention_trial.py": "be197cc8ad48b6bb1a53e34c052e92733fb3d3cd80a970be99929d8a57671f32",
+    "scripts/evaluate_declared_bound.py": "1355191e993dfbea93a8f76a79c4103f351d64c97aa773607d91fa79027f3d57",
+    "scripts/balanced_replay.py": "c8700818bafc0c45db2300a996c2e762bebbf5cb4c6c9e9fb327f8b848897197",
+    "scripts/balanced_sampling.py": "ad6db997aebed92745450d2009ce6887b7690cc2e93752e0b07bba60c6a7b49b",
+    "scripts/global_model.py": "962dacd788304d954cd032e0c5bf98ad83298b56a703c9c882e289c4d93f4312",
+    "scripts/stage2_references.py": "6459c841ec67e41a6c1f8a4f33919045b957c7d5161db7620450c129a6d71c8a",
+    "scripts/evaluate_library.py": "a41d07c9eb6a2e3859b8704f6c654bf3df2c3d98c801ceafe93f0ee8d5900438",
+    "scripts/evaluate_sequences.py": "0a5b9f0b9f554179ba69248e32e51d7aa5a8829e619c3f9234a17575fee60d84",
+    "scripts/evaluate_sequences_corrected.py": "aea90cdb3f5903a33a1eb54a4cd685aad7f28258d31b27c213d23324aec32d39",
+    "scripts/evaluate_action_bound.py": "bd10764b6e9ab98a247fe62160cff83ccbbd02fb46b5efc3a4e6742543575d99",
+    "scripts/assess_tracking.py": "2c8572ce88bebf10999c940695895ee40ef4dd3702580e1db394dd3fdb2c848f",
+    "scripts/audit_physical_contacts.py": "b656843e6df3bb045adfb63cb048d7670f3d0cbb2d9bc451e9727d18e0e49d36",
+    "scripts/combine_acceptance.py": "86f2a09d568bd37d9eddf677129b8dfecb234919f78e824d697e4b093fe9450e",
+    "scripts/assess_sequences.py": "f59610589b63739807f268951c6cdab58ab60c5bdbb6cfd5a4f49deb50afb32a",
+    "ground-calibration-v1/manifest.json": "cf5113137ad83bc7dfa9f16f2032a396f3b4be7ad61e1e630231e84db19bd990",
+    "acceptance-contract.json": "0036d9f100203e9d25990c47dfb5666508672fafbea60156a33fb63e56c1dcb1",
+    "contact-acceptance-contract.json": "b3b52cbe3bb45696ca0e9de603db4d01270bc275ff376c2f2a3c370d171390a8",
+    "continuous-acceptance-contract-v1.json": "9f986fbc647865312b6b1346b8c11da5d00a1ce8020ef96efc8da5339b4f73ce"
+  },
+  "gpu_count": 1,
+  "maximum_program_seconds": 5400,
+  "num_envs": 1024,
+  "new_denominator": 15,
+  "old_denominator": 40,
+  "fixed_continuous_trials": 3,
+  "seconds_per_continuous_trial": 120,
+  "replay_mass": {
+    "new": 0.6,
+    "lafan": 0.4
+  },
+  "teachers_training_only": true,
+  "deployed_student_policies": 1,
+  "weights_vs_deployment_bound_confounding_control": "Before updates, assess the frozen stage3 parent with identicalbound20 on CUDA55 and raw15; retain unboundedCPU/CUDA and same-weightCPU ablations.",
+  "reference_or_physics_changes": false,
+  "frozen_eval_sequences_must_never_be_training_inputs": true,
+  "new_cloud_action_prerequisites": [
+    "Current academy location/network condition",
+    "Fresh all-account running/queued GPU and CCI resource check",
+    "Same-source6real CPU updates, fixed teachers/norms, one PI optimizer step per joint update and exact bounded policy save-readback"
+  ],
+  "continue_or_rollback_after_candidate": "No automatic second training block. Require strict correctedCUDA count not below the matched bound20 parent AND either more corrected strict passes or fewer failed old clips. Otherwise classify this candidate as unsuccessful and retain the previous weights. Goal completion still requires all original frozen acceptance criteria on all55 plus all3 full120s sequences, including matchedCPU regression checks.",
+  "early_stop": "Abort on hash/contract mismatch, nonfinite losses, changed teachers/norms, incorrect optimizer deltas, missing replay groups/clips or failed readback. Save interrupted checkpoint and exit; never keep GPU alive.",
+  "current_evidence": "Deployment bounds leave all3 first continuous failures unchanged; stage3 regressed flips/oldclips. Retention is a separate training hypothesis, not a proven cure for reference/contact issues."
+}

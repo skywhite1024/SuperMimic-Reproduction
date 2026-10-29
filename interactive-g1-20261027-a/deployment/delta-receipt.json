@@ -1,0 +1,31 @@
+{
+  "policy_state_sha256": "503fce756c48ac88b54f93e496c719933d91751c97757e0af2b146487e3b746c",
+  "parent_full_sha256": "0afcca9af97bd9db1f2dd083875898f962acab0b0a70c7313b221e575b70b05b",
+  "trained_full_sha256": "3c78c1f5b3917fa39fa3df0819ed14ad9e61828c2d2d266d5bc5535b259f454b",
+  "scope": "Exact inference policy reconstruction only; does not reconstruct changed WM normalizers or optimizer history.",
+  "bytes": 167149,
+  "sha256": "4fa78c1a3d3456519c1ab09c66fa3ab77a74260f15ecb300ef32947fcd6cf041",
+  "legacy_policy_tensors_unchanged": true,
+  "changed_columns": [
+    131,
+    132,
+    232,
+    233,
+    333,
+    334,
+    434,
+    435,
+    535,
+    536,
+    636,
+    637,
+    737,
+    738,
+    838,
+    839,
+    939,
+    940,
+    1040,
+    1041
+  ]
+}

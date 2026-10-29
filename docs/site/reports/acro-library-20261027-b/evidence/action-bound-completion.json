@@ -1,0 +1,637 @@
+{
+  "status": "all_local_comparisons_and_videos_verified",
+  "updated_at": "2026-10-27T17:30:57.089283+00:00",
+  "plan_sha256": "daa81c4db60b202c5da2dd81eed70aeaf74c987735f7f7deabad9c3436c62107",
+  "completed_commands": [
+    {
+      "script": "assess_tracking.py",
+      "arguments": [
+        "--run",
+        "stage3-actionbound20-corrected-cpu-all55"
+      ],
+      "log": "evidence\\action-bound-completion-00-assess_tracking.log"
+    },
+    {
+      "script": "audit_physical_contacts.py",
+      "arguments": [
+        "--run",
+        "stage3-actionbound20-corrected-cpu-all55"
+      ],
+      "log": "evidence\\action-bound-completion-01-audit_physical_contacts.log"
+    },
+    {
+      "script": "combine_acceptance.py",
+      "arguments": [
+        "--run",
+        "stage3-actionbound20-corrected-cpu-all55"
+      ],
+      "log": "evidence\\action-bound-completion-02-combine_acceptance.log"
+    },
+    {
+      "script": "diagnose_action_bound.py",
+      "arguments": [],
+      "log": "evidence\\action-bound-completion-03-diagnose_action_bound.log"
+    },
+    {
+      "script": "evaluate_library.py",
+      "arguments": [
+        "--checkpoint",
+        "[local]/unified-h100-stage3-4000.pt",
+        "--mode",
+        "stage3-raw-cpu-new15-control",
+        "--group",
+        "new",
+        "--device",
+        "cpu"
+      ],
+      "log": "evidence\\action-bound-completion-04-evaluate_library.log"
+    },
+    {
+      "script": "assess_tracking.py",
+      "arguments": [
+        "--run",
+        "stage3-raw-cpu-new15-control"
+      ],
+      "log": "evidence\\action-bound-completion-05-assess_tracking.log"
+    },
+    {
+      "script": "audit_physical_contacts.py",
+      "arguments": [
+        "--run",
+        "stage3-raw-cpu-new15-control"
+      ],
+      "log": "evidence\\action-bound-completion-06-audit_physical_contacts.log"
+    },
+    {
+      "script": "combine_acceptance.py",
+      "arguments": [
+        "--run",
+        "stage3-raw-cpu-new15-control"
+      ],
+      "log": "evidence\\action-bound-completion-07-combine_acceptance.log"
+    },
+    {
+      "script": "evaluate_action_bound_extension.py",
+      "arguments": [
+        "--suite",
+        "library",
+        "--reference-variant",
+        "raw",
+        "--checkpoint",
+        "[local]/unified-h100-stage3-4000.pt",
+        "--mode",
+        "stage3-actionbound20-raw-cpu-new15",
+        "--group",
+        "new",
+        "--device",
+        "cpu"
+      ],
+      "log": "evidence\\action-bound-completion-08-evaluate_action_bound_extension.log"
+    },
+    {
+      "script": "assess_tracking.py",
+      "arguments": [
+        "--run",
+        "stage3-actionbound20-raw-cpu-new15"
+      ],
+      "log": "evidence\\action-bound-completion-09-assess_tracking.log"
+    },
+    {
+      "script": "audit_physical_contacts.py",
+      "arguments": [
+        "--run",
+        "stage3-actionbound20-raw-cpu-new15"
+      ],
+      "log": "evidence\\action-bound-completion-10-audit_physical_contacts.log"
+    },
+    {
+      "script": "combine_acceptance.py",
+      "arguments": [
+        "--run",
+        "stage3-actionbound20-raw-cpu-new15"
+      ],
+      "log": "evidence\\action-bound-completion-11-combine_acceptance.log"
+    },
+    {
+      "script": "evaluate_action_bound_extension.py",
+      "arguments": [
+        "--suite",
+        "sequences",
+        "--reference-variant",
+        "raw",
+        "--checkpoint",
+        "[local]/unified-h100-stage3-4000.pt",
+        "--mode",
+        "stage3-actionbound20-frozen-continuous-v1",
+        "--device",
+        "cpu"
+      ],
+      "log": "evidence\\action-bound-completion-12-evaluate_action_bound_extension.log"
+    },
+    {
+      "script": "assess_sequences.py",
+      "arguments": [
+        "--run",
+        "stage3-actionbound20-frozen-continuous-v1"
+      ],
+      "log": "evidence\\action-bound-completion-13-assess_sequences.log"
+    },
+    {
+      "script": "audit_sequence_contacts.py",
+      "arguments": [
+        "--run",
+        "stage3-frozen-continuous-v1"
+      ],
+      "log": "evidence\\action-bound-completion-14-audit_sequence_contacts.log"
+    },
+    {
+      "script": "audit_sequence_contacts.py",
+      "arguments": [
+        "--run",
+        "stage3-actionbound20-frozen-continuous-v1"
+      ],
+      "log": "evidence\\action-bound-completion-15-audit_sequence_contacts.log"
+    },
+    {
+      "script": "evaluate_action_bound_extension.py",
+      "arguments": [
+        "--suite",
+        "sequences",
+        "--reference-variant",
+        "corrected",
+        "--checkpoint",
+        "[local]/unified-h100-stage3-4000.pt",
+        "--mode",
+        "stage3-actionbound20-corrected-continuous-v1",
+        "--device",
+        "cpu"
+      ],
+      "log": "evidence\\action-bound-completion-16-evaluate_action_bound_extension.log"
+    },
+    {
+      "script": "assess_sequences.py",
+      "arguments": [
+        "--run",
+        "stage3-actionbound20-corrected-continuous-v1"
+      ],
+      "log": "evidence\\action-bound-completion-17-assess_sequences.log"
+    },
+    {
+      "script": "audit_sequence_contacts.py",
+      "arguments": [
+        "--run",
+        "stage3-corrected-continuous-v1"
+      ],
+      "log": "evidence\\action-bound-completion-18-audit_sequence_contacts.log"
+    },
+    {
+      "script": "audit_sequence_contacts.py",
+      "arguments": [
+        "--run",
+        "stage3-actionbound20-corrected-continuous-v1"
+      ],
+      "log": "evidence\\action-bound-completion-19-audit_sequence_contacts.log"
+    },
+    {
+      "script": "diagnose_action_bound.py",
+      "arguments": [],
+      "log": "evidence\\action-bound-completion-20-diagnose_action_bound.log"
+    },
+    {
+      "script": "render_library.py",
+      "arguments": [
+        "--run",
+        "stage3-actionbound20-corrected-cpu-all55",
+        "--clips",
+        "143_34_stageii_unitree_g1"
+      ],
+      "log": "evidence\\action-bound-completion-21-render_library.log"
+    },
+    {
+      "script": "render_library.py",
+      "arguments": [
+        "--run",
+        "stage3-actionbound20-corrected-cpu-all55",
+        "--clips",
+        "85_06_stageii_unitree_g1"
+      ],
+      "log": "evidence\\action-bound-completion-22-render_library.log"
+    },
+    {
+      "script": "render_library.py",
+      "arguments": [
+        "--run",
+        "stage3-actionbound20-corrected-cpu-all55",
+        "--clips",
+        "85_07_stageii_unitree_g1"
+      ],
+      "log": "evidence\\action-bound-completion-23-render_library.log"
+    },
+    {
+      "script": "render_library.py",
+      "arguments": [
+        "--run",
+        "stage3-actionbound20-corrected-cpu-all55",
+        "--clips",
+        "88_03_stageii_unitree_g1"
+      ],
+      "log": "evidence\\action-bound-completion-24-render_library.log"
+    },
+    {
+      "script": "render_library.py",
+      "arguments": [
+        "--run",
+        "stage3-actionbound20-corrected-cpu-all55",
+        "--clips",
+        "88_06_stageii_unitree_g1"
+      ],
+      "log": "evidence\\action-bound-completion-25-render_library.log"
+    },
+    {
+      "script": "render_library.py",
+      "arguments": [
+        "--run",
+        "stage3-actionbound20-corrected-cpu-all55",
+        "--clips",
+        "88_07_stageii_unitree_g1"
+      ],
+      "log": "evidence\\action-bound-completion-26-render_library.log"
+    },
+    {
+      "script": "render_library.py",
+      "arguments": [
+        "--run",
+        "stage3-actionbound20-corrected-cpu-all55",
+        "--clips",
+        "88_08_stageii_unitree_g1"
+      ],
+      "log": "evidence\\action-bound-completion-27-render_library.log"
+    },
+    {
+      "script": "render_library.py",
+      "arguments": [
+        "--run",
+        "stage3-actionbound20-corrected-cpu-all55",
+        "--clips",
+        "88_09_stageii_unitree_g1"
+      ],
+      "log": "evidence\\action-bound-completion-28-render_library.log"
+    },
+    {
+      "script": "render_library.py",
+      "arguments": [
+        "--run",
+        "stage3-actionbound20-corrected-cpu-all55",
+        "--clips",
+        "88_10_stageii_unitree_g1"
+      ],
+      "log": "evidence\\action-bound-completion-29-render_library.log"
+    },
+    {
+      "script": "render_library.py",
+      "arguments": [
+        "--run",
+        "stage3-actionbound20-corrected-cpu-all55",
+        "--clips",
+        "88_11_stageii_unitree_g1"
+      ],
+      "log": "evidence\\action-bound-completion-30-render_library.log"
+    },
+    {
+      "script": "render_library.py",
+      "arguments": [
+        "--run",
+        "stage3-actionbound20-corrected-cpu-all55",
+        "--clips",
+        "89_01_stageii_unitree_g1"
+      ],
+      "log": "evidence\\action-bound-completion-31-render_library.log"
+    },
+    {
+      "script": "render_library.py",
+      "arguments": [
+        "--run",
+        "stage3-actionbound20-corrected-cpu-all55",
+        "--clips",
+        "90_08_stageii_unitree_g1"
+      ],
+      "log": "evidence\\action-bound-completion-32-render_library.log"
+    },
+    {
+      "script": "render_library.py",
+      "arguments": [
+        "--run",
+        "stage3-actionbound20-corrected-cpu-all55",
+        "--clips",
+        "90_14_stageii_unitree_g1"
+      ],
+      "log": "evidence\\action-bound-completion-33-render_library.log"
+    },
+    {
+      "script": "render_library.py",
+      "arguments": [
+        "--run",
+        "stage3-actionbound20-corrected-cpu-all55",
+        "--clips",
+        "90_15_stageii_unitree_g1"
+      ],
+      "log": "evidence\\action-bound-completion-34-render_library.log"
+    },
+    {
+      "script": "render_library.py",
+      "arguments": [
+        "--run",
+        "stage3-actionbound20-corrected-cpu-all55",
+        "--clips",
+        "90_19_stageii_unitree_g1"
+      ],
+      "log": "evidence\\action-bound-completion-35-render_library.log"
+    },
+    {
+      "script": "render_library.py",
+      "arguments": [
+        "--run",
+        "stage3-actionbound20-corrected-cpu-all55",
+        "--clips",
+        "dance1_subject1",
+        "--include-old"
+      ],
+      "log": "evidence\\action-bound-completion-36-render_library.log"
+    },
+    {
+      "script": "render_library.py",
+      "arguments": [
+        "--run",
+        "stage3-actionbound20-corrected-cpu-all55",
+        "--clips",
+        "dance2_subject4",
+        "--include-old"
+      ],
+      "log": "evidence\\action-bound-completion-37-render_library.log"
+    },
+    {
+      "script": "render_library.py",
+      "arguments": [
+        "--run",
+        "stage3-actionbound20-corrected-cpu-all55",
+        "--clips",
+        "jumps1_subject2",
+        "--include-old"
+      ],
+      "log": "evidence\\action-bound-completion-38-render_library.log"
+    },
+    {
+      "script": "render_library.py",
+      "arguments": [
+        "--run",
+        "stage3-actionbound20-raw-cpu-new15",
+        "--clips",
+        "143_34_stageii_unitree_g1"
+      ],
+      "log": "evidence\\action-bound-completion-39-render_library.log"
+    },
+    {
+      "script": "render_library.py",
+      "arguments": [
+        "--run",
+        "stage3-actionbound20-raw-cpu-new15",
+        "--clips",
+        "85_06_stageii_unitree_g1"
+      ],
+      "log": "evidence\\action-bound-completion-40-render_library.log"
+    },
+    {
+      "script": "render_library.py",
+      "arguments": [
+        "--run",
+        "stage3-actionbound20-raw-cpu-new15",
+        "--clips",
+        "85_07_stageii_unitree_g1"
+      ],
+      "log": "evidence\\action-bound-completion-41-render_library.log"
+    },
+    {
+      "script": "render_library.py",
+      "arguments": [
+        "--run",
+        "stage3-actionbound20-raw-cpu-new15",
+        "--clips",
+        "88_03_stageii_unitree_g1"
+      ],
+      "log": "evidence\\action-bound-completion-42-render_library.log"
+    },
+    {
+      "script": "render_library.py",
+      "arguments": [
+        "--run",
+        "stage3-actionbound20-raw-cpu-new15",
+        "--clips",
+        "88_06_stageii_unitree_g1"
+      ],
+      "log": "evidence\\action-bound-completion-43-render_library.log"
+    },
+    {
+      "script": "render_library.py",
+      "arguments": [
+        "--run",
+        "stage3-actionbound20-raw-cpu-new15",
+        "--clips",
+        "88_07_stageii_unitree_g1"
+      ],
+      "log": "evidence\\action-bound-completion-44-render_library.log"
+    },
+    {
+      "script": "render_library.py",
+      "arguments": [
+        "--run",
+        "stage3-actionbound20-raw-cpu-new15",
+        "--clips",
+        "88_08_stageii_unitree_g1"
+      ],
+      "log": "evidence\\action-bound-completion-45-render_library.log"
+    },
+    {
+      "script": "render_library.py",
+      "arguments": [
+        "--run",
+        "stage3-actionbound20-raw-cpu-new15",
+        "--clips",
+        "88_09_stageii_unitree_g1"
+      ],
+      "log": "evidence\\action-bound-completion-46-render_library.log"
+    },
+    {
+      "script": "render_library.py",
+      "arguments": [
+        "--run",
+        "stage3-actionbound20-raw-cpu-new15",
+        "--clips",
+        "88_10_stageii_unitree_g1"
+      ],
+      "log": "evidence\\action-bound-completion-47-render_library.log"
+    },
+    {
+      "script": "render_library.py",
+      "arguments": [
+        "--run",
+        "stage3-actionbound20-raw-cpu-new15",
+        "--clips",
+        "88_11_stageii_unitree_g1"
+      ],
+      "log": "evidence\\action-bound-completion-48-render_library.log"
+    },
+    {
+      "script": "render_library.py",
+      "arguments": [
+        "--run",
+        "stage3-actionbound20-raw-cpu-new15",
+        "--clips",
+        "89_01_stageii_unitree_g1"
+      ],
+      "log": "evidence\\action-bound-completion-49-render_library.log"
+    },
+    {
+      "script": "render_library.py",
+      "arguments": [
+        "--run",
+        "stage3-actionbound20-raw-cpu-new15",
+        "--clips",
+        "90_08_stageii_unitree_g1"
+      ],
+      "log": "evidence\\action-bound-completion-50-render_library.log"
+    },
+    {
+      "script": "render_library.py",
+      "arguments": [
+        "--run",
+        "stage3-actionbound20-raw-cpu-new15",
+        "--clips",
+        "90_14_stageii_unitree_g1"
+      ],
+      "log": "evidence\\action-bound-completion-51-render_library.log"
+    },
+    {
+      "script": "render_library.py",
+      "arguments": [
+        "--run",
+        "stage3-actionbound20-raw-cpu-new15",
+        "--clips",
+        "90_15_stageii_unitree_g1"
+      ],
+      "log": "evidence\\action-bound-completion-52-render_library.log"
+    },
+    {
+      "script": "render_library.py",
+      "arguments": [
+        "--run",
+        "stage3-actionbound20-raw-cpu-new15",
+        "--clips",
+        "90_19_stageii_unitree_g1"
+      ],
+      "log": "evidence\\action-bound-completion-53-render_library.log"
+    },
+    {
+      "script": "render_library.py",
+      "arguments": [
+        "--run",
+        "stage3-actionbound20-frozen-continuous-v1",
+        "--clips",
+        "seed-0"
+      ],
+      "log": "evidence\\action-bound-completion-54-render_library.log"
+    },
+    {
+      "script": "render_library.py",
+      "arguments": [
+        "--run",
+        "stage3-actionbound20-frozen-continuous-v1",
+        "--clips",
+        "seed-1"
+      ],
+      "log": "evidence\\action-bound-completion-55-render_library.log"
+    },
+    {
+      "script": "render_library.py",
+      "arguments": [
+        "--run",
+        "stage3-actionbound20-frozen-continuous-v1",
+        "--clips",
+        "seed-2"
+      ],
+      "log": "evidence\\action-bound-completion-56-render_library.log"
+    },
+    {
+      "script": "render_library.py",
+      "arguments": [
+        "--run",
+        "stage3-actionbound20-corrected-continuous-v1",
+        "--clips",
+        "seed-0"
+      ],
+      "log": "evidence\\action-bound-completion-57-render_library.log"
+    },
+    {
+      "script": "render_library.py",
+      "arguments": [
+        "--run",
+        "stage3-actionbound20-corrected-continuous-v1",
+        "--clips",
+        "seed-1"
+      ],
+      "log": "evidence\\action-bound-completion-58-render_library.log"
+    },
+    {
+      "script": "render_library.py",
+      "arguments": [
+        "--run",
+        "stage3-actionbound20-corrected-continuous-v1",
+        "--clips",
+        "seed-2"
+      ],
+      "log": "evidence\\action-bound-completion-59-render_library.log"
+    }
+  ],
+  "video_receipts": [
+    "videos\\stage3-actionbound20-corrected-cpu-all55\\143_34_stageii_unitree_g1.json",
+    "videos\\stage3-actionbound20-corrected-cpu-all55\\85_06_stageii_unitree_g1.json",
+    "videos\\stage3-actionbound20-corrected-cpu-all55\\85_07_stageii_unitree_g1.json",
+    "videos\\stage3-actionbound20-corrected-cpu-all55\\88_03_stageii_unitree_g1.json",
+    "videos\\stage3-actionbound20-corrected-cpu-all55\\88_06_stageii_unitree_g1.json",
+    "videos\\stage3-actionbound20-corrected-cpu-all55\\88_07_stageii_unitree_g1.json",
+    "videos\\stage3-actionbound20-corrected-cpu-all55\\88_08_stageii_unitree_g1.json",
+    "videos\\stage3-actionbound20-corrected-cpu-all55\\88_09_stageii_unitree_g1.json",
+    "videos\\stage3-actionbound20-corrected-cpu-all55\\88_10_stageii_unitree_g1.json",
+    "videos\\stage3-actionbound20-corrected-cpu-all55\\88_11_stageii_unitree_g1.json",
+    "videos\\stage3-actionbound20-corrected-cpu-all55\\89_01_stageii_unitree_g1.json",
+    "videos\\stage3-actionbound20-corrected-cpu-all55\\90_08_stageii_unitree_g1.json",
+    "videos\\stage3-actionbound20-corrected-cpu-all55\\90_14_stageii_unitree_g1.json",
+    "videos\\stage3-actionbound20-corrected-cpu-all55\\90_15_stageii_unitree_g1.json",
+    "videos\\stage3-actionbound20-corrected-cpu-all55\\90_19_stageii_unitree_g1.json",
+    "videos\\stage3-actionbound20-corrected-cpu-all55\\dance1_subject1.json",
+    "videos\\stage3-actionbound20-corrected-cpu-all55\\dance2_subject4.json",
+    "videos\\stage3-actionbound20-corrected-cpu-all55\\jumps1_subject2.json",
+    "videos\\stage3-actionbound20-raw-cpu-new15\\143_34_stageii_unitree_g1.json",
+    "videos\\stage3-actionbound20-raw-cpu-new15\\85_06_stageii_unitree_g1.json",
+    "videos\\stage3-actionbound20-raw-cpu-new15\\85_07_stageii_unitree_g1.json",
+    "videos\\stage3-actionbound20-raw-cpu-new15\\88_03_stageii_unitree_g1.json",
+    "videos\\stage3-actionbound20-raw-cpu-new15\\88_06_stageii_unitree_g1.json",
+    "videos\\stage3-actionbound20-raw-cpu-new15\\88_07_stageii_unitree_g1.json",
+    "videos\\stage3-actionbound20-raw-cpu-new15\\88_08_stageii_unitree_g1.json",
+    "videos\\stage3-actionbound20-raw-cpu-new15\\88_09_stageii_unitree_g1.json",
+    "videos\\stage3-actionbound20-raw-cpu-new15\\88_10_stageii_unitree_g1.json",
+    "videos\\stage3-actionbound20-raw-cpu-new15\\88_11_stageii_unitree_g1.json",
+    "videos\\stage3-actionbound20-raw-cpu-new15\\89_01_stageii_unitree_g1.json",
+    "videos\\stage3-actionbound20-raw-cpu-new15\\90_08_stageii_unitree_g1.json",
+    "videos\\stage3-actionbound20-raw-cpu-new15\\90_14_stageii_unitree_g1.json",
+    "videos\\stage3-actionbound20-raw-cpu-new15\\90_15_stageii_unitree_g1.json",
+    "videos\\stage3-actionbound20-raw-cpu-new15\\90_19_stageii_unitree_g1.json",
+    "videos\\stage3-actionbound20-frozen-continuous-v1\\seed-0.json",
+    "videos\\stage3-actionbound20-frozen-continuous-v1\\seed-1.json",
+    "videos\\stage3-actionbound20-frozen-continuous-v1\\seed-2.json",
+    "videos\\stage3-actionbound20-corrected-continuous-v1\\seed-0.json",
+    "videos\\stage3-actionbound20-corrected-continuous-v1\\seed-1.json",
+    "videos\\stage3-actionbound20-corrected-continuous-v1\\seed-2.json"
+  ],
+  "training_updates": 0,
+  "cloud_resources_started": 0
+}

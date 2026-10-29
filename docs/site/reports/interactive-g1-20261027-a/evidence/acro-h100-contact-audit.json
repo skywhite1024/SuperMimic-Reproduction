@@ -1,0 +1,140 @@
+{
+  "method": "MuJoCo mj_fwdPosition on a separate MjData using the exact runtime collision model; controlled simulator state was never edited",
+  "interpretation": "Geometric ground-contact reconstruction at retained 20ms frames, not recorded contact forces or a new physical rollout",
+  "trajectory_sha256": "79410e58006a383066f892993968320c45b24a335f230a093a63a16fd98b3ef9",
+  "touch_threshold_m": 0.001,
+  "ground_contacts": {
+    "actual": {
+      "left_ankle_pitch_link": {
+        "sampled_frames": 3,
+        "first_s": 0.0,
+        "last_s": 2.92,
+        "minimum_signed_distance_m": -0.009855072679972921
+      },
+      "left_ankle_roll_link": {
+        "sampled_frames": 116,
+        "first_s": 0.0,
+        "last_s": 4.58,
+        "minimum_signed_distance_m": -0.04687357002440772
+      },
+      "left_knee_link": {
+        "sampled_frames": 2,
+        "first_s": 0.0,
+        "last_s": 2.92,
+        "minimum_signed_distance_m": -0.007120259880276952
+      },
+      "left_wrist_pitch_link": {
+        "sampled_frames": 24,
+        "first_s": 2.5,
+        "last_s": 3.08,
+        "minimum_signed_distance_m": -0.009427723643755236
+      },
+      "left_wrist_roll_link": {
+        "sampled_frames": 2,
+        "first_s": 2.7600000000000002,
+        "last_s": 2.7800000000000002,
+        "minimum_signed_distance_m": -0.0029024589727166816
+      },
+      "left_wrist_yaw_link": {
+        "sampled_frames": 14,
+        "first_s": 2.5,
+        "last_s": 3.1,
+        "minimum_signed_distance_m": -0.006099192187854513
+      },
+      "right_ankle_pitch_link": {
+        "sampled_frames": 2,
+        "first_s": 0.0,
+        "last_s": 0.02,
+        "minimum_signed_distance_m": -0.017168204369935283
+      },
+      "right_ankle_roll_link": {
+        "sampled_frames": 115,
+        "first_s": 0.0,
+        "last_s": 4.7,
+        "minimum_signed_distance_m": -0.05293166369958075
+      },
+      "right_knee_link": {
+        "sampled_frames": 2,
+        "first_s": 0.0,
+        "last_s": 0.02,
+        "minimum_signed_distance_m": -0.010641847153217976
+      },
+      "right_wrist_pitch_link": {
+        "sampled_frames": 10,
+        "first_s": 2.04,
+        "last_s": 2.7600000000000002,
+        "minimum_signed_distance_m": -0.006550443901745473
+      },
+      "right_wrist_yaw_link": {
+        "sampled_frames": 19,
+        "first_s": 2.02,
+        "last_s": 2.46,
+        "minimum_signed_distance_m": -0.009146715230159336
+      }
+    },
+    "reference": {
+      "left_ankle_pitch_link": {
+        "sampled_frames": 57,
+        "first_s": 0.0,
+        "last_s": 1.12,
+        "minimum_signed_distance_m": -0.009855074684701372
+      },
+      "left_ankle_roll_link": {
+        "sampled_frames": 135,
+        "first_s": 0.0,
+        "last_s": 4.7,
+        "minimum_signed_distance_m": -0.046873571729065595
+      },
+      "left_knee_link": {
+        "sampled_frames": 49,
+        "first_s": 0.0,
+        "last_s": 0.96,
+        "minimum_signed_distance_m": -0.0020015738182390386
+      },
+      "right_ankle_pitch_link": {
+        "sampled_frames": 89,
+        "first_s": 0.0,
+        "last_s": 4.7,
+        "minimum_signed_distance_m": -0.04550377250003237
+      },
+      "right_ankle_roll_link": {
+        "sampled_frames": 150,
+        "first_s": 0.0,
+        "last_s": 4.7,
+        "minimum_signed_distance_m": -0.08928237678784137
+      },
+      "right_knee_link": {
+        "sampled_frames": 83,
+        "first_s": 0.0,
+        "last_s": 4.7,
+        "minimum_signed_distance_m": -0.028537041979094346
+      },
+      "right_wrist_pitch_link": {
+        "sampled_frames": 5,
+        "first_s": 2.04,
+        "last_s": 2.12,
+        "minimum_signed_distance_m": -0.012575620598759725
+      },
+      "right_wrist_yaw_link": {
+        "sampled_frames": 6,
+        "first_s": 2.02,
+        "last_s": 2.12,
+        "minimum_signed_distance_m": -0.02327170124617739
+      }
+    }
+  },
+  "actual_hand_ground_contact_observed": true,
+  "reference_hand_ground_contact_observed": true,
+  "actual_head_or_torso_ground_contact_frames": {},
+  "end_state": {
+    "pelvis_height_m": 0.7203548550605774,
+    "Rzz": 0.9905335903167725,
+    "last_half_second_min_pelvis_m": 0.6938832402229309,
+    "last_half_second_min_Rzz": 0.9671017527580261,
+    "root_speed_m_s": 1.1675504446029663,
+    "root_angular_speed_rad_s": 0.8790988922119141,
+    "joint_velocity_rms_rad_s": 6.402368068695068
+  },
+  "post_initialization_resets": 0,
+  "scope": "single 88_08 hands-supported backward flip; no airborne-backflip or complete-video coverage claim"
+}

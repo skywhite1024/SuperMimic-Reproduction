@@ -1,0 +1,10 @@
+{
+  "status": "archive_and_all_file_hashes_verified",
+  "archive_bytes": 34141146,
+  "archive_sha256": "b6bdc71221cb8bd1a1389160bed992d4015cdbb4734c075996264b037487bc4a",
+  "files_verified": 10,
+  "trajectory_sha256": "79410e58006a383066f892993968320c45b24a335f230a093a63a16fd98b3ef9",
+  "source_host_fingerprint": "SHA256:xjr85fSGJrgpqfIBVmH6mevcvh2pkCG1u+B50SbLju4",
+  "host_pin_compared_against": "current trusted CCI console log",
+  "recovered_at": "2026-10-27T09:48:39.029057+00:00"
+}

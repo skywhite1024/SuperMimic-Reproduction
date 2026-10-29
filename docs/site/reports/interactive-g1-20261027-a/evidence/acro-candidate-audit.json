@@ -1,0 +1,38 @@
+[
+  {
+    "file": "assets\\acro-candidates\\88_03_stageii_unitree_g1.csv",
+    "bytes": 80157,
+    "sha256": "effe560fa1e6f234127860ce4345a024b0723033b15a175b0eb26c25e53ac04f",
+    "git_blob_sha1": "17929d2b19372af60760a3eb5109eac82a85ef4d",
+    "frames": 87,
+    "fps_from_upstream_readme": 30,
+    "Rzz_min": 0.9940068875982497,
+    "world_rotation_integral_rad": [
+      0.03566493842109047,
+      0.02785716729713503,
+      0.015483966397702817
+    ],
+    "root_z_range": 0.6465193033218384,
+    "source": "https://github.com/lez666/chunwan-flip",
+    "source_claim": "MIT repository; retargeted from AMASS/CMU; not BONES; provenance retained, not a claim of matching target-video motions",
+    "physical_execution": false
+  },
+  {
+    "file": "assets\\acro-candidates\\88_08_stageii_unitree_g1.csv",
+    "bytes": 131459,
+    "sha256": "35d1e39cfdb18e8f644752add1d24ce1e4616b0eb735ecd256bb6a647113884d",
+    "git_blob_sha1": "8e477657ff4fdc61ef4fc44466ceeb3f0052eb07",
+    "frames": 143,
+    "fps_from_upstream_readme": 30,
+    "Rzz_min": -0.9958292974283818,
+    "world_rotation_integral_rad": [
+      2.867591243202179,
+      -5.226066501065939,
+      0.7888811638910849
+    ],
+    "root_z_range": 0.21527458727359772,
+    "source": "https://github.com/lez666/chunwan-flip",
+    "source_claim": "MIT repository; retargeted from AMASS/CMU; not BONES; provenance retained, not a claim of matching target-video motions",
+    "physical_execution": false
+  }
+]

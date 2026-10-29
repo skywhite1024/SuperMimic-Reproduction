@@ -1,0 +1,11 @@
+{
+  "status": "local_preparation_verified",
+  "python_files_compiled": 8,
+  "learning_rate_matches_upstream_absolute_schedule_at_nine_points": true,
+  "frozen_base_hashes_verified": 11,
+  "deployed_payload_bytes_exact": true,
+  "bash_syntax_passed": 2,
+  "collector_and_verifier_real_round_trip": "passed on a tiny interrupted-run fixture",
+  "gpu_or_cloud_execution_in_this_check": false,
+  "boundary": "Actual cloud parent existence,load identity,optimizer updates and GPU behavior still require finite live acceptance."
+}

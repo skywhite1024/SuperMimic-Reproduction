@@ -1,0 +1,59 @@
+{
+  "status": "passed",
+  "start_iteration": 16150,
+  "end_iteration": 16600,
+  "new_iterations": 450,
+  "num_envs": 16,
+  "device": "cpu",
+  "before": {
+    "wm": "f35c73e74297f4be0b8917d02351e0403ce719518ceb2eaac24d072df0c6a0ba",
+    "pi": "a38fe4519c6d6121e0c6f8516a40cc56fe6e254c2da22a50dd11f4b31f959909",
+    "critic": "b88309a8aabedbc2c633b123bc72030fcbab615d8d8ba37346cb19f4a965caf0"
+  },
+  "after": {
+    "wm": "f35c73e74297f4be0b8917d02351e0403ce719518ceb2eaac24d072df0c6a0ba",
+    "pi": "503fce756c48ac88b54f93e496c719933d91751c97757e0af2b146487e3b746c",
+    "critic": "b88309a8aabedbc2c633b123bc72030fcbab615d8d8ba37346cb19f4a965caf0"
+  },
+  "all_three_models_changed": false,
+  "adapter_only": true,
+  "base_policy_decoder_columns_frozen_exactly": true,
+  "saved_model_readback_exact": true,
+  "wall_seconds": 296.7038405002095,
+  "variant": {
+    "name": "global-position-101d",
+    "parent_observation_dim": 99,
+    "observation_dim": 101,
+    "new_observation": "fixed-world root XY error expressed in robot yaw frame, clipped to +/-3 m",
+    "new_weights_and_optimizer_moments_zero_initialized": true,
+    "initial_policy_identity_max_abs_error": 2.7418136596679688e-06,
+    "old_optimizer_counters_preserved": false,
+    "replay_and_simulator_bit_exact_restore": false,
+    "policy_optimizer": "Fresh Adam on dec.0.weight with gradients masked to the 20 new XY-history columns; legacy columns fixed. WM/critic optimizer states retained without updates.",
+    "wm_normalizers_frozen": true,
+    "legacy_policy_normalizers_frozen": true
+  },
+  "reward_addition": "1.5*exp(-world_xy_error_squared/.75**2)*.02; original reward retained",
+  "training_references": "same frozen seeds0,1,2 continuous references; independent extra seeds must be evaluated after training",
+  "summary": {
+    "completed": true,
+    "iteration": 16600,
+    "sim_steps": 164390336,
+    "wall_time": 8217.629153490067,
+    "wall_h": 2.2826312751902473,
+    "wm_loss": 0.0,
+    "wm_err8": 0.0,
+    "pi_loss": -2.877296462059021,
+    "v_loss": 0.0,
+    "imag_rew": 0.8050006973743439,
+    "pi_gradnorm": 0.04246237488463521,
+    "imag_survival": 0.9894669628143311,
+    "sim_rew": 0.7914555354118347,
+    "ep_len": 393.6666666666667,
+    "ep_ret_norm": 0.9706929127375284,
+    "term_frac": 0.0,
+    "it_per_s": 1.5058319437290206,
+    "lr": 0.0001978974318288887
+  },
+  "full_gpu_acceptance": false
+}

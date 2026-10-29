@@ -1,0 +1,50 @@
+{
+  "status": "training_and_full55_evaluation_complete",
+  "config": {
+    "gpu_count": 1,
+    "gpu_name": "NVIDIA H100 80GB HBM3",
+    "cpu_max": "400000 100000",
+    "memory_max": "68719476736",
+    "new_updates": 4000,
+    "wm_only_updates": 800,
+    "num_envs": 1024,
+    "maximum_program_seconds": 7200,
+    "target_policy_count": 1,
+    "new_denominator": 15,
+    "old_lafan_denominator": 40,
+    "BONES_route": "paused"
+  },
+  "initial_sha256": "a48a5e81b09004ace907a2d5f31abd21465d7fe1e7ce16a56d2f752d35c6e668",
+  "wall_seconds": 3890.1217099390924,
+  "before": {
+    "new": {
+      "denominator": 15,
+      "passed": 3,
+      "macro_return_original": 0.29384307290310974,
+      "frame_weighted_return_original": 0.2020802237578464
+    },
+    "lafan": {
+      "denominator": 40,
+      "passed": 3,
+      "macro_return_original": 0.14233767737168818,
+      "frame_weighted_return_original": 0.1511405282808631
+    }
+  },
+  "after": {
+    "new": {
+      "denominator": 15,
+      "passed": 13,
+      "macro_return_original": 0.6391665081183115,
+      "frame_weighted_return_original": 0.6927553193833033
+    },
+    "lafan": {
+      "denominator": 40,
+      "passed": 39,
+      "macro_return_original": 0.8971124827861786,
+      "frame_weighted_return_original": 0.9002095355870798
+    }
+  },
+  "full_checkpoint_sha256": "56a6714aa7e79f063f4089c7860a1d00195601f178223bf42b65acd0e587910e",
+  "new_clips_all_learned_inferred_from_update_count": false,
+  "full_goal_complete": false
+}

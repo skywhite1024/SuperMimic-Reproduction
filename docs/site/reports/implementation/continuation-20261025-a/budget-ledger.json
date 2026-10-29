@@ -1,0 +1,26 @@
+{
+  "new_experiment_cap_GPU_hours": 6,
+  "jobs": [
+    {
+      "name": "supermimic-resume-[account]-1026c1",
+      "gpus": 1,
+      "submitted_to_terminal_seconds": 3359.0,
+      "GPU_hours_conservative_window": 0.9330555555555555
+    },
+    {
+      "name": "supermimic-post-[account]-1026d1",
+      "gpus": 1,
+      "submitted_to_terminal_seconds": 1522.0,
+      "GPU_hours_conservative_window": 0.42277777777777775
+    }
+  ],
+  "conservative_GPU_hours": 1.3558333333333332,
+  "program_seconds_total": 4706.165773905814,
+  "within_authorized_cap": true,
+  "boundary": "Submitted-to-terminal windows conservatively include setup and scheduling;not a platform billing statement. CPU-only prep and transfer use0GPU. Original baseline is historical and excluded from this new-experiment cap.",
+  "resource_trace_samples": 925,
+  "sampled_host_peak_GiB": 10.319469451904297,
+  "sampled_gpu_peak_MiB": 19079.0,
+  "sampling_interval_seconds": 5,
+  "continuous_peak_claimed": false
+}

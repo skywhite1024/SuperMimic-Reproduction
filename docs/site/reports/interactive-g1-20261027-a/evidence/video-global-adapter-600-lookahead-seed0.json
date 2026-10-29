@@ -1,0 +1,21 @@
+{
+  "video": "[local]/global-adapter-600-lookahead-seed0.mp4",
+  "bytes": 29069593,
+  "sha256": "1e1f2a1fd104f556a44f33c26026ae6c36bc6d45df1eae83cf1dd476a44f77a4",
+  "frames_decoded": 3000,
+  "fps": 25.0,
+  "duration_seconds": 120.0,
+  "resolution": [
+    1280,
+    720
+  ],
+  "complete_decode_passed": true,
+  "sample_frames": [
+    0,
+    750,
+    1500,
+    2250,
+    2999
+  ],
+  "visual_review": "five decoded frames at 0,30,60,90,119.96 s inspected: robot/reference/HUD/map visible; endpoint ground pose matches reference, low-pelvis heuristic is not a fall label"
+}

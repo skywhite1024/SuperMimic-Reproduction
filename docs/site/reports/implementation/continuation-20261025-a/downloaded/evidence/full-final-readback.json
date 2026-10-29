@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "verified_at": "2026-10-26T03:11:38.568990+00:00",
+  "device": "cpu",
+  "GPU_operations_executed": false,
+  "torch": "2.14.1+cu130",
+  "iteration": 16000,
+  "sim_steps": 164364288,
+  "full_checkpoint_sha256": "0afcca9af97bd9db1f2dd083875898f962acab0b0a70c7313b221e575b70b05b",
+  "inference_checkpoint_sha256": "44d68af11306f839fe1b4b37cd042f1eae7df116adaabd69bd8db593a16d334e",
+  "state_hashes": {
+    "wm": "4c5fc1bbe959dfb13457f86cac061d0de58845fdbd78509aa0a56f439217dead",
+    "pi": "4f86fe555048cf3b00ed8d4c13b93c41c45a749d6926535ff4205c8beb8de4c3",
+    "critic": "8b32026b673d171c31abb5bf1c90ac89be97ee92b92b25ea730418d8f1872b1e",
+    "opt_wm": "990cd1597efb6477ce390941efa6bb03ecef115c59fcb5f5abcbe6edfc9489e0",
+    "opt_pi": "4cef4f33605faf925713d8cb1a5e34a17c8436622450047fef67ec466ca3a5bd",
+    "opt_v": "20f7af236e03a5eae3cea7ad19c3f5953850c0dd8d509b8c377a1bbd7d95fab5"
+  },
+  "optimizer_steps": {
+    "opt_wm": [
+      160000
+    ],
+    "opt_pi": [
+      15500
+    ],
+    "opt_v": [
+      310000
+    ]
+  },
+  "optimizer_moments_match_training_snapshot": true,
+  "models_match_training_snapshot": true,
+  "inference_models_match_full_checkpoint": true,
+  "checkpoint_lr_matches_absolute_iteration": true,
+  "all_state_tensors_finite": true
+}

@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "timing": "Defined after raw and prior-model contact audits, before assessment of the newly trained unified candidate",
+  "purpose": "Supplemental engineering geometric-contact review; no contact-force or hardware-fidelity claim",
+  "unexpected_head_torso_or_pelvis_ground_contact_samples_max": 0,
+  "reference_expected_contact_time_tolerance_seconds": 0.1,
+  "reference_expected_contact_requires_same_body_name": true,
+  "actual_ground_penetration_after_initial_100ms_max_m": 0.05,
+  "initial_settling_exclusion_seconds": 0.1,
+  "unexpected_body_contact_initial_frames_excluded": false,
+  "all_failed_tails_retained": true,
+  "raw_library_denominator": 15,
+  "combined_acceptance": "tracking quality criteria AND this supplemental contact review; individual, regression and continuous results remain separate"
+}

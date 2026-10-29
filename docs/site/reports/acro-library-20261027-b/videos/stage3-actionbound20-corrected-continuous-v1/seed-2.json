@@ -1,0 +1,23 @@
+{
+  "clip": "seed-2",
+  "file": "videos/stage3-actionbound20-corrected-continuous-v1/seed-2.mp4",
+  "bytes": 39820598,
+  "sha256": "cfbfc25d3c4787a174628c25a448dd21d3cfd7ebdee89563ec3dc5a1ebd9bc5a",
+  "frames": 3001,
+  "fps": 25,
+  "video_seconds": 120.04,
+  "physical_window_seconds": 120.0,
+  "complete_decode_passed": true,
+  "source_run": "stage3-actionbound20-corrected-continuous-v1",
+  "only_retained_actual_physics_states_rendered": true,
+  "reference_display_offset_m": [
+    0,
+    1.5,
+    0
+  ],
+  "fog_disabled_for_failed_tail_visibility": true,
+  "reference_version_or_variant": "ground-calibration-v1",
+  "original_hard_gate_passed": false,
+  "tracking_quality_passed": null,
+  "contact_sheet": "evidence/stage3-actionbound20-corrected-continuous-v1-seed-2-contact-sheet.jpg"
+}

@@ -1,0 +1,66 @@
+{
+  "verified_at": "2026-10-26T11:25:26.558447+08:00",
+  "resource_release_verified": true,
+  "scope": "Four ACP jobs submitted for this continuation and its reused transfer CCI/DNAT;not a personal quota or accountwide availability claim",
+  "ACP": [
+    {
+      "name": "supermimic-resume-prep-[account]-1026a",
+      "uid": "00f523154fd04298b5a470e34afce665",
+      "status": "failed"
+    },
+    {
+      "name": "supermimic-resume-check-[account]-1026b",
+      "uid": "bef6e795cee74f33b8ad9a554f1815f1",
+      "status": "success"
+    },
+    {
+      "name": "supermimic-resume-[account]-1026c1",
+      "uid": "d5195d2569884639b489bed761d74356",
+      "status": "failed_after_training_target_confirmed"
+    },
+    {
+      "name": "supermimic-post-[account]-1026d1",
+      "uid": "b4bf233f7ba84ae0a6386ca65d3b33b3",
+      "status": "success"
+    }
+  ],
+  "all_four_submitted_ACP_jobs_terminal": true,
+  "CCI": {
+    "name": "midi-native-prep-[account]",
+    "state": "stopped",
+    "ready_total": "0/1",
+    "instance_list_empty": true,
+    "actual_cgroup_cpu_max": "200000 100000",
+    "actual_cgroup_memory_max": "8589934592",
+    "GPU_requested": 0,
+    "original_command_restored_and_published": true,
+    "published_command_bytes": 1651,
+    "published_command_sha256": "2c81f1b1fc679c393562231dcb6ab0d7b24532c1b959375eaebf138fe149d6f4",
+    "stop_method": "attended manual console stop;automatic school helper unavailable"
+  },
+  "DNAT": {
+    "name": "dnat-zhicheng-fb300263",
+    "state": "unbound",
+    "destination_instance": null,
+    "destination_port": null
+  },
+  "SSH": {
+    "current_host_fingerprint_verified_against_trusted_console": "SHA256:IVx0Z/LYxVeUa0+e/mjWPaA1RQWjf3UuGJdisxiDimk",
+    "strict_host_checking_preserved": true,
+    "first_TOFU_session_expired_during_manual_comparison": true,
+    "subsequent_verified_batch_login_passed": true,
+    "private_key_contents_read_or_packaged": false
+  },
+  "cloud_data_retained": true,
+  "frozen_cloud_summaries_not_rewritten": true,
+  "screenshots": {
+    "cci-final-stopped.jpg": {
+      "bytes": 159372,
+      "sha256": "d15f5ad094a51b6bbaf337dd815baac69ffdeb62231cb6f7604f8f4363d6ee85"
+    },
+    "dnat-final-unbound.jpg": {
+      "bytes": 83527,
+      "sha256": "77e579714744d35ed3e1d4bb1becaecd8d0f33192e4c058507a326d8763e166b"
+    }
+  }
+}

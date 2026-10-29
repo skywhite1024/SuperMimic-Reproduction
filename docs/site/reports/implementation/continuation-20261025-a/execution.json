@@ -1,0 +1,279 @@
+{
+  "recorded_at": "2026-10-25T19:30:33.219654+08:00",
+  "stage": "complete_community_target_confirmed_artifacts_verified_resources_released",
+  "authorized_scope": "one H100 G1/LAFAN1 continuation 12000 to at most24000;fixed evaluation;new-experiment budget<=6GPUhours",
+  "cloud_jobs_submitted": 4,
+  "gpu_training_executed": true,
+  "new_cloud_resources_created": true,
+  "parent_local_checkpoint_verified": {
+    "file": "../downloaded/runs/baseline-seed0/last.pt",
+    "bytes": 218547105,
+    "sha256": "8770016fac48e4938203f77c8e2cd55b553171d2bc3134b7cbb40b2c53f6b1f1",
+    "iteration_from_safe_pickle_tokens": 12000,
+    "sim_steps_from_safe_pickle_tokens": 123142144,
+    "zip_crc_passed": true,
+    "local_torch_load_executed": false
+  },
+  "local_preparation_verification": "local-preparation-verification.json",
+  "proposed_cloud_root": "/mnt/afs/[account]/SuperMimic/lafan1-20261024/experiments/continuation-20261025-a",
+  "campus_network_current_confirmation": "user reaffirmed on campus 2026-10-26;prior campus-network context retained",
+  "console_login": "live authenticated home verified IAM[account]",
+  "current_cloud_jobs_quota_and_cci_state": {
+    "scope": "personal ACP recent month 2026-09-26 through2026-10-26;100 rows/page;all visible recent rows terminal",
+    "active_acp_rows_seen": 0,
+    "cci": "existing midi-native-prep-[account] stopped0/1",
+    "quota": "username[account] query returned 暂无数据;remaining not verified",
+    "cluster_display": "computing_cluster/share-cluster83GPU4708CPU52219GiB;not personal quota"
+  },
+  "old_baseline_and_report_preserved": true,
+  "planned_acceptance": {
+    "total_iterations_limit": 24000,
+    "evaluate_at": [
+      16000,
+      20000,
+      24000
+    ],
+    "macro_at_least": 0.82,
+    "failed_clips": 0,
+    "second_independent_reload_confirmation_required": true
+  },
+  "next_action_after_inputs": "Monitor staged full40 independent evaluations,then retrieve and verify artifacts;do not duplicate the active GPU job",
+  "updated_at": "2026-10-26T11:34:45.094616+08:00",
+  "cpu_preflight": {
+    "name": "supermimic-resume-prep-[account]-1026a",
+    "status": "failed",
+    "gpus": 0,
+    "cpus": 4,
+    "memory_gib": 16,
+    "replicas": 1,
+    "max_restarts": 0,
+    "node_ssh": false,
+    "command_copyback_exact": true,
+    "command_sha256": "9e015e8304a4d01fc2a9ec406f7d84c171250413922a114e6768544b439b454d",
+    "uid": "00f523154fd04298b5a470e34afce665",
+    "submitted_at": "2026-10-26T09:03:03+08:00",
+    "terminal_at": "2026-10-26T09:03:41+08:00",
+    "failure": "tuple-versus-JSON-list representation comparison at preflight.py:37;not model loading or GPU failure",
+    "resources_terminal": true
+  },
+  "cpu_recheck": {
+    "name": "supermimic-resume-check-[account]-1026b",
+    "status": "success",
+    "gpus": 0,
+    "cpus": 4,
+    "memory_gib": 16,
+    "replicas": 1,
+    "max_restarts": 0,
+    "node_ssh": false,
+    "command_sha256": "2f1adf78db375a8ecf0cbcb29fe75e4a3960f8243eab5777f3d82280388f2803",
+    "copyback_sha256_verified": true,
+    "uid": "bef6e795cee74f33b8ad9a554f1815f1",
+    "submitted_at": "2026-10-26T09:10:50+08:00",
+    "platform_terminal_at": "2026-10-26T09:12:16+08:00",
+    "resources_terminal": true,
+    "pass_marker_at": "2026-10-26T09:11:13.645+08:00",
+    "parent_iteration": 12000,
+    "parent_sim_steps": 123142144,
+    "optimizer_steps": {
+      "opt_wm": [
+        120000
+      ],
+      "opt_pi": [
+        11500
+      ],
+      "opt_v": [
+        230000
+      ]
+    },
+    "source_files_verified": 54,
+    "asset_files_verified": 76
+  },
+  "gpu_job": {
+    "name": "supermimic-resume-[account]-1026c1",
+    "status": "failed_after_training_target_confirmed",
+    "gpus": 1,
+    "cpus": 4,
+    "memory_gib": 64,
+    "replicas": 1,
+    "max_restarts": 0,
+    "node_ssh": false,
+    "command_sha256": "b54ea2ad2db6f8c68c55f92cd07c4ed2376bb2408752cad0ca26a3ee33660079",
+    "copyback_exact": true,
+    "total_iterations_limit": 24000,
+    "independent_evaluations": [
+      16000,
+      20000,
+      24000
+    ],
+    "maximum_program_seconds": 10740,
+    "all_new_experiments_gpu_hours_cap": 6,
+    "uid": "d5195d2569884639b489bed761d74356",
+    "submitted_at": "2026-10-26T09:18:07+08:00",
+    "platform_running_at": "2026-10-26T09:18:51+08:00",
+    "load_identity_verified": true,
+    "loaded_iteration": 12000,
+    "full_optimizer_moment_identity_verified": true,
+    "first_absolute_iteration_lr": 0.00019889921923957766,
+    "load_identity_seen_in_CMS_at": "2026-10-26T09:22:18.301+08:00",
+    "initial_five_updates_verified": true,
+    "resume_acceptance_iteration": 12005,
+    "replay_size_before_first_update": 66,
+    "all_three_models_updated": true,
+    "all_three_optimizers_advanced": true,
+    "resume_acceptance_seen_in_CMS_at": "2026-10-26T09:26:21.302+08:00",
+    "platform_terminal_at": "2026-10-26T10:14:06+08:00",
+    "post_training_failure": "diagnose.py:79 strict all40 return replay comparison >1e-5 for dance1_subject1;no training or acceptance failure"
+  },
+  "resource_release_verified": true,
+  "resume_screenshot": {
+    "path": "evidence/resume-accepted.jpg",
+    "sha256": "a4e9dfa1cbfc398cdd47230240286ed0c9946ae947313bd737a48574c12dc5d9"
+  },
+  "gpu_running_screenshot": {
+    "path": "evidence/gpu-running.jpg",
+    "sha256": "6772e24a21b47c3479379920376a4f28e93cff052f88b27eda26befb3424b721"
+  },
+  "latest_resource_sample": {
+    "at": "2026-10-26T09:31:24.299+08:00",
+    "gpu": "NVIDIA H100 80GB HBM3",
+    "driver": "580.95.05",
+    "gpu_used_mib": 17027,
+    "gpu_free_mib": 64053,
+    "host_cgroup_bytes": 7765348352,
+    "instant_gpu_utilization_percent": 75
+  },
+  "checkpoint_014000_seen": {
+    "path": "policy/ckpt_014000.pt",
+    "seen_in_CMS_at": "2026-10-26T09:41:31.305+08:00",
+    "status": "save_path_seen_in_cloud_log;byte_hash_and_model_loading_pending"
+  },
+  "pre_retrieval_resource_check": {
+    "at": "2026-10-26T09:54:57.8667681+08:00",
+    "cci": "midi-native-prep-[account]",
+    "cci_status": "stopped0/1",
+    "dnat": "dnat-zhicheng-fb300263",
+    "dnat_status": "unbound",
+    "no_CCI_started_for_this_continuation_yet": true
+  },
+  "staged_evaluations_observed": [
+    {
+      "iteration": 16000,
+      "result": "evaluations/016000.json",
+      "macro": 0.8474919199943542,
+      "frame_weighted": 0.8493778705596924,
+      "n_failed": 0,
+      "wall_seconds": 359.819806560874,
+      "confirmation": false,
+      "seen_in_CMS_at": "2026-10-26T10:02:45.303+08:00",
+      "artifact_byte_hash_verification": "pending_retrieval"
+    },
+    {
+      "iteration": 16000,
+      "result": "evaluations/016000-confirm.json",
+      "checkpoint_sha256": "44d68af11306f839fe1b4b37cd042f1eae7df116adaabd69bd8db593a16d334e",
+      "macro": 0.8477334976196289,
+      "frame_weighted": 0.8496178984642029,
+      "n_failed": 0,
+      "confirmation": true,
+      "seen_in_CMS_at": "2026-10-26T10:07:59.321+08:00",
+      "artifact_byte_hash_verification": "pending_retrieval"
+    }
+  ],
+  "community_target_confirmed_in_CMS": true,
+  "auxiliary_gpu_job": {
+    "name": "supermimic-post-[account]-1026d1",
+    "status": "success",
+    "submitted_at": "2026-10-26T10:29:00+08:00",
+    "gpus": 1,
+    "cpus": 4,
+    "memory_gib": 64,
+    "replicas": 1,
+    "max_restarts": 0,
+    "node_ssh": false,
+    "command_sha256": "0d0de480ffda712a9e53b6686ef881ab82efc6209eb2fe4c35281a89b7508e05",
+    "copyback_exact": true,
+    "maximum_program_seconds": 3790,
+    "training_executed": false,
+    "purpose": "Independent auxiliary numerical trajectories and3videos;strict replay mismatch preserved",
+    "uid": "b4bf233f7ba84ae0a6386ca65d3b33b3",
+    "platform_running_at": "2026-10-26T10:29:25+08:00",
+    "platform_terminal_at": "2026-10-26T10:54:22+08:00",
+    "selected_auxiliary_macro": 0.846662700176239,
+    "selected_auxiliary_n_failed": 0
+  },
+  "parent_auxiliary_trajectory_observed": {
+    "seen_at": "2026-10-26T10:37:16.974+08:00",
+    "dance2_subject4": {
+      "failed": true,
+      "last_tilt": 0.14175647497177124,
+      "steps": 3046,
+      "last_height": 0.26371318101882935
+    },
+    "fallAndGetUp1_subject5": {
+      "failed": false,
+      "last_tilt": 0.001471102237701416,
+      "steps": 8410,
+      "last_height": 0.0048525333404541016
+    },
+    "fallAndGetUp2_subject3": {
+      "failed": true,
+      "last_tilt": 0.8237637877464294,
+      "steps": 6274,
+      "last_height": 0.265943318605423
+    },
+    "boundary": "Independent auxiliary rollout;differs from original baseline trajectory;not primary acceptance"
+  },
+  "selected_auxiliary_trajectory_observed": {
+    "seen_at": "2026-10-26T10:43:30.971+08:00",
+    "dance2_subject4": {
+      "last_height": 0.005843162536621094,
+      "failed": false,
+      "last_tilt": 0.00026857852935791016,
+      "steps": 11283
+    },
+    "fallAndGetUp1_subject5": {
+      "last_height": 0.0038275718688964844,
+      "failed": false,
+      "last_tilt": 0.0013234615325927734,
+      "steps": 8410
+    },
+    "fallAndGetUp2_subject3": {
+      "last_height": 0.00789862871170044,
+      "failed": false,
+      "last_tilt": 0.00027620792388916016,
+      "steps": 8195
+    },
+    "boundary": "These3auxiliary trajectories completed;all40auxiliary metrics require file inspection"
+  },
+  "final_resource_verification": "final-resource-verification.json",
+  "downloaded_artifacts": "downloaded/",
+  "artifact_audit": "artifact-audit.json",
+  "budget_ledger": "budget-ledger.json",
+  "report": "report/continuation-comparison.html",
+  "report_QA": "report-browser-verification.json",
+  "local_preview_server_stopped": true,
+  "final_result": {
+    "scope": "G1/LAFAN1 community baseline;not strict whole-paper reproduction",
+    "actual_final_iteration": 16000,
+    "primary_macro": 0.8474919199943542,
+    "primary_frame_weighted": 0.8493778705596924,
+    "primary_n_failed": 0,
+    "confirmation_macro": 0.8477334976196289,
+    "confirmation_frame_weighted": 0.8496178984642029,
+    "confirmation_n_failed": 0,
+    "independent_auxiliary_macro": 0.846662700176239,
+    "independent_auxiliary_n_failed": 0,
+    "original_pipeline_failure_preserved": true,
+    "numerical_replay_bit_identical": false,
+    "all_40_full_denominators_preserved": true,
+    "downloaded_files_verified": 80,
+    "video_frames_decoded": 1125,
+    "inference_checkpoint": "downloaded/policy/ckpt_016000.pt",
+    "full_checkpoint": "downloaded/policy/full_016000.pt",
+    "full_checkpoint_cpu_model_and_optimizer_identity_verified": true,
+    "archive_sha256": "2e188a90f3dc6bea903fc7f29b768620c971ee250cb8ff0fb7eb9f57b701f6bc",
+    "conservative_new_GPU_hours": 1.3558333333333332,
+    "related_cloud_resources_released": true,
+    "optional_backup_deletion_blocked_and_two_local_backups_retained": true
+  }
+}

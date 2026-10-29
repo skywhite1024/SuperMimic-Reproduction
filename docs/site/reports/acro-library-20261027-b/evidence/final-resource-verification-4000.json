@@ -1,0 +1,32 @@
+{
+  "verified_at": "2026-10-27T21:05:08.107924+08:00",
+  "gpu_job": {
+    "name": "supermimic-unified-[account]-1027f1",
+    "uid": "d1114457879042919b98134caaa13590",
+    "status": "success",
+    "terminal_updated_at": "2026-10-27T20:17:39+08:00"
+  },
+  "cpu_cci": {
+    "name": "midi-native-prep-[account]",
+    "uid": "21cd0ad52d104386bb572414d99249d1",
+    "status": "stopped",
+    "instances": "0/1",
+    "instance_list_empty": true,
+    "actual_cpu_cores_during_retrieval": 2,
+    "actual_memory_gib": 8,
+    "gpu_count": 0
+  },
+  "dnat": {
+    "name": "dnat-zhicheng-fb300263",
+    "port": 10076,
+    "status": "unbound"
+  },
+  "original_command_restored_sha256": "2c81f1b1fc679c393562231dcb6ab0d7b24532c1b959375eaebf138fe149d6f4",
+  "automatic_stop_helper_claimed": false,
+  "evidence": [
+    "gpu-1027f1-success-dom.txt",
+    "cci-unified-stopped-empty-dom.txt",
+    "dnat-unified-unbound-dom.txt",
+    "cci-restored-published-command.txt"
+  ]
+}

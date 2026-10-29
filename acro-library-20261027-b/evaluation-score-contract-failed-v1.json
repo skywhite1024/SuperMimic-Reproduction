@@ -1,0 +1,44 @@
+{
+  "status": "failed_contract_diagnosis",
+  "official": {
+    "norm_return": 0.3721610903739929,
+    "norm_return_framew": 0.3721610903739929,
+    "n_failed": 1,
+    "failed": [
+      "88_08_stageii_unitree_g1"
+    ],
+    "per_clip": {
+      "88_08_stageii_unitree_g1": {
+        "norm_return": 0.3721610903739929,
+        "steps": 124,
+        "failed": true
+      }
+    }
+  },
+  "full_trace_result": {
+    "clip": "88_08_stageii_unitree_g1",
+    "group": "new",
+    "full_clip_steps": 236,
+    "elapsed_seconds": 4.72,
+    "post_initialization_resets": 0,
+    "norm_return_original": 0.37223609827332577,
+    "reward_sum_original_until_first_failure": 8.784771919250488,
+    "normalization_denominator": 23.6,
+    "scored_steps": 123,
+    "first_original_hard_failure_s": 2.46,
+    "hard_failure_original_frames": 74,
+    "hard_failure_aligned_frames": 73,
+    "passed_original_hard_gate": false,
+    "root_xy_rmse_m": 0.45530012249946594,
+    "root_xy_peak_m": 1.4311864376068115,
+    "yaw_rmse_deg": 20.16221046447754,
+    "body_global_mean_m": 0.4674825370311737,
+    "body_local_mean_m": 0.2582337558269501,
+    "reference_inversion_frames": 43,
+    "inversion_observed_when_expected": true,
+    "end_pelvis_m": 0.7545220851898193,
+    "end_Rzz": 0.9910829067230225,
+    "end_root_speed_m_s": 1.3870608806610107
+  },
+  "difference": 7.500789933284624e-05
+}

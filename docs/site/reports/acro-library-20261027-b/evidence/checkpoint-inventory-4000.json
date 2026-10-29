@@ -1,0 +1,82 @@
+{
+  "checkpoints_retained_on_personal_AFS": [
+    {
+      "path": "/mnt/afs/[account]/SuperMimic/acro-library-20261027-b/runs/unified-h100-4000/ckpt_018500.pt",
+      "bytes": 71946565,
+      "sha256": "633855899c50e7d6f7db378d15b2483405214d0c301df84b91162067cf5e087d",
+      "filesystem_modified_at_utc": "2026-10-27T11:26:27.997422+00:00"
+    },
+    {
+      "path": "/mnt/afs/[account]/SuperMimic/acro-library-20261027-b/runs/unified-h100-4000/ckpt_019000.pt",
+      "bytes": 71946565,
+      "sha256": "120147ad0c13c668fa3f4a4b719ee994a01af5fccd7e1f315943b509cc0b8645",
+      "filesystem_modified_at_utc": "2026-10-27T11:30:48.215327+00:00"
+    },
+    {
+      "path": "/mnt/afs/[account]/SuperMimic/acro-library-20261027-b/runs/unified-h100-4000/ckpt_019500.pt",
+      "bytes": 71946565,
+      "sha256": "4e5a97c5851b7c4177f628addc1bc12f86c9e6f9ff881394e10c4e173f48fef6",
+      "filesystem_modified_at_utc": "2026-10-27T11:37:02.874022+00:00"
+    },
+    {
+      "path": "/mnt/afs/[account]/SuperMimic/acro-library-20261027-b/runs/unified-h100-4000/ckpt_020000.pt",
+      "bytes": 71946565,
+      "sha256": "f89dba588eed76b9f9f0cf35f3ed329c03973dadd8e8c8f02a5411a16f835445",
+      "filesystem_modified_at_utc": "2026-10-27T11:43:18.013736+00:00"
+    },
+    {
+      "path": "/mnt/afs/[account]/SuperMimic/acro-library-20261027-b/runs/unified-h100-4000/ckpt_020500.pt",
+      "bytes": 71946565,
+      "sha256": "9004ed6355da3649dfa116c306676a0937d6864068c8dbd0f93370532246a781",
+      "filesystem_modified_at_utc": "2026-10-27T11:49:30.282506+00:00"
+    },
+    {
+      "path": "/mnt/afs/[account]/SuperMimic/acro-library-20261027-b/runs/unified-h100-4000/ckpt_021000.pt",
+      "bytes": 71946565,
+      "sha256": "1e3d61e016d079511852fe9dd6f9d86c7263d9e5ecf86a6e5d987c285578d604",
+      "filesystem_modified_at_utc": "2026-10-27T11:55:45.337062+00:00"
+    },
+    {
+      "path": "/mnt/afs/[account]/SuperMimic/acro-library-20261027-b/runs/unified-h100-4000/ckpt_021500.pt",
+      "bytes": 71946565,
+      "sha256": "fd28c4b41a6315cb2c7b919fbe5ac28f854407b021d9ad7de06851e2d764ae08",
+      "filesystem_modified_at_utc": "2026-10-27T12:01:59.052814+00:00"
+    },
+    {
+      "path": "/mnt/afs/[account]/SuperMimic/acro-library-20261027-b/runs/unified-h100-4000/ckpt_022000.pt",
+      "bytes": 71946565,
+      "sha256": "f0609693538a690507edea5bf6c6ebd576424bd6a036eec8123d172e1bae2d91",
+      "filesystem_modified_at_utc": "2026-10-27T12:08:07.047898+00:00"
+    },
+    {
+      "path": "/mnt/afs/[account]/SuperMimic/acro-library-20261027-b/runs/unified-h100-4000/final-full.pt",
+      "bytes": 219041503,
+      "sha256": "56a6714aa7e79f063f4089c7860a1d00195601f178223bf42b65acd0e587910e",
+      "filesystem_modified_at_utc": "2026-10-27T12:08:07.436323+00:00"
+    },
+    {
+      "path": "/mnt/afs/[account]/SuperMimic/acro-library-20261027-b/runs/unified-h100-4000/last.pt",
+      "bytes": 219039841,
+      "sha256": "1265f291af22b4d572308742a186cd132fd94c028fd94e57a49625ac52c8d3de",
+      "filesystem_modified_at_utc": "2026-10-27T12:08:06.910741+00:00"
+    }
+  ],
+  "exports": [
+    {
+      "source": "/mnt/afs/[account]/SuperMimic/acro-library-20261027-b/runs/initial-18k-101d/full.pt",
+      "source_sha256": "a48a5e81b09004ace907a2d5f31abd21465d7fe1e7ce16a56d2f752d35c6e668",
+      "output": "policy/initial-18k-101d.pt",
+      "output_sha256": "0db493d676dca052a2f334bafbef6752c7d88ea492f1da052bf80ec9a3f6bb3d",
+      "exact_pi_tensor_readback": true,
+      "observation_dim": 101
+    },
+    {
+      "source": "/mnt/afs/[account]/SuperMimic/acro-library-20261027-b/runs/unified-h100-4000/final-full.pt",
+      "source_sha256": "56a6714aa7e79f063f4089c7860a1d00195601f178223bf42b65acd0e587910e",
+      "output": "policy/unified-h100-4000.pt",
+      "output_sha256": "cb83ce3a6b7a63f613bd8239848b40386f862a8ba765cb40668993ae34149642",
+      "exact_pi_tensor_readback": true,
+      "observation_dim": 101
+    }
+  ]
+}
