@@ -7,6 +7,7 @@ Community-implementation experiments with **40 LAFAN1 motions**, **15 additional
 - [Read the six complete reports](https://supermimic-experiment-reports.pastel-acorn-1132.chatgpt.site)
 - [Browse the committed report assets](docs/site/): six reports, 151 complete-duration browser video copies, figures and numerical results.
 - [Reproduction guide](docs/REPRODUCING.md) · [Evaluation protocol](docs/EVALUATION.md) · [Source/data attribution](THIRD_PARTY.md)
+- [Local/server Git workflow](docs/SERVER_WORKFLOW.md) · [Clean-clone 120-second validation](validation/clean-clone-continuous-seed0.json)
 - [Checkpoint manifest](artifacts/manifest.json): named inference and training-resume artifacts, sizes, SHA256 and exact installation paths.
 
 ## Recorded outcomes
@@ -54,6 +55,8 @@ Source-only validation uses no GPU and downloads no data:
 ```bash
 python tools/check_release.py
 ```
+
+The publication checkout was also tested from a separate clean Git clone using the recorded CPU environment: one full 120-second / 29-segment basic continuous trial, zero post-initialization resets, zero original hard-gate failures, XY RMSE 0.20531774 m. Input references were reconstructed and hash-verified. This is a functional clean-clone test, not a fresh dependency-install test or a rerun of all historical experiments.
 
 ## Provenance and limits
 

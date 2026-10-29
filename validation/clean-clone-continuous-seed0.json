@@ -1,0 +1,240 @@
+{
+  "mode": "publication-clean-clone-seed0",
+  "checkpoint": "[runtime]/global-adapter-600-deployed.pt",
+  "checkpoint_sha256": "3eb38bcd3fd19fbb33241b28acbf533f67caebf25824d8d787bc4fe23b113add",
+  "reference_set": "references-lookahead",
+  "backend": "MuJoCo 3.11 CPU / mjbatch-uni, adapted from the existing mjwarp collector; this is a new backend test",
+  "observation_dim": 101,
+  "goal_dim": 730,
+  "simulation_dt": 0.005,
+  "control_dt": 0.02,
+  "wall_seconds": 64.85452179983258,
+  "trials": [
+    {
+      "seed": 0,
+      "planned_seconds": 120,
+      "elapsed_seconds": 120.0,
+      "segments": 29,
+      "post_initialization_resets": 0,
+      "first_hard_failure_s": null,
+      "hard_failure_frames": 0,
+      "hard_failure_entries": 0,
+      "floor_fall_entries": 1,
+      "root_xy_rmse_m": 0.20531773567199707,
+      "root_xy_peak_m": 0.43493396043777466,
+      "yaw_rmse_deg": 1.9283710718154907,
+      "body_global_mean_m": 0.19232669472694397,
+      "body_local_mean_m": 0.026246245950460434,
+      "passed_continuous_no_hard_failure": true,
+      "switch_windows": [
+        {
+          "segment": 2,
+          "time": 4.44,
+          "xy_peak_m": 0.3622418940067291,
+          "body_global_peak_m": 0.3739338219165802,
+          "hard_failure_in_window": false
+        },
+        {
+          "segment": 3,
+          "time": 7.76,
+          "xy_peak_m": 0.3240811824798584,
+          "body_global_peak_m": 0.33887937664985657,
+          "hard_failure_in_window": false
+        },
+        {
+          "segment": 4,
+          "time": 10.36,
+          "xy_peak_m": 0.35887038707733154,
+          "body_global_peak_m": 0.36040496826171875,
+          "hard_failure_in_window": false
+        },
+        {
+          "segment": 5,
+          "time": 12.9,
+          "xy_peak_m": 0.41714242100715637,
+          "body_global_peak_m": 0.4207165241241455,
+          "hard_failure_in_window": false
+        },
+        {
+          "segment": 6,
+          "time": 17.9,
+          "xy_peak_m": 0.3304535150527954,
+          "body_global_peak_m": 0.3378911316394806,
+          "hard_failure_in_window": false
+        },
+        {
+          "segment": 7,
+          "time": 23.2,
+          "xy_peak_m": 0.21783281862735748,
+          "body_global_peak_m": 0.22673365473747253,
+          "hard_failure_in_window": false
+        },
+        {
+          "segment": 8,
+          "time": 27.56,
+          "xy_peak_m": 0.2848829925060272,
+          "body_global_peak_m": 0.302418977022171,
+          "hard_failure_in_window": false
+        },
+        {
+          "segment": 9,
+          "time": 32.3,
+          "xy_peak_m": 0.2290087640285492,
+          "body_global_peak_m": 0.2398519217967987,
+          "hard_failure_in_window": false
+        },
+        {
+          "segment": 10,
+          "time": 36.46,
+          "xy_peak_m": 0.16859279572963715,
+          "body_global_peak_m": 0.1791757196187973,
+          "hard_failure_in_window": false
+        },
+        {
+          "segment": 11,
+          "time": 41.82,
+          "xy_peak_m": 0.13680678606033325,
+          "body_global_peak_m": 0.13879579305648804,
+          "hard_failure_in_window": false
+        },
+        {
+          "segment": 12,
+          "time": 46.82,
+          "xy_peak_m": 0.08891350030899048,
+          "body_global_peak_m": 0.09090811014175415,
+          "hard_failure_in_window": false
+        },
+        {
+          "segment": 13,
+          "time": 49.32,
+          "xy_peak_m": 0.12583066523075104,
+          "body_global_peak_m": 0.1254240721464157,
+          "hard_failure_in_window": false
+        },
+        {
+          "segment": 14,
+          "time": 54.44,
+          "xy_peak_m": 0.34635022282600403,
+          "body_global_peak_m": 0.35486334562301636,
+          "hard_failure_in_window": false
+        },
+        {
+          "segment": 15,
+          "time": 57.02,
+          "xy_peak_m": 0.29219311475753784,
+          "body_global_peak_m": 0.30313101410865784,
+          "hard_failure_in_window": false
+        },
+        {
+          "segment": 16,
+          "time": 61.76,
+          "xy_peak_m": 0.3677636384963989,
+          "body_global_peak_m": 0.3669011890888214,
+          "hard_failure_in_window": false
+        },
+        {
+          "segment": 17,
+          "time": 64.78,
+          "xy_peak_m": 0.3808337152004242,
+          "body_global_peak_m": 0.3899022936820984,
+          "hard_failure_in_window": false
+        },
+        {
+          "segment": 18,
+          "time": 69.92,
+          "xy_peak_m": 0.2799273431301117,
+          "body_global_peak_m": 0.29950669407844543,
+          "hard_failure_in_window": false
+        },
+        {
+          "segment": 19,
+          "time": 74.08,
+          "xy_peak_m": 0.2622818648815155,
+          "body_global_peak_m": 0.2716617286205292,
+          "hard_failure_in_window": false
+        },
+        {
+          "segment": 20,
+          "time": 77.48,
+          "xy_peak_m": 0.17666739225387573,
+          "body_global_peak_m": 0.18528424203395844,
+          "hard_failure_in_window": false
+        },
+        {
+          "segment": 21,
+          "time": 81.26,
+          "xy_peak_m": 0.16007868945598602,
+          "body_global_peak_m": 0.16248975694179535,
+          "hard_failure_in_window": false
+        },
+        {
+          "segment": 22,
+          "time": 83.84,
+          "xy_peak_m": 0.2710595428943634,
+          "body_global_peak_m": 0.2683910131454468,
+          "hard_failure_in_window": false
+        },
+        {
+          "segment": 23,
+          "time": 86.7,
+          "xy_peak_m": 0.24794864654541016,
+          "body_global_peak_m": 0.2612045407295227,
+          "hard_failure_in_window": false
+        },
+        {
+          "segment": 24,
+          "time": 91.26,
+          "xy_peak_m": 0.2521665394306183,
+          "body_global_peak_m": 0.2575962245464325,
+          "hard_failure_in_window": false
+        },
+        {
+          "segment": 25,
+          "time": 95.74,
+          "xy_peak_m": 0.1546146273612976,
+          "body_global_peak_m": 0.16251489520072937,
+          "hard_failure_in_window": false
+        },
+        {
+          "segment": 26,
+          "time": 100.12,
+          "xy_peak_m": 0.21818767488002777,
+          "body_global_peak_m": 0.22925619781017303,
+          "hard_failure_in_window": false
+        },
+        {
+          "segment": 27,
+          "time": 103.78,
+          "xy_peak_m": 0.19396774470806122,
+          "body_global_peak_m": 0.1975659430027008,
+          "hard_failure_in_window": false
+        },
+        {
+          "segment": 28,
+          "time": 109.34,
+          "xy_peak_m": 0.17919118702411652,
+          "body_global_peak_m": 0.1805538386106491,
+          "hard_failure_in_window": false
+        },
+        {
+          "segment": 29,
+          "time": 114.84,
+          "xy_peak_m": 0.12539488077163696,
+          "body_global_peak_m": 0.13558508455753326,
+          "hard_failure_in_window": false
+        }
+      ]
+    }
+  ],
+  "reset_policy": "one initialization at t=0 only; env.reset guarded thereafter; zero reference-to-robot state writes in the loop",
+  "hard_gate": "unchanged abs(height-reference)>0.25 or abs(Rzz-reference)>0.8; independently recorded, manager terminal disabled only to retain the full post-failure physical trajectory",
+  "goal_feedback": null,
+  "physics_not_reference_playback": true,
+  "flip_coverage": false,
+  "publication_validation": {
+    "source": "clean Git clone of the initial public commit",
+    "CPU_environment": "the existing recorded CPU venv; not a fresh pip-install test",
+    "reference_reconstruction": "all saved CSV hashes matched before execution",
+    "checkpoint_download_used": "verified local original copied to its documented ignored path; release download tested separately"
+  }
+}
