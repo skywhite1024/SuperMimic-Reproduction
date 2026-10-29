@@ -1,0 +1,126 @@
+{
+  "canonical_commit": "623d190800e5204a3d430998ccbc4980173d5e1e",
+  "canonical_clean": true,
+  "prior_audit_commit": "b698987635ffffbf0a50e77db019a727d40c3d34",
+  "audit_commit": "005ea6e241069c413930f1b8f1e57f5c7c9907a6",
+  "counts": {
+    "matched": 39,
+    "different": 1,
+    "unmapped_project_sources": 8,
+    "identical_aliases": 1,
+    "excluded_environment_sources": 495
+  },
+  "matched": [
+    "implementation/deploy_runtime_v2.py",
+    "implementation/evaluate_audited.py",
+    "implementation/evaluate_audited_v2.py",
+    "implementation/prepare_assets.py",
+    "implementation/run_gpu.py",
+    "implementation/run_gpu_v2.py",
+    "implementation/run_gpu_v3.py",
+    "implementation/train_audited.py",
+    "implementation/train_audited_v2.py",
+    "implementation/continuation-20261025-a/audit_common.py",
+    "implementation/continuation-20261025-a/collect_continuation.py",
+    "implementation/continuation-20261025-a/diagnose.py",
+    "implementation/continuation-20261025-a/preflight.py",
+    "implementation/continuation-20261025-a/run_experiment.py",
+    "implementation/continuation-20261025-a/train_continuation.py",
+    "interactive-g1-20261027-a/scripts/collect_acro.py",
+    "interactive-g1-20261027-a/scripts/compose_sequences.py",
+    "interactive-g1-20261027-a/scripts/evaluate_acro.py",
+    "interactive-g1-20261027-a/scripts/global_model.py",
+    "interactive-g1-20261027-a/scripts/runtime.py",
+    "interactive-g1-20261027-a/scripts/train_acro.py",
+    "acro-library-20261027-b/scripts/balanced_replay.py",
+    "acro-library-20261027-b/scripts/balanced_sampling.py",
+    "acro-library-20261027-b/scripts/collect_results.py",
+    "acro-library-20261027-b/scripts/collect_stage2.py",
+    "acro-library-20261027-b/scripts/collect_stage3.py",
+    "acro-library-20261027-b/scripts/evaluate_ground_variant.py",
+    "acro-library-20261027-b/scripts/evaluate_library.py",
+    "acro-library-20261027-b/scripts/global_model.py",
+    "acro-library-20261027-b/scripts/prepare_cloud.py",
+    "acro-library-20261027-b/scripts/run_gpu_stage.py",
+    "acro-library-20261027-b/scripts/run_gpu_stage2.py",
+    "acro-library-20261027-b/scripts/run_gpu_stage3.py",
+    "acro-library-20261027-b/scripts/runtime.py",
+    "acro-library-20261027-b/scripts/stage2_references.py",
+    "acro-library-20261027-b/scripts/train_ground_stage2.py",
+    "acro-library-20261027-b/scripts/train_replay_stage3.py",
+    "acro-library-20261027-b/scripts/train_unified.py",
+    "acro-library-20261027-b/scripts/verify_score_contract.py"
+  ],
+  "aliases": [
+    {
+      "cloud": "lafan1-20261024/collect_results-b3a5e9b22e57.py",
+      "public": "implementation/collect_results.py"
+    }
+  ],
+  "different": [
+    {
+      "public_path": "interactive-g1-20261027-a/scripts/train_global.py",
+      "cloud_relative": "interactive-g1-20261027-a/scripts/train_global.py",
+      "sha256": "a49900dbf03ae0c08d1353386edfdb15bb3ad3c415b385a200b13eada066e22f",
+      "bytes": 6916
+    }
+  ],
+  "extra_sources": [
+    {
+      "public_path": "implementation/cloud_prepare.sh",
+      "cloud_relative": "lafan1-20261024/cloud_prepare.sh",
+      "sha256": "722193b8b06f3c3c6e5add340c2155830563fec1436960bed27265771f6359f3",
+      "bytes": 2429
+    },
+    {
+      "public_path": "implementation/cloud_prepare_hardlink.sh",
+      "cloud_relative": "lafan1-20261024/cloud_prepare_hardlink.sh",
+      "sha256": "eee1db11f1ac1f8d6c682e7f2d57cde819deaed04324f184a7593faa1d8ee567",
+      "bytes": 2667
+    },
+    {
+      "public_path": "implementation/cloud_prepare_staged.sh",
+      "cloud_relative": "lafan1-20261024/cloud_prepare_staged.sh",
+      "sha256": "da7b1e03e6bc4be09554ab1068aeb65babff38aa4a48db1be2f3ed964b7116a4",
+      "bytes": 2961
+    },
+    {
+      "public_path": "implementation/cloud_verify_headless.sh",
+      "cloud_relative": "lafan1-20261024/cloud_verify_headless.sh",
+      "sha256": "28b56b05d81de7b201253015774c57ef4ba16582e9eb7e36481abf9a21a61056",
+      "bytes": 3235
+    },
+    {
+      "public_path": "implementation/continuation-20261025-a/postprocess-20261026-a/audit_full_checkpoint_cpu.py",
+      "cloud_relative": "lafan1-20261024/experiments/continuation-20261025-a/postprocess-20261026-a/audit_full_checkpoint_cpu.py",
+      "sha256": "4249a9c2b486d080629649ade699fc5bcade11eb70dd7730557717023eb24321",
+      "bytes": 3219
+    },
+    {
+      "public_path": "implementation/continuation-20261025-a/postprocess-20261026-a/collect_complete.py",
+      "cloud_relative": "lafan1-20261024/experiments/continuation-20261025-a/postprocess-20261026-a/collect_complete.py",
+      "sha256": "9bc903aeebd3b9b0f63c7defcfdf80bc53b6b4fba43ab82de8c3038198832681",
+      "bytes": 4913
+    },
+    {
+      "public_path": "implementation/continuation-20261025-a/postprocess-20261026-a/diagnose_observed.py",
+      "cloud_relative": "lafan1-20261024/experiments/continuation-20261025-a/postprocess-20261026-a/diagnose_observed.py",
+      "sha256": "0b8ae1fd92bcb1594e917128eeba330b82a26f5ecc1a246a384e5d78c709fccc",
+      "bytes": 8109
+    },
+    {
+      "public_path": "implementation/continuation-20261025-a/postprocess-20261026-a/run_postprocess.py",
+      "cloud_relative": "lafan1-20261024/experiments/continuation-20261025-a/postprocess-20261026-a/run_postprocess.py",
+      "sha256": "9d0212b683eb5de60059aecf0cab073953f92557f6e4452c654ba55b7fc155b9",
+      "bytes": 4297
+    }
+  ],
+  "recorded_on": "2026-10-29",
+  "cloud_jobs_terminal": "success",
+  "gpu_requested": 0,
+  "finite_cpu_only": true,
+  "original_experiments_modified": false,
+  "public_snapshot_remains_at_tag": "v0.1.0",
+  "export_bundle_sha256": "e0a87c206ec7c3daee45fececabaa6516faf7cd633f5cd923c59747d286dfe9c",
+  "interpretation": "39 exact source matches; one identical collector alias; one checkpoint-path resolve difference; eight additional historical sources now archived in public Git. The 495 excluded files are bootstrap pip environment sources, not project sources."
+}

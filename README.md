@@ -4,10 +4,11 @@ Community-implementation experiments with **40 LAFAN1 motions**, **15 additional
 
 **中文：这是复现实验与工程记录。基础 LAFAN1 目标已达到；新增动作与旧动作兼顾的统一模型目标仍未全部达到。所有失败和完整分母保留。**
 
-- [Read the six complete reports](https://supermimic-experiment-reports.pastel-acorn-1132.chatgpt.site)
+- [Read the six complete reports](https://skywhite1024.github.io/SuperMimic-Reproduction/)
 - [Browse the committed report assets](docs/site/): six reports, 151 complete-duration browser video copies, figures and numerical results.
 - [Reproduction guide](docs/REPRODUCING.md) · [Evaluation protocol](docs/EVALUATION.md) · [Source/data attribution](THIRD_PARTY.md)
 - [Local/server Git workflow](docs/SERVER_WORKFLOW.md) · [Clean-clone 120-second validation](validation/clean-clone-continuous-seed0.json)
+- [Server source reconciliation](validation/cloud-source-reconciliation-20261029.json): historical AFS snapshot, matching public checkout, and separately retained server-only sources.
 - [Checkpoint manifest](artifacts/manifest.json): named inference and training-resume artifacts, sizes, SHA256 and exact installation paths.
 
 ## Recorded outcomes

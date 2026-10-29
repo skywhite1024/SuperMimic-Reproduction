@@ -1,0 +1,77 @@
+{
+  "base_url": "https://skywhite1024.github.io/SuperMimic-Reproduction/",
+  "checks": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 3848,
+      "content_range": null,
+      "valid_html": true,
+      "mp4_ftyp": null
+    },
+    {
+      "path": "reports/acro-library-20261027-b/unified-library-report.html",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 1992005,
+      "content_range": null,
+      "valid_html": true,
+      "mp4_ftyp": null
+    },
+    {
+      "path": "reports/acro-library-20261027-b/action-bound-ablation-report.html",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 749399,
+      "content_range": null,
+      "valid_html": true,
+      "mp4_ftyp": null
+    },
+    {
+      "path": "reports/interactive-g1-20261027-a/continuous-demo.html",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 3000000,
+      "content_range": null,
+      "valid_html": true,
+      "mp4_ftyp": null
+    },
+    {
+      "path": "reports/implementation/continuation-20261025-a/report/continuation-comparison.html",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 15432,
+      "content_range": null,
+      "valid_html": true,
+      "mp4_ftyp": null
+    },
+    {
+      "path": "reports/implementation/report/supermimic-report.html",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 12175,
+      "content_range": null,
+      "valid_html": true,
+      "mp4_ftyp": null
+    },
+    {
+      "path": "reports/bones-seed-20261026-a/report/preparation-status.html",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 13065,
+      "content_range": null,
+      "valid_html": true,
+      "mp4_ftyp": null
+    },
+    {
+      "path": "reports/interactive-g1-20261027-a/videos/acro-engineering-retest.mp4",
+      "status": 206,
+      "content_type": "video/mp4",
+      "bytes_read": 65536,
+      "content_range": "bytes 0-65535/124201",
+      "valid_html": null,
+      "mp4_ftyp": true
+    }
+  ]
+}

@@ -1533,6 +1533,79 @@
       "original_sha256": "cf5113137ad83bc7dfa9f16f2032a396f3b4be7ad61e1e630231e84db19bd990",
       "public_sha256": "6fdd04701b5133dbf631d6ab02e61a24a6088e96292b6782eea052ca1a489598",
       "publication_copy_changed": true
+    },
+    {
+      "path": "implementation/cloud_prepare.sh",
+      "original_sha256": "722193b8b06f3c3c6e5add340c2155830563fec1436960bed27265771f6359f3",
+      "public_sha256": "fef7c46368fcb10239ac98a394d45f2b14a3efdca9b6700e19fa0932e3e54e7e",
+      "publication_copy_changed": true,
+      "source": "historical personal AFS; read back 2026-10-29",
+      "historical_relative_path": "lafan1-20261024/cloud_prepare.sh"
+    },
+    {
+      "path": "implementation/cloud_prepare_hardlink.sh",
+      "original_sha256": "eee1db11f1ac1f8d6c682e7f2d57cde819deaed04324f184a7593faa1d8ee567",
+      "public_sha256": "118817c691a560999864e2ec726cbaaafced6a07ae347271ba283d011b597cb7",
+      "publication_copy_changed": true,
+      "source": "historical personal AFS; read back 2026-10-29",
+      "historical_relative_path": "lafan1-20261024/cloud_prepare_hardlink.sh"
+    },
+    {
+      "path": "implementation/cloud_prepare_staged.sh",
+      "original_sha256": "da7b1e03e6bc4be09554ab1068aeb65babff38aa4a48db1be2f3ed964b7116a4",
+      "public_sha256": "d24afc84a23e44963a37f4c033170c78d7b4020adedf71aac6f3f7b82a68d4de",
+      "publication_copy_changed": true,
+      "source": "historical personal AFS; read back 2026-10-29",
+      "historical_relative_path": "lafan1-20261024/cloud_prepare_staged.sh"
+    },
+    {
+      "path": "implementation/cloud_verify_headless.sh",
+      "original_sha256": "28b56b05d81de7b201253015774c57ef4ba16582e9eb7e36481abf9a21a61056",
+      "public_sha256": "f73c4066e3a857766181795ed88d34be18e9ef09fcf4c5fae81ba704c1b779b0",
+      "publication_copy_changed": true,
+      "source": "historical personal AFS; read back 2026-10-29",
+      "historical_relative_path": "lafan1-20261024/cloud_verify_headless.sh"
+    },
+    {
+      "path": "implementation/continuation-20261025-a/postprocess-20261026-a/audit_full_checkpoint_cpu.py",
+      "original_sha256": "4249a9c2b486d080629649ade699fc5bcade11eb70dd7730557717023eb24321",
+      "public_sha256": "4249a9c2b486d080629649ade699fc5bcade11eb70dd7730557717023eb24321",
+      "publication_copy_changed": false,
+      "source": "historical personal AFS; read back 2026-10-29",
+      "historical_relative_path": "lafan1-20261024/experiments/continuation-20261025-a/postprocess-20261026-a/audit_full_checkpoint_cpu.py"
+    },
+    {
+      "path": "implementation/continuation-20261025-a/postprocess-20261026-a/collect_complete.py",
+      "original_sha256": "9bc903aeebd3b9b0f63c7defcfdf80bc53b6b4fba43ab82de8c3038198832681",
+      "public_sha256": "9bc903aeebd3b9b0f63c7defcfdf80bc53b6b4fba43ab82de8c3038198832681",
+      "publication_copy_changed": false,
+      "source": "historical personal AFS; read back 2026-10-29",
+      "historical_relative_path": "lafan1-20261024/experiments/continuation-20261025-a/postprocess-20261026-a/collect_complete.py"
+    },
+    {
+      "path": "implementation/continuation-20261025-a/postprocess-20261026-a/diagnose_observed.py",
+      "original_sha256": "0b8ae1fd92bcb1594e917128eeba330b82a26f5ecc1a246a384e5d78c709fccc",
+      "public_sha256": "0b8ae1fd92bcb1594e917128eeba330b82a26f5ecc1a246a384e5d78c709fccc",
+      "publication_copy_changed": false,
+      "source": "historical personal AFS; read back 2026-10-29",
+      "historical_relative_path": "lafan1-20261024/experiments/continuation-20261025-a/postprocess-20261026-a/diagnose_observed.py"
+    },
+    {
+      "path": "implementation/continuation-20261025-a/postprocess-20261026-a/run_postprocess.py",
+      "original_sha256": "9d0212b683eb5de60059aecf0cab073953f92557f6e4452c654ba55b7fc155b9",
+      "public_sha256": "9d0212b683eb5de60059aecf0cab073953f92557f6e4452c654ba55b7fc155b9",
+      "publication_copy_changed": false,
+      "source": "historical personal AFS; read back 2026-10-29",
+      "historical_relative_path": "lafan1-20261024/experiments/continuation-20261025-a/postprocess-20261026-a/run_postprocess.py"
+    },
+    {
+      "path": "server-history/20261029/interactive-g1-20261027-a/scripts/train_global.py",
+      "original_sha256": "a49900dbf03ae0c08d1353386edfdb15bb3ad3c415b385a200b13eada066e22f",
+      "public_sha256": "a49900dbf03ae0c08d1353386edfdb15bb3ad3c415b385a200b13eada066e22f",
+      "publication_copy_changed": false,
+      "source": "historical personal AFS; read back 2026-10-29",
+      "historical_relative_path": "interactive-g1-20261027-a/scripts/train_global.py"
     }
-  ]
+  ],
+  "cloud_source_reconciliation": "validation/cloud-source-reconciliation-20261029.json"
 }

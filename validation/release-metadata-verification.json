@@ -1,0 +1,48 @@
+{
+  "release": "https://github.com/skywhite1024/SuperMimic-Reproduction/releases/tag/v0.1.0",
+  "id": 427818690,
+  "assets": [
+    {
+      "name": "lafan40-16k-policy.pt",
+      "bytes": 71781957,
+      "digest": "sha256:44d68af11306f839fe1b4b37cd042f1eae7df116adaabd69bd8db593a16d334e",
+      "state": "uploaded",
+      "matches_manifest": true
+    },
+    {
+      "name": "continuous-basic-policy.pt",
+      "bytes": 36646613,
+      "digest": "sha256:3eb38bcd3fd19fbb33241b28acbf533f67caebf25824d8d787bc4fe23b113add",
+      "state": "uploaded",
+      "matches_manifest": true
+    },
+    {
+      "name": "acro88-08-policy.pt",
+      "bytes": 36481141,
+      "digest": "sha256:0f4a7bc67ae9e3440711e401e37f8276102e59946177117d082a6d7aabe108b4",
+      "state": "uploaded",
+      "matches_manifest": true
+    },
+    {
+      "name": "unified-stage3-policy.pt",
+      "bytes": 36647413,
+      "digest": "sha256:4aa7a15f8475d54064db33b3333b772e4976f3ac133f98c03a7e39e49604e3b3",
+      "state": "uploaded",
+      "matches_manifest": true
+    },
+    {
+      "name": "unified-stage2-full.pt",
+      "bytes": 219041567,
+      "digest": "sha256:807d5fac7ca128f892c950fa379133231cd5f741e83075ed017d105b2eec6eec",
+      "state": "uploaded",
+      "matches_manifest": true
+    },
+    {
+      "name": "lafan40-16k-full.pt",
+      "bytes": 218547553,
+      "digest": "sha256:0afcca9af97bd9db1f2dd083875898f962acab0b0a70c7313b221e575b70b05b",
+      "state": "uploaded",
+      "matches_manifest": true
+    }
+  ]
+}
