@@ -10,6 +10,16 @@ from runtime import ROOT,UNI
 from unisupermimic.tasks.motion_tracking.g1.supermimic.render import comparison_xml
 
 
+def publication_font(size):
+    """Use an installed font without machine-specific absolute paths."""
+    for name in ("arial.ttf", "DejaVuSans.ttf"):
+        try:
+            return ImageFont.truetype(name, size)
+        except OSError:
+            pass
+    return ImageFont.load_default(size=size)
+
+
 def main():
     p=argparse.ArgumentParser();p.add_argument('--run',required=True);p.add_argument('--clips',nargs='+');p.add_argument('--video-label');p.add_argument('--verify-existing',action='store_true');p.add_argument('--include-old',action='store_true');a=p.parse_args()
     if a.include_old:assert a.clips,'Choose explicit old clips; do not render the entire old library by accident'
@@ -25,7 +35,7 @@ def main():
     file=assets/'comparison.xml';file.write_text(xml);model=mujoco.MjModel.from_xml_path(str(file))
     model.vis.global_.offwidth=1280;model.vis.global_.offheight=720;model.vis.headlight.ambient[:]=.7;model.vis.headlight.diffuse[:]=.7;model.vis.map.zfar=1000
     data=mujoco.MjData(model);camera=mujoco.MjvCamera();camera.azimuth=145;camera.elevation=-15
-    font=ImageFont.truetype('[local]/arial.ttf',16)
+    font=publication_font(20);small=publication_font(16)
     video_label=a.video_label or a.run;target=ROOT/'videos'/video_label;assert target.resolve().is_relative_to((ROOT/'videos').resolve());target.mkdir(parents=True,exist_ok=True);receipts=[];offset=np.array([0.,1.5,0.])
     renderer=mujoco.Renderer(model,height=720,width=1280)
     try:

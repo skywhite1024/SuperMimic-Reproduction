@@ -1,0 +1,36 @@
+{
+  "clip": "jumps1_subject2",
+  "file": "videos/retention-v1-corrected-cuda-all55/jumps1_subject2.mp4",
+  "bytes": 11564317,
+  "sha256": "06b84a3983dcdfac4d773ce66e28b972abc4dff7e87ea3917d24e4f37f42ca21",
+  "frames": 6111,
+  "fps": 25,
+  "video_seconds": 244.44,
+  "physical_window_seconds": 244.42000000000002,
+  "complete_decode_passed": true,
+  "source_run": "retention-v1-corrected-cuda-all55",
+  "only_retained_actual_physics_states_rendered": true,
+  "reference_display_offset_m": [
+    0,
+    1.5,
+    0
+  ],
+  "fog_disabled_for_failed_tail_visibility": true,
+  "reference_version_or_variant": "ground-calibration-v1",
+  "original_hard_gate_passed": false,
+  "tracking_quality_passed": false,
+  "contact_sheet": "evidence/retention-v1-corrected-cuda-all55-jumps1_subject2-contact-sheet.jpg",
+  "published_size": [
+    960,
+    540
+  ],
+  "original_full_resolution": {
+    "bytes": 87655843,
+    "sha256": "6154d777e2496f3b84d7db953f4d1a97c7d69ff5de0d359c788d5bf03e92afcb",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  "all_source_frames_and_failed_tail_preserved": true
+}

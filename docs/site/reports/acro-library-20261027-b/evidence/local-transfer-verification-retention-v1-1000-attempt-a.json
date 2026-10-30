@@ -1,0 +1,20 @@
+{
+  "status": "archive_and_all_manifest_files_verified",
+  "verified_at": "2026-10-30T04:56:31.893618+00:00",
+  "archive_bytes": 223983153,
+  "archive_sha256": "890041183a33f7a634693ad85404b540ccdab5d6656b5ee32adc6546e054d62f",
+  "file_count": 32,
+  "program_complete": false,
+  "platform_status_from_attended_controller": "failed",
+  "cloud_source_preserved": true,
+  "published_run_policy_evidence": [
+    "evidence/checkpoint-inventory-retention-v1-1000-attempt-a.json",
+    "evidence/cloud-runtime-versions-retention-v1-1000-attempt-a.json",
+    "evidence/gpu-retention-v1-1000.json",
+    "runs/retention-v1-parent-bound20-corrected-cuda-all55/summary.json",
+    "runs/retention-v1-parent-bound20-corrected-cuda-all55/tracking-assessment.json",
+    "runs/retention-v1-parent-bound20-corrected-cuda-all55/trajectory.npz"
+  ],
+  "archive": "downloaded\\retention-v1-1000-attempt-a\\retention-v1-1000-attempt-a-results.tar.gz",
+  "resource_release_requires_separate_actual_platform_check": true
+}

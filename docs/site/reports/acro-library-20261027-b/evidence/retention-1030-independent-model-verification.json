@@ -1,0 +1,58 @@
+{
+  "status": "independent_local_full_and_inference_checkpoint_validation_passed",
+  "at": "2026-10-30T06:54:32.179490+00:00",
+  "torch": "2.14.1+cpu",
+  "device": "cpu",
+  "inference_PI_exactly_equals_full_checkpoint": true,
+  "observation_dimension": 101,
+  "new_iteration_delta": 1000,
+  "all_three_networks_changed": {
+    "wm": true,
+    "pi": true,
+    "critic": true
+  },
+  "normalizer_tensors_unchanged": {
+    "wm": [
+      "in_norm.mean",
+      "in_norm.var",
+      "in_norm.count",
+      "out_norm.mean",
+      "out_norm.var",
+      "out_norm.count"
+    ],
+    "pi": [
+      "obs_norm.mean",
+      "obs_norm.var",
+      "obs_norm.count",
+      "goal_norm.mean",
+      "goal_norm.var",
+      "goal_norm.count"
+    ],
+    "critic": [
+      "norm.mean",
+      "norm.var",
+      "norm.count"
+    ]
+  },
+  "optimizer_step_deltas": {
+    "opt_wm": {
+      "parameter_states": 14,
+      "all_step_deltas": 4000,
+      "moments_finite": true
+    },
+    "opt_pi": {
+      "parameter_states": 20,
+      "all_step_deltas": 800,
+      "moments_finite": true
+    },
+    "opt_v": {
+      "parameter_states": 6,
+      "all_step_deltas": 3200,
+      "moments_finite": true
+    }
+  },
+  "full_checkpoint_sha256": "e98afcbbb4f8a0b663cbfd20813e41137c3ecd822297c7e93f068383d2974329",
+  "policy_sha256": "21b92ba3a03044d3a2425d354360086c7c5e4817133168044bdf10849a58f184",
+  "parent_sha256": "93bb8b830145c54092518eba8db1fb020d020eb72cdad1b619b4fc5470cc213d",
+  "physical_quality_not_inferred": true
+}

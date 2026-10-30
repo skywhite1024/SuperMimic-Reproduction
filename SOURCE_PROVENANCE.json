@@ -643,14 +643,16 @@
     {
       "path": "interactive-g1-20261027-a/scripts/render_acro.py",
       "original_sha256": "bca866479c81303e92e7e1d9bcc5824bb3d347f31fcafc68366364fb96b40c15",
-      "public_sha256": "bbcfdbdc6fe0601573eabb00176f57bc9c8e2c3a95e8d70214610df9d611cbaa",
-      "publication_copy_changed": true
+      "public_sha256": "87203ddb5111413b930201cb6349830d9170a3e442e8c34ead6a5d058cad9320",
+      "publication_copy_changed": true,
+      "publication_portability_change": "Portable font fallback; preserve both font sizes and all rendering/physics loops"
     },
     {
       "path": "interactive-g1-20261027-a/scripts/render_video.py",
       "original_sha256": "79d680e6e7f3a1c26b73720670a4c2548f6b1c722f3871a3aacc190fa46cf8ac",
-      "public_sha256": "c93aa3ed48328c6130452c8c350b7c46ed0ea45ac4afc243625624c5ef2b6f2f",
-      "publication_copy_changed": true
+      "public_sha256": "cd4ba14fd3d10d1c828801b5cb146bdfa2364ce2edb16ddfefeb2873f7cc9509",
+      "publication_copy_changed": true,
+      "publication_portability_change": "Portable font fallback; preserve both font sizes and all rendering/physics loops"
     },
     {
       "path": "interactive-g1-20261027-a/scripts/runtime.py",
@@ -979,8 +981,9 @@
     {
       "path": "acro-library-20261027-b/scripts/render_library.py",
       "original_sha256": "19b910fef20a26329acc3ffe8f70733a4982a4e24e55d61401af4d91bb8cbb0d",
-      "public_sha256": "2003b8af5c3e18f6bf8a915fe935d266d4dbd4d8cb17c212eb3f313298956f0a",
-      "publication_copy_changed": true
+      "public_sha256": "7f2abaf657b48d3d75db5eb74546712dd0e3053662e63ca8a19f8e1177724865",
+      "publication_copy_changed": true,
+      "publication_portability_change": "Portable font fallback; preserve both font sizes and all rendering/physics loops"
     },
     {
       "path": "acro-library-20261027-b/scripts/retention_components.py",
@@ -1605,7 +1608,98 @@
       "publication_copy_changed": false,
       "source": "historical personal AFS; read back 2026-10-29",
       "historical_relative_path": "interactive-g1-20261027-a/scripts/train_global.py"
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/prepare_retention_resume1030b.py",
+      "original_sha256": "be67c975c7e3bc2c22d322132833ad83c71d199f39688d2e1b3666178e554d2c",
+      "public_sha256": "50dd028a4cfdb245e08b8b930c368d406ff7855d47eb547a88d97373ecbb0257",
+      "publication_copy_changed": true
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/run_retention_resume1030b.py",
+      "original_sha256": "cebc8747694386ede25b0a6b4642a9fb24ece5954971e8ee22f9e3fd3c2b5c93",
+      "public_sha256": "cebc8747694386ede25b0a6b4642a9fb24ece5954971e8ee22f9e3fd3c2b5c93",
+      "publication_copy_changed": false
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/preflight_retention_recovery.py",
+      "original_sha256": "45578f3ab242149c18c2bef6ce2f06cf6984b0886b0ff46d12233a8d3491f0c3",
+      "public_sha256": "0e5be3bd855f70d39005abd06baba02440f4077e45087a8d92e8374ca9e848ba",
+      "publication_copy_changed": true
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/collect_retention_trial.py",
+      "original_sha256": "d5991c0c12a54674b9a9297341953ea78e213df42ba9647d38fd65c1fb354c42",
+      "public_sha256": "cbe51304edb1bb043d9b12a36631471f10646aa6d9bd2f51733d522287bdde7a",
+      "publication_copy_changed": true
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/collect_retention_resume1030b.py",
+      "original_sha256": "3d912952aef636a8fa27575c820f19be9f0f6994c005d5b4472a446d58658fab",
+      "public_sha256": "8182e23c83f7c1cb2dbde565695574b73c6f10a2bb8a919184844a2228b8be08",
+      "publication_copy_changed": true
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/verify_retention_retrieval.py",
+      "original_sha256": "99586b73c4ddbb128ab403fe048c0685c7e942f8e973cb3c3c5cfbe92224fdd9",
+      "public_sha256": "99586b73c4ddbb128ab403fe048c0685c7e942f8e973cb3c3c5cfbe92224fdd9",
+      "publication_copy_changed": false
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/postprocess_retention1030.py",
+      "original_sha256": "d37cb5fc5acd63c31bc07c56176f14a41d97acbf67985b1e06f501732383794d",
+      "public_sha256": "d37cb5fc5acd63c31bc07c56176f14a41d97acbf67985b1e06f501732383794d",
+      "publication_copy_changed": false
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/plot_retention1030.py",
+      "original_sha256": "debec077f550cc0c58c76980a7734bc8652cf38d0f3488a3c4a3e6e59c87623f",
+      "public_sha256": "debec077f550cc0c58c76980a7734bc8652cf38d0f3488a3c4a3e6e59c87623f",
+      "publication_copy_changed": false
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/diagnose_retention1030.py",
+      "original_sha256": "1fe0cc783b15efe3b9da9d91ac1246dd9caf93714c81b5ac747c2686377d6eef",
+      "public_sha256": "1fe0cc783b15efe3b9da9d91ac1246dd9caf93714c81b5ac747c2686377d6eef",
+      "publication_copy_changed": false
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/build_retention1030_report.py",
+      "original_sha256": "9c1ede0f9d95acc4488d9a14c8ec57655d113eff120ee7555cf2e09ac4ea6567",
+      "public_sha256": "9c1ede0f9d95acc4488d9a14c8ec57655d113eff120ee7555cf2e09ac4ea6567",
+      "publication_copy_changed": false
+    },
+    {
+      "path": "tools/evaluate_released_retention.py",
+      "original_sha256": "b22979a7c78f1d5b477dae563679fda70b5c90bba18b6a3a4d0777b97eaf57d1",
+      "public_sha256": "b22979a7c78f1d5b477dae563679fda70b5c90bba18b6a3a4d0777b97eaf57d1",
+      "publication_copy_changed": false
+    },
+    {
+      "path": "acro-library-20261027-b/retention-recovery-1030-plan.json",
+      "original_sha256": "0bf6d59d065ae9a94878b9205455866588277b5cb9912e7e920eb62ff20f0b3a",
+      "public_sha256": "8515fc94f44ffe9407dbf983da67d3913a511e842557e782f5495084a1eafb96",
+      "publication_copy_changed": true
+    },
+    {
+      "path": "acro-library-20261027-b/retention-resume-1030b-plan.json",
+      "original_sha256": "6a2e2ab6b0f978646626432e1fcb4c00adbdf4b3fabad67455d86e4c1230eeb6",
+      "public_sha256": "99e9958fc2854a596c85b54fc496b4d7ab68fb8a6a4c9af364c68a1137fdcf40",
+      "publication_copy_changed": true
     }
   ],
-  "cloud_source_reconciliation": "validation/cloud-source-reconciliation-20261029.json"
+  "cloud_source_reconciliation": "validation/cloud-source-reconciliation-20261029.json",
+  "incremental_exports": [
+    {
+      "added_at": "2026-10-30T07:30:54.525830+00:00",
+      "trial": "retention-v1-1000-1030b",
+      "original_training_sources_changed": false,
+      "original_trial_plan_sha256": "e737aacaf113cf602be0eb6cb7b64a5b47e14451acdb003a4c19d9cbaa575a53",
+      "public_renderer_font_portability_fixes": [
+        "acro-library-20261027-b/scripts/render_library.py",
+        "interactive-g1-20261027-a/scripts/render_acro.py",
+        "interactive-g1-20261027-a/scripts/render_video.py"
+      ]
+    }
+  ]
 }

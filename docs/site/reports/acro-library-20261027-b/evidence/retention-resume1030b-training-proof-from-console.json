@@ -1,0 +1,34 @@
+{
+  "status": "updates_and_save_readback_verified",
+  "device": "cuda",
+  "new_updates": 1000,
+  "world_model_warmup": 200,
+  "parent_sha256": "93bb8b830145c54092518eba8db1fb020d020eb72cdad1b619b4fc5470cc213d",
+  "normalizer_tensors_unchanged": true,
+  "wall_seconds": 714.032659675926,
+  "optimizer_step_deltas": {
+    "wm": {
+      "all_parameter_step_deltas": 4000,
+      "parameter_states": 14
+    },
+    "pi": {
+      "all_parameter_step_deltas": 800,
+      "parameter_states": 20
+    },
+    "critic": {
+      "all_parameter_step_deltas": 3200,
+      "parameter_states": 6
+    }
+  },
+  "functional_bounded_policy_readback": {
+    "real_collected_history_rows": 4,
+    "bound_applied_after_loading": true,
+    "exact_output_equality": true
+  },
+  "observed_at": "2026-10-30T05:35:23.737065+00:00",
+  "source": "ACP console diagnostic; complete canonical AFS proof independently retrieved, SHA256 verified and exactly equal",
+  "all_networks_changed": true,
+  "teachers_unchanged": true,
+  "canonical_AFS_proof_sha256": "8d27f36b974b63400f1044c53a474e94a249dd6e9924030c6f30cabc77e5dc83",
+  "canonical_verified_at": "2026-10-30T06:49:45.880227+00:00"
+}

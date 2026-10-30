@@ -1,0 +1,38 @@
+{
+  "status": "all_matched_CPU_CUDA_assessments_complete",
+  "candidate_classification": "candidate_unsuccessful_no_automatic_extension",
+  "new_denominator": 15,
+  "old_denominator": 40,
+  "continuous_denominator": 3,
+  "counts": {
+    "cuda_corrected": 9,
+    "cuda_raw": 7,
+    "cuda_raw_sequences": 0,
+    "cuda_corrected_sequences": 0,
+    "cpu_corrected": 9,
+    "cpu_raw": 7,
+    "cpu_raw_sequences": 0,
+    "cpu_corrected_sequences": 0
+  },
+  "CPU_old_regression_passed": false,
+  "CPU_old_group": {
+    "denominator": 40,
+    "passed": 38,
+    "macro_return_original": 0.8742370244115591,
+    "frame_weighted_return_original": 0.8769210964177802
+  },
+  "CUDA_old_group": {
+    "denominator": 40,
+    "passed": 37,
+    "macro_return_original": 0.8584042020142079,
+    "frame_weighted_return_original": 0.8619336010836279
+  },
+  "CUDA_old_all40_passed": false,
+  "all_failed_tails_retained": true,
+  "training_updates": 1000,
+  "no_automatic_extension": true,
+  "raw_reference_goal_complete": false,
+  "corrected_variant_goal_complete": false,
+  "video_generation_pending": false,
+  "paper_equivalent_reproduction_claimed": false
+}

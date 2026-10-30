@@ -3,3 +3,5 @@
 *.mp4 binary
 *.png binary
 *.jpg binary
+# Matplotlib SVG paths use intentional trailing spacing.
+*.svg -whitespace

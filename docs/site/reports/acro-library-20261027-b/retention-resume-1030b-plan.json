@@ -1,0 +1,36 @@
+{
+  "status": "frozen_before_operational_resume1030b",
+  "frozen_at": "2026-10-30T05:06:34.585529+00:00",
+  "original_trial_plan_sha256": "e737aacaf113cf602be0eb6cb7b64a5b47e14451acdb003a4c19d9cbaa575a53",
+  "previous_program_wall_seconds": 610.8688422106206,
+  "maximum_new_updates": 1000,
+  "wm_only_updates": 200,
+  "new_program_seconds_max": 4200,
+  "combined_attempt_program_seconds_max": 5400,
+  "reused_parent_artifacts": [
+    "runs/retention-v1-parent-bound20-corrected-cuda-all55/summary.json",
+    "runs/retention-v1-parent-bound20-corrected-cuda-all55/trajectory.npz",
+    "runs/retention-v1-parent-bound20-corrected-cuda-all55/tracking-assessment.json",
+    "runs/retention-v1-parent-bound20-corrected-cuda-all55/contact-review.json",
+    "runs/retention-v1-parent-bound20-corrected-cuda-all55/contact-samples.json",
+    "runs/retention-v1-parent-bound20-corrected-cuda-all55/combined-assessment.json"
+  ],
+  "training_or_reference_or_physics_changes": false,
+  "no_automatic_second_training_block": true,
+  "files": {
+    "retention-trial-v1-plan.json": "e737aacaf113cf602be0eb6cb7b64a5b47e14451acdb003a4c19d9cbaa575a53",
+    "retention-recovery-1030-plan.json": "0bf6d59d065ae9a94878b9205455866588277b5cb9912e7e920eb62ff20f0b3a",
+    "evidence/retention-1030-dependency-preflight.json": "9dfcdf40233b254e363306aa6d2700911bfc533671a01d9fb510956f54e78248",
+    "evidence/gpu-retention-v1-1000.json": "2273893198d0e7085d4f84911da0c2e218288b32c698e341fcf14f564fa36b90",
+    "scripts/run_retention_trial.py": "3394cb86d890cdff3d3eb0da82ebe40102c7b7a9e455ecce4090ba756d8f8c59",
+    "scripts/audit_sequence_contacts.py": "f44fd62dfef12942945b4bc462b77ba8bea4a3bdb9bfb1e9b3278492dd4604e0",
+    "runs/engineering-retention-v2-cpu-6/proof.json": "c223dd7dea4d0149aa125633934659dcbfbbe4a873c55b0f13abd72484f0f803",
+    "runs/retention-v1-parent-bound20-corrected-cuda-all55/summary.json": "4e21ef42f60547e1e3eda3f4d2abd65d70ab2d961b7d6e7503d2a7c1a8f97f67",
+    "runs/retention-v1-parent-bound20-corrected-cuda-all55/trajectory.npz": "f3bdc12ed7f4394491d0542eb7b8d39d31669ef3f9038d680e5bca5934b2c751",
+    "runs/retention-v1-parent-bound20-corrected-cuda-all55/tracking-assessment.json": "b1f1a058fb955d2f9eeb1c2462847951d00a467162afe83afd7f1a9de51b9c1e",
+    "runs/retention-v1-parent-bound20-corrected-cuda-all55/contact-review.json": "a2792df13d08c10e5af9aff9a9a3a93743f0b7784fb3298a7b3612be327f25d0",
+    "runs/retention-v1-parent-bound20-corrected-cuda-all55/contact-samples.json": "42090027156f1cdd725e8e990ae2e6a976af7328fb8f64b85b793557418509ba",
+    "runs/retention-v1-parent-bound20-corrected-cuda-all55/combined-assessment.json": "43b0021e6094b9643b6bbe6ad3d8460502a192a3654b70a0f5d90c030d62cd6c",
+    "scripts/run_retention_resume1030b.py": "cebc8747694386ede25b0a6b4642a9fb24ece5954971e8ee22f9e3fd3c2b5c93"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "status": "frozen_before_CPU_recovery_and_first_candidate_update",
+  "frozen_at": "2026-10-30T04:32:23.693136+00:00",
+  "failed_attempt_uid": "d6a6cfc61c094fac88d66b88fabf554e",
+  "original_trial_plan_sha256": "e737aacaf113cf602be0eb6cb7b64a5b47e14451acdb003a4c19d9cbaa575a53",
+  "scope": "Operational dependency/input recovery only. Preserve original failed program receipt and completed parent55 trajectories. No source-training changes or extra candidate updates.",
+  "scipy_wheel": {
+    "filename": "scipy-1.17.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+    "bytes": 35009148,
+    "sha256": "9eeb9b5f5997f75507814ed9d298ab23f62cf79f5a3ef90031b1ee2506abdb5b",
+    "official_metadata": "https://pypi.org/pypi/scipy/1.17.0/json",
+    "official_file_url": "https://files.pythonhosted.org/packages/d1/fe/66d73b76d378ba8cc2fe605920c0c75092e3a65ae746e1e767d9d020a75a/scipy-1.17.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+    "version": "1.17.0",
+    "no_dependency_upgrades": true,
+    "path": "deployment/dependency-wheels/scipy-1.17.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl"
+  },
+  "files": {
+    "scripts/runtime.py": "e06f87f6f1b58d2035c3de8b178f8f46f5f888faddf75a022374c9b3f0f7e0e1",
+    "scripts/preflight_retention_recovery.py": "45578f3ab242149c18c2bef6ce2f06cf6984b0886b0ff46d12233a8d3491f0c3",
+    "scripts/collect_retention_trial.py": "d5991c0c12a54674b9a9297341953ea78e213df42ba9647d38fd65c1fb354c42",
+    "continuous-frozen-v1/index.json": "483ad3d2913eeca3d92d03e2b83805f011f145bf646ddb00e249a86a482f9542",
+    "continuous-frozen-v1/seed-0/sequence.csv": "db5db7525e71265d89ed5ab36e3e8253043b8ccaa347c5381d590c5dcabd1a81",
+    "continuous-frozen-v1/seed-1/sequence.csv": "14d7db442f8ab901a9477e4ac974030adc9716806b68eff06969aaea5abfdfe1",
+    "continuous-frozen-v1/seed-2/sequence.csv": "1b213950a44f2c3af92757f02b22f8bb2bdeb40087907c39a0b50067e45a074d",
+    "continuous-corrected-v1/index.json": "92fdae6b84705548718fb90a09eb018158bf15d66d6c3b0028c5ed4d791ca799",
+    "continuous-corrected-v1/seed-0/sequence.csv": "7b39483db547208498c77af541845565b079621c9b0510b14eb9df48b29eaf31",
+    "continuous-corrected-v1/seed-1/sequence.csv": "c8c6197e07c5e47f4d8ea51235709eb1644faa25f3a41c2ac384cc8a3f6fd743",
+    "continuous-corrected-v1/seed-2/sequence.csv": "e788883c4fa78643b8bfd75d7fa03de4eaba690ff4699d65d96ee60aa1a2b35e",
+    "deployment/dependency-wheels/scipy-1.17.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl": "9eeb9b5f5997f75507814ed9d298ab23f62cf79f5a3ef90031b1ee2506abdb5b"
+  },
+  "CPU_preflight": [
+    "Only addSciPy1.17.0 to existing ownAFSvenv with no dependency upgrades",
+    "Verify all original trial source hashes and all6 fixed sequence CSV/index bytes",
+    "Construct both101D3-sequence CPU environments without stepping",
+    "Finish parent55 contact audit on retained states without resimulation"
+  ],
+  "resumed_candidate_maximum_updates": 1000,
+  "resumed_program_seconds_max": 4200,
+  "combined_attempt_program_seconds_max": 5400,
+  "do_not_resimulate_completed_parent55": true,
+  "no_reference_physics_threshold_or_reward_change": true,
+  "dependencies_and_all_declared_inputs_must_pass_before_new_GPU": true
+}

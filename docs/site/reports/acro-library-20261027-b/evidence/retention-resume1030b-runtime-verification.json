@@ -1,0 +1,27 @@
+{
+  "status": "running",
+  "plan_sha256": "e737aacaf113cf602be0eb6cb7b64a5b47e14451acdb003a4c19d9cbaa575a53",
+  "config": {
+    "gpu_count": 1,
+    "gpu_name": "NVIDIA H100 80GB HBM3",
+    "cpu_max": "400000 100000",
+    "memory_max": "68719476736",
+    "maximum_seconds": 4200,
+    "new_updates": 1000,
+    "wm_only_updates": 200,
+    "num_envs": 1024,
+    "new_denominator": 15,
+    "old_denominator": 40,
+    "continuous_denominator": 3,
+    "seconds_per_trial": 120
+  },
+  "controller_variant": "consistent-output-bound-20-retention-v1",
+  "full_goal_complete": false,
+  "operational_resume_plan_sha256": "6a2e2ab6b0f978646626432e1fcb4c00adbdf4b3fabad67455d86e4c1230eeb6",
+  "previous_program_wall_seconds": 610.8688422106206,
+  "completed_parent55_reused_without_resimulation": true,
+  "observed_at": "2026-10-30T05:10:12.140222+00:00",
+  "actual_initial_log_verified": true,
+  "parent55_reuse_verified": true,
+  "training_updates_observed": 0
+}

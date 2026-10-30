@@ -1,0 +1,204 @@
+{
+  "status": "isolated_public_source_actual_raw15_physics_quality_and_render_passed",
+  "at": "2026-10-30T07:35:26.717413+00:00",
+  "source_provenance_sha256": "6eb92fffa70941119943ff2469bd7e9742bee520057cc84e1bd4bc8c71326391",
+  "artifact_manifest_sha256": "985d54aa54015e0300fecaca861a1a286ac37239cb0c9fe80705513a96036460",
+  "verified_local_input_files": 91,
+  "verified_motion_files": 55,
+  "verified_robot_asset_files": 36,
+  "initial_missing_fixture_failure_log_retained": "evidence/retention-public-entry-03.log",
+  "fresh_dependency_install_or_input_download_tested": false,
+  "existing_local_CPU_environment_used": true,
+  "public_checkpoint_lineage_verification": [
+    "retention-v1-1000",
+    "retention-parent-stage3-full"
+  ],
+  "new_denominator": 15,
+  "actual_public_CPU_summary_groups": {
+    "new": {
+      "denominator": 15,
+      "passed": 11,
+      "macro_return_original": 0.669939112663269,
+      "frame_weighted_return_original": 0.7582697264838948
+    }
+  },
+  "strict_passed": 7,
+  "post_initialization_resets": 0,
+  "all15_metrics_exactly_equal_private_matched_CPU": true,
+  "trajectory_arrays_exactly_equal": [
+    "state",
+    "reference_qpos",
+    "xy_error",
+    "hard_failure_aligned"
+  ],
+  "full_failed_clip_render_receipt": {
+    "clip": "88_07_stageii_unitree_g1",
+    "file": "videos/publication-retention-raw-cpu-1030-b-20261030T073441Z/88_07_stageii_unitree_g1.mp4",
+    "bytes": 1143155,
+    "sha256": "11d97d3e246c121077c37be645a6419034b904bb4c1476e7f0e71cdf88e16cfe",
+    "frames": 64,
+    "fps": 25,
+    "video_seconds": 2.56,
+    "physical_window_seconds": 2.52,
+    "complete_decode_passed": true,
+    "source_run": "publication-retention-raw-cpu-1030-b-20261030T073441Z",
+    "only_retained_actual_physics_states_rendered": true,
+    "reference_display_offset_m": [
+      0,
+      1.5,
+      0
+    ],
+    "fog_disabled_for_failed_tail_visibility": true,
+    "reference_version_or_variant": "raw",
+    "original_hard_gate_passed": true,
+    "tracking_quality_passed": false,
+    "contact_sheet": "evidence/publication-retention-raw-cpu-1030-b-20261030T073441Z-88_07_stageii_unitree_g1-contact-sheet.jpg"
+  },
+  "portable_font_render_actually_executed": true,
+  "GPU_jobs_started": 0,
+  "commands": [
+    {
+      "script": "tools/reconstruct_references.py",
+      "arguments": [],
+      "log_sha256": "6bacf8da5ca6dcbb30195aa59f0fadf6d5299277b5a4639cdb839402a5303ce9"
+    },
+    {
+      "script": "tools/evaluate_released_retention.py",
+      "arguments": [
+        "--name",
+        "retention-v1-1000",
+        "--checkpoint-file",
+        "[local]/unified-retention-v1-h100-1000.pt",
+        "--verify-only"
+      ],
+      "log_sha256": "3fcf5274905a4777a43124e14b03209d97b666531a86b5073449cd5346513e6d"
+    },
+    {
+      "script": "tools/evaluate_released_retention.py",
+      "arguments": [
+        "--name",
+        "retention-parent-stage3-full",
+        "--checkpoint-file",
+        "[local]/final-full.pt",
+        "--verify-only"
+      ],
+      "log_sha256": "8dda2ea3a7fc65b167de36085f2ecf274370e884169adc94c99d89e22d10979d"
+    },
+    {
+      "script": "tools/evaluate_released_retention.py",
+      "arguments": [
+        "--name",
+        "retention-v1-1000",
+        "--checkpoint-file",
+        "[local]/unified-retention-v1-h100-1000.pt",
+        "--suite",
+        "library",
+        "--reference-variant",
+        "raw",
+        "--group",
+        "new",
+        "--device",
+        "cpu",
+        "--mode",
+        "publication-retention-raw-cpu-1030-b-20261030T073441Z"
+      ],
+      "log_sha256": "e2bf191dfa11535dbdff5644074df3022dae96526d6c18e7615cbf6ec3dea5b3"
+    },
+    {
+      "script": "acro-library-20261027-b/scripts/assess_tracking.py",
+      "arguments": [
+        "--run",
+        "publication-retention-raw-cpu-1030-b-20261030T073441Z"
+      ],
+      "log_sha256": "f5b011a3d59b676b8fb1196f58dd692cbbbb522dab0aea43ee6f9ab2a8027080"
+    },
+    {
+      "script": "acro-library-20261027-b/scripts/audit_physical_contacts.py",
+      "arguments": [
+        "--run",
+        "publication-retention-raw-cpu-1030-b-20261030T073441Z"
+      ],
+      "log_sha256": "34b8285086e7bfd7c0c1186720ac11d56304059964484e41b08ecd3c023af5fd"
+    },
+    {
+      "script": "acro-library-20261027-b/scripts/combine_acceptance.py",
+      "arguments": [
+        "--run",
+        "publication-retention-raw-cpu-1030-b-20261030T073441Z"
+      ],
+      "log_sha256": "0a7dca03e93358d04c71408339303358f049b95d02cb6cdbc78755e737ab4224"
+    },
+    {
+      "script": "acro-library-20261027-b/scripts/render_library.py",
+      "arguments": [
+        "--run",
+        "publication-retention-raw-cpu-1030-b-20261030T073441Z",
+        "--clips",
+        "88_07_stageii_unitree_g1"
+      ],
+      "log_sha256": "1a7da541ebcb2a532422a9b8c0e778c11dea91447b2beb9bf0f2829cddc757bf"
+    }
+  ],
+  "publication_test_initial_issue": {
+    "classification": "isolated_validation_fixture_missing_robot_assets_before_physical_steps",
+    "robot_asset_files_omitted_then_restored": 36,
+    "original_source_geometry_hashes_preserved": true,
+    "original_log_sha256": "08799f4827ff55820a1647a347c40333d212498bf19bece7f9c0a16dfb17d56f",
+    "published_log_sha256": "386b541dd7efb82705db1e73bbfd2fc510b802505e83287a406e4282eb6e1863",
+    "public_log": "evidence/retention-public-entry-initial-fixture-failure.txt"
+  },
+  "public_render_example": {
+    "file": "validation/public-entry-render.mp4",
+    "sha256": "11d97d3e246c121077c37be645a6419034b904bb4c1476e7f0e71cdf88e16cfe",
+    "bytes": 1143155,
+    "size": [
+      1280,
+      720
+    ],
+    "frames": 64,
+    "fps": 25,
+    "video_seconds": 2.56,
+    "physical_window_seconds": 2.52,
+    "full_decode_passed": true,
+    "new_scientific_acceptance_sample": false
+  },
+  "pre_LF_normalization_source_provenance_sha256": "9af1209c3aa18e23d7e493cc91c160123af0f58e6b920d5d39b7773e38b118e4",
+  "pre_LF_normalization_artifact_manifest_sha256": "7b05c6dd538ac3597a0b8b96d4bb77039d2fdb52f97882d32c236dc9d3e5ca17",
+  "post_run_publication_metadata_EOL_normalized_to_LF": true,
+  "all_executed_source_bytes_unchanged_after_EOL_normalization": true,
+  "post_normalization_both_checkpoint_guards_passed": true,
+  "final_metadata_verification": {
+    "status": "canonical_LF_publication_metadata_and_both_checkpoint_source_guards_passed",
+    "at": "2026-10-30T07:44:05.246385+00:00",
+    "all_recorded_source_files_identical_to_successful_physical_validation": true,
+    "source_provenance_sha256_before_LF": "9af1209c3aa18e23d7e493cc91c160123af0f58e6b920d5d39b7773e38b118e4",
+    "source_provenance_sha256": "6eb92fffa70941119943ff2469bd7e9742bee520057cc84e1bd4bc8c71326391",
+    "artifact_manifest_sha256_before_LF": "7b05c6dd538ac3597a0b8b96d4bb77039d2fdb52f97882d32c236dc9d3e5ca17",
+    "artifact_manifest_sha256": "985d54aa54015e0300fecaca861a1a286ac37239cb0c9fe80705513a96036460",
+    "artifact_and_provenance_JSON_semantics_unchanged": true,
+    "checks": [
+      {
+        "status": "released_checkpoint_and_original_public_source_lineage_verified",
+        "checkpoint_name": "retention-v1-1000",
+        "checkpoint_sha256": "21b92ba3a03044d3a2425d354360086c7c5e4817133168044bdf10849a58f184",
+        "original_trial_plan_sha256": "e737aacaf113cf602be0eb6cb7b64a5b47e14451acdb003a4c19d9cbaa575a53",
+        "public_trial_plan_sha256": "aeb39c3c36a6c864c73b2aca5a2ab67b4fff9609cc4592fb97fbc3373f18c684",
+        "guarded_source_files": 84,
+        "physics_or_quality_assessed": false
+      },
+      {
+        "status": "released_checkpoint_and_original_public_source_lineage_verified",
+        "checkpoint_name": "retention-parent-stage3-full",
+        "checkpoint_sha256": "93bb8b830145c54092518eba8db1fb020d020eb72cdad1b619b4fc5470cc213d",
+        "original_trial_plan_sha256": "e737aacaf113cf602be0eb6cb7b64a5b47e14451acdb003a4c19d9cbaa575a53",
+        "public_trial_plan_sha256": "aeb39c3c36a6c864c73b2aca5a2ab67b4fff9609cc4592fb97fbc3373f18c684",
+        "guarded_source_files": 84,
+        "physics_or_quality_assessed": false
+      }
+    ],
+    "gitattributes_preserved": "* -text; exact bytes on every platform",
+    "new_publication_text_EOL": "LF",
+    "release_checksum_EOL": "LF",
+    "recorded_source_file_count": 277
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "checked_at": "2026-10-30T05:05:24.063886+00:00",
+  "CPU_CCI_status": "stopped",
+  "instance_count": "0/1",
+  "instance_list_empty": true,
+  "DNAT_unbound": true,
+  "original_published_command_sha256": "2c81f1b1fc679c393562231dcb6ab0d7b24532c1b959375eaebf138fe149d6f4",
+  "original_command_exact_readback_verified": true,
+  "CPU_actual_cores": 2,
+  "CPU_actual_memory_GiB": 8,
+  "GPU_requested": 0,
+  "automatic_stop_helper_not_verified": true,
+  "evidence": [
+    "cci-retention-recovery-1030-final-dom.txt",
+    "cci-retention-recovery-1030-final.png",
+    "cci-retention-recovery-1030-dnat-unbound-dom.txt",
+    "cci-retention-recovery-1030-original-command-restored.json"
+  ],
+  "deadline_local": "2026-10-30 13:04:03 +08:00",
+  "CPU_stop_and_empty_list_observed_by": "2026-10-30T05:01:52.689883+00:00",
+  "DNAT_unbound_observed_before_first_saved_stopped_DOM": true,
+  "original_command_readback_checked_at": "2026-10-30T05:05:08.778Z",
+  "all_cleanup_and_readback_completed_before_deadline": false,
+  "CPU_not_restarted_during_command_restore": true,
+  "limitation": "Resource stop and DNAT unbind were observed before the window deadline; original-command publication/readback completed after the deadline. Automatic resource release is not claimed."
+}

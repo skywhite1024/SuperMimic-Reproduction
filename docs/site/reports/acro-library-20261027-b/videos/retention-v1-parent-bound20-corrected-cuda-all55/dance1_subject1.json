@@ -1,0 +1,36 @@
+{
+  "clip": "dance1_subject1",
+  "file": "videos/retention-v1-parent-bound20-corrected-cuda-all55/dance1_subject1.mp4",
+  "bytes": 7105153,
+  "sha256": "9d46628b6b2c5953ac22cb50a20a0d4b34ca68d6b7b05562f1c01af3594d6a3f",
+  "frames": 3287,
+  "fps": 25,
+  "video_seconds": 131.48,
+  "physical_window_seconds": 131.46,
+  "complete_decode_passed": true,
+  "source_run": "retention-v1-parent-bound20-corrected-cuda-all55",
+  "only_retained_actual_physics_states_rendered": true,
+  "reference_display_offset_m": [
+    0,
+    1.5,
+    0
+  ],
+  "fog_disabled_for_failed_tail_visibility": true,
+  "reference_version_or_variant": "ground-calibration-v1",
+  "original_hard_gate_passed": false,
+  "tracking_quality_passed": false,
+  "contact_sheet": "evidence/retention-v1-parent-bound20-corrected-cuda-all55-dance1_subject1-contact-sheet.jpg",
+  "published_size": [
+    960,
+    540
+  ],
+  "original_full_resolution": {
+    "bytes": 50467503,
+    "sha256": "f3ec0dfc6fc56af2005e89ae6a0494bd84bacfa36a38643a558921bde79b80ab",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  "all_source_frames_and_failed_tail_preserved": true
+}

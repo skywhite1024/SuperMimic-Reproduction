@@ -1,0 +1,36 @@
+{
+  "clip": "dance2_subject4",
+  "file": "videos/retention-v1-corrected-cpu-all55/dance2_subject4.mp4",
+  "bytes": 10291006,
+  "sha256": "e8dacaeff1c9b7aca2c0cb0dca70cf6a20e1ff71ecbaec43206b2fafd80eebe3",
+  "frames": 5642,
+  "fps": 25,
+  "video_seconds": 225.68,
+  "physical_window_seconds": 225.66,
+  "complete_decode_passed": true,
+  "source_run": "retention-v1-corrected-cpu-all55",
+  "only_retained_actual_physics_states_rendered": true,
+  "reference_display_offset_m": [
+    0,
+    1.5,
+    0
+  ],
+  "fog_disabled_for_failed_tail_visibility": true,
+  "reference_version_or_variant": "ground-calibration-v1",
+  "original_hard_gate_passed": false,
+  "tracking_quality_passed": false,
+  "contact_sheet": "evidence/retention-v1-corrected-cpu-all55-dance2_subject4-contact-sheet.jpg",
+  "published_size": [
+    960,
+    540
+  ],
+  "original_full_resolution": {
+    "bytes": 78466789,
+    "sha256": "342fc3f2eec9d3f4c4db4237671d96c1dd19cb32c473ae2be9f2e7f563f8ad39",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  "all_source_frames_and_failed_tail_preserved": true
+}

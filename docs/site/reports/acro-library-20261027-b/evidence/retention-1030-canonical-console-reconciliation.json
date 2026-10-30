@@ -1,0 +1,8 @@
+{
+  "status": "full_console_payload_exactly_matches_hash_verified_canonical_AFS_proof",
+  "at": "2026-10-30T06:49:45.880227+00:00",
+  "proof_sha256": "8d27f36b974b63400f1044c53a474e94a249dd6e9924030c6f30cabc77e5dc83",
+  "training_updates": 1000,
+  "all800_retention_records_equal": true,
+  "new_training_triggered": false
+}

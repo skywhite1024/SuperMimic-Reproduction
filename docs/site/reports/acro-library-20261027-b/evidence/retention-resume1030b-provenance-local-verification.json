@@ -1,0 +1,49 @@
+{
+  "status": "archive_and_all8_provenance_files_verified",
+  "verified_at": "2026-10-30T06:49:00.209515+00:00",
+  "archive_bytes": 10555,
+  "archive_sha256": "6e04f94741245f82109273f8317b0b32dd6a1eecb79e271ad45db73a0a368ee3",
+  "files": [
+    {
+      "path": "retention-resume-1030b-plan.json",
+      "bytes": 2865,
+      "sha256": "6a2e2ab6b0f978646626432e1fcb4c00adbdf4b3fabad67455d86e4c1230eeb6"
+    },
+    {
+      "path": "retention-recovery-1030-plan.json",
+      "bytes": 3275,
+      "sha256": "0bf6d59d065ae9a94878b9205455866588277b5cb9912e7e920eb62ff20f0b3a"
+    },
+    {
+      "path": "scripts/run_retention_resume1030b.py",
+      "bytes": 10563,
+      "sha256": "cebc8747694386ede25b0a6b4642a9fb24ece5954971e8ee22f9e3fd3c2b5c93"
+    },
+    {
+      "path": "scripts/collect_retention_resume1030b.py",
+      "bytes": 3437,
+      "sha256": "3d912952aef636a8fa27575c820f19be9f0f6994c005d5b4472a446d58658fab"
+    },
+    {
+      "path": "evidence/gpu-retention-v1-1000.json",
+      "bytes": 2400,
+      "sha256": "2273893198d0e7085d4f84911da0c2e218288b32c698e341fcf14f564fa36b90"
+    },
+    {
+      "path": "evidence/retention-1030-dependency-preflight.json",
+      "bytes": 1378,
+      "sha256": "9dfcdf40233b254e363306aa6d2700911bfc533671a01d9fb510956f54e78248"
+    },
+    {
+      "path": "evidence/retention-1030-cpu-recovery-console.txt",
+      "bytes": 1024,
+      "sha256": "007cf2b7aaaead1bb7390bf8764269c6a31cd901b2db16696fe86296e23395fd"
+    },
+    {
+      "path": "evidence/retention-1030-cpu-recovery-console-v2.txt",
+      "bytes": 7054,
+      "sha256": "3ab6b348224da8d88edb7242fa45fed9a911dc7c210f8c21fbcda6cb47e5b198"
+    }
+  ],
+  "original_failed_receipt_preserved": true
+}

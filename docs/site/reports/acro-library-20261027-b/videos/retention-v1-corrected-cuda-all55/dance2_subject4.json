@@ -1,0 +1,36 @@
+{
+  "clip": "dance2_subject4",
+  "file": "videos/retention-v1-corrected-cuda-all55/dance2_subject4.mp4",
+  "bytes": 8868256,
+  "sha256": "2d469698b218d807d7907a90bd9328a3f6927cc9ab3d4564133a37ec71b2b150",
+  "frames": 5642,
+  "fps": 25,
+  "video_seconds": 225.68,
+  "physical_window_seconds": 225.66,
+  "complete_decode_passed": true,
+  "source_run": "retention-v1-corrected-cuda-all55",
+  "only_retained_actual_physics_states_rendered": true,
+  "reference_display_offset_m": [
+    0,
+    1.5,
+    0
+  ],
+  "fog_disabled_for_failed_tail_visibility": true,
+  "reference_version_or_variant": "ground-calibration-v1",
+  "original_hard_gate_passed": false,
+  "tracking_quality_passed": false,
+  "contact_sheet": "evidence/retention-v1-corrected-cuda-all55-dance2_subject4-contact-sheet.jpg",
+  "published_size": [
+    960,
+    540
+  ],
+  "original_full_resolution": {
+    "bytes": 73848989,
+    "sha256": "babc39f0ff8b282a87fe7ce789d2a6cf2af9d326c61ac9c8f048352fc6ea3a28",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  "all_source_frames_and_failed_tail_preserved": true
+}

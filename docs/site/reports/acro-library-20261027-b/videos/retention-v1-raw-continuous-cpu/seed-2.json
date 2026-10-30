@@ -1,0 +1,36 @@
+{
+  "clip": "seed-2",
+  "file": "videos/retention-v1-raw-continuous-cpu/seed-2.mp4",
+  "bytes": 5113636,
+  "sha256": "794f13616ec5423037fe620b55f5551b68c00b8e2e000fdee4b594c8d751841d",
+  "frames": 3001,
+  "fps": 25,
+  "video_seconds": 120.04,
+  "physical_window_seconds": 120.0,
+  "complete_decode_passed": true,
+  "source_run": "retention-v1-raw-continuous-cpu",
+  "only_retained_actual_physics_states_rendered": true,
+  "reference_display_offset_m": [
+    0,
+    1.5,
+    0
+  ],
+  "fog_disabled_for_failed_tail_visibility": true,
+  "reference_version_or_variant": "raw",
+  "original_hard_gate_passed": false,
+  "tracking_quality_passed": null,
+  "contact_sheet": "evidence/retention-v1-raw-continuous-cpu-seed-2-contact-sheet.jpg",
+  "published_size": [
+    960,
+    540
+  ],
+  "original_full_resolution": {
+    "bytes": 39679467,
+    "sha256": "af3ee3f1168427b9d989c286d0f21f9c37fbb0bfd7ee6b3e40d584b85479be4e",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  "all_source_frames_and_failed_tail_preserved": true
+}

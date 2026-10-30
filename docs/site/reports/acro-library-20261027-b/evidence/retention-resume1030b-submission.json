@@ -1,0 +1,16 @@
+{
+  "name": "supermimic-retention-USER_ID-1030b",
+  "uid": "4d3b706633474737bf5f882d2ec483a8",
+  "created_at_local": "2026-10-30 13:08:28 +08:00",
+  "status_at_creation": "starting",
+  "GPU": 1,
+  "vCPU": 4,
+  "RAM_GiB": 64,
+  "replicas": 1,
+  "restarts": 0,
+  "node_SSH": false,
+  "maximum_seconds": 4200,
+  "maximum_new_updates": 1000,
+  "command_sha256": "6b6fa06be644758d1f6f8cb0d0ed1c9838c31b0de070ab50babdc15ac137e648",
+  "checked_at": "2026-10-30T05:08:40.350Z"
+}

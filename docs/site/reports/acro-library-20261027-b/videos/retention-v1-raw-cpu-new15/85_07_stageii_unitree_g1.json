@@ -1,0 +1,36 @@
+{
+  "clip": "85_07_stageii_unitree_g1",
+  "file": "videos/retention-v1-raw-cpu-new15/85_07_stageii_unitree_g1.mp4",
+  "bytes": 392124,
+  "sha256": "91f1d38765e5bd906c9cc5c6c2a794a33ee547a457a6b81d2700427b3e705128",
+  "frames": 198,
+  "fps": 25,
+  "video_seconds": 7.92,
+  "physical_window_seconds": 7.9,
+  "complete_decode_passed": true,
+  "source_run": "retention-v1-raw-cpu-new15",
+  "only_retained_actual_physics_states_rendered": true,
+  "reference_display_offset_m": [
+    0,
+    1.5,
+    0
+  ],
+  "fog_disabled_for_failed_tail_visibility": true,
+  "reference_version_or_variant": "raw",
+  "original_hard_gate_passed": true,
+  "tracking_quality_passed": true,
+  "contact_sheet": "evidence/retention-v1-raw-cpu-new15-85_07_stageii_unitree_g1-contact-sheet.jpg",
+  "published_size": [
+    960,
+    540
+  ],
+  "original_full_resolution": {
+    "bytes": 2806799,
+    "sha256": "dda14e9a8826b4e057d7c05fcb06cceef881c66950120aa05ef9813f8f12d5a3",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  "all_source_frames_and_failed_tail_preserved": true
+}

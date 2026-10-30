@@ -1,0 +1,36 @@
+{
+  "clip": "seed-0",
+  "file": "videos/retention-v1-corrected-continuous-cuda/seed-0.mp4",
+  "bytes": 4847274,
+  "sha256": "ddb879e22bf8277ac3b0d0c07e7f5cf711b10338c75c43355c3983a7777c888b",
+  "frames": 3001,
+  "fps": 25,
+  "video_seconds": 120.04,
+  "physical_window_seconds": 120.0,
+  "complete_decode_passed": true,
+  "source_run": "retention-v1-corrected-continuous-cuda",
+  "only_retained_actual_physics_states_rendered": true,
+  "reference_display_offset_m": [
+    0,
+    1.5,
+    0
+  ],
+  "fog_disabled_for_failed_tail_visibility": true,
+  "reference_version_or_variant": "ground-calibration-v1",
+  "original_hard_gate_passed": true,
+  "tracking_quality_passed": null,
+  "contact_sheet": "evidence/retention-v1-corrected-continuous-cuda-seed-0-contact-sheet.jpg",
+  "published_size": [
+    960,
+    540
+  ],
+  "original_full_resolution": {
+    "bytes": 38760807,
+    "sha256": "eb33505655ea0bdff16ec55a956ffa6ff87447081aa94e29222a772f5f42dae7",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  "all_source_frames_and_failed_tail_preserved": true
+}

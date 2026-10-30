@@ -1,0 +1,34 @@
+{
+  "status": "canonical_LF_publication_metadata_and_both_checkpoint_source_guards_passed",
+  "at": "2026-10-30T07:44:05.246385+00:00",
+  "all_recorded_source_files_identical_to_successful_physical_validation": true,
+  "source_provenance_sha256_before_LF": "9af1209c3aa18e23d7e493cc91c160123af0f58e6b920d5d39b7773e38b118e4",
+  "source_provenance_sha256": "6eb92fffa70941119943ff2469bd7e9742bee520057cc84e1bd4bc8c71326391",
+  "artifact_manifest_sha256_before_LF": "7b05c6dd538ac3597a0b8b96d4bb77039d2fdb52f97882d32c236dc9d3e5ca17",
+  "artifact_manifest_sha256": "985d54aa54015e0300fecaca861a1a286ac37239cb0c9fe80705513a96036460",
+  "artifact_and_provenance_JSON_semantics_unchanged": true,
+  "checks": [
+    {
+      "status": "released_checkpoint_and_original_public_source_lineage_verified",
+      "checkpoint_name": "retention-v1-1000",
+      "checkpoint_sha256": "21b92ba3a03044d3a2425d354360086c7c5e4817133168044bdf10849a58f184",
+      "original_trial_plan_sha256": "e737aacaf113cf602be0eb6cb7b64a5b47e14451acdb003a4c19d9cbaa575a53",
+      "public_trial_plan_sha256": "aeb39c3c36a6c864c73b2aca5a2ab67b4fff9609cc4592fb97fbc3373f18c684",
+      "guarded_source_files": 84,
+      "physics_or_quality_assessed": false
+    },
+    {
+      "status": "released_checkpoint_and_original_public_source_lineage_verified",
+      "checkpoint_name": "retention-parent-stage3-full",
+      "checkpoint_sha256": "93bb8b830145c54092518eba8db1fb020d020eb72cdad1b619b4fc5470cc213d",
+      "original_trial_plan_sha256": "e737aacaf113cf602be0eb6cb7b64a5b47e14451acdb003a4c19d9cbaa575a53",
+      "public_trial_plan_sha256": "aeb39c3c36a6c864c73b2aca5a2ab67b4fff9609cc4592fb97fbc3373f18c684",
+      "guarded_source_files": 84,
+      "physics_or_quality_assessed": false
+    }
+  ],
+  "gitattributes_preserved": "* -text; exact bytes on every platform",
+  "new_publication_text_EOL": "LF",
+  "release_checksum_EOL": "LF",
+  "recorded_source_file_count": 277
+}

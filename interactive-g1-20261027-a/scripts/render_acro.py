@@ -12,6 +12,16 @@ from runtime import ROOT, UNI
 from unisupermimic.tasks.motion_tracking.g1.supermimic.render import comparison_xml
 
 
+def publication_font(size):
+    """Use an installed font without machine-specific absolute paths."""
+    for name in ("arial.ttf", "DejaVuSans.ttf"):
+        try:
+            return ImageFont.truetype(name, size)
+        except OSError:
+            pass
+    return ImageFont.load_default(size=size)
+
+
 def main():
     p=argparse.ArgumentParser();p.add_argument('--mode',required=True);a=p.parse_args()
     run=ROOT/'runs'/a.mode;summary=json.loads((run/'summary.json').read_text())
@@ -29,7 +39,7 @@ def main():
     model.vis.headlight.ambient[:]=.7;model.vis.headlight.diffuse[:]=.7
     data=mujoco.MjData(model);camera=mujoco.MjvCamera();camera.distance=4.8;camera.azimuth=145;camera.elevation=-15
     renderer=mujoco.Renderer(model,height=720,width=1280)
-    font=ImageFont.truetype('[local]/arial.ttf',16)
+    font=publication_font(20);small=publication_font(16)
     out=ROOT/'videos'/f'{a.mode}.mp4';assert not out.exists(),'Preserve prior rendered result'
     frames=0;offset=np.array([0.,1.5,0.])
     try:

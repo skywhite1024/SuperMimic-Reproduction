@@ -1,0 +1,12 @@
+{
+  "status": "exact_parent_policy_tensor_identity_and_all_four_CPU_runs_verified",
+  "parent_full_sha256": "93bb8b830145c54092518eba8db1fb020d020eb72cdad1b619b4fc5470cc213d",
+  "exported_policy_sha256": "4aa7a15f8475d54064db33b3333b772e4976f3ac133f98c03a7e39e49604e3b3",
+  "modes": {
+    "corrected": "stage3-actionbound20-corrected-cpu-all55",
+    "raw": "stage3-actionbound20-raw-cpu-new15",
+    "raw_sequences": "stage3-actionbound20-frozen-continuous-v1",
+    "corrected_sequences": "stage3-actionbound20-corrected-continuous-v1"
+  },
+  "no_CPU_resimulation": true
+}

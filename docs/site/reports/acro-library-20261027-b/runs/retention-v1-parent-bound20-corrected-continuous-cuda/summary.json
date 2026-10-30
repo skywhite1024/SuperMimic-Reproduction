@@ -1,0 +1,561 @@
+{
+  "mode": "retention-v1-parent-bound20-corrected-continuous-cuda",
+  "checkpoint": "/mnt/afs/USER_ID/SuperMimic/acro-library-20261027-b/runs/unified-h100-stage3-4000/final-full.pt",
+  "checkpoint_sha256": "93bb8b830145c54092518eba8db1fb020d020eb72cdad1b619b4fc5470cc213d",
+  "device": "cuda",
+  "frozen_reference_index_sha256": "92fdae6b84705548718fb90a09eb018158bf15d66d6c3b0028c5ed4d791ca799",
+  "reference_version": "continuous-corrected-v1",
+  "denominator": 3,
+  "new_full_clip_union_denominator": 15,
+  "wall_seconds": 214.78912149369717,
+  "no_controlled_state_writes_after_t0": true,
+  "post_initialization_resets": 0,
+  "passed_original_hard_gate": 1,
+  "trials": [
+    {
+      "seed": 0,
+      "elapsed_seconds": 120,
+      "post_initialization_resets": 0,
+      "hard_failure_frames": 0,
+      "first_hard_failure_s": null,
+      "original_return_until_first_failure": 0.812811553478241,
+      "root_xy_rmse_m": 0.16112150251865387,
+      "root_xy_peak_m": 0.7996526956558228,
+      "yaw_rmse_deg": 5.5928635597229,
+      "body_global_mean_m": 0.13014642894268036,
+      "body_local_mean_m": 0.053612396121025085,
+      "passed_original_hard_gate": true,
+      "terminal_last_second_root_speed_peak_m_s": 0.10548868775367737,
+      "terminal_last_second_joint_speed_rms_rad_s": 0.11408820003271103,
+      "terminal_last_second_pelvis_min_m": 0.7827041745185852,
+      "terminal_last_second_Rzz_min": 0.9994936585426331,
+      "transition_windows": [
+        {
+          "source": "walk2_subject1",
+          "group": "old_lafan",
+          "time_s": 1.0,
+          "hard_failure": false,
+          "xy_peak_m": 0.034569766372442245
+        },
+        {
+          "source": "88_08_stageii_unitree_g1",
+          "group": "new_raw_full_clip",
+          "time_s": 4.8,
+          "hard_failure": false,
+          "xy_peak_m": 0.04369472712278366
+        },
+        {
+          "source": "dance1_subject1",
+          "group": "old_lafan",
+          "time_s": 10.32,
+          "hard_failure": false,
+          "xy_peak_m": 0.5443149209022522
+        },
+        {
+          "source": "89_01_stageii_unitree_g1",
+          "group": "new_raw_full_clip",
+          "time_s": 14.12,
+          "hard_failure": false,
+          "xy_peak_m": 0.15330496430397034
+        },
+        {
+          "source": "run1_subject2",
+          "group": "old_lafan",
+          "time_s": 53.7,
+          "hard_failure": false,
+          "xy_peak_m": 0.10813527554273605
+        },
+        {
+          "source": "88_10_stageii_unitree_g1",
+          "group": "new_raw_full_clip",
+          "time_s": 57.5,
+          "hard_failure": false,
+          "xy_peak_m": 0.07372760027647018
+        },
+        {
+          "source": "jumps1_subject1",
+          "group": "old_lafan",
+          "time_s": 66.0,
+          "hard_failure": false,
+          "xy_peak_m": 0.2342052161693573
+        },
+        {
+          "source": "88_03_stageii_unitree_g1",
+          "group": "new_raw_full_clip",
+          "time_s": 69.8,
+          "hard_failure": false,
+          "xy_peak_m": 0.2460230439901352
+        },
+        {
+          "source": "walk1_subject5",
+          "group": "old_lafan",
+          "time_s": 73.46,
+          "hard_failure": false,
+          "xy_peak_m": 0.19177082180976868
+        },
+        {
+          "source": "run2_subject4",
+          "group": "old_lafan",
+          "time_s": 77.26,
+          "hard_failure": false,
+          "xy_peak_m": 0.39657723903656006
+        },
+        {
+          "source": "dance2_subject3",
+          "group": "old_lafan",
+          "time_s": 81.06,
+          "hard_failure": false,
+          "xy_peak_m": 0.1708574742078781
+        },
+        {
+          "source": "jumps1_subject5",
+          "group": "old_lafan",
+          "time_s": 84.86,
+          "hard_failure": false,
+          "xy_peak_m": 0.16700446605682373
+        },
+        {
+          "source": "walk3_subject1",
+          "group": "old_lafan",
+          "time_s": 88.66,
+          "hard_failure": false,
+          "xy_peak_m": 0.3739672303199768
+        },
+        {
+          "source": "run2_subject1",
+          "group": "old_lafan",
+          "time_s": 92.46,
+          "hard_failure": false,
+          "xy_peak_m": 0.7672064900398254
+        },
+        {
+          "source": "dance2_subject5",
+          "group": "old_lafan",
+          "time_s": 96.26,
+          "hard_failure": false,
+          "xy_peak_m": 0.3156234622001648
+        },
+        {
+          "source": "jumps1_subject5",
+          "group": "old_lafan",
+          "time_s": 100.06,
+          "hard_failure": false,
+          "xy_peak_m": 0.11661485582590103
+        },
+        {
+          "source": "walk3_subject2",
+          "group": "old_lafan",
+          "time_s": 103.86,
+          "hard_failure": false,
+          "xy_peak_m": 0.19886791706085205
+        },
+        {
+          "source": "run2_subject1",
+          "group": "old_lafan",
+          "time_s": 107.66,
+          "hard_failure": false,
+          "xy_peak_m": 0.768518328666687
+        },
+        {
+          "source": "dance2_subject2",
+          "group": "old_lafan",
+          "time_s": 111.46,
+          "hard_failure": false,
+          "xy_peak_m": 0.22274944186210632
+        },
+        {
+          "source": "jumps1_subject5",
+          "group": "old_lafan",
+          "time_s": 115.26,
+          "hard_failure": false,
+          "xy_peak_m": 0.17030443251132965
+        },
+        {
+          "source": "fixed_upright_terminal_hold",
+          "group": "terminal_hold",
+          "time_s": 116.2,
+          "hard_failure": false,
+          "xy_peak_m": 0.14569534361362457
+        }
+      ]
+    },
+    {
+      "seed": 1,
+      "elapsed_seconds": 120,
+      "post_initialization_resets": 0,
+      "hard_failure_frames": 3087,
+      "first_hard_failure_s": 6.84,
+      "original_return_until_first_failure": 0.04538034275174141,
+      "root_xy_rmse_m": 4.282353401184082,
+      "root_xy_peak_m": 12.564358711242676,
+      "yaw_rmse_deg": 78.28709411621094,
+      "body_global_mean_m": 2.5868723392486572,
+      "body_local_mean_m": 0.3740718960762024,
+      "passed_original_hard_gate": false,
+      "terminal_last_second_root_speed_peak_m_s": 0.9568440914154053,
+      "terminal_last_second_joint_speed_rms_rad_s": 3.109513282775879,
+      "terminal_last_second_pelvis_min_m": 0.061960071325302124,
+      "terminal_last_second_Rzz_min": -0.015325188636779785,
+      "transition_windows": [
+        {
+          "source": "walk3_subject4",
+          "group": "old_lafan",
+          "time_s": 1.0,
+          "hard_failure": false,
+          "xy_peak_m": 0.04141853749752045
+        },
+        {
+          "source": "88_07_stageii_unitree_g1",
+          "group": "new_raw_full_clip",
+          "time_s": 4.8,
+          "hard_failure": false,
+          "xy_peak_m": 0.2668015658855438
+        },
+        {
+          "source": "dance2_subject5",
+          "group": "old_lafan",
+          "time_s": 8.12,
+          "hard_failure": true,
+          "xy_peak_m": 1.304978370666504
+        },
+        {
+          "source": "88_11_stageii_unitree_g1",
+          "group": "new_raw_full_clip",
+          "time_s": 11.92,
+          "hard_failure": true,
+          "xy_peak_m": 1.3514957427978516
+        },
+        {
+          "source": "run1_subject2",
+          "group": "old_lafan",
+          "time_s": 46.42,
+          "hard_failure": false,
+          "xy_peak_m": 0.08480320125818253
+        },
+        {
+          "source": "85_06_stageii_unitree_g1",
+          "group": "new_raw_full_clip",
+          "time_s": 50.22,
+          "hard_failure": false,
+          "xy_peak_m": 0.052098967134952545
+        },
+        {
+          "source": "jumps1_subject1",
+          "group": "old_lafan",
+          "time_s": 58.84,
+          "hard_failure": false,
+          "xy_peak_m": 0.18017002940177917
+        },
+        {
+          "source": "88_09_stageii_unitree_g1",
+          "group": "new_raw_full_clip",
+          "time_s": 62.64,
+          "hard_failure": false,
+          "xy_peak_m": 0.5580379962921143
+        },
+        {
+          "source": "walk3_subject5",
+          "group": "old_lafan",
+          "time_s": 69.64,
+          "hard_failure": true,
+          "xy_peak_m": 1.175573706626892
+        },
+        {
+          "source": "88_06_stageii_unitree_g1",
+          "group": "new_raw_full_clip",
+          "time_s": 73.44,
+          "hard_failure": true,
+          "xy_peak_m": 1.5577741861343384
+        },
+        {
+          "source": "walk2_subject4",
+          "group": "old_lafan",
+          "time_s": 78.0,
+          "hard_failure": true,
+          "xy_peak_m": 3.017817258834839
+        },
+        {
+          "source": "run1_subject5",
+          "group": "old_lafan",
+          "time_s": 81.8,
+          "hard_failure": true,
+          "xy_peak_m": 5.464259147644043
+        },
+        {
+          "source": "dance2_subject4",
+          "group": "old_lafan",
+          "time_s": 85.6,
+          "hard_failure": true,
+          "xy_peak_m": 3.951991558074951
+        },
+        {
+          "source": "jumps1_subject1",
+          "group": "old_lafan",
+          "time_s": 89.4,
+          "hard_failure": true,
+          "xy_peak_m": 4.170779705047607
+        },
+        {
+          "source": "walk2_subject3",
+          "group": "old_lafan",
+          "time_s": 93.2,
+          "hard_failure": true,
+          "xy_peak_m": 3.6336116790771484
+        },
+        {
+          "source": "run2_subject1",
+          "group": "old_lafan",
+          "time_s": 97.0,
+          "hard_failure": true,
+          "xy_peak_m": 3.017437696456909
+        },
+        {
+          "source": "dance2_subject2",
+          "group": "old_lafan",
+          "time_s": 100.8,
+          "hard_failure": true,
+          "xy_peak_m": 5.514138221740723
+        },
+        {
+          "source": "jumps1_subject1",
+          "group": "old_lafan",
+          "time_s": 104.6,
+          "hard_failure": true,
+          "xy_peak_m": 6.669072151184082
+        },
+        {
+          "source": "walk1_subject1",
+          "group": "old_lafan",
+          "time_s": 108.4,
+          "hard_failure": true,
+          "xy_peak_m": 9.263594627380371
+        },
+        {
+          "source": "run2_subject4",
+          "group": "old_lafan",
+          "time_s": 112.2,
+          "hard_failure": true,
+          "xy_peak_m": 11.961749076843262
+        },
+        {
+          "source": "fixed_upright_terminal_hold",
+          "group": "terminal_hold",
+          "time_s": 116.0,
+          "hard_failure": true,
+          "xy_peak_m": 12.489352226257324
+        }
+      ]
+    },
+    {
+      "seed": 2,
+      "elapsed_seconds": 120,
+      "post_initialization_resets": 0,
+      "hard_failure_frames": 3923,
+      "first_hard_failure_s": 40.96,
+      "original_return_until_first_failure": 0.2599886357784271,
+      "root_xy_rmse_m": 3.9890670776367188,
+      "root_xy_peak_m": 12.102313995361328,
+      "yaw_rmse_deg": 87.51737976074219,
+      "body_global_mean_m": 2.585339307785034,
+      "body_local_mean_m": 0.48404383659362793,
+      "passed_original_hard_gate": false,
+      "terminal_last_second_root_speed_peak_m_s": 1.0318636894226074,
+      "terminal_last_second_joint_speed_rms_rad_s": 3.2913336753845215,
+      "terminal_last_second_pelvis_min_m": 0.0595468245446682,
+      "terminal_last_second_Rzz_min": -0.09849035739898682,
+      "transition_windows": [
+        {
+          "source": "walk2_subject4",
+          "group": "old_lafan",
+          "time_s": 1.0,
+          "hard_failure": false,
+          "xy_peak_m": 0.03891894593834877
+        },
+        {
+          "source": "85_07_stageii_unitree_g1",
+          "group": "new_raw_full_clip",
+          "time_s": 4.8,
+          "hard_failure": false,
+          "xy_peak_m": 0.03502635285258293
+        },
+        {
+          "source": "dance1_subject1",
+          "group": "old_lafan",
+          "time_s": 13.5,
+          "hard_failure": false,
+          "xy_peak_m": 0.12819573283195496
+        },
+        {
+          "source": "90_08_stageii_unitree_g1",
+          "group": "new_raw_full_clip",
+          "time_s": 17.3,
+          "hard_failure": false,
+          "xy_peak_m": 0.1457320600748062
+        },
+        {
+          "source": "run1_subject5",
+          "group": "old_lafan",
+          "time_s": 23.62,
+          "hard_failure": false,
+          "xy_peak_m": 0.11651890724897385
+        },
+        {
+          "source": "90_19_stageii_unitree_g1",
+          "group": "new_raw_full_clip",
+          "time_s": 27.42,
+          "hard_failure": false,
+          "xy_peak_m": 0.2455810308456421
+        },
+        {
+          "source": "jumps1_subject2",
+          "group": "old_lafan",
+          "time_s": 36.82,
+          "hard_failure": false,
+          "xy_peak_m": 0.3453138768672943
+        },
+        {
+          "source": "90_14_stageii_unitree_g1",
+          "group": "new_raw_full_clip",
+          "time_s": 40.62,
+          "hard_failure": true,
+          "xy_peak_m": 2.9974348545074463
+        },
+        {
+          "source": "walk3_subject4",
+          "group": "old_lafan",
+          "time_s": 48.32,
+          "hard_failure": true,
+          "xy_peak_m": 1.5322145223617554
+        },
+        {
+          "source": "143_34_stageii_unitree_g1",
+          "group": "new_raw_full_clip",
+          "time_s": 52.12,
+          "hard_failure": true,
+          "xy_peak_m": 2.4818332195281982
+        },
+        {
+          "source": "dance2_subject3",
+          "group": "old_lafan",
+          "time_s": 65.88,
+          "hard_failure": true,
+          "xy_peak_m": 2.000883102416992
+        },
+        {
+          "source": "90_15_stageii_unitree_g1",
+          "group": "new_raw_full_clip",
+          "time_s": 69.68,
+          "hard_failure": true,
+          "xy_peak_m": 1.857463002204895
+        },
+        {
+          "source": "walk4_subject1",
+          "group": "old_lafan",
+          "time_s": 80.3,
+          "hard_failure": true,
+          "xy_peak_m": 1.7310861349105835
+        },
+        {
+          "source": "run1_subject2",
+          "group": "old_lafan",
+          "time_s": 84.1,
+          "hard_failure": true,
+          "xy_peak_m": 1.5988047122955322
+        },
+        {
+          "source": "dance2_subject5",
+          "group": "old_lafan",
+          "time_s": 87.9,
+          "hard_failure": true,
+          "xy_peak_m": 2.8431544303894043
+        },
+        {
+          "source": "jumps1_subject1",
+          "group": "old_lafan",
+          "time_s": 91.7,
+          "hard_failure": true,
+          "xy_peak_m": 3.804246425628662
+        },
+        {
+          "source": "walk3_subject1",
+          "group": "old_lafan",
+          "time_s": 95.5,
+          "hard_failure": true,
+          "xy_peak_m": 3.3930156230926514
+        },
+        {
+          "source": "run1_subject5",
+          "group": "old_lafan",
+          "time_s": 99.3,
+          "hard_failure": true,
+          "xy_peak_m": 3.814551830291748
+        },
+        {
+          "source": "dance1_subject2",
+          "group": "old_lafan",
+          "time_s": 103.1,
+          "hard_failure": true,
+          "xy_peak_m": 6.4565839767456055
+        },
+        {
+          "source": "jumps1_subject2",
+          "group": "old_lafan",
+          "time_s": 106.9,
+          "hard_failure": true,
+          "xy_peak_m": 7.320322513580322
+        },
+        {
+          "source": "walk2_subject1",
+          "group": "old_lafan",
+          "time_s": 110.7,
+          "hard_failure": true,
+          "xy_peak_m": 9.921188354492188
+        },
+        {
+          "source": "run2_subject1",
+          "group": "old_lafan",
+          "time_s": 114.5,
+          "hard_failure": true,
+          "xy_peak_m": 11.98852252960205
+        },
+        {
+          "source": "fixed_upright_terminal_hold",
+          "group": "terminal_hold",
+          "time_s": 116.2,
+          "hard_failure": true,
+          "xy_peak_m": 12.082159042358398
+        }
+      ]
+    }
+  ],
+  "controller_variant": "action-output-bound-20-v1",
+  "reference_variant": "ground-calibration-v1",
+  "frozen_parent_control": true,
+  "action_output_bound": [
+    -20,
+    20
+  ],
+  "one_student_policy": true,
+  "deployed_teachers": 0,
+  "retention_trial_plan_sha256": "e737aacaf113cf602be0eb6cb7b64a5b47e14451acdb003a4c19d9cbaa575a53",
+  "action_bound_observations": [
+    {
+      "clip": "seed-0",
+      "active_action_elements": 174000,
+      "clipped_elements": 0,
+      "peak_raw_output": 20.0
+    },
+    {
+      "clip": "seed-1",
+      "active_action_elements": 174000,
+      "clipped_elements": 346,
+      "peak_raw_output": 26.0
+    },
+    {
+      "clip": "seed-2",
+      "active_action_elements": 174000,
+      "clipped_elements": 1041,
+      "peak_raw_output": 25.25
+    }
+  ]
+}

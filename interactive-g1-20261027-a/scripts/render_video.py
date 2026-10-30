@@ -12,6 +12,16 @@ from runtime import ROOT, UNI
 from unisupermimic.tasks.motion_tracking.g1.supermimic.render import comparison_xml
 
 
+def publication_font(size):
+    """Use an installed font without machine-specific absolute paths."""
+    for name in ("arial.ttf", "DejaVuSans.ttf"):
+        try:
+            return ImageFont.truetype(name, size)
+        except OSError:
+            pass
+    return ImageFont.load_default(size=size)
+
+
 def main():
     p=argparse.ArgumentParser();p.add_argument('--mode',default='baseline');p.add_argument('--seed',type=int,default=0);p.add_argument('--limit',type=int,default=0)
     args=p.parse_args();run=ROOT/'runs'/args.mode
@@ -28,7 +38,7 @@ def main():
     model.vis.headlight.ambient[:]=.7;model.vis.headlight.diffuse[:]=.7
     data=mujoco.MjData(model);camera=mujoco.MjvCamera();camera.distance=5.6;camera.azimuth=135;camera.elevation=-18
     renderer=mujoco.Renderer(model,height=720,width=1280)
-    font=ImageFont.truetype('[local]/arial.ttf',16)
+    font=publication_font(19);small=publication_font(16)
     videos=ROOT/'videos';videos.mkdir(exist_ok=True);out=videos/f'{args.mode}-seed{args.seed}{"-preview" if args.limit else ""}.mp4'
     ghost_offset=np.array([0.,1.5,0.])
     whole=np.concatenate([policy[:,:2],reference[:,:2]],0);lower=whole.min(0)-.5;span=np.maximum(whole.max(0)-lower+.5,1)

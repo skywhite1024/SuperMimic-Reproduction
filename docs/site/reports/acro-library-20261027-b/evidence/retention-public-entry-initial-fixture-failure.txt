@@ -1,0 +1,54 @@
+Traceback (most recent call last):
+  File "[local]/xml.py", line 96, in _materialize_spec_xml
+    f.write(spec.to_xml())
+            ^^^^^^^^^^^^^
+ValueError: Error: Error opening file '[local]/left_hip_roll_link.STL'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "[local]/evaluate_released_retention.py", line 119, in <module>
+    main()
+  File "[local]/evaluate_released_retention.py", line 99, in main
+    evaluator.main()
+  File "[local]/evaluate_library.py", line 24, in main
+    env=make_env(files,device=a.device,observation_dim=dimension,evaluation=True)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[local]/runtime.py", line 52, in make_env
+    return create_env(cfg,num_envs=len(files) if num_envs is None else num_envs,env_cfg_override=override)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[local]/config_adapter.py", line 162, in create_env
+    return registry.make(
+           ^^^^^^^^^^^^^^
+  File "[local]/registry.py", line 293, in make
+    env = factory(env_cfg, num_envs=num_envs, backend_type=sim_backend)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[local]/env.py", line 168, in make_supermimic_env
+    backend = create_backend(
+              ^^^^^^^^^^^^^^^
+  File "[local]/backend_factory.py", line 335, in create_backend
+    return unisim.create_backend(backend_type, scene, num_envs, sim_dt, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[local]/factory.py", line 35, in create_backend
+    return _create_backend(backend_type, scene, num_envs, sim_dt, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[local]/factory.py", line 229, in _create_backend
+    return MuJoCoBackend(cast(SceneCfg, scene), num_envs, sim_dt, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[local]/backend.py", line 729, in __init__
+    self._initialize(
+  File "[local]/backend.py", line 847, in _initialize
+    self._model = self._load_base_model()
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "[local]/backend.py", line 1636, in _load_base_model
+    model_path, tmp_paths, tracked_body_ids, valid_bnames = self._prepare_model_xml()
+                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[local]/backend.py", line 1679, in _prepare_model_xml
+    model_path, tracked_body_ids, valid_bnames = bind_tracking_sensors(
+                                                 ^^^^^^^^^^^^^^^^^^^^^^
+  File "[local]/xml.py", line 542, in bind_tracking_sensors
+    return _materialize_spec_xml(spec, model_file), tracked_body_ids, valid_bnames
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[local]/xml.py", line 98, in _materialize_spec_xml
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor

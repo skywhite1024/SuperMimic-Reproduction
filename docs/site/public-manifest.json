@@ -31,9 +31,16 @@
       "report": "bones-seed-20261026-a/report/preparation-status.html",
       "original_sha256": "bc8e3564f25ae2d0903e91966dc9d27a364ac2781b448a8de88b3b96d30785ac",
       "public_sha256": "e083ff5754b3c3fc311a1fbd97689f97ee586fc5f1e8391416cc18c4fe57e057"
+    },
+    {
+      "report": "acro-library-20261027-b/retention-1030-report.html",
+      "original_sha256": "0f6b79576f78abb9323b6fc0e1527bd21e5b95d0c0920007f1f3ad9133d35b9b",
+      "public_sha256": "b9d29213929c575fa206438c7540556ad5b1bfda53ecc4b51b6c6ea5664fb794",
+      "public_status_display": "Show completed update budget and failed adoption condition; internal execution-stage identifier remains only in evidence",
+      "private_authorization_and_session_context_omitted": true
     }
   ],
-  "video_count": 151,
+  "video_count": 266,
   "videos": [
     {
       "file": "acro-library-20261027-b/videos/parent18k-frozen-continuous-v1/seed-0.mp4",
@@ -3507,6 +3514,2995 @@
       "sha256": "3e23926b072982f8b5fe0d1b9b88bdfc72eb3405a38784cc3b9ba2ab2ff5fe15",
       "full_decode_passed": true,
       "cached": true
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-parent-bound20-corrected-cuda-all55/143_34_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 13.0,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 13.0,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 374139,
+      "sha256": "125cde746e864772cb5382e0a995fa01340871d39c83de4cd48e924761f393c4",
+      "original_full_resolution_sha256": "d6806a13940e78865727e2aca0ec51a941ace6fc7965bb91bb6d64724fa1d47b",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-parent-bound20-corrected-cuda-all55"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-parent-bound20-corrected-cuda-all55/85_06_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 7.84,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 7.84,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 377242,
+      "sha256": "e0f42240466eb0ca354c6ed88a4427fa02b6000193b35b176e203e690d670101",
+      "original_full_resolution_sha256": "1f43bd67ef997270128ed0288c6a049f00c470eb8b1e14d03e536776c83d7f0a",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-parent-bound20-corrected-cuda-all55"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-parent-bound20-corrected-cuda-all55/85_07_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 7.92,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 7.92,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 393701,
+      "sha256": "97157195b8b585fbf961545c6791cf2d4e02af5d54b97dca082b0e034a45724e",
+      "original_full_resolution_sha256": "a7a2c9c03e153bee1610fea15bf1ee58c1336204b2664f1847b5e8867916be46",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-parent-bound20-corrected-cuda-all55"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-parent-bound20-corrected-cuda-all55/88_03_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 2.88,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 2.88,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 63943,
+      "sha256": "2582875ddee357d133e66a91f3aa5805e4412b5ca73c75e2888c646d56e5c556",
+      "original_full_resolution_sha256": "bbe5c0f8e80dac39cdd92ffc5c82347a8ac7d5b86e2fffb6cd863405caad90d0",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-parent-bound20-corrected-cuda-all55"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-parent-bound20-corrected-cuda-all55/88_06_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 3.8,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 3.8,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 256581,
+      "sha256": "16ecc0221aa02b2e5aeb77ca78f3378a55264a369828f9db1f26436152ede2f9",
+      "original_full_resolution_sha256": "cc52b5e6f33c40475d8fdc9cba6ec0b169663c37928449df0517176ceed56119",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-parent-bound20-corrected-cuda-all55"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-parent-bound20-corrected-cuda-all55/88_07_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 2.56,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 2.56,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 200234,
+      "sha256": "d239f3a88afc389e120d34d5ea54fc889783f854114b3d9dc7bb5f0cb634a144",
+      "original_full_resolution_sha256": "03e8c875ed336266d93042eec6387747d165eae3b72b2434a3e8ed99b63ba0bf",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-parent-bound20-corrected-cuda-all55"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-parent-bound20-corrected-cuda-all55/88_08_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 4.76,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 4.76,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 260690,
+      "sha256": "f228c363045f3845b6f8a0036023b00a014e97081a87d773796f48638dc2a4f2",
+      "original_full_resolution_sha256": "4d2d460023352cd4cab6b573dfe076402181dc074a797dfdb9bada8eeddd3ed7",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-parent-bound20-corrected-cuda-all55"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-parent-bound20-corrected-cuda-all55/88_09_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 6.24,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 6.24,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 346241,
+      "sha256": "f6be45b9f35211973ff31b14504699c3bb4429f0d399c07a6e18045530051b10",
+      "original_full_resolution_sha256": "61fde01a888bb1b9331f6f6935bea5f0be17857f15a934fbc426e9d8ccf3fc14",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-parent-bound20-corrected-cuda-all55"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-parent-bound20-corrected-cuda-all55/88_10_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 7.72,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 7.72,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 343703,
+      "sha256": "33541b836c49633eeb9e7f04d25d20970a938a274cdb0efebb321ee7026c890f",
+      "original_full_resolution_sha256": "66143a056399b26ab04bd7393225fc4aaea2494702943239b3cfa0bd6382b413",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-parent-bound20-corrected-cuda-all55"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-parent-bound20-corrected-cuda-all55/88_11_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 33.72,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 33.72,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 1468729,
+      "sha256": "87b616e0820acc27913f34cc3b93c2f01910ff771e46e363edde4b55ee38411c",
+      "original_full_resolution_sha256": "bfb7f0d1a428a7d61b43eb0ee2b9251a6d9b55d61321b1972c6753ddcf757390",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-parent-bound20-corrected-cuda-all55"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-parent-bound20-corrected-cuda-all55/89_01_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 38.8,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 38.8,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 1126555,
+      "sha256": "f2a2f08bc617b023cbfb07861259634e23da53087df7b8ce170f6eb6bdaf1553",
+      "original_full_resolution_sha256": "42711bb5f6ea3346841e5cc2a4820007cfc2fc231784f05725e60f03f348cef0",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-parent-bound20-corrected-cuda-all55"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-parent-bound20-corrected-cuda-all55/90_08_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 5.56,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 5.56,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 231672,
+      "sha256": "6ffd794a6de64a733e282777e48c3bb62dc949df979992a607693cd75e7a3dae",
+      "original_full_resolution_sha256": "6927f7771b72e8550a22a6a25596e1ff9cf6e313a8a588274a6b202203265edb",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-parent-bound20-corrected-cuda-all55"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-parent-bound20-corrected-cuda-all55/90_14_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 6.92,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 6.92,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 287844,
+      "sha256": "7c4bcace0a15809232521c6b19fc49f836bd955bfc77c160b8b44929d9eacad3",
+      "original_full_resolution_sha256": "538e631b9ee2544c4badd1e4040fb0c806277558694d02dce7172d27d940ca28",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-parent-bound20-corrected-cuda-all55"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-parent-bound20-corrected-cuda-all55/90_15_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 9.84,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 9.84,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 353984,
+      "sha256": "226bd4cb19be6ca417a7461294189abfed567d3b60e75671652ad6628ac6c15b",
+      "original_full_resolution_sha256": "ab56b4bd944c50d8f71a058b0430f05a7f612f37b7ec12c98d77168d9322a1de",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-parent-bound20-corrected-cuda-all55"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-parent-bound20-corrected-cuda-all55/90_19_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 8.64,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 8.64,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 411052,
+      "sha256": "965f0b6ee7fa8f1a0837cbedbb35c6962552d6f6179865aacbe65939ee072b9b",
+      "original_full_resolution_sha256": "acc9a4ce78b54fa5bd8f629c2f2ee93113adabf3ffa596bb241bdec1f351f69c",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-parent-bound20-corrected-cuda-all55"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-parent-bound20-corrected-cuda-all55/dance1_subject1.mp4",
+      "source": {
+        "duration": 131.48,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 131.48,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 7105153,
+      "sha256": "9d46628b6b2c5953ac22cb50a20a0d4b34ca68d6b7b05562f1c01af3594d6a3f",
+      "original_full_resolution_sha256": "f3ec0dfc6fc56af2005e89ae6a0494bd84bacfa36a38643a558921bde79b80ab",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-parent-bound20-corrected-cuda-all55"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-parent-bound20-raw-cuda-new15/143_34_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 13.0,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 13.0,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 374074,
+      "sha256": "bb8cb6cac7464b3ab36642d3a3538de556ad3885f9f29ca677f8b23252cb7b2d",
+      "original_full_resolution_sha256": "1b9b1c676503de6793f1352b6318e72f504d4dcd4773fcf67c9fda6b9835bff7",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-parent-bound20-raw-cuda-new15"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-parent-bound20-raw-cuda-new15/85_06_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 7.84,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 7.84,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 378507,
+      "sha256": "b3fa4a6ab3b53f32a54836aaf36ebebe6e57cd6f74018636cb8c9e31c0d4b539",
+      "original_full_resolution_sha256": "424e70d3564104bfb2892ecad6a4655ec515d0690575f2c738c5c60de029b65d",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-parent-bound20-raw-cuda-new15"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-parent-bound20-raw-cuda-new15/85_07_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 7.92,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 7.92,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 394632,
+      "sha256": "efa4902dab87dd4fa3ae7b1221ae2e427ce37bfe19be097ba9115c4a6db97d72",
+      "original_full_resolution_sha256": "4d589dcf76ab64607f8a33399738c4ac07d7c2c3e70431d600d99185c82d8d75",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-parent-bound20-raw-cuda-new15"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-parent-bound20-raw-cuda-new15/88_03_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 2.88,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 2.88,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 63870,
+      "sha256": "9f4a722fd2803aafb8706c54017f3113d61f3f6e82ef248eaac2e0e26628da6c",
+      "original_full_resolution_sha256": "5d16bb7dd0ec9e451781f64adf4d9119e684ae15edd3a6e3a2509162e9c1d8de",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-parent-bound20-raw-cuda-new15"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-parent-bound20-raw-cuda-new15/88_06_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 3.8,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 3.8,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 256333,
+      "sha256": "a4b6aca2d9923680d5b9779898577d35753de613746b7e689ac5601496a5c47d",
+      "original_full_resolution_sha256": "b8573ab3ba85a90fdd86b4866934cef400b4e95ad439140988b00b2a499d12f2",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-parent-bound20-raw-cuda-new15"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-parent-bound20-raw-cuda-new15/88_07_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 2.56,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 2.56,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 200396,
+      "sha256": "ee1a33adf9771ddadc6921742509ab9dfe77c5e8148bc0fd2e1b379069232f80",
+      "original_full_resolution_sha256": "beecf2628af68e08f46fde5dee452476264d022df2e3b7b0faaea95865ac073f",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-parent-bound20-raw-cuda-new15"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-parent-bound20-raw-cuda-new15/88_08_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 4.76,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 4.76,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 257700,
+      "sha256": "92912a498bebde34dafd0a1080937fc24fea337dce7b29d172f4f8b18d3cff54",
+      "original_full_resolution_sha256": "b91ea182bfa8bb6f6312d6659bd74185bc4ab1063540e142c9b49cf09cdbeeda",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-parent-bound20-raw-cuda-new15"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-parent-bound20-raw-cuda-new15/88_09_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 6.24,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 6.24,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 335754,
+      "sha256": "59ff942ee2f004039842aac367468b0df40a05333ccc991b2a375bdcd9d17055",
+      "original_full_resolution_sha256": "5f35e0681ad85424c9a34ce8743d660eaebf537e7af29e6ef45d311bda8e30fd",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-parent-bound20-raw-cuda-new15"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-parent-bound20-raw-cuda-new15/88_10_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 7.72,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 7.72,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 342456,
+      "sha256": "ec7b905919e092f50c6898b1ba55473d9ca302288e1475cad93e9b982f85f0ed",
+      "original_full_resolution_sha256": "55eb49da40a003b700d5e79f676faa1694fdb1ad22135957d2ffb98144c6ce2c",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-parent-bound20-raw-cuda-new15"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-parent-bound20-raw-cuda-new15/88_11_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 33.72,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 33.72,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 1470534,
+      "sha256": "9cc2af962ac2f1884d68c1c5908c6e6bf94818284efcdb8a92efea5cc5072b7c",
+      "original_full_resolution_sha256": "ece5959e3497afb808c9d9e64e118658dc44c2c4bbd24438b91469e29976af4f",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-parent-bound20-raw-cuda-new15"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-parent-bound20-raw-cuda-new15/89_01_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 38.8,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 38.8,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 1123299,
+      "sha256": "e13220de38b74ce6a26e2835b78a791f6d7df4268187c66edca0e91e4e683f13",
+      "original_full_resolution_sha256": "3dcb51e3c04139b75242c905fa9cb64ea16b5162f30951e870a9f1938dc7989b",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-parent-bound20-raw-cuda-new15"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-parent-bound20-raw-cuda-new15/90_08_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 5.56,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 5.56,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 230005,
+      "sha256": "bf42678374278f3901467b6b9a780c2dfcfa847d97b10413a0ef053b3b9a034d",
+      "original_full_resolution_sha256": "a4f94651cb9e7d7e8ff3d7f15123ca424c38b87a5d4918fa5c860048c4c69cf3",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-parent-bound20-raw-cuda-new15"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-parent-bound20-raw-cuda-new15/90_14_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 6.92,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 6.92,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 288423,
+      "sha256": "6bfb64ec72cce576ce35315b17590fcc01c9b9beffaca6cdb35c29c33c80ad4f",
+      "original_full_resolution_sha256": "3ee3d0a27c17c1315e182a92ceecb3fb79760f7634ead6ebc0ef1e4ade41e15c",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-parent-bound20-raw-cuda-new15"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-parent-bound20-raw-cuda-new15/90_15_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 9.84,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 9.84,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 355387,
+      "sha256": "b09a53e60a951576c66ed6853a733af0caa6e68c84a69f6c69869fde8e81ebc9",
+      "original_full_resolution_sha256": "2b04c6b4d1880657db46c560674bc3278422c377df780b90f9bbc404a6a02e2e",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-parent-bound20-raw-cuda-new15"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-parent-bound20-raw-cuda-new15/90_19_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 8.64,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 8.64,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 406760,
+      "sha256": "0d663ab305481bf8e999b54abfd4757574055fa700f09850020d1de876c7d81e",
+      "original_full_resolution_sha256": "2d18dd5bedd8ec3c618e819f78a7afba3efae279d7f5b70da3aca59e7268f142",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-parent-bound20-raw-cuda-new15"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-parent-bound20-raw-continuous-cuda/seed-0.mp4",
+      "source": {
+        "duration": 120.04,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 120.04,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 4809095,
+      "sha256": "05f26690defa888aa2e481dd6bde07c30fd9e87b76f6673fb604f3ad9bc3568c",
+      "original_full_resolution_sha256": "341536d0b5166e8d39def05c95128237f5bf3750ae4095e7a98f2f307d67724d",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-parent-bound20-raw-continuous-cuda"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-parent-bound20-raw-continuous-cuda/seed-1.mp4",
+      "source": {
+        "duration": 120.04,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 120.04,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 4830496,
+      "sha256": "e464f89c393e7b894425c70a443be47de81bb2554931788ec0be58199996c8c4",
+      "original_full_resolution_sha256": "2fd7ab9416d3fd3df47a3d135f9c287174883d8adb1c51c42cbd57a505f34831",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-parent-bound20-raw-continuous-cuda"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-parent-bound20-raw-continuous-cuda/seed-2.mp4",
+      "source": {
+        "duration": 120.04,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 120.04,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 4852012,
+      "sha256": "1972ea44a21a62d3d19abfea7e5df4d8f3f31cec1e84f792ca57cf962001c27e",
+      "original_full_resolution_sha256": "baf8f3280bea8ad2e2d3f8bdac7cca1843f77266c4842ff4ac81c78941c331fe",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-parent-bound20-raw-continuous-cuda"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-parent-bound20-corrected-continuous-cuda/seed-0.mp4",
+      "source": {
+        "duration": 120.04,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 120.04,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 4812573,
+      "sha256": "e0057ceda4210bb4cb7063f97ecdfbca62ada7ff7119aff8d65a55efd0ca8a28",
+      "original_full_resolution_sha256": "643d95da52c1b45521082de7fd8ce0430faaa3c2c03f59aa11357c1f37ec9952",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-parent-bound20-corrected-continuous-cuda"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-parent-bound20-corrected-continuous-cuda/seed-1.mp4",
+      "source": {
+        "duration": 120.04,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 120.04,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 5257956,
+      "sha256": "b47d196ebe3c83ae87aeecf095863277152a8be69199a9ff21f7e667775ccb7f",
+      "original_full_resolution_sha256": "6d39d0e898d725e27a17b7e414c2a12cb604a784f910da4a9e0f187672e92647",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-parent-bound20-corrected-continuous-cuda"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-parent-bound20-corrected-continuous-cuda/seed-2.mp4",
+      "source": {
+        "duration": 120.04,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 120.04,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 4915256,
+      "sha256": "fc1a6697e5039cf3212cb0d3d103f30c4019e0bc9f994fe0924cea3ef8154c83",
+      "original_full_resolution_sha256": "0c37338b3a821b7410442422d138fa3da7b22380a7719dcf471fec51d2134067",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-parent-bound20-corrected-continuous-cuda"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-corrected-cuda-all55/143_34_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 13.0,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 13.0,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 377653,
+      "sha256": "aa0f1abf2bea44d9590f85063d94076714d07cfe29b26534e6b19f076dcf306b",
+      "original_full_resolution_sha256": "a44ed9202f61f26d2d7eba352241f9cab70a0b2e223473c7af4bf7cf4da78c36",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-corrected-cuda-all55"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-corrected-cuda-all55/85_06_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 7.84,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 7.84,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 373738,
+      "sha256": "c43879d712399a906f099a57fe113ccd14a422cd0670ad01e2c19da9dc2bc33a",
+      "original_full_resolution_sha256": "76edeaf00d105cb83a3ce4c6244a5716ba0eb73a182470c4f568b358e0d7c6fa",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-corrected-cuda-all55"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-corrected-cuda-all55/85_07_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 7.92,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 7.92,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 399954,
+      "sha256": "cb1836e8cfb40a8b758e197c94adf3842cd357c34e1e0fcd8b85c37c9a644936",
+      "original_full_resolution_sha256": "6bd090c5eda4c3f8dfe7494fd25057174e3b1e6541cb88ef7e091bee32b854c7",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-corrected-cuda-all55"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-corrected-cuda-all55/88_03_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 2.88,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 2.88,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 61412,
+      "sha256": "89af52b53d94201d7326224782397e7e61035ab3a6be12008dc3f07afbad6533",
+      "original_full_resolution_sha256": "65d8e80ed49ef5e28d4a732b1e0d62a6c0685a5e25fad2b28d84d94b6461c1d4",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-corrected-cuda-all55"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-corrected-cuda-all55/88_06_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 3.8,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 3.8,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 260656,
+      "sha256": "ee1f89059a2eef9cc26289ee598810965e3a5e5819dc72ab59aca7313ed72394",
+      "original_full_resolution_sha256": "7940bf3d36fcc3df0ec0c3c705ffa8bcdea1c1ff14b47a78fccd16521f1a3804",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-corrected-cuda-all55"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-corrected-cuda-all55/88_07_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 2.56,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 2.56,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 187514,
+      "sha256": "bf55c59974e0c2621c3ff95d6883426fcd3dac588c3b64cf2580564f7ea1cf09",
+      "original_full_resolution_sha256": "1be89627aabd5d0b91b115ed10a68ed8b84c7abe61b260c85d197d859d26c3d8",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-corrected-cuda-all55"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-corrected-cuda-all55/88_08_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 4.76,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 4.76,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 264575,
+      "sha256": "9d29845bd4fdf688256950c6866b8d672b664bbf14668fd7a0f4648fa09c7735",
+      "original_full_resolution_sha256": "77a4bebaba2b71d747e2b6398a662c0f317f8ec3f1ed30eb30262468099dd02b",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-corrected-cuda-all55"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-corrected-cuda-all55/88_09_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 6.24,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 6.24,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 349761,
+      "sha256": "105c884272bf07b75e65453f305aac67ff29cb2539013915216f9f52b6b295b9",
+      "original_full_resolution_sha256": "84a3b559bde6d6509f234e0a183ef7038010da1a58245a3a8401582af034d461",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-corrected-cuda-all55"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-corrected-cuda-all55/88_10_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 7.72,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 7.72,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 347031,
+      "sha256": "1f41bc19551fa4314c76785de586000f1832c30f97a098215d049a1065ce8606",
+      "original_full_resolution_sha256": "d800767c84c18ec51bf6caa07095fdcccb7af508748c3c7705273c6563aba2f4",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-corrected-cuda-all55"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-corrected-cuda-all55/88_11_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 33.72,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 33.72,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 1482979,
+      "sha256": "f02b3a2a427fc98eef254c6805cb310b45829142335aa981889a18a4b049efe8",
+      "original_full_resolution_sha256": "3476fc23b5e98be111772ed14c5aa814e6af3bd19052dd6d0eddeb7ce23d3cd4",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-corrected-cuda-all55"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-corrected-cuda-all55/89_01_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 38.8,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 38.8,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 1119001,
+      "sha256": "26bbcba9fe5e4b6fa71849705bce2c59bc493b235c8d67c29588903f0c8b3f55",
+      "original_full_resolution_sha256": "b82ac4163cdf003e8c66da7298a4b967c1d8444c89b35c7ef04e4b3d3fa1a776",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-corrected-cuda-all55"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-corrected-cuda-all55/90_08_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 5.56,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 5.56,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 225967,
+      "sha256": "0fe803c6b86178a58cea839c616df71643fd22263f9003760e94c09e7566313b",
+      "original_full_resolution_sha256": "2a84614c98184526003d1165cad6a1f474b6697c54c4400cecc1266e4eca19ef",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-corrected-cuda-all55"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-corrected-cuda-all55/90_14_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 6.92,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 6.92,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 282497,
+      "sha256": "ae10ab5ddce453afd7a9a97a8ec3521b30bead3341ad5c669ae9690c60e56769",
+      "original_full_resolution_sha256": "45d6d282dd2387504364319ef7b45b3df6bd0520e153532e1211e2b02aae24e0",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-corrected-cuda-all55"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-corrected-cuda-all55/90_15_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 9.84,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 9.84,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 339643,
+      "sha256": "6578041bb6c7c03e1504e63ef64102b0ab5b4bb0fb119e9b2d08b9f31b36e45a",
+      "original_full_resolution_sha256": "0e207d063ceab64e0043344c6dca1f449f791f25294c3ff27e9c18a79d32453b",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-corrected-cuda-all55"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-corrected-cuda-all55/90_19_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 8.64,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 8.64,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 409601,
+      "sha256": "1e45b5c615b51e1952b2548c13b380ad8da22a65b3b04ffb01a056f232e8e13c",
+      "original_full_resolution_sha256": "0e84cfb7a051bec3294a47400a961c118c70541197307c11671519469fc74b14",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-corrected-cuda-all55"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-corrected-cuda-all55/dance2_subject4.mp4",
+      "source": {
+        "duration": 225.68,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 225.68,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 8868256,
+      "sha256": "2d469698b218d807d7907a90bd9328a3f6927cc9ab3d4564133a37ec71b2b150",
+      "original_full_resolution_sha256": "babc39f0ff8b282a87fe7ce789d2a6cf2af9d326c61ac9c8f048352fc6ea3a28",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-corrected-cuda-all55"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-corrected-cuda-all55/fallAndGetUp2_subject3.mp4",
+      "source": {
+        "duration": 163.92,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 163.92,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 5857688,
+      "sha256": "3c2294e0704f8ea6876b4b072cea7c0b112e4b81a866c981606a237720b76da6",
+      "original_full_resolution_sha256": "8c717b794402e787da345bceab441331e9f88b4bded331cfdbd2cf4c4beef7f0",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-corrected-cuda-all55"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-corrected-cuda-all55/jumps1_subject2.mp4",
+      "source": {
+        "duration": 244.44,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 244.44,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 11564317,
+      "sha256": "06b84a3983dcdfac4d773ce66e28b972abc4dff7e87ea3917d24e4f37f42ca21",
+      "original_full_resolution_sha256": "6154d777e2496f3b84d7db953f4d1a97c7d69ff5de0d359c788d5bf03e92afcb",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-corrected-cuda-all55"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-raw-cuda-new15/143_34_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 13.0,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 13.0,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 377069,
+      "sha256": "fab94ddf551aebafbcee0ee606d2ff1808aa6e7448e3e1e8d0595e4a65572c0f",
+      "original_full_resolution_sha256": "d569891157b9ab7f14886525c941d3a3929df62a66c2cd51e9c4578341f92908",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-raw-cuda-new15"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-raw-cuda-new15/85_06_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 7.84,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 7.84,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 373764,
+      "sha256": "c21fe0b8cfb66f8d846f38abbd1aa7c7d905f5e6c32048ea30d5f57fd877f40a",
+      "original_full_resolution_sha256": "739b263de257f49bc11af14e654a037212cd9fb8787c797b691a5291790d3081",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-raw-cuda-new15"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-raw-cuda-new15/85_07_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 7.92,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 7.92,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 391405,
+      "sha256": "638d04f98a4d1b46db3d58ec3e18217579101936e500929bddf7576dd2e902a8",
+      "original_full_resolution_sha256": "d255900ccb8c91d78c56f72cf40422fe60dc6cf1a26a2057044faffdd5084d3e",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-raw-cuda-new15"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-raw-cuda-new15/88_03_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 2.88,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 2.88,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 61296,
+      "sha256": "81085095435efc08f99a6eb06c1751e1945ecc0f1af64094411438a6be187b89",
+      "original_full_resolution_sha256": "ab45cba4a30acbef86fae39c0998b53346f87885d9fa92d98dfd87ce95960246",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-raw-cuda-new15"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-raw-cuda-new15/88_06_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 3.8,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 3.8,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 261534,
+      "sha256": "cf4cff8d69a5c9a2aa0959d4451feb7076fbf885e86c88b62c4b151f631c5059",
+      "original_full_resolution_sha256": "d06a61cd4b7d8b58a68ae09d4a51a70835dcb8e8f2438af48ed44489745fec77",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-raw-cuda-new15"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-raw-cuda-new15/88_07_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 2.56,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 2.56,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 190088,
+      "sha256": "0b97f6e759ef892d985f4bd5b735fdf1bd148d511b238683ff7e0245bc0062b6",
+      "original_full_resolution_sha256": "f15d71e4ed62f6046381e60e83c7ce1a101c650120e4eb0a67b5901883646484",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-raw-cuda-new15"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-raw-cuda-new15/88_08_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 4.76,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 4.76,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 272583,
+      "sha256": "eb9152df04f7d032445c0df0e2ce95dc9b33d3552b085b487b40b1b8c2d278f2",
+      "original_full_resolution_sha256": "3fee55db871b0d3277ddce0a6fc16f9debce68ee3aca431f9042ef88ee3da15c",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-raw-cuda-new15"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-raw-cuda-new15/88_09_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 6.24,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 6.24,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 340132,
+      "sha256": "36ba273fed44b01aa387664e7ee41ddcc571bc5e57c6e997d4501ac513f0a7bb",
+      "original_full_resolution_sha256": "58dfcd9f5d926bfe78b5e8865ea8dfd782ee02554226ab43bf7f87c75b539ed9",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-raw-cuda-new15"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-raw-cuda-new15/88_10_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 7.72,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 7.72,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 344686,
+      "sha256": "4a78b5db85c27df96ca054b283181dc2890eea6f04475f16255313845d4c0f58",
+      "original_full_resolution_sha256": "4e63f8ebe23aec81acaaef8f515c2f0c35d4329d857bab52073e776fef7fcca1",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-raw-cuda-new15"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-raw-cuda-new15/88_11_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 33.72,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 33.72,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 1481341,
+      "sha256": "a9a5599a7a9a1e97c28d46f84becd3d3528c942dc5dbeb0955361b268a14ad33",
+      "original_full_resolution_sha256": "a7a45c2830e36755aeb186425b65cd53b73b3190694a2ffb530acd09f482350e",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-raw-cuda-new15"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-raw-cuda-new15/89_01_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 38.8,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 38.8,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 1114728,
+      "sha256": "ea6c35d7d867cbf4cb7442b557fe6e89d2ee94db7f4520c5d93572a738c95a7b",
+      "original_full_resolution_sha256": "c03c0834123cc72fda9ad73b319118c34ce74a46909aec6b80f8b253bf617687",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-raw-cuda-new15"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-raw-cuda-new15/90_08_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 5.56,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 5.56,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 227060,
+      "sha256": "ae7e0b65b6c0420d8c0435cff8a3e4efa1cc9a974dfba00929f21d4fc4159f60",
+      "original_full_resolution_sha256": "f4bb2ecf7a11991d4684cc80cf06f9ca1f1df47dd2208a558e2d499fc331824e",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-raw-cuda-new15"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-raw-cuda-new15/90_14_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 6.92,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 6.92,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 284324,
+      "sha256": "2fed02b529556da39da7347ffe8050cc1415b41cf940fad4a35a029433e10a7b",
+      "original_full_resolution_sha256": "0c056f750fb83b1afc3b23d8236c9d8fec66caaf2067f259c6365542e5936452",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-raw-cuda-new15"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-raw-cuda-new15/90_15_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 9.84,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 9.84,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 346166,
+      "sha256": "b59f1988e355092b0fec99199bb1942153fb04dc9d409db770f52f3578273ea4",
+      "original_full_resolution_sha256": "f9711cd43d8fc12120a1947feaad68548fcb3bb5fc9870c59e158191cd664e0d",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-raw-cuda-new15"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-raw-cuda-new15/90_19_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 8.64,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 8.64,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 409502,
+      "sha256": "2fb28fbbbc35abcf67f8f7ee2df826805de33b91976f9abb7ff30375ee174a83",
+      "original_full_resolution_sha256": "a99d9edcea817a1e206502b0abc64baef5ccdf7c2d30114b905f51277b688f50",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-raw-cuda-new15"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-raw-continuous-cuda/seed-0.mp4",
+      "source": {
+        "duration": 120.04,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 120.04,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 4844739,
+      "sha256": "3c039c6106d64db501ff80f0f0c2b45b1631eb8fe5666e97ab546621a9958d15",
+      "original_full_resolution_sha256": "bb83b574eda91baf3733eb012256a4abc9c1b287a23213a8964a6e12db95c364",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-raw-continuous-cuda"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-raw-continuous-cuda/seed-1.mp4",
+      "source": {
+        "duration": 120.04,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 120.04,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 5081936,
+      "sha256": "61c05cf5cf86e872ac2dd4827c506fca605d8e2827b87292412b285c20f65a9c",
+      "original_full_resolution_sha256": "23e619517343ebe4214bf08a98c10e77725e108e09a2d00ef4f8001abd8cb317",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-raw-continuous-cuda"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-raw-continuous-cuda/seed-2.mp4",
+      "source": {
+        "duration": 120.04,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 120.04,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 4663307,
+      "sha256": "51bdc8d1ce1feccbdc922b99340b6d253ba7c8d3d7594e20abe47948edcbae1c",
+      "original_full_resolution_sha256": "2ff7ae12180b0f18d6530707d742d40e5008a7f0ca3e17501baa48e83fe0815e",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-raw-continuous-cuda"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-corrected-continuous-cuda/seed-0.mp4",
+      "source": {
+        "duration": 120.04,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 120.04,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 4847274,
+      "sha256": "ddb879e22bf8277ac3b0d0c07e7f5cf711b10338c75c43355c3983a7777c888b",
+      "original_full_resolution_sha256": "eb33505655ea0bdff16ec55a956ffa6ff87447081aa94e29222a772f5f42dae7",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-corrected-continuous-cuda"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-corrected-continuous-cuda/seed-1.mp4",
+      "source": {
+        "duration": 120.04,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 120.04,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 5305893,
+      "sha256": "274fb722f2ca9d34595169f6f47dc1ee3f55300f22876d14445b69350971be15",
+      "original_full_resolution_sha256": "80744b9016764337d66a4d96d6ea214bbe700410f2434c6d1f389379f4be1da3",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-corrected-continuous-cuda"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-corrected-continuous-cuda/seed-2.mp4",
+      "source": {
+        "duration": 120.04,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 120.04,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 5080980,
+      "sha256": "73217f1a90600f1ea5997b2b37bc9160f02fe77fe387dd124b1dd4ba3d6c7d47",
+      "original_full_resolution_sha256": "0c7d8235361384477a8a5de537e5ae65ed28e95a0fc3cd9d44fd7882cb131e0c",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-corrected-continuous-cuda"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-corrected-cpu-all55/143_34_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 13.0,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 13.0,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 378710,
+      "sha256": "6bfd05d98e5c426530e95a0844be8805f52383511f540d5e9702f1ffe7e27190",
+      "original_full_resolution_sha256": "ac3dafc41e1316a4f063290cca819f0ba47b9ee13eb735e064336146d95bc489",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-corrected-cpu-all55"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-corrected-cpu-all55/85_06_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 7.84,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 7.84,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 374916,
+      "sha256": "03c5efeb250f41bf6afeacb214741bc6439ec717860d01fe1c79b8b81d2c0919",
+      "original_full_resolution_sha256": "d8527e9da3acb797964f7661ab71c385dad2f11bddd17c40c8e9d9e65b18c5cf",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-corrected-cpu-all55"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-corrected-cpu-all55/85_07_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 7.92,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 7.92,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 393081,
+      "sha256": "d11c9dcf54babeacba2503eac4775636df1637d5ca03adde8957cf82a2347986",
+      "original_full_resolution_sha256": "2520175c67584ecf424f2a1e9e7b4f4fce571a8ffb25a2783ed3299a43fc63db",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-corrected-cpu-all55"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-corrected-cpu-all55/88_03_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 2.88,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 2.88,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 61585,
+      "sha256": "f0f972d772218547316f00a3bb86b3c92f97815ab1d38eb3152c25674695f3ee",
+      "original_full_resolution_sha256": "d21e0b2701e5770797e0dc285760637a9376383fa34f03bd8a0aa229ef201ab4",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-corrected-cpu-all55"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-corrected-cpu-all55/88_06_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 3.8,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 3.8,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 261713,
+      "sha256": "fa52f32f3487e45999ad06359591bfff40aa4ffec2ee5afe79278a6bea2e65f0",
+      "original_full_resolution_sha256": "f85d076c8daf7adab9ad0ed2c0a16d88fbedc8b60db7842fe788599eefb7f734",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-corrected-cpu-all55"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-corrected-cpu-all55/88_07_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 2.56,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 2.56,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 192553,
+      "sha256": "a876b4601ac1d7b7cfd075e2c052ab30589026b1f62ba80dd80fab1cc66552e0",
+      "original_full_resolution_sha256": "1d63aa8583d8048bcff1b0af9a5dfb32693b1bcc71ba7527cf266e7afcb83bb5",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-corrected-cpu-all55"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-corrected-cpu-all55/88_08_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 4.76,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 4.76,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 256955,
+      "sha256": "3fab438be8f017fdf6dafbce1cda730d6187c8c5c935c05210c4d78f184b1b5f",
+      "original_full_resolution_sha256": "5d56820149ee0284cbddb9039c3bb5a35af6bf368fc734f98751e7d19605a786",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-corrected-cpu-all55"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-corrected-cpu-all55/88_09_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 6.24,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 6.24,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 345667,
+      "sha256": "81b8a16f022dc414454525e113fd9cacdcf6751d2b8f371d5224566f83a2fc26",
+      "original_full_resolution_sha256": "546de6c6a0ea618cf5a6c178671a3f06ac7a75cea3d24ed4dee5f3697eacabbc",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-corrected-cpu-all55"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-corrected-cpu-all55/88_10_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 7.72,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 7.72,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 346853,
+      "sha256": "dc474456853f183f5f242cbbc0161b61757e862e6b2667bf1b1c01bc7339c870",
+      "original_full_resolution_sha256": "02241c082d37701ba87353e3f7eb906ad0d353df2bb6177da3b38941958a7a2d",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-corrected-cpu-all55"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-corrected-cpu-all55/88_11_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 33.72,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 33.72,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 1481082,
+      "sha256": "cdce5b97b2101cb1131343259f03f9e298b07802bbb4f01bb423af7105b2dccb",
+      "original_full_resolution_sha256": "7c7e72ae79b1a6752b7d2491c6ff51f69cb7a3e038ea93e95ccbd1d600b42a1c",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-corrected-cpu-all55"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-corrected-cpu-all55/89_01_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 38.8,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 38.8,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 1113844,
+      "sha256": "c82372ce0f6d75f433066435875e630e48b28bd881ce7ad3dc9a522705d78108",
+      "original_full_resolution_sha256": "6dddbd8602b3ee4bfe22511c3bd4ede35490f2070d8d8320b87469270ce60e1f",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-corrected-cpu-all55"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-corrected-cpu-all55/90_08_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 5.56,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 5.56,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 227047,
+      "sha256": "906538af3126d13115179b66ba8788f0e9eb8004868649e97d8b37b18b3f753a",
+      "original_full_resolution_sha256": "54600cb6ea4287a9e00416af503996c28ecdd4bb52c2b1767b7d28375d0b9288",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-corrected-cpu-all55"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-corrected-cpu-all55/90_14_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 6.92,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 6.92,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 281086,
+      "sha256": "79f478580c84b8199cab67603c010e8350b4994aba2b06dc30863caccf08b0e8",
+      "original_full_resolution_sha256": "00ce823523b3be31d347fa52d1270af9cfffd56d5946600aaab168dd18d74985",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-corrected-cpu-all55"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-corrected-cpu-all55/90_15_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 9.84,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 9.84,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 341093,
+      "sha256": "429ec0a87c754ac1137d73d16fab55b40bd8b402b32454549be2675dd97dab3e",
+      "original_full_resolution_sha256": "f0bb006d7873f4f99d9bb66e9bddfc86a5faabd1f56ccba10b8f4093b8ef8549",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-corrected-cpu-all55"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-corrected-cpu-all55/90_19_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 8.64,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 8.64,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 423088,
+      "sha256": "11edccc6c45ebebc7b83e58b2a0562f7a8363f7a0c2b29c0e20f0a8c3f3d1f24",
+      "original_full_resolution_sha256": "cfab779aa7e0d11f5005eeaaaeebd8d61ae3833c0cf24038902a6d3a34976252",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-corrected-cpu-all55"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-corrected-cpu-all55/dance2_subject4.mp4",
+      "source": {
+        "duration": 225.68,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 225.68,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 10291006,
+      "sha256": "e8dacaeff1c9b7aca2c0cb0dca70cf6a20e1ff71ecbaec43206b2fafd80eebe3",
+      "original_full_resolution_sha256": "342fc3f2eec9d3f4c4db4237671d96c1dd19cb32c473ae2be9f2e7f563f8ad39",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-corrected-cpu-all55"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-corrected-cpu-all55/jumps1_subject2.mp4",
+      "source": {
+        "duration": 244.44,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 244.44,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 11596984,
+      "sha256": "0749b4aba8b1d04069240c2e2dfb7b6fd462adfb5e85dc72e320e49664efc4d9",
+      "original_full_resolution_sha256": "e9112cfca116344fb529cf15be7538326c0254937650148d01144cfde62267ef",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-corrected-cpu-all55"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-raw-cpu-new15/143_34_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 13.0,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 13.0,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 378089,
+      "sha256": "581105891385bb21da050dd21ee51903f63d9ecc2dae09a179c70887c24ece7e",
+      "original_full_resolution_sha256": "23d1a57ba372ca7a739134894be38dd3d0b4b48f09f5143d3b66e2799b97e0bd",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-raw-cpu-new15"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-raw-cpu-new15/85_06_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 7.84,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 7.84,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 375164,
+      "sha256": "d0afa2271264750976c3d5a4591d36bafb0288af130086b11378058ccd37461f",
+      "original_full_resolution_sha256": "aef3ff406dcd901be17c69c02fb8b6339ed904f76c141fc5a1d43b0771a5503a",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-raw-cpu-new15"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-raw-cpu-new15/85_07_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 7.92,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 7.92,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 392124,
+      "sha256": "91f1d38765e5bd906c9cc5c6c2a794a33ee547a457a6b81d2700427b3e705128",
+      "original_full_resolution_sha256": "dda14e9a8826b4e057d7c05fcb06cceef881c66950120aa05ef9813f8f12d5a3",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-raw-cpu-new15"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-raw-cpu-new15/88_03_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 2.88,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 2.88,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 61097,
+      "sha256": "40cdd1f7a0e6e44cdcbe1e33731e2884e6ba2aca401353996729dca69437a918",
+      "original_full_resolution_sha256": "43b5a810b9853bb41434ce37f2c28612a505e5947eacc2e6b349c047bee03bc2",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-raw-cpu-new15"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-raw-cpu-new15/88_06_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 3.8,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 3.8,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 261591,
+      "sha256": "47dd5d9e3f4ca9551e2685155156a0fbbb606c78f9ae75257de75152b2289587",
+      "original_full_resolution_sha256": "f94598d50e3b58e4964b0371d09c40186d246f113008714400cb25f22441c055",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-raw-cpu-new15"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-raw-cpu-new15/88_07_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 2.56,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 2.56,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 192837,
+      "sha256": "7f520fbb865089d1c5f2ffb93e81c349a7e683215dfe7f3ec2f83cc6325256e3",
+      "original_full_resolution_sha256": "ab1e0c087754573ae003abeff2bf1a3cc87d47414df155986ca915500a2e8cc0",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-raw-cpu-new15"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-raw-cpu-new15/88_08_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 4.76,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 4.76,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 256125,
+      "sha256": "6fb29b0d1bcdb0aa0a416a7f27d3cdee92c005a67839c40703f098af05647d2b",
+      "original_full_resolution_sha256": "9df4a8b9c89a5c279ff76a41259cc291b5ac7e13f360fa1fca994d75c75d8442",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-raw-cpu-new15"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-raw-cpu-new15/88_09_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 6.24,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 6.24,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 345167,
+      "sha256": "178e0a4bd06dad72b5ffb398bf845d5adca7e6f0f98ede6c5b968c57eac7d998",
+      "original_full_resolution_sha256": "ef9f8d39c4896799a062edafdab4a007a0f263ff50d35b13c0382c7a4b124310",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-raw-cpu-new15"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-raw-cpu-new15/88_10_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 7.72,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 7.72,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 346345,
+      "sha256": "593a6c1bd8f2a283768e23248c7b2eee1394522d9d491d9991cbf230426c76cb",
+      "original_full_resolution_sha256": "bb914c090acd12483810cae079bc1ffe4eac04773b4475918fb9ef1b4daf2d49",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-raw-cpu-new15"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-raw-cpu-new15/88_11_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 33.72,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 33.72,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 1475757,
+      "sha256": "6bbf1f523f71d0ea81e454e9e64ded1725c9ba226ce53169cb72a536f2dba041",
+      "original_full_resolution_sha256": "534551a623c27aca516a911d26a4122fc998e73e2a3c2629072acb0b29078401",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-raw-cpu-new15"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-raw-cpu-new15/89_01_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 38.8,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 38.8,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 1115508,
+      "sha256": "08f79756c2bd3941a83a0654d7ae87b4f5171a4107dd28ffd6912216714aba33",
+      "original_full_resolution_sha256": "a6b5e5c5283ab6788f7bada6dca942d12203d42766a39a8b584be775b6c76de6",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-raw-cpu-new15"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-raw-cpu-new15/90_08_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 5.56,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 5.56,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 225437,
+      "sha256": "f9d64c7d878817d7db8a9e3b5532e65ca15923a7da76b0b7f03e28644686b31a",
+      "original_full_resolution_sha256": "536a85ac94632557d9fe1ee1e52555e9d3e52317a607e45918805505424dbb60",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-raw-cpu-new15"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-raw-cpu-new15/90_14_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 6.92,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 6.92,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 285293,
+      "sha256": "d7477787cdc6c31594080f9cca86c6482446f72e378460e615d8e1018971a867",
+      "original_full_resolution_sha256": "d38bb6b57a875325d6980c96b61eeff84d2cc602c39dd899cbe0bec070308835",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-raw-cpu-new15"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-raw-cpu-new15/90_15_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 9.84,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 9.84,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 350606,
+      "sha256": "d32c5d15ee3569c52cdb4418b0c4b3df16ac1d53064dcb2527b6dea2c873324d",
+      "original_full_resolution_sha256": "fb3e6045b26a7f0fc1f1aa8b8312c49959e7990537eb1f323ee6dc98612b1f2b",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-raw-cpu-new15"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-raw-cpu-new15/90_19_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 8.64,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 8.64,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 423950,
+      "sha256": "bf243b178910deabd4455024dc98577f90f06aee4a5b83b81c463ccf8d14dfed",
+      "original_full_resolution_sha256": "7ff1da35334941e00f0df51df8f9951518e7526d520b0897684dd9bb11e91b29",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-raw-cpu-new15"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-raw-continuous-cpu/seed-0.mp4",
+      "source": {
+        "duration": 120.04,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 120.04,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 4420747,
+      "sha256": "875467316133a2c6a519a0e372857292e693d4295d8519990fd4702b83156ec1",
+      "original_full_resolution_sha256": "c741216e7e109581e71b6153d069e6b5e65d8c91702b3e2461503d9c26f9d4a7",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-raw-continuous-cpu"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-raw-continuous-cpu/seed-1.mp4",
+      "source": {
+        "duration": 120.04,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 120.04,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 5097093,
+      "sha256": "043ec928a34d294e632e5cffd6694a20d21e06eee4f2adcc15b9ce3689675f82",
+      "original_full_resolution_sha256": "2e9323c9d785d80bd2722bf7ca25bfe98f3b3cda7d6076cd1563c0c47f9990a6",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-raw-continuous-cpu"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-raw-continuous-cpu/seed-2.mp4",
+      "source": {
+        "duration": 120.04,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 120.04,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 5113636,
+      "sha256": "794f13616ec5423037fe620b55f5551b68c00b8e2e000fdee4b594c8d751841d",
+      "original_full_resolution_sha256": "af3ee3f1168427b9d989c286d0f21f9c37fbb0bfd7ee6b3e40d584b85479be4e",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-raw-continuous-cpu"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-corrected-continuous-cpu/seed-0.mp4",
+      "source": {
+        "duration": 120.04,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 120.04,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 4422973,
+      "sha256": "d2bd6caf3d6488714a5249d5cf8d680f0d108b98e95467e8dda8b079ff0bddba",
+      "original_full_resolution_sha256": "76bda18b94e4ce77ebe449327b3527aa9cdc394389e8b56c13fb33994e7b09db",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-corrected-continuous-cpu"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-corrected-continuous-cpu/seed-1.mp4",
+      "source": {
+        "duration": 120.04,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 120.04,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 5098365,
+      "sha256": "0b637be6db9acf3b188905b6e9bfa456764c3cf1b14401f585f942609c609083",
+      "original_full_resolution_sha256": "6acce36561c605750bfd0b2cfe56935ff48386b7e0be7a6876af436c054a205d",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-corrected-continuous-cpu"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/retention-v1-corrected-continuous-cpu/seed-2.mp4",
+      "source": {
+        "duration": 120.04,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 120.04,
+        "fps": 25,
+        "size": [
+          960,
+          540
+        ]
+      },
+      "bytes": 5023816,
+      "sha256": "5a23ea04d3ff4a1e4eacd477f0011595ffda2e7e96bb1e0fffbc4638440b2555",
+      "original_full_resolution_sha256": "38835697d40233798d4bd6c56fa7fcd2b1ffeeb779112243aa1ef805d3b88385",
+      "full_decode_passed": true,
+      "publication_copy_identical": false,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "retention-v1-corrected-continuous-cpu"
+    },
+    {
+      "file": "acro-library-20261027-b/validation/public-entry-render.mp4",
+      "source": {
+        "duration": 2.56,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 2.56,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "bytes": 1143155,
+      "sha256": "11d97d3e246c121077c37be645a6419034b904bb4c1476e7f0e71cdf88e16cfe",
+      "full_decode_passed": true,
+      "publication_copy_identical": true,
+      "validation_example": true,
+      "not_an_additional_scientific_acceptance_sample": true
     }
   ],
   "excluded_links": [
@@ -3517,5 +6513,6 @@
     "implementation\\evidence\\resource-final-dnat.jpg",
     "interactive-g1-20261027-a\\runs\\baseline\\trajectory.npz"
   ],
-  "policy": "Metrics unchanged; local identities and console screenshots omitted; videos retain complete duration and frame rate."
+  "policy": "Metrics unchanged; local identities and console screenshots omitted; videos retain complete duration and frame rate.",
+  "retention_1030_updated_at": "2026-10-30T07:30:53.661039+00:00"
 }

@@ -4,8 +4,8 @@ Community-implementation experiments with **40 LAFAN1 motions**, **15 additional
 
 **中文：这是复现实验与工程记录。基础 LAFAN1 目标已达到；新增动作与旧动作兼顾的统一模型目标仍未全部达到。所有失败和完整分母保留。**
 
-- [Read the six complete reports](https://skywhite1024.github.io/SuperMimic-Reproduction/)
-- [Browse the committed report assets](docs/site/): six reports, 151 complete-duration browser video copies, figures and numerical results.
+- [Read the seven complete reports](https://skywhite1024.github.io/SuperMimic-Reproduction/)
+- [Browse the committed report assets](docs/site/): seven reports, 266 complete-duration browser video copies, figures and numerical results.
 - [Reproduction guide](docs/REPRODUCING.md) · [Evaluation protocol](docs/EVALUATION.md) · [Source/data attribution](THIRD_PARTY.md)
 - [Local/server Git workflow](docs/SERVER_WORKFLOW.md) · [Clean-clone 120-second validation](validation/clean-clone-continuous-seed0.json)
 - [Server source reconciliation](validation/cloud-source-reconciliation-20261029.json): historical AFS snapshot, matching public checkout, and separately retained server-only sources.
@@ -34,7 +34,7 @@ acro-library-20261027-b/             # unified 15-new + 40-old experiments and e
 envs/                              # GPU lock, CPU requirements and observed environment
 tools/                             # setup, asset/checkpoint retrieval and publication verification
 artifacts/manifest.json             # checkpoint identities; binaries are release assets
-docs/site/                         # complete report website, including all 151 videos
+docs/site/                         # complete report website, including all 266 videos
 SOURCE_PROVENANCE.json              # original/public source hashes and publication transformations
 UPSTREAM.lock.json                 # pinned source and dataset revisions
 ```
@@ -72,3 +72,10 @@ The publication checkout was also tested from a separate clean Git clone using t
 ## License
 
 Original code added by this reproduction project is provided under Apache-2.0. Vendored source retains its original notices and component licenses. The code license does not relicense third-party motion data, robot assets, checkpoints' dependencies, or referenced material. See [THIRD_PARTY.md](THIRD_PARTY.md).
+
+
+## Retention v1 (2026-10-30)
+
+The finite 1000-update candidate and its full parent are published with matched CPU/CUDA evaluations.
+See [the experiment and reproduction instructions](docs/RETENTION_V1.md) and the complete linked report.
+The frozen raw-reference goal is false; all failures remain included.

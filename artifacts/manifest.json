@@ -1,5 +1,5 @@
 {
-  "release_tag": "v0.1.0",
+  "release_tag": "v0.2.0",
   "checkpoint_downloads_are_explicit": true,
   "checkpoints": [
     {
@@ -61,6 +61,48 @@
       "bytes": 218547553,
       "sha256": "0afcca9af97bd9db1f2dd083875898f962acab0b0a70c7313b221e575b70b05b",
       "observation_dim": 99
+    },
+    {
+      "name": "retention-v1-1000",
+      "kind": "inference",
+      "path": "acro-library-20261027-b/policy/unified-retention-v1-h100-1000.pt",
+      "release_filename": "retention-v1-1000-policy.pt",
+      "url": "https://github.com/skywhite1024/SuperMimic-Reproduction/releases/download/v0.2.0/retention-v1-1000-policy.pt",
+      "bytes": 36647925,
+      "sha256": "21b92ba3a03044d3a2425d354360086c7c5e4817133168044bdf10849a58f184",
+      "observation_dim": 101,
+      "classification": "candidate_unsuccessful_no_automatic_extension",
+      "full_goal_complete": false,
+      "adoption_requires_frozen_acceptance": true
+    },
+    {
+      "name": "retention-v1-1000-full",
+      "kind": "training_resume",
+      "path": "acro-library-20261027-b/runs/unified-retention-v1-h100-1000/final-full.pt",
+      "release_filename": "retention-v1-1000-full.pt",
+      "url": "https://github.com/skywhite1024/SuperMimic-Reproduction/releases/download/v0.2.0/retention-v1-1000-full.pt",
+      "bytes": 219042079,
+      "sha256": "e98afcbbb4f8a0b663cbfd20813e41137c3ecd822297c7e93f068383d2974329",
+      "observation_dim": 101,
+      "classification": "candidate_unsuccessful_no_automatic_extension",
+      "full_goal_complete": false,
+      "adoption_requires_frozen_acceptance": true
+    },
+    {
+      "name": "retention-parent-stage3-full",
+      "kind": "training_resume",
+      "path": "acro-library-20261027-b/runs/unified-h100-stage3-4000/final-full.pt",
+      "release_filename": "retention-parent-stage3-full.pt",
+      "url": "https://github.com/skywhite1024/SuperMimic-Reproduction/releases/download/v0.2.0/retention-parent-stage3-full.pt",
+      "bytes": 219041759,
+      "sha256": "93bb8b830145c54092518eba8db1fb020d020eb72cdad1b619b4fc5470cc213d",
+      "observation_dim": 101,
+      "classification": "frozen_stage3_parent_for_matched_controls",
+      "full_goal_complete": false,
+      "adoption_requires_frozen_acceptance": true
     }
+  ],
+  "historical_release_tags": [
+    "v0.1.0"
   ]
 }

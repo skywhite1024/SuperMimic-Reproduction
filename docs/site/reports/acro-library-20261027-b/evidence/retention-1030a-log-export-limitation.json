@@ -1,0 +1,10 @@
+{
+  "checked_at": "2026-10-30T05:50:29.475Z",
+  "scoped_task_UID": "d6a6cfc61c094fac88d66b88fabf554e",
+  "offline_log_rows_shown": 166,
+  "download_requested_in_UI": true,
+  "latest_download_event_timeout_ms": 20000,
+  "verified_downloaded_console_log_file": false,
+  "canonical_full_program_receipt_and_parent_trajectories_recovered": true,
+  "limitation": "The console export dialog closes without a verified download event or file. DOM previews are not represented as a complete original console-log export."
+}

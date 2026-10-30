@@ -1,0 +1,110 @@
+{
+  "status": "all_fixed_denominators_and_training_rows_plotted",
+  "new_denominator": 15,
+  "comparison_pairs": 4,
+  "training_rows": 20,
+  "new_updates": 1000,
+  "sources": [
+    {
+      "path": "runs/unified-retention-v1-h100-1000/train_log_with_header.csv",
+      "sha256": "f331f1e33271a34d43434f7f49f0ef81aafc26b809b582828881aabba41352ec"
+    },
+    {
+      "path": "runs/retention-v1-parent-bound20-raw-cuda-new15/summary.json",
+      "sha256": "ee6987731b7d5186e0312201c51dd2ed02f3a164f04807a79afa001b03c19b92"
+    },
+    {
+      "path": "runs/retention-v1-parent-bound20-raw-cuda-new15/combined-assessment.json",
+      "sha256": "e82063657204028f9e628433c65dbee807fc58716a176d669ba3d4466b9c5561"
+    },
+    {
+      "path": "runs/retention-v1-raw-cuda-new15/summary.json",
+      "sha256": "a8ef295ada4e19265f459bbed01297c834643f31660e406302f53b92c60305da"
+    },
+    {
+      "path": "runs/retention-v1-raw-cuda-new15/combined-assessment.json",
+      "sha256": "f4cd3452dec1078f136eae262aa3c37bedffb49e7d9b0b2c7bfa7525ac404d61"
+    },
+    {
+      "path": "runs/retention-v1-parent-bound20-corrected-cuda-all55/summary.json",
+      "sha256": "4e21ef42f60547e1e3eda3f4d2abd65d70ab2d961b7d6e7503d2a7c1a8f97f67"
+    },
+    {
+      "path": "runs/retention-v1-parent-bound20-corrected-cuda-all55/combined-assessment.json",
+      "sha256": "43b0021e6094b9643b6bbe6ad3d8460502a192a3654b70a0f5d90c030d62cd6c"
+    },
+    {
+      "path": "runs/retention-v1-corrected-cuda-all55/summary.json",
+      "sha256": "2ea65a844d5216064d92333112b4a398dd9aab301739dd43408d5acc6b229e21"
+    },
+    {
+      "path": "runs/retention-v1-corrected-cuda-all55/combined-assessment.json",
+      "sha256": "dfbbd3c75c3d8851e398b60e7e428c51938f74130004a4e4784d077aa5b4b135"
+    },
+    {
+      "path": "runs/stage3-actionbound20-raw-cpu-new15/summary.json",
+      "sha256": "8339dbaaf0f49152f89f6780559a7186ee8d1f4ab14431d8a7290021330e8b41"
+    },
+    {
+      "path": "runs/stage3-actionbound20-raw-cpu-new15/combined-assessment.json",
+      "sha256": "892c3ed93b83b490401bb0c9187f6294ac7aa74681661fc5d6e218e18379e2bf"
+    },
+    {
+      "path": "runs/retention-v1-raw-cpu-new15/summary.json",
+      "sha256": "c1da5613aa054fd75cd2a4d6ee18fbb9a6729789ce41aa7f582ace8c7d39102a"
+    },
+    {
+      "path": "runs/retention-v1-raw-cpu-new15/combined-assessment.json",
+      "sha256": "8ba4f55563c65589489d46ece8b30ae24f528a6432442c6c3583c099b4348f79"
+    },
+    {
+      "path": "runs/stage3-actionbound20-corrected-cpu-all55/summary.json",
+      "sha256": "9886d62b94522f427033d3908c24d00bcba2a0d3abb3ea4a892942a470ca1181"
+    },
+    {
+      "path": "runs/stage3-actionbound20-corrected-cpu-all55/combined-assessment.json",
+      "sha256": "888c4745099d4783701c3ea99861b9b50a557eb9f3bb35dc3bb563e606927d86"
+    },
+    {
+      "path": "runs/retention-v1-corrected-cpu-all55/summary.json",
+      "sha256": "3788b6f583d14dd81c0ccf0ae002ff03b3767d97759945724119e0331264ae33"
+    },
+    {
+      "path": "runs/retention-v1-corrected-cpu-all55/combined-assessment.json",
+      "sha256": "9a3b4f08415df6908f1c80a7ac4032a0d3f2e4adc2ef922280fcfc32ab79854e"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "figures/retention-1030-training.png",
+      "bytes": 188375,
+      "sha256": "06dac26e3791c2074689cf1d38139fa968ecb20e9f8af5b31f096c97afef04e6"
+    },
+    {
+      "path": "figures/retention-1030-training.svg",
+      "bytes": 90754,
+      "sha256": "c618b1e864296b88d8e6ab4b868d65d60461199ef2981f762d957b76d1f76e14"
+    },
+    {
+      "path": "figures/retention-1030-training.pdf",
+      "bytes": 20379,
+      "sha256": "9dc946cd449c7090ef652766b379baa008493f842076be26fad79a57f37005f3"
+    },
+    {
+      "path": "figures/retention-1030-new15-comparison.png",
+      "bytes": 164313,
+      "sha256": "7899eff41a18a0a64b2c5a9dad27fb51f7ae36d445cc5ea1571b0fede0700386"
+    },
+    {
+      "path": "figures/retention-1030-new15-comparison.svg",
+      "bytes": 126564,
+      "sha256": "f361669d645b65e79334d1380b6d602201bb41e29611aa56fd098870d1bf0895"
+    },
+    {
+      "path": "figures/retention-1030-new15-comparison.pdf",
+      "bytes": 27296,
+      "sha256": "464605996079e8122da2113e6fc90d6c5654467b58258c3182587d3c540d7159"
+    }
+  ],
+  "acceptance_inferred_from_training_metrics": false
+}

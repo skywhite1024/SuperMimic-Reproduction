@@ -1,0 +1,62 @@
+{
+  "status": "finite_candidate_and_all_cuda_assessments_complete",
+  "plan_sha256": "e737aacaf113cf602be0eb6cb7b64a5b47e14451acdb003a4c19d9cbaa575a53",
+  "config": {
+    "gpu_count": 1,
+    "gpu_name": "NVIDIA H100 80GB HBM3",
+    "cpu_max": "400000 100000",
+    "memory_max": "68719476736",
+    "maximum_seconds": 4200,
+    "new_updates": 1000,
+    "wm_only_updates": 200,
+    "num_envs": 1024,
+    "new_denominator": 15,
+    "old_denominator": 40,
+    "continuous_denominator": 3,
+    "seconds_per_trial": 120
+  },
+  "controller_variant": "consistent-output-bound-20-retention-v1",
+  "full_goal_complete": false,
+  "operational_resume_plan_sha256": "6a2e2ab6b0f978646626432e1fcb4c00adbdf4b3fabad67455d86e4c1230eeb6",
+  "previous_program_wall_seconds": 610.8688422106206,
+  "completed_parent55_reused_without_resimulation": true,
+  "full_checkpoint_sha256": "e98afcbbb4f8a0b663cbfd20813e41137c3ecd822297c7e93f068383d2974329",
+  "wall_seconds": 2660.275059785694,
+  "policy_sha256": "21b92ba3a03044d3a2425d354360086c7c5e4817133168044bdf10849a58f184",
+  "combined_attempt_program_wall_seconds": 3271.28916926682,
+  "matched_parent_groups": {
+    "new": {
+      "denominator": 15,
+      "passed": 12,
+      "macro_return_original": 0.7088216351966063,
+      "frame_weighted_return_original": 0.7732509883212996
+    },
+    "lafan": {
+      "denominator": 40,
+      "passed": 39,
+      "macro_return_original": 0.8879968121647834,
+      "frame_weighted_return_original": 0.8929751856044371
+    }
+  },
+  "candidate_groups": {
+    "new": {
+      "denominator": 15,
+      "passed": 13,
+      "macro_return_original": 0.7270042151212692,
+      "frame_weighted_return_original": 0.8036367452675901
+    },
+    "lafan": {
+      "denominator": 40,
+      "passed": 37,
+      "macro_return_original": 0.8584042020142079,
+      "frame_weighted_return_original": 0.8619336010836279
+    }
+  },
+  "matched_parent_corrected_strict": 10,
+  "candidate_corrected_strict": 9,
+  "predeclared_improvement_criterion_passed": false,
+  "classification": "candidate_unsuccessful_no_automatic_extension",
+  "further_training_automatically_authorized": false,
+  "all_failed_tails_retained": true,
+  "matched_cpu_quality_full_video_and_recovery": "pending_local_recovery_assessment"
+}

@@ -1,0 +1,36 @@
+{
+  "clip": "88_10_stageii_unitree_g1",
+  "file": "videos/retention-v1-corrected-cuda-all55/88_10_stageii_unitree_g1.mp4",
+  "bytes": 347031,
+  "sha256": "1f41bc19551fa4314c76785de586000f1832c30f97a098215d049a1065ce8606",
+  "frames": 193,
+  "fps": 25,
+  "video_seconds": 7.72,
+  "physical_window_seconds": 7.7,
+  "complete_decode_passed": true,
+  "source_run": "retention-v1-corrected-cuda-all55",
+  "only_retained_actual_physics_states_rendered": true,
+  "reference_display_offset_m": [
+    0,
+    1.5,
+    0
+  ],
+  "fog_disabled_for_failed_tail_visibility": true,
+  "reference_version_or_variant": "ground-calibration-v1",
+  "original_hard_gate_passed": true,
+  "tracking_quality_passed": true,
+  "contact_sheet": "evidence/retention-v1-corrected-cuda-all55-88_10_stageii_unitree_g1-contact-sheet.jpg",
+  "published_size": [
+    960,
+    540
+  ],
+  "original_full_resolution": {
+    "bytes": 2628120,
+    "sha256": "d800767c84c18ec51bf6caa07095fdcccb7af508748c3c7705273c6563aba2f4",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  "all_source_frames_and_failed_tail_preserved": true
+}

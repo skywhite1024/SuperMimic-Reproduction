@@ -1,0 +1,39 @@
+{
+  "archive": "retention-1030-recovery-supplement.tar.gz",
+  "bytes": 199622,
+  "sha256": "ee2f03cf30d02e3e83013695116306f3f77f089152567e78a76c719c473754c0",
+  "files": [
+    {
+      "path": "evidence/retention-1030-dependency-preflight.json",
+      "bytes": 1378,
+      "sha256": "9dfcdf40233b254e363306aa6d2700911bfc533671a01d9fb510956f54e78248"
+    },
+    {
+      "path": "evidence/retention-1030-cpu-recovery-console.txt",
+      "bytes": 1024,
+      "sha256": "007cf2b7aaaead1bb7390bf8764269c6a31cd901b2db16696fe86296e23395fd"
+    },
+    {
+      "path": "evidence/retention-1030-cpu-recovery-console-v2.txt",
+      "bytes": 7054,
+      "sha256": "3ab6b348224da8d88edb7242fa45fed9a911dc7c210f8c21fbcda6cb47e5b198"
+    },
+    {
+      "path": "runs/retention-v1-parent-bound20-corrected-cuda-all55/contact-review.json",
+      "bytes": 17788,
+      "sha256": "a2792df13d08c10e5af9aff9a9a3a93743f0b7784fb3298a7b3612be327f25d0"
+    },
+    {
+      "path": "runs/retention-v1-parent-bound20-corrected-cuda-all55/contact-samples.json",
+      "bytes": 3132673,
+      "sha256": "42090027156f1cdd725e8e990ae2e6a976af7328fb8f64b85b793557418509ba"
+    },
+    {
+      "path": "runs/retention-v1-parent-bound20-corrected-cuda-all55/combined-assessment.json",
+      "bytes": 14775,
+      "sha256": "43b0021e6094b9643b6bbe6ad3d8460502a192a3654b70a0f5d90c030d62cd6c"
+    }
+  ],
+  "status": "archive_and_all_supplement_files_verified",
+  "verified_at": "2026-10-30T05:05:24.063886+00:00"
+}

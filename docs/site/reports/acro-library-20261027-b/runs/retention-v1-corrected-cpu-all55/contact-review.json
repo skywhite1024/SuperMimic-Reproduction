@@ -1,0 +1,489 @@
+{
+  "run": "retention-v1-corrected-cpu-all55",
+  "checkpoint_sha256": "21b92ba3a03044d3a2425d354360086c7c5e4817133168044bdf10849a58f184",
+  "new_denominator": 15,
+  "method": "20 ms retained physical and reference poses evaluated on separate scratch MuJoCo MjData using the runtime collision model. Neither simulation nor references modified; no contact force reconstruction.",
+  "clips": [
+    {
+      "clip": "143_34_stageii_unitree_g1",
+      "full_clip_steps": 648,
+      "original_hard_gate_passed": true,
+      "actual_ground_contact_geometry_samples_by_body": {
+        "left_ankle_roll_link": 579,
+        "right_ankle_roll_link": 556
+      },
+      "reference_ground_contact_geometry_samples_by_body": {
+        "left_ankle_roll_link": 547,
+        "right_ankle_roll_link": 631,
+        "right_ankle_pitch_link": 271,
+        "right_knee_link": 75
+      },
+      "actual_min_contact_distance_m": -0.031018258927400955,
+      "actual_min_after_initial_100ms_m": -0.004862396251970306,
+      "head_torso_or_pelvis_ground_contact_samples": 0,
+      "actual_ending_ground_bodies": [
+        "left_ankle_roll_link"
+      ],
+      "ending_root_speed_m_s": 0.12114077061414719,
+      "contact_force_measured": false,
+      "geometric_review_complete": true,
+      "physical_contact_fidelity_inferred": false
+    },
+    {
+      "clip": "85_06_stageii_unitree_g1",
+      "full_clip_steps": 391,
+      "original_hard_gate_passed": true,
+      "actual_ground_contact_geometry_samples_by_body": {
+        "left_ankle_roll_link": 234,
+        "right_ankle_roll_link": 245
+      },
+      "reference_ground_contact_geometry_samples_by_body": {
+        "left_ankle_roll_link": 120,
+        "right_ankle_roll_link": 181
+      },
+      "actual_min_contact_distance_m": -0.026059546699881066,
+      "actual_min_after_initial_100ms_m": -0.026059546699881066,
+      "head_torso_or_pelvis_ground_contact_samples": 0,
+      "actual_ending_ground_bodies": [
+        "left_ankle_roll_link",
+        "right_ankle_roll_link"
+      ],
+      "ending_root_speed_m_s": 0.3210937976837158,
+      "contact_force_measured": false,
+      "geometric_review_complete": true,
+      "physical_contact_fidelity_inferred": false
+    },
+    {
+      "clip": "85_07_stageii_unitree_g1",
+      "full_clip_steps": 395,
+      "original_hard_gate_passed": true,
+      "actual_ground_contact_geometry_samples_by_body": {
+        "left_ankle_roll_link": 237,
+        "right_ankle_roll_link": 237,
+        "pelvis_contour_link": 3
+      },
+      "reference_ground_contact_geometry_samples_by_body": {
+        "left_ankle_roll_link": 142,
+        "right_ankle_roll_link": 131
+      },
+      "actual_min_contact_distance_m": -0.022807236645765876,
+      "actual_min_after_initial_100ms_m": -0.022807236645765876,
+      "head_torso_or_pelvis_ground_contact_samples": 3,
+      "actual_ending_ground_bodies": [
+        "left_ankle_roll_link",
+        "right_ankle_roll_link"
+      ],
+      "ending_root_speed_m_s": 0.013049227185547352,
+      "contact_force_measured": false,
+      "geometric_review_complete": true,
+      "physical_contact_fidelity_inferred": false
+    },
+    {
+      "clip": "88_03_stageii_unitree_g1",
+      "full_clip_steps": 143,
+      "original_hard_gate_passed": true,
+      "actual_ground_contact_geometry_samples_by_body": {
+        "left_ankle_roll_link": 144,
+        "right_ankle_roll_link": 144
+      },
+      "reference_ground_contact_geometry_samples_by_body": {
+        "left_ankle_roll_link": 144,
+        "right_ankle_roll_link": 144
+      },
+      "actual_min_contact_distance_m": -0.029042633473548306,
+      "actual_min_after_initial_100ms_m": -0.002547542611575036,
+      "head_torso_or_pelvis_ground_contact_samples": 0,
+      "actual_ending_ground_bodies": [
+        "left_ankle_roll_link",
+        "right_ankle_roll_link"
+      ],
+      "ending_root_speed_m_s": 0.003156187478452921,
+      "contact_force_measured": false,
+      "geometric_review_complete": true,
+      "physical_contact_fidelity_inferred": false
+    },
+    {
+      "clip": "88_06_stageii_unitree_g1",
+      "full_clip_steps": 188,
+      "original_hard_gate_passed": true,
+      "actual_ground_contact_geometry_samples_by_body": {
+        "right_knee_link": 2,
+        "right_ankle_pitch_link": 2,
+        "left_ankle_roll_link": 63,
+        "right_ankle_roll_link": 96,
+        "right_wrist_yaw_link": 1
+      },
+      "reference_ground_contact_geometry_samples_by_body": {
+        "right_knee_link": 31,
+        "right_ankle_pitch_link": 44,
+        "left_ankle_roll_link": 94,
+        "right_ankle_roll_link": 106,
+        "left_ankle_pitch_link": 13,
+        "left_knee_link": 9
+      },
+      "actual_min_contact_distance_m": -0.057232296075440926,
+      "actual_min_after_initial_100ms_m": -0.04051057994721316,
+      "head_torso_or_pelvis_ground_contact_samples": 0,
+      "actual_ending_ground_bodies": [],
+      "ending_root_speed_m_s": 1.8522018194198608,
+      "contact_force_measured": false,
+      "geometric_review_complete": true,
+      "physical_contact_fidelity_inferred": false
+    },
+    {
+      "clip": "88_07_stageii_unitree_g1",
+      "full_clip_steps": 126,
+      "original_hard_gate_passed": true,
+      "actual_ground_contact_geometry_samples_by_body": {
+        "right_knee_link": 1,
+        "right_ankle_pitch_link": 2,
+        "left_ankle_roll_link": 33,
+        "right_ankle_roll_link": 56,
+        "right_wrist_yaw_link": 9,
+        "left_wrist_yaw_link": 10,
+        "left_wrist_roll_link": 6,
+        "left_wrist_pitch_link": 9,
+        "left_elbow_link": 5,
+        "left_shoulder_yaw_link": 2
+      },
+      "reference_ground_contact_geometry_samples_by_body": {
+        "right_knee_link": 5,
+        "right_ankle_pitch_link": 5,
+        "left_ankle_roll_link": 31,
+        "right_ankle_roll_link": 70,
+        "left_knee_link": 1
+      },
+      "actual_min_contact_distance_m": -0.05414023938815026,
+      "actual_min_after_initial_100ms_m": -0.0326527992591318,
+      "head_torso_or_pelvis_ground_contact_samples": 0,
+      "actual_ending_ground_bodies": [
+        "right_ankle_roll_link"
+      ],
+      "ending_root_speed_m_s": 1.1159546375274658,
+      "contact_force_measured": false,
+      "geometric_review_complete": true,
+      "physical_contact_fidelity_inferred": false
+    },
+    {
+      "clip": "88_08_stageii_unitree_g1",
+      "full_clip_steps": 236,
+      "original_hard_gate_passed": false,
+      "actual_ground_contact_geometry_samples_by_body": {
+        "right_knee_link": 4,
+        "left_ankle_roll_link": 93,
+        "left_knee_link": 2,
+        "right_ankle_roll_link": 111,
+        "right_ankle_pitch_link": 3,
+        "left_ankle_pitch_link": 2,
+        "right_wrist_yaw_link": 32,
+        "right_wrist_pitch_link": 10,
+        "left_wrist_yaw_link": 13,
+        "left_wrist_pitch_link": 9,
+        "left_wrist_roll_link": 4,
+        "head_link": 32,
+        "right_shoulder_yaw_link": 14,
+        "right_elbow_link": 13,
+        "right_shoulder_roll_link": 2,
+        "right_shoulder_pitch_link": 2,
+        "right_wrist_roll_link": 1,
+        "left_hip_roll_link": 1,
+        "left_hip_pitch_link": 17,
+        "left_shoulder_pitch_link": 8,
+        "logo_link": 29,
+        "torso_link": 14,
+        "left_shoulder_yaw_link": 3
+      },
+      "reference_ground_contact_geometry_samples_by_body": {
+        "right_knee_link": 84,
+        "left_ankle_roll_link": 136,
+        "left_knee_link": 49,
+        "right_ankle_roll_link": 151,
+        "right_ankle_pitch_link": 90,
+        "left_ankle_pitch_link": 57,
+        "right_wrist_yaw_link": 6,
+        "right_wrist_pitch_link": 5
+      },
+      "actual_min_contact_distance_m": -0.059697794228025805,
+      "actual_min_after_initial_100ms_m": -0.059697794228025805,
+      "head_torso_or_pelvis_ground_contact_samples": 36,
+      "actual_ending_ground_bodies": [
+        "left_shoulder_yaw_link",
+        "right_ankle_roll_link",
+        "right_elbow_link",
+        "right_wrist_pitch_link",
+        "right_wrist_yaw_link",
+        "torso_link"
+      ],
+      "ending_root_speed_m_s": 0.3399055600166321,
+      "contact_force_measured": false,
+      "geometric_review_complete": true,
+      "physical_contact_fidelity_inferred": false
+    },
+    {
+      "clip": "88_09_stageii_unitree_g1",
+      "full_clip_steps": 310,
+      "original_hard_gate_passed": false,
+      "actual_ground_contact_geometry_samples_by_body": {
+        "left_ankle_roll_link": 152,
+        "left_ankle_pitch_link": 2,
+        "left_knee_link": 1,
+        "right_ankle_roll_link": 128,
+        "right_wrist_yaw_link": 19,
+        "right_wrist_pitch_link": 2,
+        "left_wrist_yaw_link": 10,
+        "left_wrist_pitch_link": 10,
+        "left_wrist_roll_link": 6,
+        "head_link": 4,
+        "left_elbow_link": 3,
+        "left_hip_pitch_link": 2,
+        "left_hip_roll_link": 2,
+        "right_knee_link": 1,
+        "right_ankle_pitch_link": 1,
+        "right_shoulder_yaw_link": 16,
+        "right_shoulder_pitch_link": 3,
+        "torso_link": 10,
+        "logo_link": 3,
+        "right_hip_pitch_link": 2,
+        "pelvis_contour_link": 2,
+        "left_shoulder_yaw_link": 18,
+        "left_shoulder_pitch_link": 13,
+        "left_shoulder_roll_link": 11,
+        "right_elbow_link": 3
+      },
+      "reference_ground_contact_geometry_samples_by_body": {
+        "left_ankle_roll_link": 134,
+        "left_ankle_pitch_link": 58,
+        "left_knee_link": 54,
+        "right_ankle_roll_link": 151,
+        "right_ankle_pitch_link": 18,
+        "right_wrist_yaw_link": 17,
+        "right_wrist_pitch_link": 13,
+        "right_wrist_roll_link": 2
+      },
+      "actual_min_contact_distance_m": -0.05625891815533321,
+      "actual_min_after_initial_100ms_m": -0.0444866123210686,
+      "head_torso_or_pelvis_ground_contact_samples": 16,
+      "actual_ending_ground_bodies": [
+        "left_ankle_roll_link",
+        "left_shoulder_pitch_link",
+        "left_shoulder_yaw_link",
+        "right_ankle_roll_link",
+        "right_shoulder_yaw_link"
+      ],
+      "ending_root_speed_m_s": 0.19556254148483276,
+      "contact_force_measured": false,
+      "geometric_review_complete": true,
+      "physical_contact_fidelity_inferred": false
+    },
+    {
+      "clip": "88_10_stageii_unitree_g1",
+      "full_clip_steps": 385,
+      "original_hard_gate_passed": true,
+      "actual_ground_contact_geometry_samples_by_body": {
+        "right_knee_link": 2,
+        "left_ankle_roll_link": 283,
+        "left_knee_link": 1,
+        "right_ankle_roll_link": 331,
+        "right_ankle_pitch_link": 2,
+        "left_ankle_pitch_link": 2
+      },
+      "reference_ground_contact_geometry_samples_by_body": {
+        "right_knee_link": 105,
+        "left_ankle_roll_link": 331,
+        "left_knee_link": 104,
+        "right_ankle_roll_link": 369,
+        "right_ankle_pitch_link": 117,
+        "left_ankle_pitch_link": 123
+      },
+      "actual_min_contact_distance_m": -0.053421446219038465,
+      "actual_min_after_initial_100ms_m": -0.013805035403916775,
+      "head_torso_or_pelvis_ground_contact_samples": 0,
+      "actual_ending_ground_bodies": [
+        "left_ankle_roll_link",
+        "right_ankle_roll_link"
+      ],
+      "ending_root_speed_m_s": 0.10034342855215073,
+      "contact_force_measured": false,
+      "geometric_review_complete": true,
+      "physical_contact_fidelity_inferred": false
+    },
+    {
+      "clip": "88_11_stageii_unitree_g1",
+      "full_clip_steps": 1685,
+      "original_hard_gate_passed": true,
+      "actual_ground_contact_geometry_samples_by_body": {
+        "right_ankle_roll_link": 1302,
+        "left_ankle_roll_link": 1274,
+        "left_ankle_pitch_link": 2,
+        "left_knee_link": 14,
+        "right_knee_link": 25
+      },
+      "reference_ground_contact_geometry_samples_by_body": {
+        "right_ankle_roll_link": 1542,
+        "left_ankle_roll_link": 1448,
+        "left_ankle_pitch_link": 715,
+        "left_knee_link": 569,
+        "right_knee_link": 702,
+        "right_ankle_pitch_link": 697,
+        "left_hip_yaw_link": 47,
+        "right_hip_yaw_link": 44
+      },
+      "actual_min_contact_distance_m": -0.05053589477451199,
+      "actual_min_after_initial_100ms_m": -0.019077929905950027,
+      "head_torso_or_pelvis_ground_contact_samples": 0,
+      "actual_ending_ground_bodies": [
+        "right_ankle_roll_link"
+      ],
+      "ending_root_speed_m_s": 0.34364160895347595,
+      "contact_force_measured": false,
+      "geometric_review_complete": true,
+      "physical_contact_fidelity_inferred": false
+    },
+    {
+      "clip": "89_01_stageii_unitree_g1",
+      "full_clip_steps": 1939,
+      "original_hard_gate_passed": true,
+      "actual_ground_contact_geometry_samples_by_body": {
+        "right_knee_link": 304,
+        "left_ankle_roll_link": 1775,
+        "left_knee_link": 1,
+        "right_ankle_roll_link": 1724,
+        "right_ankle_pitch_link": 2,
+        "left_ankle_pitch_link": 1,
+        "right_hip_yaw_link": 99
+      },
+      "reference_ground_contact_geometry_samples_by_body": {
+        "right_knee_link": 1158,
+        "left_ankle_roll_link": 1564,
+        "left_knee_link": 241,
+        "right_ankle_roll_link": 1890,
+        "right_ankle_pitch_link": 623,
+        "left_ankle_pitch_link": 210,
+        "right_hip_yaw_link": 440
+      },
+      "actual_min_contact_distance_m": -0.04283646092542088,
+      "actual_min_after_initial_100ms_m": -0.02541582271771922,
+      "head_torso_or_pelvis_ground_contact_samples": 0,
+      "actual_ending_ground_bodies": [
+        "left_ankle_roll_link",
+        "right_ankle_roll_link"
+      ],
+      "ending_root_speed_m_s": 0.03968620300292969,
+      "contact_force_measured": false,
+      "geometric_review_complete": true,
+      "physical_contact_fidelity_inferred": false
+    },
+    {
+      "clip": "90_08_stageii_unitree_g1",
+      "full_clip_steps": 276,
+      "original_hard_gate_passed": true,
+      "actual_ground_contact_geometry_samples_by_body": {
+        "right_ankle_roll_link": 219,
+        "left_ankle_roll_link": 215
+      },
+      "reference_ground_contact_geometry_samples_by_body": {
+        "right_ankle_roll_link": 13,
+        "left_ankle_roll_link": 8
+      },
+      "actual_min_contact_distance_m": -0.026867791958114316,
+      "actual_min_after_initial_100ms_m": -0.026867791958114316,
+      "head_torso_or_pelvis_ground_contact_samples": 0,
+      "actual_ending_ground_bodies": [
+        "left_ankle_roll_link",
+        "right_ankle_roll_link"
+      ],
+      "ending_root_speed_m_s": 0.10012058168649673,
+      "contact_force_measured": false,
+      "geometric_review_complete": true,
+      "physical_contact_fidelity_inferred": false
+    },
+    {
+      "clip": "90_14_stageii_unitree_g1",
+      "full_clip_steps": 345,
+      "original_hard_gate_passed": true,
+      "actual_ground_contact_geometry_samples_by_body": {
+        "right_ankle_roll_link": 265,
+        "left_ankle_roll_link": 276
+      },
+      "reference_ground_contact_geometry_samples_by_body": {
+        "right_ankle_roll_link": 131,
+        "left_ankle_roll_link": 83,
+        "right_knee_link": 13,
+        "left_knee_link": 11,
+        "right_ankle_pitch_link": 12,
+        "left_ankle_pitch_link": 10
+      },
+      "actual_min_contact_distance_m": -0.03851998003265774,
+      "actual_min_after_initial_100ms_m": -0.03851998003265774,
+      "head_torso_or_pelvis_ground_contact_samples": 0,
+      "actual_ending_ground_bodies": [
+        "left_ankle_roll_link",
+        "right_ankle_roll_link"
+      ],
+      "ending_root_speed_m_s": 0.12950941920280457,
+      "contact_force_measured": false,
+      "geometric_review_complete": true,
+      "physical_contact_fidelity_inferred": false
+    },
+    {
+      "clip": "90_15_stageii_unitree_g1",
+      "full_clip_steps": 491,
+      "original_hard_gate_passed": true,
+      "actual_ground_contact_geometry_samples_by_body": {
+        "right_ankle_roll_link": 402,
+        "left_ankle_roll_link": 382
+      },
+      "reference_ground_contact_geometry_samples_by_body": {
+        "right_ankle_roll_link": 69,
+        "left_ankle_roll_link": 48,
+        "right_knee_link": 12,
+        "left_knee_link": 10,
+        "right_ankle_pitch_link": 11,
+        "left_ankle_pitch_link": 10
+      },
+      "actual_min_contact_distance_m": -0.033135373752174915,
+      "actual_min_after_initial_100ms_m": -0.033135373752174915,
+      "head_torso_or_pelvis_ground_contact_samples": 0,
+      "actual_ending_ground_bodies": [],
+      "ending_root_speed_m_s": 0.2602231800556183,
+      "contact_force_measured": false,
+      "geometric_review_complete": true,
+      "physical_contact_fidelity_inferred": false
+    },
+    {
+      "clip": "90_19_stageii_unitree_g1",
+      "full_clip_steps": 430,
+      "original_hard_gate_passed": true,
+      "actual_ground_contact_geometry_samples_by_body": {
+        "right_ankle_roll_link": 217,
+        "left_ankle_roll_link": 288,
+        "right_wrist_yaw_link": 5,
+        "right_wrist_pitch_link": 2,
+        "left_wrist_yaw_link": 3,
+        "right_knee_link": 27,
+        "right_hip_yaw_link": 57
+      },
+      "reference_ground_contact_geometry_samples_by_body": {
+        "right_ankle_roll_link": 224,
+        "left_ankle_roll_link": 195,
+        "right_knee_link": 12,
+        "right_hip_yaw_link": 3,
+        "left_ankle_pitch_link": 63,
+        "left_knee_link": 99
+      },
+      "actual_min_contact_distance_m": -0.050582739772725135,
+      "actual_min_after_initial_100ms_m": -0.050582739772725135,
+      "head_torso_or_pelvis_ground_contact_samples": 0,
+      "actual_ending_ground_bodies": [
+        "left_ankle_roll_link",
+        "right_hip_yaw_link"
+      ],
+      "ending_root_speed_m_s": 0.32204440236091614,
+      "contact_force_measured": false,
+      "geometric_review_complete": true,
+      "physical_contact_fidelity_inferred": false
+    }
+  ],
+  "all_failures_retained": true,
+  "contact_force_measured": false
+}
