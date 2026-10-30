@@ -1,0 +1,70 @@
+{
+  "mode": "specialist8808-bound20-corrected-cpu-1030",
+  "checkpoint": "[local]/acro-h100-2000.pt",
+  "checkpoint_sha256": "0f4a7bc67ae9e3440711e401e37f8276102e59946177117d082a6d7aabe108b4",
+  "device": "cpu",
+  "observation_dim": 99,
+  "one_policy": true,
+  "backend": "mujoco",
+  "seed": 0,
+  "evaluation_contract_version": 2,
+  "normalization": "original float32 0.1 maximum reward times complete resampled clip length minus one; post-physics gate at pre-action f+1; stop reward at first original failure, retain full physical failed tail",
+  "original_reward_only": true,
+  "auto_reset": false,
+  "post_initialization_resets": 0,
+  "completed_reference_clocks_held_only_after_their_metric_window": true,
+  "no_controlled_robot_state_writes_after_t0": true,
+  "wall_seconds": 4.730205299798399,
+  "groups": {
+    "new": {
+      "denominator": 1,
+      "passed": 1,
+      "macro_return_original": 0.6690323948860168,
+      "frame_weighted_return_original": 0.6690323958962651
+    }
+  },
+  "clips": [
+    {
+      "clip": "88_08_stageii_unitree_g1",
+      "group": "new",
+      "full_clip_steps": 236,
+      "elapsed_seconds": 4.72,
+      "post_initialization_resets": 0,
+      "norm_return_original": 0.6690323948860168,
+      "reward_sum_original_until_first_failure": 15.789164543151855,
+      "normalization_denominator": 23.6,
+      "scored_steps": 236,
+      "first_original_hard_failure_s": null,
+      "hard_failure_original_frames": 0,
+      "hard_failure_aligned_frames": 0,
+      "passed_original_hard_gate": true,
+      "root_xy_rmse_m": 0.20506703853607178,
+      "root_xy_peak_m": 0.44851821660995483,
+      "yaw_rmse_deg": 7.021181583404541,
+      "body_global_mean_m": 0.18302857875823975,
+      "body_local_mean_m": 0.08560919016599655,
+      "reference_inversion_frames": 43,
+      "inversion_observed_when_expected": true,
+      "end_pelvis_m": 0.7180505394935608,
+      "end_Rzz": 0.9915786385536194,
+      "end_root_speed_m_s": 1.2161310911178589
+    }
+  ],
+  "controller_variant": "action-output-bound-20-v1",
+  "reference_variant": "ground-calibration-v1",
+  "specialist_control_only": true,
+  "not_a_unified15_or55_result": true,
+  "training_updates_in_this_diagnostic": 0,
+  "action_output_bound": [
+    -20,
+    20
+  ],
+  "action_bound_observations": [
+    {
+      "clip": "88_08_stageii_unitree_g1",
+      "active_action_elements": 6844,
+      "clipped_elements": 1,
+      "peak_raw_output": 21.38884162902832
+    }
+  ]
+}

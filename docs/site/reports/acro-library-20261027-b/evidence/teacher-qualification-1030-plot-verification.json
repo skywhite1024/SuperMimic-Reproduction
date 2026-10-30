@@ -1,0 +1,21 @@
+{
+  "plots": [
+    {
+      "path": "figures/teacher-qualification-1030.png",
+      "bytes": 91794,
+      "sha256": "7a98ddf6d6aa6ef02282a632a755d51674edccbb85cafd2eb3d161ab20cc8182"
+    },
+    {
+      "path": "figures/teacher-qualification-1030.svg",
+      "bytes": 67066,
+      "sha256": "a127c56aff98e2a3f27214fc603763af0164e87e945422b8034c6d29e91ef616"
+    },
+    {
+      "path": "figures/teacher-qualification-1030.pdf",
+      "bytes": 19042,
+      "sha256": "cdfeae71e340502c561121157a3e2c96bd6eb29d006419336a7a1b8c6d86cf99"
+    }
+  ],
+  "source_sha256": "ebb529e5527b13b4b837a9f25081c62974e1217a1a663b769258b4065a2896f8",
+  "fixed_denominators": true
+}

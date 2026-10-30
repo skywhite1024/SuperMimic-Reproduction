@@ -1,0 +1,8 @@
+{
+  "status": "first_readback_probe_failed_before_output_comparison",
+  "checked_at": "2026-10-30T09:21:50.536861+00:00",
+  "error": "RuntimeError: output with shape [1] does not match the broadcast shape [4]",
+  "cause": "The diagnostic batched4 histories but instantiated the action-bound bookkeeping for a one-environment vector. Model loading and prior6-update training were not rerun or modified.",
+  "repair": "Create4 bookkeeping lengths for4 independent histories. This affects only the probe counter shape.",
+  "training_updates_in_failed_probe": 0
+}

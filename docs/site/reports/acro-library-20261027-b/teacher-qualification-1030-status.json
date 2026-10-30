@@ -1,0 +1,1083 @@
+{
+  "status": "complete_fixed_stage2_teacher_not_qualified_for_protected_preservation",
+  "updated_at": "2026-10-30T09:22:59.026752+00:00",
+  "checkpoint_sha256": "807d5fac7ca128f892c950fa379133231cd5f741e83075ed017d105b2eec6eec",
+  "plan_sha256": "431e6a39e2cf481b66620815d41dcf08763224a3b0979ab0e25a70e235181873",
+  "GPU": 0,
+  "training_updates": 0,
+  "CPU_affinity": [
+    0,
+    1
+  ],
+  "program_wall_seconds": 298.82800000021234,
+  "new_denominator_per_reference": 15,
+  "protected_denominator_per_reference": 3,
+  "groups": {
+    "raw": {
+      "denominator": 15,
+      "original_hard_gate_passed": 13,
+      "tracking_quality_passed": 10,
+      "contact_review_passed": 11,
+      "combined_engineering_passed": 8,
+      "protected_denominator": 3,
+      "protected_strict_passed": 0,
+      "protected": [
+        {
+          "clip": "88_07_stageii_unitree_g1",
+          "original_hard_gate_passed": true,
+          "tracking_quality_passed": false,
+          "contact_review_passed": false,
+          "combined_engineering_passed": false,
+          "contact_checks": {
+            "no_unexpected_trunk_contact": true,
+            "penetration_within_engineering_limit": false
+          },
+          "unexpected_trunk_contact_samples": 0,
+          "unexpected_trunk_contact_events": [],
+          "actual_min_after_initial_100ms_m": -0.06409728383782196,
+          "tracking_failed_checks": [
+            "root_xy_rmse_m",
+            "root_xy_peak_m",
+            "body_global_mean_m",
+            "body_local_mean_m",
+            "norm_return_original"
+          ],
+          "contact_force_measured": false
+        },
+        {
+          "clip": "88_08_stageii_unitree_g1",
+          "original_hard_gate_passed": true,
+          "tracking_quality_passed": false,
+          "contact_review_passed": false,
+          "combined_engineering_passed": false,
+          "contact_checks": {
+            "no_unexpected_trunk_contact": true,
+            "penetration_within_engineering_limit": false
+          },
+          "unexpected_trunk_contact_samples": 0,
+          "unexpected_trunk_contact_events": [],
+          "actual_min_after_initial_100ms_m": -0.05583567647351614,
+          "tracking_failed_checks": [
+            "norm_return_original"
+          ],
+          "contact_force_measured": false
+        },
+        {
+          "clip": "88_09_stageii_unitree_g1",
+          "original_hard_gate_passed": true,
+          "tracking_quality_passed": false,
+          "contact_review_passed": true,
+          "combined_engineering_passed": false,
+          "contact_checks": {
+            "no_unexpected_trunk_contact": true,
+            "penetration_within_engineering_limit": true
+          },
+          "unexpected_trunk_contact_samples": 0,
+          "unexpected_trunk_contact_events": [],
+          "actual_min_after_initial_100ms_m": -0.04283061194119484,
+          "tracking_failed_checks": [
+            "norm_return_original"
+          ],
+          "contact_force_measured": false
+        }
+      ]
+    },
+    "corrected": {
+      "denominator": 15,
+      "original_hard_gate_passed": 15,
+      "tracking_quality_passed": 12,
+      "contact_review_passed": 11,
+      "combined_engineering_passed": 10,
+      "protected_denominator": 3,
+      "protected_strict_passed": 0,
+      "protected": [
+        {
+          "clip": "88_07_stageii_unitree_g1",
+          "original_hard_gate_passed": true,
+          "tracking_quality_passed": false,
+          "contact_review_passed": false,
+          "combined_engineering_passed": false,
+          "contact_checks": {
+            "no_unexpected_trunk_contact": true,
+            "penetration_within_engineering_limit": false
+          },
+          "unexpected_trunk_contact_samples": 0,
+          "unexpected_trunk_contact_events": [],
+          "actual_min_after_initial_100ms_m": -0.06409728383782196,
+          "tracking_failed_checks": [
+            "root_xy_rmse_m",
+            "root_xy_peak_m",
+            "body_global_mean_m",
+            "body_local_mean_m",
+            "norm_return_original"
+          ],
+          "contact_force_measured": false
+        },
+        {
+          "clip": "88_08_stageii_unitree_g1",
+          "original_hard_gate_passed": true,
+          "tracking_quality_passed": false,
+          "contact_review_passed": false,
+          "combined_engineering_passed": false,
+          "contact_checks": {
+            "no_unexpected_trunk_contact": true,
+            "penetration_within_engineering_limit": false
+          },
+          "unexpected_trunk_contact_samples": 0,
+          "unexpected_trunk_contact_events": [],
+          "actual_min_after_initial_100ms_m": -0.05583567647351614,
+          "tracking_failed_checks": [
+            "norm_return_original"
+          ],
+          "contact_force_measured": false
+        },
+        {
+          "clip": "88_09_stageii_unitree_g1",
+          "original_hard_gate_passed": true,
+          "tracking_quality_passed": false,
+          "contact_review_passed": true,
+          "combined_engineering_passed": false,
+          "contact_checks": {
+            "no_unexpected_trunk_contact": true,
+            "penetration_within_engineering_limit": true
+          },
+          "unexpected_trunk_contact_samples": 0,
+          "unexpected_trunk_contact_events": [],
+          "actual_min_after_initial_100ms_m": -0.04283061194119484,
+          "tracking_failed_checks": [
+            "norm_return_original"
+          ],
+          "contact_force_measured": false
+        }
+      ]
+    }
+  },
+  "protected": [
+    {
+      "clip": "88_07_stageii_unitree_g1",
+      "raw_calibrated_trajectory_identity": {
+        "state": true,
+        "reference_qpos": true,
+        "action": true,
+        "xy_error": true
+      },
+      "outcomes": {
+        "raw": {
+          "physical": {
+            "clip": "88_07_stageii_unitree_g1",
+            "group": "new",
+            "full_clip_steps": 126,
+            "elapsed_seconds": 2.52,
+            "post_initialization_resets": 0,
+            "norm_return_original": 0.1057363823056221,
+            "reward_sum_original_until_first_failure": 1.3322784900665283,
+            "normalization_denominator": 12.600000000000001,
+            "scored_steps": 126,
+            "first_original_hard_failure_s": null,
+            "hard_failure_original_frames": 0,
+            "hard_failure_aligned_frames": 0,
+            "passed_original_hard_gate": true,
+            "root_xy_rmse_m": 0.48336175084114075,
+            "root_xy_peak_m": 0.7896274924278259,
+            "yaw_rmse_deg": 29.12017250061035,
+            "body_global_mean_m": 0.4818117916584015,
+            "body_local_mean_m": 0.1761167198419571,
+            "reference_inversion_frames": 27,
+            "inversion_observed_when_expected": true,
+            "end_pelvis_m": 0.7346152067184448,
+            "end_Rzz": 0.998958170413971,
+            "end_root_speed_m_s": 0.5846962928771973
+          },
+          "quality": {
+            "clip": "88_07_stageii_unitree_g1",
+            "original_hard_gate_passed": true,
+            "tracking_quality_passed": false,
+            "contact_review_passed": false,
+            "combined_engineering_passed": false,
+            "contact_checks": {
+              "no_unexpected_trunk_contact": true,
+              "penetration_within_engineering_limit": false
+            },
+            "unexpected_trunk_contact_samples": 0,
+            "unexpected_trunk_contact_events": [],
+            "actual_min_after_initial_100ms_m": -0.06409728383782196,
+            "tracking_failed_checks": [
+              "root_xy_rmse_m",
+              "root_xy_peak_m",
+              "body_global_mean_m",
+              "body_local_mean_m",
+              "norm_return_original"
+            ],
+            "contact_force_measured": false
+          },
+          "tracking": {
+            "clip": "88_07_stageii_unitree_g1",
+            "group": "new",
+            "full_clip_steps": 126,
+            "elapsed_seconds": 2.52,
+            "post_initialization_resets": 0,
+            "norm_return_original": 0.1057363823056221,
+            "reward_sum_original_until_first_failure": 1.3322784900665283,
+            "normalization_denominator": 12.600000000000001,
+            "scored_steps": 126,
+            "first_original_hard_failure_s": null,
+            "hard_failure_original_frames": 0,
+            "hard_failure_aligned_frames": 0,
+            "passed_original_hard_gate": true,
+            "root_xy_rmse_m": 0.48336175084114075,
+            "root_xy_peak_m": 0.7896274924278259,
+            "yaw_rmse_deg": 29.12017250061035,
+            "body_global_mean_m": 0.4818117916584015,
+            "body_local_mean_m": 0.1761167198419571,
+            "reference_inversion_frames": 27,
+            "inversion_observed_when_expected": true,
+            "end_pelvis_m": 0.7346152067184448,
+            "end_Rzz": 0.998958170413971,
+            "end_root_speed_m_s": 0.5846962928771973,
+            "root_orientation_geodesic_rmse_deg": 27.827046922417615,
+            "inversion_frame_coverage": 0.8888888888888888,
+            "reference_ending_upright": true,
+            "end_half_second_pelvis_min_m": 0.7210721373558044,
+            "end_half_second_Rzz_min": 0.9741030122336729,
+            "quality_checks": {
+              "no_original_hard_failure": true,
+              "no_resets": true,
+              "root_xy_rmse_m": false,
+              "root_xy_peak_m": false,
+              "body_global_mean_m": false,
+              "body_local_mean_m": false,
+              "yaw_rmse_deg": true,
+              "root_orientation_geodesic_rmse_deg": true,
+              "norm_return_original": false,
+              "inversion_coverage": true,
+              "upright_ending": true
+            },
+            "tracking_quality_passed": false,
+            "failed_checks": [
+              "root_xy_rmse_m",
+              "root_xy_peak_m",
+              "body_global_mean_m",
+              "body_local_mean_m",
+              "norm_return_original"
+            ]
+          },
+          "contact": {
+            "clip": "88_07_stageii_unitree_g1",
+            "full_clip_steps": 126,
+            "original_hard_gate_passed": true,
+            "actual_ground_contact_geometry_samples_by_body": {
+              "right_ankle_pitch_link": 2,
+              "left_ankle_roll_link": 43,
+              "right_knee_link": 1,
+              "right_ankle_roll_link": 57,
+              "right_wrist_yaw_link": 1,
+              "left_wrist_yaw_link": 4,
+              "left_wrist_pitch_link": 3,
+              "left_knee_link": 2,
+              "left_ankle_pitch_link": 2
+            },
+            "reference_ground_contact_geometry_samples_by_body": {
+              "right_ankle_pitch_link": 5,
+              "left_ankle_roll_link": 31,
+              "right_knee_link": 5,
+              "right_ankle_roll_link": 70,
+              "left_knee_link": 1
+            },
+            "actual_min_contact_distance_m": -0.06409728383782196,
+            "actual_min_after_initial_100ms_m": -0.06409728383782196,
+            "head_torso_or_pelvis_ground_contact_samples": 0,
+            "actual_ending_ground_bodies": [
+              "right_ankle_roll_link"
+            ],
+            "ending_root_speed_m_s": 0.5846962928771973,
+            "contact_force_measured": false,
+            "geometric_review_complete": true,
+            "physical_contact_fidelity_inferred": false
+          },
+          "action_bound": {
+            "clip": "88_07_stageii_unitree_g1",
+            "active_action_elements": 3654,
+            "clipped_elements": 14,
+            "peak_raw_output": 24.637256622314453
+          }
+        },
+        "corrected": {
+          "physical": {
+            "clip": "88_07_stageii_unitree_g1",
+            "group": "new",
+            "full_clip_steps": 126,
+            "elapsed_seconds": 2.52,
+            "post_initialization_resets": 0,
+            "norm_return_original": 0.1057363823056221,
+            "reward_sum_original_until_first_failure": 1.3322784900665283,
+            "normalization_denominator": 12.600000000000001,
+            "scored_steps": 126,
+            "first_original_hard_failure_s": null,
+            "hard_failure_original_frames": 0,
+            "hard_failure_aligned_frames": 0,
+            "passed_original_hard_gate": true,
+            "root_xy_rmse_m": 0.48336175084114075,
+            "root_xy_peak_m": 0.7896274924278259,
+            "yaw_rmse_deg": 29.12017250061035,
+            "body_global_mean_m": 0.4818117916584015,
+            "body_local_mean_m": 0.1761167198419571,
+            "reference_inversion_frames": 27,
+            "inversion_observed_when_expected": true,
+            "end_pelvis_m": 0.7346152067184448,
+            "end_Rzz": 0.998958170413971,
+            "end_root_speed_m_s": 0.5846962928771973
+          },
+          "quality": {
+            "clip": "88_07_stageii_unitree_g1",
+            "original_hard_gate_passed": true,
+            "tracking_quality_passed": false,
+            "contact_review_passed": false,
+            "combined_engineering_passed": false,
+            "contact_checks": {
+              "no_unexpected_trunk_contact": true,
+              "penetration_within_engineering_limit": false
+            },
+            "unexpected_trunk_contact_samples": 0,
+            "unexpected_trunk_contact_events": [],
+            "actual_min_after_initial_100ms_m": -0.06409728383782196,
+            "tracking_failed_checks": [
+              "root_xy_rmse_m",
+              "root_xy_peak_m",
+              "body_global_mean_m",
+              "body_local_mean_m",
+              "norm_return_original"
+            ],
+            "contact_force_measured": false
+          },
+          "tracking": {
+            "clip": "88_07_stageii_unitree_g1",
+            "group": "new",
+            "full_clip_steps": 126,
+            "elapsed_seconds": 2.52,
+            "post_initialization_resets": 0,
+            "norm_return_original": 0.1057363823056221,
+            "reward_sum_original_until_first_failure": 1.3322784900665283,
+            "normalization_denominator": 12.600000000000001,
+            "scored_steps": 126,
+            "first_original_hard_failure_s": null,
+            "hard_failure_original_frames": 0,
+            "hard_failure_aligned_frames": 0,
+            "passed_original_hard_gate": true,
+            "root_xy_rmse_m": 0.48336175084114075,
+            "root_xy_peak_m": 0.7896274924278259,
+            "yaw_rmse_deg": 29.12017250061035,
+            "body_global_mean_m": 0.4818117916584015,
+            "body_local_mean_m": 0.1761167198419571,
+            "reference_inversion_frames": 27,
+            "inversion_observed_when_expected": true,
+            "end_pelvis_m": 0.7346152067184448,
+            "end_Rzz": 0.998958170413971,
+            "end_root_speed_m_s": 0.5846962928771973,
+            "root_orientation_geodesic_rmse_deg": 27.827046922417615,
+            "inversion_frame_coverage": 0.8888888888888888,
+            "reference_ending_upright": true,
+            "end_half_second_pelvis_min_m": 0.7210721373558044,
+            "end_half_second_Rzz_min": 0.9741030122336729,
+            "quality_checks": {
+              "no_original_hard_failure": true,
+              "no_resets": true,
+              "root_xy_rmse_m": false,
+              "root_xy_peak_m": false,
+              "body_global_mean_m": false,
+              "body_local_mean_m": false,
+              "yaw_rmse_deg": true,
+              "root_orientation_geodesic_rmse_deg": true,
+              "norm_return_original": false,
+              "inversion_coverage": true,
+              "upright_ending": true
+            },
+            "tracking_quality_passed": false,
+            "failed_checks": [
+              "root_xy_rmse_m",
+              "root_xy_peak_m",
+              "body_global_mean_m",
+              "body_local_mean_m",
+              "norm_return_original"
+            ]
+          },
+          "contact": {
+            "clip": "88_07_stageii_unitree_g1",
+            "full_clip_steps": 126,
+            "original_hard_gate_passed": true,
+            "actual_ground_contact_geometry_samples_by_body": {
+              "right_ankle_pitch_link": 2,
+              "right_knee_link": 1,
+              "right_ankle_roll_link": 57,
+              "left_ankle_roll_link": 43,
+              "right_wrist_yaw_link": 1,
+              "left_wrist_pitch_link": 3,
+              "left_wrist_yaw_link": 4,
+              "left_knee_link": 2,
+              "left_ankle_pitch_link": 2
+            },
+            "reference_ground_contact_geometry_samples_by_body": {
+              "right_ankle_pitch_link": 5,
+              "right_knee_link": 5,
+              "right_ankle_roll_link": 70,
+              "left_ankle_roll_link": 31,
+              "left_knee_link": 1
+            },
+            "actual_min_contact_distance_m": -0.06409728383782196,
+            "actual_min_after_initial_100ms_m": -0.06409728383782196,
+            "head_torso_or_pelvis_ground_contact_samples": 0,
+            "actual_ending_ground_bodies": [
+              "right_ankle_roll_link"
+            ],
+            "ending_root_speed_m_s": 0.5846962928771973,
+            "contact_force_measured": false,
+            "geometric_review_complete": true,
+            "physical_contact_fidelity_inferred": false
+          },
+          "action_bound": {
+            "clip": "88_07_stageii_unitree_g1",
+            "active_action_elements": 3654,
+            "clipped_elements": 14,
+            "peak_raw_output": 24.637256622314453
+          }
+        }
+      }
+    },
+    {
+      "clip": "88_08_stageii_unitree_g1",
+      "raw_calibrated_trajectory_identity": {
+        "state": true,
+        "reference_qpos": true,
+        "action": true,
+        "xy_error": true
+      },
+      "outcomes": {
+        "raw": {
+          "physical": {
+            "clip": "88_08_stageii_unitree_g1",
+            "group": "new",
+            "full_clip_steps": 236,
+            "elapsed_seconds": 4.72,
+            "post_initialization_resets": 0,
+            "norm_return_original": 0.5696679949760437,
+            "reward_sum_original_until_first_failure": 13.444164276123047,
+            "normalization_denominator": 23.6,
+            "scored_steps": 236,
+            "first_original_hard_failure_s": null,
+            "hard_failure_original_frames": 0,
+            "hard_failure_aligned_frames": 0,
+            "passed_original_hard_gate": true,
+            "root_xy_rmse_m": 0.13192029297351837,
+            "root_xy_peak_m": 0.3220064043998718,
+            "yaw_rmse_deg": 12.062020301818848,
+            "body_global_mean_m": 0.15472042560577393,
+            "body_local_mean_m": 0.11552466452121735,
+            "reference_inversion_frames": 43,
+            "inversion_observed_when_expected": true,
+            "end_pelvis_m": 0.7024507522583008,
+            "end_Rzz": 0.9955689907073975,
+            "end_root_speed_m_s": 0.78879714012146
+          },
+          "quality": {
+            "clip": "88_08_stageii_unitree_g1",
+            "original_hard_gate_passed": true,
+            "tracking_quality_passed": false,
+            "contact_review_passed": false,
+            "combined_engineering_passed": false,
+            "contact_checks": {
+              "no_unexpected_trunk_contact": true,
+              "penetration_within_engineering_limit": false
+            },
+            "unexpected_trunk_contact_samples": 0,
+            "unexpected_trunk_contact_events": [],
+            "actual_min_after_initial_100ms_m": -0.05583567647351614,
+            "tracking_failed_checks": [
+              "norm_return_original"
+            ],
+            "contact_force_measured": false
+          },
+          "tracking": {
+            "clip": "88_08_stageii_unitree_g1",
+            "group": "new",
+            "full_clip_steps": 236,
+            "elapsed_seconds": 4.72,
+            "post_initialization_resets": 0,
+            "norm_return_original": 0.5696679949760437,
+            "reward_sum_original_until_first_failure": 13.444164276123047,
+            "normalization_denominator": 23.6,
+            "scored_steps": 236,
+            "first_original_hard_failure_s": null,
+            "hard_failure_original_frames": 0,
+            "hard_failure_aligned_frames": 0,
+            "passed_original_hard_gate": true,
+            "root_xy_rmse_m": 0.13192029297351837,
+            "root_xy_peak_m": 0.3220064043998718,
+            "yaw_rmse_deg": 12.062020301818848,
+            "body_global_mean_m": 0.15472042560577393,
+            "body_local_mean_m": 0.11552466452121735,
+            "reference_inversion_frames": 43,
+            "inversion_observed_when_expected": true,
+            "end_pelvis_m": 0.7024507522583008,
+            "end_Rzz": 0.9955689907073975,
+            "end_root_speed_m_s": 0.78879714012146,
+            "root_orientation_geodesic_rmse_deg": 18.67737533028255,
+            "inversion_frame_coverage": 0.9069767441860465,
+            "reference_ending_upright": true,
+            "end_half_second_pelvis_min_m": 0.6830132603645325,
+            "end_half_second_Rzz_min": 0.948733101238257,
+            "quality_checks": {
+              "no_original_hard_failure": true,
+              "no_resets": true,
+              "root_xy_rmse_m": true,
+              "root_xy_peak_m": true,
+              "body_global_mean_m": true,
+              "body_local_mean_m": true,
+              "yaw_rmse_deg": true,
+              "root_orientation_geodesic_rmse_deg": true,
+              "norm_return_original": false,
+              "inversion_coverage": true,
+              "upright_ending": true
+            },
+            "tracking_quality_passed": false,
+            "failed_checks": [
+              "norm_return_original"
+            ]
+          },
+          "contact": {
+            "clip": "88_08_stageii_unitree_g1",
+            "full_clip_steps": 236,
+            "original_hard_gate_passed": true,
+            "actual_ground_contact_geometry_samples_by_body": {
+              "right_ankle_pitch_link": 2,
+              "left_ankle_roll_link": 141,
+              "right_knee_link": 2,
+              "left_knee_link": 1,
+              "left_ankle_pitch_link": 3,
+              "right_ankle_roll_link": 125,
+              "right_wrist_yaw_link": 9,
+              "right_wrist_pitch_link": 12,
+              "left_wrist_yaw_link": 19,
+              "left_wrist_pitch_link": 19
+            },
+            "reference_ground_contact_geometry_samples_by_body": {
+              "right_ankle_pitch_link": 90,
+              "left_ankle_roll_link": 136,
+              "right_knee_link": 84,
+              "left_knee_link": 49,
+              "left_ankle_pitch_link": 57,
+              "right_ankle_roll_link": 151,
+              "right_wrist_yaw_link": 6,
+              "right_wrist_pitch_link": 5
+            },
+            "actual_min_contact_distance_m": -0.05583567647351614,
+            "actual_min_after_initial_100ms_m": -0.05583567647351614,
+            "head_torso_or_pelvis_ground_contact_samples": 0,
+            "actual_ending_ground_bodies": [
+              "left_ankle_roll_link",
+              "right_ankle_roll_link"
+            ],
+            "ending_root_speed_m_s": 0.78879714012146,
+            "contact_force_measured": false,
+            "geometric_review_complete": true,
+            "physical_contact_fidelity_inferred": false
+          },
+          "action_bound": {
+            "clip": "88_08_stageii_unitree_g1",
+            "active_action_elements": 6844,
+            "clipped_elements": 10,
+            "peak_raw_output": 22.148378372192383
+          }
+        },
+        "corrected": {
+          "physical": {
+            "clip": "88_08_stageii_unitree_g1",
+            "group": "new",
+            "full_clip_steps": 236,
+            "elapsed_seconds": 4.72,
+            "post_initialization_resets": 0,
+            "norm_return_original": 0.5696679949760437,
+            "reward_sum_original_until_first_failure": 13.444164276123047,
+            "normalization_denominator": 23.6,
+            "scored_steps": 236,
+            "first_original_hard_failure_s": null,
+            "hard_failure_original_frames": 0,
+            "hard_failure_aligned_frames": 0,
+            "passed_original_hard_gate": true,
+            "root_xy_rmse_m": 0.13192029297351837,
+            "root_xy_peak_m": 0.3220064043998718,
+            "yaw_rmse_deg": 12.062020301818848,
+            "body_global_mean_m": 0.15472042560577393,
+            "body_local_mean_m": 0.11552466452121735,
+            "reference_inversion_frames": 43,
+            "inversion_observed_when_expected": true,
+            "end_pelvis_m": 0.7024507522583008,
+            "end_Rzz": 0.9955689907073975,
+            "end_root_speed_m_s": 0.78879714012146
+          },
+          "quality": {
+            "clip": "88_08_stageii_unitree_g1",
+            "original_hard_gate_passed": true,
+            "tracking_quality_passed": false,
+            "contact_review_passed": false,
+            "combined_engineering_passed": false,
+            "contact_checks": {
+              "no_unexpected_trunk_contact": true,
+              "penetration_within_engineering_limit": false
+            },
+            "unexpected_trunk_contact_samples": 0,
+            "unexpected_trunk_contact_events": [],
+            "actual_min_after_initial_100ms_m": -0.05583567647351614,
+            "tracking_failed_checks": [
+              "norm_return_original"
+            ],
+            "contact_force_measured": false
+          },
+          "tracking": {
+            "clip": "88_08_stageii_unitree_g1",
+            "group": "new",
+            "full_clip_steps": 236,
+            "elapsed_seconds": 4.72,
+            "post_initialization_resets": 0,
+            "norm_return_original": 0.5696679949760437,
+            "reward_sum_original_until_first_failure": 13.444164276123047,
+            "normalization_denominator": 23.6,
+            "scored_steps": 236,
+            "first_original_hard_failure_s": null,
+            "hard_failure_original_frames": 0,
+            "hard_failure_aligned_frames": 0,
+            "passed_original_hard_gate": true,
+            "root_xy_rmse_m": 0.13192029297351837,
+            "root_xy_peak_m": 0.3220064043998718,
+            "yaw_rmse_deg": 12.062020301818848,
+            "body_global_mean_m": 0.15472042560577393,
+            "body_local_mean_m": 0.11552466452121735,
+            "reference_inversion_frames": 43,
+            "inversion_observed_when_expected": true,
+            "end_pelvis_m": 0.7024507522583008,
+            "end_Rzz": 0.9955689907073975,
+            "end_root_speed_m_s": 0.78879714012146,
+            "root_orientation_geodesic_rmse_deg": 18.67737533028255,
+            "inversion_frame_coverage": 0.9069767441860465,
+            "reference_ending_upright": true,
+            "end_half_second_pelvis_min_m": 0.6830132603645325,
+            "end_half_second_Rzz_min": 0.948733101238257,
+            "quality_checks": {
+              "no_original_hard_failure": true,
+              "no_resets": true,
+              "root_xy_rmse_m": true,
+              "root_xy_peak_m": true,
+              "body_global_mean_m": true,
+              "body_local_mean_m": true,
+              "yaw_rmse_deg": true,
+              "root_orientation_geodesic_rmse_deg": true,
+              "norm_return_original": false,
+              "inversion_coverage": true,
+              "upright_ending": true
+            },
+            "tracking_quality_passed": false,
+            "failed_checks": [
+              "norm_return_original"
+            ]
+          },
+          "contact": {
+            "clip": "88_08_stageii_unitree_g1",
+            "full_clip_steps": 236,
+            "original_hard_gate_passed": true,
+            "actual_ground_contact_geometry_samples_by_body": {
+              "left_knee_link": 1,
+              "left_ankle_pitch_link": 3,
+              "left_ankle_roll_link": 141,
+              "right_ankle_roll_link": 125,
+              "right_ankle_pitch_link": 2,
+              "right_knee_link": 2,
+              "right_wrist_yaw_link": 9,
+              "right_wrist_pitch_link": 12,
+              "left_wrist_pitch_link": 19,
+              "left_wrist_yaw_link": 19
+            },
+            "reference_ground_contact_geometry_samples_by_body": {
+              "left_knee_link": 49,
+              "left_ankle_pitch_link": 57,
+              "left_ankle_roll_link": 136,
+              "right_ankle_roll_link": 151,
+              "right_ankle_pitch_link": 90,
+              "right_knee_link": 84,
+              "right_wrist_yaw_link": 6,
+              "right_wrist_pitch_link": 5
+            },
+            "actual_min_contact_distance_m": -0.05583567647351614,
+            "actual_min_after_initial_100ms_m": -0.05583567647351614,
+            "head_torso_or_pelvis_ground_contact_samples": 0,
+            "actual_ending_ground_bodies": [
+              "left_ankle_roll_link",
+              "right_ankle_roll_link"
+            ],
+            "ending_root_speed_m_s": 0.78879714012146,
+            "contact_force_measured": false,
+            "geometric_review_complete": true,
+            "physical_contact_fidelity_inferred": false
+          },
+          "action_bound": {
+            "clip": "88_08_stageii_unitree_g1",
+            "active_action_elements": 6844,
+            "clipped_elements": 10,
+            "peak_raw_output": 22.148378372192383
+          }
+        }
+      }
+    },
+    {
+      "clip": "88_09_stageii_unitree_g1",
+      "raw_calibrated_trajectory_identity": {
+        "state": true,
+        "reference_qpos": true,
+        "action": true,
+        "xy_error": true
+      },
+      "outcomes": {
+        "raw": {
+          "physical": {
+            "clip": "88_09_stageii_unitree_g1",
+            "group": "new",
+            "full_clip_steps": 310,
+            "elapsed_seconds": 6.2,
+            "post_initialization_resets": 0,
+            "norm_return_original": 0.5733116269111633,
+            "reward_sum_original_until_first_failure": 17.772661209106445,
+            "normalization_denominator": 31.0,
+            "scored_steps": 310,
+            "first_original_hard_failure_s": null,
+            "hard_failure_original_frames": 0,
+            "hard_failure_aligned_frames": 0,
+            "passed_original_hard_gate": true,
+            "root_xy_rmse_m": 0.18623575568199158,
+            "root_xy_peak_m": 0.40916144847869873,
+            "yaw_rmse_deg": 28.82014274597168,
+            "body_global_mean_m": 0.19596999883651733,
+            "body_local_mean_m": 0.11232917010784149,
+            "reference_inversion_frames": 54,
+            "inversion_observed_when_expected": true,
+            "end_pelvis_m": 0.7454153299331665,
+            "end_Rzz": 0.9867697358131409,
+            "end_root_speed_m_s": 0.7970998883247375
+          },
+          "quality": {
+            "clip": "88_09_stageii_unitree_g1",
+            "original_hard_gate_passed": true,
+            "tracking_quality_passed": false,
+            "contact_review_passed": true,
+            "combined_engineering_passed": false,
+            "contact_checks": {
+              "no_unexpected_trunk_contact": true,
+              "penetration_within_engineering_limit": true
+            },
+            "unexpected_trunk_contact_samples": 0,
+            "unexpected_trunk_contact_events": [],
+            "actual_min_after_initial_100ms_m": -0.04283061194119484,
+            "tracking_failed_checks": [
+              "norm_return_original"
+            ],
+            "contact_force_measured": false
+          },
+          "tracking": {
+            "clip": "88_09_stageii_unitree_g1",
+            "group": "new",
+            "full_clip_steps": 310,
+            "elapsed_seconds": 6.2,
+            "post_initialization_resets": 0,
+            "norm_return_original": 0.5733116269111633,
+            "reward_sum_original_until_first_failure": 17.772661209106445,
+            "normalization_denominator": 31.0,
+            "scored_steps": 310,
+            "first_original_hard_failure_s": null,
+            "hard_failure_original_frames": 0,
+            "hard_failure_aligned_frames": 0,
+            "passed_original_hard_gate": true,
+            "root_xy_rmse_m": 0.18623575568199158,
+            "root_xy_peak_m": 0.40916144847869873,
+            "yaw_rmse_deg": 28.82014274597168,
+            "body_global_mean_m": 0.19596999883651733,
+            "body_local_mean_m": 0.11232917010784149,
+            "reference_inversion_frames": 54,
+            "inversion_observed_when_expected": true,
+            "end_pelvis_m": 0.7454153299331665,
+            "end_Rzz": 0.9867697358131409,
+            "end_root_speed_m_s": 0.7970998883247375,
+            "root_orientation_geodesic_rmse_deg": 32.98928759764351,
+            "inversion_frame_coverage": 0.7777777777777778,
+            "reference_ending_upright": true,
+            "end_half_second_pelvis_min_m": 0.6975568532943726,
+            "end_half_second_Rzz_min": 0.9458665213871361,
+            "quality_checks": {
+              "no_original_hard_failure": true,
+              "no_resets": true,
+              "root_xy_rmse_m": true,
+              "root_xy_peak_m": true,
+              "body_global_mean_m": true,
+              "body_local_mean_m": true,
+              "yaw_rmse_deg": true,
+              "root_orientation_geodesic_rmse_deg": true,
+              "norm_return_original": false,
+              "inversion_coverage": true,
+              "upright_ending": true
+            },
+            "tracking_quality_passed": false,
+            "failed_checks": [
+              "norm_return_original"
+            ]
+          },
+          "contact": {
+            "clip": "88_09_stageii_unitree_g1",
+            "full_clip_steps": 310,
+            "original_hard_gate_passed": true,
+            "actual_ground_contact_geometry_samples_by_body": {
+              "left_ankle_roll_link": 178,
+              "left_knee_link": 1,
+              "left_ankle_pitch_link": 3,
+              "right_ankle_roll_link": 138,
+              "right_wrist_yaw_link": 10,
+              "right_wrist_pitch_link": 8,
+              "left_wrist_yaw_link": 23,
+              "left_wrist_pitch_link": 14,
+              "right_ankle_pitch_link": 1
+            },
+            "reference_ground_contact_geometry_samples_by_body": {
+              "left_ankle_roll_link": 134,
+              "left_knee_link": 54,
+              "left_ankle_pitch_link": 58,
+              "right_ankle_roll_link": 151,
+              "right_ankle_pitch_link": 18,
+              "right_wrist_yaw_link": 17,
+              "right_wrist_pitch_link": 13,
+              "right_wrist_roll_link": 2
+            },
+            "actual_min_contact_distance_m": -0.05625891815533321,
+            "actual_min_after_initial_100ms_m": -0.04283061194119484,
+            "head_torso_or_pelvis_ground_contact_samples": 0,
+            "actual_ending_ground_bodies": [
+              "left_ankle_roll_link"
+            ],
+            "ending_root_speed_m_s": 0.7970998883247375,
+            "contact_force_measured": false,
+            "geometric_review_complete": true,
+            "physical_contact_fidelity_inferred": false
+          },
+          "action_bound": {
+            "clip": "88_09_stageii_unitree_g1",
+            "active_action_elements": 8990,
+            "clipped_elements": 0,
+            "peak_raw_output": 17.43775177001953
+          }
+        },
+        "corrected": {
+          "physical": {
+            "clip": "88_09_stageii_unitree_g1",
+            "group": "new",
+            "full_clip_steps": 310,
+            "elapsed_seconds": 6.2,
+            "post_initialization_resets": 0,
+            "norm_return_original": 0.5733116269111633,
+            "reward_sum_original_until_first_failure": 17.772661209106445,
+            "normalization_denominator": 31.0,
+            "scored_steps": 310,
+            "first_original_hard_failure_s": null,
+            "hard_failure_original_frames": 0,
+            "hard_failure_aligned_frames": 0,
+            "passed_original_hard_gate": true,
+            "root_xy_rmse_m": 0.18623575568199158,
+            "root_xy_peak_m": 0.40916144847869873,
+            "yaw_rmse_deg": 28.82014274597168,
+            "body_global_mean_m": 0.19596999883651733,
+            "body_local_mean_m": 0.11232917010784149,
+            "reference_inversion_frames": 54,
+            "inversion_observed_when_expected": true,
+            "end_pelvis_m": 0.7454153299331665,
+            "end_Rzz": 0.9867697358131409,
+            "end_root_speed_m_s": 0.7970998883247375
+          },
+          "quality": {
+            "clip": "88_09_stageii_unitree_g1",
+            "original_hard_gate_passed": true,
+            "tracking_quality_passed": false,
+            "contact_review_passed": true,
+            "combined_engineering_passed": false,
+            "contact_checks": {
+              "no_unexpected_trunk_contact": true,
+              "penetration_within_engineering_limit": true
+            },
+            "unexpected_trunk_contact_samples": 0,
+            "unexpected_trunk_contact_events": [],
+            "actual_min_after_initial_100ms_m": -0.04283061194119484,
+            "tracking_failed_checks": [
+              "norm_return_original"
+            ],
+            "contact_force_measured": false
+          },
+          "tracking": {
+            "clip": "88_09_stageii_unitree_g1",
+            "group": "new",
+            "full_clip_steps": 310,
+            "elapsed_seconds": 6.2,
+            "post_initialization_resets": 0,
+            "norm_return_original": 0.5733116269111633,
+            "reward_sum_original_until_first_failure": 17.772661209106445,
+            "normalization_denominator": 31.0,
+            "scored_steps": 310,
+            "first_original_hard_failure_s": null,
+            "hard_failure_original_frames": 0,
+            "hard_failure_aligned_frames": 0,
+            "passed_original_hard_gate": true,
+            "root_xy_rmse_m": 0.18623575568199158,
+            "root_xy_peak_m": 0.40916144847869873,
+            "yaw_rmse_deg": 28.82014274597168,
+            "body_global_mean_m": 0.19596999883651733,
+            "body_local_mean_m": 0.11232917010784149,
+            "reference_inversion_frames": 54,
+            "inversion_observed_when_expected": true,
+            "end_pelvis_m": 0.7454153299331665,
+            "end_Rzz": 0.9867697358131409,
+            "end_root_speed_m_s": 0.7970998883247375,
+            "root_orientation_geodesic_rmse_deg": 32.98928759764351,
+            "inversion_frame_coverage": 0.7777777777777778,
+            "reference_ending_upright": true,
+            "end_half_second_pelvis_min_m": 0.6975568532943726,
+            "end_half_second_Rzz_min": 0.9458665213871361,
+            "quality_checks": {
+              "no_original_hard_failure": true,
+              "no_resets": true,
+              "root_xy_rmse_m": true,
+              "root_xy_peak_m": true,
+              "body_global_mean_m": true,
+              "body_local_mean_m": true,
+              "yaw_rmse_deg": true,
+              "root_orientation_geodesic_rmse_deg": true,
+              "norm_return_original": false,
+              "inversion_coverage": true,
+              "upright_ending": true
+            },
+            "tracking_quality_passed": false,
+            "failed_checks": [
+              "norm_return_original"
+            ]
+          },
+          "contact": {
+            "clip": "88_09_stageii_unitree_g1",
+            "full_clip_steps": 310,
+            "original_hard_gate_passed": true,
+            "actual_ground_contact_geometry_samples_by_body": {
+              "left_knee_link": 1,
+              "left_ankle_pitch_link": 3,
+              "left_ankle_roll_link": 178,
+              "right_ankle_roll_link": 138,
+              "right_wrist_yaw_link": 10,
+              "right_wrist_pitch_link": 8,
+              "left_wrist_pitch_link": 14,
+              "left_wrist_yaw_link": 23,
+              "right_ankle_pitch_link": 1
+            },
+            "reference_ground_contact_geometry_samples_by_body": {
+              "left_knee_link": 54,
+              "left_ankle_pitch_link": 58,
+              "left_ankle_roll_link": 134,
+              "right_ankle_roll_link": 151,
+              "right_ankle_pitch_link": 18,
+              "right_wrist_yaw_link": 17,
+              "right_wrist_pitch_link": 13,
+              "right_wrist_roll_link": 2
+            },
+            "actual_min_contact_distance_m": -0.05625891815533321,
+            "actual_min_after_initial_100ms_m": -0.04283061194119484,
+            "head_torso_or_pelvis_ground_contact_samples": 0,
+            "actual_ending_ground_bodies": [
+              "left_ankle_roll_link"
+            ],
+            "ending_root_speed_m_s": 0.7970998883247375,
+            "contact_force_measured": false,
+            "geometric_review_complete": true,
+            "physical_contact_fidelity_inferred": false
+          },
+          "action_bound": {
+            "clip": "88_09_stageii_unitree_g1",
+            "active_action_elements": 8990,
+            "clipped_elements": 0,
+            "peak_raw_output": 17.43775177001953
+          }
+        }
+      }
+    }
+  ],
+  "comparisons": [
+    {
+      "model": "Stage2 teacher",
+      "reference": "raw",
+      "mode": "teacher-stage2-bound20-raw-cpu-new15-1030",
+      "strict_passed": 8,
+      "denominator": 15,
+      "protected_strict_passed": 0,
+      "protected_denominator": 3,
+      "source_sha256": "127e17ca49d56117e46d3a5142a34bbf916f73040adcee16e34f392e8f75612e"
+    },
+    {
+      "model": "Stage2 teacher",
+      "reference": "corrected",
+      "mode": "teacher-stage2-bound20-corrected-cpu-new15-1030",
+      "strict_passed": 10,
+      "denominator": 15,
+      "protected_strict_passed": 0,
+      "protected_denominator": 3,
+      "source_sha256": "c37eff1016f815f76ee3c74ecf40db85c5f86ca31835da1258dc831170ed4c00"
+    },
+    {
+      "model": "Frozen stage3 parent",
+      "reference": "raw",
+      "mode": "stage3-actionbound20-raw-cpu-new15",
+      "strict_passed": 8,
+      "denominator": 15,
+      "protected_strict_passed": 0,
+      "protected_denominator": 3,
+      "source_sha256": "892c3ed93b83b490401bb0c9187f6294ac7aa74681661fc5d6e218e18379e2bf"
+    },
+    {
+      "model": "Frozen stage3 parent",
+      "reference": "corrected",
+      "mode": "stage3-actionbound20-corrected-cpu-all55",
+      "strict_passed": 10,
+      "denominator": 15,
+      "protected_strict_passed": 0,
+      "protected_denominator": 3,
+      "source_sha256": "888c4745099d4783701c3ea99861b9b50a557eb9f3bb35dc3bb563e606927d86"
+    },
+    {
+      "model": "Unadopted1000-update candidate",
+      "reference": "raw",
+      "mode": "retention-v1-raw-cpu-new15",
+      "strict_passed": 7,
+      "denominator": 15,
+      "protected_strict_passed": 0,
+      "protected_denominator": 3,
+      "source_sha256": "8ba4f55563c65589489d46ece8b30ae24f528a6432442c6c3583c099b4348f79"
+    },
+    {
+      "model": "Unadopted1000-update candidate",
+      "reference": "corrected",
+      "mode": "retention-v1-corrected-cpu-all55",
+      "strict_passed": 9,
+      "denominator": 15,
+      "protected_strict_passed": 0,
+      "protected_denominator": 3,
+      "source_sha256": "9a3b4f08415df6908f1c80a7ac4032a0d3f2e4adc2ef922280fcfc32ab79854e"
+    }
+  ],
+  "videos_complete": 30,
+  "all_failed_tails_retained": true,
+  "all_post_t0_resets": 0,
+  "protected_teacher_qualified": false,
+  "candidate_adopted": false,
+  "full_goal_complete": false,
+  "CUDA_teacher_diagnostic_not_executed": true,
+  "inferences": [
+    "The fixed stage2 teacher cannot be treated as a qualified closed-loop target for all three protected motions under these unchanged strict contracts.",
+    "Lower action-imitation error alone does not establish physical acceptance; this diagnostic does not identify the cause of the previous student regression.",
+    "Raw/calibrated protected references, actions and complete trajectories are identical; the existing height calibration does not repair these protected failures.",
+    "No stronger teacher loss, second identical1000-update block, new GPU job or altered reference/physics/threshold follows automatically."
+  ]
+}

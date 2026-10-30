@@ -1,0 +1,44 @@
+{
+  "status": "frozen_before_single_motion_diagnostic",
+  "frozen_at": "2026-10-30T09:13:07.207157+00:00",
+  "question": "Does the already released99D8808 specialist pass the unchanged tracking/contact contracts under bound20? This does not test unified generalization.",
+  "checkpoint": "../interactive-g1-20261027-a/policy/acro-h100-2000.pt",
+  "checkpoint_sha256": "0f4a7bc67ae9e3440711e401e37f8276102e59946177117d082a6d7aabe108b4",
+  "observation_dimension": 99,
+  "clip": "88_08_stageii_unitree_g1",
+  "modes": {
+    "raw": "specialist8808-bound20-raw-cpu-1030",
+    "corrected": "specialist8808-bound20-corrected-cpu-1030"
+  },
+  "GPU": 0,
+  "training_updates": 0,
+  "maximum_CPU_threads": 2,
+  "maximum_seconds": 300,
+  "denominator_per_reference": 1,
+  "source_sha256": {
+    "scripts/evaluate_frozen_specialist1030.py": "ebd7bc9d2c37f59d6346772bddde40c43c23d7e628ec6cb6f46646e95fdae6f3",
+    "scripts/qualify_frozen_specialist1030.py": "9e259263487411b4454a73e973e24b6e5357c358006defef953fa44aefe70610",
+    "scripts/evaluate_library.py": "a41d07c9eb6a2e3859b8704f6c654bf3df2c3d98c801ceafe93f0ee8d5900438",
+    "scripts/evaluate_action_bound.py": "bd10764b6e9ab98a247fe62160cff83ccbbd02fb46b5efc3a4e6742543575d99",
+    "scripts/assess_tracking.py": "2c8572ce88bebf10999c940695895ee40ef4dd3702580e1db394dd3fdb2c848f",
+    "scripts/audit_physical_contacts.py": "b656843e6df3bb045adfb63cb048d7670f3d0cbb2d9bc451e9727d18e0e49d36",
+    "scripts/render_library.py": "19b910fef20a26329acc3ffe8f70733a4982a4e24e55d61401af4d91bb8cbb0d",
+    "scripts/render_teacher_qualification.py": "2bf215f8a29eb8937ae11a04e2f3974f017eca9c009c29e167a69e4c59da693b",
+    "scripts/runtime.py": "e06f87f6f1b58d2035c3de8b178f8f46f5f888faddf75a022374c9b3f0f7e0e1",
+    "acceptance-contract.json": "0036d9f100203e9d25990c47dfb5666508672fafbea60156a33fb63e56c1dcb1",
+    "contact-acceptance-contract.json": "b3b52cbe3bb45696ca0e9de603db4d01270bc275ff376c2f2a3c370d171390a8"
+  },
+  "full_clip_from_native_frame0": true,
+  "post_t0_resets_allowed": false,
+  "reference_physics_reward_acceptance_unchanged": true,
+  "all2_full_videos_decode_and_SHA_required": true,
+  "not_a_unified_model_score": true,
+  "architecture_and_training_scope_differ_from_101D_teacher": true,
+  "new_GPU_training_automatically_authorized": false,
+  "stop_conditions": [
+    "Pinned checkpoint or source hash mismatch",
+    "Nonfinite state/action",
+    "Any postt0 reset",
+    "300-second deadline"
+  ]
+}

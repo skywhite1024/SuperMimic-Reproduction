@@ -1,0 +1,69 @@
+{
+  "status": "prepared_not_executed",
+  "prepared_at": "2026-10-30T07:00:53.635298+00:00",
+  "purpose": "Qualify the frozen stage2 teacher under the exact bound20 deployment before considering another training objective",
+  "current_candidate_adopted": false,
+  "GPU": 0,
+  "new_training_updates": 0,
+  "maximum_local_CPU_threads": 2,
+  "maximum_program_seconds": 1800,
+  "checkpoint": "runs/unified-h100-stage2-4000/final-full.pt",
+  "checkpoint_sha256": "807d5fac7ca128f892c950fa379133231cd5f741e83075ed017d105b2eec6eec",
+  "observation_dimension": 101,
+  "student_or_teacher_weights_modified": false,
+  "reference_variants": [
+    "raw",
+    "ground-calibration-v1"
+  ],
+  "full_new_clip_denominator_per_reference": 15,
+  "protected_new": [
+    "88_07_stageii_unitree_g1",
+    "88_08_stageii_unitree_g1",
+    "88_09_stageii_unitree_g1"
+  ],
+  "initialization": "Every complete clip from frame0, same native initialization; no controlled-state writes or resets after t0",
+  "deployed_policies_per_run": 1,
+  "action_output_bound": [
+    -20,
+    20
+  ],
+  "no_goal_from_diagnostic": true,
+  "reference_physics_reward_acceptance_contracts_unchanged": true,
+  "frozen_continuous_tests_used_for_training": false,
+  "all_full_failed_tails_and_contact_tracking_records_required": true,
+  "all30_full_clip_videos_and_decode_hash_proofs_required": true,
+  "must_finish_current_candidate_publication_first": true,
+  "next_training_automatically_authorized": false,
+  "research_decision": "Check all protected3 strict tracking/contact outcomes before deciding whether this teacher is a suitable preservation target. If the bounded teacher fails, preserve the result and reconsider teacher/target design; do not simply increase the same retention loss or repeat the same GPU block.",
+  "evidence": {
+    "candidate_analysis": "evidence/retention-1030-failure-diagnostic.json",
+    "teacher_historical_results_are_not_bound20_controls": true,
+    "protected_clip_PI_counts": [
+      {
+        "clip": "88_07_stageii_unitree_g1",
+        "PI_consumed": 1474,
+        "minimum_available_starts_across_pools": 0,
+        "ratio_to_hypothetical_equal_available_new_clip_mass": 0.0899658203125
+      },
+      {
+        "clip": "88_08_stageii_unitree_g1",
+        "PI_consumed": 17624,
+        "minimum_available_starts_across_pools": 12,
+        "ratio_to_hypothetical_equal_available_new_clip_mass": 1.07568359375
+      },
+      {
+        "clip": "88_09_stageii_unitree_g1",
+        "PI_consumed": 14192,
+        "minimum_available_starts_across_pools": 0,
+        "ratio_to_hypothetical_equal_available_new_clip_mass": 0.8662109375
+      }
+    ],
+    "teacher_historical_strict_passes": 0,
+    "teacher_historical_protected_denominator_per_backend": 3
+  },
+  "contract_sha256": {
+    "acceptance-contract.json": "0036d9f100203e9d25990c47dfb5666508672fafbea60156a33fb63e56c1dcb1",
+    "contact-acceptance-contract.json": "b3b52cbe3bb45696ca0e9de603db4d01270bc275ff376c2f2a3c370d171390a8",
+    "continuous-acceptance-contract-v1.json": "9f986fbc647865312b6b1346b8c11da5d00a1ce8020ef96efc8da5339b4f73ce"
+  }
+}

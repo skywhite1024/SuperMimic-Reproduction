@@ -1,0 +1,2924 @@
+[
+  {
+    "clip": "88_08_stageii_unitree_g1",
+    "samples": [
+      {
+        "time_s": 0.0,
+        "actual_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "left_knee_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "left_knee_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.05293166369958075,
+        "reference_min_contact_distance_m": -0.05293166308343345
+      },
+      {
+        "time_s": 0.02,
+        "actual_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "left_knee_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0397207712962598,
+        "reference_min_contact_distance_m": -0.05246000037035565
+      },
+      {
+        "time_s": 0.04,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "left_knee_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.020840859476578082,
+        "reference_min_contact_distance_m": -0.051912648771647994
+      },
+      {
+        "time_s": 0.06,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "left_knee_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.00774819680940808,
+        "reference_min_contact_distance_m": -0.051531403487102743
+      },
+      {
+        "time_s": 0.08,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "left_knee_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0018461267607290414,
+        "reference_min_contact_distance_m": -0.051237374167693854
+      },
+      {
+        "time_s": 0.1,
+        "actual_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "left_knee_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0017732347980993586,
+        "reference_min_contact_distance_m": -0.05097771876187883
+      },
+      {
+        "time_s": 0.12,
+        "actual_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "left_knee_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0017771786343641306,
+        "reference_min_contact_distance_m": -0.05076201854869521
+      },
+      {
+        "time_s": 0.14,
+        "actual_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "left_knee_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.001595214154579516,
+        "reference_min_contact_distance_m": -0.05059692361724006
+      },
+      {
+        "time_s": 0.16,
+        "actual_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "left_knee_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0012937383277160054,
+        "reference_min_contact_distance_m": -0.050557496120050886
+      },
+      {
+        "time_s": 0.18,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "left_knee_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.002871719173726843,
+        "reference_min_contact_distance_m": -0.050590437157284805
+      },
+      {
+        "time_s": 0.2,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "left_knee_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.003177663841831639,
+        "reference_min_contact_distance_m": -0.05065948728849279
+      },
+      {
+        "time_s": 0.22,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "left_knee_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0019569835287096297,
+        "reference_min_contact_distance_m": -0.050612069599183844
+      },
+      {
+        "time_s": 0.24,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "left_knee_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0012265859040701812,
+        "reference_min_contact_distance_m": -0.05055015195293624
+      },
+      {
+        "time_s": 0.26,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "left_knee_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0010649319958856698,
+        "reference_min_contact_distance_m": -0.05046232788382068
+      },
+      {
+        "time_s": 0.28,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "left_knee_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.001207607401930196,
+        "reference_min_contact_distance_m": -0.050394237196792445
+      },
+      {
+        "time_s": 0.3,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "left_knee_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0014513130114577394,
+        "reference_min_contact_distance_m": -0.05033632988417335
+      },
+      {
+        "time_s": 0.32,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "left_knee_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0017281766931410382,
+        "reference_min_contact_distance_m": -0.05029703363739851
+      },
+      {
+        "time_s": 0.34,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "left_knee_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0019643140461838666,
+        "reference_min_contact_distance_m": -0.05029063454324439
+      },
+      {
+        "time_s": 0.36,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "left_knee_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.002138414535088613,
+        "reference_min_contact_distance_m": -0.050349933351278915
+      },
+      {
+        "time_s": 0.38,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "left_knee_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0022372711174507382,
+        "reference_min_contact_distance_m": -0.050339463399934434
+      },
+      {
+        "time_s": 0.4,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "left_knee_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.002976649536153414,
+        "reference_min_contact_distance_m": -0.05029346836430174
+      },
+      {
+        "time_s": 0.42,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "left_knee_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.002627495831274594,
+        "reference_min_contact_distance_m": -0.05031784119235918
+      },
+      {
+        "time_s": 0.44,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "left_knee_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0018057029686519904,
+        "reference_min_contact_distance_m": -0.050342085793240364
+      },
+      {
+        "time_s": 0.46,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "left_knee_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0015710094986746718,
+        "reference_min_contact_distance_m": -0.05036802434072337
+      },
+      {
+        "time_s": 0.48,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "left_knee_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0014084642010815064,
+        "reference_min_contact_distance_m": -0.05039574560224872
+      },
+      {
+        "time_s": 0.5,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "left_knee_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.00131509956820917,
+        "reference_min_contact_distance_m": -0.05042184983935844
+      },
+      {
+        "time_s": 0.52,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "left_knee_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0013290746029054846,
+        "reference_min_contact_distance_m": -0.05049920274192062
+      },
+      {
+        "time_s": 0.54,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "left_knee_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0012197106608135893,
+        "reference_min_contact_distance_m": -0.05056032028969781
+      },
+      {
+        "time_s": 0.56,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "left_knee_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0010681959329621417,
+        "reference_min_contact_distance_m": -0.05059108646133698
+      },
+      {
+        "time_s": 0.58,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "left_knee_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0009739048941588167,
+        "reference_min_contact_distance_m": -0.05064044189674751
+      },
+      {
+        "time_s": 0.6,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "left_knee_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0009164130798016519,
+        "reference_min_contact_distance_m": -0.05069734199975066
+      },
+      {
+        "time_s": 0.62,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "left_knee_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0008795659935656513,
+        "reference_min_contact_distance_m": -0.05071031832029741
+      },
+      {
+        "time_s": 0.64,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "left_knee_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0008547295680704217,
+        "reference_min_contact_distance_m": -0.05070210574236919
+      },
+      {
+        "time_s": 0.66,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "left_knee_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0008415470000113145,
+        "reference_min_contact_distance_m": -0.05065473741380023
+      },
+      {
+        "time_s": 0.68,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "left_knee_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0008529324504279482,
+        "reference_min_contact_distance_m": -0.05060370025508929
+      },
+      {
+        "time_s": 0.7000000000000001,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "left_knee_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0008818599782081096,
+        "reference_min_contact_distance_m": -0.05055091928808556
+      },
+      {
+        "time_s": 0.72,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "left_knee_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0009153166105561701,
+        "reference_min_contact_distance_m": -0.0504972317599321
+      },
+      {
+        "time_s": 0.74,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "left_knee_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0009406056251802823,
+        "reference_min_contact_distance_m": -0.050404808747401
+      },
+      {
+        "time_s": 0.76,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "left_knee_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0009534362742804744,
+        "reference_min_contact_distance_m": -0.0502370384962828
+      },
+      {
+        "time_s": 0.78,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "left_knee_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0009622990857433766,
+        "reference_min_contact_distance_m": -0.05008463847373932
+      },
+      {
+        "time_s": 0.8,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "left_knee_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0009702547854586593,
+        "reference_min_contact_distance_m": -0.04993857079163757
+      },
+      {
+        "time_s": 0.8200000000000001,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "left_knee_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0009803267433212996,
+        "reference_min_contact_distance_m": -0.04981502912514112
+      },
+      {
+        "time_s": 0.84,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "left_knee_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0009762942880083723,
+        "reference_min_contact_distance_m": -0.04968784896552731
+      },
+      {
+        "time_s": 0.86,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "left_knee_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0009541790636959429,
+        "reference_min_contact_distance_m": -0.049557685979463674
+      },
+      {
+        "time_s": 0.88,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "left_knee_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0009363012427708864,
+        "reference_min_contact_distance_m": -0.049337205439057
+      },
+      {
+        "time_s": 0.9,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "left_knee_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0009223903980331771,
+        "reference_min_contact_distance_m": -0.04906987370938403
+      },
+      {
+        "time_s": 0.92,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "left_knee_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0008958880994612865,
+        "reference_min_contact_distance_m": -0.04840624274849149
+      },
+      {
+        "time_s": 0.9400000000000001,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "left_knee_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0008832835750923118,
+        "reference_min_contact_distance_m": -0.04765199488897709
+      },
+      {
+        "time_s": 0.96,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "left_knee_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0008837533109289667,
+        "reference_min_contact_distance_m": -0.04672160586029899
+      },
+      {
+        "time_s": 0.98,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0008603957075530534,
+        "reference_min_contact_distance_m": -0.04559492297879184
+      },
+      {
+        "time_s": 1.0,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0008098552923516437,
+        "reference_min_contact_distance_m": -0.044352941784770124
+      },
+      {
+        "time_s": 1.02,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0007463566875647717,
+        "reference_min_contact_distance_m": -0.04281844056284038
+      },
+      {
+        "time_s": 1.04,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0006684873649381645,
+        "reference_min_contact_distance_m": -0.041229902958647556
+      },
+      {
+        "time_s": 1.06,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0005757087284993653,
+        "reference_min_contact_distance_m": -0.039565479340928904
+      },
+      {
+        "time_s": 1.08,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0004642467915894474,
+        "reference_min_contact_distance_m": -0.03785021766536419
+      },
+      {
+        "time_s": 1.1,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0002972630517566908,
+        "reference_min_contact_distance_m": -0.03622142163015129
+      },
+      {
+        "time_s": 1.12,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.00017807811785964644,
+        "reference_min_contact_distance_m": -0.03498912234599057
+      },
+      {
+        "time_s": 1.1400000000000001,
+        "actual_ground_bodies": [],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": 0.0,
+        "reference_min_contact_distance_m": -0.03340516307127986
+      },
+      {
+        "time_s": 1.16,
+        "actual_ground_bodies": [],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": 0.0,
+        "reference_min_contact_distance_m": -0.03131146327737592
+      },
+      {
+        "time_s": 1.18,
+        "actual_ground_bodies": [],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": 0.0,
+        "reference_min_contact_distance_m": -0.02905767141480726
+      },
+      {
+        "time_s": 1.2,
+        "actual_ground_bodies": [],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": 0.0,
+        "reference_min_contact_distance_m": -0.02627476123717074
+      },
+      {
+        "time_s": 1.22,
+        "actual_ground_bodies": [],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": 0.0,
+        "reference_min_contact_distance_m": -0.024102623903617056
+      },
+      {
+        "time_s": 1.24,
+        "actual_ground_bodies": [],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": 0.0,
+        "reference_min_contact_distance_m": -0.021961270103143492
+      },
+      {
+        "time_s": 1.26,
+        "actual_ground_bodies": [],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": 0.0,
+        "reference_min_contact_distance_m": -0.02073502104066375
+      },
+      {
+        "time_s": 1.28,
+        "actual_ground_bodies": [],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": 0.0,
+        "reference_min_contact_distance_m": -0.020394559571152642
+      },
+      {
+        "time_s": 1.3,
+        "actual_ground_bodies": [],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": 0.0,
+        "reference_min_contact_distance_m": -0.02019926037740157
+      },
+      {
+        "time_s": 1.32,
+        "actual_ground_bodies": [],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": 0.0,
+        "reference_min_contact_distance_m": -0.02079753596428403
+      },
+      {
+        "time_s": 1.34,
+        "actual_ground_bodies": [],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": 0.0,
+        "reference_min_contact_distance_m": -0.020861022069775418
+      },
+      {
+        "time_s": 1.36,
+        "actual_ground_bodies": [],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": 0.0,
+        "reference_min_contact_distance_m": -0.02034064153757704
+      },
+      {
+        "time_s": 1.3800000000000001,
+        "actual_ground_bodies": [],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": 0.0,
+        "reference_min_contact_distance_m": -0.020041685758140814
+      },
+      {
+        "time_s": 1.4000000000000001,
+        "actual_ground_bodies": [],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": 0.0,
+        "reference_min_contact_distance_m": -0.01936561107294826
+      },
+      {
+        "time_s": 1.42,
+        "actual_ground_bodies": [],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": 0.0,
+        "reference_min_contact_distance_m": -0.01979736573471675
+      },
+      {
+        "time_s": 1.44,
+        "actual_ground_bodies": [],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": 0.0,
+        "reference_min_contact_distance_m": -0.019893768759111096
+      },
+      {
+        "time_s": 1.46,
+        "actual_ground_bodies": [],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": 0.0,
+        "reference_min_contact_distance_m": -0.020163475269451933
+      },
+      {
+        "time_s": 1.48,
+        "actual_ground_bodies": [],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": 0.0,
+        "reference_min_contact_distance_m": -0.02040919018775071
+      },
+      {
+        "time_s": 1.5,
+        "actual_ground_bodies": [],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": 0.0,
+        "reference_min_contact_distance_m": -0.020050892660516642
+      },
+      {
+        "time_s": 1.52,
+        "actual_ground_bodies": [],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": 0.0,
+        "reference_min_contact_distance_m": -0.020112127752436718
+      },
+      {
+        "time_s": 1.54,
+        "actual_ground_bodies": [],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": 0.0,
+        "reference_min_contact_distance_m": -0.01995903440114182
+      },
+      {
+        "time_s": 1.56,
+        "actual_ground_bodies": [],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": 0.0,
+        "reference_min_contact_distance_m": -0.02104808438344275
+      },
+      {
+        "time_s": 1.58,
+        "actual_ground_bodies": [],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": 0.0,
+        "reference_min_contact_distance_m": -0.02173955224349855
+      },
+      {
+        "time_s": 1.6,
+        "actual_ground_bodies": [],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": 0.0,
+        "reference_min_contact_distance_m": -0.02190229605097784
+      },
+      {
+        "time_s": 1.62,
+        "actual_ground_bodies": [],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": 0.0,
+        "reference_min_contact_distance_m": -0.02186005284507179
+      },
+      {
+        "time_s": 1.6400000000000001,
+        "actual_ground_bodies": [],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": 0.0,
+        "reference_min_contact_distance_m": -0.021206321636696737
+      },
+      {
+        "time_s": 1.6600000000000001,
+        "actual_ground_bodies": [],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": 0.0,
+        "reference_min_contact_distance_m": -0.020459187614589508
+      },
+      {
+        "time_s": 1.68,
+        "actual_ground_bodies": [],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": 0.0,
+        "reference_min_contact_distance_m": -0.019967400391163872
+      },
+      {
+        "time_s": 1.7,
+        "actual_ground_bodies": [],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": 0.0,
+        "reference_min_contact_distance_m": -0.01999292295883766
+      },
+      {
+        "time_s": 1.72,
+        "actual_ground_bodies": [],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": 0.0,
+        "reference_min_contact_distance_m": -0.020991021666986687
+      },
+      {
+        "time_s": 1.74,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.000297124912006101,
+        "reference_min_contact_distance_m": -0.021293101264565933
+      },
+      {
+        "time_s": 1.76,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.0002012983064852798,
+        "reference_min_contact_distance_m": -0.02091571654942778
+      },
+      {
+        "time_s": 1.78,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.0004358730985118643,
+        "reference_min_contact_distance_m": -0.019627543136702556
+      },
+      {
+        "time_s": 1.8,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.0003396094883198501,
+        "reference_min_contact_distance_m": -0.017866653529768548
+      },
+      {
+        "time_s": 1.82,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.0003378293802474312,
+        "reference_min_contact_distance_m": -0.014617138714447992
+      },
+      {
+        "time_s": 1.84,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.0007010913194982578,
+        "reference_min_contact_distance_m": -0.010999676381590561
+      },
+      {
+        "time_s": 1.86,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.0015530475779154838,
+        "reference_min_contact_distance_m": -0.0065925110339271715
+      },
+      {
+        "time_s": 1.8800000000000001,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.0023331844400422503,
+        "reference_min_contact_distance_m": -0.004211408982644628
+      },
+      {
+        "time_s": 1.9000000000000001,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.002975127330052586,
+        "reference_min_contact_distance_m": -0.002745317040058616
+      },
+      {
+        "time_s": 1.92,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.00437050655338832,
+        "reference_min_contact_distance_m": -0.001584862499405061
+      },
+      {
+        "time_s": 1.94,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.006398986626794399,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 1.96,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.014082700152674179,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 1.98,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.023907151318102202,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 2.0,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.024531640220547987,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 2.02,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link",
+          "right_wrist_yaw_link"
+        ],
+        "reference_ground_bodies": [
+          "right_wrist_yaw_link"
+        ],
+        "actual_min_contact_distance_m": -0.02364716392823833,
+        "reference_min_contact_distance_m": -0.0012730529172326407
+      },
+      {
+        "time_s": 2.04,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link",
+          "right_wrist_pitch_link",
+          "right_wrist_yaw_link"
+        ],
+        "reference_ground_bodies": [
+          "right_wrist_pitch_link",
+          "right_wrist_yaw_link"
+        ],
+        "actual_min_contact_distance_m": -0.03447298399265746,
+        "reference_min_contact_distance_m": -0.01385625846201163
+      },
+      {
+        "time_s": 2.06,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link",
+          "right_wrist_yaw_link"
+        ],
+        "reference_ground_bodies": [
+          "right_wrist_pitch_link",
+          "right_wrist_yaw_link"
+        ],
+        "actual_min_contact_distance_m": -0.03708609371191863,
+        "reference_min_contact_distance_m": -0.02327170124617739
+      },
+      {
+        "time_s": 2.08,
+        "actual_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "right_wrist_pitch_link",
+          "right_wrist_yaw_link"
+        ],
+        "actual_min_contact_distance_m": -0.026601088615266815,
+        "reference_min_contact_distance_m": -0.022055210165440625
+      },
+      {
+        "time_s": 2.1,
+        "actual_ground_bodies": [
+          "right_ankle_roll_link",
+          "right_wrist_yaw_link"
+        ],
+        "reference_ground_bodies": [
+          "right_wrist_pitch_link",
+          "right_wrist_yaw_link"
+        ],
+        "actual_min_contact_distance_m": -0.01865116310990798,
+        "reference_min_contact_distance_m": -0.014916186035293901
+      },
+      {
+        "time_s": 2.12,
+        "actual_ground_bodies": [],
+        "reference_ground_bodies": [
+          "right_wrist_pitch_link",
+          "right_wrist_yaw_link"
+        ],
+        "actual_min_contact_distance_m": 0.0,
+        "reference_min_contact_distance_m": -0.005619399112330534
+      },
+      {
+        "time_s": 2.14,
+        "actual_ground_bodies": [],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": 0.0,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 2.16,
+        "actual_ground_bodies": [],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": 0.0,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 2.18,
+        "actual_ground_bodies": [
+          "right_wrist_yaw_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.002014826765059246,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 2.2,
+        "actual_ground_bodies": [
+          "right_wrist_yaw_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.0030767320767897816,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 2.22,
+        "actual_ground_bodies": [
+          "right_wrist_yaw_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.0035964352529437686,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 2.24,
+        "actual_ground_bodies": [
+          "right_wrist_yaw_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.0036456022380106576,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 2.2600000000000002,
+        "actual_ground_bodies": [
+          "right_wrist_yaw_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.0033413703396217888,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 2.2800000000000002,
+        "actual_ground_bodies": [
+          "right_wrist_yaw_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.0026428749240110655,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 2.3000000000000003,
+        "actual_ground_bodies": [
+          "right_wrist_yaw_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.0018185651075217565,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 2.32,
+        "actual_ground_bodies": [
+          "right_wrist_yaw_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.001206064296014983,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 2.34,
+        "actual_ground_bodies": [
+          "right_wrist_yaw_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.0008187912464616351,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 2.36,
+        "actual_ground_bodies": [
+          "right_wrist_yaw_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.001057969284231186,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 2.38,
+        "actual_ground_bodies": [
+          "right_wrist_yaw_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.001693862177840788,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 2.4,
+        "actual_ground_bodies": [
+          "right_wrist_yaw_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.002100052024067142,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 2.42,
+        "actual_ground_bodies": [
+          "right_wrist_yaw_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.002370025529204463,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 2.44,
+        "actual_ground_bodies": [
+          "right_wrist_yaw_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.0020349354563389682,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 2.46,
+        "actual_ground_bodies": [
+          "right_wrist_yaw_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.0006691491877355363,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 2.48,
+        "actual_ground_bodies": [],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": 0.0,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 2.5,
+        "actual_ground_bodies": [
+          "left_wrist_pitch_link",
+          "left_wrist_yaw_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.00694837062275383,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 2.52,
+        "actual_ground_bodies": [
+          "left_wrist_pitch_link",
+          "left_wrist_yaw_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.0030701384774206586,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 2.54,
+        "actual_ground_bodies": [],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": 0.0,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 2.56,
+        "actual_ground_bodies": [],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": 0.0,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 2.58,
+        "actual_ground_bodies": [
+          "left_wrist_pitch_link",
+          "right_wrist_pitch_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.0039040405663691574,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 2.6,
+        "actual_ground_bodies": [
+          "left_wrist_pitch_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.0003620419227658017,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 2.62,
+        "actual_ground_bodies": [
+          "left_wrist_pitch_link",
+          "left_wrist_yaw_link",
+          "right_wrist_pitch_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.004144675160674828,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 2.64,
+        "actual_ground_bodies": [
+          "left_wrist_pitch_link",
+          "left_wrist_yaw_link",
+          "right_wrist_pitch_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.00609919663258255,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 2.66,
+        "actual_ground_bodies": [
+          "left_wrist_pitch_link",
+          "left_wrist_yaw_link",
+          "right_wrist_pitch_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.0065505155986390895,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 2.68,
+        "actual_ground_bodies": [
+          "left_wrist_pitch_link",
+          "right_wrist_pitch_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.006459837833771076,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 2.7,
+        "actual_ground_bodies": [
+          "right_wrist_pitch_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.006211894692807689,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 2.72,
+        "actual_ground_bodies": [
+          "left_wrist_pitch_link",
+          "right_wrist_pitch_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.0034750408872120248,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 2.74,
+        "actual_ground_bodies": [
+          "left_wrist_pitch_link",
+          "left_wrist_yaw_link",
+          "right_wrist_pitch_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.004263480804522768,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 2.7600000000000002,
+        "actual_ground_bodies": [
+          "left_wrist_pitch_link",
+          "left_wrist_roll_link",
+          "left_wrist_yaw_link",
+          "right_wrist_pitch_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.008028210054574852,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 2.7800000000000002,
+        "actual_ground_bodies": [
+          "left_wrist_pitch_link",
+          "left_wrist_roll_link",
+          "left_wrist_yaw_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.0055609410006566586,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 2.8000000000000003,
+        "actual_ground_bodies": [
+          "left_wrist_pitch_link",
+          "left_wrist_yaw_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.007678728068020325,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 2.82,
+        "actual_ground_bodies": [
+          "left_wrist_pitch_link",
+          "left_wrist_yaw_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.009427762359875719,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 2.84,
+        "actual_ground_bodies": [
+          "left_wrist_pitch_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.00473581195975379,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 2.86,
+        "actual_ground_bodies": [
+          "left_wrist_pitch_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.0036216644842239284,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 2.88,
+        "actual_ground_bodies": [],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": 0.0,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 2.9,
+        "actual_ground_bodies": [],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": 0.0,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 2.92,
+        "actual_ground_bodies": [
+          "left_ankle_pitch_link",
+          "left_ankle_roll_link",
+          "left_knee_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.03208561148987189,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 2.94,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "left_wrist_pitch_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.021698328876576644,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 2.96,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "left_wrist_pitch_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.007779232027741666,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 2.98,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "left_wrist_pitch_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.003187193360360316,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 3.0,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "left_wrist_pitch_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.00163667092820384,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 3.02,
+        "actual_ground_bodies": [
+          "left_wrist_pitch_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.0037406242219843247,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 3.04,
+        "actual_ground_bodies": [
+          "left_wrist_pitch_link",
+          "left_wrist_yaw_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.005015253500647111,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 3.06,
+        "actual_ground_bodies": [
+          "left_wrist_pitch_link",
+          "left_wrist_yaw_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.006775101053856487,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 3.08,
+        "actual_ground_bodies": [
+          "left_wrist_pitch_link",
+          "left_wrist_yaw_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.02272019938531304,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 3.1,
+        "actual_ground_bodies": [
+          "left_wrist_yaw_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.01783393565735347,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 3.12,
+        "actual_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.009724886387648023,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 3.14,
+        "actual_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.0029249102218506058,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 3.16,
+        "actual_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.0008541660144409198,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 3.18,
+        "actual_ground_bodies": [],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": 0.0,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 3.2,
+        "actual_ground_bodies": [],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": 0.0,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 3.22,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.016480668347402333,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 3.24,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.017115882014408588,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 3.2600000000000002,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [],
+        "actual_min_contact_distance_m": -0.011518667756010941,
+        "reference_min_contact_distance_m": 0.0
+      },
+      {
+        "time_s": 3.2800000000000002,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.006766867241177646,
+        "reference_min_contact_distance_m": -0.008198364700602086
+      },
+      {
+        "time_s": 3.3000000000000003,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.0031842174959870488,
+        "reference_min_contact_distance_m": -0.01452961724838293
+      },
+      {
+        "time_s": 3.3200000000000003,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.0020054333880803006,
+        "reference_min_contact_distance_m": -0.01921566286539907
+      },
+      {
+        "time_s": 3.34,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.0017134031910308557,
+        "reference_min_contact_distance_m": -0.022251392187922884
+      },
+      {
+        "time_s": 3.36,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.0010415807814374246,
+        "reference_min_contact_distance_m": -0.024536280030709193
+      },
+      {
+        "time_s": 3.38,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.001057767719893933,
+        "reference_min_contact_distance_m": -0.025358164954791665
+      },
+      {
+        "time_s": 3.4,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.00533126007354084,
+        "reference_min_contact_distance_m": -0.025082269111168568
+      },
+      {
+        "time_s": 3.42,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.016486155689681023,
+        "reference_min_contact_distance_m": -0.02425371337510967
+      },
+      {
+        "time_s": 3.44,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.018932313655257518,
+        "reference_min_contact_distance_m": -0.0220038945512006
+      },
+      {
+        "time_s": 3.46,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.014601284091368558,
+        "reference_min_contact_distance_m": -0.017603958999118798
+      },
+      {
+        "time_s": 3.48,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.010460253631079861,
+        "reference_min_contact_distance_m": -0.013096751283044838
+      },
+      {
+        "time_s": 3.5,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.007998136971449462,
+        "reference_min_contact_distance_m": -0.008082092954310626
+      },
+      {
+        "time_s": 3.52,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.007194903215055513,
+        "reference_min_contact_distance_m": -0.010889633263180518
+      },
+      {
+        "time_s": 3.54,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.006633958071009217,
+        "reference_min_contact_distance_m": -0.013427087748938343
+      },
+      {
+        "time_s": 3.56,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.005969989307100912,
+        "reference_min_contact_distance_m": -0.016318008501921482
+      },
+      {
+        "time_s": 3.58,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.005157159067689899,
+        "reference_min_contact_distance_m": -0.013736173254440157
+      },
+      {
+        "time_s": 3.6,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.004046819423218935,
+        "reference_min_contact_distance_m": -0.007023492048320592
+      },
+      {
+        "time_s": 3.62,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.00028009987942250857,
+        "reference_min_contact_distance_m": -0.009140475445954668
+      },
+      {
+        "time_s": 3.64,
+        "actual_ground_bodies": [],
+        "reference_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": 0.0,
+        "reference_min_contact_distance_m": -0.016218222552583848
+      },
+      {
+        "time_s": 3.66,
+        "actual_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.010413542829616925,
+        "reference_min_contact_distance_m": -0.01820135441181116
+      },
+      {
+        "time_s": 3.68,
+        "actual_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.014103295526925224,
+        "reference_min_contact_distance_m": -0.016967596736659925
+      },
+      {
+        "time_s": 3.7,
+        "actual_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.008381751980550852,
+        "reference_min_contact_distance_m": -0.013644942641231807
+      },
+      {
+        "time_s": 3.72,
+        "actual_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.003202662066144539,
+        "reference_min_contact_distance_m": -0.01275598641531809
+      },
+      {
+        "time_s": 3.74,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.0014149423577892685,
+        "reference_min_contact_distance_m": -0.013170321070657496
+      },
+      {
+        "time_s": 3.7600000000000002,
+        "actual_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.002462913796370296,
+        "reference_min_contact_distance_m": -0.016732681337387003
+      },
+      {
+        "time_s": 3.7800000000000002,
+        "actual_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.003696143759393029,
+        "reference_min_contact_distance_m": -0.017115005941963794
+      },
+      {
+        "time_s": 3.8000000000000003,
+        "actual_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.0042898748628335285,
+        "reference_min_contact_distance_m": -0.015266536174131057
+      },
+      {
+        "time_s": 3.8200000000000003,
+        "actual_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.004451951531416409,
+        "reference_min_contact_distance_m": -0.015988372832881563
+      },
+      {
+        "time_s": 3.84,
+        "actual_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.004405975775046168,
+        "reference_min_contact_distance_m": -0.01856052116685229
+      },
+      {
+        "time_s": 3.86,
+        "actual_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.00415385756121506,
+        "reference_min_contact_distance_m": -0.021017746784642608
+      },
+      {
+        "time_s": 3.88,
+        "actual_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.0035857276406611694,
+        "reference_min_contact_distance_m": -0.020610640701628696
+      },
+      {
+        "time_s": 3.9,
+        "actual_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.002503254188067623,
+        "reference_min_contact_distance_m": -0.018399039231830044
+      },
+      {
+        "time_s": 3.92,
+        "actual_ground_bodies": [],
+        "reference_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": 0.0,
+        "reference_min_contact_distance_m": -0.01209190167598714
+      },
+      {
+        "time_s": 3.94,
+        "actual_ground_bodies": [],
+        "reference_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": 0.0,
+        "reference_min_contact_distance_m": -0.005764581081557345
+      },
+      {
+        "time_s": 3.96,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.006204211415996637,
+        "reference_min_contact_distance_m": -0.008202823856677973
+      },
+      {
+        "time_s": 3.98,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.006905389847003308,
+        "reference_min_contact_distance_m": -0.017718911880581997
+      },
+      {
+        "time_s": 4.0,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.00504900143874919,
+        "reference_min_contact_distance_m": -0.027443237706902667
+      },
+      {
+        "time_s": 4.0200000000000005,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.0030978326048849937,
+        "reference_min_contact_distance_m": -0.02914254102734561
+      },
+      {
+        "time_s": 4.04,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.0018352710344824606,
+        "reference_min_contact_distance_m": -0.029591466577604707
+      },
+      {
+        "time_s": 4.0600000000000005,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.0012800313931686678,
+        "reference_min_contact_distance_m": -0.037369271013552724
+      },
+      {
+        "time_s": 4.08,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.0016778329574276855,
+        "reference_min_contact_distance_m": -0.043629040486575656
+      },
+      {
+        "time_s": 4.1,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.001587875321360152,
+        "reference_min_contact_distance_m": -0.04779652943424917
+      },
+      {
+        "time_s": 4.12,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.0017190104718784694,
+        "reference_min_contact_distance_m": -0.05156293496592055
+      },
+      {
+        "time_s": 4.14,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.002095001154670861,
+        "reference_min_contact_distance_m": -0.056139772255740863
+      },
+      {
+        "time_s": 4.16,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link"
+        ],
+        "actual_min_contact_distance_m": -0.0025379565355369864,
+        "reference_min_contact_distance_m": -0.06256715694055962
+      },
+      {
+        "time_s": 4.18,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0023844404240829188,
+        "reference_min_contact_distance_m": -0.0671026042040488
+      },
+      {
+        "time_s": 4.2,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0045842965141217286,
+        "reference_min_contact_distance_m": -0.07030101491674315
+      },
+      {
+        "time_s": 4.22,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.005096276362648029,
+        "reference_min_contact_distance_m": -0.07852091985152125
+      },
+      {
+        "time_s": 4.24,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0038312915659265657,
+        "reference_min_contact_distance_m": -0.08279607936349337
+      },
+      {
+        "time_s": 4.26,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0032361436132753605,
+        "reference_min_contact_distance_m": -0.08335038513064696
+      },
+      {
+        "time_s": 4.28,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0027028294206946106,
+        "reference_min_contact_distance_m": -0.08408337857881967
+      },
+      {
+        "time_s": 4.3,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0018256112365224756,
+        "reference_min_contact_distance_m": -0.08462357829891465
+      },
+      {
+        "time_s": 4.32,
+        "actual_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0018356849334036805,
+        "reference_min_contact_distance_m": -0.08705836940499097
+      },
+      {
+        "time_s": 4.34,
+        "actual_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0019857571790378127,
+        "reference_min_contact_distance_m": -0.08865141474885092
+      },
+      {
+        "time_s": 4.36,
+        "actual_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0023117440058740583,
+        "reference_min_contact_distance_m": -0.08928237678784137
+      },
+      {
+        "time_s": 4.38,
+        "actual_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0027006873546269903,
+        "reference_min_contact_distance_m": -0.0889964964667246
+      },
+      {
+        "time_s": 4.4,
+        "actual_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0030050747159689082,
+        "reference_min_contact_distance_m": -0.08815272260439533
+      },
+      {
+        "time_s": 4.42,
+        "actual_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.003173461000557545,
+        "reference_min_contact_distance_m": -0.08721596129963922
+      },
+      {
+        "time_s": 4.44,
+        "actual_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0032505723187635322,
+        "reference_min_contact_distance_m": -0.08601732497702128
+      },
+      {
+        "time_s": 4.46,
+        "actual_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.003322244947174073,
+        "reference_min_contact_distance_m": -0.08449447826526317
+      },
+      {
+        "time_s": 4.48,
+        "actual_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0033295189604360008,
+        "reference_min_contact_distance_m": -0.08438425441842937
+      },
+      {
+        "time_s": 4.5,
+        "actual_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.003213924186653008,
+        "reference_min_contact_distance_m": -0.08483917481957762
+      },
+      {
+        "time_s": 4.5200000000000005,
+        "actual_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.003126351896033867,
+        "reference_min_contact_distance_m": -0.0839605629601518
+      },
+      {
+        "time_s": 4.54,
+        "actual_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0031486678074341993,
+        "reference_min_contact_distance_m": -0.0831567160398888
+      },
+      {
+        "time_s": 4.5600000000000005,
+        "actual_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0031870563192363003,
+        "reference_min_contact_distance_m": -0.08265378720619532
+      },
+      {
+        "time_s": 4.58,
+        "actual_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.003172978322958593,
+        "reference_min_contact_distance_m": -0.0818453227087872
+      },
+      {
+        "time_s": 4.6000000000000005,
+        "actual_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.002922423075387352,
+        "reference_min_contact_distance_m": -0.08082264238382553
+      },
+      {
+        "time_s": 4.62,
+        "actual_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0021349983738029763,
+        "reference_min_contact_distance_m": -0.07996615989755071
+      },
+      {
+        "time_s": 4.64,
+        "actual_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0014737387505882214,
+        "reference_min_contact_distance_m": -0.07914370959211091
+      },
+      {
+        "time_s": 4.66,
+        "actual_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0009380934921158447,
+        "reference_min_contact_distance_m": -0.07846871739870362
+      },
+      {
+        "time_s": 4.68,
+        "actual_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.0006163712187210136,
+        "reference_min_contact_distance_m": -0.07788225699142921
+      },
+      {
+        "time_s": 4.7,
+        "actual_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.005413793300841341,
+        "reference_min_contact_distance_m": -0.07729354577309214
+      },
+      {
+        "time_s": 4.72,
+        "actual_ground_bodies": [
+          "right_ankle_roll_link"
+        ],
+        "reference_ground_bodies": [
+          "left_ankle_roll_link",
+          "right_ankle_pitch_link",
+          "right_ankle_roll_link",
+          "right_knee_link"
+        ],
+        "actual_min_contact_distance_m": -0.014337898169321708,
+        "reference_min_contact_distance_m": -0.07638763187920274
+      }
+    ]
+  }
+]

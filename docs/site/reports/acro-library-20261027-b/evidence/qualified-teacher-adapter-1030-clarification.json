@@ -1,0 +1,9 @@
+{
+  "checked_at": "2026-10-30T09:18:15.709590+00:00",
+  "original_receipt_sha256": "e53750cbefe2544c9712f4150a73dae81de3750a06c5951ef4fa379a4776835e",
+  "correction": "The historical field unweighted_teacher_MSE_at_parent_states is mislabeled. Histories are from the qualified specialist real retained trajectory; the student evaluated on them is the frozen stage3 parent. The value1.3283222913742065 is unchanged.",
+  "correct_field": "unweighted_teacher_MSE_for_parent_policy_on_specialist_states",
+  "value": 1.3283222913742065,
+  "optimizer_steps": 0,
+  "training_updates": 0
+}

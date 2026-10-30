@@ -1,0 +1,19 @@
+{
+  "clip": "88_08_stageii_unitree_g1",
+  "denominator": 1,
+  "tracking_quality_passed": true,
+  "contact_review_passed": true,
+  "combined_engineering_passed": true,
+  "tracking_failed_checks": [],
+  "contact_checks": {
+    "no_unexpected_trunk_contact": true,
+    "penetration_within_engineering_limit": true
+  },
+  "unexpected_trunk_contacts": [],
+  "actual_min_after_initial_100ms_m": -0.03708609371191863,
+  "norm_return_original": 0.6690323948860168,
+  "tracking_contract_sha256": "0036d9f100203e9d25990c47dfb5666508672fafbea60156a33fb63e56c1dcb1",
+  "contact_contract_sha256": "b3b52cbe3bb45696ca0e9de603db4d01270bc275ff376c2f2a3c370d171390a8",
+  "one_motion_diagnostic_only": true,
+  "not_a15_or55_clip_acceptance": true
+}

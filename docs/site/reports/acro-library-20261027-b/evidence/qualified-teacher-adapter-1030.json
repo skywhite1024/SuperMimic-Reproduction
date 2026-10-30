@@ -1,0 +1,35 @@
+{
+  "status": "complete_real_history_99D_teacher_adapter_and_finite_student_gradient_verified",
+  "checked_at": "2026-10-30T09:16:41.316825+00:00",
+  "plan_sha256": "852ddb67cbf85fab197579eac25293187ca5c4dce25bdd7a97f450824f9a15eb",
+  "CPU_affinity": [
+    0,
+    1
+  ],
+  "wall_seconds": 2.3590000001713634,
+  "GPU": 0,
+  "optimizer_steps": 0,
+  "training_updates": 0,
+  "retained_physical_steps_checked": 236,
+  "real_histories_in_gradient_probe": 32,
+  "maximum_teacher_action_reconstruction_abs_error": 0.0,
+  "unweighted_teacher_MSE_at_parent_states": 1.3283222913742065,
+  "teacher_gradients_absent": true,
+  "student_gradient_tensors": 20,
+  "all_weights_and_norms_unchanged": true,
+  "module_digests_before": {
+    "teacher": "73234913a280c591727cc69986ee91669d1a0fa722b4c5cdb4e6d90dcbb0d012",
+    "student": "b6054bdaa1414025ddc7c78c46f201711f14a4484fd0e579e8773be5b405eb85"
+  },
+  "module_digests_after": {
+    "teacher": "73234913a280c591727cc69986ee91669d1a0fa722b4c5cdb4e6d90dcbb0d012",
+    "student": "b6054bdaa1414025ddc7c78c46f201711f14a4484fd0e579e8773be5b405eb85"
+  },
+  "selected_protected_clip": "88_08_stageii_unitree_g1",
+  "unqualified_8807_and_8809_not_imitation_targets": true,
+  "deployed_student_policies": 1,
+  "deployment_uses_teacher": false,
+  "physical_improvement_not_inferred": true,
+  "full_goal_complete": false,
+  "new_GPU_job_automatically_authorized": false
+}

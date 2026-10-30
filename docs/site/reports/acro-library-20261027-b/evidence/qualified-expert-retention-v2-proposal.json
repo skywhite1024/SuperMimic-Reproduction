@@ -1,0 +1,57 @@
+{
+  "status": "prepared_research_proposal_not_submitted",
+  "prepared_at": "2026-10-30T09:22:58.003225+00:00",
+  "hypothesis": "Preserve8808 with its independently qualified99Dspecialist, rather than imitating an unqualified101Dteacher on8807/08/09. Whether this improves the unified student is unknown.",
+  "initial_full": "runs/unified-h100-stage3-4000/final-full.pt",
+  "initial_full_sha256": "93bb8b830145c54092518eba8db1fb020d020eb72cdad1b619b4fc5470cc213d",
+  "qualified_new_teacher": "../interactive-g1-20261027-a/policy/acro-h100-2000.pt",
+  "qualified_new_teacher_sha256": "0f4a7bc67ae9e3440711e401e37f8276102e59946177117d082a6d7aabe108b4",
+  "new_imitation_targets": [
+    "88_08_stageii_unitree_g1"
+  ],
+  "unqualified_8807_and_8809_not_imitation_targets": true,
+  "old_teacher_and_penalty_unchanged": true,
+  "new_teacher_weight": 0.05,
+  "old_teacher_weight": 0.1,
+  "native_reward_physics_reference_acceptance_unchanged": true,
+  "one_deployed101Dstudent": true,
+  "new15_old40_denominators_unchanged": true,
+  "fixed_continuous_tests_not_training_inputs": true,
+  "sampling_new_old_mass": [
+    0.6,
+    0.4
+  ],
+  "sampling_priorities_unchanged": true,
+  "CPU_engineering_updates_completed": 6,
+  "engineering_proof": "runs/engineering-qualified8808-cpu-6-1030/proof.json",
+  "bounded_deployment_readback": "evidence/qualified-expert-engineering-1030-readback.json",
+  "engineering_checkpoint_not_initialization_for_GPU": true,
+  "proposed_GPU_count": 1,
+  "proposed_GPU_type": "H10080GB",
+  "proposed_vCPU": 4,
+  "proposed_RAM_GiB": 64,
+  "replicas": 1,
+  "restart_count": 0,
+  "maximum_new_GPU_training_updates": 1000,
+  "WM_only_updates": 200,
+  "joint_updates": 800,
+  "maximum_total_GPU_program_seconds": 5400,
+  "GPU_job_submitted": false,
+  "automatic_GPU_execution_allowed": false,
+  "pretraining_requirements": [
+    "Fresh academy location/network and all-account quota/occupation check",
+    "Frozen new full-trial source and finite command prepared and source checked",
+    "Same8808expert must pass bound20 CUDA original tracking/contact control before any training update; otherwise stop with0updates",
+    "Exact fixed checkpoint hashes and CPU6-update proof plus independent loader readback verified"
+  ],
+  "continue_or_rollback": "Against the same bound20parent, require calibratedCUDA strict count>=10/15 and either a strict new gain or fewer than1 failed old clip. Otherwise retain parent and do not extend. Full goal still requires all frozen raw/calibrated CPU/CUDA55 and3x120s strict tests.",
+  "stop_conditions": [
+    "Hash/source/contract mismatch",
+    "Nonfinite state/loss",
+    "Teacher or normalizer mutation",
+    "Incorrect optimizer increments or failed exact loaded bounded output",
+    "No actual old or qualified8808 policy samples",
+    "Program deadline or resource guard"
+  ],
+  "next": "Review this distinct finite hypothesis and finish its frozen full-trial driver before any new cloud action. Current authorization does not trigger an automatic second GPU block."
+}

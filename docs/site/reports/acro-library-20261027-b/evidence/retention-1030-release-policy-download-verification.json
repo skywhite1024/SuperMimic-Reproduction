@@ -1,0 +1,18 @@
+{
+  "status": "actual_public_policy_download_size_SHA256_and_portable_loader_passed",
+  "at": "2026-10-30T08:07:12.555776+00:00",
+  "bytes": 36647925,
+  "sha256": "21b92ba3a03044d3a2425d354360086c7c5e4817133168044bdf10849a58f184",
+  "release": "v0.2.0",
+  "official_public_url": "https://github.com/skywhite1024/SuperMimic-Reproduction/releases/download/v0.2.0/retention-v1-1000-policy.pt",
+  "loader": {
+    "status": "released_checkpoint_and_original_public_source_lineage_verified",
+    "checkpoint_name": "retention-v1-1000",
+    "checkpoint_sha256": "21b92ba3a03044d3a2425d354360086c7c5e4817133168044bdf10849a58f184",
+    "original_trial_plan_sha256": "e737aacaf113cf602be0eb6cb7b64a5b47e14451acdb003a4c19d9cbaa575a53",
+    "public_trial_plan_sha256": "aeb39c3c36a6c864c73b2aca5a2ab67b4fff9609cc4592fb97fbc3373f18c684",
+    "guarded_source_files": 84,
+    "physics_or_quality_assessed": false
+  },
+  "dataset_download_or_dependency_install_retested": false
+}

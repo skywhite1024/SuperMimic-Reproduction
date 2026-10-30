@@ -1,0 +1,23 @@
+{
+  "clip": "88_03_stageii_unitree_g1",
+  "file": "videos/teacher-stage2-bound20-corrected-cpu-new15-1030/88_03_stageii_unitree_g1.mp4",
+  "bytes": 538490,
+  "sha256": "fc6ff86fda245b6a7e2f2a6534db86a4464b5016422722cdaaa84453e90196fe",
+  "frames": 72,
+  "fps": 25,
+  "video_seconds": 2.88,
+  "physical_window_seconds": 2.86,
+  "complete_decode_passed": true,
+  "source_run": "teacher-stage2-bound20-corrected-cpu-new15-1030",
+  "only_retained_actual_physics_states_rendered": true,
+  "reference_display_offset_m": [
+    0,
+    1.5,
+    0
+  ],
+  "fog_disabled_for_failed_tail_visibility": true,
+  "reference_version_or_variant": "ground-calibration-v1",
+  "original_hard_gate_passed": true,
+  "tracking_quality_passed": true,
+  "contact_sheet": "evidence/teacher-stage2-bound20-corrected-cpu-new15-1030-88_03_stageii_unitree_g1-contact-sheet.jpg"
+}

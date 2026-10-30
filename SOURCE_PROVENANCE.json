@@ -1686,6 +1686,96 @@
       "original_sha256": "6a2e2ab6b0f978646626432e1fcb4c00adbdf4b3fabad67455d86e4c1230eeb6",
       "public_sha256": "99e9958fc2854a596c85b54fc496b4d7ab68fb8a6a4c9af364c68a1137fdcf40",
       "publication_copy_changed": true
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/evaluate_teacher_bound20.py",
+      "original_sha256": "d41540eb25336cd9cf936a431c76680327cf6a264804c16eb43dcaa7dffac74c",
+      "public_sha256": "d41540eb25336cd9cf936a431c76680327cf6a264804c16eb43dcaa7dffac74c",
+      "publication_copy_changed": false
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/render_teacher_qualification.py",
+      "original_sha256": "2bf215f8a29eb8937ae11a04e2f3974f017eca9c009c29e167a69e4c59da693b",
+      "public_sha256": "2bf215f8a29eb8937ae11a04e2f3974f017eca9c009c29e167a69e4c59da693b",
+      "publication_copy_changed": false
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/run_teacher_qualification1030.py",
+      "original_sha256": "bde9320e324a450dda1f35a5db4a6f7ca6a4483ac7ed37354b147d050dbb0879",
+      "public_sha256": "bde9320e324a450dda1f35a5db4a6f7ca6a4483ac7ed37354b147d050dbb0879",
+      "publication_copy_changed": false
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/build_teacher_qualification1030_report.py",
+      "original_sha256": "0067db35f39aec7259c5a141b75b05f15892cab6995574d03100f2556a0922f5",
+      "public_sha256": "0067db35f39aec7259c5a141b75b05f15892cab6995574d03100f2556a0922f5",
+      "publication_copy_changed": false
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/audit_protected_reward1030.py",
+      "original_sha256": "dc6213d38dac2a9f0d53dab30a188f279ffee0844d6c628b834aa851b5ef10cd",
+      "public_sha256": "dc6213d38dac2a9f0d53dab30a188f279ffee0844d6c628b834aa851b5ef10cd",
+      "publication_copy_changed": false
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/audit_reference_geometry1030.py",
+      "original_sha256": "dd392772f3fbe4ea549d46997a9953adca84e246a8036dd46274f64342ee13f1",
+      "public_sha256": "dd392772f3fbe4ea549d46997a9953adca84e246a8036dd46274f64342ee13f1",
+      "publication_copy_changed": false
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/evaluate_frozen_specialist1030.py",
+      "original_sha256": "ebd7bc9d2c37f59d6346772bddde40c43c23d7e628ec6cb6f46646e95fdae6f3",
+      "public_sha256": "ebd7bc9d2c37f59d6346772bddde40c43c23d7e628ec6cb6f46646e95fdae6f3",
+      "publication_copy_changed": false
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/qualify_frozen_specialist1030.py",
+      "original_sha256": "9e259263487411b4454a73e973e24b6e5357c358006defef953fa44aefe70610",
+      "public_sha256": "9e259263487411b4454a73e973e24b6e5357c358006defef953fa44aefe70610",
+      "publication_copy_changed": false
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/probe_qualified_teacher_adapter1030.py",
+      "original_sha256": "54ff04d8d600e4d60cb8764e84b44780c704efddd031b75d5d8746791904c414",
+      "public_sha256": "54ff04d8d600e4d60cb8764e84b44780c704efddd031b75d5d8746791904c414",
+      "publication_copy_changed": false
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/qualified_retention_learner.py",
+      "original_sha256": "e775de54eced2f4db7c1ab6259bdc65b66fe8d58c1764d0dac2e10ee2a5e05b2",
+      "public_sha256": "e775de54eced2f4db7c1ab6259bdc65b66fe8d58c1764d0dac2e10ee2a5e05b2",
+      "publication_copy_changed": false
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/train_qualified_engineering1030.py",
+      "original_sha256": "b4127fbfe0a29afb39ee2504586b742509f79604d6880b648bc27a937531306a",
+      "public_sha256": "42cea845c0d0bfb7fce37fbe6ec146ae99c947a7162c466c9e79aa3a7f595a93",
+      "publication_copy_changed": true
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/validate_qualified_engineering1030.py",
+      "original_sha256": "fcd82edc60f906c586d7efd78fabe5d8ba936dee7a3a485ad0472c470d5ce74f",
+      "public_sha256": "fcd82edc60f906c586d7efd78fabe5d8ba936dee7a3a485ad0472c470d5ce74f",
+      "publication_copy_changed": false
+    },
+    {
+      "path": "tools/evaluate_released_teacher.py",
+      "original_sha256": "cc561b25b54c2f4a39c17ac7b1d773d8fdda17d28d45e4025dbb1dfd3a36c162",
+      "public_sha256": "cc561b25b54c2f4a39c17ac7b1d773d8fdda17d28d45e4025dbb1dfd3a36c162",
+      "publication_copy_changed": false
+    },
+    {
+      "path": "acro-library-20261027-b/qualified-expert-engineering-1030-plan.json",
+      "original_sha256": "a100fafddfaef4cf42e857323b7f74968df608db614585eba31793c6374fda37",
+      "public_sha256": "ece1c68a3d675f7531107fa6f4af3d759a315753f0924060f74c00afd6abe9c2",
+      "publication_copy_changed": true
+    },
+    {
+      "path": "acro-library-20261027-b/evidence/retention-1030-next-diagnostic-plan.json",
+      "original_sha256": "431e6a39e2cf481b66620815d41dcf08763224a3b0979ab0e25a70e235181873",
+      "public_sha256": "7cf28dc04b15c7208611ad96c2f22ba650da93cc1c4c1dbf03bca74cfcdc6ce9",
+      "publication_copy_changed": true
     }
   ],
   "cloud_source_reconciliation": "validation/cloud-source-reconciliation-20261029.json",
@@ -1701,5 +1791,11 @@
         "interactive-g1-20261027-a/scripts/render_video.py"
       ]
     }
-  ]
+  ],
+  "teacher_qualification_1030": {
+    "added_at": "2026-10-30T09:23:00.397425+00:00",
+    "existing_training_and_evaluation_sources_modified": false,
+    "new_CPU_diagnostics_only": true,
+    "qualified_teacher_scope": "8808 specialist only; no unified-model adoption"
+  }
 }

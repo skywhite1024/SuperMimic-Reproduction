@@ -1,0 +1,17 @@
+[local]/entity.py:1034: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at [local]/tensor_numpy.cpp:219.)
+  else torch.from_numpy(np.ascontiguousarray(source)).to(
+PHYSICAL_CONTACT_REVIEW {"clip": "143_34_stageii_unitree_g1", "actual_min_after_initial_100ms_m": -0.01501367763811658, "head_torso_or_pelvis_ground_contact_samples": 0}
+PHYSICAL_CONTACT_REVIEW {"clip": "85_06_stageii_unitree_g1", "actual_min_after_initial_100ms_m": -0.0236012909469003, "head_torso_or_pelvis_ground_contact_samples": 2}
+PHYSICAL_CONTACT_REVIEW {"clip": "85_07_stageii_unitree_g1", "actual_min_after_initial_100ms_m": -0.024519718277907155, "head_torso_or_pelvis_ground_contact_samples": 1}
+PHYSICAL_CONTACT_REVIEW {"clip": "88_03_stageii_unitree_g1", "actual_min_after_initial_100ms_m": -0.0027234364196941875, "head_torso_or_pelvis_ground_contact_samples": 0}
+PHYSICAL_CONTACT_REVIEW {"clip": "88_06_stageii_unitree_g1", "actual_min_after_initial_100ms_m": -0.022431948072636303, "head_torso_or_pelvis_ground_contact_samples": 0}
+PHYSICAL_CONTACT_REVIEW {"clip": "88_07_stageii_unitree_g1", "actual_min_after_initial_100ms_m": -0.06409728383782196, "head_torso_or_pelvis_ground_contact_samples": 0}
+PHYSICAL_CONTACT_REVIEW {"clip": "88_08_stageii_unitree_g1", "actual_min_after_initial_100ms_m": -0.05583567647351614, "head_torso_or_pelvis_ground_contact_samples": 0}
+PHYSICAL_CONTACT_REVIEW {"clip": "88_09_stageii_unitree_g1", "actual_min_after_initial_100ms_m": -0.04283061194119484, "head_torso_or_pelvis_ground_contact_samples": 0}
+PHYSICAL_CONTACT_REVIEW {"clip": "88_10_stageii_unitree_g1", "actual_min_after_initial_100ms_m": -0.014575221062502464, "head_torso_or_pelvis_ground_contact_samples": 0}
+PHYSICAL_CONTACT_REVIEW {"clip": "88_11_stageii_unitree_g1", "actual_min_after_initial_100ms_m": -0.0233149714736777, "head_torso_or_pelvis_ground_contact_samples": 0}
+PHYSICAL_CONTACT_REVIEW {"clip": "89_01_stageii_unitree_g1", "actual_min_after_initial_100ms_m": -0.021584127882221856, "head_torso_or_pelvis_ground_contact_samples": 0}
+PHYSICAL_CONTACT_REVIEW {"clip": "90_08_stageii_unitree_g1", "actual_min_after_initial_100ms_m": -0.043110639416848694, "head_torso_or_pelvis_ground_contact_samples": 0}
+PHYSICAL_CONTACT_REVIEW {"clip": "90_14_stageii_unitree_g1", "actual_min_after_initial_100ms_m": -0.047000615343121326, "head_torso_or_pelvis_ground_contact_samples": 0}
+PHYSICAL_CONTACT_REVIEW {"clip": "90_15_stageii_unitree_g1", "actual_min_after_initial_100ms_m": -0.03838555794481339, "head_torso_or_pelvis_ground_contact_samples": 0}
+PHYSICAL_CONTACT_REVIEW {"clip": "90_19_stageii_unitree_g1", "actual_min_after_initial_100ms_m": -0.03396004044233704, "head_torso_or_pelvis_ground_contact_samples": 0}

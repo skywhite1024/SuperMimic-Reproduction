@@ -1,0 +1,26 @@
+{
+  "status": "frozen_before_offline_gradient_probe",
+  "frozen_at": "2026-10-30T09:16:37.074422+00:00",
+  "question": "Can the qualified99D8808 teacher consume the first99 columns of real101D histories, reproduce its retained bounded actions, and yield finite101D student gradients without changing any weights or norms?",
+  "teacher": "../interactive-g1-20261027-a/policy/acro-h100-2000.pt",
+  "student": "runs/unified-h100-stage3-4000/final-full.pt",
+  "source_run": "specialist8808-bound20-raw-cpu-1030",
+  "clip": "88_08_stageii_unitree_g1",
+  "input_sha256": {
+    "../interactive-g1-20261027-a/policy/acro-h100-2000.pt": "0f4a7bc67ae9e3440711e401e37f8276102e59946177117d082a6d7aabe108b4",
+    "runs/unified-h100-stage3-4000/final-full.pt": "93bb8b830145c54092518eba8db1fb020d020eb72cdad1b619b4fc5470cc213d",
+    "runs/specialist8808-bound20-raw-cpu-1030/trajectory.npz": "a16d99b7b6817e4c5a7bfbf6e6048dc7a0b7ee3cd3f6812585ba5dbc234532e5",
+    "scripts/runtime.py": "e06f87f6f1b58d2035c3de8b178f8f46f5f888faddf75a022374c9b3f0f7e0e1",
+    "scripts/retention_components.py": "1ecb22f73afc1cf759d4de682a6180aae2e683fd8911d8d6c6e9c09161dc3013",
+    "scripts/probe_qualified_teacher_adapter1030.py": "54ff04d8d600e4d60cb8764e84b44780c704efddd031b75d5d8746791904c414"
+  },
+  "script_sha256": "54ff04d8d600e4d60cb8764e84b44780c704efddd031b75d5d8746791904c414",
+  "GPU": 0,
+  "training_updates": 0,
+  "optimizer_steps": 0,
+  "maximum_CPU_threads": 2,
+  "maximum_seconds": 120,
+  "reference_physics_reward_thresholds_unchanged": true,
+  "not_evidence_of_closed_loop_improvement": true,
+  "automatic_GPU_training": false
+}

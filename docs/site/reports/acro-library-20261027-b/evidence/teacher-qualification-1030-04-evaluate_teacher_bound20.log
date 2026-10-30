@@ -1,0 +1,20 @@
+LIBRARY_PHYSICAL_PROGRESS {"step": 0, "maximum": 1939, "resets": 0}
+LIBRARY_PHYSICAL_PROGRESS {"step": 500, "maximum": 1939, "resets": 0}
+LIBRARY_PHYSICAL_PROGRESS {"step": 1000, "maximum": 1939, "resets": 0}
+LIBRARY_PHYSICAL_PROGRESS {"step": 1500, "maximum": 1939, "resets": 0}
+LIBRARY_PHYSICAL_CLIP {"clip": "143_34_stageii_unitree_g1", "group": "new", "passed_original_hard_gate": true, "norm_return_original": 0.9436700344085693, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "85_06_stageii_unitree_g1", "group": "new", "passed_original_hard_gate": true, "norm_return_original": 0.8074819445610046, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "85_07_stageii_unitree_g1", "group": "new", "passed_original_hard_gate": true, "norm_return_original": 0.8194298148155212, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "88_03_stageii_unitree_g1", "group": "new", "passed_original_hard_gate": true, "norm_return_original": 0.9531432390213013, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "88_06_stageii_unitree_g1", "group": "new", "passed_original_hard_gate": true, "norm_return_original": 0.6681889891624451, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "88_07_stageii_unitree_g1", "group": "new", "passed_original_hard_gate": true, "norm_return_original": 0.1057363823056221, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "88_08_stageii_unitree_g1", "group": "new", "passed_original_hard_gate": true, "norm_return_original": 0.5696679949760437, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "88_09_stageii_unitree_g1", "group": "new", "passed_original_hard_gate": true, "norm_return_original": 0.5733116269111633, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "88_10_stageii_unitree_g1", "group": "new", "passed_original_hard_gate": true, "norm_return_original": 0.8846030235290527, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "88_11_stageii_unitree_g1", "group": "new", "passed_original_hard_gate": true, "norm_return_original": 0.8437301516532898, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "89_01_stageii_unitree_g1", "group": "new", "passed_original_hard_gate": true, "norm_return_original": 0.7376752495765686, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "90_08_stageii_unitree_g1", "group": "new", "passed_original_hard_gate": true, "norm_return_original": 0.749121367931366, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "90_14_stageii_unitree_g1", "group": "new", "passed_original_hard_gate": true, "norm_return_original": 0.69971764087677, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "90_15_stageii_unitree_g1", "group": "new", "passed_original_hard_gate": true, "norm_return_original": 0.7332661151885986, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "90_19_stageii_unitree_g1", "group": "new", "passed_original_hard_gate": true, "norm_return_original": 0.66534024477005, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_COMPLETE {"new": {"denominator": 15, "passed": 15, "macro_return_original": 0.7169389213124912, "frame_weighted_return_original": 0.7668012553713116}}

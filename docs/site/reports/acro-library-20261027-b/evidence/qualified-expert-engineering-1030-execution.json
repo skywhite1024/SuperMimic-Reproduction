@@ -1,0 +1,13 @@
+{
+  "started_at": "2026-10-30T09:19:18.133865+00:00",
+  "GPU": 0,
+  "maximum_seconds": 600,
+  "CPU_affinity": [
+    0,
+    1
+  ],
+  "requested_CPU_updates": 6,
+  "new_GPU_automatically_authorized": false,
+  "status": "complete_isolated_CPU6_update_engineering_probe",
+  "wall_seconds": 20.79699999978766
+}

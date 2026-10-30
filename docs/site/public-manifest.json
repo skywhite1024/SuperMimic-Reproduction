@@ -35,15 +35,21 @@
     {
       "report": "acro-library-20261027-b/retention-1030-report.html",
       "original_sha256": "0f6b79576f78abb9323b6fc0e1527bd21e5b95d0c0920007f1f3ad9133d35b9b",
-      "public_sha256": "794def2d19f35d1cc94936a8eb8b4f7c72cc8ff17e965c667730ce1fbbbd132c",
+      "public_sha256": "4df7b7bfe3a8c250fa0486ce453c2ab851ca8ae4b295f84353747b595c69a2e9",
       "public_status_display": "Show completed update budget and failed adoption condition; internal execution-stage identifier remains only in evidence",
       "private_authorization_and_session_context_omitted": true,
       "video_availability_presentation": "Successful old clips use numerical regression evidence; all planned new, failed-old and continuous videos are complete.",
       "public_video_controls": "Explicit accessible play/pause buttons alongside native controls",
       "public_ledger_preview": "Bounded 60000-character screen preview; JSON export retains the entire original ledger."
+    },
+    {
+      "report": "acro-library-20261027-b/teacher-qualification-1030-report.html",
+      "original_sha256": "b5bdc529833ebdc27ad5def0c01a1f559252e6c68af59d277f1f93196a8ffe29",
+      "public_sha256": "02429545ae673a691e955f855da5ef9707912cddf96400b48ce5f726110f1cde",
+      "public_source_validation_card_added_after_isolated_run": true
     }
   ],
-  "video_count": 266,
+  "video_count": 298,
   "videos": [
     {
       "file": "acro-library-20261027-b/videos/parent18k-frozen-continuous-v1/seed-0.mp4",
@@ -6506,6 +6512,806 @@
       "publication_copy_identical": true,
       "validation_example": true,
       "not_an_additional_scientific_acceptance_sample": true
+    },
+    {
+      "file": "acro-library-20261027-b/videos/teacher-stage2-bound20-raw-cpu-new15-1030/143_34_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 13.0,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 13.0,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "bytes": 3573383,
+      "sha256": "6869d49604870341fa82990cfab939594a380ee235726f9de6df9c06cc3d6ee5",
+      "full_decode_passed": true,
+      "publication_copy_identical": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "teacher-stage2-bound20-raw-cpu-new15-1030"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/teacher-stage2-bound20-raw-cpu-new15-1030/85_06_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 7.84,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 7.84,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "bytes": 2674860,
+      "sha256": "686f7581424a191614db2594095fe9dd663bc7ca2fe201f9ddf9ebbcd5120d65",
+      "full_decode_passed": true,
+      "publication_copy_identical": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "teacher-stage2-bound20-raw-cpu-new15-1030"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/teacher-stage2-bound20-raw-cpu-new15-1030/85_07_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 7.92,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 7.92,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "bytes": 2807154,
+      "sha256": "715e8140d01dcbf433d736e210b824acaf1250809223b18d6d9a5c64a1a8d157",
+      "full_decode_passed": true,
+      "publication_copy_identical": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "teacher-stage2-bound20-raw-cpu-new15-1030"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/teacher-stage2-bound20-raw-cpu-new15-1030/88_03_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 2.88,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 2.88,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "bytes": 537717,
+      "sha256": "44f7cd661b4d5933c2d758b3b6651240fb7cf239e1781867262af0eda1ca1ebf",
+      "full_decode_passed": true,
+      "publication_copy_identical": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "teacher-stage2-bound20-raw-cpu-new15-1030"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/teacher-stage2-bound20-raw-cpu-new15-1030/88_06_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 3.8,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 3.8,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "bytes": 1590996,
+      "sha256": "ba2b78ecb1269436fcd13d607f1fee5c83791673e7da3816cd62543cf89a3084",
+      "full_decode_passed": true,
+      "publication_copy_identical": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "teacher-stage2-bound20-raw-cpu-new15-1030"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/teacher-stage2-bound20-raw-cpu-new15-1030/88_07_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 2.56,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 2.56,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "bytes": 1112346,
+      "sha256": "38b61eb9fe0aeccc187f078830aa79e7e360413f8ca3eb1c5058c0fb60c104dc",
+      "full_decode_passed": true,
+      "publication_copy_identical": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "teacher-stage2-bound20-raw-cpu-new15-1030"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/teacher-stage2-bound20-raw-cpu-new15-1030/88_08_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 4.76,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 4.76,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "bytes": 1744170,
+      "sha256": "c1712d95e00444f95e1968bfbb70522415713347d7c2d54375ddd7d61cc66a99",
+      "full_decode_passed": true,
+      "publication_copy_identical": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "teacher-stage2-bound20-raw-cpu-new15-1030"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/teacher-stage2-bound20-raw-cpu-new15-1030/88_09_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 6.24,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 6.24,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "bytes": 2300042,
+      "sha256": "5e15b9757f66117d11f77d307014700f7691b6d3115f083daede57734e15003a",
+      "full_decode_passed": true,
+      "publication_copy_identical": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "teacher-stage2-bound20-raw-cpu-new15-1030"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/teacher-stage2-bound20-raw-cpu-new15-1030/88_10_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 7.72,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 7.72,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "bytes": 2663737,
+      "sha256": "a1ae18ad763f8331abb942df22e8760b32d982ca0f3f891005c1b4843f9ec142",
+      "full_decode_passed": true,
+      "publication_copy_identical": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "teacher-stage2-bound20-raw-cpu-new15-1030"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/teacher-stage2-bound20-raw-cpu-new15-1030/88_11_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 33.72,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 33.72,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "bytes": 11454936,
+      "sha256": "7416f7d6933f4e688aad9a33eca294c22d8aebb8d901980860d9f9fd7dff0b0c",
+      "full_decode_passed": true,
+      "publication_copy_identical": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "teacher-stage2-bound20-raw-cpu-new15-1030"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/teacher-stage2-bound20-raw-cpu-new15-1030/89_01_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 38.8,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 38.8,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "bytes": 10763013,
+      "sha256": "ffc7ddcebef475fd80d5481bdf3dd08f2d717c5157fd1c2c032a2535e4ae060d",
+      "full_decode_passed": true,
+      "publication_copy_identical": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "teacher-stage2-bound20-raw-cpu-new15-1030"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/teacher-stage2-bound20-raw-cpu-new15-1030/90_08_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 5.56,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 5.56,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "bytes": 1716460,
+      "sha256": "e377fa7984a8207b1bb657c2acb17457098542a4b660a1a5f7eecac44e02b5bf",
+      "full_decode_passed": true,
+      "publication_copy_identical": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "teacher-stage2-bound20-raw-cpu-new15-1030"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/teacher-stage2-bound20-raw-cpu-new15-1030/90_14_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 6.92,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 6.92,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "bytes": 2248146,
+      "sha256": "0d094d6653939f65a88454fadbe8b2199c9df78e3850158d3f11e53ae33945b3",
+      "full_decode_passed": true,
+      "publication_copy_identical": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "teacher-stage2-bound20-raw-cpu-new15-1030"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/teacher-stage2-bound20-raw-cpu-new15-1030/90_15_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 9.84,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 9.84,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "bytes": 3206020,
+      "sha256": "e95cade29e14e0dfe8957b50b607e2fb033dd12895545ae191906918b8847200",
+      "full_decode_passed": true,
+      "publication_copy_identical": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "teacher-stage2-bound20-raw-cpu-new15-1030"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/teacher-stage2-bound20-raw-cpu-new15-1030/90_19_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 8.64,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 8.64,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "bytes": 2978907,
+      "sha256": "6108a2547ca9633890c51537f9ad3c07050fb93d7a40fa24fbb7e8319be11d96",
+      "full_decode_passed": true,
+      "publication_copy_identical": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "teacher-stage2-bound20-raw-cpu-new15-1030"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/teacher-stage2-bound20-corrected-cpu-new15-1030/143_34_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 13.0,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 13.0,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "bytes": 3573293,
+      "sha256": "bbefea15480a3b945116d8cecf218a53006fbac92fdb29f43ed5fe062177faa2",
+      "full_decode_passed": true,
+      "publication_copy_identical": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "teacher-stage2-bound20-corrected-cpu-new15-1030"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/teacher-stage2-bound20-corrected-cpu-new15-1030/85_06_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 7.84,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 7.84,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "bytes": 2676779,
+      "sha256": "3cc70cee4913d78d456678bb229145c023af1ca28defc051c39fddde4ef191ed",
+      "full_decode_passed": true,
+      "publication_copy_identical": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "teacher-stage2-bound20-corrected-cpu-new15-1030"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/teacher-stage2-bound20-corrected-cpu-new15-1030/85_07_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 7.92,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 7.92,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "bytes": 2806416,
+      "sha256": "8b04a2109cc26f470fc5927d9f3faedf24e859671f34bc2cd08dbb447b715173",
+      "full_decode_passed": true,
+      "publication_copy_identical": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "teacher-stage2-bound20-corrected-cpu-new15-1030"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/teacher-stage2-bound20-corrected-cpu-new15-1030/88_03_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 2.88,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 2.88,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "bytes": 538490,
+      "sha256": "fc6ff86fda245b6a7e2f2a6534db86a4464b5016422722cdaaa84453e90196fe",
+      "full_decode_passed": true,
+      "publication_copy_identical": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "teacher-stage2-bound20-corrected-cpu-new15-1030"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/teacher-stage2-bound20-corrected-cpu-new15-1030/88_06_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 3.8,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 3.8,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "bytes": 1592424,
+      "sha256": "f0d1a450140ad3837cf545294fd0a4373d6dd77ac8f67ba0424fe27c0623ecbd",
+      "full_decode_passed": true,
+      "publication_copy_identical": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "teacher-stage2-bound20-corrected-cpu-new15-1030"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/teacher-stage2-bound20-corrected-cpu-new15-1030/88_07_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 2.56,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 2.56,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "bytes": 1112664,
+      "sha256": "4f9a4545481dc5aaf6d17170334bcc4957b03fc74fd9c685ebce8f91ff661e39",
+      "full_decode_passed": true,
+      "publication_copy_identical": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "teacher-stage2-bound20-corrected-cpu-new15-1030"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/teacher-stage2-bound20-corrected-cpu-new15-1030/88_08_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 4.76,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 4.76,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "bytes": 1746935,
+      "sha256": "8093f255a1d2762956794e01799b0a7e690197d1bfeea93231aca380bc9b90ac",
+      "full_decode_passed": true,
+      "publication_copy_identical": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "teacher-stage2-bound20-corrected-cpu-new15-1030"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/teacher-stage2-bound20-corrected-cpu-new15-1030/88_09_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 6.24,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 6.24,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "bytes": 2303833,
+      "sha256": "490be201597f0f4058a7e2f55d357750d73d3dc407f2fd29028c9ed08969ccad",
+      "full_decode_passed": true,
+      "publication_copy_identical": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "teacher-stage2-bound20-corrected-cpu-new15-1030"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/teacher-stage2-bound20-corrected-cpu-new15-1030/88_10_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 7.72,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 7.72,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "bytes": 2667972,
+      "sha256": "e718c72e9faa2e5007e25a65c9960b51d091583852e499f4c9c34d859bd739eb",
+      "full_decode_passed": true,
+      "publication_copy_identical": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "teacher-stage2-bound20-corrected-cpu-new15-1030"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/teacher-stage2-bound20-corrected-cpu-new15-1030/88_11_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 33.72,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 33.72,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "bytes": 11453804,
+      "sha256": "5bd5819bf4fcee0a86c71d82f5e74fbc6150ad3cec547f62f6a2a9908ded7677",
+      "full_decode_passed": true,
+      "publication_copy_identical": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "teacher-stage2-bound20-corrected-cpu-new15-1030"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/teacher-stage2-bound20-corrected-cpu-new15-1030/89_01_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 38.8,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 38.8,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "bytes": 10766884,
+      "sha256": "d7e475e841b250a1ebe89c144fb48fba7c4d23734cb22f4fafdb9428381b9686",
+      "full_decode_passed": true,
+      "publication_copy_identical": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "teacher-stage2-bound20-corrected-cpu-new15-1030"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/teacher-stage2-bound20-corrected-cpu-new15-1030/90_08_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 5.56,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 5.56,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "bytes": 1718094,
+      "sha256": "9b3295b13e08a3457915248d0ac573b7078d595d19a349777fa68f9cb0681f15",
+      "full_decode_passed": true,
+      "publication_copy_identical": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "teacher-stage2-bound20-corrected-cpu-new15-1030"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/teacher-stage2-bound20-corrected-cpu-new15-1030/90_14_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 6.92,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 6.92,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "bytes": 2203447,
+      "sha256": "a3ee94a2050bb472ad1285df96fabd32fd71e65c01c106b725c9f8bfc040876e",
+      "full_decode_passed": true,
+      "publication_copy_identical": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "teacher-stage2-bound20-corrected-cpu-new15-1030"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/teacher-stage2-bound20-corrected-cpu-new15-1030/90_15_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 9.84,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 9.84,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "bytes": 3040149,
+      "sha256": "d0bee9c8003c9228686347e4fa310444be18023c5c4ba12c99fcb384abe7536e",
+      "full_decode_passed": true,
+      "publication_copy_identical": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "teacher-stage2-bound20-corrected-cpu-new15-1030"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/teacher-stage2-bound20-corrected-cpu-new15-1030/90_19_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 8.64,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 8.64,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "bytes": 2985039,
+      "sha256": "9eabdd9910c80ee5a9831cb754b497d933c3f6a0af91e36d257cf07d85d98073",
+      "full_decode_passed": true,
+      "publication_copy_identical": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "teacher-stage2-bound20-corrected-cpu-new15-1030"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/specialist8808-bound20-raw-cpu-1030/88_08_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 4.76,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 4.76,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "bytes": 1707839,
+      "sha256": "bc09e7b1f1ff2a08560c4490dcfe497ef6bce7f598650c8dcfd0770897acb584",
+      "full_decode_passed": true,
+      "publication_copy_identical": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "specialist8808-bound20-raw-cpu-1030"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/specialist8808-bound20-corrected-cpu-1030/88_08_stageii_unitree_g1.mp4",
+      "source": {
+        "duration": 4.76,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "public": {
+        "duration": 4.76,
+        "fps": 25,
+        "size": [
+          1280,
+          720
+        ]
+      },
+      "bytes": 1707159,
+      "sha256": "a8cd864f25b9f9c46ab1a92514e9b820d43823f7f74a813d4f2943e203693676",
+      "full_decode_passed": true,
+      "publication_copy_identical": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "source_run": "specialist8808-bound20-corrected-cpu-1030"
     }
   ],
   "excluded_links": [
@@ -6517,5 +7323,6 @@
     "interactive-g1-20261027-a\\runs\\baseline\\trajectory.npz"
   ],
   "policy": "Metrics unchanged; local identities and console screenshots omitted; videos retain complete duration and frame rate.",
-  "retention_1030_updated_at": "2026-10-30T07:30:53.661039+00:00"
+  "retention_1030_updated_at": "2026-10-30T07:30:53.661039+00:00",
+  "teacher_qualification_updated_at": "2026-10-30T09:23:00.372694+00:00"
 }

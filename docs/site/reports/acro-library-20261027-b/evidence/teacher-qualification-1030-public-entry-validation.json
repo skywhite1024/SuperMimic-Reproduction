@@ -1,0 +1,143 @@
+{
+  "status": "actual_public_teacher_raw15_and_specialist_raw1_exactly_match_private_physics_and_quality",
+  "checked_at": "2026-10-30T09:25:48.641585+00:00",
+  "SOURCE_PROVENANCE_sha256": "836fbeefc44366f937012d0420c8c659320a3f730512178f53004bd6bac42cdc",
+  "source_files_copied_and_guarded": 292,
+  "CPU_affinity": [
+    0,
+    1
+  ],
+  "wall_seconds": 50.532000000122935,
+  "GPU": 0,
+  "new_training_updates": 0,
+  "cases": [
+    {
+      "name": "stage2-full",
+      "checkpoint_sha256": "807d5fac7ca128f892c950fa379133231cd5f741e83075ed017d105b2eec6eec",
+      "denominator": 15,
+      "all_physical_per_clip_metrics_exactly_equal": true,
+      "arrays_exactly_equal": {
+        "state": true,
+        "reference_qpos": true,
+        "xy_error": true,
+        "hard_failure_aligned": true
+      },
+      "all_tracking_and_contact_records_exactly_equal": true,
+      "strict_teacher_passed": 8,
+      "specialist_per_clip_tracking_and_contact_pass": null
+    },
+    {
+      "name": "acro88-08",
+      "checkpoint_sha256": "0f4a7bc67ae9e3440711e401e37f8276102e59946177117d082a6d7aabe108b4",
+      "denominator": 1,
+      "all_physical_per_clip_metrics_exactly_equal": true,
+      "arrays_exactly_equal": {
+        "state": true,
+        "reference_qpos": true,
+        "xy_error": true,
+        "hard_failure_aligned": true
+      },
+      "all_tracking_and_contact_records_exactly_equal": true,
+      "strict_teacher_passed": null,
+      "specialist_per_clip_tracking_and_contact_pass": true
+    }
+  ],
+  "commands": [
+    {
+      "script": "tools/evaluate_released_teacher.py",
+      "arguments": [
+        "--name",
+        "stage2-full",
+        "--checkpoint-file",
+        "[local]/final-full.pt",
+        "--verify-only"
+      ],
+      "log": "evidence/teacher-public-entry-1030-00.log"
+    },
+    {
+      "script": "tools/evaluate_released_teacher.py",
+      "arguments": [
+        "--name",
+        "stage2-full",
+        "--checkpoint-file",
+        "[local]/final-full.pt",
+        "--reference-variant",
+        "raw",
+        "--mode",
+        "released-teacher-raw15-cpu-1030"
+      ],
+      "log": "evidence/teacher-public-entry-1030-01.log"
+    },
+    {
+      "script": "acro-library-20261027-b/scripts/assess_tracking.py",
+      "arguments": [
+        "--run",
+        "released-teacher-raw15-cpu-1030"
+      ],
+      "log": "evidence/teacher-public-entry-1030-02.log"
+    },
+    {
+      "script": "acro-library-20261027-b/scripts/audit_physical_contacts.py",
+      "arguments": [
+        "--run",
+        "released-teacher-raw15-cpu-1030"
+      ],
+      "log": "evidence/teacher-public-entry-1030-03.log"
+    },
+    {
+      "script": "acro-library-20261027-b/scripts/combine_acceptance.py",
+      "arguments": [
+        "--run",
+        "released-teacher-raw15-cpu-1030"
+      ],
+      "log": "evidence/teacher-public-entry-1030-04.log"
+    },
+    {
+      "script": "tools/evaluate_released_teacher.py",
+      "arguments": [
+        "--name",
+        "acro88-08",
+        "--checkpoint-file",
+        "[local]/acro-h100-2000.pt",
+        "--verify-only"
+      ],
+      "log": "evidence/teacher-public-entry-1030-05.log"
+    },
+    {
+      "script": "tools/evaluate_released_teacher.py",
+      "arguments": [
+        "--name",
+        "acro88-08",
+        "--checkpoint-file",
+        "[local]/acro-h100-2000.pt",
+        "--reference-variant",
+        "raw",
+        "--mode",
+        "released-specialist8808-raw-cpu-1030"
+      ],
+      "log": "evidence/teacher-public-entry-1030-06.log"
+    },
+    {
+      "script": "acro-library-20261027-b/scripts/assess_tracking.py",
+      "arguments": [
+        "--run",
+        "released-specialist8808-raw-cpu-1030"
+      ],
+      "log": "evidence/teacher-public-entry-1030-07.log"
+    },
+    {
+      "script": "acro-library-20261027-b/scripts/audit_physical_contacts.py",
+      "arguments": [
+        "--run",
+        "released-specialist8808-raw-cpu-1030"
+      ],
+      "log": "evidence/teacher-public-entry-1030-08.log"
+    }
+  ],
+  "fresh_dependency_install_tested": false,
+  "original_input_network_download_tested": false,
+  "calibrated_public_entry_not_resimulated_in_this_validation": true,
+  "existing_pinned91_input_files_reused": true,
+  "full_goal_complete": false,
+  "candidate_adopted": false
+}

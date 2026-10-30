@@ -1,0 +1,55 @@
+{
+  "status": "frozen_before_one_new_local_CPU6_update_engineering_probe",
+  "frozen_at": "2026-10-30T09:19:17.849888+00:00",
+  "scope": "Six CPU updates in a new isolated label,2WM-only and4joint. No GPU job, no adoption, no physical-success claim.",
+  "initial_full": "runs/unified-h100-stage3-4000/final-full.pt",
+  "initial_full_sha256": "93bb8b830145c54092518eba8db1fb020d020eb72cdad1b619b4fc5470cc213d",
+  "old_teacher": "../implementation/continuation-20261025-a/downloaded/policy/full_016000.pt",
+  "old_teacher_sha256": "0afcca9af97bd9db1f2dd083875898f962acab0b0a70c7313b221e575b70b05b",
+  "new_teacher": "../interactive-g1-20261027-a/policy/acro-h100-2000.pt",
+  "new_teacher_sha256": "0f4a7bc67ae9e3440711e401e37f8276102e59946177117d082a6d7aabe108b4",
+  "protected_new": [
+    "88_08_stageii_unitree_g1"
+  ],
+  "old_weight": 0.1,
+  "new_weight": 0.05,
+  "loss": "Same native imagined objective and old retention penalty; use the qualified99D8808 specialist only for8808. No imitation target for unqualified8807/09.",
+  "action_bound": [
+    -20,
+    20
+  ],
+  "teachers_training_only": true,
+  "deployed_student_policies": 1,
+  "old_failure_replay_priorities": {
+    "dance2_subject4": 3,
+    "fallAndGetUp2_subject3": 3,
+    "jumps1_subject2": 3
+  },
+  "engineering_updates": 6,
+  "wm_only_updates": 2,
+  "device": "cpu",
+  "num_envs": 64,
+  "files": {
+    "scripts/retention_components.py": "1ecb22f73afc1cf759d4de682a6180aae2e683fd8911d8d6c6e9c09161dc3013",
+    "scripts/retention_learner.py": "8a39435dd52ceb3a6026abda50427021e75ade553f4b6ec50c56b16dd5534915",
+    "scripts/train_retention_engineering.py": "f31e63ceb9bed1eae20e3a926248f5ff3faa67567aa420ddeccc917b9e2ff390",
+    "scripts/balanced_replay.py": "c8700818bafc0c45db2300a996c2e762bebbf5cb4c6c9e9fb327f8b848897197",
+    "scripts/balanced_sampling.py": "ad6db997aebed92745450d2009ce6887b7690cc2e93752e0b07bba60c6a7b49b",
+    "scripts/global_model.py": "962dacd788304d954cd032e0c5bf98ad83298b56a703c9c882e289c4d93f4312",
+    "scripts/stage2_references.py": "6459c841ec67e41a6c1f8a4f33919045b957c7d5161db7620450c129a6d71c8a",
+    "ground-calibration-v1/manifest.json": "cf5113137ad83bc7dfa9f16f2032a396f3b4be7ad61e1e630231e84db19bd990",
+    "acceptance-contract.json": "0036d9f100203e9d25990c47dfb5666508672fafbea60156a33fb63e56c1dcb1",
+    "contact-acceptance-contract.json": "b3b52cbe3bb45696ca0e9de603db4d01270bc275ff376c2f2a3c370d171390a8",
+    "continuous-acceptance-contract-v1.json": "9f986fbc647865312b6b1346b8c11da5d00a1ce8020ef96efc8da5339b4f73ce",
+    "scripts/qualified_retention_learner.py": "e775de54eced2f4db7c1ab6259bdc65b66fe8d58c1764d0dac2e10ee2a5e05b2",
+    "scripts/train_qualified_engineering1030.py": "b4127fbfe0a29afb39ee2504586b742509f79604d6880b648bc27a937531306a"
+  },
+  "pinned_native_source_sha256": "c2b12fdf94be102ffadfb343b9372069d32cb660b2f05b66e836351b328361f4",
+  "basis": "Stage2 teacher protected0/3; historical8808 specialist passes identical per-motion strict contracts under bound20. Real-history99Dadapter and finite student gradients verified with zero updates.",
+  "stop": "Stop on failed source/hash guards, nonfinite loss, missing old/protected-new samples, teacher/norm changes, optimizer-step mismatch, failed exact save-readback, or more than6 updates. No automatic GPU escalation.",
+  "engineering_PI_batch": 64,
+  "maximum_program_seconds": 600,
+  "GPU": 0,
+  "teacher_qualification": "evidence/specialist-teacher-8808-1030.json",
+  "teacher_qualification_sha256": "31db80549be58d583b6068d89161928cab55d64b82da51054895e2682a87401f"
+}

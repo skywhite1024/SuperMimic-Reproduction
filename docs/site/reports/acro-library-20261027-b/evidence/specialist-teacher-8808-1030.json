@@ -1,0 +1,175 @@
+{
+  "status": "complete_two_full_clip_specialist_controls",
+  "started_at": "2026-10-30T09:13:07.320268+00:00",
+  "plan_sha256": "d2d4a4e0bbdd25530be976f60fe56c764cb046d8bb92981d0a9f2753a54f8826",
+  "GPU": 0,
+  "training_updates": 0,
+  "maximum_seconds": 300,
+  "CPU_affinity": [
+    0,
+    1
+  ],
+  "commands": [
+    {
+      "script": "evaluate_frozen_specialist1030.py",
+      "arguments": [
+        "raw"
+      ],
+      "log": "evidence/specialist-teacher-8808-1030-00.log"
+    },
+    {
+      "script": "assess_tracking.py",
+      "arguments": [
+        "--run",
+        "specialist8808-bound20-raw-cpu-1030"
+      ],
+      "log": "evidence/specialist-teacher-8808-1030-01.log"
+    },
+    {
+      "script": "audit_physical_contacts.py",
+      "arguments": [
+        "--run",
+        "specialist8808-bound20-raw-cpu-1030"
+      ],
+      "log": "evidence/specialist-teacher-8808-1030-02.log"
+    },
+    {
+      "script": "render_teacher_qualification.py",
+      "arguments": [
+        "--run",
+        "specialist8808-bound20-raw-cpu-1030"
+      ],
+      "log": "evidence/specialist-teacher-8808-1030-03.log"
+    },
+    {
+      "script": "evaluate_frozen_specialist1030.py",
+      "arguments": [
+        "corrected"
+      ],
+      "log": "evidence/specialist-teacher-8808-1030-04.log"
+    },
+    {
+      "script": "assess_tracking.py",
+      "arguments": [
+        "--run",
+        "specialist8808-bound20-corrected-cpu-1030"
+      ],
+      "log": "evidence/specialist-teacher-8808-1030-05.log"
+    },
+    {
+      "script": "audit_physical_contacts.py",
+      "arguments": [
+        "--run",
+        "specialist8808-bound20-corrected-cpu-1030"
+      ],
+      "log": "evidence/specialist-teacher-8808-1030-06.log"
+    },
+    {
+      "script": "render_teacher_qualification.py",
+      "arguments": [
+        "--run",
+        "specialist8808-bound20-corrected-cpu-1030"
+      ],
+      "log": "evidence/specialist-teacher-8808-1030-07.log"
+    }
+  ],
+  "groups": {
+    "raw": {
+      "assessment": {
+        "clip": "88_08_stageii_unitree_g1",
+        "denominator": 1,
+        "tracking_quality_passed": true,
+        "contact_review_passed": true,
+        "combined_engineering_passed": true,
+        "tracking_failed_checks": [],
+        "contact_checks": {
+          "no_unexpected_trunk_contact": true,
+          "penetration_within_engineering_limit": true
+        },
+        "unexpected_trunk_contacts": [],
+        "actual_min_after_initial_100ms_m": -0.03708609371191863,
+        "norm_return_original": 0.6690323948860168,
+        "tracking_contract_sha256": "0036d9f100203e9d25990c47dfb5666508672fafbea60156a33fb63e56c1dcb1",
+        "contact_contract_sha256": "b3b52cbe3bb45696ca0e9de603db4d01270bc275ff376c2f2a3c370d171390a8",
+        "one_motion_diagnostic_only": true,
+        "not_a15_or55_clip_acceptance": true
+      },
+      "video": {
+        "clip": "88_08_stageii_unitree_g1",
+        "file": "videos/specialist8808-bound20-raw-cpu-1030/88_08_stageii_unitree_g1.mp4",
+        "bytes": 1707839,
+        "sha256": "bc09e7b1f1ff2a08560c4490dcfe497ef6bce7f598650c8dcfd0770897acb584",
+        "frames": 119,
+        "fps": 25,
+        "video_seconds": 4.76,
+        "physical_window_seconds": 4.72,
+        "complete_decode_passed": true,
+        "source_run": "specialist8808-bound20-raw-cpu-1030",
+        "only_retained_actual_physics_states_rendered": true,
+        "reference_display_offset_m": [
+          0,
+          1.5,
+          0
+        ],
+        "fog_disabled_for_failed_tail_visibility": true,
+        "reference_version_or_variant": "raw",
+        "original_hard_gate_passed": true,
+        "tracking_quality_passed": true,
+        "contact_sheet": "evidence/specialist8808-bound20-raw-cpu-1030-88_08_stageii_unitree_g1-contact-sheet.jpg"
+      }
+    },
+    "corrected": {
+      "assessment": {
+        "clip": "88_08_stageii_unitree_g1",
+        "denominator": 1,
+        "tracking_quality_passed": true,
+        "contact_review_passed": true,
+        "combined_engineering_passed": true,
+        "tracking_failed_checks": [],
+        "contact_checks": {
+          "no_unexpected_trunk_contact": true,
+          "penetration_within_engineering_limit": true
+        },
+        "unexpected_trunk_contacts": [],
+        "actual_min_after_initial_100ms_m": -0.03708609371191863,
+        "norm_return_original": 0.6690323948860168,
+        "tracking_contract_sha256": "0036d9f100203e9d25990c47dfb5666508672fafbea60156a33fb63e56c1dcb1",
+        "contact_contract_sha256": "b3b52cbe3bb45696ca0e9de603db4d01270bc275ff376c2f2a3c370d171390a8",
+        "one_motion_diagnostic_only": true,
+        "not_a15_or55_clip_acceptance": true
+      },
+      "video": {
+        "clip": "88_08_stageii_unitree_g1",
+        "file": "videos/specialist8808-bound20-corrected-cpu-1030/88_08_stageii_unitree_g1.mp4",
+        "bytes": 1707159,
+        "sha256": "a8cd864f25b9f9c46ab1a92514e9b820d43823f7f74a813d4f2943e203693676",
+        "frames": 119,
+        "fps": 25,
+        "video_seconds": 4.76,
+        "physical_window_seconds": 4.72,
+        "complete_decode_passed": true,
+        "source_run": "specialist8808-bound20-corrected-cpu-1030",
+        "only_retained_actual_physics_states_rendered": true,
+        "reference_display_offset_m": [
+          0,
+          1.5,
+          0
+        ],
+        "fog_disabled_for_failed_tail_visibility": true,
+        "reference_version_or_variant": "ground-calibration-v1",
+        "original_hard_gate_passed": true,
+        "tracking_quality_passed": true,
+        "contact_sheet": "evidence/specialist8808-bound20-corrected-cpu-1030-88_08_stageii_unitree_g1-contact-sheet.jpg"
+      }
+    }
+  },
+  "student_model_replaced": false,
+  "unified_goal_complete": false,
+  "architecture_confound": "Historical99D single-motion specialist versus101D stage2 teacher; descriptive only.",
+  "updated_at": "2026-10-30T09:13:39.704725+00:00",
+  "wall_seconds": 32.39099999982864,
+  "checkpoint_sha256": "0f4a7bc67ae9e3440711e401e37f8276102e59946177117d082a6d7aabe108b4",
+  "qualified_for_8808_under_both_references": true,
+  "all_failed_tails_retained": true,
+  "next_GPU_training_automatically_authorized": false
+}

@@ -1,0 +1,9 @@
+{
+  "started_at": "2026-10-30T09:08:05.471566+00:00",
+  "maximum_seconds": 300,
+  "GPU": 0,
+  "training_updates": 0,
+  "plan": "evidence/protected-reward-audit-1030-plan-v2.json",
+  "status": "complete",
+  "wall_seconds": 12.875
+}

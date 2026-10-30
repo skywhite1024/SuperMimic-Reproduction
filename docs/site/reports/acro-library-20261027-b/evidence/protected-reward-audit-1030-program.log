@@ -1,0 +1,7 @@
+PROTECTED_REWARD_AUDIT_MODE teacher-stage2-bound20-raw-cpu-new15-1030
+PROTECTED_REWARD_AUDIT_MODE teacher-stage2-bound20-corrected-cpu-new15-1030
+PROTECTED_REWARD_AUDIT_MODE stage3-actionbound20-raw-cpu-new15
+PROTECTED_REWARD_AUDIT_MODE stage3-actionbound20-corrected-cpu-all55
+PROTECTED_REWARD_AUDIT_MODE retention-v1-raw-cpu-new15
+PROTECTED_REWARD_AUDIT_MODE retention-v1-corrected-cpu-all55
+PROTECTED_REWARD_AUDIT_COMPLETE {"records": 18, "maximum_reward_error": 7.62939453125e-06, "wall_seconds": 10.563000000081956}

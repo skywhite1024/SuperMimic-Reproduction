@@ -1,0 +1,8 @@
+{
+  "status": "pinned_released_teacher_and_public_source_verified",
+  "name": "acro88-08",
+  "checkpoint_sha256": "0f4a7bc67ae9e3440711e401e37f8276102e59946177117d082a6d7aabe108b4",
+  "observation_dimension": 99,
+  "guarded_source_files": 70,
+  "physics_assessed": false
+}

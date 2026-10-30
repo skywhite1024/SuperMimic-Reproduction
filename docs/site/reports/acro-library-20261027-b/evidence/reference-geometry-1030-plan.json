@@ -1,0 +1,33 @@
+{
+  "status": "frozen_before_read_only_audit",
+  "frozen_at": "2026-10-30T09:11:09.160632+00:00",
+  "question": "Do the unmodified references themselves exceed runtime hard joint limits or contain geometric ground penetration? Geometry alone does not prove or disprove dynamic trackability.",
+  "GPU": 0,
+  "training_updates": 0,
+  "maximum_CPU_threads": 2,
+  "maximum_seconds": 60,
+  "modes": {
+    "raw": "teacher-stage2-bound20-raw-cpu-new15-1030",
+    "corrected": "teacher-stage2-bound20-corrected-cpu-new15-1030"
+  },
+  "protected_new": [
+    "88_07_stageii_unitree_g1",
+    "88_08_stageii_unitree_g1",
+    "88_09_stageii_unitree_g1"
+  ],
+  "all30_reference_records_required": true,
+  "new_physical_rollouts": 0,
+  "reference_physics_reward_acceptance_unchanged": true,
+  "source_sha256": {
+    "runs/teacher-stage2-bound20-raw-cpu-new15-1030/trajectory.npz": "972e0c13f0ebb76fae3496ccf6fd699c4aa60d1116517af2a477a7966ae987c9",
+    "runs/teacher-stage2-bound20-raw-cpu-new15-1030/summary.json": "383588f6411fa4d1bb3c92917a72ad68392fd2ffa5eb4cb2451e13b5d18ef258",
+    "runs/teacher-stage2-bound20-raw-cpu-new15-1030/contact-samples.json": "e67e84f047408f31dc755a6149c30418e5d62663836aa75d250f93a98340eec8",
+    "runs/teacher-stage2-bound20-corrected-cpu-new15-1030/trajectory.npz": "b05bce6b4f244a610d696324cf569105ffb4b59797e30b45789a90a3dbbe900d",
+    "runs/teacher-stage2-bound20-corrected-cpu-new15-1030/summary.json": "b38840666f448f411d3791c4baf3eda6f3d49b215e098de4ed790585a908ffda",
+    "runs/teacher-stage2-bound20-corrected-cpu-new15-1030/contact-samples.json": "b75ddb159d3013363df135f2df14076ca07a66b2240fff3b598004b4f8233f0c",
+    "scripts/runtime.py": "e06f87f6f1b58d2035c3de8b178f8f46f5f888faddf75a022374c9b3f0f7e0e1",
+    "scripts/audit_reference_geometry1030.py": "dd392772f3fbe4ea549d46997a9953adca84e246a8036dd46274f64342ee13f1"
+  },
+  "script_sha256": "dd392772f3fbe4ea549d46997a9953adca84e246a8036dd46274f64342ee13f1",
+  "automatic_GPU_training": false
+}

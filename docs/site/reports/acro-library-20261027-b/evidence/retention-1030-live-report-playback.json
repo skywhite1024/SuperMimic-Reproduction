@@ -1,0 +1,38 @@
+{
+  "checked_at": "2026-10-30T08:57:37.472Z",
+  "report_url": "https://skywhite1024.github.io/SuperMimic-Reproduction/reports/acro-library-20261027-b/retention-1030-report.html",
+  "search_88_07_count": "显示 1 / 55；原始分母保持",
+  "media": {
+    "duration": 2.56,
+    "ended": true,
+    "error": null,
+    "height": 540,
+    "paused": true,
+    "ready": 4,
+    "src": "https://skywhite1024.github.io/SuperMimic-Reproduction/reports/acro-library-20261027-b/videos/retention-v1-corrected-cuda-all55/88_07_stageii_unitree_g1.mp4",
+    "time": 2.56,
+    "width": 960
+  },
+  "new15": "显示 15 / 55；原始分母保持",
+  "failed": "显示 9 / 55；原始分母保持",
+  "metricsExpanded": 1,
+  "rawCPUMode": {
+    "mode": "mode",
+    "count": "显示 8 / 15；原始分母保持"
+  },
+  "continuousMedia": {
+    "duration": 120.04,
+    "error": null,
+    "height": 540,
+    "paused": false,
+    "ready": 4,
+    "time": 14.917889,
+    "width": 960
+  },
+  "ledgerPreview": {
+    "length": 60054,
+    "prefix": "界面预览前 60000 个字符；导出按钮保留全部账本和指标。\n\n{\n  \"updated_at\": \"2026-10-30T07:39:19.447025+00"
+  },
+  "JSONDownloadVerification": "retention-1030-live-ledger-download-verification.json",
+  "known_UI_issue": "Old unbounded ledger preview stalled tab32 and tab34; version2d221ef bounded preview is responsive. Browser download event timed out but actual9MBfile was verified."
+}

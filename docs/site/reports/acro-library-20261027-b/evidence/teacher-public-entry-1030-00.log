@@ -1,0 +1,8 @@
+{
+  "status": "pinned_released_teacher_and_public_source_verified",
+  "name": "stage2-full",
+  "checkpoint_sha256": "807d5fac7ca128f892c950fa379133231cd5f741e83075ed017d105b2eec6eec",
+  "observation_dimension": 101,
+  "guarded_source_files": 70,
+  "physics_assessed": false
+}

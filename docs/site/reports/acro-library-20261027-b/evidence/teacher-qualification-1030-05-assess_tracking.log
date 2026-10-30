@@ -1,0 +1,1 @@
+{"run": "teacher-stage2-bound20-corrected-cpu-new15-1030", "checkpoint_sha256": "807d5fac7ca128f892c950fa379133231cd5f741e83075ed017d105b2eec6eec", "device": "cpu", "contract_sha256": "0036d9f100203e9d25990c47dfb5666508672fafbea60156a33fb63e56c1dcb1", "new_denominator": 15, "new_original_hard_gate_passed": 15, "new_tracking_quality_passed": 12}

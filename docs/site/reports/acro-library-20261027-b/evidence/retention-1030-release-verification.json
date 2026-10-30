@@ -1,0 +1,40 @@
+{
+  "status": "published_prerelease_all4_server_sizes_and_SHA256_digests_verified",
+  "at": "2026-10-30T08:06:18.235423+00:00",
+  "release_url": "https://github.com/skywhite1024/SuperMimic-Reproduction/releases/tag/v0.2.0",
+  "release_id": 428773120,
+  "tag": "v0.2.0",
+  "prerelease": true,
+  "source_commit": "43c12c035f5ddbad3d0322c55604c7e98697f614",
+  "assets": [
+    {
+      "name": "retention-parent-stage3-full.pt",
+      "size": 219041759,
+      "digest": "sha256:93bb8b830145c54092518eba8db1fb020d020eb72cdad1b619b4fc5470cc213d",
+      "state": "uploaded",
+      "browser_download_url": "https://github.com/skywhite1024/SuperMimic-Reproduction/releases/download/v0.2.0/retention-parent-stage3-full.pt"
+    },
+    {
+      "name": "retention-v1-1000-full.pt",
+      "size": 219042079,
+      "digest": "sha256:e98afcbbb4f8a0b663cbfd20813e41137c3ecd822297c7e93f068383d2974329",
+      "state": "uploaded",
+      "browser_download_url": "https://github.com/skywhite1024/SuperMimic-Reproduction/releases/download/v0.2.0/retention-v1-1000-full.pt"
+    },
+    {
+      "name": "retention-v1-1000-policy.pt",
+      "size": 36647925,
+      "digest": "sha256:21b92ba3a03044d3a2425d354360086c7c5e4817133168044bdf10849a58f184",
+      "state": "uploaded",
+      "browser_download_url": "https://github.com/skywhite1024/SuperMimic-Reproduction/releases/download/v0.2.0/retention-v1-1000-policy.pt"
+    },
+    {
+      "name": "SHA256SUMS",
+      "size": 284,
+      "digest": "sha256:8e9f794315c4a4d49b055c15906847940e0477ad29d29ca937614d370f0c6b1e",
+      "state": "uploaded",
+      "browser_download_url": "https://github.com/skywhite1024/SuperMimic-Reproduction/releases/download/v0.2.0/SHA256SUMS"
+    }
+  ],
+  "no_authentication_tokens_used_by_read_only_verification": true
+}

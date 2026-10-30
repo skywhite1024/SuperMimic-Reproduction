@@ -79,3 +79,6 @@ Original code added by this reproduction project is provided under Apache-2.0. V
 The finite 1000-update candidate and its full parent are published with matched CPU/CUDA evaluations.
 See [the experiment and reproduction instructions](docs/RETENTION_V1.md) and the complete linked report.
 The frozen raw-reference goal is false; all failures remain included.
+
+
+The [2026-10-30 teacher qualification](docs/TEACHER_QUALIFICATION.md) adds complete raw/calibrated stage2 controls,32full diagnostic videos and isolated CPU engineering evidence. The protected stage2 teacher is0/3; the historical8808specialist passes its one-motion control. These findings do not complete the unified55-motion goal or trigger another GPU job.

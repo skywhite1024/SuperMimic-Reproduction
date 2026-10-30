@@ -1,0 +1,12 @@
+{
+  "checked_at": "2026-10-30T08:57:22.242348+00:00",
+  "status": "actual_browser_download_file_verified_exactly_equal_entire_public_report_ledger",
+  "bytes": 9003447,
+  "sha256": "6f5fff1c10a7ad936a488bf6c3360a0301ee738525f9bbef400bad685dbad274",
+  "runs": 16,
+  "new_updates": 1000,
+  "full_goal_complete": false,
+  "browser_download_event": "timed_out_despite_file_successfully_saved",
+  "file_modified_at": "2026-10-30T08:55:18.874249+00:00",
+  "all_nested_records_equal": true
+}

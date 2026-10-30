@@ -1,0 +1,956 @@
+{
+  "status": "complete_all30_full_tail_videos_decoded_hashed",
+  "started_at": "2026-10-30T08:59:58.491359+00:00",
+  "plan_sha256": "431e6a39e2cf481b66620815d41dcf08763224a3b0979ab0e25a70e235181873",
+  "checkpoint_sha256": "807d5fac7ca128f892c950fa379133231cd5f741e83075ed017d105b2eec6eec",
+  "GPU": 0,
+  "new_training_updates": 0,
+  "maximum_program_seconds": 1800,
+  "CPU_affinity": [
+    0,
+    1
+  ],
+  "maximum_library_threads": 2,
+  "modes": {
+    "raw": "teacher-stage2-bound20-raw-cpu-new15-1030",
+    "corrected": "teacher-stage2-bound20-corrected-cpu-new15-1030"
+  },
+  "commands_completed": [
+    {
+      "script": "evaluate_teacher_bound20.py",
+      "arguments": [
+        "--reference-variant",
+        "raw",
+        "--checkpoint",
+        "[local]/final-full.pt",
+        "--group",
+        "new",
+        "--device",
+        "cpu",
+        "--mode",
+        "teacher-stage2-bound20-raw-cpu-new15-1030"
+      ],
+      "log": "evidence\\teacher-qualification-1030-00-evaluate_teacher_bound20.log"
+    },
+    {
+      "script": "assess_tracking.py",
+      "arguments": [
+        "--run",
+        "teacher-stage2-bound20-raw-cpu-new15-1030"
+      ],
+      "log": "evidence\\teacher-qualification-1030-01-assess_tracking.log"
+    },
+    {
+      "script": "audit_physical_contacts.py",
+      "arguments": [
+        "--run",
+        "teacher-stage2-bound20-raw-cpu-new15-1030"
+      ],
+      "log": "evidence\\teacher-qualification-1030-02-audit_physical_contacts.log"
+    },
+    {
+      "script": "combine_acceptance.py",
+      "arguments": [
+        "--run",
+        "teacher-stage2-bound20-raw-cpu-new15-1030"
+      ],
+      "log": "evidence\\teacher-qualification-1030-03-combine_acceptance.log"
+    },
+    {
+      "script": "evaluate_teacher_bound20.py",
+      "arguments": [
+        "--reference-variant",
+        "corrected",
+        "--checkpoint",
+        "[local]/final-full.pt",
+        "--group",
+        "new",
+        "--device",
+        "cpu",
+        "--mode",
+        "teacher-stage2-bound20-corrected-cpu-new15-1030"
+      ],
+      "log": "evidence\\teacher-qualification-1030-04-evaluate_teacher_bound20.log"
+    },
+    {
+      "script": "assess_tracking.py",
+      "arguments": [
+        "--run",
+        "teacher-stage2-bound20-corrected-cpu-new15-1030"
+      ],
+      "log": "evidence\\teacher-qualification-1030-05-assess_tracking.log"
+    },
+    {
+      "script": "audit_physical_contacts.py",
+      "arguments": [
+        "--run",
+        "teacher-stage2-bound20-corrected-cpu-new15-1030"
+      ],
+      "log": "evidence\\teacher-qualification-1030-06-audit_physical_contacts.log"
+    },
+    {
+      "script": "combine_acceptance.py",
+      "arguments": [
+        "--run",
+        "teacher-stage2-bound20-corrected-cpu-new15-1030"
+      ],
+      "log": "evidence\\teacher-qualification-1030-07-combine_acceptance.log"
+    },
+    {
+      "script": "render_teacher_qualification.py",
+      "arguments": [
+        "--run",
+        "teacher-stage2-bound20-raw-cpu-new15-1030"
+      ],
+      "log": "evidence\\teacher-qualification-1030-08-render_teacher_qualification.log"
+    },
+    {
+      "script": "render_teacher_qualification.py",
+      "arguments": [
+        "--run",
+        "teacher-stage2-bound20-corrected-cpu-new15-1030"
+      ],
+      "log": "evidence\\teacher-qualification-1030-09-render_teacher_qualification.log"
+    }
+  ],
+  "candidate_adopted": false,
+  "full_goal_complete": false,
+  "updated_at": "2026-10-30T09:04:57.319833+00:00",
+  "wall_seconds": 298.82800000021234,
+  "groups": {
+    "raw": {
+      "denominator": 15,
+      "original_hard_gate_passed": 13,
+      "tracking_quality_passed": 10,
+      "contact_review_passed": 11,
+      "combined_engineering_passed": 8,
+      "protected_denominator": 3,
+      "protected_strict_passed": 0,
+      "protected": [
+        {
+          "clip": "88_07_stageii_unitree_g1",
+          "original_hard_gate_passed": true,
+          "tracking_quality_passed": false,
+          "contact_review_passed": false,
+          "combined_engineering_passed": false,
+          "contact_checks": {
+            "no_unexpected_trunk_contact": true,
+            "penetration_within_engineering_limit": false
+          },
+          "unexpected_trunk_contact_samples": 0,
+          "unexpected_trunk_contact_events": [],
+          "actual_min_after_initial_100ms_m": -0.06409728383782196,
+          "tracking_failed_checks": [
+            "root_xy_rmse_m",
+            "root_xy_peak_m",
+            "body_global_mean_m",
+            "body_local_mean_m",
+            "norm_return_original"
+          ],
+          "contact_force_measured": false
+        },
+        {
+          "clip": "88_08_stageii_unitree_g1",
+          "original_hard_gate_passed": true,
+          "tracking_quality_passed": false,
+          "contact_review_passed": false,
+          "combined_engineering_passed": false,
+          "contact_checks": {
+            "no_unexpected_trunk_contact": true,
+            "penetration_within_engineering_limit": false
+          },
+          "unexpected_trunk_contact_samples": 0,
+          "unexpected_trunk_contact_events": [],
+          "actual_min_after_initial_100ms_m": -0.05583567647351614,
+          "tracking_failed_checks": [
+            "norm_return_original"
+          ],
+          "contact_force_measured": false
+        },
+        {
+          "clip": "88_09_stageii_unitree_g1",
+          "original_hard_gate_passed": true,
+          "tracking_quality_passed": false,
+          "contact_review_passed": true,
+          "combined_engineering_passed": false,
+          "contact_checks": {
+            "no_unexpected_trunk_contact": true,
+            "penetration_within_engineering_limit": true
+          },
+          "unexpected_trunk_contact_samples": 0,
+          "unexpected_trunk_contact_events": [],
+          "actual_min_after_initial_100ms_m": -0.04283061194119484,
+          "tracking_failed_checks": [
+            "norm_return_original"
+          ],
+          "contact_force_measured": false
+        }
+      ]
+    },
+    "corrected": {
+      "denominator": 15,
+      "original_hard_gate_passed": 15,
+      "tracking_quality_passed": 12,
+      "contact_review_passed": 11,
+      "combined_engineering_passed": 10,
+      "protected_denominator": 3,
+      "protected_strict_passed": 0,
+      "protected": [
+        {
+          "clip": "88_07_stageii_unitree_g1",
+          "original_hard_gate_passed": true,
+          "tracking_quality_passed": false,
+          "contact_review_passed": false,
+          "combined_engineering_passed": false,
+          "contact_checks": {
+            "no_unexpected_trunk_contact": true,
+            "penetration_within_engineering_limit": false
+          },
+          "unexpected_trunk_contact_samples": 0,
+          "unexpected_trunk_contact_events": [],
+          "actual_min_after_initial_100ms_m": -0.06409728383782196,
+          "tracking_failed_checks": [
+            "root_xy_rmse_m",
+            "root_xy_peak_m",
+            "body_global_mean_m",
+            "body_local_mean_m",
+            "norm_return_original"
+          ],
+          "contact_force_measured": false
+        },
+        {
+          "clip": "88_08_stageii_unitree_g1",
+          "original_hard_gate_passed": true,
+          "tracking_quality_passed": false,
+          "contact_review_passed": false,
+          "combined_engineering_passed": false,
+          "contact_checks": {
+            "no_unexpected_trunk_contact": true,
+            "penetration_within_engineering_limit": false
+          },
+          "unexpected_trunk_contact_samples": 0,
+          "unexpected_trunk_contact_events": [],
+          "actual_min_after_initial_100ms_m": -0.05583567647351614,
+          "tracking_failed_checks": [
+            "norm_return_original"
+          ],
+          "contact_force_measured": false
+        },
+        {
+          "clip": "88_09_stageii_unitree_g1",
+          "original_hard_gate_passed": true,
+          "tracking_quality_passed": false,
+          "contact_review_passed": true,
+          "combined_engineering_passed": false,
+          "contact_checks": {
+            "no_unexpected_trunk_contact": true,
+            "penetration_within_engineering_limit": true
+          },
+          "unexpected_trunk_contact_samples": 0,
+          "unexpected_trunk_contact_events": [],
+          "actual_min_after_initial_100ms_m": -0.04283061194119484,
+          "tracking_failed_checks": [
+            "norm_return_original"
+          ],
+          "contact_force_measured": false
+        }
+      ]
+    }
+  },
+  "videos": [
+    {
+      "clip": "143_34_stageii_unitree_g1",
+      "file": "videos/teacher-stage2-bound20-raw-cpu-new15-1030/143_34_stageii_unitree_g1.mp4",
+      "bytes": 3573383,
+      "sha256": "6869d49604870341fa82990cfab939594a380ee235726f9de6df9c06cc3d6ee5",
+      "frames": 325,
+      "fps": 25,
+      "video_seconds": 13.0,
+      "physical_window_seconds": 12.96,
+      "complete_decode_passed": true,
+      "source_run": "teacher-stage2-bound20-raw-cpu-new15-1030",
+      "only_retained_actual_physics_states_rendered": true,
+      "reference_display_offset_m": [
+        0,
+        1.5,
+        0
+      ],
+      "fog_disabled_for_failed_tail_visibility": true,
+      "reference_version_or_variant": "raw",
+      "original_hard_gate_passed": true,
+      "tracking_quality_passed": true,
+      "contact_sheet": "evidence/teacher-stage2-bound20-raw-cpu-new15-1030-143_34_stageii_unitree_g1-contact-sheet.jpg"
+    },
+    {
+      "clip": "85_06_stageii_unitree_g1",
+      "file": "videos/teacher-stage2-bound20-raw-cpu-new15-1030/85_06_stageii_unitree_g1.mp4",
+      "bytes": 2674860,
+      "sha256": "686f7581424a191614db2594095fe9dd663bc7ca2fe201f9ddf9ebbcd5120d65",
+      "frames": 196,
+      "fps": 25,
+      "video_seconds": 7.84,
+      "physical_window_seconds": 7.82,
+      "complete_decode_passed": true,
+      "source_run": "teacher-stage2-bound20-raw-cpu-new15-1030",
+      "only_retained_actual_physics_states_rendered": true,
+      "reference_display_offset_m": [
+        0,
+        1.5,
+        0
+      ],
+      "fog_disabled_for_failed_tail_visibility": true,
+      "reference_version_or_variant": "raw",
+      "original_hard_gate_passed": true,
+      "tracking_quality_passed": true,
+      "contact_sheet": "evidence/teacher-stage2-bound20-raw-cpu-new15-1030-85_06_stageii_unitree_g1-contact-sheet.jpg"
+    },
+    {
+      "clip": "85_07_stageii_unitree_g1",
+      "file": "videos/teacher-stage2-bound20-raw-cpu-new15-1030/85_07_stageii_unitree_g1.mp4",
+      "bytes": 2807154,
+      "sha256": "715e8140d01dcbf433d736e210b824acaf1250809223b18d6d9a5c64a1a8d157",
+      "frames": 198,
+      "fps": 25,
+      "video_seconds": 7.92,
+      "physical_window_seconds": 7.9,
+      "complete_decode_passed": true,
+      "source_run": "teacher-stage2-bound20-raw-cpu-new15-1030",
+      "only_retained_actual_physics_states_rendered": true,
+      "reference_display_offset_m": [
+        0,
+        1.5,
+        0
+      ],
+      "fog_disabled_for_failed_tail_visibility": true,
+      "reference_version_or_variant": "raw",
+      "original_hard_gate_passed": true,
+      "tracking_quality_passed": true,
+      "contact_sheet": "evidence/teacher-stage2-bound20-raw-cpu-new15-1030-85_07_stageii_unitree_g1-contact-sheet.jpg"
+    },
+    {
+      "clip": "88_03_stageii_unitree_g1",
+      "file": "videos/teacher-stage2-bound20-raw-cpu-new15-1030/88_03_stageii_unitree_g1.mp4",
+      "bytes": 537717,
+      "sha256": "44f7cd661b4d5933c2d758b3b6651240fb7cf239e1781867262af0eda1ca1ebf",
+      "frames": 72,
+      "fps": 25,
+      "video_seconds": 2.88,
+      "physical_window_seconds": 2.86,
+      "complete_decode_passed": true,
+      "source_run": "teacher-stage2-bound20-raw-cpu-new15-1030",
+      "only_retained_actual_physics_states_rendered": true,
+      "reference_display_offset_m": [
+        0,
+        1.5,
+        0
+      ],
+      "fog_disabled_for_failed_tail_visibility": true,
+      "reference_version_or_variant": "raw",
+      "original_hard_gate_passed": true,
+      "tracking_quality_passed": true,
+      "contact_sheet": "evidence/teacher-stage2-bound20-raw-cpu-new15-1030-88_03_stageii_unitree_g1-contact-sheet.jpg"
+    },
+    {
+      "clip": "88_06_stageii_unitree_g1",
+      "file": "videos/teacher-stage2-bound20-raw-cpu-new15-1030/88_06_stageii_unitree_g1.mp4",
+      "bytes": 1590996,
+      "sha256": "ba2b78ecb1269436fcd13d607f1fee5c83791673e7da3816cd62543cf89a3084",
+      "frames": 95,
+      "fps": 25,
+      "video_seconds": 3.8,
+      "physical_window_seconds": 3.7600000000000002,
+      "complete_decode_passed": true,
+      "source_run": "teacher-stage2-bound20-raw-cpu-new15-1030",
+      "only_retained_actual_physics_states_rendered": true,
+      "reference_display_offset_m": [
+        0,
+        1.5,
+        0
+      ],
+      "fog_disabled_for_failed_tail_visibility": true,
+      "reference_version_or_variant": "raw",
+      "original_hard_gate_passed": true,
+      "tracking_quality_passed": true,
+      "contact_sheet": "evidence/teacher-stage2-bound20-raw-cpu-new15-1030-88_06_stageii_unitree_g1-contact-sheet.jpg"
+    },
+    {
+      "clip": "88_07_stageii_unitree_g1",
+      "file": "videos/teacher-stage2-bound20-raw-cpu-new15-1030/88_07_stageii_unitree_g1.mp4",
+      "bytes": 1112346,
+      "sha256": "38b61eb9fe0aeccc187f078830aa79e7e360413f8ca3eb1c5058c0fb60c104dc",
+      "frames": 64,
+      "fps": 25,
+      "video_seconds": 2.56,
+      "physical_window_seconds": 2.52,
+      "complete_decode_passed": true,
+      "source_run": "teacher-stage2-bound20-raw-cpu-new15-1030",
+      "only_retained_actual_physics_states_rendered": true,
+      "reference_display_offset_m": [
+        0,
+        1.5,
+        0
+      ],
+      "fog_disabled_for_failed_tail_visibility": true,
+      "reference_version_or_variant": "raw",
+      "original_hard_gate_passed": true,
+      "tracking_quality_passed": false,
+      "contact_sheet": "evidence/teacher-stage2-bound20-raw-cpu-new15-1030-88_07_stageii_unitree_g1-contact-sheet.jpg"
+    },
+    {
+      "clip": "88_08_stageii_unitree_g1",
+      "file": "videos/teacher-stage2-bound20-raw-cpu-new15-1030/88_08_stageii_unitree_g1.mp4",
+      "bytes": 1744170,
+      "sha256": "c1712d95e00444f95e1968bfbb70522415713347d7c2d54375ddd7d61cc66a99",
+      "frames": 119,
+      "fps": 25,
+      "video_seconds": 4.76,
+      "physical_window_seconds": 4.72,
+      "complete_decode_passed": true,
+      "source_run": "teacher-stage2-bound20-raw-cpu-new15-1030",
+      "only_retained_actual_physics_states_rendered": true,
+      "reference_display_offset_m": [
+        0,
+        1.5,
+        0
+      ],
+      "fog_disabled_for_failed_tail_visibility": true,
+      "reference_version_or_variant": "raw",
+      "original_hard_gate_passed": true,
+      "tracking_quality_passed": false,
+      "contact_sheet": "evidence/teacher-stage2-bound20-raw-cpu-new15-1030-88_08_stageii_unitree_g1-contact-sheet.jpg"
+    },
+    {
+      "clip": "88_09_stageii_unitree_g1",
+      "file": "videos/teacher-stage2-bound20-raw-cpu-new15-1030/88_09_stageii_unitree_g1.mp4",
+      "bytes": 2300042,
+      "sha256": "5e15b9757f66117d11f77d307014700f7691b6d3115f083daede57734e15003a",
+      "frames": 156,
+      "fps": 25,
+      "video_seconds": 6.24,
+      "physical_window_seconds": 6.2,
+      "complete_decode_passed": true,
+      "source_run": "teacher-stage2-bound20-raw-cpu-new15-1030",
+      "only_retained_actual_physics_states_rendered": true,
+      "reference_display_offset_m": [
+        0,
+        1.5,
+        0
+      ],
+      "fog_disabled_for_failed_tail_visibility": true,
+      "reference_version_or_variant": "raw",
+      "original_hard_gate_passed": true,
+      "tracking_quality_passed": false,
+      "contact_sheet": "evidence/teacher-stage2-bound20-raw-cpu-new15-1030-88_09_stageii_unitree_g1-contact-sheet.jpg"
+    },
+    {
+      "clip": "88_10_stageii_unitree_g1",
+      "file": "videos/teacher-stage2-bound20-raw-cpu-new15-1030/88_10_stageii_unitree_g1.mp4",
+      "bytes": 2663737,
+      "sha256": "a1ae18ad763f8331abb942df22e8760b32d982ca0f3f891005c1b4843f9ec142",
+      "frames": 193,
+      "fps": 25,
+      "video_seconds": 7.72,
+      "physical_window_seconds": 7.7,
+      "complete_decode_passed": true,
+      "source_run": "teacher-stage2-bound20-raw-cpu-new15-1030",
+      "only_retained_actual_physics_states_rendered": true,
+      "reference_display_offset_m": [
+        0,
+        1.5,
+        0
+      ],
+      "fog_disabled_for_failed_tail_visibility": true,
+      "reference_version_or_variant": "raw",
+      "original_hard_gate_passed": true,
+      "tracking_quality_passed": true,
+      "contact_sheet": "evidence/teacher-stage2-bound20-raw-cpu-new15-1030-88_10_stageii_unitree_g1-contact-sheet.jpg"
+    },
+    {
+      "clip": "88_11_stageii_unitree_g1",
+      "file": "videos/teacher-stage2-bound20-raw-cpu-new15-1030/88_11_stageii_unitree_g1.mp4",
+      "bytes": 11454936,
+      "sha256": "7416f7d6933f4e688aad9a33eca294c22d8aebb8d901980860d9f9fd7dff0b0c",
+      "frames": 843,
+      "fps": 25,
+      "video_seconds": 33.72,
+      "physical_window_seconds": 33.7,
+      "complete_decode_passed": true,
+      "source_run": "teacher-stage2-bound20-raw-cpu-new15-1030",
+      "only_retained_actual_physics_states_rendered": true,
+      "reference_display_offset_m": [
+        0,
+        1.5,
+        0
+      ],
+      "fog_disabled_for_failed_tail_visibility": true,
+      "reference_version_or_variant": "raw",
+      "original_hard_gate_passed": true,
+      "tracking_quality_passed": true,
+      "contact_sheet": "evidence/teacher-stage2-bound20-raw-cpu-new15-1030-88_11_stageii_unitree_g1-contact-sheet.jpg"
+    },
+    {
+      "clip": "89_01_stageii_unitree_g1",
+      "file": "videos/teacher-stage2-bound20-raw-cpu-new15-1030/89_01_stageii_unitree_g1.mp4",
+      "bytes": 10763013,
+      "sha256": "ffc7ddcebef475fd80d5481bdf3dd08f2d717c5157fd1c2c032a2535e4ae060d",
+      "frames": 970,
+      "fps": 25,
+      "video_seconds": 38.8,
+      "physical_window_seconds": 38.78,
+      "complete_decode_passed": true,
+      "source_run": "teacher-stage2-bound20-raw-cpu-new15-1030",
+      "only_retained_actual_physics_states_rendered": true,
+      "reference_display_offset_m": [
+        0,
+        1.5,
+        0
+      ],
+      "fog_disabled_for_failed_tail_visibility": true,
+      "reference_version_or_variant": "raw",
+      "original_hard_gate_passed": true,
+      "tracking_quality_passed": true,
+      "contact_sheet": "evidence/teacher-stage2-bound20-raw-cpu-new15-1030-89_01_stageii_unitree_g1-contact-sheet.jpg"
+    },
+    {
+      "clip": "90_08_stageii_unitree_g1",
+      "file": "videos/teacher-stage2-bound20-raw-cpu-new15-1030/90_08_stageii_unitree_g1.mp4",
+      "bytes": 1716460,
+      "sha256": "e377fa7984a8207b1bb657c2acb17457098542a4b660a1a5f7eecac44e02b5bf",
+      "frames": 139,
+      "fps": 25,
+      "video_seconds": 5.56,
+      "physical_window_seconds": 5.5200000000000005,
+      "complete_decode_passed": true,
+      "source_run": "teacher-stage2-bound20-raw-cpu-new15-1030",
+      "only_retained_actual_physics_states_rendered": true,
+      "reference_display_offset_m": [
+        0,
+        1.5,
+        0
+      ],
+      "fog_disabled_for_failed_tail_visibility": true,
+      "reference_version_or_variant": "raw",
+      "original_hard_gate_passed": true,
+      "tracking_quality_passed": true,
+      "contact_sheet": "evidence/teacher-stage2-bound20-raw-cpu-new15-1030-90_08_stageii_unitree_g1-contact-sheet.jpg"
+    },
+    {
+      "clip": "90_14_stageii_unitree_g1",
+      "file": "videos/teacher-stage2-bound20-raw-cpu-new15-1030/90_14_stageii_unitree_g1.mp4",
+      "bytes": 2248146,
+      "sha256": "0d094d6653939f65a88454fadbe8b2199c9df78e3850158d3f11e53ae33945b3",
+      "frames": 173,
+      "fps": 25,
+      "video_seconds": 6.92,
+      "physical_window_seconds": 6.9,
+      "complete_decode_passed": true,
+      "source_run": "teacher-stage2-bound20-raw-cpu-new15-1030",
+      "only_retained_actual_physics_states_rendered": true,
+      "reference_display_offset_m": [
+        0,
+        1.5,
+        0
+      ],
+      "fog_disabled_for_failed_tail_visibility": true,
+      "reference_version_or_variant": "raw",
+      "original_hard_gate_passed": false,
+      "tracking_quality_passed": false,
+      "contact_sheet": "evidence/teacher-stage2-bound20-raw-cpu-new15-1030-90_14_stageii_unitree_g1-contact-sheet.jpg"
+    },
+    {
+      "clip": "90_15_stageii_unitree_g1",
+      "file": "videos/teacher-stage2-bound20-raw-cpu-new15-1030/90_15_stageii_unitree_g1.mp4",
+      "bytes": 3206020,
+      "sha256": "e95cade29e14e0dfe8957b50b607e2fb033dd12895545ae191906918b8847200",
+      "frames": 246,
+      "fps": 25,
+      "video_seconds": 9.84,
+      "physical_window_seconds": 9.82,
+      "complete_decode_passed": true,
+      "source_run": "teacher-stage2-bound20-raw-cpu-new15-1030",
+      "only_retained_actual_physics_states_rendered": true,
+      "reference_display_offset_m": [
+        0,
+        1.5,
+        0
+      ],
+      "fog_disabled_for_failed_tail_visibility": true,
+      "reference_version_or_variant": "raw",
+      "original_hard_gate_passed": false,
+      "tracking_quality_passed": false,
+      "contact_sheet": "evidence/teacher-stage2-bound20-raw-cpu-new15-1030-90_15_stageii_unitree_g1-contact-sheet.jpg"
+    },
+    {
+      "clip": "90_19_stageii_unitree_g1",
+      "file": "videos/teacher-stage2-bound20-raw-cpu-new15-1030/90_19_stageii_unitree_g1.mp4",
+      "bytes": 2978907,
+      "sha256": "6108a2547ca9633890c51537f9ad3c07050fb93d7a40fa24fbb7e8319be11d96",
+      "frames": 216,
+      "fps": 25,
+      "video_seconds": 8.64,
+      "physical_window_seconds": 8.6,
+      "complete_decode_passed": true,
+      "source_run": "teacher-stage2-bound20-raw-cpu-new15-1030",
+      "only_retained_actual_physics_states_rendered": true,
+      "reference_display_offset_m": [
+        0,
+        1.5,
+        0
+      ],
+      "fog_disabled_for_failed_tail_visibility": true,
+      "reference_version_or_variant": "raw",
+      "original_hard_gate_passed": true,
+      "tracking_quality_passed": true,
+      "contact_sheet": "evidence/teacher-stage2-bound20-raw-cpu-new15-1030-90_19_stageii_unitree_g1-contact-sheet.jpg"
+    },
+    {
+      "clip": "143_34_stageii_unitree_g1",
+      "file": "videos/teacher-stage2-bound20-corrected-cpu-new15-1030/143_34_stageii_unitree_g1.mp4",
+      "bytes": 3573293,
+      "sha256": "bbefea15480a3b945116d8cecf218a53006fbac92fdb29f43ed5fe062177faa2",
+      "frames": 325,
+      "fps": 25,
+      "video_seconds": 13.0,
+      "physical_window_seconds": 12.96,
+      "complete_decode_passed": true,
+      "source_run": "teacher-stage2-bound20-corrected-cpu-new15-1030",
+      "only_retained_actual_physics_states_rendered": true,
+      "reference_display_offset_m": [
+        0,
+        1.5,
+        0
+      ],
+      "fog_disabled_for_failed_tail_visibility": true,
+      "reference_version_or_variant": "ground-calibration-v1",
+      "original_hard_gate_passed": true,
+      "tracking_quality_passed": true,
+      "contact_sheet": "evidence/teacher-stage2-bound20-corrected-cpu-new15-1030-143_34_stageii_unitree_g1-contact-sheet.jpg"
+    },
+    {
+      "clip": "85_06_stageii_unitree_g1",
+      "file": "videos/teacher-stage2-bound20-corrected-cpu-new15-1030/85_06_stageii_unitree_g1.mp4",
+      "bytes": 2676779,
+      "sha256": "3cc70cee4913d78d456678bb229145c023af1ca28defc051c39fddde4ef191ed",
+      "frames": 196,
+      "fps": 25,
+      "video_seconds": 7.84,
+      "physical_window_seconds": 7.82,
+      "complete_decode_passed": true,
+      "source_run": "teacher-stage2-bound20-corrected-cpu-new15-1030",
+      "only_retained_actual_physics_states_rendered": true,
+      "reference_display_offset_m": [
+        0,
+        1.5,
+        0
+      ],
+      "fog_disabled_for_failed_tail_visibility": true,
+      "reference_version_or_variant": "ground-calibration-v1",
+      "original_hard_gate_passed": true,
+      "tracking_quality_passed": true,
+      "contact_sheet": "evidence/teacher-stage2-bound20-corrected-cpu-new15-1030-85_06_stageii_unitree_g1-contact-sheet.jpg"
+    },
+    {
+      "clip": "85_07_stageii_unitree_g1",
+      "file": "videos/teacher-stage2-bound20-corrected-cpu-new15-1030/85_07_stageii_unitree_g1.mp4",
+      "bytes": 2806416,
+      "sha256": "8b04a2109cc26f470fc5927d9f3faedf24e859671f34bc2cd08dbb447b715173",
+      "frames": 198,
+      "fps": 25,
+      "video_seconds": 7.92,
+      "physical_window_seconds": 7.9,
+      "complete_decode_passed": true,
+      "source_run": "teacher-stage2-bound20-corrected-cpu-new15-1030",
+      "only_retained_actual_physics_states_rendered": true,
+      "reference_display_offset_m": [
+        0,
+        1.5,
+        0
+      ],
+      "fog_disabled_for_failed_tail_visibility": true,
+      "reference_version_or_variant": "ground-calibration-v1",
+      "original_hard_gate_passed": true,
+      "tracking_quality_passed": true,
+      "contact_sheet": "evidence/teacher-stage2-bound20-corrected-cpu-new15-1030-85_07_stageii_unitree_g1-contact-sheet.jpg"
+    },
+    {
+      "clip": "88_03_stageii_unitree_g1",
+      "file": "videos/teacher-stage2-bound20-corrected-cpu-new15-1030/88_03_stageii_unitree_g1.mp4",
+      "bytes": 538490,
+      "sha256": "fc6ff86fda245b6a7e2f2a6534db86a4464b5016422722cdaaa84453e90196fe",
+      "frames": 72,
+      "fps": 25,
+      "video_seconds": 2.88,
+      "physical_window_seconds": 2.86,
+      "complete_decode_passed": true,
+      "source_run": "teacher-stage2-bound20-corrected-cpu-new15-1030",
+      "only_retained_actual_physics_states_rendered": true,
+      "reference_display_offset_m": [
+        0,
+        1.5,
+        0
+      ],
+      "fog_disabled_for_failed_tail_visibility": true,
+      "reference_version_or_variant": "ground-calibration-v1",
+      "original_hard_gate_passed": true,
+      "tracking_quality_passed": true,
+      "contact_sheet": "evidence/teacher-stage2-bound20-corrected-cpu-new15-1030-88_03_stageii_unitree_g1-contact-sheet.jpg"
+    },
+    {
+      "clip": "88_06_stageii_unitree_g1",
+      "file": "videos/teacher-stage2-bound20-corrected-cpu-new15-1030/88_06_stageii_unitree_g1.mp4",
+      "bytes": 1592424,
+      "sha256": "f0d1a450140ad3837cf545294fd0a4373d6dd77ac8f67ba0424fe27c0623ecbd",
+      "frames": 95,
+      "fps": 25,
+      "video_seconds": 3.8,
+      "physical_window_seconds": 3.7600000000000002,
+      "complete_decode_passed": true,
+      "source_run": "teacher-stage2-bound20-corrected-cpu-new15-1030",
+      "only_retained_actual_physics_states_rendered": true,
+      "reference_display_offset_m": [
+        0,
+        1.5,
+        0
+      ],
+      "fog_disabled_for_failed_tail_visibility": true,
+      "reference_version_or_variant": "ground-calibration-v1",
+      "original_hard_gate_passed": true,
+      "tracking_quality_passed": true,
+      "contact_sheet": "evidence/teacher-stage2-bound20-corrected-cpu-new15-1030-88_06_stageii_unitree_g1-contact-sheet.jpg"
+    },
+    {
+      "clip": "88_07_stageii_unitree_g1",
+      "file": "videos/teacher-stage2-bound20-corrected-cpu-new15-1030/88_07_stageii_unitree_g1.mp4",
+      "bytes": 1112664,
+      "sha256": "4f9a4545481dc5aaf6d17170334bcc4957b03fc74fd9c685ebce8f91ff661e39",
+      "frames": 64,
+      "fps": 25,
+      "video_seconds": 2.56,
+      "physical_window_seconds": 2.52,
+      "complete_decode_passed": true,
+      "source_run": "teacher-stage2-bound20-corrected-cpu-new15-1030",
+      "only_retained_actual_physics_states_rendered": true,
+      "reference_display_offset_m": [
+        0,
+        1.5,
+        0
+      ],
+      "fog_disabled_for_failed_tail_visibility": true,
+      "reference_version_or_variant": "ground-calibration-v1",
+      "original_hard_gate_passed": true,
+      "tracking_quality_passed": false,
+      "contact_sheet": "evidence/teacher-stage2-bound20-corrected-cpu-new15-1030-88_07_stageii_unitree_g1-contact-sheet.jpg"
+    },
+    {
+      "clip": "88_08_stageii_unitree_g1",
+      "file": "videos/teacher-stage2-bound20-corrected-cpu-new15-1030/88_08_stageii_unitree_g1.mp4",
+      "bytes": 1746935,
+      "sha256": "8093f255a1d2762956794e01799b0a7e690197d1bfeea93231aca380bc9b90ac",
+      "frames": 119,
+      "fps": 25,
+      "video_seconds": 4.76,
+      "physical_window_seconds": 4.72,
+      "complete_decode_passed": true,
+      "source_run": "teacher-stage2-bound20-corrected-cpu-new15-1030",
+      "only_retained_actual_physics_states_rendered": true,
+      "reference_display_offset_m": [
+        0,
+        1.5,
+        0
+      ],
+      "fog_disabled_for_failed_tail_visibility": true,
+      "reference_version_or_variant": "ground-calibration-v1",
+      "original_hard_gate_passed": true,
+      "tracking_quality_passed": false,
+      "contact_sheet": "evidence/teacher-stage2-bound20-corrected-cpu-new15-1030-88_08_stageii_unitree_g1-contact-sheet.jpg"
+    },
+    {
+      "clip": "88_09_stageii_unitree_g1",
+      "file": "videos/teacher-stage2-bound20-corrected-cpu-new15-1030/88_09_stageii_unitree_g1.mp4",
+      "bytes": 2303833,
+      "sha256": "490be201597f0f4058a7e2f55d357750d73d3dc407f2fd29028c9ed08969ccad",
+      "frames": 156,
+      "fps": 25,
+      "video_seconds": 6.24,
+      "physical_window_seconds": 6.2,
+      "complete_decode_passed": true,
+      "source_run": "teacher-stage2-bound20-corrected-cpu-new15-1030",
+      "only_retained_actual_physics_states_rendered": true,
+      "reference_display_offset_m": [
+        0,
+        1.5,
+        0
+      ],
+      "fog_disabled_for_failed_tail_visibility": true,
+      "reference_version_or_variant": "ground-calibration-v1",
+      "original_hard_gate_passed": true,
+      "tracking_quality_passed": false,
+      "contact_sheet": "evidence/teacher-stage2-bound20-corrected-cpu-new15-1030-88_09_stageii_unitree_g1-contact-sheet.jpg"
+    },
+    {
+      "clip": "88_10_stageii_unitree_g1",
+      "file": "videos/teacher-stage2-bound20-corrected-cpu-new15-1030/88_10_stageii_unitree_g1.mp4",
+      "bytes": 2667972,
+      "sha256": "e718c72e9faa2e5007e25a65c9960b51d091583852e499f4c9c34d859bd739eb",
+      "frames": 193,
+      "fps": 25,
+      "video_seconds": 7.72,
+      "physical_window_seconds": 7.7,
+      "complete_decode_passed": true,
+      "source_run": "teacher-stage2-bound20-corrected-cpu-new15-1030",
+      "only_retained_actual_physics_states_rendered": true,
+      "reference_display_offset_m": [
+        0,
+        1.5,
+        0
+      ],
+      "fog_disabled_for_failed_tail_visibility": true,
+      "reference_version_or_variant": "ground-calibration-v1",
+      "original_hard_gate_passed": true,
+      "tracking_quality_passed": true,
+      "contact_sheet": "evidence/teacher-stage2-bound20-corrected-cpu-new15-1030-88_10_stageii_unitree_g1-contact-sheet.jpg"
+    },
+    {
+      "clip": "88_11_stageii_unitree_g1",
+      "file": "videos/teacher-stage2-bound20-corrected-cpu-new15-1030/88_11_stageii_unitree_g1.mp4",
+      "bytes": 11453804,
+      "sha256": "5bd5819bf4fcee0a86c71d82f5e74fbc6150ad3cec547f62f6a2a9908ded7677",
+      "frames": 843,
+      "fps": 25,
+      "video_seconds": 33.72,
+      "physical_window_seconds": 33.7,
+      "complete_decode_passed": true,
+      "source_run": "teacher-stage2-bound20-corrected-cpu-new15-1030",
+      "only_retained_actual_physics_states_rendered": true,
+      "reference_display_offset_m": [
+        0,
+        1.5,
+        0
+      ],
+      "fog_disabled_for_failed_tail_visibility": true,
+      "reference_version_or_variant": "ground-calibration-v1",
+      "original_hard_gate_passed": true,
+      "tracking_quality_passed": true,
+      "contact_sheet": "evidence/teacher-stage2-bound20-corrected-cpu-new15-1030-88_11_stageii_unitree_g1-contact-sheet.jpg"
+    },
+    {
+      "clip": "89_01_stageii_unitree_g1",
+      "file": "videos/teacher-stage2-bound20-corrected-cpu-new15-1030/89_01_stageii_unitree_g1.mp4",
+      "bytes": 10766884,
+      "sha256": "d7e475e841b250a1ebe89c144fb48fba7c4d23734cb22f4fafdb9428381b9686",
+      "frames": 970,
+      "fps": 25,
+      "video_seconds": 38.8,
+      "physical_window_seconds": 38.78,
+      "complete_decode_passed": true,
+      "source_run": "teacher-stage2-bound20-corrected-cpu-new15-1030",
+      "only_retained_actual_physics_states_rendered": true,
+      "reference_display_offset_m": [
+        0,
+        1.5,
+        0
+      ],
+      "fog_disabled_for_failed_tail_visibility": true,
+      "reference_version_or_variant": "ground-calibration-v1",
+      "original_hard_gate_passed": true,
+      "tracking_quality_passed": true,
+      "contact_sheet": "evidence/teacher-stage2-bound20-corrected-cpu-new15-1030-89_01_stageii_unitree_g1-contact-sheet.jpg"
+    },
+    {
+      "clip": "90_08_stageii_unitree_g1",
+      "file": "videos/teacher-stage2-bound20-corrected-cpu-new15-1030/90_08_stageii_unitree_g1.mp4",
+      "bytes": 1718094,
+      "sha256": "9b3295b13e08a3457915248d0ac573b7078d595d19a349777fa68f9cb0681f15",
+      "frames": 139,
+      "fps": 25,
+      "video_seconds": 5.56,
+      "physical_window_seconds": 5.5200000000000005,
+      "complete_decode_passed": true,
+      "source_run": "teacher-stage2-bound20-corrected-cpu-new15-1030",
+      "only_retained_actual_physics_states_rendered": true,
+      "reference_display_offset_m": [
+        0,
+        1.5,
+        0
+      ],
+      "fog_disabled_for_failed_tail_visibility": true,
+      "reference_version_or_variant": "ground-calibration-v1",
+      "original_hard_gate_passed": true,
+      "tracking_quality_passed": true,
+      "contact_sheet": "evidence/teacher-stage2-bound20-corrected-cpu-new15-1030-90_08_stageii_unitree_g1-contact-sheet.jpg"
+    },
+    {
+      "clip": "90_14_stageii_unitree_g1",
+      "file": "videos/teacher-stage2-bound20-corrected-cpu-new15-1030/90_14_stageii_unitree_g1.mp4",
+      "bytes": 2203447,
+      "sha256": "a3ee94a2050bb472ad1285df96fabd32fd71e65c01c106b725c9f8bfc040876e",
+      "frames": 173,
+      "fps": 25,
+      "video_seconds": 6.92,
+      "physical_window_seconds": 6.9,
+      "complete_decode_passed": true,
+      "source_run": "teacher-stage2-bound20-corrected-cpu-new15-1030",
+      "only_retained_actual_physics_states_rendered": true,
+      "reference_display_offset_m": [
+        0,
+        1.5,
+        0
+      ],
+      "fog_disabled_for_failed_tail_visibility": true,
+      "reference_version_or_variant": "ground-calibration-v1",
+      "original_hard_gate_passed": true,
+      "tracking_quality_passed": true,
+      "contact_sheet": "evidence/teacher-stage2-bound20-corrected-cpu-new15-1030-90_14_stageii_unitree_g1-contact-sheet.jpg"
+    },
+    {
+      "clip": "90_15_stageii_unitree_g1",
+      "file": "videos/teacher-stage2-bound20-corrected-cpu-new15-1030/90_15_stageii_unitree_g1.mp4",
+      "bytes": 3040149,
+      "sha256": "d0bee9c8003c9228686347e4fa310444be18023c5c4ba12c99fcb384abe7536e",
+      "frames": 246,
+      "fps": 25,
+      "video_seconds": 9.84,
+      "physical_window_seconds": 9.82,
+      "complete_decode_passed": true,
+      "source_run": "teacher-stage2-bound20-corrected-cpu-new15-1030",
+      "only_retained_actual_physics_states_rendered": true,
+      "reference_display_offset_m": [
+        0,
+        1.5,
+        0
+      ],
+      "fog_disabled_for_failed_tail_visibility": true,
+      "reference_version_or_variant": "ground-calibration-v1",
+      "original_hard_gate_passed": true,
+      "tracking_quality_passed": true,
+      "contact_sheet": "evidence/teacher-stage2-bound20-corrected-cpu-new15-1030-90_15_stageii_unitree_g1-contact-sheet.jpg"
+    },
+    {
+      "clip": "90_19_stageii_unitree_g1",
+      "file": "videos/teacher-stage2-bound20-corrected-cpu-new15-1030/90_19_stageii_unitree_g1.mp4",
+      "bytes": 2985039,
+      "sha256": "9eabdd9910c80ee5a9831cb754b497d933c3f6a0af91e36d257cf07d85d98073",
+      "frames": 216,
+      "fps": 25,
+      "video_seconds": 8.64,
+      "physical_window_seconds": 8.6,
+      "complete_decode_passed": true,
+      "source_run": "teacher-stage2-bound20-corrected-cpu-new15-1030",
+      "only_retained_actual_physics_states_rendered": true,
+      "reference_display_offset_m": [
+        0,
+        1.5,
+        0
+      ],
+      "fog_disabled_for_failed_tail_visibility": true,
+      "reference_version_or_variant": "ground-calibration-v1",
+      "original_hard_gate_passed": true,
+      "tracking_quality_passed": true,
+      "contact_sheet": "evidence/teacher-stage2-bound20-corrected-cpu-new15-1030-90_19_stageii_unitree_g1-contact-sheet.jpg"
+    }
+  ],
+  "video_count": 30,
+  "protected_teacher_qualified": false,
+  "weights_and_all_frozen_contract_source_hashes_unchanged": true,
+  "next_GPU_training_automatically_authorized": false
+}

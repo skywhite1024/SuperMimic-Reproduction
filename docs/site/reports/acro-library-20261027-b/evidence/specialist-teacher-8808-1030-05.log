@@ -1,0 +1,1 @@
+{"run": "specialist8808-bound20-corrected-cpu-1030", "checkpoint_sha256": "0f4a7bc67ae9e3440711e401e37f8276102e59946177117d082a6d7aabe108b4", "device": "cpu", "contract_sha256": "0036d9f100203e9d25990c47dfb5666508672fafbea60156a33fb63e56c1dcb1", "new_denominator": 1, "new_original_hard_gate_passed": 1, "new_tracking_quality_passed": 1}

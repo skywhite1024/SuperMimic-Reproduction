@@ -1,0 +1,35 @@
+{
+  "status": "frozen_before_offline_audit",
+  "frozen_at": "2026-10-30T09:06:08.243259+00:00",
+  "purpose": "Explain the protected teacher failures using existing trajectories: reconstruct unchanged native reward and separate action-rate/joint-limit penalties from tracking; compare reference/actual penetration and action saturation. Descriptive, not causal.",
+  "GPU": 0,
+  "training_updates": 0,
+  "new_physical_rollouts": 0,
+  "maximum_CPU_threads": 2,
+  "maximum_program_seconds": 300,
+  "protected_new": [
+    "88_07_stageii_unitree_g1",
+    "88_08_stageii_unitree_g1",
+    "88_09_stageii_unitree_g1"
+  ],
+  "modes": [
+    "teacher-stage2-bound20-raw-cpu-new15-1030",
+    "teacher-stage2-bound20-corrected-cpu-new15-1030",
+    "stage3-actionbound20-raw-cpu-new15",
+    "stage3-actionbound20-corrected-cpu-all55",
+    "retention-v1-raw-cpu-new15",
+    "retention-v1-corrected-cpu-all55"
+  ],
+  "required_records": 18,
+  "immutable_inputs": true,
+  "no_new_acceptance_score": true,
+  "no_reference_physics_reward_or_threshold_changes": true,
+  "stop_conditions": [
+    "Any input hash or motion identity mismatch",
+    "Native reward sum fails reconstruction within5e-4 or normalized sum within5e-5",
+    "Nonfinite active state or action",
+    "300-second deadline"
+  ],
+  "automatic_GPU_training": false,
+  "script_sha256": "a9e9fd59ba41949140af110bc9349b62d455543efb5c0b97c6185fd272296361"
+}

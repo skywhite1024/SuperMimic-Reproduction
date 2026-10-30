@@ -1,0 +1,48 @@
+{
+  "run": "specialist8808-bound20-raw-cpu-1030",
+  "checkpoint_sha256": "0f4a7bc67ae9e3440711e401e37f8276102e59946177117d082a6d7aabe108b4",
+  "new_denominator": 1,
+  "method": "20 ms retained physical and reference poses evaluated on separate scratch MuJoCo MjData using the runtime collision model. Neither simulation nor references modified; no contact force reconstruction.",
+  "clips": [
+    {
+      "clip": "88_08_stageii_unitree_g1",
+      "full_clip_steps": 236,
+      "original_hard_gate_passed": true,
+      "actual_ground_contact_geometry_samples_by_body": {
+        "right_knee_link": 2,
+        "right_ankle_pitch_link": 2,
+        "left_knee_link": 2,
+        "right_ankle_roll_link": 116,
+        "left_ankle_roll_link": 116,
+        "left_ankle_pitch_link": 3,
+        "right_wrist_yaw_link": 19,
+        "right_wrist_pitch_link": 10,
+        "left_wrist_pitch_link": 24,
+        "left_wrist_yaw_link": 14,
+        "left_wrist_roll_link": 2
+      },
+      "reference_ground_contact_geometry_samples_by_body": {
+        "right_knee_link": 84,
+        "right_ankle_pitch_link": 90,
+        "left_knee_link": 49,
+        "right_ankle_roll_link": 151,
+        "left_ankle_roll_link": 136,
+        "left_ankle_pitch_link": 57,
+        "right_wrist_yaw_link": 6,
+        "right_wrist_pitch_link": 5
+      },
+      "actual_min_contact_distance_m": -0.05293166369958075,
+      "actual_min_after_initial_100ms_m": -0.03708609371191863,
+      "head_torso_or_pelvis_ground_contact_samples": 0,
+      "actual_ending_ground_bodies": [
+        "right_ankle_roll_link"
+      ],
+      "ending_root_speed_m_s": 1.2161310911178589,
+      "contact_force_measured": false,
+      "geometric_review_complete": true,
+      "physical_contact_fidelity_inferred": false
+    }
+  ],
+  "all_failures_retained": true,
+  "contact_force_measured": false
+}

@@ -1,0 +1,24 @@
+{
+  "status": "independent_saved_policy_loaders_exact_bounded_output_match",
+  "checked_at": "2026-10-30T09:21:53.650843+00:00",
+  "checkpoint_sha256": "8f9501257249bdc9717ca79de5314307f84ee3f1e3baefb69963a7d5e651ea0e",
+  "proof_sha256": "2123497df0febd82548a37462a1346b06247389746276dbf0165736763898e2c",
+  "real_histories": 4,
+  "source_physical_steps": [
+    0,
+    78,
+    157,
+    235
+  ],
+  "output_max_absolute_difference": 0.0,
+  "exact_output_equality": true,
+  "GPU": 0,
+  "new_training_updates": 0,
+  "CPU_affinity": [
+    0,
+    1
+  ],
+  "wall_seconds": 1.4219999997876585,
+  "physical_acceptance_inferred": false,
+  "candidate_adopted": false
+}
