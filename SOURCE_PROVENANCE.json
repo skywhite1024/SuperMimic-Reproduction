@@ -1776,6 +1776,36 @@
       "original_sha256": "431e6a39e2cf481b66620815d41dcf08763224a3b0979ab0e25a70e235181873",
       "public_sha256": "7cf28dc04b15c7208611ad96c2f22ba650da93cc1c4c1dbf03bca74cfcdc6ce9",
       "publication_copy_changed": true
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/train_qualified_expert_v2.py",
+      "original_sha256": "86e9d5809267394688c98620e26f0241396d1263514051de21af70815864ecb4",
+      "public_sha256": "e18a455aba9b02bc3cf8c3549dc80edc67d5d467ec3a4b0e9a01143ef8b5d4a7",
+      "publication_copy_changed": true
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/evaluate_qualified_expert_v2.py",
+      "original_sha256": "28443b0d83e12f3dcac8d50cc5656bff8b5cab69d3b7e17c20acfc7c73264418",
+      "public_sha256": "28443b0d83e12f3dcac8d50cc5656bff8b5cab69d3b7e17c20acfc7c73264418",
+      "publication_copy_changed": false
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/run_qualified_expert_v2.py",
+      "original_sha256": "d034f5a4ef25b3cd31899df007d6aefaf40b7c58d63f77d65d31508e9799ac7c",
+      "public_sha256": "1df3bcb9b40e44a92ed42110d8ff49eaa6bf86ecec242f9fd8a71f46f5be539a",
+      "publication_copy_changed": true
+    },
+    {
+      "path": "acro-library-20261027-b/qualified-expert-v2-plan.json",
+      "original_sha256": "bc5e8b397accd4f585732803385516b755538f924afebc9e73fbc205dc763476",
+      "public_sha256": "573273b702ceca0d3845a18ab9d202e7974a25036334766f1cb2ef6e702b9c4d",
+      "publication_copy_changed": true
+    },
+    {
+      "path": "acro-library-20261027-b/deployment/qualified-expert-v2.command.txt",
+      "original_sha256": "029cb2640baa1a7b0a42480b7cd160e3e54f225080684cbdd56d4d74988f9d33",
+      "public_sha256": "7ad983ea109f8ee1e6e806cd28bc5bad1326e182a337f202604bc56c5d72316f",
+      "publication_copy_changed": true
     }
   ],
   "cloud_source_reconciliation": "validation/cloud-source-reconciliation-20261029.json",

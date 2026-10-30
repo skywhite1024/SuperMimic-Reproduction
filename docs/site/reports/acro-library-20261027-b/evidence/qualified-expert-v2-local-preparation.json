@@ -1,0 +1,16 @@
+{
+  "status": "source_models_controls_CPU6engineering_and_local_trial_gate_verified_bundle_ready",
+  "checked_at": "2026-10-30T09:39:29.761101+00:00",
+  "archive": "deployment\\qualified-expert-v2-source-and-teacher.tar.gz",
+  "bytes": 34017460,
+  "sha256": "3edc27b42a47a16adfb5ab1c8f1e95ec8ec754a345ac07e2ec17b2fe0f2d031f",
+  "manifest_files": 30,
+  "all_archive_member_bytes_and_SHA256_verified": true,
+  "model_kind": "unchanged already-published99Dspecialist inference checkpoint",
+  "plan_sha256": "bc5e8b397accd4f585732803385516b755538f924afebc9e73fbc205dc763476",
+  "command_sha256": "029cb2640baa1a7b0a42480b7cd160e3e54f225080684cbdd56d4d74988f9d33",
+  "GPU_job_submitted": false,
+  "cloud_stage_uploaded": false,
+  "new_cloud_resources_created": 0,
+  "next": "Fresh live academy network/account resource check, attended zeroGPU staging if needed, then one explicitly bounded new hypothesis. No automatic same-config repeat."
+}

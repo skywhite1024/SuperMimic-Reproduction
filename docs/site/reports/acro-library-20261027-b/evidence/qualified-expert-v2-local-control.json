@@ -1,0 +1,94 @@
+{
+  "status": "complete_local_full_trial_teacher_gate_passed_no_training",
+  "started_at": "2026-10-30T09:31:54.063783+00:00",
+  "plan_sha256": "bc5e8b397accd4f585732803385516b755538f924afebc9e73fbc205dc763476",
+  "device": "cpu",
+  "maximum_seconds": 120,
+  "new_training_updates": 0,
+  "commands": [
+    {
+      "script": "evaluate_qualified_expert_v2.py",
+      "arguments": [
+        "--role",
+        "teacher",
+        "--suite",
+        "library",
+        "--reference-variant",
+        "raw",
+        "--checkpoint",
+        "[local]/acro-h100-2000.pt",
+        "--device",
+        "cpu",
+        "--mode",
+        "qualified-expert-v2-teacher-raw-cpu-8808",
+        "--group",
+        "new",
+        "--clips",
+        "88_08_stageii_unitree_g1"
+      ],
+      "log": "evidence/qualified-expert-v2-cpu-00.log"
+    },
+    {
+      "script": "assess_tracking.py",
+      "arguments": [
+        "--run",
+        "qualified-expert-v2-teacher-raw-cpu-8808"
+      ],
+      "log": "evidence/qualified-expert-v2-cpu-01.log"
+    },
+    {
+      "script": "audit_physical_contacts.py",
+      "arguments": [
+        "--run",
+        "qualified-expert-v2-teacher-raw-cpu-8808"
+      ],
+      "log": "evidence/qualified-expert-v2-cpu-02.log"
+    },
+    {
+      "script": "evaluate_qualified_expert_v2.py",
+      "arguments": [
+        "--role",
+        "teacher",
+        "--suite",
+        "library",
+        "--reference-variant",
+        "corrected",
+        "--checkpoint",
+        "[local]/acro-h100-2000.pt",
+        "--device",
+        "cpu",
+        "--mode",
+        "qualified-expert-v2-teacher-corrected-cpu-8808",
+        "--group",
+        "new",
+        "--clips",
+        "88_08_stageii_unitree_g1"
+      ],
+      "log": "evidence/qualified-expert-v2-cpu-03.log"
+    },
+    {
+      "script": "assess_tracking.py",
+      "arguments": [
+        "--run",
+        "qualified-expert-v2-teacher-corrected-cpu-8808"
+      ],
+      "log": "evidence/qualified-expert-v2-cpu-04.log"
+    },
+    {
+      "script": "audit_physical_contacts.py",
+      "arguments": [
+        "--run",
+        "qualified-expert-v2-teacher-corrected-cpu-8808"
+      ],
+      "log": "evidence/qualified-expert-v2-cpu-05.log"
+    }
+  ],
+  "full_goal_complete": false,
+  "candidate_adopted": false,
+  "wall_seconds": 17.125,
+  "updated_at": "2026-10-30T09:32:11.187855+00:00",
+  "teacher_controls": {
+    "raw": true,
+    "corrected": true
+  }
+}

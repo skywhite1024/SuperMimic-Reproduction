@@ -1,0 +1,1 @@
+cd /mnt/afs/USER_ID/SuperMimic/acro-library-20261027-b && env SUPERMIMIC_UNI=/mnt/afs/USER_ID/SuperMimic/lafan1-20261024/uni PYTHONUTF8=1 HF_HUB_OFFLINE=1 WANDB_MODE=offline /mnt/afs/USER_ID/SuperMimic/lafan1-20261024/uni/.venv/bin/python -u scripts/run_qualified_expert_v2.py --execute-reviewed-plan

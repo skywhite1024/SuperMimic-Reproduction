@@ -46,7 +46,7 @@ Both model assets already exist in v0.1.0. No duplicate release or model upload 
 
 ## Next finite hypothesis
 
-The [prepared proposal](site/reports/acro-library-20261027-b/evidence/qualified-expert-retention-v2-proposal.json) uses the qualified 99D teacher only for 88_08, keeps the native objective for 88_07/09, and retains the old-library teacher, sampling, one 101D student and all acceptance contracts. It proposes at most one H100, 1000 new updates and 5400 seconds, with a CUDA specialist precheck before any update. The full finite-trial driver and live resource preflight remain prerequisites. No new GPU job has been submitted, and no automatic second training block is triggered by these diagnostics.
+The [prepared proposal](site/reports/acro-library-20261027-b/evidence/qualified-expert-retention-v2-proposal.json) uses the qualified 99D teacher only for 88_08, keeps the native objective for 88_07/09, and retains the old-library teacher, sampling, one 101D student and all acceptance contracts. It proposes at most one H100, 1000 new updates and 5400 seconds, with a CUDA specialist precheck before any update. The full finite-trial driver, startup command, unchanged specialist bundle and local raw/calibrated teacher gates are prepared and verified. Cloud staging, a live resource/network preflight and the CUDA teacher gate remain prerequisites. No new GPU job has been submitted, and no automatic second training block is triggered by these diagnostics.
 
 
 ## Public entry validation

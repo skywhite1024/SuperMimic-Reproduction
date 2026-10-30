@@ -1,0 +1,92 @@
+{
+  "status": "frozen_new_hypothesis_not_executed",
+  "frozen_at": "2026-10-30T09:31:53.464647+00:00",
+  "scope": "One distinct qualified8808teacher hypothesis,1000updates maximum. CUDAteacher gate before any update. No automatic new job or extension.",
+  "initial_full_sha256": "93bb8b830145c54092518eba8db1fb020d020eb72cdad1b619b4fc5470cc213d",
+  "initial_full": "runs/unified-h100-stage3-4000/final-full.pt",
+  "old_teacher_local": "../implementation/continuation-20261025-a/downloaded/policy/full_016000.pt",
+  "new_teacher_local": "../interactive-g1-20261027-a/policy/acro-h100-2000.pt",
+  "old_teacher_cloud": "/mnt/afs/USER_ID/SuperMimic/lafan1-20261024/experiments/continuation-20261025-a/policy/full_016000.pt",
+  "new_teacher_cloud": "/mnt/afs/USER_ID/SuperMimic/acro-library-20261027-b/policy/qualified-expert-8808.pt",
+  "old_teacher_sha256": "0afcca9af97bd9db1f2dd083875898f962acab0b0a70c7313b221e575b70b05b",
+  "new_teacher_sha256": "0f4a7bc67ae9e3440711e401e37f8276102e59946177117d082a6d7aabe108b4",
+  "native_learner_sha256": "c2b12fdf94be102ffadfb343b9372069d32cb660b2f05b66e836351b328361f4",
+  "protected_new": [
+    "88_08_stageii_unitree_g1"
+  ],
+  "old_weight": 0.1,
+  "new_weight": 0.05,
+  "action_output_bound": [
+    -20,
+    20
+  ],
+  "old_failure_replay_priorities": {
+    "dance2_subject4": 3,
+    "fallAndGetUp2_subject3": 3,
+    "jumps1_subject2": 3
+  },
+  "files": {
+    "scripts/retention_components.py": "1ecb22f73afc1cf759d4de682a6180aae2e683fd8911d8d6c6e9c09161dc3013",
+    "scripts/retention_learner.py": "8a39435dd52ceb3a6026abda50427021e75ade553f4b6ec50c56b16dd5534915",
+    "scripts/balanced_replay.py": "c8700818bafc0c45db2300a996c2e762bebbf5cb4c6c9e9fb327f8b848897197",
+    "scripts/balanced_sampling.py": "ad6db997aebed92745450d2009ce6887b7690cc2e93752e0b07bba60c6a7b49b",
+    "scripts/global_model.py": "962dacd788304d954cd032e0c5bf98ad83298b56a703c9c882e289c4d93f4312",
+    "scripts/stage2_references.py": "6459c841ec67e41a6c1f8a4f33919045b957c7d5161db7620450c129a6d71c8a",
+    "scripts/evaluate_library.py": "a41d07c9eb6a2e3859b8704f6c654bf3df2c3d98c801ceafe93f0ee8d5900438",
+    "scripts/evaluate_sequences.py": "0a5b9f0b9f554179ba69248e32e51d7aa5a8829e619c3f9234a17575fee60d84",
+    "scripts/evaluate_sequences_corrected.py": "aea90cdb3f5903a33a1eb54a4cd685aad7f28258d31b27c213d23324aec32d39",
+    "scripts/evaluate_action_bound.py": "bd10764b6e9ab98a247fe62160cff83ccbbd02fb46b5efc3a4e6742543575d99",
+    "scripts/assess_tracking.py": "2c8572ce88bebf10999c940695895ee40ef4dd3702580e1db394dd3fdb2c848f",
+    "scripts/audit_physical_contacts.py": "b656843e6df3bb045adfb63cb048d7670f3d0cbb2d9bc451e9727d18e0e49d36",
+    "scripts/combine_acceptance.py": "86f2a09d568bd37d9eddf677129b8dfecb234919f78e824d697e4b093fe9450e",
+    "scripts/assess_sequences.py": "f59610589b63739807f268951c6cdab58ab60c5bdbb6cfd5a4f49deb50afb32a",
+    "ground-calibration-v1/manifest.json": "cf5113137ad83bc7dfa9f16f2032a396f3b4be7ad61e1e630231e84db19bd990",
+    "acceptance-contract.json": "0036d9f100203e9d25990c47dfb5666508672fafbea60156a33fb63e56c1dcb1",
+    "contact-acceptance-contract.json": "b3b52cbe3bb45696ca0e9de603db4d01270bc275ff376c2f2a3c370d171390a8",
+    "continuous-acceptance-contract-v1.json": "9f986fbc647865312b6b1346b8c11da5d00a1ce8020ef96efc8da5339b4f73ce",
+    "scripts/qualified_retention_learner.py": "e775de54eced2f4db7c1ab6259bdc65b66fe8d58c1764d0dac2e10ee2a5e05b2",
+    "scripts/train_qualified_expert_v2.py": "86e9d5809267394688c98620e26f0241396d1263514051de21af70815864ecb4",
+    "scripts/evaluate_qualified_expert_v2.py": "28443b0d83e12f3dcac8d50cc5656bff8b5cab69d3b7e17c20acfc7c73264418",
+    "scripts/run_qualified_expert_v2.py": "d034f5a4ef25b3cd31899df007d6aefaf40b7c58d63f77d65d31508e9799ac7c",
+    "scripts/runtime.py": "e06f87f6f1b58d2035c3de8b178f8f46f5f888faddf75a022374c9b3f0f7e0e1",
+    "scripts/audit_sequence_contacts.py": "f44fd62dfef12942945b4bc462b77ba8bea4a3bdb9bfb1e9b3278492dd4604e0",
+    "evidence/specialist-teacher-8808-1030.json": "31db80549be58d583b6068d89161928cab55d64b82da51054895e2682a87401f"
+  },
+  "gpu_count": 1,
+  "maximum_program_seconds": 5400,
+  "num_envs": 1024,
+  "new_denominator": 15,
+  "old_denominator": 40,
+  "fixed_continuous_trials": 3,
+  "seconds_per_continuous_trial": 120,
+  "replay_mass": {
+    "new": 0.6,
+    "lafan": 0.4
+  },
+  "teachers_training_only": true,
+  "deployed_student_policies": 1,
+  "weights_vs_deployment_bound_confounding_control": "Before updates, assess the frozen stage3 parent with identicalbound20 on CUDA55 and raw15; retain unboundedCPU/CUDA and same-weightCPU ablations.",
+  "reference_or_physics_changes": false,
+  "frozen_eval_sequences_must_never_be_training_inputs": true,
+  "new_cloud_action_prerequisites": [
+    "Current academy location/network condition",
+    "Fresh all-account running/queued GPU and CCI resource check",
+    "Same-source6real CPU updates, fixed teachers/norms, one PI optimizer step per joint update and exact bounded policy save-readback"
+  ],
+  "continue_or_rollback_after_candidate": "No automatic second training block. Require strict correctedCUDA count not below the matched bound20 parent AND either more corrected strict passes or fewer failed old clips. Otherwise classify this candidate as unsuccessful and retain the previous weights. Goal completion still requires all original frozen acceptance criteria on all55 plus all3 full120s sequences, including matchedCPU regression checks.",
+  "early_stop": "Abort on hash/contract mismatch, nonfinite losses, changed teachers/norms, incorrect optimizer deltas, missing replay groups/clips or failed readback. Save interrupted checkpoint and exit; never keep GPU alive.",
+  "current_evidence": "Deployment bounds leave all3 first continuous failures unchanged; stage3 regressed flips/oldclips. Retention is a separate training hypothesis, not a proven cure for reference/contact issues.",
+  "initial_full_local": "runs/unified-h100-stage3-4000/final-full.pt",
+  "initial_full_cloud": "/mnt/afs/USER_ID/SuperMimic/acro-library-20261027-b/runs/unified-h100-stage3-4000/final-full.pt",
+  "GPU_job_submitted": false,
+  "automatic_execution_allowed": false,
+  "matched_parent_result_sha256": {
+    "runs/retention-v1-parent-bound20-corrected-cuda-all55/summary.json": "4e21ef42f60547e1e3eda3f4d2abd65d70ab2d961b7d6e7503d2a7c1a8f97f67",
+    "runs/retention-v1-parent-bound20-raw-cuda-new15/summary.json": "ee6987731b7d5186e0312201c51dd2ed02f3a164f04807a79afa001b03c19b92",
+    "runs/retention-v1-parent-bound20-raw-continuous-cuda/summary.json": "7a7e6da10dfe904dc891b54c8cb71636c22ad7fbca07ca266bf0670b29556651",
+    "runs/retention-v1-parent-bound20-corrected-continuous-cuda/summary.json": "d7e649a776c297c5f5a29517f2e9e98b661a41347c02d4910576106f7f47587d"
+  },
+  "six_update_engineering": "runs/engineering-qualified8808-cpu-6-1030/proof.json",
+  "independent_readback": "evidence/qualified-expert-engineering-1030-readback.json",
+  "new_teacher_qualification_CPU": "evidence/specialist-teacher-8808-1030.json"
+}
