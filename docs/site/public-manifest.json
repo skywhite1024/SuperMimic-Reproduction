@@ -35,11 +35,12 @@
     {
       "report": "acro-library-20261027-b/retention-1030-report.html",
       "original_sha256": "0f6b79576f78abb9323b6fc0e1527bd21e5b95d0c0920007f1f3ad9133d35b9b",
-      "public_sha256": "7473577a24b0a5576ad6b0b223e5dbd460a743eade3318b77063003838e8a153",
+      "public_sha256": "794def2d19f35d1cc94936a8eb8b4f7c72cc8ff17e965c667730ce1fbbbd132c",
       "public_status_display": "Show completed update budget and failed adoption condition; internal execution-stage identifier remains only in evidence",
       "private_authorization_and_session_context_omitted": true,
       "video_availability_presentation": "Successful old clips use numerical regression evidence; all planned new, failed-old and continuous videos are complete.",
-      "public_video_controls": "Explicit accessible play/pause buttons alongside native controls"
+      "public_video_controls": "Explicit accessible play/pause buttons alongside native controls",
+      "public_ledger_preview": "Bounded 60000-character screen preview; JSON export retains the entire original ledger."
     }
   ],
   "video_count": 266,
