@@ -5,3 +5,6 @@
 *.jpg binary
 # Matplotlib SVG paths use intentional trailing spacing.
 *.svg -whitespace
+
+# Preserve original sanitized program-log spacing as evidence.
+*.log -whitespace
