@@ -1,0 +1,68 @@
+{
+  "schema": "qualified-expert-v2-public-source-preparation-v1",
+  "status": "source_preparation_only_V2_untrained_and_unadopted",
+  "archive": {
+    "file": "qualified-expert-v2-inline-init-envelope.tar.gz",
+    "bytes": 76418,
+    "sha256": "f7afc8dbe99bc5711a995b021c62dc862e1b2e17004c4d635fd81d770a3833dd"
+  },
+  "public_template": {
+    "file": "inline-startup.template.sh",
+    "sha256": "4ee3913c2ed2d4b89478ac54fc41422d257a846c1cf88fe5cc07785858149a58"
+  },
+  "scientific_plan_sha256": "bc5e8b397accd4f585732803385516b755538f924afebc9e73fbc205dc763476",
+  "scientific_files": 25,
+  "canonical_data_and_control_members": 32,
+  "canonical_original_archives_sha256": {
+    "main": "3edc27b42a47a16adfb5ab1c8f1e95ec8ec754a345ac07e2ec17b2fe0f2d031f",
+    "control": "0b809a4011fbc6b66fe197e776d59104be545cfc08d45362e8145d516cc14712"
+  },
+  "resource_mode": "allocated-h1001-cpu4-ram64-init",
+  "future_job": {
+    "GPU": 1,
+    "GPU_type": "H10080GB",
+    "CPU": 4,
+    "RAM_GiB": 64,
+    "replicas": 1,
+    "restarts": 0
+  },
+  "GPU_remains_allocated_during_CUDA_hidden_CPU_preflight": true,
+  "initialization_max_seconds": 600,
+  "whole_job_max_seconds": 5400,
+  "initialization_work_seconds": 585,
+  "initialization_cleanup_reserve_seconds": 15,
+  "one_origin_before_source_download": true,
+  "maximum_training_updates": 1000,
+  "WM_only_updates": 200,
+  "strict_raw_and_calibrated_teacher_gate_before_any_update": true,
+  "teacher_gate_failure_updates": 0,
+  "maximum_is_not_completed_updates": true,
+  "V2_training_executed": false,
+  "candidate_adopted": false,
+  "full_goal": {
+    "single_deployed_policy": true,
+    "new_clips": 15,
+    "old_clips": 40,
+    "full_clips": 55,
+    "tracking_and_contact_quality_required": true,
+    "continuous_trials_per_mode": 3,
+    "seconds_per_continuous_trial": 120,
+    "post_t0_resets_allowed": 0,
+    "complete": false
+  },
+  "offline_tests": {
+    "run": 28,
+    "passed": 27,
+    "skipped_native_Linux": 1,
+    "GPU": 0,
+    "training_updates": 0
+  },
+  "Linux_native_process_groups_and_SIGALRM_locally_validated": false,
+  "mandatory_native_group_timeout_KILL_selftest_before_scientific_execution": true,
+  "standalone_CPU2_RAM8_guard_unchanged": true,
+  "source_URL_policy": "Existing own GitHub release prefix or exact own raw.githubusercontent.com repository/40hexcommit/canonical-source-asset path only",
+  "automatic_cloud_execution_allowed": false,
+  "private_command_models_raw_motion_and_runtime_logs_in_this_publication": false,
+  "BONES_route": "paused",
+  "full_goal_complete": false
+}
