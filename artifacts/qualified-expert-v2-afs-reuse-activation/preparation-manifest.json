@@ -1,0 +1,29 @@
+{
+  "schema": "qualified-expert-v2-afs-reuse-activation-source-v1",
+  "purpose": "Source-only transport for one finite qualified-expert recovery; no weights or datasets",
+  "envelope": {
+    "bytes": 78260,
+    "sha256": "2108feca16f562401625e1a1b1189d7e1db675bae62c20ab9355bf753ea229b6"
+  },
+  "wrapper_sha256": "8b33a641d4a9800eace1075554030a1a108b94d360500a4e1b0a18a4d9b16586",
+  "template_sha256": "d4a24a90acd598c2f3b0f0cd7ff03ced9e1b27a15c40ff18faff994f9966b51d",
+  "namespace": "qualified-expert-v2-inline-init-v3-afs-reuse",
+  "scientific_plan_sha256": "bc5e8b397accd4f585732803385516b755538f924afebc9e73fbc205dc763476",
+  "scientific_files": 25,
+  "GPU": 1,
+  "CPU": 4,
+  "RAM_GiB": 64,
+  "replicas": 1,
+  "restarts": 0,
+  "program_seconds": 5400,
+  "initialization_seconds": 600,
+  "updates_max": 1000,
+  "WM_only_updates": 200,
+  "teacher_bytes": 36481141,
+  "teacher_sha256": "0f4a7bc67ae9e3440711e401e37f8276102e59946177117d082a6d7aabe108b4",
+  "new_activation_delta_checks_passed": 8,
+  "local_tests_are_not_native_Linux_or_cloud_execution": true,
+  "compact_operational_event_max_bytes_exclusive": 450,
+  "original_scientific_sources_and_driver_unchanged": true,
+  "full_goal_complete": false
+}
