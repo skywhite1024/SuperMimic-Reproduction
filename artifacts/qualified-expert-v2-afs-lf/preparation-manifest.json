@@ -1,0 +1,22 @@
+{
+  "schema": "qualified-expert-v2-afs-lf-recovery-source-v1",
+  "namespace": "qualified-expert-v2-inline-init-v4-afs-lf",
+  "envelope_bytes": 78937,
+  "envelope_sha256": "bb91b5fc120d970d68966f303ea01f839195005c428056904125230ea80f21c0",
+  "wrapper_sha256": "4d01da62aaadc30c6a0356f0a0401332575af036ff290ec3bd7d1648a34f91fe",
+  "public_template_sha256": "6e070b92f59727238ce765f333af696f0694393e31b487feede767c0ae5d0733",
+  "original_command_sha256": "029cb2640baa1a7b0a42480b7cd160e3e54f225080684cbdd56d4d74988f9d33",
+  "LF_execution_copy_sha256": "3a4c90aefe037b0466581e1b830fd2b99ba182e86fe5ba0d9f490f2188b01262",
+  "scientific_plan_sha256": "bc5e8b397accd4f585732803385516b755538f924afebc9e73fbc205dc763476",
+  "scientific_files_unchanged": 25,
+  "base_source_transport_unchanged": true,
+  "GPU_request": 1,
+  "CPU_request": 4,
+  "RAM_GiB": 64,
+  "restarts": 0,
+  "total_seconds": 5400,
+  "initialization_seconds": 600,
+  "updates_max": 1000,
+  "WM_only": 200,
+  "full_goal_complete": false
+}
