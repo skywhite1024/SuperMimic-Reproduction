@@ -7890,5 +7890,11 @@
   "policy": "Metrics unchanged; local identities and console screenshots omitted; videos retain complete duration and frame rate.",
   "retention_1030_updated_at": "2026-10-30T07:30:53.661039+00:00",
   "teacher_qualification_updated_at": "2026-10-30T09:23:00.372694+00:00",
-  "consolidated_at": "2026-11-05"
+  "consolidated_at": "2026-11-05",
+  "entrypoint": {
+    "file": "index.html",
+    "sha256": "bd8801d6fad7291160950a3c95d42125c4a9b66d8d1e76962c5ce1298063b2cc"
+  },
+  "report_website_public": true,
+  "source_repository_visibility": "public"
 }
