@@ -1,0 +1,57 @@
+{
+  "status": "finite_experiment_all_CPU_CUDA_metrics_21videos_and_report_verified_complete_goal_unmet",
+  "at": "2026-10-31T18:44:23.500907+08:00",
+  "GPU_new_updates": 1000,
+  "CPU_new_updates": 0,
+  "metrics": [
+    {
+      "device": "cuda",
+      "raw_strict_new": 9,
+      "corrected_original_new": 15,
+      "corrected_strict_new": 10,
+      "old_original": 38,
+      "raw_continuous_joint": 1,
+      "corrected_continuous_joint": 1
+    },
+    {
+      "device": "cpu",
+      "raw_strict_new": 10,
+      "corrected_original_new": 14,
+      "corrected_strict_new": 11,
+      "old_original": 39,
+      "raw_continuous_joint": 1,
+      "corrected_continuous_joint": 1
+    }
+  ],
+  "verified_archive_files": 96,
+  "frozen_scientific_files": 25,
+  "full_and_exported_policy_tensors_equal": true,
+  "verified_complete_videos": 21,
+  "videos_scope": "15calibratednewclips plus3raw and3calibrated complete120secondCUDAtrials; failedtailsretained",
+  "all_candidate_libraries_complete_no_resets": true,
+  "all_candidate_continuous_trials_complete120s_no_resets": true,
+  "CPU_CUDA_frozen_reference_indexes_match_each_variant": true,
+  "candidate_adopted": false,
+  "predeclared_CUDA_improvement_condition": false,
+  "all_this_trial_resources_released": true,
+  "report": "qualified-expert-v2-1031-report.html",
+  "HTML_structure_and_JS_syntax_verified": true,
+  "browser_visual_or_interaction_verified": false,
+  "browser_limitation": "In-app browser blocks file protocol; browser preview not retried using a workaround",
+  "full_goal_complete": false,
+  "visual_spotcheck": {
+    "reviewed_contact_sheets": [
+      "qualified-expert-v2-1031-raw-sequences-cuda-seed-0-contact-sheet.jpg",
+      "qualified-expert-v2-1031-corrected-library-cuda-90_14_stageii_unitree_g1-contact-sheet.jpg",
+      "qualified-expert-v2-1031-corrected-library-cuda-88_08_stageii_unitree_g1-contact-sheet.jpg",
+      "qualified-expert-v2-1031-corrected-sequences-cuda-seed-2-contact-sheet.jpg"
+    ],
+    "observations": [
+      "Actual8808inversionandreturnuprightvisible",
+      "Successfulseed0retains120secondendpose",
+      "Failedseed2retains120secondfallenandlargeerrorending"
+    ],
+    "all21videos_visually_scored": false,
+    "all21videos_complete_decode_verified": true
+  }
+}

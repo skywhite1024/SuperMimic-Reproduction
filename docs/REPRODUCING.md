@@ -78,4 +78,4 @@ python acro-library-20261027-b/scripts/train_replay_stage3.py --initial acro-lib
 
 This executes actual collection and world-model/policy/critic updates. Use your scheduler's finite time limit, a checkpoint on interruption, one replica and no automatic restart loop. It does not provision cloud hardware. Checkpoint identity, replay balancing and saved-state readback are checked by the script. GPU execution from this public checkout must be validated independently; copying source is not a claim of rerunning training.
 
-The `implementation` scripts preserve the original baseline and 12K→16K controlled continuation. The source for the unsubmitted retention trial is included as a preparation record; it is not an achieved result or an instruction to submit it.
+The `implementation` scripts preserve the original baseline and 12K→16K controlled continuation. Historical retention preparation is retained alongside the subsequently completed trials. Retention v1 and Qualified V2 were trained and evaluated but not adopted; the old-weight 0.2 attempt stopped with zero new updates. Consult EXPERIMENTS.json for the final status of each distinct attempt.

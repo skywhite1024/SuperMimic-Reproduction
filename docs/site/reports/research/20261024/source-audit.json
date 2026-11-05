@@ -1,0 +1,83 @@
+{
+  "audited_at": "2026-10-24T22:01:34.447067+08:00",
+  "scope": "Public sources, paper and local server rules; source review and arithmetic only",
+  "cloud_actions": 0,
+  "gpu_training_or_inference_executed": false,
+  "project_dependencies_installed": false,
+  "official_status": {
+    "training_repository": "No official full training repository found on the project page or in searches as of the audit date",
+    "browser_demo": "Present; proprietary terms restrict it to personal non-commercial browser evaluation at its official location",
+    "demo_source_retention": "Temporary program files removed after checking license; no weights downloaded"
+  },
+  "repositories": [
+    {
+      "name": "vibed",
+      "url": "https://github.com/zita-ch/supermimic_vibed",
+      "head": "a1508d42c9d1699a52e8233ab16d08c488441ab9",
+      "last_commit": "2026-10-21T22:39:38+02:00",
+      "working_tree_status": "",
+      "python_files_parsed": 19,
+      "syntax_errors": [],
+      "checkpoint_files_in_checkout": []
+    },
+    {
+      "name": "reproduced",
+      "url": "https://github.com/CuboiLeo/SuperMimic-Reproduced",
+      "head": "d9be385b3eeb13a638fb33fb200d3bfd9be9839f",
+      "last_commit": "2026-10-21T22:13:13-07:00",
+      "working_tree_status": "",
+      "python_files_parsed": 58,
+      "syntax_errors": [],
+      "checkpoint_files_in_checkout": []
+    },
+    {
+      "name": "uni",
+      "url": "https://github.com/Motphys/Uni-SuperMimic",
+      "head": "faf7818e8abac3ec6abb8f00e6e904d3577f800b",
+      "last_commit": "2026-10-24T15:55:35+08:00",
+      "working_tree_status": "",
+      "python_files_parsed": 41,
+      "syntax_errors": [],
+      "checkpoint_files_in_checkout": []
+    }
+  ],
+  "paper": {
+    "file": "supermimic-paper.pdf",
+    "sha256": "fe213017ab062f4acc3965da89abd3c29969163e144a2628a662b8ce46691009",
+    "pages": 19
+  },
+  "server_rules": {
+    "path": "C:\\project\\sensecore\\AGENTS.md",
+    "status": "read; historical platform facts, not live quota verification"
+  },
+  "normalization_check": {
+    "file": "sources\\reproduced\\src\\supermimic\\eval\\benchmark.py",
+    "line": 97,
+    "expression": "float(ret_sum[e]) / (max_r * max(st, 1))",
+    "example": {
+      "intended_steps": 1000,
+      "survived_steps": 10,
+      "reward_sum": 1.0
+    },
+    "checkout_formula_result": 1.0,
+    "full_clip_denominator_result": 0.01,
+    "meaning": "Early-failure return is not penalized by unplayed clip duration in this checkout"
+  },
+  "observations": {
+    "paper_proprioception_dim": 93,
+    "vibed_proprioception_plus_relative_orientation_dim": 99,
+    "uni_proprioception_plus_relative_orientation_dim": 99,
+    "reproduced_optional_anchor_goal_addition_dim": 9
+  },
+  "resume_source_review": {
+    "vibed": "New empty buffer; warmup is conditional on start_it == 0; after resume first collect defaults to 2 rows but window length is 8. Inspect before cloud use.",
+    "reproduced": "Checkpoint omits replay data; resumed iteration bypasses initial warmup threshold and can update after only a few collected rows. Inspect before cloud use.",
+    "uni": "Explicitly collects max(hist, wm_window, warmup_steps) rows after resume. Replay/RNG state is not a bit-exact continuation."
+  },
+  "limitations": [
+    "AST parsing verifies syntax only; it does not validate imports, numerical correctness, CUDA, training, or reported results.",
+    "The normalization example evaluates a reviewed arithmetic expression; it is not a simulator benchmark.",
+    "Repository search used multiple web queries; unauthenticated GitHub REST search was rate-limited, so inventory is not guaranteed exhaustive.",
+    "Checkout has no checkpoint files; releases or external model hosting were not exhaustively searched."
+  ]
+}

@@ -109,6 +109,9 @@ document.querySelector('#export').onclick=()=>{const a=document.createElement('a
         template=template.replace(anchor,latest+anchor,1)
     html=template.replace('PAYLOAD',payload)
     (ROOT/'unified-library-report.html').write_text(html,encoding='utf8')
+    # Keep the project-wide review when this historical dashboard is rebuilt.
+    from build_project_journal import update_report
+    update_report()
     script=html.split('<script>',1)[1].split('</script>',1)[0];(ROOT/'evidence/report-script-syntax-check.js').write_text(script,encoding='utf8')
     print(json.dumps({'report':str(ROOT/'unified-library-report.html'),'new_rows':len(rows),'old_rows':len(old),'stage1_video_receipts':sum(row['video'] is not None for row in rows),
                       'continuous_runs':len(continuous),'raw_new_combined_passes':combined['stage1cuda']['combined_engineering_passed'] if combined['stage1cuda'] else None}),flush=True)

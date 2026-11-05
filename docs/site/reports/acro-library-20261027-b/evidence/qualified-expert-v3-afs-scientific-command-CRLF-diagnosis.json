@@ -1,0 +1,26 @@
+{
+  "status": "CRLF_parameter_diagnosis_local_modes_recorded_cloud_child_log_unread",
+  "command_bytes": 308,
+  "command_sha256": "029cb2640baa1a7b0a42480b7cd160e3e54f225080684cbdd56d4d74988f9d33",
+  "trailing_CRLF": true,
+  "earlier_Windows_Bash_dash_c_probe_stripped_CR": true,
+  "file_mode_Bash_exit": 0,
+  "file_mode_last_argument_hex": "2d2d657865637574652d72657669657765642d706c616e",
+  "file_mode_argparse_exit": 0,
+  "CRLF_argument_parse_exit2_confirmed_in_file_mode": false,
+  "LF_copy_bytes": 307,
+  "LF_copy_sha256": "3a4c90aefe037b0466581e1b830fd2b99ba182e86fe5ba0d9f490f2188b01262",
+  "cloud_child_exit": 2,
+  "cloud_child_log_read": false,
+  "native_Linux_runtime_reproduction": false,
+  "science_or_original_command_modified": false,
+  "GPU": 0,
+  "new_cloud_jobs": 0,
+  "Windows_igncr_disabled_probe": {
+    "returncode": 0,
+    "stderr": "",
+    "argument_hex": "2d2d657865637574652d72657669657765642d706c616e",
+    "argparse_exit": 0
+  },
+  "CRLF_exit2_reproduced_with_explicit_CR_preserving_Bash_mode": false
+}

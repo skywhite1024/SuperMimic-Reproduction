@@ -1,0 +1,28 @@
+{
+  "status": "GPU_terminal_CPU_CCI_stopped_empty_DNAT_unbound_original_command_restored",
+  "verified_at": "2026-10-31T18:30:45.001323+08:00",
+  "GPU_job_UID": "0bf45e5ee72348cd83f5c19116cd94d7",
+  "GPU_job_terminal": true,
+  "GPU_job_status": "success",
+  "GPU_program_finished_at": "2026-10-31T18:02:52.030+08:00",
+  "GPU_platform_terminal_updated_at": "2026-10-31T18:02:59+08:00",
+  "CPU_CCI_UID": "21cd0ad52d104386bb572414d99249d1",
+  "CPU_CCI_stopped_and_empty": true,
+  "CPU_stopped_empty_observed_at": "2026-10-31T18:21:16.882550+08:00",
+  "CPU_after_restore_stopped_empty_observed_at": "2026-10-31T18:27:09.654055+08:00",
+  "CPU_runtime_limits": {
+    "GPU_requested": 0,
+    "CPU": 2,
+    "RAM_GiB": 8
+  },
+  "DNAT_unbound": true,
+  "DNAT_name": "dnat-zhicheng-fb300263",
+  "external_port": 10076,
+  "original_CCI_command_restored": true,
+  "restored_command_SHA256": "2c81f1b1fc679c393562231dcb6ab0d7b24532c1b959375eaebf138fe149d6f4",
+  "CPU_manual_stop_not_automatic_helper": true,
+  "whole_account_GPU_aggregate": null,
+  "scope": "This experiment and this attended existing CPUCCI session only; no allaccountzero claim",
+  "private_key_body_read": false,
+  "full_goal_complete": false
+}

@@ -1,0 +1,106 @@
+{
+  "at": "2026-10-29T12:17:00Z",
+  "repository": "https://github.com/skywhite1024/SuperMimic-Reproduction",
+  "public_commit": "623d190800e5204a3d430998ccbc4980173d5e1e",
+  "cloud_attempts": [
+    {
+      "name": "supermimic-git-record-USER_ID-1029a",
+      "uid": "11f519fcedce4bd6afe3a73195ffe7c6",
+      "state": "failed",
+      "gpu": 0,
+      "cpu": 2,
+      "memory_gib": 4,
+      "max_seconds": 900,
+      "restarts": 0,
+      "failure": "git config fatal: not in a git directory, before source copy",
+      "evidence": "native ACP terminal failed; offline CMS eight log records",
+      "preserved_receipt": "/mnt/afs/USER_ID/SuperMimic/git-records/git-publication-20261029-a/receipt.json"
+    },
+    {
+      "name": "supermimic-git-record-USER_ID-1029b",
+      "uid": "b1ba056c5ce14d7bb3e5584db9bc3375",
+      "state": "success",
+      "gpu": 0,
+      "cpu": 2,
+      "memory_gib": 4,
+      "max_seconds": 900,
+      "restarts": 0,
+      "started_local": "2026-10-29 20:11:31",
+      "correction": "Command-scoped Git safe.directory for only the new audit and canonical personal AFS paths; no global trust setting",
+      "actual_afs_owner_uid": 11238,
+      "container_euid": 0,
+      "notes": [
+        "Initial historical continuation lookup missing at top level; actual path is lafan1-20261024/experiments/continuation-20261025-a, included in recursive source scan under the baseline folder"
+      ],
+      "historical_source_commit": "1320ed3a6eef5c4d42aae44c256dc1e1e4bc94ee",
+      "audit_commit": "005ea6e241069c413930f1b8f1e57f5c7c9907a6",
+      "canonical_worktree_clean": true,
+      "wall_seconds": 268.44779713917524
+    },
+    {
+      "name": "supermimic-git-reconcile-USER_ID-1029c",
+      "uid": "b41ab99e0940468ba9652b1e29e2f796",
+      "state": "success",
+      "gpu": 0,
+      "cpu": 2,
+      "memory_gib": 4,
+      "max_seconds": 180,
+      "restarts": 0,
+      "finished_local": "2026-10-29 20:33:31",
+      "export_sha256": "e0a87c206ec7c3daee45fececabaa6516faf7cd633f5cd923c59747d286dfe9c"
+    }
+  ],
+  "release": "https://github.com/skywhite1024/SuperMimic-Reproduction/releases/tag/v0.1.0",
+  "release_assets_verified": 6,
+  "download_helper_verified": "continuous-basic full anonymous download and SHA256",
+  "pages": "https://skywhite1024.github.io/SuperMimic-Reproduction/",
+  "pages_run": {
+    "id": 40867398976,
+    "attempt": 2,
+    "conclusion": "success"
+  },
+  "pages_http": {
+    "home_and_reports_200": 7,
+    "mp4_range_206": true
+  },
+  "server_canonical_path": "/mnt/afs/USER_ID/SuperMimic/repositories/SuperMimic-Reproduction",
+  "server_audit_path": "/mnt/afs/USER_ID/SuperMimic/git-records/git-publication-20261029-b",
+  "server_reconciliation": {
+    "matched": 39,
+    "different": 1,
+    "unmapped_project_sources": 8,
+    "identical_aliases": 1,
+    "excluded_environment_sources": 495
+  },
+  "status": "complete",
+  "finished_at": "2026-10-29T12:45:57.176049+00:00",
+  "main_commit": "4643639cc1a1ecfdc2b561c3000f77e55fe4ed03",
+  "immutable_release_commit": "623d190800e5204a3d430998ccbc4980173d5e1e",
+  "server_canonical_commit": "623d190800e5204a3d430998ccbc4980173d5e1e",
+  "server_canonical_clean": true,
+  "server_private_audit_commit": "005ea6e241069c413930f1b8f1e57f5c7c9907a6",
+  "account_acp_jobs_at_closure": 77,
+  "account_nonterminal_acp_jobs": 0,
+  "publication_training_started": false,
+  "total_provenance_files": 264,
+  "reports": 6,
+  "complete_videos": 151,
+  "checkpoint_assets": 6,
+  "ci": {
+    "main": "success",
+    "url": "https://github.com/skywhite1024/SuperMimic-Reproduction/actions/runs/40875101102"
+  },
+  "checks": {
+    "clean_clone_source_reports": "passed",
+    "actual_120second_rollout": "passed; 29 segments, zero resets, zero original hard-gate failures, XY RMSE 0.2053177m",
+    "release_six_sha256_digests": "all matched",
+    "anonymous_checkpoint_helper_download": "full file hash matched",
+    "pages": "homepage plus six reports HTTP 200; MP4 range HTTP 206; live browser checked",
+    "secrets_scan": "744 source/report files scanned, zero findings"
+  },
+  "important_boundary": "Research objective of unified 55-motion policy remains incomplete; publication is completed. Server intentionally pins tested v0.1.0; main additionally contains read-back server archive and receipts. Fresh dependency installation and GPU retraining were not performed.",
+  "screenshots": [
+    "public-reports-live.jpg",
+    "github-release-live.jpg"
+  ]
+}

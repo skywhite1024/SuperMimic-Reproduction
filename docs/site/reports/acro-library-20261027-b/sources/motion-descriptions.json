@@ -1,0 +1,92 @@
+[
+  {
+    "name": "143_34_stageii_unitree_g1",
+    "description": "Chicken Dance",
+    "original_source_fps": 120,
+    "source": "https://mocap.cs.cmu.edu/search.php?subjectnumber=143"
+  },
+  {
+    "name": "85_06_stageii_unitree_g1",
+    "description": "KickFlip",
+    "original_source_fps": 120,
+    "source": "https://mocap.cs.cmu.edu/search.php?subjectnumber=85"
+  },
+  {
+    "name": "85_07_stageii_unitree_g1",
+    "description": "KickFlipStumble",
+    "original_source_fps": 120,
+    "source": "https://mocap.cs.cmu.edu/search.php?subjectnumber=85"
+  },
+  {
+    "name": "88_03_stageii_unitree_g1",
+    "description": "motorcycle pose",
+    "original_source_fps": 60,
+    "source": "https://mocap.cs.cmu.edu/search.php?subjectnumber=88"
+  },
+  {
+    "name": "88_06_stageii_unitree_g1",
+    "description": "jump and spin kick",
+    "original_source_fps": 60,
+    "source": "https://mocap.cs.cmu.edu/search.php?subjectnumber=88"
+  },
+  {
+    "name": "88_07_stageii_unitree_g1",
+    "description": "cartwheel",
+    "original_source_fps": 60,
+    "source": "https://mocap.cs.cmu.edu/search.php?subjectnumber=88"
+  },
+  {
+    "name": "88_08_stageii_unitree_g1",
+    "description": "crouch and flip backward on hands",
+    "original_source_fps": 60,
+    "source": "https://mocap.cs.cmu.edu/search.php?subjectnumber=88"
+  },
+  {
+    "name": "88_09_stageii_unitree_g1",
+    "description": "stretch and cartwheel",
+    "original_source_fps": 60,
+    "source": "https://mocap.cs.cmu.edu/search.php?subjectnumber=88"
+  },
+  {
+    "name": "88_10_stageii_unitree_g1",
+    "description": "stretch and spin",
+    "original_source_fps": 60,
+    "source": "https://mocap.cs.cmu.edu/search.php?subjectnumber=88"
+  },
+  {
+    "name": "88_11_stageii_unitree_g1",
+    "description": "stretches and jumps",
+    "original_source_fps": 60,
+    "source": "https://mocap.cs.cmu.edu/search.php?subjectnumber=88"
+  },
+  {
+    "name": "89_01_stageii_unitree_g1",
+    "description": "balance object on forehead",
+    "original_source_fps": 60,
+    "source": "https://mocap.cs.cmu.edu/search.php?subjectnumber=89"
+  },
+  {
+    "name": "90_08_stageii_unitree_g1",
+    "description": "side flip",
+    "original_source_fps": 120,
+    "source": "https://mocap.cs.cmu.edu/search.php?subjectnumber=90"
+  },
+  {
+    "name": "90_14_stageii_unitree_g1",
+    "description": "front hand flip",
+    "original_source_fps": 120,
+    "source": "https://mocap.cs.cmu.edu/search.php?subjectnumber=90"
+  },
+  {
+    "name": "90_15_stageii_unitree_g1",
+    "description": "front hand flip",
+    "original_source_fps": 120,
+    "source": "https://mocap.cs.cmu.edu/search.php?subjectnumber=90"
+  },
+  {
+    "name": "90_19_stageii_unitree_g1",
+    "description": "monkey backflip",
+    "original_source_fps": 120,
+    "source": "https://mocap.cs.cmu.edu/search.php?subjectnumber=90"
+  }
+]

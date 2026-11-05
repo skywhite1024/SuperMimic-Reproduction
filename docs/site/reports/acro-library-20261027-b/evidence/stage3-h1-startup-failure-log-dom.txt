@@ -1,0 +1,186 @@
+- main:
+  - generic: 
+  - link "Logo":
+    - /url: /cn-sh-01/home
+    - img "Logo"
+  - link "官网":
+    - /url: https://sensecore.cn
+  - generic: 费用
+  - generic: 资源
+  - generic: 用户
+  - link "文档":
+    - /url: /cn-sh-01/help
+  - img "core-icon-mini-programs":
+  - link "core-top-nav-message":
+    - /url: /cn-sh-01/message
+    - img "core-top-nav-message":
+  - img "core-top-nav-language":
+  - img "core-icon-thick-arrow-down":
+  - generic: 云监控
+  - img "core-left-nav-collapsed":
+  - menu:
+    - menuitem "概览":
+      - link "概览":
+        - /url: /cn-sh-01/monitor/overview
+    - menuitem "云产品监控":
+      - generic: 云产品监控
+    - menuitem "自定义监控":
+      - generic: 自定义监控
+    - menuitem "监控仪表盘":
+      - link "监控仪表盘":
+        - /url: /cn-sh-01/monitor/monitor-dashboard
+    - menuitem "事件监控":
+      - generic: 事件监控
+    - menuitem "告警服务":
+      - generic: 告警服务
+    - menuitem "日志服务" [expanded]:
+      - generic: 日志服务
+    - menu:
+      - menuitem "日志查询":
+        - link "日志查询":
+          - /url: /cn-sh-01/monitor/log/list
+      - menuitem "操作日志":
+        - link "操作日志":
+          - /url: /cn-sh-01/monitor/log/record
+    - menuitem "导出中心":
+      - generic: 导出中心
+  - heading "日志查询" [level=2]
+  - combobox
+  - generic "工作空间"
+  - combobox
+  - generic "share_space_01g"
+  - textbox "关键字"
+  - textbox "开始日期": 2026-10-27 23:09:00
+  - generic "to":
+    - img "swap-right":
+  - textbox "结束日期": 2026-10-27 23:12:00
+  - img "core-icon-calendar":
+  - combobox
+  - generic "supermimic-unified-replay-USER_ID-1027h1"
+  - generic "pt-eab5761492094cb2936994b21d3a6f0d-worker-0":
+    - generic: pt-eab57...
+  - combobox
+  - generic "pytorch":
+    - generic: pytorch
+  - combobox
+  - textbox "Host，多个用“,”隔开"
+  - generic "TRACE":
+    - generic: TRACE
+  - generic "+ 5 ...":
+    - generic: + 5 ...
+  - combobox
+  - button "查 询":
+    - generic: 查 询
+  - text: 展开图表
+  - img "down":
+  - text: 日志列表
+  - img "exclamation-circle":
+  - button "download":
+    - img "download":
+  - button "delivered-procedure":
+    - img "delivered-procedure":
+  - table:
+    - rowgroup:
+      - row "时间 exclamation-circle caret-up caret-down 日志内容":
+        - columnheader
+        - columnheader "时间 exclamation-circle caret-up caret-down":
+          - text: 时间
+          - img "exclamation-circle":
+          - img "caret-up":
+          - img "caret-down":
+        - columnheader "日志内容"
+        - columnheader
+        - columnheader
+  - table:
+    - rowgroup:
+      - 'row "2026-10-27 23:10:19.926 FileNotFoundError: [Errno 2] No such file or directory: ''/mnt/afs/USER_ID/SuperMimic/acro-library-20261027-b/acceptance-contract.json'' export down"':
+        - cell
+        - cell "2026-10-27 23:10:19.926"
+        - 'cell "FileNotFoundError: [Errno 2] No such file or directory: ''/mnt/afs/USER_ID/SuperMimic/acro-library-20261027-b/acceptance-contract.json'' export"':
+          - generic: "FileNotFoundError: [Errno 2] No such file or directory: '/mnt/afs/USER_ID/SuperMimic/acro-library-20261027-b/acceptance-contract.json'"
+          - button "export":
+            - img "export":
+        - cell "down":
+          - img "down":
+      - row "2026-10-27 23:10:19.926 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ export down":
+        - cell
+        - cell "2026-10-27 23:10:19.926"
+        - cell "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ export":
+          - generic: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          - button "export":
+            - img "export":
+        - cell "down":
+          - img "down":
+      - row "2026-10-27 23:10:19.926 return io.open(self, mode, buffering, encoding, errors, newline) export down":
+        - cell
+        - cell "2026-10-27 23:10:19.926"
+        - cell "return io.open(self, mode, buffering, encoding, errors, newline) export":
+          - generic: return io.open(self, mode, buffering, encoding, errors, newline)
+          - button "export":
+            - img "export":
+        - cell "down":
+          - img "down":
+      - row "2026-10-27 23:10:19.926 File \"/usr/lib/python3.12/pathlib.py\", line 1015, in open export down":
+        - cell
+        - cell "2026-10-27 23:10:19.926"
+        - cell "File \"/usr/lib/python3.12/pathlib.py\", line 1015, in open export":
+          - generic: File "/usr/lib/python3.12/pathlib.py", line 1015, in open
+          - button "export":
+            - img "export":
+        - cell "down":
+          - img "down":
+      - row "2026-10-27 23:10:19.926 ^^^^^^^^^^^^^^^^^^^^ export down":
+        - cell
+        - cell "2026-10-27 23:10:19.926"
+        - cell "^^^^^^^^^^^^^^^^^^^^ export":
+          - generic: ^^^^^^^^^^^^^^^^^^^^
+          - button "export":
+            - img "export":
+        - cell "down":
+          - img "down":
+      - 'row "2026-10-27 23:10:19.926 with self.open(mode=''rb'') as f: export down"':
+        - cell
+        - cell "2026-10-27 23:10:19.926"
+        - 'cell "with self.open(mode=''rb'') as f: export"':
+          - generic: "with self.open(mode='rb') as f:"
+          - button "export":
+            - img "export":
+        - cell "down":
+          - img "down":
+      - row "2026-10-27 23:10:19.926 File \"/usr/lib/python3.12/pathlib.py\", line 1021, in read_bytes export down":
+        - cell
+        - cell "2026-10-27 23:10:19.926"
+        - cell "File \"/usr/lib/python3.12/pathlib.py\", line 1021, in read_bytes export":
+          - generic: File "/usr/lib/python3.12/pathlib.py", line 1021, in read_bytes
+          - button "export":
+            - img "export":
+        - cell "down":
+          - img "down":
+      - row "2026-10-27 23:10:19.925 File \"<stdin>\", line 10, in <module> export down":
+        - cell
+        - cell "2026-10-27 23:10:19.925"
+        - cell "File \"<stdin>\", line 10, in <module> export":
+          - generic: File "<stdin>", line 10, in <module>
+          - button "export":
+            - img "export":
+        - cell "down":
+          - img "down":
+      - 'row "2026-10-27 23:10:19.925 Traceback (most recent call last): export down"':
+        - cell
+        - cell "2026-10-27 23:10:19.925"
+        - 'cell "Traceback (most recent call last): export"':
+          - generic: "Traceback (most recent call last):"
+          - button "export":
+            - img "export":
+        - cell "down":
+          - img "down":
+  - list:
+    - generic: 最多仅展示10000条日志 共 9 条
+    - listitem "上一页":
+      - button "core-icon-arrow-left" [disabled]:
+        - img "core-icon-arrow-left":
+    - listitem "1":
+      - generic: "1"
+    - listitem "下一页":
+      - button "core-icon-arrow-right" [disabled]:
+        - img "core-icon-arrow-right":

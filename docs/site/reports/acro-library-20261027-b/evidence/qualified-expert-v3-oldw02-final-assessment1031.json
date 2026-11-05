@@ -1,0 +1,111 @@
+{
+  "status": "finite_oldw02_attempt_closed_teacher_raw_contact_gate_failed_before_training",
+  "at": "2026-10-31T20:02:04.328113+08:00",
+  "full_goal_complete": false,
+  "candidate_adopted": false,
+  "old_weight_hypothesis_tested_by_training": false,
+  "new_training_updates": 0,
+  "CPU6_engineering_updates_prior_to_cloud": 6,
+  "CPU6_recovery_extra_updates": 0,
+  "planned_updates_not_executed": 1000,
+  "old_weight": 0.2,
+  "new_weight": 0.05,
+  "parent_30K_SHA256": "93bb8b830145c54092518eba8db1fb020d020eb72cdad1b619b4fc5470cc213d",
+  "teacher_SHA256": "0f4a7bc67ae9e3440711e401e37f8276102e59946177117d082a6d7aabe108b4",
+  "plan_SHA256": "9eb8e6246745d8d71ffaa10d8d7d3351d9f533ad468bc848279c872ef5dfc2a6",
+  "teacher_gates": {
+    "raw": {
+      "passed": false,
+      "tracking_passed": true,
+      "unexpected_trunk_contact_samples": 0,
+      "unexpected_trunk_contact_samples_max": 0,
+      "actual_min_after_initial_100ms_m": -0.05344258250133035,
+      "allowed_penetration_m": 0.05,
+      "contact_samples_bytes": 92006,
+      "contact_samples_sha256": "6fd2e754a8a8f3cdb673e403fcda0b39a01fa2be3eeffa6b29793e9afcca2a2e",
+      "tracking_failed_checks": []
+    },
+    "corrected": {
+      "passed": true,
+      "tracking_passed": true,
+      "unexpected_trunk_contact_samples": 0,
+      "unexpected_trunk_contact_samples_max": 0,
+      "actual_min_after_initial_100ms_m": -0.046807793674332764,
+      "allowed_penetration_m": 0.05,
+      "contact_samples_bytes": 92022,
+      "contact_samples_sha256": "e42c70bb9d4cf1621164622cecdfd3e2aaccd42c8530f2dba51c5edece7e6a10",
+      "tracking_failed_checks": []
+    }
+  },
+  "contact_contract_SHA256": "b3b52cbe3bb45696ca0e9de603db4d01270bc275ff376c2f2a3c370d171390a8",
+  "source_files_changed_for_runtime_repair": 0,
+  "first_attempt": {
+    "UID": "6740112b9ef8455cb40c97521da08626",
+    "platform_status": "失败",
+    "platform_updated_at": "2026-10-31T19:31:42+08:00",
+    "updates": 0,
+    "cause": "startup omitted SUPERMIMIC_UNI and runtime looked for old40 at default path",
+    "repair": "set existing personal AFS UNI path; preserve zero-update receipt and child log under attempt1031a archive"
+  },
+  "fixed_attempt": {
+    "UID": "13febf90464e4f2290866974707a3fe0",
+    "platform_status": "成功",
+    "platform_updated_at": "2026-10-31T19:50:53+08:00",
+    "program_status": "teacher_gate_failed_zero_updates",
+    "program_elapsed_seconds": 173.715,
+    "actual_allocation": {
+      "GPU_count": 1,
+      "GPU_name": "NVIDIA H100 80GB HBM3",
+      "GPU_memory_bytes": 85017624576
+    },
+    "all_native_child_groups_empty": true
+  },
+  "read_only_recovery_jobs": [
+    {
+      "UID": "87b5965dbaa84b8aa98a1038e404dc9c",
+      "platform_status": "成功",
+      "platform_updated_at": "2026-10-31T19:37:37+08:00",
+      "GPU": 0,
+      "CPU": 2,
+      "RAM_GiB": 4,
+      "updates": 0
+    },
+    {
+      "UID": "007d130a697c477ea7aaaf8302df9e90",
+      "platform_status": "成功",
+      "platform_updated_at": "2026-10-31T19:58:26+08:00",
+      "GPU": 0,
+      "CPU": 2,
+      "RAM_GiB": 4,
+      "updates": 0
+    }
+  ],
+  "evidence_verification": {
+    "recovered_bytes": 26405,
+    "snapshot_SHA256": "85a93f4104b7327adf90f2e0bdc8127aaee5748547f6379fadc0bcece061c4a9",
+    "files_verified": 8,
+    "tracking_and_contact_samples_preserved_in_own_AFS": true,
+    "full_teacher_trajectory_not_downloaded": true
+  },
+  "previous_teacher_CUDA_qualification": {
+    "status": "pass",
+    "plan_sha256": "bc5e8b397accd4f585732803385516b755538f924afebc9e73fbc205dc763476",
+    "teacher_sha256": "0f4a7bc67ae9e3440711e401e37f8276102e59946177117d082a6d7aabe108b4",
+    "controls": {
+      "raw": true,
+      "corrected": true
+    },
+    "training_updates_at_gate": 0
+  },
+  "previous_to_current_teacher_variation_cause": "not established; do not ascribe it to old weight because no updates occurred",
+  "thresholds_changed": false,
+  "failed_teacher_promoted": false,
+  "new_checkpoint_created": false,
+  "new_candidate_CPU_or_CUDA_evaluation_claimed": false,
+  "prepared_CPU_assessment_executed": false,
+  "BONES_route": "paused",
+  "V2_report": "qualified-expert-v2-1031-report.html",
+  "V2_verified_videos_now": 29,
+  "V2_added_failure_videos": 8,
+  "automatic_GPU_resubmission_allowed": false
+}

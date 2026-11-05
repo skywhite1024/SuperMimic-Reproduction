@@ -1,5 +1,7 @@
 # Bounded teacher qualification, 2026-10-30
 
+> Follow-up, 2026-11-05: the historical controls below were later supplemented by three fixed repeats (2/3 contact-gate passes), and Qualified V2 was actually trained and evaluated but not adopted. Read the [current overview](site/index.html) and [repeat diagnostic](site/reports/acro-library-20261027-b/teacher8808-repro1031c-report.html). Preparation/qualification statements below describe their original 2026-10-30 cutoff.
+
 The frozen 101D stage 2 teacher fails all three protected motions under the unchanged strict tracking/contact contracts. It is not a qualified preservation target for all three. The previous 1000-update candidate remains unadopted and the unified 55-motion goal remains incomplete.
 
 | CPU control | Original hard gate | Tracking | Contact geometry | Combined strict | Protected strict |

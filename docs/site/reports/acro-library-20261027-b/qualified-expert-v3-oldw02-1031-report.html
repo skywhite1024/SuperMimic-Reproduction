@@ -1,0 +1,31 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SuperMimic oldw02 · 教师门槛结果</title><style>body{max-width:1100px;margin:32px auto;padding:0 22px;font:16px/1.7 system-ui,"Microsoft YaHei",sans-serif;color:#18273c}h1{font-size:28px}.card{padding:18px;background:#f1f5fa;border-radius:8px;margin:18px 0}table{border-collapse:collapse;width:100%}td,th{border:1px solid #cdd7e4;padding:9px;text-align:left}.scroll{overflow:auto}pre{white-space:pre-wrap;overflow-wrap:anywhere}img{max-width:100%}a{color:#1656a4}</style>
+<nav class="publication-navigation" style="padding:14px 22px;background:#e9efe6;color:#203b31;font:14px system-ui"><a href="../../index.html">← 人形研究总览与最新结论</a> · 2026-11-05归档</nav><h1>SuperMimic G1：oldw02 教师门槛结果</h1><p>2026-10-31 · 同一 30K 父策略 · 旧教师权重 0.2，新教师权重 0.05</p>
+<div class="card"><strong>本轮云端训练为 0 更新，未检验旧教师权重 0.2 的训练效果。</strong><p>修复启动路径后，raw 教师穿地深度超过冻结上限，双门槛没有全部通过。程序在训练前正常结束，未创建新候选模型。平台“成功”表示有限程序正常退出，不表示教师验收通过或完整复现完成。</p></div>
+<h2>实际 CUDA 教师门槛</h2><div class="scroll"><table><thead><tr><th>参考版本</th><th>跟踪</th><th>意外躯干接触采样</th><th>初始 100 ms 后最大穿地</th><th>冻结上限</th><th>联合门槛</th></tr></thead><tbody><tr><td>raw</td><td>通过</td><td>0</td><td>53.443 mm</td><td>50.000 mm</td><td>失败</td></tr><tr><td>corrected</td><td>通过</td><td>0</td><td>46.808 mm</td><td>50.000 mm</td><td>通过</td></tr></tbody></table></div><p>raw 超出上限约 3.443 mm。没有降低阈值、重复执行以筛选有利结果、提升失败教师资格或继续训练。两个完整教师控制均已执行，原始物理轨迹与采样保留在个人 AFS。</p>
+<h2>执行记录与边界</h2><ul><li>首次启动：UID <code>6740112b9ef8455cb40c97521da08626</code>，遗漏 SUPERMIMIC_UNI，0 更新。启动路径已修复，原失败收据和日志保留。</li><li>修复任务：UID <code>13febf90464e4f2290866974707a3fe0</code>，实际 H100 80GB、4 核、64 GiB，0 重启；程序约 173.715 秒后因教师门槛结束，平台 19:50:53 进入终态。</li><li>两项指标回收均为 0 GPU、2 核、4 GiB、程序限时 30 秒的只读作业，均已成功结束。本轮没有启动 CCI。</li><li>既有 CPU6 工程检查共 6 更新，收据修复额外更新为 0。CPU6 不是本轮云端候选训练，未作为云端父模型。</li><li>此前同一教师资格记录通过 raw／校准，本次 raw 未过。差异原因尚未确定，不能归因于未执行的权重 0.2 训练。</li><li>完整 55 动作目标尚未达成，未采用新模型；不自动提交另一轮 GPU 实验。</li></ul>
+<h2>可核对材料</h2><p><a href="evidence/qualified-expert-v3-oldw02-final-resource-verification1031.json">本轮四项作业终态与资源记录</a></p><p><a href="evidence/qualified-expert-v3-oldw02-final-assessment1031.json">完整结果 JSON</a> · <a href="downloaded/qualified-expert-v3-oldw02-gates1031b/recovered.json">哈希核验后的门槛证据</a> · <a href="evidence/qualified-expert-v3-oldw02-repair1031b.json">路径修复记录</a> · <a href="qualified-expert-v2-1031-report.html">上一轮完整报告与 29 段视频</a></p>
+<p>上一轮原 21 段视频保持不变，另补齐 6 段 raw 新动作失败和 2 段旧动作失败视频，均保留完整失败尾段并通过全片解码。没有重新推理或训练。</p><details><summary>修复 GPU 任务的平台终态截图</summary><img src="evidence/qualified-expert-v3-oldw02-terminal1031b.svg" alt="修复任务平台成功终态；科学结果为教师门槛失败零更新"></details>
+<details><summary>门槛原始数值与来源哈希</summary><pre>{
+  &quot;raw&quot;: {
+    &quot;passed&quot;: false,
+    &quot;tracking_passed&quot;: true,
+    &quot;unexpected_trunk_contact_samples&quot;: 0,
+    &quot;unexpected_trunk_contact_samples_max&quot;: 0,
+    &quot;actual_min_after_initial_100ms_m&quot;: -0.05344258250133035,
+    &quot;allowed_penetration_m&quot;: 0.05,
+    &quot;contact_samples_bytes&quot;: 92006,
+    &quot;contact_samples_sha256&quot;: &quot;6fd2e754a8a8f3cdb673e403fcda0b39a01fa2be3eeffa6b29793e9afcca2a2e&quot;,
+    &quot;tracking_failed_checks&quot;: []
+  },
+  &quot;corrected&quot;: {
+    &quot;passed&quot;: true,
+    &quot;tracking_passed&quot;: true,
+    &quot;unexpected_trunk_contact_samples&quot;: 0,
+    &quot;unexpected_trunk_contact_samples_max&quot;: 0,
+    &quot;actual_min_after_initial_100ms_m&quot;: -0.046807793674332764,
+    &quot;allowed_penetration_m&quot;: 0.05,
+    &quot;contact_samples_bytes&quot;: 92022,
+    &quot;contact_samples_sha256&quot;: &quot;e42c70bb9d4cf1621164622cecdfd3e2aaccd42c8530f2dba51c5edece7e6a10&quot;,
+    &quot;tracking_failed_checks&quot;: []
+  }
+}</pre></details></html>

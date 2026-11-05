@@ -1,0 +1,278 @@
+{
+  "run": "unified-stage2-corrected-cuda-all55",
+  "new_denominator": 15,
+  "tracking_contract_sha256": "0036d9f100203e9d25990c47dfb5666508672fafbea60156a33fb63e56c1dcb1",
+  "contact_contract_sha256": "b3b52cbe3bb45696ca0e9de603db4d01270bc275ff376c2f2a3c370d171390a8",
+  "original_hard_gate_passed": 15,
+  "tracking_quality_passed": 11,
+  "contact_review_passed": 11,
+  "combined_engineering_passed": 7,
+  "clips": [
+    {
+      "clip": "143_34_stageii_unitree_g1",
+      "original_hard_gate_passed": true,
+      "tracking_quality_passed": true,
+      "contact_review_passed": true,
+      "combined_engineering_passed": true,
+      "contact_checks": {
+        "no_unexpected_trunk_contact": true,
+        "penetration_within_engineering_limit": true
+      },
+      "unexpected_trunk_contact_samples": 0,
+      "unexpected_trunk_contact_events": [],
+      "actual_min_after_initial_100ms_m": -0.014925518353412031,
+      "tracking_failed_checks": [],
+      "contact_force_measured": false
+    },
+    {
+      "clip": "85_06_stageii_unitree_g1",
+      "original_hard_gate_passed": true,
+      "tracking_quality_passed": true,
+      "contact_review_passed": false,
+      "combined_engineering_passed": false,
+      "contact_checks": {
+        "no_unexpected_trunk_contact": false,
+        "penetration_within_engineering_limit": true
+      },
+      "unexpected_trunk_contact_samples": 2,
+      "unexpected_trunk_contact_events": [
+        {
+          "time_s": 6.62,
+          "bodies": [
+            "pelvis_contour_link"
+          ]
+        },
+        {
+          "time_s": 6.640000000000001,
+          "bodies": [
+            "pelvis_contour_link"
+          ]
+        }
+      ],
+      "actual_min_after_initial_100ms_m": -0.03763293065903382,
+      "tracking_failed_checks": [],
+      "contact_force_measured": false
+    },
+    {
+      "clip": "85_07_stageii_unitree_g1",
+      "original_hard_gate_passed": true,
+      "tracking_quality_passed": true,
+      "contact_review_passed": true,
+      "combined_engineering_passed": true,
+      "contact_checks": {
+        "no_unexpected_trunk_contact": true,
+        "penetration_within_engineering_limit": true
+      },
+      "unexpected_trunk_contact_samples": 0,
+      "unexpected_trunk_contact_events": [],
+      "actual_min_after_initial_100ms_m": -0.03411117677798539,
+      "tracking_failed_checks": [],
+      "contact_force_measured": false
+    },
+    {
+      "clip": "88_03_stageii_unitree_g1",
+      "original_hard_gate_passed": true,
+      "tracking_quality_passed": true,
+      "contact_review_passed": true,
+      "combined_engineering_passed": true,
+      "contact_checks": {
+        "no_unexpected_trunk_contact": true,
+        "penetration_within_engineering_limit": true
+      },
+      "unexpected_trunk_contact_samples": 0,
+      "unexpected_trunk_contact_events": [],
+      "actual_min_after_initial_100ms_m": -0.003113991111268008,
+      "tracking_failed_checks": [],
+      "contact_force_measured": false
+    },
+    {
+      "clip": "88_06_stageii_unitree_g1",
+      "original_hard_gate_passed": true,
+      "tracking_quality_passed": false,
+      "contact_review_passed": true,
+      "combined_engineering_passed": false,
+      "contact_checks": {
+        "no_unexpected_trunk_contact": true,
+        "penetration_within_engineering_limit": true
+      },
+      "unexpected_trunk_contact_samples": 0,
+      "unexpected_trunk_contact_events": [],
+      "actual_min_after_initial_100ms_m": -0.03445291792566701,
+      "tracking_failed_checks": [
+        "norm_return_original"
+      ],
+      "contact_force_measured": false
+    },
+    {
+      "clip": "88_07_stageii_unitree_g1",
+      "original_hard_gate_passed": true,
+      "tracking_quality_passed": false,
+      "contact_review_passed": true,
+      "combined_engineering_passed": false,
+      "contact_checks": {
+        "no_unexpected_trunk_contact": true,
+        "penetration_within_engineering_limit": true
+      },
+      "unexpected_trunk_contact_samples": 0,
+      "unexpected_trunk_contact_events": [],
+      "actual_min_after_initial_100ms_m": -0.0316159422086167,
+      "tracking_failed_checks": [
+        "root_xy_rmse_m",
+        "root_xy_peak_m",
+        "body_global_mean_m",
+        "body_local_mean_m",
+        "yaw_rmse_deg",
+        "norm_return_original"
+      ],
+      "contact_force_measured": false
+    },
+    {
+      "clip": "88_08_stageii_unitree_g1",
+      "original_hard_gate_passed": true,
+      "tracking_quality_passed": false,
+      "contact_review_passed": true,
+      "combined_engineering_passed": false,
+      "contact_checks": {
+        "no_unexpected_trunk_contact": true,
+        "penetration_within_engineering_limit": true
+      },
+      "unexpected_trunk_contact_samples": 0,
+      "unexpected_trunk_contact_events": [],
+      "actual_min_after_initial_100ms_m": -0.031664933508494066,
+      "tracking_failed_checks": [
+        "norm_return_original"
+      ],
+      "contact_force_measured": false
+    },
+    {
+      "clip": "88_09_stageii_unitree_g1",
+      "original_hard_gate_passed": true,
+      "tracking_quality_passed": false,
+      "contact_review_passed": true,
+      "combined_engineering_passed": false,
+      "contact_checks": {
+        "no_unexpected_trunk_contact": true,
+        "penetration_within_engineering_limit": true
+      },
+      "unexpected_trunk_contact_samples": 0,
+      "unexpected_trunk_contact_events": [],
+      "actual_min_after_initial_100ms_m": -0.04372284566119067,
+      "tracking_failed_checks": [
+        "norm_return_original"
+      ],
+      "contact_force_measured": false
+    },
+    {
+      "clip": "88_10_stageii_unitree_g1",
+      "original_hard_gate_passed": true,
+      "tracking_quality_passed": true,
+      "contact_review_passed": true,
+      "combined_engineering_passed": true,
+      "contact_checks": {
+        "no_unexpected_trunk_contact": true,
+        "penetration_within_engineering_limit": true
+      },
+      "unexpected_trunk_contact_samples": 0,
+      "unexpected_trunk_contact_events": [],
+      "actual_min_after_initial_100ms_m": -0.015542027178931026,
+      "tracking_failed_checks": [],
+      "contact_force_measured": false
+    },
+    {
+      "clip": "88_11_stageii_unitree_g1",
+      "original_hard_gate_passed": true,
+      "tracking_quality_passed": true,
+      "contact_review_passed": true,
+      "combined_engineering_passed": true,
+      "contact_checks": {
+        "no_unexpected_trunk_contact": true,
+        "penetration_within_engineering_limit": true
+      },
+      "unexpected_trunk_contact_samples": 0,
+      "unexpected_trunk_contact_events": [],
+      "actual_min_after_initial_100ms_m": -0.02010850509902534,
+      "tracking_failed_checks": [],
+      "contact_force_measured": false
+    },
+    {
+      "clip": "89_01_stageii_unitree_g1",
+      "original_hard_gate_passed": true,
+      "tracking_quality_passed": true,
+      "contact_review_passed": true,
+      "combined_engineering_passed": true,
+      "contact_checks": {
+        "no_unexpected_trunk_contact": true,
+        "penetration_within_engineering_limit": true
+      },
+      "unexpected_trunk_contact_samples": 0,
+      "unexpected_trunk_contact_events": [],
+      "actual_min_after_initial_100ms_m": -0.02101774732090293,
+      "tracking_failed_checks": [],
+      "contact_force_measured": false
+    },
+    {
+      "clip": "90_08_stageii_unitree_g1",
+      "original_hard_gate_passed": true,
+      "tracking_quality_passed": true,
+      "contact_review_passed": false,
+      "combined_engineering_passed": false,
+      "contact_checks": {
+        "no_unexpected_trunk_contact": true,
+        "penetration_within_engineering_limit": false
+      },
+      "unexpected_trunk_contact_samples": 0,
+      "unexpected_trunk_contact_events": [],
+      "actual_min_after_initial_100ms_m": -0.054801083029398345,
+      "tracking_failed_checks": [],
+      "contact_force_measured": false
+    },
+    {
+      "clip": "90_14_stageii_unitree_g1",
+      "original_hard_gate_passed": true,
+      "tracking_quality_passed": true,
+      "contact_review_passed": false,
+      "combined_engineering_passed": false,
+      "contact_checks": {
+        "no_unexpected_trunk_contact": true,
+        "penetration_within_engineering_limit": false
+      },
+      "unexpected_trunk_contact_samples": 0,
+      "unexpected_trunk_contact_events": [],
+      "actual_min_after_initial_100ms_m": -0.0504045565942443,
+      "tracking_failed_checks": [],
+      "contact_force_measured": false
+    },
+    {
+      "clip": "90_15_stageii_unitree_g1",
+      "original_hard_gate_passed": true,
+      "tracking_quality_passed": true,
+      "contact_review_passed": false,
+      "combined_engineering_passed": false,
+      "contact_checks": {
+        "no_unexpected_trunk_contact": true,
+        "penetration_within_engineering_limit": false
+      },
+      "unexpected_trunk_contact_samples": 0,
+      "unexpected_trunk_contact_events": [],
+      "actual_min_after_initial_100ms_m": -0.05173683095291643,
+      "tracking_failed_checks": [],
+      "contact_force_measured": false
+    },
+    {
+      "clip": "90_19_stageii_unitree_g1",
+      "original_hard_gate_passed": true,
+      "tracking_quality_passed": true,
+      "contact_review_passed": true,
+      "combined_engineering_passed": true,
+      "contact_checks": {
+        "no_unexpected_trunk_contact": true,
+        "penetration_within_engineering_limit": true
+      },
+      "unexpected_trunk_contact_samples": 0,
+      "unexpected_trunk_contact_events": [],
+      "actual_min_after_initial_100ms_m": -0.04140765214988017,
+      "tracking_failed_checks": [],
+      "contact_force_measured": false
+    }
+  ]
+}

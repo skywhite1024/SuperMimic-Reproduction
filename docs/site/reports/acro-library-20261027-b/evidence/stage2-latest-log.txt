@@ -1,0 +1,330 @@
+UNIFIED_STAGE2_START {"status": "running", "config": {"gpu_count": 1, "gpu_name": "NVIDIA H100 80GB HBM3", "cpu_max": "400000 100000", "memory_max": "68719476736", "new_updates": 4000, "wm_only_updates": 400, "num_envs": 1024, "maximum_program_seconds": 7200, "reference_variant": "ground-calibration-v1", "new_denominator": 15, "old_denominator": 40, "thresholds_unchanged": true, "one_policy": true}, "initial_full_sha256": "56a6714aa7e79f063f4089c7860a1d00195601f178223bf42b65acd0e587910e", "plan_sha256": "435afa722fb962dcf7b7c889901f89c82470a6d0dedf1fe29fb54dd0b0d5da98"}
+Returning existing local_dir `/mnt/afs/USER_ID/SuperMimic/lafan1-20261024/uni/.venv/lib/python3.12/site-packages/unilab/assets` as remote repo cannot be accessed in `snapshot_download` (Cannot reach https://huggingface.co/api/datasets/unilabsim/unilab-robots/revision/main: offline mode is enabled. To disable it, please unset the `HF_HUB_OFFLINE` environment variable.).
+Returning existing local_dir `/mnt/afs/USER_ID/SuperMimic/lafan1-20261024/uni/.venv/lib/python3.12/site-packages/unilab/assets` as remote repo cannot be accessed in `snapshot_download` (Cannot reach https://huggingface.co/api/datasets/unilabsim/unilab-robots/revision/main: offline mode is enabled. To disable it, please unset the `HF_HUB_OFFLINE` environment variable.).
+Warp 1.16.0 initialized:
+   CUDA Toolkit 12.9, Driver 13.0
+   Devices:
+     "cpu"      : "x86_64"
+     "cuda:0"   : "NVIDIA H100 80GB HBM3" (79 GiB, sm_90, mempool enabled)
+   Kernel cache:
+     /root/.cache/warp/1.16.0
+Module mujoco_warp._src.smooth c4020f1 load on device 'cuda:0' took 7437.46 ms  (compiled)
+Module _nxn_broadphase__locals__kernel_ada2f1e9 ada2f1e load on device 'cuda:0' took 492.17 ms  (compiled)
+Module _primitive_narrowphase__locals__primitive_narrowphase_e65855a2 e65855a load on device 'cuda:0' took 1908.62 ms  (compiled)
+Module mujoco_warp._src.constraint 36c8060 load on device 'cuda:0' took 94.47 ms  (compiled)
+Module _friction_dof__locals__kernel_7cd24d9b 7cd24d9 load on device 'cuda:0' took 242.67 ms  (compiled)
+Module _limit_slide_hinge__locals__kernel_f0b85ba4 f0b85ba load on device 'cuda:0' took 258.90 ms  (compiled)
+Module _efc_contact_init__locals__kernel_517b063b 517b063 load on device 'cuda:0' took 232.44 ms  (compiled)
+Module _efc_contact_jac_sparse__locals__kernel_c9492143 c949214 load on device 'cuda:0' took 230.25 ms  (compiled)
+Module _efc_contact_update__locals__kernel_8c34abe6 8c34abe load on device 'cuda:0' took 263.34 ms  (compiled)
+Module mujoco_warp._src.sensor de892d8 load on device 'cuda:0' took 6549.82 ms  (compiled)
+Module mujoco_warp._src.forward bfd9fb5 load on device 'cuda:0' took 2133.31 ms  (compiled)
+Module mujoco_warp._src.passive d8c18c6 load on device 'cuda:0' took 2946.91 ms  (compiled)
+Module mujoco_warp._src.forward b068ad6 load on device 'cuda:0' took 1694.43 ms  (compiled)
+Module _qfrc_smooth__locals__kernel_b98573a2 b98573a load on device 'cuda:0' took 108.08 ms  (compiled)
+Module mujoco_warp._src.support ca784c5 load on device 'cuda:0' took 347.26 ms  (compiled)
+Module _tile_cholesky_factorize_solve_block__locals__kernel_261a098f 3bf2aae load on device 'cuda:0' took 6404.48 ms  (compiled)
+Module _solve_init_dof__locals__kernel_43b50934 43b5093 load on device 'cuda:0' took 117.39 ms  (compiled)
+Module mujoco_warp._src.solver 3a105a0 load on device 'cuda:0' took 2502.33 ms  (compiled)
+Module _solve_init_jaref_kernel__locals__kernel_0a3bf9f9 0a3bf9f load on device 'cuda:0' took 171.16 ms  (compiled)
+Module mul_m_kernel__locals___mul_m_dc7994af dc7994a load on device 'cuda:0' took 270.95 ms  (compiled)
+Module _update_constraint_efc__locals__kernel_64b75440 64b7544 load on device 'cuda:0' took 195.33 ms  (compiled)
+Module _update_constraint_init_qfrc_constraint_sparse__locals__kernel_9de65e8f 9de65e8 load on device 'cuda:0' took 130.90 ms  (compiled)
+Module _update_gradient_zero_grad_dot__locals__kernel_817148e6 817148e load on device 'cuda:0' took 136.25 ms  (compiled)
+Module _update_gradient_grad__locals__kernel_00c9ca8d 00c9ca8 load on device 'cuda:0' took 105.19 ms  (compiled)
+Module _update_gradient_init_h_sparse__locals__kernel_474f4a87 474f4a8 load on device 'cuda:0' took 120.56 ms  (compiled)
+Module _JTDAJ_sparse__locals__kernel_317c6322 317c632 load on device 'cuda:0' took 217.23 ms  (compiled)
+Module _JTDAJ_sparse__locals__kernel_317c6322 79f35ed load on device 'cuda:0' took 601.34 ms  (compiled)
+Module _update_gradient_cholesky_blocked__locals__kernel_0387d6d7 89d545c load on device 'cuda:0' took 7433.77 ms  (compiled)
+Module _linesearch_jv_fused_kernel__locals__kernel_9cd9bef4 9cd9bef load on device 'cuda:0' took 200.53 ms  (compiled)
+Module _linesearch_iterative_kernel__locals__kernel_273b7969 0a8a16a load on device 'cuda:0' took 742.77 ms  (compiled)
+Module _update_constraint_efc__locals__kernel_dc2dbb33 dc2dbb3 load on device 'cuda:0' took 209.38 ms  (compiled)
+Module _update_gradient_zero_grad_dot__locals__kernel_932c92ad 932c92a load on device 'cuda:0' took 122.02 ms  (compiled)
+Module _update_gradient_grad__locals__kernel_4c37eb70 4c37eb7 load on device 'cuda:0' took 134.61 ms  (compiled)
+Module _update_gradient_h_incremental_sparse__locals__kernel_1f3edd9a 1f3edd9 load on device 'cuda:0' took 156.42 ms  (compiled)
+Module _update_gradient_cholesky_blocked_skip_unchanged__locals__kernel_f4d46d30 8d11576 load on device 'cuda:0' took 5998.49 ms  (compiled)
+Module reset_data__locals__reset_xfrc_applied_fe5fcb03 fe5fcb0 load on device 'cuda:0' took 100.67 ms  (compiled)
+Module reset_data__locals__reset_M_e5e6cdd0 e5e6cdd load on device 'cuda:0' took 132.51 ms  (compiled)
+Module reset_data__locals__reset_mocap_9faa71ef 9faa71e load on device 'cuda:0' took 118.80 ms  (compiled)
+Module reset_data__locals__reset_contact_7aad0792 7aad079 load on device 'cuda:0' took 148.35 ms  (compiled)
+Module reset_data__locals__reset_sleep_4dc3e6fb 4dc3e6f load on device 'cuda:0' took 127.31 ms  (compiled)
+Module reset_data__locals__reset_nworld_bb6e9693 bb6e969 load on device 'cuda:0' took 256.03 ms  (compiled)
+Module mujoco_warp._src.derivative 833f5d0 load on device 'cuda:0' took 1891.64 ms  (compiled)
+Module _next_time_builder__locals___next_time_a67f49d6 a67f49d load on device 'cuda:0' took 149.56 ms  (compiled)
+Module mujoco_warp._src.io b4940be load on device 'cuda:0' took 4438.62 ms  (compiled)
+Module _tile_cholesky_factorize_block__locals__kernel_f85f6d77 0d20273 load on device 'cuda:0' took 2288.34 ms  (compiled)
+Module _tile_cholesky_solve_block__locals__kernel_7caaebf2 eb03c6d load on device 'cuda:0' took 2990.58 ms  (compiled)
+TensorBoard logging to: 
+/mnt/afs/USER_ID/SuperMimic/acro-library-20261027-b/runs/unified-h100-stage2-4
+000
+CPU: Intel(R) Xeon(R) Platinum 8468V (96 cores) | GPU: NVIDIA H100 80GB HBM3 
+(81559 MiB) | Memory: 2011.2 GB
+Warming up...
+Replay buffer: 64/300 steps (21%)
+Saved checkpoint: 
+/mnt/afs/USER_ID/SuperMimic/acro-library-20261027-b/runs/unified-h100-stage2-4
+000/ckpt_022500.pt
+Saved checkpoint: 
+/mnt/afs/USER_ID/SuperMimic/acro-library-20261027-b/runs/unified-h100-stage2-4
+000/ckpt_023000.pt
+Saved checkpoint: 
+/mnt/afs/USER_ID/SuperMimic/acro-library-20261027-b/runs/unified-h100-stage2-4
+000/ckpt_023500.pt
+Saved checkpoint: 
+/mnt/afs/USER_ID/SuperMimic/acro-library-20261027-b/runs/unified-h100-stage2-4
+000/ckpt_024000.pt
+Saved checkpoint: 
+/mnt/afs/USER_ID/SuperMimic/acro-library-20261027-b/runs/unified-h100-stage2-4
+000/ckpt_024500.pt
+Saved checkpoint: 
+/mnt/afs/USER_ID/SuperMimic/acro-library-20261027-b/runs/unified-h100-stage2-4
+000/ckpt_025000.pt
+Saved checkpoint: 
+/mnt/afs/USER_ID/SuperMimic/acro-library-20261027-b/runs/unified-h100-stage2-4
+000/ckpt_025500.pt
+Saved checkpoint: 
+/mnt/afs/USER_ID/SuperMimic/acro-library-20261027-b/runs/unified-h100-stage2-4
+000/ckpt_026000.pt
+╭───────────  🚀 SuperMimic | SuperMimicManagerBasedRlEnv | mjwarp  ───────────╮
+│ WM-only 22400/22400 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% done │
+│ Joint 3600/3600     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% done │
+│ ⏱ 50m57s | Joint done | 1.26 it/s | 3,224 steps/s | Saved checkpoint: /mnt/… │
+│ CPU: Intel(R) Xeon(R) Platinum 8468V (96 cores) | GPU: NVIDIA H100 80GB HBM… │
+│                                                                              │
+│ Metrics                                                                Value │
+│ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ │
+│ wm_loss                                                               0.1921 │
+│ wm_err8                                                               0.3411 │
+│ pi_loss                                                              -11.335 │
+│ v_loss                                                                0.0266 │
+│ imag_rew                                                              0.8561 │
+│ imag_survival                                                         0.9951 │
+│ pi_gradnorm                                                            3.320 │
+│ lr                                                                  4.87e-05 │
+│                                                                              │
+│ Reward / Episode                                                       Value │
+│ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ │
+│ sim_rew ━                                          Mean 0.8277 / Peak 0.8384 │
+│                                             ▄▅▅▅▅▅▄▄▃▃▃▄▃▃▄▃▃▂▂▁▁▂▁▃▄▅▅▆▇▆█▆ │
+│ ep_len                                                                 291.5 │
+│ ep_ret_norm                                                           0.9658 │
+│ term_frac                                                               2.6% │
+│                                                                              │
+│ Timing (per iteration)                                                 Value │
+│ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ │
+│ Collect                                                        266.2ms   30% │
+│ Learn                                                          608.5ms   70% │
+│ Total                                                          874.7ms  100% │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭────────────────────────────── Training Summary ──────────────────────────────╮
+│ Training complete                                                            │
+│   Algo: SuperMimic | Env: SuperMimicManagerBasedRlEnv | Backend: mjwarp      │
+│   Iterations: 26000/26000                                                    │
+│   Wall time: 50m57s                                                          │
+│   CPU: Intel(R) Xeon(R) Platinum 8468V (96 cores) | GPU: NVIDIA H100 80GB    │
+│ HBM3 (81559 MiB) | Memory: 2011.2 GB                                         │
+│   Final: wm_loss=0.1921, wm_err8=0.3411, pi_loss=-11.335, v_loss=0.0266,     │
+│ imag_rew=0.8561, imag_survival=0.9951, pi_gradnorm=3.320, lr=4.87e-05        │
+│   Last checkpoint:                                                           │
+│ /mnt/afs/USER_ID/SuperMimic/acro-library-20261027-b/runs/unified-h100-stag │
+│ e2-4000/ckpt_026000.pt                                                       │
+╰──────────────────────────────────────────────────────────────────────────────╯
+UNIFIED_TRAINING_VERIFIED {"status": "updates_and_save_readback_verified", "device": "cuda", "new_updates": 4000, "world_model_warmup": 400, "parent_sha256": "56a6714aa7e79f063f4089c7860a1d00195601f178223bf42b65acd0e587910e", "before": {"wm": "ca9faab3221440e22512f5e2e0c719643aaf7da1a54038020e1861ea0f51c666", "pi": "cc2692ccc4e60a9741a047ef54dfda7f6ffece8ab7375758c843e2dcfee1e277", "critic": "0a8d02384abdcf06fcaf6bb55b646c3519732758a03a9a35a54b2321799ef9a0"}, "after": {"wm": "3591d0f818cede8732e2da7eb0c4c5ef6da78cdb9e9441fc29b942143f8e2f2e", "pi": "d3a1b2eba902d912d297dc5e7c318c240bdfa00912a66fe721ce32c36a6631a8", "critic": "3a7d3d639d4e02089a6376927c225144a840d6748cbc83e9fa272d937e13b745"}, "normalizer_tensors_unchanged": true, "wall_seconds": 3067.0212765298784, "sampling": {"new_library_mass": 0.6, "lafan_rehearsal_mass": 0.4, "within_clip_sampling": "native past-return priority, normalized independently inside each clip", "clip_reset_samples": {"143_34_stageii_unitree_g1": 1407, "85_06_stageii_unitree_g1": 1392, "85_07_stageii_unitree_g1": 1334, "88_03_stageii_unitree_g1": 1437, "88_06_stageii_unitree_g1": 1341, "88_07_stageii_unitree_g1": 1437, "88_08_stageii_unitree_g1": 1372, "88_09_stageii_unitree_g1": 1391, "88_10_stageii_unitree_g1": 1369, "88_11_stageii_unitree_g1": 1449, "89_01_stageii_unitree_g1": 1441, "90_08_stageii_unitree_g1": 1424, "90_14_stageii_unitree_g1": 1391, "90_15_stageii_unitree_g1": 1410, "90_19_stageii_unitree_g1": 1375, "dance1_subject1": 352, "dance1_subject2": 352, "dance1_subject3": 370, "dance2_subject1": 346, "dance2_subject2": 375, "dance2_subject3": 362, "dance2_subject4": 369, "dance2_subject5": 346, "fallAndGetUp1_subject1": 359, "fallAndGetUp1_subject4": 330, "fallAndGetUp1_subject5": 349, "fallAndGetUp2_subject2": 382, "fallAndGetUp2_subject3": 362, "fallAndGetUp3_subject1": 339, "fight1_subject2": 348, "fight1_subject3": 324, "fight1_subject5": 325, "fightAndSports1_subject1": 351, "fightAndSports1_subject4": 352, "jumps1_subject1": 358, "jumps1_subject2": 346, "jumps1_subject5": 359, "run1_subject2": 392, "run1_subject5": 345, "run2_subject1": 330, "run2_subject4": 366, "sprint1_subject2": 360, "sprint1_subject4": 356, "walk1_subject1": 300, "walk1_subject2": 355, "walk1_subject5": 365, "walk2_subject1": 348, "walk2_subject3": 355, "walk2_subject4": 367, "walk3_subject1": 344, "walk3_subject2": 322, "walk3_subject3": 327, "walk3_subject4": 333, "walk3_subject5": 340, "walk4_subject1": 344}, "clip_prior_mass": {"143_34_stageii_unitree_g1": 0.04000000283122063, "85_06_stageii_unitree_g1": 0.04000000283122063, "85_07_stageii_unitree_g1": 0.04000000283122063, "88_03_stageii_unitree_g1": 0.04000000283122063, "88_06_stageii_unitree_g1": 0.04000000283122063, "88_07_stageii_unitree_g1": 0.04000000283122063, "88_08_stageii_unitree_g1": 0.04000000283122063, "88_09_stageii_unitree_g1": 0.04000000283122063, "88_10_stageii_unitree_g1": 0.04000000283122063, "88_11_stageii_unitree_g1": 0.04000000283122063, "89_01_stageii_unitree_g1": 0.04000000283122063, "90_08_stageii_unitree_g1": 0.04000000283122063, "90_14_stageii_unitree_g1": 0.04000000283122063, "90_15_stageii_unitree_g1": 0.04000000283122063, "90_19_stageii_unitree_g1": 0.04000000283122063, "dance1_subject1": 0.010000000707805157, "dance1_subject2": 0.010000000707805157, "dance1_subject3": 0.010000000707805157, "dance2_subject1": 0.010000000707805157, "dance2_subject2": 0.010000000707805157, "dance2_subject3": 0.010000000707805157, "dance2_subject4": 0.010000000707805157, "dance2_subject5": 0.010000000707805157, "fallAndGetUp1_subject1": 0.010000000707805157, "fallAndGetUp1_subject4": 0.010000000707805157, "fallAndGetUp1_subject5": 0.010000000707805157, "fallAndGetUp2_subject2": 0.010000000707805157, "fallAndGetUp2_subject3": 0.010000000707805157, "fallAndGetUp3_subject1": 0.010000000707805157, "fight1_subject2": 0.010000000707805157, "fight1_subject3": 0.010000000707805157, "fight1_subject5": 0.010000000707805157, "fightAndSports1_subject1": 0.010000000707805157, "fightAndSports1_subject4": 0.010000000707805157, "jumps1_subject1": 0.010000000707805157, "jumps1_subject2": 0.010000000707805157, "jumps1_subject5": 0.010000000707805157, "run1_subject2": 0.010000000707805157, "run1_subject5": 0.010000000707805157, "run2_subject1": 0.010000000707805157, "run2_subject4": 0.010000000707805157, "sprint1_subject2": 0.010000000707805157, "sprint1_subject4": 0.010000000707805157, "walk1_subject1": 0.010000000707805157, "walk1_subject2": 0.010000000707805157, "walk1_subject5": 0.010000000707805157, "walk2_subject1": 0.010000000707805157, "walk2_subject3": 0.010000000707805157, "walk2_subject4": 0.010000000707805157, "walk3_subject1": 0.010000000707805157, "walk3_subject2": 0.010000000707805157, "walk3_subject3": 0.010000000707805157, "walk3_subject4": 0.010000000707805157, "walk3_subject5": 0.010000000707805157, "walk4_subject1": 0.010000000707805157}}, "training_summary": {"completed": true, "iteration": 26000, "sim_steps": 187568128, "wall_time": 14880.006098031998, "wall_h": 4.1330891471438935, "wm_loss": 0.1984565505385399, "wm_err8": 0.32521802484989165, "pi_loss": -11.382973003387452, "v_loss": 0.023338467441499235, "imag_rew": 0.8599080383777619, "pi_gradnorm": 2.4538389611244202, "imag_survival": 0.9969073927402496, "sim_rew": 0.8277736711502075, "ep_len": 291.50616215477305, "ep_ret_norm": 0.9657557786496218, "term_frac": 0.025522041763341066, "it_per_s": 1.2533195320801445, "lr": 4.871723169689556e-05}, "variant": {"name": "unified-55-reference-tracker-101d-ground-stage2", "parent_observation_dim": 99, "observation_dim": 101, "new_observation": "fixed-world root XY error expressed in robot yaw frame, clipped to +/-3 m", "new_weights_and_optimizer_moments_zero_initialized": true, "initial_policy_identity_max_abs_error": 8.940696716308594e-07, "old_optimizer_counters_preserved": true, "replay_and_simulator_bit_exact_restore": false, "one_policy": true, "new_library_count": 15, "old_lafan_rehearsal_count": 40, "normalizers_fixed": true, "group_sampling_mass": {"new": 0.6, "lafan": 0.4}, "BONES_downloaded": false, "training_resets_allowed": true, "evaluation_requires_zero_resets_after_t0": true, "reference_variant": "ground-calibration-v1", "raw_reference_assessment_retained": true}, "physical_acceptance_inferred": false}
+UNIFIED_STAGE2_UPDATE_PROOF {"status": "updates_and_save_readback_verified", "device": "cuda", "new_updates": 4000, "world_model_warmup": 400, "parent_sha256": "56a6714aa7e79f063f4089c7860a1d00195601f178223bf42b65acd0e587910e", "before": {"wm": "ca9faab3221440e22512f5e2e0c719643aaf7da1a54038020e1861ea0f51c666", "pi": "cc2692ccc4e60a9741a047ef54dfda7f6ffece8ab7375758c843e2dcfee1e277", "critic": "0a8d02384abdcf06fcaf6bb55b646c3519732758a03a9a35a54b2321799ef9a0"}, "after": {"wm": "3591d0f818cede8732e2da7eb0c4c5ef6da78cdb9e9441fc29b942143f8e2f2e", "pi": "d3a1b2eba902d912d297dc5e7c318c240bdfa00912a66fe721ce32c36a6631a8", "critic": "3a7d3d639d4e02089a6376927c225144a840d6748cbc83e9fa272d937e13b745"}, "normalizer_tensors_unchanged": true, "wall_seconds": 3067.0212765298784, "sampling": {"new_library_mass": 0.6, "lafan_rehearsal_mass": 0.4, "within_clip_sampling": "native past-return priority, normalized independently inside each clip", "clip_reset_samples": {"143_34_stageii_unitree_g1": 1407, "85_06_stageii_unitree_g1": 1392, "85_07_stageii_unitree_g1": 1334, "88_03_stageii_unitree_g1": 1437, "88_06_stageii_unitree_g1": 1341, "88_07_stageii_unitree_g1": 1437, "88_08_stageii_unitree_g1": 1372, "88_09_stageii_unitree_g1": 1391, "88_10_stageii_unitree_g1": 1369, "88_11_stageii_unitree_g1": 1449, "89_01_stageii_unitree_g1": 1441, "90_08_stageii_unitree_g1": 1424, "90_14_stageii_unitree_g1": 1391, "90_15_stageii_unitree_g1": 1410, "90_19_stageii_unitree_g1": 1375, "dance1_subject1": 352, "dance1_subject2": 352, "dance1_subject3": 370, "dance2_subject1": 346, "dance2_subject2": 375, "dance2_subject3": 362, "dance2_subject4": 369, "dance2_subject5": 346, "fallAndGetUp1_subject1": 359, "fallAndGetUp1_subject4": 330, "fallAndGetUp1_subject5": 349, "fallAndGetUp2_subject2": 382, "fallAndGetUp2_subject3": 362, "fallAndGetUp3_subject1": 339, "fight1_subject2": 348, "fight1_subject3": 324, "fight1_subject5": 325, "fightAndSports1_subject1": 351, "fightAndSports1_subject4": 352, "jumps1_subject1": 358, "jumps1_subject2": 346, "jumps1_subject5": 359, "run1_subject2": 392, "run1_subject5": 345, "run2_subject1": 330, "run2_subject4": 366, "sprint1_subject2": 360, "sprint1_subject4": 356, "walk1_subject1": 300, "walk1_subject2": 355, "walk1_subject5": 365, "walk2_subject1": 348, "walk2_subject3": 355, "walk2_subject4": 367, "walk3_subject1": 344, "walk3_subject2": 322, "walk3_subject3": 327, "walk3_subject4": 333, "walk3_subject5": 340, "walk4_subject1": 344}, "clip_prior_mass": {"143_34_stageii_unitree_g1": 0.04000000283122063, "85_06_stageii_unitree_g1": 0.04000000283122063, "85_07_stageii_unitree_g1": 0.04000000283122063, "88_03_stageii_unitree_g1": 0.04000000283122063, "88_06_stageii_unitree_g1": 0.04000000283122063, "88_07_stageii_unitree_g1": 0.04000000283122063, "88_08_stageii_unitree_g1": 0.04000000283122063, "88_09_stageii_unitree_g1": 0.04000000283122063, "88_10_stageii_unitree_g1": 0.04000000283122063, "88_11_stageii_unitree_g1": 0.04000000283122063, "89_01_stageii_unitree_g1": 0.04000000283122063, "90_08_stageii_unitree_g1": 0.04000000283122063, "90_14_stageii_unitree_g1": 0.04000000283122063, "90_15_stageii_unitree_g1": 0.04000000283122063, "90_19_stageii_unitree_g1": 0.04000000283122063, "dance1_subject1": 0.010000000707805157, "dance1_subject2": 0.010000000707805157, "dance1_subject3": 0.010000000707805157, "dance2_subject1": 0.010000000707805157, "dance2_subject2": 0.010000000707805157, "dance2_subject3": 0.010000000707805157, "dance2_subject4": 0.010000000707805157, "dance2_subject5": 0.010000000707805157, "fallAndGetUp1_subject1": 0.010000000707805157, "fallAndGetUp1_subject4": 0.010000000707805157, "fallAndGetUp1_subject5": 0.010000000707805157, "fallAndGetUp2_subject2": 0.010000000707805157, "fallAndGetUp2_subject3": 0.010000000707805157, "fallAndGetUp3_subject1": 0.010000000707805157, "fight1_subject2": 0.010000000707805157, "fight1_subject3": 0.010000000707805157, "fight1_subject5": 0.010000000707805157, "fightAndSports1_subject1": 0.010000000707805157, "fightAndSports1_subject4": 0.010000000707805157, "jumps1_subject1": 0.010000000707805157, "jumps1_subject2": 0.010000000707805157, "jumps1_subject5": 0.010000000707805157, "run1_subject2": 0.010000000707805157, "run1_subject5": 0.010000000707805157, "run2_subject1": 0.010000000707805157, "run2_subject4": 0.010000000707805157, "sprint1_subject2": 0.010000000707805157, "sprint1_subject4": 0.010000000707805157, "walk1_subject1": 0.010000000707805157, "walk1_subject2": 0.010000000707805157, "walk1_subject5": 0.010000000707805157, "walk2_subject1": 0.010000000707805157, "walk2_subject3": 0.010000000707805157, "walk2_subject4": 0.010000000707805157, "walk3_subject1": 0.010000000707805157, "walk3_subject2": 0.010000000707805157, "walk3_subject3": 0.010000000707805157, "walk3_subject4": 0.010000000707805157, "walk3_subject5": 0.010000000707805157, "walk4_subject1": 0.010000000707805157}}, "training_summary": {"completed": true, "iteration": 26000, "sim_steps": 187568128, "wall_time": 14880.006098031998, "wall_h": 4.1330891471438935, "wm_loss": 0.1984565505385399, "wm_err8": 0.32521802484989165, "pi_loss": -11.382973003387452, "v_loss": 0.023338467441499235, "imag_rew": 0.8599080383777619, "pi_gradnorm": 2.4538389611244202, "imag_survival": 0.9969073927402496, "sim_rew": 0.8277736711502075, "ep_len": 291.50616215477305, "ep_ret_norm": 0.9657557786496218, "term_frac": 0.025522041763341066, "it_per_s": 1.2533195320801445, "lr": 4.871723169689556e-05}, "variant": {"name": "unified-55-reference-tracker-101d-ground-stage2", "parent_observation_dim": 99, "observation_dim": 101, "new_observation": "fixed-world root XY error expressed in robot yaw frame, clipped to +/-3 m", "new_weights_and_optimizer_moments_zero_initialized": true, "initial_policy_identity_max_abs_error": 8.940696716308594e-07, "old_optimizer_counters_preserved": true, "replay_and_simulator_bit_exact_restore": false, "one_policy": true, "new_library_count": 15, "old_lafan_rehearsal_count": 40, "normalizers_fixed": true, "group_sampling_mass": {"new": 0.6, "lafan": 0.4}, "BONES_downloaded": false, "training_resets_allowed": true, "evaluation_requires_zero_resets_after_t0": true, "reference_variant": "ground-calibration-v1", "raw_reference_assessment_retained": true}, "physical_acceptance_inferred": false}
+Returning existing local_dir `/mnt/afs/USER_ID/SuperMimic/lafan1-20261024/uni/.venv/lib/python3.12/site-packages/unilab/assets` as remote repo cannot be accessed in `snapshot_download` (Cannot reach https://huggingface.co/api/datasets/unilabsim/unilab-robots/revision/main: offline mode is enabled. To disable it, please unset the `HF_HUB_OFFLINE` environment variable.).
+Returning existing local_dir `/mnt/afs/USER_ID/SuperMimic/lafan1-20261024/uni/.venv/lib/python3.12/site-packages/unilab/assets` as remote repo cannot be accessed in `snapshot_download` (Cannot reach https://huggingface.co/api/datasets/unilabsim/unilab-robots/revision/main: offline mode is enabled. To disable it, please unset the `HF_HUB_OFFLINE` environment variable.).
+Warp 1.16.0 initialized:
+   CUDA Toolkit 12.9, Driver 13.0
+   Devices:
+     "cpu"      : "x86_64"
+     "cuda:0"   : "NVIDIA H100 80GB HBM3" (79 GiB, sm_90, mempool enabled)
+   Kernel cache:
+     /root/.cache/warp/1.16.0
+Module mujoco_warp._src.smooth c4020f1 load on device 'cuda:0' took 6.29 ms  (cached)
+Module _nxn_broadphase__locals__kernel_14023dd1 14023dd load on device 'cuda:0' took 942.45 ms  (compiled)
+Module _primitive_narrowphase__locals__primitive_narrowphase_e65855a2 e65855a load on device 'cuda:0' took 1.26 ms  (cached)
+Module mujoco_warp._src.constraint 36c8060 load on device 'cuda:0' took 0.49 ms  (cached)
+Module _friction_dof__locals__kernel_7cd24d9b 7cd24d9 load on device 'cuda:0' took 0.64 ms  (cached)
+Module _limit_slide_hinge__locals__kernel_f0b85ba4 f0b85ba load on device 'cuda:0' took 0.64 ms  (cached)
+Module _efc_contact_init__locals__kernel_517b063b 517b063 load on device 'cuda:0' took 0.57 ms  (cached)
+Module _efc_contact_jac_sparse__locals__kernel_c9492143 c949214 load on device 'cuda:0' took 0.56 ms  (cached)
+Module _efc_contact_update__locals__kernel_8c34abe6 8c34abe load on device 'cuda:0' took 0.60 ms  (cached)
+Module mujoco_warp._src.sensor de892d8 load on device 'cuda:0' took 2.85 ms  (cached)
+Module mujoco_warp._src.forward bfd9fb5 load on device 'cuda:0' took 1.42 ms  (cached)
+Module mujoco_warp._src.passive d8c18c6 load on device 'cuda:0' took 1.74 ms  (cached)
+Module mujoco_warp._src.forward b068ad6 load on device 'cuda:0' took 1.41 ms  (cached)
+Module _qfrc_smooth__locals__kernel_b98573a2 b98573a load on device 'cuda:0' took 0.50 ms  (cached)
+Module mujoco_warp._src.support ca784c5 load on device 'cuda:0' took 0.54 ms  (cached)
+Module _tile_cholesky_factorize_solve_block__locals__kernel_261a098f 3bf2aae load on device 'cuda:0' took 37.05 ms  (cached)
+Module _solve_init_dof__locals__kernel_43b50934 43b5093 load on device 'cuda:0' took 0.64 ms  (cached)
+Module mujoco_warp._src.solver 3a105a0 load on device 'cuda:0' took 2.36 ms  (cached)
+Module _solve_init_jaref_kernel__locals__kernel_0a3bf9f9 0a3bf9f load on device 'cuda:0' took 0.55 ms  (cached)
+Module mul_m_kernel__locals___mul_m_dc7994af dc7994a load on device 'cuda:0' took 0.58 ms  (cached)
+Module _update_constraint_efc__locals__kernel_64b75440 64b7544 load on device 'cuda:0' took 0.52 ms  (cached)
+Module _update_constraint_init_qfrc_constraint_sparse__locals__kernel_9de65e8f 9de65e8 load on device 'cuda:0' took 0.49 ms  (cached)
+Module _update_gradient_zero_grad_dot__locals__kernel_817148e6 817148e load on device 'cuda:0' took 0.46 ms  (cached)
+Module _update_gradient_grad__locals__kernel_00c9ca8d 00c9ca8 load on device 'cuda:0' took 0.46 ms  (cached)
+Module _update_gradient_init_h_sparse__locals__kernel_474f4a87 474f4a8 load on device 'cuda:0' took 0.77 ms  (cached)
+Module _JTDAJ_sparse__locals__kernel_317c6322 317c632 load on device 'cuda:0' took 0.55 ms  (cached)
+Module _JTDAJ_sparse__locals__kernel_317c6322 79f35ed load on device 'cuda:0' took 0.48 ms  (cached)
+Module _update_gradient_cholesky_blocked__locals__kernel_0387d6d7 89d545c load on device 'cuda:0' took 85.78 ms  (cached)
+Module _linesearch_jv_fused_kernel__locals__kernel_9cd9bef4 9cd9bef load on device 'cuda:0' took 0.57 ms  (cached)
+Module _linesearch_iterative_kernel__locals__kernel_273b7969 0a8a16a load on device 'cuda:0' took 0.81 ms  (cached)
+Module _update_constraint_efc__locals__kernel_dc2dbb33 dc2dbb3 load on device 'cuda:0' took 0.56 ms  (cached)
+Module _update_gradient_zero_grad_dot__locals__kernel_932c92ad 932c92a load on device 'cuda:0' took 0.53 ms  (cached)
+Module _update_gradient_grad__locals__kernel_4c37eb70 4c37eb7 load on device 'cuda:0' took 0.51 ms  (cached)
+Module _update_gradient_h_incremental_sparse__locals__kernel_1f3edd9a 1f3edd9 load on device 'cuda:0' took 0.53 ms  (cached)
+Module _update_gradient_cholesky_blocked_skip_unchanged__locals__kernel_f4d46d30 8d11576 load on device 'cuda:0' took 93.93 ms  (cached)
+Module mujoco_warp._src.derivative 833f5d0 load on device 'cuda:0' took 1.23 ms  (cached)
+Module _next_time_builder__locals___next_time_a67f49d6 a67f49d load on device 'cuda:0' took 0.55 ms  (cached)
+Module reset_data__locals__reset_xfrc_applied_fe5fcb03 fe5fcb0 load on device 'cuda:0' took 0.51 ms  (cached)
+Module reset_data__locals__reset_M_e5e6cdd0 e5e6cdd load on device 'cuda:0' took 0.41 ms  (cached)
+Module reset_data__locals__reset_mocap_9faa71ef 9faa71e load on device 'cuda:0' took 0.43 ms  (cached)
+Module reset_data__locals__reset_contact_7aad0792 7aad079 load on device 'cuda:0' took 0.42 ms  (cached)
+Module reset_data__locals__reset_sleep_4dc3e6fb 4dc3e6f load on device 'cuda:0' took 0.41 ms  (cached)
+Module reset_data__locals__reset_nworld_bb6e9693 bb6e969 load on device 'cuda:0' took 0.50 ms  (cached)
+Module mujoco_warp._src.io b4940be load on device 'cuda:0' took 4.66 ms  (cached)
+Module _tile_cholesky_factorize_block__locals__kernel_f85f6d77 0d20273 load on device 'cuda:0' took 31.26 ms  (cached)
+Module _tile_cholesky_solve_block__locals__kernel_7caaebf2 eb03c6d load on device 'cuda:0' took 31.12 ms  (cached)
+LIBRARY_PHYSICAL_PROGRESS {"step": 0, "maximum": 13655, "resets": 0}
+LIBRARY_PHYSICAL_PROGRESS {"step": 500, "maximum": 13655, "resets": 0}
+LIBRARY_PHYSICAL_PROGRESS {"step": 1000, "maximum": 13655, "resets": 0}
+LIBRARY_PHYSICAL_PROGRESS {"step": 1500, "maximum": 13655, "resets": 0}
+LIBRARY_PHYSICAL_PROGRESS {"step": 2000, "maximum": 13655, "resets": 0}
+LIBRARY_PHYSICAL_PROGRESS {"step": 2500, "maximum": 13655, "resets": 0}
+LIBRARY_PHYSICAL_PROGRESS {"step": 3000, "maximum": 13655, "resets": 0}
+LIBRARY_PHYSICAL_PROGRESS {"step": 3500, "maximum": 13655, "resets": 0}
+LIBRARY_PHYSICAL_PROGRESS {"step": 4000, "maximum": 13655, "resets": 0}
+LIBRARY_PHYSICAL_PROGRESS {"step": 4500, "maximum": 13655, "resets": 0}
+LIBRARY_PHYSICAL_PROGRESS {"step": 5000, "maximum": 13655, "resets": 0}
+LIBRARY_PHYSICAL_PROGRESS {"step": 5500, "maximum": 13655, "resets": 0}
+LIBRARY_PHYSICAL_PROGRESS {"step": 6000, "maximum": 13655, "resets": 0}
+LIBRARY_PHYSICAL_PROGRESS {"step": 6500, "maximum": 13655, "resets": 0}
+LIBRARY_PHYSICAL_PROGRESS {"step": 7000, "maximum": 13655, "resets": 0}
+LIBRARY_PHYSICAL_PROGRESS {"step": 7500, "maximum": 13655, "resets": 0}
+LIBRARY_PHYSICAL_PROGRESS {"step": 8000, "maximum": 13655, "resets": 0}
+LIBRARY_PHYSICAL_PROGRESS {"step": 8500, "maximum": 13655, "resets": 0}
+LIBRARY_PHYSICAL_PROGRESS {"step": 9000, "maximum": 13655, "resets": 0}
+LIBRARY_PHYSICAL_PROGRESS {"step": 9500, "maximum": 13655, "resets": 0}
+LIBRARY_PHYSICAL_PROGRESS {"step": 10000, "maximum": 13655, "resets": 0}
+LIBRARY_PHYSICAL_PROGRESS {"step": 10500, "maximum": 13655, "resets": 0}
+LIBRARY_PHYSICAL_PROGRESS {"step": 11000, "maximum": 13655, "resets": 0}
+LIBRARY_PHYSICAL_PROGRESS {"step": 11500, "maximum": 13655, "resets": 0}
+LIBRARY_PHYSICAL_PROGRESS {"step": 12000, "maximum": 13655, "resets": 0}
+LIBRARY_PHYSICAL_PROGRESS {"step": 12500, "maximum": 13655, "resets": 0}
+LIBRARY_PHYSICAL_PROGRESS {"step": 13000, "maximum": 13655, "resets": 0}
+LIBRARY_PHYSICAL_PROGRESS {"step": 13500, "maximum": 13655, "resets": 0}
+LIBRARY_PHYSICAL_CLIP {"clip": "143_34_stageii_unitree_g1", "group": "new", "passed_original_hard_gate": true, "norm_return_original": 0.9465481638908386, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "85_06_stageii_unitree_g1", "group": "new", "passed_original_hard_gate": true, "norm_return_original": 0.8100401163101196, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "85_07_stageii_unitree_g1", "group": "new", "passed_original_hard_gate": true, "norm_return_original": 0.8204439282417297, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "88_03_stageii_unitree_g1", "group": "new", "passed_original_hard_gate": true, "norm_return_original": 0.954569399356842, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "88_06_stageii_unitree_g1", "group": "new", "passed_original_hard_gate": true, "norm_return_original": 0.6466668844223022, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "88_07_stageii_unitree_g1", "group": "new", "passed_original_hard_gate": true, "norm_return_original": -0.04158869385719299, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "88_08_stageii_unitree_g1", "group": "new", "passed_original_hard_gate": true, "norm_return_original": 0.5685607194900513, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "88_09_stageii_unitree_g1", "group": "new", "passed_original_hard_gate": true, "norm_return_original": 0.5581724643707275, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "88_10_stageii_unitree_g1", "group": "new", "passed_original_hard_gate": true, "norm_return_original": 0.884021520614624, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "88_11_stageii_unitree_g1", "group": "new", "passed_original_hard_gate": true, "norm_return_original": 0.8489576578140259, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "89_01_stageii_unitree_g1", "group": "new", "passed_original_hard_gate": true, "norm_return_original": 0.7375021576881409, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "90_08_stageii_unitree_g1", "group": "new", "passed_original_hard_gate": true, "norm_return_original": 0.7526180148124695, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "90_14_stageii_unitree_g1", "group": "new", "passed_original_hard_gate": true, "norm_return_original": 0.7089743614196777, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "90_15_stageii_unitree_g1", "group": "new", "passed_original_hard_gate": true, "norm_return_original": 0.7068250179290771, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "90_19_stageii_unitree_g1", "group": "new", "passed_original_hard_gate": true, "norm_return_original": 0.6780876517295837, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "dance1_subject1", "group": "lafan", "passed_original_hard_gate": true, "norm_return_original": 0.9052187204360962, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "dance1_subject2", "group": "lafan", "passed_original_hard_gate": true, "norm_return_original": 0.8692830204963684, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "dance1_subject3", "group": "lafan", "passed_original_hard_gate": true, "norm_return_original": 0.9378129243850708, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "dance2_subject1", "group": "lafan", "passed_original_hard_gate": true, "norm_return_original": 0.8822250962257385, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "dance2_subject2", "group": "lafan", "passed_original_hard_gate": true, "norm_return_original": 0.8832076191902161, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "dance2_subject3", "group": "lafan", "passed_original_hard_gate": true, "norm_return_original": 0.9403579831123352, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "dance2_subject4", "group": "lafan", "passed_original_hard_gate": true, "norm_return_original": 0.8872874975204468, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "dance2_subject5", "group": "lafan", "passed_original_hard_gate": true, "norm_return_original": 0.9282338619232178, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "fallAndGetUp1_subject1", "group": "lafan", "passed_original_hard_gate": true, "norm_return_original": 0.8504855036735535, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "fallAndGetUp1_subject4", "group": "lafan", "passed_original_hard_gate": true, "norm_return_original": 0.841425895690918, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "fallAndGetUp1_subject5", "group": "lafan", "passed_original_hard_gate": true, "norm_return_original": 0.8424355387687683, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "fallAndGetUp2_subject2", "group": "lafan", "passed_original_hard_gate": true, "norm_return_original": 0.8515482544898987, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "fallAndGetUp2_subject3", "group": "lafan", "passed_original_hard_gate": false, "norm_return_original": 0.437091588973999, "first_original_hard_failure_s": 85.98}
+LIBRARY_PHYSICAL_CLIP {"clip": "fallAndGetUp3_subject1", "group": "lafan", "passed_original_hard_gate": true, "norm_return_original": 0.8902305364608765, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "fight1_subject2", "group": "lafan", "passed_original_hard_gate": true, "norm_return_original": 0.8927121162414551, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "fight1_subject3", "group": "lafan", "passed_original_hard_gate": true, "norm_return_original": 0.9069242477416992, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "fight1_subject5", "group": "lafan", "passed_original_hard_gate": true, "norm_return_original": 0.9273024201393127, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "fightAndSports1_subject1", "group": "lafan", "passed_original_hard_gate": true, "norm_return_original": 0.8924162983894348, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "fightAndSports1_subject4", "group": "lafan", "passed_original_hard_gate": true, "norm_return_original": 0.9046183228492737, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "jumps1_subject1", "group": "lafan", "passed_original_hard_gate": true, "norm_return_original": 0.9093615412712097, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "jumps1_subject2", "group": "lafan", "passed_original_hard_gate": false, "norm_return_original": 0.830416202545166, "first_original_hard_failure_s": 241.76}
+LIBRARY_PHYSICAL_CLIP {"clip": "jumps1_subject5", "group": "lafan", "passed_original_hard_gate": true, "norm_return_original": 0.9089690446853638, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "run1_subject2", "group": "lafan", "passed_original_hard_gate": true, "norm_return_original": 0.9169867634773254, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "run1_subject5", "group": "lafan", "passed_original_hard_gate": true, "norm_return_original": 0.8980385661125183, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "run2_subject1", "group": "lafan", "passed_original_hard_gate": true, "norm_return_original": 0.9018465876579285, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "run2_subject4", "group": "lafan", "passed_original_hard_gate": true, "norm_return_original": 0.8904117941856384, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "sprint1_subject2", "group": "lafan", "passed_original_hard_gate": true, "norm_return_original": 0.9193488359451294, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "sprint1_subject4", "group": "lafan", "passed_original_hard_gate": true, "norm_return_original": 0.8887532949447632, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "walk1_subject1", "group": "lafan", "passed_original_hard_gate": true, "norm_return_original": 0.9568986892700195, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "walk1_subject2", "group": "lafan", "passed_original_hard_gate": true, "norm_return_original": 0.9567237496376038, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "walk1_subject5", "group": "lafan", "passed_original_hard_gate": true, "norm_return_original": 0.9457265734672546, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "walk2_subject1", "group": "lafan", "passed_original_hard_gate": true, "norm_return_original": 0.9368042945861816, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "walk2_subject3", "group": "lafan", "passed_original_hard_gate": true, "norm_return_original": 0.9414768815040588, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "walk2_subject4", "group": "lafan", "passed_original_hard_gate": true, "norm_return_original": 0.9527678489685059, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "walk3_subject1", "group": "lafan", "passed_original_hard_gate": true, "norm_return_original": 0.9471557140350342, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "walk3_subject2", "group": "lafan", "passed_original_hard_gate": true, "norm_return_original": 0.9612962007522583, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "walk3_subject3", "group": "lafan", "passed_original_hard_gate": true, "norm_return_original": 0.8708241581916809, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "walk3_subject4", "group": "lafan", "passed_original_hard_gate": true, "norm_return_original": 0.9479689598083496, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "walk3_subject5", "group": "lafan", "passed_original_hard_gate": true, "norm_return_original": 0.9551682472229004, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_CLIP {"clip": "walk4_subject1", "group": "lafan", "passed_original_hard_gate": true, "norm_return_original": 0.9737440347671509, "first_original_hard_failure_s": null}
+LIBRARY_PHYSICAL_COMPLETE {"new": {"denominator": 15, "passed": 15, "macro_return_original": 0.7053599576155345, "frame_weighted_return_original": 0.7643992096767703}, "lafan": {"denominator": 40, "passed": 38, "macro_return_original": 0.8970376357436181, "frame_weighted_return_original": 0.9023697926813825}}
+Returning existing local_dir `/mnt/afs/USER_ID/SuperMimic/lafan1-20261024/uni/.venv/lib/python3.12/site-packages/unilab/assets` as remote repo cannot be accessed in `snapshot_download` (Cannot reach https://huggingface.co/api/datasets/unilabsim/unilab-robots/revision/main: offline mode is enabled. To disable it, please unset the `HF_HUB_OFFLINE` environment variable.).
+Returning existing local_dir `/mnt/afs/USER_ID/SuperMimic/lafan1-20261024/uni/.venv/lib/python3.12/site-packages/unilab/assets` as remote repo cannot be accessed in `snapshot_download` (Cannot reach https://huggingface.co/api/datasets/unilabsim/unilab-robots/revision/main: offline mode is enabled. To disable it, please unset the `HF_HUB_OFFLINE` environment variable.).
+Warp 1.16.0 initialized:
+   CUDA Toolkit 12.9, Driver 13.0
+   Devices:
+     "cpu"      : "x86_64"
+     "cuda:0"   : "NVIDIA H100 80GB HBM3" (79 GiB, sm_90, mempool enabled)
+   Kernel cache:
+     /root/.cache/warp/1.16.0
+Module mujoco_warp._src.smooth c4020f1 load on device 'cuda:0' took 6.10 ms  (cached)
+Module _nxn_broadphase__locals__kernel_0559053b 0559053 load on device 'cuda:0' took 944.71 ms  (compiled)
+Module _primitive_narrowphase__locals__primitive_narrowphase_e65855a2 e65855a load on device 'cuda:0' took 1.16 ms  (cached)
+Module mujoco_warp._src.constraint 36c8060 load on device 'cuda:0' took 0.50 ms  (cached)
+Module _friction_dof__locals__kernel_7cd24d9b 7cd24d9 load on device 'cuda:0' took 0.61 ms  (cached)
+Module _limit_slide_hinge__locals__kernel_f0b85ba4 f0b85ba load on device 'cuda:0' took 0.72 ms  (cached)
+Module _efc_contact_init__locals__kernel_517b063b 517b063 load on device 'cuda:0' took 0.68 ms  (cached)
+Module _efc_contact_jac_sparse__locals__kernel_c9492143 c949214 load on device 'cuda:0' took 0.54 ms  (cached)
+Module _efc_contact_update__locals__kernel_8c34abe6 8c34abe load on device 'cuda:0' took 0.67 ms  (cached)
+Module mujoco_warp._src.sensor de892d8 load on device 'cuda:0' took 2.96 ms  (cached)
+Module mujoco_warp._src.forward bfd9fb5 load on device 'cuda:0' took 1.51 ms  (cached)
+Module mujoco_warp._src.passive d8c18c6 load on device 'cuda:0' took 1.85 ms  (cached)
+Module mujoco_warp._src.forward b068ad6 load on device 'cuda:0' took 1.56 ms  (cached)
+Module _qfrc_smooth__locals__kernel_b98573a2 b98573a load on device 'cuda:0' took 0.48 ms  (cached)
+Module mujoco_warp._src.support ca784c5 load on device 'cuda:0' took 0.61 ms  (cached)
+Module _tile_cholesky_factorize_solve_block__locals__kernel_261a098f 3bf2aae load on device 'cuda:0' took 41.87 ms  (cached)
+Module _solve_init_dof__locals__kernel_43b50934 43b5093 load on device 'cuda:0' took 0.49 ms  (cached)
+Module mujoco_warp._src.solver 3a105a0 load on device 'cuda:0' took 2.31 ms  (cached)
+Module _solve_init_jaref_kernel__locals__kernel_0a3bf9f9 0a3bf9f load on device 'cuda:0' took 0.54 ms  (cached)
+Module mul_m_kernel__locals___mul_m_dc7994af dc7994a load on device 'cuda:0' took 0.58 ms  (cached)
+Module _update_constraint_efc__locals__kernel_64b75440 64b7544 load on device 'cuda:0' took 0.50 ms  (cached)
+Module _update_constraint_init_qfrc_constraint_sparse__locals__kernel_9de65e8f 9de65e8 load on device 'cuda:0' took 0.46 ms  (cached)
+Module _update_gradient_zero_grad_dot__locals__kernel_817148e6 817148e load on device 'cuda:0' took 0.46 ms  (cached)
+Module _update_gradient_grad__locals__kernel_00c9ca8d 00c9ca8 load on device 'cuda:0' took 0.45 ms  (cached)
+Module _update_gradient_init_h_sparse__locals__kernel_474f4a87 474f4a8 load on device 'cuda:0' took 0.93 ms  (cached)
+Module _JTDAJ_sparse__locals__kernel_317c6322 317c632 load on device 'cuda:0' took 0.56 ms  (cached)
+Module _JTDAJ_sparse__locals__kernel_317c6322 79f35ed load on device 'cuda:0' took 0.48 ms  (cached)
+Module _update_gradient_cholesky_blocked__locals__kernel_0387d6d7 89d545c load on device 'cuda:0' took 88.74 ms  (cached)
+Module _linesearch_jv_fused_kernel__locals__kernel_9cd9bef4 9cd9bef load on device 'cuda:0' took 0.55 ms  (cached)
+Module _linesearch_iterative_kernel__locals__kernel_273b7969 0a8a16a load on device 'cuda:0' took 0.80 ms  (cached)
+Module _update_constraint_efc__locals__kernel_dc2dbb33 dc2dbb3 load on device 'cuda:0' took 0.54 ms  (cached)
+Module _update_gradient_zero_grad_dot__locals__kernel_932c92ad 932c92a load on device 'cuda:0' took 0.49 ms  (cached)
+Module _update_gradient_grad__locals__kernel_4c37eb70 4c37eb7 load on device 'cuda:0' took 0.51 ms  (cached)
+Module _update_gradient_h_incremental_sparse__locals__kernel_1f3edd9a 1f3edd9 load on device 'cuda:0' took 0.50 ms  (cached)
+Module _update_gradient_cholesky_blocked_skip_unchanged__locals__kernel_f4d46d30 8d11576 load on device 'cuda:0' took 94.99 ms  (cached)
+Module mujoco_warp._src.derivative 833f5d0 load on device 'cuda:0' took 1.33 ms  (cached)
+Module _next_time_builder__locals___next_time_a67f49d6 a67f49d load on device 'cuda:0' took 0.61 ms  (cached)
+Module reset_data__locals__reset_xfrc_applied_fe5fcb03 fe5fcb0 load on device 'cuda:0' took 0.55 ms  (cached)
+Module reset_data__locals__reset_M_e5e6cdd0 e5e6cdd load on device 'cuda:0' took 0.42 ms  (cached)
+Module reset_data__locals__reset_mocap_9faa71ef 9faa71e load on device 'cuda:0' took 0.41 ms  (cached)
+Module reset_data__locals__reset_contact_7aad0792 7aad079 load on device 'cuda:0' took 0.44 ms  (cached)
+Module reset_data__locals__reset_sleep_4dc3e6fb 4dc3e6f load on device 'cuda:0' took 0.42 ms  (cached)
+Module reset_data__locals__reset_nworld_bb6e9693 bb6e969 load on device 'cuda:0' took 0.51 ms  (cached)
+Module mujoco_warp._src.io b4940be load on device 'cuda:0' took 4.50 ms  (cached)
+Module _tile_cholesky_factorize_block__locals__kernel_f85f6d77 0d20273 load on device 'cuda:0' took 30.60 ms  (cached)
+Module _tile_cholesky_solve_block__locals__kernel_7caaebf2 eb03c6d load on device 'cuda:0' took 30.18 ms  (cached)
+LIBRARY_PHYSICAL_PROGRESS {"step": 0, "maximum": 1939, "resets": 0}
+LIBRARY_PHYSICAL_PROGRESS {"step": 500, "maximum": 1939, "resets": 0}

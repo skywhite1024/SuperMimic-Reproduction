@@ -1,0 +1,355 @@
+{
+  "policy": "Metadata only; no silent data or checkpoint redistribution",
+  "artifacts": {
+    "acro-library-20261027-b/runs/unified-qualified-expert-v2-h100-1000/final-full.pt": {
+      "bytes": 219042079,
+      "sha256": "36a42345662a3adc0658d869e19d7aac3a2c529031da22d93f1583238114466a",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/runs/unified-retention-v1-h100-1000/final-full.pt": {
+      "bytes": 219042079,
+      "sha256": "e98afcbbb4f8a0b663cbfd20813e41137c3ecd822297c7e93f068383d2974329",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/runs/specialist8807-h100-1000-1031d/final-full.pt": {
+      "bytes": 218549919,
+      "sha256": "f787706f292eb1385e8e78882faf0b3ea4b89e6e992835141eba92c8c9a09758",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "implementation/continuation-20261025-a/downloaded/policy/full_016000.pt": {
+      "bytes": 218547553,
+      "sha256": "0afcca9af97bd9db1f2dd083875898f962acab0b0a70c7313b221e575b70b05b",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/runs/unified-h100-stage3-4000/final-full.pt": {
+      "bytes": 219041759,
+      "sha256": "93bb8b830145c54092518eba8db1fb020d020eb72cdad1b619b4fc5470cc213d",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/runs/unified-h100-stage2-4000/final-full.pt": {
+      "bytes": 219041567,
+      "sha256": "807d5fac7ca128f892c950fa379133231cd5f741e83075ed017d105b2eec6eec",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/runs/unified-h100-4000/final-full.pt": {
+      "bytes": 219041503,
+      "sha256": "56a6714aa7e79f063f4089c7860a1d00195601f178223bf42b65acd0e587910e",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "implementation/downloaded/runs/baseline-seed0/last.pt": {
+      "bytes": 218547105,
+      "sha256": "8770016fac48e4938203f77c8e2cd55b553171d2bc3134b7cbb40b2c53f6b1f1",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "interactive-g1-20261027-a/policy/acro-h100-2000.pt": {
+      "bytes": 36481141,
+      "sha256": "0f4a7bc67ae9e3440711e401e37f8276102e59946177117d082a6d7aabe108b4",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/runs/unified-qualified-expert-v2-h100-1000/train_log_with_header.csv": {
+      "bytes": 2836,
+      "sha256": "8c3fc752285f0c0417bcb89c5344a6dbdeb561b0f8bf0f7877d7d4318369bb25",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/evidence/qualified-expert-v2-1031-render-corrected-sequences.log": {
+      "bytes": 2851,
+      "sha256": "6db945a03d1d4047e99cfd4ed0caa0220438131877b417cbc2bed099ced85c58",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/evidence/qualified-expert-v2-1031-render-corrected-library.log": {
+      "bytes": 14419,
+      "sha256": "8eb4d21923835d96824c39695cc4be61024c04979291f4a401d0f7dbadc79cb5",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/evidence/qualified-expert-v2-1031-render-raw-sequences.log": {
+      "bytes": 2737,
+      "sha256": "98e26d6d05d2b5a6b2f7bcb7c0f4fbd6fd5f19c2c3c992bc96d499b04a94c804",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/evidence/qualified-expert-v2-1031-CPU-04.log": {
+      "bytes": 12788,
+      "sha256": "1df2a70f72eca08ae2ce4708e64236996ff2c150971755de5c13424a40debece",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/evidence/qualified-expert-v2-1031-CPU-11.log": {
+      "bytes": 1081,
+      "sha256": "f47888acdfefd973ff5d7675974cb42b3a4d104160a63b9a55fc073c70bc2053",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/evidence/qualified-expert-v2-1031-CPU-03.log": {
+      "bytes": 390,
+      "sha256": "30f31558e51e00fbe5ab672586db6ad07ec018e4816583f531be9338ca113182",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/evidence/qualified-expert-v2-1031-CPU-01.log": {
+      "bytes": 336,
+      "sha256": "e9c1d9bfe704d3ae5c7cfcd451749b8b38cd8a9e31d5ad66ca16a58f4bc1aa7b",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/evidence/qualified-expert-v2-1031-CPU-09.log": {
+      "bytes": 500,
+      "sha256": "841ce891b7d2912416bc9702391889de705401d28d5bff1dd4d30c555e7f4f37",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/evidence/qualified-expert-v2-1031-CPU-07.log": {
+      "bytes": 396,
+      "sha256": "6b4131e57589ccb4b972e81b7a7b443f2a22810efece5907bde394b85cae174c",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/evidence/qualified-expert-v2-1031-CPU-05.log": {
+      "bytes": 342,
+      "sha256": "d5453dfb45b8a2f0e68e8a3dda2a81172854831d6b56e164e2a876a5429d4685",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/evidence/qualified-expert-v2-1031-CPU-10.log": {
+      "bytes": 1558,
+      "sha256": "842bb0717f68dc05b6835bf27b034fed5fd9298c6963625a1e803ae5f97f042d",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/evidence/qualified-expert-v2-1031-CPU-13.log": {
+      "bytes": 1558,
+      "sha256": "a627d53cf927cc09466fbf4f3a5f327cb8f87b0c009b0355c79005f6f5d10f71",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/evidence/qualified-expert-v2-1031-CPU-00.log": {
+      "bytes": 3366,
+      "sha256": "0ce0ba012818b699a90b0b18a82bd0b0a8bc3ce4953b677786a1c5876eedddc1",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/evidence/qualified-expert-v2-1031-CPU-12.log": {
+      "bytes": 509,
+      "sha256": "caa06576abe54fe856435b5d7d98afbe46b3653015aa6cdf4edd4b16a84fc260",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/evidence/qualified-expert-v2-1031-CPU-06.log": {
+      "bytes": 3183,
+      "sha256": "86f44f028b3fddd0b18a8d62bb2b767d3510754750d680f75c3a085f4a16b476",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/evidence/qualified-expert-v2-1031-CPU-02.log": {
+      "bytes": 3183,
+      "sha256": "87f30ad089cd6250eda093d8693a300f621380822d2d6d361c4f01c620935460",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/evidence/qualified-expert-v2-1031-CPU-08.log": {
+      "bytes": 1062,
+      "sha256": "36ff993cdb818c531e416ac7e0ef10234bab13e783d7df4d7d2427282e613c1d",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/evidence/qualified-expert-v2-cuda-05.log": {
+      "bytes": 1521,
+      "sha256": "bda4f87f87ef7dc8936e593c41522f8910bcefd28db42190fbbc94fc11446d37",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/evidence/qualified-expert-v2-cuda-17.log": {
+      "bytes": 2280,
+      "sha256": "70b49b07e7763359498d4b81a184f1965ed0eb25ba0217437bc1b09a23e47d1f",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/evidence/qualified-expert-v2-cuda-03.log": {
+      "bytes": 6877,
+      "sha256": "7ee4add2cc6751136dd4de7adb164ec8cb01ea5dabc848296f730d2fdf50c8a8",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/evidence/qualified-expert-v2-cuda-08.log": {
+      "bytes": 337,
+      "sha256": "6a8fe8aa88dcafa0f9507e2fcb4904b2d6efa6b10fc918807b83bb0e488e0dff",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/evidence/qualified-expert-v2-cuda-19.log": {
+      "bytes": 509,
+      "sha256": "4f17340cf34e28a77b9a4b7a4be5b77635d8523fd378e3a2c290f17d61eca618",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/evidence/qualified-expert-v2-cuda-07.log": {
+      "bytes": 9193,
+      "sha256": "b65b07a5de0367222a89ddc5f8debbe68929009ee9dcbac4b436411a89848826",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/evidence/qualified-expert-v2-cuda-00.log": {
+      "bytes": 7063,
+      "sha256": "cd5cdaf54546da67d9aff2808c606d85aa1e6c095eaafaf387090a6b70e31d6a",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/evidence/qualified-expert-v2-cuda-06.log": {
+      "bytes": 167243,
+      "sha256": "03c5a86c59b1d4a68517d01e86c0940c2485009a44b744790870b8ab840826b2",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/evidence/qualified-expert-v2-cuda-10.log": {
+      "bytes": 389,
+      "sha256": "eed1865220a46b21409ba93a2627d9d6e25752d4f723003ebf8d0441baa8d3da",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/evidence/qualified-expert-v2-cuda-11.log": {
+      "bytes": 18556,
+      "sha256": "91807f0fd4c7ff00553435696ed398aa1646cac5a191d9caae31d91bfb305f54",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/evidence/qualified-expert-v2-cuda-20.log": {
+      "bytes": 2284,
+      "sha256": "dca9c43ac43e040690076d824599aa3b3124ffaebfae57119fc74dd52029e6e3",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/evidence/qualified-expert-v2-cuda-02.log": {
+      "bytes": 1521,
+      "sha256": "0b8cdb3a8a6b00d4549509625bb8e2b9559ebb3828233c6e2e969779a9433579",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/evidence/qualified-expert-v2-cuda-15.log": {
+      "bytes": 6927,
+      "sha256": "ea673a78e84b2e5ec3d4cd3b4820a8a2c6e7f119e246455332fac26e8611bdc9",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/evidence/qualified-expert-v2-cuda-09.log": {
+      "bytes": 3896,
+      "sha256": "aeeca1fa2396a86fc601b8d1b0b59cc21a755ff277a028f2198193619e089000",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/evidence/qualified-expert-v2-cuda-18.log": {
+      "bytes": 6932,
+      "sha256": "27c1937da25e5605b27a3ed76047aad9420ba1eb24e6b5047b2426413e45bb47",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/evidence/qualified-expert-v2-cuda-14.log": {
+      "bytes": 396,
+      "sha256": "a4a64aab67785e7758aea769923318216dc986a81125add0a495ea4c48a40fe6",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/evidence/qualified-expert-v2-cuda-04.log": {
+      "bytes": 345,
+      "sha256": "36761aa51f8fb8ef30a321f986f9080d2ce166fbbc5b1871d710db254d2d227e",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/evidence/qualified-expert-v2-cuda-01.log": {
+      "bytes": 339,
+      "sha256": "ba9345f77e89432b7e182b8e8354e45402d6ffe3e61d39d7778f9269d2b04549",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/evidence/qualified-expert-v2-cuda-13.log": {
+      "bytes": 3893,
+      "sha256": "964a0a20290af5a475a4a5ed8c49978151095a206da18619561ac9ab1c632b9a",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/evidence/qualified-expert-v2-cuda-12.log": {
+      "bytes": 343,
+      "sha256": "2b543a8769019ebdc647ac6a3ff11dd256865154a93c2d7b650cdf37672252cc",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/evidence/qualified-expert-v2-cuda-16.log": {
+      "bytes": 500,
+      "sha256": "f7d4cd5015f763d670b90ed707fe72d25d4f667246ea0ab98fbee6fe595c2905",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/policy/qualified-expert-v2-h100-1000.pt": {
+      "bytes": 36647893,
+      "sha256": "173d5f2fa187f12e4ef2e7a2a83040e5435f22dc7c456981a19f9e4f2fb943b7",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/runs/initial101d-cuda-all55/trajectory.npz": {
+      "bytes": 224315952,
+      "sha256": "81ff23da018db062d97de3cb91ee36f002881b74ca106a0bf3e02ee0946571d2",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/runs/unified4000-cuda-all55/trajectory.npz": {
+      "bytes": 224066459,
+      "sha256": "0a9329a03a94b7c6fb259ed158f61f7828e96f65954a14dec18114ab562842eb",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/runs/unified-h100-4000/train_log.csv": {
+      "bytes": 10703,
+      "sha256": "d36dddbcdbf2c7ba2db3f2e1c252314bc2d9d70c85328af096b12f41435f4e2d",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/data/143_34_stageii_unitree_g1.csv": {
+      "bytes": 357949,
+      "sha256": "e6e539638e9a07881b92088f170813ada16b94a3d40a7bd600a057681debb969",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/data/88_07_stageii_unitree_g1.csv": {
+      "bytes": 70525,
+      "sha256": "b8cfbb0470486e625bcc3b840fa33437c333ebe3a9fef8ef83655f07dbc7cc7d",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/data/88_08_stageii_unitree_g1.csv": {
+      "bytes": 131459,
+      "sha256": "35d1e39cfdb18e8f644752add1d24ce1e4616b0eb735ecd256bb6a647113884d",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/data/85_06_stageii_unitree_g1.csv": {
+      "bytes": 216405,
+      "sha256": "7ba8cfc8526355b8e654152d7067626902b4557153ca8142df3bd4d6ff50ffad",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/data/89_01_stageii_unitree_g1.csv": {
+      "bytes": 1066626,
+      "sha256": "b40a494abfd397f6e69c56af1964b202c55ff34d81f8d88d7363601b11af68bb",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/data/90_19_stageii_unitree_g1.csv": {
+      "bytes": 237828,
+      "sha256": "4f0d75d03c9260351817082457d70c58b8f248eadb298b062316344cc055ac09",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/data/88_09_stageii_unitree_g1.csv": {
+      "bytes": 171478,
+      "sha256": "1a8150467b7d97cee4e846dcbcf095c94edb7304125913b8b5b95e3a2984a86a",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/data/90_14_stageii_unitree_g1.csv": {
+      "bytes": 190976,
+      "sha256": "a2433a4431140eb1e06566a4e3d6990697b9f676afdee56965409ed77fdb9bfd",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/data/85_07_stageii_unitree_g1.csv": {
+      "bytes": 218290,
+      "sha256": "ac3e6ceefa302f6ae39234029b33ef75f893389aac54c401313232c1f45e65e0",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/data/90_08_stageii_unitree_g1.csv": {
+      "bytes": 153130,
+      "sha256": "a78ccc948537be58585e292915a08f481e4a9c21a19377d4b8c6ecb74dbf123b",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/data/88_11_stageii_unitree_g1.csv": {
+      "bytes": 928475,
+      "sha256": "65e3f1f3705fb67a9a99d11883f4d782e273d583f119db24003a3f06ad67bebb",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/data/88_06_stageii_unitree_g1.csv": {
+      "bytes": 104540,
+      "sha256": "9db50d28922734d13cc3b9c4ef0c93ac021ca21cc5fc0b0337ea71e0c0864280",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/data/88_03_stageii_unitree_g1.csv": {
+      "bytes": 80157,
+      "sha256": "effe560fa1e6f234127860ce4345a024b0723033b15a175b0eb26c25e53ac04f",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/data/88_10_stageii_unitree_g1.csv": {
+      "bytes": 212900,
+      "sha256": "de0ed92338ca289c79566a44b3851b6339a902831ddce3c332f8ded71771ba6a",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/data/90_15_stageii_unitree_g1.csv": {
+      "bytes": 271721,
+      "sha256": "eefb7ce4c23c32eba51586f9ae41dd942b627a404b58cb07c2d0c4a20278083a",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/policy/specialist8807-h100-1000-1031d.pt": {
+      "bytes": 36483445,
+      "sha256": "bbe45f884af2847c5429b32232b5dc47a2ab820fc4d80f35e9ee47ee26a137d6",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/policy/unified-h100-4000.pt": {
+      "bytes": 36646805,
+      "sha256": "cb83ce3a6b7a63f613bd8239848b40386f862a8ba765cb40668993ae34149642",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    },
+    "acro-library-20261027-b/policy/initial-18k-101d.pt": {
+      "bytes": 36646453,
+      "sha256": "0db493d676dca052a2f334bafbef6752c7d88ea492f1da052bf80ec9a3f6bb3d",
+      "reason": "retained source/data/model artifact; outside static report bundle"
+    }
+  }
+}

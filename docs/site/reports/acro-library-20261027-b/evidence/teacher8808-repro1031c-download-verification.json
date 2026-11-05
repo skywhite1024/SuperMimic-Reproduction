@@ -1,0 +1,17 @@
+{
+  "status": "all49_log_fragments_reassembled_SHA256_pass",
+  "parts": 49,
+  "raw_bytes": 45438,
+  "raw_SHA256": "ca3707b5f33080d7e8f20c3d6fc767d77b581d78b599b4d90d425da4cd742055",
+  "requested_repeats": 3,
+  "completed_repeats": 3,
+  "seed_values": [
+    0,
+    0,
+    0
+  ],
+  "all_failures_retained": true,
+  "teacher_norms_match_local_fixed_checkpoint": true,
+  "full_teacher_trajectories_preserved_in_AFS_not_downloaded": true,
+  "zero_training_updates": true
+}

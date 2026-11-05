@@ -1,0 +1,15 @@
+{
+  "reference_identical_across_history_and_fixed3": true,
+  "initial_state_identical_across_history_and_fixed3": true,
+  "initial_history_identical_fixed3": true,
+  "initial_goal_identical_fixed3": true,
+  "first_action_identical_fixed3": true,
+  "full_state_trajectory_identical_fixed3": false,
+  "recorded_runtime_and_normalization_identical_fixed3": true,
+  "earliest_state_divergence_among_fixed3": 1,
+  "raw_teacher_passes_fixed3": 2,
+  "training_updates": 0,
+  "candidate_adopted": false,
+  "teacher_promoted": false,
+  "full_goal_complete": false
+}

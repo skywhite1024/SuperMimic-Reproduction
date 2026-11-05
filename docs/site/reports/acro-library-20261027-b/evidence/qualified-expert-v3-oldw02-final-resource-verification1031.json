@@ -1,0 +1,52 @@
+{
+  "at": "2026-10-31T20:04:25.036599+08:00",
+  "scope": "four jobs created for this oldw02 attempt and diagnostic collection; not account-wide occupancy",
+  "jobs": [
+    {
+      "UID": "6740112b9ef8455cb40c97521da08626",
+      "platform_status": "失败",
+      "platform_updated_at": "2026-10-31T19:31:42+08:00",
+      "updates": 0,
+      "cause": "startup omitted SUPERMIMIC_UNI and runtime looked for old40 at default path",
+      "repair": "set existing personal AFS UNI path; preserve zero-update receipt and child log under attempt1031a archive"
+    },
+    {
+      "UID": "13febf90464e4f2290866974707a3fe0",
+      "platform_status": "成功",
+      "platform_updated_at": "2026-10-31T19:50:53+08:00",
+      "program_status": "teacher_gate_failed_zero_updates",
+      "program_elapsed_seconds": 173.715,
+      "actual_allocation": {
+        "GPU_count": 1,
+        "GPU_name": "NVIDIA H100 80GB HBM3",
+        "GPU_memory_bytes": 85017624576
+      },
+      "all_native_child_groups_empty": true
+    },
+    {
+      "UID": "87b5965dbaa84b8aa98a1038e404dc9c",
+      "platform_status": "成功",
+      "platform_updated_at": "2026-10-31T19:37:37+08:00",
+      "GPU": 0,
+      "CPU": 2,
+      "RAM_GiB": 4,
+      "updates": 0
+    },
+    {
+      "UID": "007d130a697c477ea7aaaf8302df9e90",
+      "platform_status": "成功",
+      "platform_updated_at": "2026-10-31T19:58:26+08:00",
+      "GPU": 0,
+      "CPU": 2,
+      "RAM_GiB": 4,
+      "updates": 0
+    }
+  ],
+  "all_four_platform_jobs_terminal": true,
+  "fixed_GPU_native_child_groups_empty": true,
+  "CCI_started_this_phase": false,
+  "DNAT_modified_this_phase": false,
+  "all_account_aggregate_verified": false,
+  "evidence": "qualified-expert-v3-oldw02-final-four-jobs1031.txt",
+  "screenshot": "qualified-expert-v3-oldw02-final-four-jobs1031.png"
+}

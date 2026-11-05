@@ -680,427 +680,497 @@
     },
     {
       "path": "acro-library-20261027-b/scripts/assess_sequences.py",
+      "original_path": "acro-library-20261027-b/scripts/assess_sequences.py",
       "original_sha256": "f59610589b63739807f268951c6cdab58ab60c5bdbb6cfd5a4f49deb50afb32a",
       "public_sha256": "f59610589b63739807f268951c6cdab58ab60c5bdbb6cfd5a4f49deb50afb32a",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/assess_tracking.py",
+      "original_path": "acro-library-20261027-b/scripts/assess_tracking.py",
       "original_sha256": "2c8572ce88bebf10999c940695895ee40ef4dd3702580e1db394dd3fdb2c848f",
       "public_sha256": "2c8572ce88bebf10999c940695895ee40ef4dd3702580e1db394dd3fdb2c848f",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/audit_ground_clearance.py",
+      "original_path": "acro-library-20261027-b/scripts/audit_ground_clearance.py",
       "original_sha256": "9db7ed7584dcc4bfe27cade24e61a41be0ab806459470595a2a747d36fc10832",
       "public_sha256": "9db7ed7584dcc4bfe27cade24e61a41be0ab806459470595a2a747d36fc10832",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/audit_library.py",
+      "original_path": "acro-library-20261027-b/scripts/audit_library.py",
       "original_sha256": "b4793db27b272bc7c63b2ed6ec9328d0e07982181c2a70b0fd97c70bbbcc13cb",
       "public_sha256": "b4793db27b272bc7c63b2ed6ec9328d0e07982181c2a70b0fd97c70bbbcc13cb",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/audit_physical_contacts.py",
+      "original_path": "acro-library-20261027-b/scripts/audit_physical_contacts.py",
       "original_sha256": "b656843e6df3bb045adfb63cb048d7670f3d0cbb2d9bc451e9727d18e0e49d36",
       "public_sha256": "b656843e6df3bb045adfb63cb048d7670f3d0cbb2d9bc451e9727d18e0e49d36",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/audit_replay_occupancy.py",
+      "original_path": "acro-library-20261027-b/scripts/audit_replay_occupancy.py",
       "original_sha256": "34ec68b92041d6ee91792f39a5f586515616d6134e8d5e5fd55db97517544b15",
       "public_sha256": "34ec68b92041d6ee91792f39a5f586515616d6134e8d5e5fd55db97517544b15",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/audit_sequence_contacts.py",
+      "original_path": "acro-library-20261027-b/scripts/audit_sequence_contacts.py",
       "original_sha256": "f44fd62dfef12942945b4bc462b77ba8bea4a3bdb9bfb1e9b3278492dd4604e0",
       "public_sha256": "f44fd62dfef12942945b4bc462b77ba8bea4a3bdb9bfb1e9b3278492dd4604e0",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/audit_transition_references.py",
+      "original_path": "acro-library-20261027-b/scripts/audit_transition_references.py",
       "original_sha256": "2a64aa12612a5b678a24a918019e4a1bac4f714e4772789e501872b584909613",
       "public_sha256": "2a64aa12612a5b678a24a918019e4a1bac4f714e4772789e501872b584909613",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/balanced_replay.py",
+      "original_path": "acro-library-20261027-b/scripts/balanced_replay.py",
       "original_sha256": "c8700818bafc0c45db2300a996c2e762bebbf5cb4c6c9e9fb327f8b848897197",
       "public_sha256": "c8700818bafc0c45db2300a996c2e762bebbf5cb4c6c9e9fb327f8b848897197",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/balanced_sampling.py",
+      "original_path": "acro-library-20261027-b/scripts/balanced_sampling.py",
       "original_sha256": "ad6db997aebed92745450d2009ce6887b7690cc2e93752e0b07bba60c6a7b49b",
       "public_sha256": "ad6db997aebed92745450d2009ce6887b7690cc2e93752e0b07bba60c6a7b49b",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/build_action_bound_report.py",
+      "original_path": "acro-library-20261027-b/scripts/build_action_bound_report.py",
       "original_sha256": "d74d66a9ef64660624e969df21d1f5e70cf8ad92fb5c847ec00d85d74284db84",
       "public_sha256": "d74d66a9ef64660624e969df21d1f5e70cf8ad92fb5c847ec00d85d74284db84",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/build_report.py",
+      "original_path": "acro-library-20261027-b/scripts/build_report.py",
       "original_sha256": "e6595efc2f8e591f5dde2a4d4a6e0c72abbafebac6eef38267215432c87f3c84",
       "public_sha256": "03f5284ec6fa5280a7c76532ab83a22520c057aa82657da729b7852a86edc7ff",
       "publication_copy_changed": true
     },
     {
       "path": "acro-library-20261027-b/scripts/build_stage_report.py",
-      "original_sha256": "18ed2a53de24b91176bba24c4fde0b5b093e0fe07f57aa60261940c5f4d4364d",
-      "public_sha256": "ac531651566f40b39a068f873ed571939e8f5c93718b9824a4d876b982293640",
+      "original_path": "acro-library-20261027-b/scripts/build_stage_report.py",
+      "original_sha256": "41e9c0c1a26a6c40beb8d59ba301a762acc72be5b94f1600e68d85088c5166d9",
+      "public_sha256": "26580d50ff952cd65bc27826a6348f08a6630d747a37f05d8051c3c041c79eff",
       "publication_copy_changed": true
     },
     {
       "path": "acro-library-20261027-b/scripts/collect_results.py",
+      "original_path": "acro-library-20261027-b/scripts/collect_results.py",
       "original_sha256": "52c2065bbe86f516146f806862b7ee2d76480c9656f30efd700143ea00be8b97",
       "public_sha256": "daa719a49dce342c64a0bfdbb80f6164f35eb079fe96533c3aada5424a412719",
       "publication_copy_changed": true
     },
     {
       "path": "acro-library-20261027-b/scripts/collect_stage2.py",
+      "original_path": "acro-library-20261027-b/scripts/collect_stage2.py",
       "original_sha256": "171de200c88b23deaa2bea57fd1603640d6791e7a02e5dff8c578848ce9b6f5f",
       "public_sha256": "40516e70147886d8e8b3534f250b60b79b194bd0a9f13ed96fc14862ef484fec",
       "publication_copy_changed": true
     },
     {
       "path": "acro-library-20261027-b/scripts/collect_stage3.py",
+      "original_path": "acro-library-20261027-b/scripts/collect_stage3.py",
       "original_sha256": "2d34528735b7ec3dd751a9ddb638113cf9cc5467098f068106690513de2e59cc",
       "public_sha256": "5b6be0658500b127cd4a16e4bdeccb11f55699da81d969877be419b0cbf0d011",
       "publication_copy_changed": true
     },
     {
       "path": "acro-library-20261027-b/scripts/combine_acceptance.py",
+      "original_path": "acro-library-20261027-b/scripts/combine_acceptance.py",
       "original_sha256": "86f2a09d568bd37d9eddf677129b8dfecb234919f78e824d697e4b093fe9450e",
       "public_sha256": "86f2a09d568bd37d9eddf677129b8dfecb234919f78e824d697e4b093fe9450e",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/complete_action_bound_ablation.py",
+      "original_path": "acro-library-20261027-b/scripts/complete_action_bound_ablation.py",
       "original_sha256": "246f60301f92b5699ab583e6700e4c2f5e152e467cdcafde21009b5aadcde8c4",
       "public_sha256": "246f60301f92b5699ab583e6700e4c2f5e152e467cdcafde21009b5aadcde8c4",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/diagnose_action_bound.py",
+      "original_path": "acro-library-20261027-b/scripts/diagnose_action_bound.py",
       "original_sha256": "e4dd479be1cd48f7b974da06f9eae7a4796c42aee7470ac04f65d0755be7eff0",
       "public_sha256": "e4dd479be1cd48f7b974da06f9eae7a4796c42aee7470ac04f65d0755be7eff0",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/diagnose_stage3_failures.py",
+      "original_path": "acro-library-20261027-b/scripts/diagnose_stage3_failures.py",
       "original_sha256": "5c3a9cb26f32988d728d3f0df24dd6c018eb559344ba1bfa6e6a0ccfc6c0614d",
       "public_sha256": "5c3a9cb26f32988d728d3f0df24dd6c018eb559344ba1bfa6e6a0ccfc6c0614d",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/evaluate_action_bound.py",
+      "original_path": "acro-library-20261027-b/scripts/evaluate_action_bound.py",
       "original_sha256": "bd10764b6e9ab98a247fe62160cff83ccbbd02fb46b5efc3a4e6742543575d99",
       "public_sha256": "bd10764b6e9ab98a247fe62160cff83ccbbd02fb46b5efc3a4e6742543575d99",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/evaluate_action_bound_extension.py",
+      "original_path": "acro-library-20261027-b/scripts/evaluate_action_bound_extension.py",
       "original_sha256": "078b99af7421d1f1ac56f402ad472a59e7840a0bb7484c17e2552f6c14fd9700",
       "public_sha256": "078b99af7421d1f1ac56f402ad472a59e7840a0bb7484c17e2552f6c14fd9700",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/evaluate_declared_bound.py",
+      "original_path": "acro-library-20261027-b/scripts/evaluate_declared_bound.py",
       "original_sha256": "1355191e993dfbea93a8f76a79c4103f351d64c97aa773607d91fa79027f3d57",
       "public_sha256": "1355191e993dfbea93a8f76a79c4103f351d64c97aa773607d91fa79027f3d57",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/evaluate_ground_variant.py",
+      "original_path": "acro-library-20261027-b/scripts/evaluate_ground_variant.py",
       "original_sha256": "485dc2a9f6e9dc54ca7461859a32d3d5dc80739413147cfd6214f8c040ef0b15",
       "public_sha256": "485dc2a9f6e9dc54ca7461859a32d3d5dc80739413147cfd6214f8c040ef0b15",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/evaluate_library.py",
+      "original_path": "acro-library-20261027-b/scripts/evaluate_library.py",
       "original_sha256": "a41d07c9eb6a2e3859b8704f6c654bf3df2c3d98c801ceafe93f0ee8d5900438",
       "public_sha256": "a41d07c9eb6a2e3859b8704f6c654bf3df2c3d98c801ceafe93f0ee8d5900438",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/evaluate_sequences.py",
+      "original_path": "acro-library-20261027-b/scripts/evaluate_sequences.py",
       "original_sha256": "0a5b9f0b9f554179ba69248e32e51d7aa5a8829e619c3f9234a17575fee60d84",
       "public_sha256": "0a5b9f0b9f554179ba69248e32e51d7aa5a8829e619c3f9234a17575fee60d84",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/evaluate_sequences_corrected.py",
+      "original_path": "acro-library-20261027-b/scripts/evaluate_sequences_corrected.py",
       "original_sha256": "aea90cdb3f5903a33a1eb54a4cd685aad7f28258d31b27c213d23324aec32d39",
       "public_sha256": "aea90cdb3f5903a33a1eb54a4cd685aad7f28258d31b27c213d23324aec32d39",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/fetch_cmu_sources.py",
+      "original_path": "acro-library-20261027-b/scripts/fetch_cmu_sources.py",
       "original_sha256": "ee346839258e7eec0a9c8e31eb6a4cbfa6759bfae26229c454c4ab0e84eadff5",
       "public_sha256": "ee346839258e7eec0a9c8e31eb6a4cbfa6759bfae26229c454c4ab0e84eadff5",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/finalize_action_bound.py",
+      "original_path": "acro-library-20261027-b/scripts/finalize_action_bound.py",
       "original_sha256": "9de3adca5bacd750d6faaa627f7c12e6a4875464f2a7fc83fa229a038e73abeb",
       "public_sha256": "9de3adca5bacd750d6faaa627f7c12e6a4875464f2a7fc83fa229a038e73abeb",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/freeze_continuous.py",
+      "original_path": "acro-library-20261027-b/scripts/freeze_continuous.py",
       "original_sha256": "3f7fe66ac07ada9303c5ab23ccc8f5a4d137e489fe6fe7ae16a9d38234bb434a",
       "public_sha256": "3f7fe66ac07ada9303c5ab23ccc8f5a4d137e489fe6fe7ae16a9d38234bb434a",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/freeze_corrected_sequences.py",
+      "original_path": "acro-library-20261027-b/scripts/freeze_corrected_sequences.py",
       "original_sha256": "24fe25d9b74399d372235bd0105a44b93e4448ae8f19d7b40f096f55422b27d3",
       "public_sha256": "24fe25d9b74399d372235bd0105a44b93e4448ae8f19d7b40f096f55422b27d3",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/freeze_library.py",
+      "original_path": "acro-library-20261027-b/scripts/freeze_library.py",
       "original_sha256": "4ef1707918cda71f327bc9f093592f1b28a9fc2e2805bc5f948dc1b694999fa4",
       "public_sha256": "4ef1707918cda71f327bc9f093592f1b28a9fc2e2805bc5f948dc1b694999fa4",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/global_model.py",
+      "original_path": "acro-library-20261027-b/scripts/global_model.py",
       "original_sha256": "962dacd788304d954cd032e0c5bf98ad83298b56a703c9c882e289c4d93f4312",
       "public_sha256": "962dacd788304d954cd032e0c5bf98ad83298b56a703c9c882e289c4d93f4312",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/inspect_hand_collisions.py",
+      "original_path": "acro-library-20261027-b/scripts/inspect_hand_collisions.py",
       "original_sha256": "822366c354dfa77ded97524b16eecb33d36d9c43e10334b245c89b01278fd983",
       "public_sha256": "822366c354dfa77ded97524b16eecb33d36d9c43e10334b245c89b01278fd983",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/package_cloud.py",
+      "original_path": "acro-library-20261027-b/scripts/package_cloud.py",
       "original_sha256": "9f50dee5fa09fe72acc377804465cb7c7f2d1eb3dbce83444310b32b43d1093c",
       "public_sha256": "122c8c44a5170b9e8a525766fe0fed9f93804d3658bea178d4b727bad4a81801",
       "publication_copy_changed": true
     },
     {
       "path": "acro-library-20261027-b/scripts/package_gpu.py",
+      "original_path": "acro-library-20261027-b/scripts/package_gpu.py",
       "original_sha256": "1e8a3623febf2235542bd4cf081e023121aaa6887398be5a606bd66121898925",
       "public_sha256": "3fab05596568ea02904a05367a4fa969d36bf508dae4e2b4e4017d21aee86672",
       "publication_copy_changed": true
     },
     {
       "path": "acro-library-20261027-b/scripts/package_retention_trial.py",
+      "original_path": "acro-library-20261027-b/scripts/package_retention_trial.py",
       "original_sha256": "fa7708d0b9cf3ee4b70b81f1551e60bd5e1f4169750218ac9f2a6404b84bf3cb",
       "public_sha256": "4e646e4d6c7d63de41467c0d7c3d3888f5ea4602348afb4084829ff3cc275663",
       "publication_copy_changed": true
     },
     {
       "path": "acro-library-20261027-b/scripts/package_stage2.py",
+      "original_path": "acro-library-20261027-b/scripts/package_stage2.py",
       "original_sha256": "5e2a3067da1c3db89568ead4bb4a0f339ab1770fb2d688e58aa68ea39ead67c4",
       "public_sha256": "c13493bf43e39375950c173a9b01627952181f3ead216735078086374beca3a0",
       "publication_copy_changed": true
     },
     {
       "path": "acro-library-20261027-b/scripts/package_stage3.py",
+      "original_path": "acro-library-20261027-b/scripts/package_stage3.py",
       "original_sha256": "c409dee5a9502f2251666b4bfc84bb09067c28c57375b0c0da02edd3b1ef8f40",
       "public_sha256": "29e43b92738046a0b05e9e815e32a0d701c91742df9fd35764c8e5cfd8ce7d1e",
       "publication_copy_changed": true
     },
     {
       "path": "acro-library-20261027-b/scripts/package_stage3_h2.py",
+      "original_path": "acro-library-20261027-b/scripts/package_stage3_h2.py",
       "original_sha256": "6071865cd960fb88a8c2d73a21127b8bb44b46dad3083794048672c86f1d65d5",
       "public_sha256": "241e8b60a460006ad3a508fbab84a1e4c6e5cc72662004138e20b18665a2f7b3",
       "publication_copy_changed": true
     },
     {
       "path": "acro-library-20261027-b/scripts/plot_continuous_first_failures.py",
+      "original_path": "acro-library-20261027-b/scripts/plot_continuous_first_failures.py",
       "original_sha256": "a646204f85b35ffcb6e942ee25edc97962c6c8b9841930926e2144403614fb83",
       "public_sha256": "a646204f85b35ffcb6e942ee25edc97962c6c8b9841930926e2144403614fb83",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/plot_stage_comparison.py",
+      "original_path": "acro-library-20261027-b/scripts/plot_stage_comparison.py",
       "original_sha256": "8483c0f7e5bbdded8e00df70a94f3470d0191b23d2f50a9e327b8698a4d3d8eb",
       "public_sha256": "8483c0f7e5bbdded8e00df70a94f3470d0191b23d2f50a9e327b8698a4d3d8eb",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/plot_training.py",
+      "original_path": "acro-library-20261027-b/scripts/plot_training.py",
       "original_sha256": "6e1ff0400fbef0444faee2a1de8dd0fbb44b93ee5767cce04a291cf2aaff19e6",
       "public_sha256": "6e1ff0400fbef0444faee2a1de8dd0fbb44b93ee5767cce04a291cf2aaff19e6",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/plot_training_stage2.py",
+      "original_path": "acro-library-20261027-b/scripts/plot_training_stage2.py",
       "original_sha256": "76ec4554c6991926b7173f7a491908663f5038c8445c01432907367f7cadb8d2",
       "public_sha256": "f5d6a177781fc194b33d1ee7d7f19b02891f43afa8c1a49ba0cdafbb08cfdf3b",
       "publication_copy_changed": true
     },
     {
       "path": "acro-library-20261027-b/scripts/postprocess_stage2.py",
+      "original_path": "acro-library-20261027-b/scripts/postprocess_stage2.py",
       "original_sha256": "731c2de99a1a4ba96ad6ad48021071fe52f9b345ae9c3561fa7e723b7007435e",
       "public_sha256": "731c2de99a1a4ba96ad6ad48021071fe52f9b345ae9c3561fa7e723b7007435e",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/postprocess_stage3.py",
+      "original_path": "acro-library-20261027-b/scripts/postprocess_stage3.py",
       "original_sha256": "42371f38d95ead545dc00762d1f465392c67155d9a86716c4880f5eaf3e93818",
       "public_sha256": "9ed3f68e35165712846d3c3465c88c7492d724d399ecb7e8e2d970829fcdd0f3",
       "publication_copy_changed": true
     },
     {
       "path": "acro-library-20261027-b/scripts/prepare_cloud.py",
+      "original_path": "acro-library-20261027-b/scripts/prepare_cloud.py",
       "original_sha256": "0b95c76f6704fb9bd484eedea7e2d02c484f20c61f3986c8e17f662a3a051624",
       "public_sha256": "99c2351553bdf22117bac69c6b38dc17a9acaebcaa4f812f108eeca2bfd4f9b5",
       "publication_copy_changed": true
     },
     {
       "path": "acro-library-20261027-b/scripts/prepare_ground_variant.py",
+      "original_path": "acro-library-20261027-b/scripts/prepare_ground_variant.py",
       "original_sha256": "035c1d26e1ca9801587f7ba459eebb8a823daf64d76f7cca337d67db44d24363",
       "public_sha256": "035c1d26e1ca9801587f7ba459eebb8a823daf64d76f7cca337d67db44d24363",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/prepare_retention_engineering.py",
+      "original_path": "acro-library-20261027-b/scripts/prepare_retention_engineering.py",
       "original_sha256": "06a83bfb26a85d180c3866766fc86dd3c82607727c9e471b02ae9e0159e0ce37",
       "public_sha256": "06a83bfb26a85d180c3866766fc86dd3c82607727c9e471b02ae9e0159e0ce37",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/prepare_retention_trial.py",
+      "original_path": "acro-library-20261027-b/scripts/prepare_retention_trial.py",
       "original_sha256": "92510798352bd784a88cd0bfbe8d361b61f27bfd90ef9e1729ed797656778d46",
       "public_sha256": "0e472b46275ee96b611aeaa905f0577936b451ee7bbcbbc4be346f921dbd9043",
       "publication_copy_changed": true
     },
     {
       "path": "acro-library-20261027-b/scripts/render_library.py",
+      "original_path": "acro-library-20261027-b/scripts/render_library.py",
       "original_sha256": "19b910fef20a26329acc3ffe8f70733a4982a4e24e55d61401af4d91bb8cbb0d",
-      "public_sha256": "7f2abaf657b48d3d75db5eb74546712dd0e3053662e63ca8a19f8e1177724865",
-      "publication_copy_changed": true,
-      "publication_portability_change": "Portable font fallback; preserve both font sizes and all rendering/physics loops"
+      "public_sha256": "19b910fef20a26329acc3ffe8f70733a4982a4e24e55d61401af4d91bb8cbb0d",
+      "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/retention_components.py",
+      "original_path": "acro-library-20261027-b/scripts/retention_components.py",
       "original_sha256": "1ecb22f73afc1cf759d4de682a6180aae2e683fd8911d8d6c6e9c09161dc3013",
       "public_sha256": "1ecb22f73afc1cf759d4de682a6180aae2e683fd8911d8d6c6e9c09161dc3013",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/retention_learner.py",
+      "original_path": "acro-library-20261027-b/scripts/retention_learner.py",
       "original_sha256": "8a39435dd52ceb3a6026abda50427021e75ade553f4b6ec50c56b16dd5534915",
       "public_sha256": "69fd79ab99de8144fd6327b8162f27b912842ac8380a11aaa0f3fa557192bbcf",
       "publication_copy_changed": true
     },
     {
       "path": "acro-library-20261027-b/scripts/run_gpu_stage.py",
+      "original_path": "acro-library-20261027-b/scripts/run_gpu_stage.py",
       "original_sha256": "cbab8d9cca1d99e1683225cff60709d23d8060d22eb05bd5a38cf3ee281bd72b",
       "public_sha256": "cbab8d9cca1d99e1683225cff60709d23d8060d22eb05bd5a38cf3ee281bd72b",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/run_gpu_stage2.py",
+      "original_path": "acro-library-20261027-b/scripts/run_gpu_stage2.py",
       "original_sha256": "89a98e85296f1bc5c27992a4f77d3f8946e6b74b2f972a852f4eb83c6d247ee2",
       "public_sha256": "89a98e85296f1bc5c27992a4f77d3f8946e6b74b2f972a852f4eb83c6d247ee2",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/run_gpu_stage3.py",
+      "original_path": "acro-library-20261027-b/scripts/run_gpu_stage3.py",
       "original_sha256": "6b25c8d0b55655aa2b9b6e294ca896ab994b4a2740fe66a57d5e222cb098f4a9",
       "public_sha256": "ebc1b2e2362c36afd2c3a792beec4a341cb74feedb05eb8c5f12bf58dd60f0fb",
       "publication_copy_changed": true
     },
     {
       "path": "acro-library-20261027-b/scripts/run_retention_trial.py",
+      "original_path": "acro-library-20261027-b/scripts/run_retention_trial.py",
       "original_sha256": "3394cb86d890cdff3d3eb0da82ebe40102c7b7a9e455ecce4090ba756d8f8c59",
       "public_sha256": "3394cb86d890cdff3d3eb0da82ebe40102c7b7a9e455ecce4090ba756d8f8c59",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/runtime.py",
+      "original_path": "acro-library-20261027-b/scripts/runtime.py",
       "original_sha256": "e06f87f6f1b58d2035c3de8b178f8f46f5f888faddf75a022374c9b3f0f7e0e1",
       "public_sha256": "e06f87f6f1b58d2035c3de8b178f8f46f5f888faddf75a022374c9b3f0f7e0e1",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/stage2_references.py",
+      "original_path": "acro-library-20261027-b/scripts/stage2_references.py",
       "original_sha256": "6459c841ec67e41a6c1f8a4f33919045b957c7d5161db7620450c129a6d71c8a",
       "public_sha256": "6459c841ec67e41a6c1f8a4f33919045b957c7d5161db7620450c129a6d71c8a",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/sync_stage2_log.py",
+      "original_path": "acro-library-20261027-b/scripts/sync_stage2_log.py",
       "original_sha256": "b30c3bbff62cdf22f27c625dfd9ba42acabb127c1b966b52ee69e8f22aa9e825",
       "public_sha256": "b30c3bbff62cdf22f27c625dfd9ba42acabb127c1b966b52ee69e8f22aa9e825",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/sync_stage3_log.py",
+      "original_path": "acro-library-20261027-b/scripts/sync_stage3_log.py",
       "original_sha256": "ce1bd1d7fa28d1c9d7331dd3d821c05f0ceb775d91a2ce631ecc52949a4ede04",
       "public_sha256": "7cf31689078c7239798fa81cd2d23521621b124882d88fadec7df2496654bc2b",
       "publication_copy_changed": true
     },
     {
       "path": "acro-library-20261027-b/scripts/test_balanced_replay.py",
+      "original_path": "acro-library-20261027-b/scripts/test_balanced_replay.py",
       "original_sha256": "c17bd856c0c681546d3056d398809d8d8e263ec1ed0cf757edb5b154182aac00",
       "public_sha256": "c17bd856c0c681546d3056d398809d8d8e263ec1ed0cf757edb5b154182aac00",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/train_ground_stage2.py",
+      "original_path": "acro-library-20261027-b/scripts/train_ground_stage2.py",
       "original_sha256": "9f78f7f78c093fa023dda927f6769b0661fb42c876e8120c463f38ed6c1eefff",
       "public_sha256": "9f78f7f78c093fa023dda927f6769b0661fb42c876e8120c463f38ed6c1eefff",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/train_replay_stage3.py",
+      "original_path": "acro-library-20261027-b/scripts/train_replay_stage3.py",
       "original_sha256": "0741ebca012f532b1d4287ba4f892d80ae2e14056013ee807c40a85c7a9b4782",
       "public_sha256": "2934421d195cbef4d62261af3eb361425a193e4db5a27919eada712ed5a0d16f",
       "publication_copy_changed": true
     },
     {
       "path": "acro-library-20261027-b/scripts/train_retention_engineering.py",
+      "original_path": "acro-library-20261027-b/scripts/train_retention_engineering.py",
       "original_sha256": "f31e63ceb9bed1eae20e3a926248f5ff3faa67567aa420ddeccc917b9e2ff390",
       "public_sha256": "78fd897d3fe533382cde8d71e6bc2e7dc92e0ebb04bbec2001a92739c7ef7241",
       "publication_copy_changed": true
     },
     {
       "path": "acro-library-20261027-b/scripts/train_retention_trial.py",
+      "original_path": "acro-library-20261027-b/scripts/train_retention_trial.py",
       "original_sha256": "be197cc8ad48b6bb1a53e34c052e92733fb3d3cd80a970be99929d8a57671f32",
       "public_sha256": "f07ac6dfab1315e6d39ec24a1de9d27e1895486802d22f39101204dc08205a2f",
       "publication_copy_changed": true
     },
     {
       "path": "acro-library-20261027-b/scripts/train_unified.py",
+      "original_path": "acro-library-20261027-b/scripts/train_unified.py",
       "original_sha256": "3ea304300fe19036d5f22729c67c597c062ed5da18b19ae2a1b443be52303a82",
       "public_sha256": "3ea304300fe19036d5f22729c67c597c062ed5da18b19ae2a1b443be52303a82",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/verify_retrieval.py",
+      "original_path": "acro-library-20261027-b/scripts/verify_retrieval.py",
       "original_sha256": "133a0c74646eeed445ea4c6e4d7a4d1df7bcdcb7012003f44547ed349112bfdf",
       "public_sha256": "133a0c74646eeed445ea4c6e4d7a4d1df7bcdcb7012003f44547ed349112bfdf",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/verify_retrieval_stage2.py",
+      "original_path": "acro-library-20261027-b/scripts/verify_retrieval_stage2.py",
       "original_sha256": "81351e3865df331444a0456ba6e63b11b70600e9fe53123b823b438fcbd18697",
       "public_sha256": "81351e3865df331444a0456ba6e63b11b70600e9fe53123b823b438fcbd18697",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/verify_retrieval_stage3.py",
+      "original_path": "acro-library-20261027-b/scripts/verify_retrieval_stage3.py",
       "original_sha256": "bfcc92be1c80e93c2ef88c1259eea49442a0d827a357f6fdeb123a76b6bb2561",
       "public_sha256": "10833aa68ba26b58215377e9448b059a0f3e0fa89f0b13eef8d183353f1296ce",
       "publication_copy_changed": true
     },
     {
       "path": "acro-library-20261027-b/scripts/verify_score_contract.py",
+      "original_path": "acro-library-20261027-b/scripts/verify_score_contract.py",
       "original_sha256": "07b1b8f78530c8de073b875142bafb352c22ac10a59a7a28b5913e221ddba9bc",
       "public_sha256": "07b1b8f78530c8de073b875142bafb352c22ac10a59a7a28b5913e221ddba9bc",
       "publication_copy_changed": false
@@ -1611,60 +1681,70 @@
     },
     {
       "path": "acro-library-20261027-b/scripts/prepare_retention_resume1030b.py",
+      "original_path": "acro-library-20261027-b/scripts/prepare_retention_resume1030b.py",
       "original_sha256": "be67c975c7e3bc2c22d322132833ad83c71d199f39688d2e1b3666178e554d2c",
       "public_sha256": "50dd028a4cfdb245e08b8b930c368d406ff7855d47eb547a88d97373ecbb0257",
       "publication_copy_changed": true
     },
     {
       "path": "acro-library-20261027-b/scripts/run_retention_resume1030b.py",
+      "original_path": "acro-library-20261027-b/scripts/run_retention_resume1030b.py",
       "original_sha256": "cebc8747694386ede25b0a6b4642a9fb24ece5954971e8ee22f9e3fd3c2b5c93",
       "public_sha256": "cebc8747694386ede25b0a6b4642a9fb24ece5954971e8ee22f9e3fd3c2b5c93",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/preflight_retention_recovery.py",
+      "original_path": "acro-library-20261027-b/scripts/preflight_retention_recovery.py",
       "original_sha256": "45578f3ab242149c18c2bef6ce2f06cf6984b0886b0ff46d12233a8d3491f0c3",
       "public_sha256": "0e5be3bd855f70d39005abd06baba02440f4077e45087a8d92e8374ca9e848ba",
       "publication_copy_changed": true
     },
     {
       "path": "acro-library-20261027-b/scripts/collect_retention_trial.py",
+      "original_path": "acro-library-20261027-b/scripts/collect_retention_trial.py",
       "original_sha256": "d5991c0c12a54674b9a9297341953ea78e213df42ba9647d38fd65c1fb354c42",
       "public_sha256": "cbe51304edb1bb043d9b12a36631471f10646aa6d9bd2f51733d522287bdde7a",
       "publication_copy_changed": true
     },
     {
       "path": "acro-library-20261027-b/scripts/collect_retention_resume1030b.py",
+      "original_path": "acro-library-20261027-b/scripts/collect_retention_resume1030b.py",
       "original_sha256": "3d912952aef636a8fa27575c820f19be9f0f6994c005d5b4472a446d58658fab",
       "public_sha256": "8182e23c83f7c1cb2dbde565695574b73c6f10a2bb8a919184844a2228b8be08",
       "publication_copy_changed": true
     },
     {
       "path": "acro-library-20261027-b/scripts/verify_retention_retrieval.py",
+      "original_path": "acro-library-20261027-b/scripts/verify_retention_retrieval.py",
       "original_sha256": "99586b73c4ddbb128ab403fe048c0685c7e942f8e973cb3c3c5cfbe92224fdd9",
       "public_sha256": "99586b73c4ddbb128ab403fe048c0685c7e942f8e973cb3c3c5cfbe92224fdd9",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/postprocess_retention1030.py",
+      "original_path": "acro-library-20261027-b/scripts/postprocess_retention1030.py",
       "original_sha256": "d37cb5fc5acd63c31bc07c56176f14a41d97acbf67985b1e06f501732383794d",
       "public_sha256": "d37cb5fc5acd63c31bc07c56176f14a41d97acbf67985b1e06f501732383794d",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/plot_retention1030.py",
+      "original_path": "acro-library-20261027-b/scripts/plot_retention1030.py",
       "original_sha256": "debec077f550cc0c58c76980a7734bc8652cf38d0f3488a3c4a3e6e59c87623f",
       "public_sha256": "debec077f550cc0c58c76980a7734bc8652cf38d0f3488a3c4a3e6e59c87623f",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/diagnose_retention1030.py",
+      "original_path": "acro-library-20261027-b/scripts/diagnose_retention1030.py",
       "original_sha256": "1fe0cc783b15efe3b9da9d91ac1246dd9caf93714c81b5ac747c2686377d6eef",
       "public_sha256": "1fe0cc783b15efe3b9da9d91ac1246dd9caf93714c81b5ac747c2686377d6eef",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/build_retention1030_report.py",
+      "original_path": "acro-library-20261027-b/scripts/build_retention1030_report.py",
       "original_sha256": "9c1ede0f9d95acc4488d9a14c8ec57655d113eff120ee7555cf2e09ac4ea6567",
       "public_sha256": "9c1ede0f9d95acc4488d9a14c8ec57655d113eff120ee7555cf2e09ac4ea6567",
       "publication_copy_changed": false
@@ -1689,72 +1769,84 @@
     },
     {
       "path": "acro-library-20261027-b/scripts/evaluate_teacher_bound20.py",
+      "original_path": "acro-library-20261027-b/scripts/evaluate_teacher_bound20.py",
       "original_sha256": "d41540eb25336cd9cf936a431c76680327cf6a264804c16eb43dcaa7dffac74c",
       "public_sha256": "d41540eb25336cd9cf936a431c76680327cf6a264804c16eb43dcaa7dffac74c",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/render_teacher_qualification.py",
+      "original_path": "acro-library-20261027-b/scripts/render_teacher_qualification.py",
       "original_sha256": "2bf215f8a29eb8937ae11a04e2f3974f017eca9c009c29e167a69e4c59da693b",
       "public_sha256": "2bf215f8a29eb8937ae11a04e2f3974f017eca9c009c29e167a69e4c59da693b",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/run_teacher_qualification1030.py",
+      "original_path": "acro-library-20261027-b/scripts/run_teacher_qualification1030.py",
       "original_sha256": "bde9320e324a450dda1f35a5db4a6f7ca6a4483ac7ed37354b147d050dbb0879",
       "public_sha256": "bde9320e324a450dda1f35a5db4a6f7ca6a4483ac7ed37354b147d050dbb0879",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/build_teacher_qualification1030_report.py",
+      "original_path": "acro-library-20261027-b/scripts/build_teacher_qualification1030_report.py",
       "original_sha256": "0067db35f39aec7259c5a141b75b05f15892cab6995574d03100f2556a0922f5",
       "public_sha256": "0067db35f39aec7259c5a141b75b05f15892cab6995574d03100f2556a0922f5",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/audit_protected_reward1030.py",
+      "original_path": "acro-library-20261027-b/scripts/audit_protected_reward1030.py",
       "original_sha256": "dc6213d38dac2a9f0d53dab30a188f279ffee0844d6c628b834aa851b5ef10cd",
       "public_sha256": "dc6213d38dac2a9f0d53dab30a188f279ffee0844d6c628b834aa851b5ef10cd",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/audit_reference_geometry1030.py",
+      "original_path": "acro-library-20261027-b/scripts/audit_reference_geometry1030.py",
       "original_sha256": "dd392772f3fbe4ea549d46997a9953adca84e246a8036dd46274f64342ee13f1",
       "public_sha256": "dd392772f3fbe4ea549d46997a9953adca84e246a8036dd46274f64342ee13f1",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/evaluate_frozen_specialist1030.py",
+      "original_path": "acro-library-20261027-b/scripts/evaluate_frozen_specialist1030.py",
       "original_sha256": "ebd7bc9d2c37f59d6346772bddde40c43c23d7e628ec6cb6f46646e95fdae6f3",
       "public_sha256": "ebd7bc9d2c37f59d6346772bddde40c43c23d7e628ec6cb6f46646e95fdae6f3",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/qualify_frozen_specialist1030.py",
+      "original_path": "acro-library-20261027-b/scripts/qualify_frozen_specialist1030.py",
       "original_sha256": "9e259263487411b4454a73e973e24b6e5357c358006defef953fa44aefe70610",
       "public_sha256": "9e259263487411b4454a73e973e24b6e5357c358006defef953fa44aefe70610",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/probe_qualified_teacher_adapter1030.py",
+      "original_path": "acro-library-20261027-b/scripts/probe_qualified_teacher_adapter1030.py",
       "original_sha256": "54ff04d8d600e4d60cb8764e84b44780c704efddd031b75d5d8746791904c414",
       "public_sha256": "54ff04d8d600e4d60cb8764e84b44780c704efddd031b75d5d8746791904c414",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/qualified_retention_learner.py",
+      "original_path": "acro-library-20261027-b/scripts/qualified_retention_learner.py",
       "original_sha256": "e775de54eced2f4db7c1ab6259bdc65b66fe8d58c1764d0dac2e10ee2a5e05b2",
       "public_sha256": "e775de54eced2f4db7c1ab6259bdc65b66fe8d58c1764d0dac2e10ee2a5e05b2",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/train_qualified_engineering1030.py",
+      "original_path": "acro-library-20261027-b/scripts/train_qualified_engineering1030.py",
       "original_sha256": "b4127fbfe0a29afb39ee2504586b742509f79604d6880b648bc27a937531306a",
       "public_sha256": "42cea845c0d0bfb7fce37fbe6ec146ae99c947a7162c466c9e79aa3a7f595a93",
       "publication_copy_changed": true
     },
     {
       "path": "acro-library-20261027-b/scripts/validate_qualified_engineering1030.py",
+      "original_path": "acro-library-20261027-b/scripts/validate_qualified_engineering1030.py",
       "original_sha256": "fcd82edc60f906c586d7efd78fabe5d8ba936dee7a3a485ad0472c470d5ce74f",
       "public_sha256": "fcd82edc60f906c586d7efd78fabe5d8ba936dee7a3a485ad0472c470d5ce74f",
       "publication_copy_changed": false
@@ -1779,24 +1871,28 @@
     },
     {
       "path": "acro-library-20261027-b/scripts/train_qualified_expert_v2.py",
+      "original_path": "acro-library-20261027-b/scripts/train_qualified_expert_v2.py",
       "original_sha256": "86e9d5809267394688c98620e26f0241396d1263514051de21af70815864ecb4",
       "public_sha256": "e18a455aba9b02bc3cf8c3549dc80edc67d5d467ec3a4b0e9a01143ef8b5d4a7",
       "publication_copy_changed": true
     },
     {
       "path": "acro-library-20261027-b/scripts/evaluate_qualified_expert_v2.py",
+      "original_path": "acro-library-20261027-b/scripts/evaluate_qualified_expert_v2.py",
       "original_sha256": "28443b0d83e12f3dcac8d50cc5656bff8b5cab69d3b7e17c20acfc7c73264418",
       "public_sha256": "28443b0d83e12f3dcac8d50cc5656bff8b5cab69d3b7e17c20acfc7c73264418",
       "publication_copy_changed": false
     },
     {
       "path": "acro-library-20261027-b/scripts/run_qualified_expert_v2.py",
+      "original_path": "acro-library-20261027-b/scripts/run_qualified_expert_v2.py",
       "original_sha256": "d034f5a4ef25b3cd31899df007d6aefaf40b7c58d63f77d65d31508e9799ac7c",
       "public_sha256": "1df3bcb9b40e44a92ed42110d8ff49eaa6bf86ecec242f9fd8a71f46f5be539a",
       "publication_copy_changed": true
     },
     {
       "path": "acro-library-20261027-b/qualified-expert-v2-plan.json",
+      "original_path": "acro-library-20261027-b/qualified-expert-v2-plan.json",
       "original_sha256": "bc5e8b397accd4f585732803385516b755538f924afebc9e73fbc205dc763476",
       "public_sha256": "573273b702ceca0d3845a18ab9d202e7974a25036334766f1cb2ef6e702b9c4d",
       "publication_copy_changed": true
@@ -1805,6 +1901,307 @@
       "path": "acro-library-20261027-b/deployment/qualified-expert-v2.command.txt",
       "original_sha256": "029cb2640baa1a7b0a42480b7cd160e3e54f225080684cbdd56d4d74988f9d33",
       "public_sha256": "7ad983ea109f8ee1e6e806cd28bc5bad1326e182a337f202604bc56c5d72316f",
+      "publication_copy_changed": true
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/analyze_teacher_repro1031.py",
+      "original_path": "acro-library-20261027-b/scripts/analyze_teacher_repro1031.py",
+      "original_sha256": "84785aea9364d62f80fa7ac6435955790e3a87eeceab75c3c29b37cdf140704b",
+      "public_sha256": "84785aea9364d62f80fa7ac6435955790e3a87eeceab75c3c29b37cdf140704b",
+      "publication_copy_changed": false
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/assess_qualified_expert_v2_cpu_1031.py",
+      "original_path": "acro-library-20261027-b/scripts/assess_qualified_expert_v2_cpu_1031.py",
+      "original_sha256": "b447ad309e8a40f076b434065e72b0cb17370fa239852df791586351d8a59456",
+      "public_sha256": "b447ad309e8a40f076b434065e72b0cb17370fa239852df791586351d8a59456",
+      "publication_copy_changed": false
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/assess_qualified_expert_v3_cpu_1031.py",
+      "original_path": "acro-library-20261027-b/scripts/assess_qualified_expert_v3_cpu_1031.py",
+      "original_sha256": "818cbb9bd375347cb82eb897959592d89f5ca5f9269db7f850d36dfb3478316a",
+      "public_sha256": "818cbb9bd375347cb82eb897959592d89f5ca5f9269db7f850d36dfb3478316a",
+      "publication_copy_changed": false
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/assess_specialist8807_1031.py",
+      "original_path": "acro-library-20261027-b/scripts/assess_specialist8807_1031.py",
+      "original_sha256": "910c570646921c18aac20e513ddd8083e4e3c3350381f3aef7aae0c6827ac27b",
+      "public_sha256": "910c570646921c18aac20e513ddd8083e4e3c3350381f3aef7aae0c6827ac27b",
+      "publication_copy_changed": false
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/assess_specialist8807_cpu1031.py",
+      "original_path": "acro-library-20261027-b/scripts/assess_specialist8807_cpu1031.py",
+      "original_sha256": "4e38a9d53a6b7fd379cfb3abf62a9fe74777252062d29a25d8ec94adb0e99f2b",
+      "public_sha256": "4e38a9d53a6b7fd379cfb3abf62a9fe74777252062d29a25d8ec94adb0e99f2b",
+      "publication_copy_changed": false
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/bounded_inline_source.py",
+      "original_path": "acro-library-20261027-b/scripts/bounded_inline_source.py",
+      "original_sha256": "af345b311b52b5c6716a0595300d3965698b8f50f52108baea53a8264c21554f",
+      "public_sha256": "af345b311b52b5c6716a0595300d3965698b8f50f52108baea53a8264c21554f",
+      "publication_copy_changed": false
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/build_project_journal.py",
+      "original_path": "acro-library-20261027-b/scripts/build_project_journal.py",
+      "original_sha256": "38ba518aeab40f4bb26020f5bb68b6dddc81a308acd9da27337f8e67fbd89db6",
+      "public_sha256": "38ba518aeab40f4bb26020f5bb68b6dddc81a308acd9da27337f8e67fbd89db6",
+      "publication_copy_changed": false
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/build_qualified_expert_v2_1031_report.py",
+      "original_path": "acro-library-20261027-b/scripts/build_qualified_expert_v2_1031_report.py",
+      "original_sha256": "57c23ed6c475ef6f9420ee1d3a26df572b63ae7a7936280a0a55ddc0b483c8ee",
+      "public_sha256": "57c23ed6c475ef6f9420ee1d3a26df572b63ae7a7936280a0a55ddc0b483c8ee",
+      "publication_copy_changed": false
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/build_teacher_repro1031_report.py",
+      "original_path": "acro-library-20261027-b/scripts/build_teacher_repro1031_report.py",
+      "original_sha256": "2938fc346beb737182ac7215e317e575a7b7432d986de89cb7029f19603045cb",
+      "public_sha256": "2938fc346beb737182ac7215e317e575a7b7432d986de89cb7029f19603045cb",
+      "publication_copy_changed": false
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/collect_qualified_expert_v2.py",
+      "original_path": "acro-library-20261027-b/scripts/collect_qualified_expert_v2.py",
+      "original_sha256": "f136c8ddbca26f8c72c2ace006fec779cc9d2bb98d2b4fa9a85775722f51d571",
+      "public_sha256": "9ba8c9629edafd2b49d0473d71bfcd7cca5c79cbe86107d76b2edd695b17673b",
+      "publication_copy_changed": true
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/diagnose_inline_public_HTTP.py",
+      "original_path": "acro-library-20261027-b/scripts/diagnose_inline_public_HTTP.py",
+      "original_sha256": "efc808a76c2246555c48390718826da6e993ec7ccc7286f178483b34d531969b",
+      "public_sha256": "efc808a76c2246555c48390718826da6e993ec7ccc7286f178483b34d531969b",
+      "publication_copy_changed": false
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/evaluate_qualified_expert_v3.py",
+      "original_path": "acro-library-20261027-b/scripts/evaluate_qualified_expert_v3.py",
+      "original_sha256": "210a48504007b45cdc7f53d6206b4501b05f1d7c166c8f72416bd9ca2cebc5a9",
+      "public_sha256": "210a48504007b45cdc7f53d6206b4501b05f1d7c166c8f72416bd9ca2cebc5a9",
+      "publication_copy_changed": false
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/evaluate_specialist8807_1031.py",
+      "original_path": "acro-library-20261027-b/scripts/evaluate_specialist8807_1031.py",
+      "original_sha256": "41fd2f3a442771b70cb2d7ef606c852da505a602961dc2dcf069e211dfcbae13",
+      "public_sha256": "41fd2f3a442771b70cb2d7ef606c852da505a602961dc2dcf069e211dfcbae13",
+      "publication_copy_changed": false
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/finalize_qualified_expert_v2_inline_review.py",
+      "original_path": "acro-library-20261027-b/scripts/finalize_qualified_expert_v2_inline_review.py",
+      "original_sha256": "159e103699a9db37bab003dd66878660f77337fc6ec7b37629f1d4782a3129ce",
+      "public_sha256": "159e103699a9db37bab003dd66878660f77337fc6ec7b37629f1d4782a3129ce",
+      "publication_copy_changed": false
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/finalize_retention_publication1030.py",
+      "original_path": "acro-library-20261027-b/scripts/finalize_retention_publication1030.py",
+      "original_sha256": "2ce270b097b60c33da48bd82011adadbca18815629da0036f7d0cadb15d8bde0",
+      "public_sha256": "2ce270b097b60c33da48bd82011adadbca18815629da0036f7d0cadb15d8bde0",
+      "publication_copy_changed": false
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/observe_teacher_repro1031.py",
+      "original_path": "acro-library-20261027-b/scripts/observe_teacher_repro1031.py",
+      "original_sha256": "5a3860df407e50c54d5e9d5f21aba9fff8446b1fb05fdfc5340570f2ffe71d13",
+      "public_sha256": "5a3860df407e50c54d5e9d5f21aba9fff8446b1fb05fdfc5340570f2ffe71d13",
+      "publication_copy_changed": false
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/package_specialist8807_1031.py",
+      "original_path": "acro-library-20261027-b/scripts/package_specialist8807_1031.py",
+      "original_sha256": "b47f57f6f887dd960521490a36c380878320cb54ec0909ecb8e5d0702aed0411",
+      "public_sha256": "b47f57f6f887dd960521490a36c380878320cb54ec0909ecb8e5d0702aed0411",
+      "publication_copy_changed": false
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/prepare_qualified_expert_v2_cpu_acp.py",
+      "original_path": "acro-library-20261027-b/scripts/prepare_qualified_expert_v2_cpu_acp.py",
+      "original_sha256": "c3c8d0ede6362ec2b3e04abcc437728f694d57afb76c384cb60af7afa9673908",
+      "public_sha256": "98c88d222546af2b229ed02b83a3364f241cbeb820745bcc61b7cbea3a832b50",
+      "publication_copy_changed": true
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/prepare_qualified_expert_v2_inline.py",
+      "original_path": "acro-library-20261027-b/scripts/prepare_qualified_expert_v2_inline.py",
+      "original_sha256": "9ae52d0506f78cdcfcd7d31cdfe53baf4fa41a96742f1e546a0a7bb5642314c2",
+      "public_sha256": "9ae52d0506f78cdcfcd7d31cdfe53baf4fa41a96742f1e546a0a7bb5642314c2",
+      "publication_copy_changed": false
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/publish_qualified_expert_v2_inline_source.py",
+      "original_path": "acro-library-20261027-b/scripts/publish_qualified_expert_v2_inline_source.py",
+      "original_sha256": "6cc450c0fca862c4d969f9debe3c4447082c513832703507beade72aa636ed6f",
+      "public_sha256": "6cc450c0fca862c4d969f9debe3c4447082c513832703507beade72aa636ed6f",
+      "publication_copy_changed": false
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/qualified_expert_v2_cpu_stage.py",
+      "original_path": "acro-library-20261027-b/scripts/qualified_expert_v2_cpu_stage.py",
+      "original_sha256": "f8d7d0406370af540b1adf5f8d4c863b4eced70903350347daa42a9b0755b620",
+      "public_sha256": "f8d7d0406370af540b1adf5f8d4c863b4eced70903350347daa42a9b0755b620",
+      "publication_copy_changed": false
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/qualified_expert_v2_inline_init.py",
+      "original_path": "acro-library-20261027-b/scripts/qualified_expert_v2_inline_init.py",
+      "original_sha256": "9b39875a250d51447ebfbb381bba50b9939144a85f646ec615f29fa322d872c0",
+      "public_sha256": "9b39875a250d51447ebfbb381bba50b9939144a85f646ec615f29fa322d872c0",
+      "publication_copy_changed": false
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/recover_specialist8807_1031.py",
+      "original_path": "acro-library-20261027-b/scripts/recover_specialist8807_1031.py",
+      "original_sha256": "1da42a3caeeed83314b16a3bb8ee84793d77d6a75b6e5d214fdaaf5f8d955b40",
+      "public_sha256": "1da42a3caeeed83314b16a3bb8ee84793d77d6a75b6e5d214fdaaf5f8d955b40",
+      "publication_copy_changed": false
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/render_qualified_expert_v2_failure_views1031.py",
+      "original_path": "acro-library-20261027-b/scripts/render_qualified_expert_v2_failure_views1031.py",
+      "original_sha256": "18edc40bb06c89b17a6d08d1834d13ee975a42257ded3910e136a17787da0830",
+      "public_sha256": "18edc40bb06c89b17a6d08d1834d13ee975a42257ded3910e136a17787da0830",
+      "publication_copy_changed": false
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/render_specialist8807_1031.py",
+      "original_path": "acro-library-20261027-b/scripts/render_specialist8807_1031.py",
+      "original_sha256": "9b5b164c4c9140bae02731a3bffb9ac0ead0563a885c48b53b155793e6f5f6d5",
+      "public_sha256": "9b5b164c4c9140bae02731a3bffb9ac0ead0563a885c48b53b155793e6f5f6d5",
+      "publication_copy_changed": false
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/report_specialist8807_1031.py",
+      "original_path": "acro-library-20261027-b/scripts/report_specialist8807_1031.py",
+      "original_sha256": "d6efd513340a46f2f4211e395c7fe6ed393e0197d5ed96b263e7e171362e8a14",
+      "public_sha256": "d6efd513340a46f2f4211e395c7fe6ed393e0197d5ed96b263e7e171362e8a14",
+      "publication_copy_changed": false
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/report_specialist8807_numerical1031.py",
+      "original_path": "acro-library-20261027-b/scripts/report_specialist8807_numerical1031.py",
+      "original_sha256": "a85a46e24bfbea7ab34440d836137eeadc93b86bcc005955da65dfa01eeb50c6",
+      "public_sha256": "a85a46e24bfbea7ab34440d836137eeadc93b86bcc005955da65dfa01eeb50c6",
+      "publication_copy_changed": false
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/retrieve_retention_resume1030b.py",
+      "original_path": "acro-library-20261027-b/scripts/retrieve_retention_resume1030b.py",
+      "original_sha256": "e8b14f9419593cd900622afc468758b6c05247bdad5acb165fcc0fbd833f1643",
+      "public_sha256": "b8b947f74fa019abc827b3033b50e2899a310dee81c83dbb50485cfdbfb028df",
+      "publication_copy_changed": true
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/run_inline_local_two_cpu.py",
+      "original_path": "acro-library-20261027-b/scripts/run_inline_local_two_cpu.py",
+      "original_sha256": "e20fca801739813c4173d098783536a5858f3de55697a14db1b9b79472429497",
+      "public_sha256": "e20fca801739813c4173d098783536a5858f3de55697a14db1b9b79472429497",
+      "publication_copy_changed": false
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/run_inline_publication_two_cpu.py",
+      "original_path": "acro-library-20261027-b/scripts/run_inline_publication_two_cpu.py",
+      "original_sha256": "d8d98c8571f93dc5c60386856ea2bd1af60b09ba7feda7050822116984a67ffd",
+      "public_sha256": "d8d98c8571f93dc5c60386856ea2bd1af60b09ba7feda7050822116984a67ffd",
+      "publication_copy_changed": false
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/run_qualified_expert_v3.py",
+      "original_path": "acro-library-20261027-b/scripts/run_qualified_expert_v3.py",
+      "original_sha256": "ad1d2491e481e449921c8be189af46148a7fa4e50d7981d615229da186557071",
+      "public_sha256": "e2bcc1aa2980cdd3a019b69c4c537306dc1883a246caae8b873e9e02ecb1df30",
+      "publication_copy_changed": true
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/run_specialist8807_1031.py",
+      "original_path": "acro-library-20261027-b/scripts/run_specialist8807_1031.py",
+      "original_sha256": "f93cd982324d818fe309bb271e367d9817ad3ca89cedf6f3b1ddad30316cc2e4",
+      "public_sha256": "56c022f8d4aba2713054372edc1080f2ed5fe6fae445070fc7203fb60a83badc",
+      "publication_copy_changed": true
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/stage_qualified_expert_v2.py",
+      "original_path": "acro-library-20261027-b/scripts/stage_qualified_expert_v2.py",
+      "original_sha256": "077dffa11924df78db34e72f58da6d541755485290b23e24ee749d42d7860f50",
+      "public_sha256": "bf2f0f3a771b886ff0d6992e898069a2fc10a39ac88472a2c950eb63e9db6fff",
+      "publication_copy_changed": true
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/stage_qualified_expert_v2_attended.py",
+      "original_path": "acro-library-20261027-b/scripts/stage_qualified_expert_v2_attended.py",
+      "original_sha256": "37434106ed302032c2fd0b821fb14694a385c050f757919fefd44b9d17bcf9e5",
+      "public_sha256": "2de68e70e2164cc9ea0f0cc9ab0c785a05591ec908520db346e5eaacf1a0810e",
+      "publication_copy_changed": true
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/test_qualified_expert_v2_inline.py",
+      "original_path": "acro-library-20261027-b/scripts/test_qualified_expert_v2_inline.py",
+      "original_sha256": "163415e7298f4b5f527624d082e292a06d6f2367a60eb7ac11cbd3ecc580e093",
+      "public_sha256": "163415e7298f4b5f527624d082e292a06d6f2367a60eb7ac11cbd3ecc580e093",
+      "publication_copy_changed": false
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/test_qualified_expert_v2_transport.py",
+      "original_path": "acro-library-20261027-b/scripts/test_qualified_expert_v2_transport.py",
+      "original_sha256": "9e4a229502eb1cfd30ea996fd18eeb5bb05d957fd24a5d9ce74878bc28117a44",
+      "public_sha256": "7192bcd69d7b35dde5448e75d2caf2717f3874b5dca2a31bdc7873088562d8ad",
+      "publication_copy_changed": true
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/train_qualified_expert_v3.py",
+      "original_path": "acro-library-20261027-b/scripts/train_qualified_expert_v3.py",
+      "original_sha256": "8f7757ba850c3b7d78461510cf7d1e12011b9851ae80ac3891be5a5016773ca4",
+      "public_sha256": "bad890dbf5bafb1cb9ff84e7d0b52982e23e87e9bacd742d888a9ba5372fa699",
+      "publication_copy_changed": true
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/train_specialist8807_1031.py",
+      "original_path": "acro-library-20261027-b/scripts/train_specialist8807_1031.py",
+      "original_sha256": "3134f0e4932b90e5f75cb279a395337f7ec6859f753e3af133483fba331a4fe0",
+      "public_sha256": "3134f0e4932b90e5f75cb279a395337f7ec6859f753e3af133483fba331a4fe0",
+      "publication_copy_changed": false
+    },
+    {
+      "path": "acro-library-20261027-b/scripts/verify_specialist8807_archive1031.py",
+      "original_path": "acro-library-20261027-b/scripts/verify_specialist8807_archive1031.py",
+      "original_sha256": "42f2431dee6b2cde2d6e6ca08f54bbb6e9f0286d59c79bec9278ef541c14ad53",
+      "public_sha256": "42f2431dee6b2cde2d6e6ca08f54bbb6e9f0286d59c79bec9278ef541c14ad53",
+      "publication_copy_changed": false
+    },
+    {
+      "path": "acro-library-20261027-b/project-journal-20261101.json",
+      "original_path": "acro-library-20261027-b/project-journal-20261101.json",
+      "original_sha256": "44cc0d206aca4b4f669ae9f9883edeb7d9c17a5c19777a97355b4d6d589aed2e",
+      "public_sha256": "a65ce56abc812d0ef3b52e1963c743f6f6f207c1eee2d4edbe4dc778ac3e569a",
+      "publication_copy_changed": true
+    },
+    {
+      "path": "acro-library-20261027-b/teacher8808-repro1031c-plan.json",
+      "original_path": "acro-library-20261027-b/teacher8808-repro1031c-plan.json",
+      "original_sha256": "ccac31307b4683fe4863e00f693cf160ab7535163e1ed03a875057f8a86c2cd1",
+      "public_sha256": "0fb68af7d9cc4aeaf74ac9851cade3ae92b029b5a1bd7eb427973c14f296d696",
+      "publication_copy_changed": true
+    },
+    {
+      "path": "monitoring/rollback-checkpoint-review-20261101.json",
+      "original_path": "monitoring/rollback-checkpoint-review-20261101.json",
+      "original_sha256": "b398187b952cfa3a63a2bd8d643a407c2970f0339d86306e17f853708de63fc6",
+      "public_sha256": "1ce2dec3039b4de2886d7c7aa9e3ad8b4fe989ceb1d4006e148b693ce50e7052",
+      "publication_copy_changed": true
+    },
+    {
+      "path": "monitoring/review_rollback_checkpoints_20261101.py",
+      "original_path": "monitoring/review_rollback_checkpoints_20261101.py",
+      "original_sha256": "2559ab00649a22f6514e2bd5bc51f5919551d277dde1a629b025c5998a032b90",
+      "public_sha256": "01a75befa9de73c212a9bf6fd626db2b6efb36f0c1cf5e7e92deee286bcb0adc",
       "publication_copy_changed": true
     }
   ],
@@ -1827,5 +2224,6 @@
     "existing_training_and_evaluation_sources_modified": false,
     "new_CPU_diagnostics_only": true,
     "qualified_teacher_scope": "8808 specialist only; no unified-model adoption"
-  }
+  },
+  "latest_consolidation": "2026-11-05"
 }

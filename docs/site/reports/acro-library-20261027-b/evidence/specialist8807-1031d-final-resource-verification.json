@@ -1,0 +1,52 @@
+{
+  "status": "GPU_terminal_existing_CPU_CCI_stopped_empty_DNAT_unbound_original_command_restored",
+  "verified_at": "2026-11-01T01:24:06.269151+08:00",
+  "job_name": "supermimic-specialist8807-USER_ID-1031d",
+  "job_UID": "0977ee2b9b094ac5a0d61ad847cafb03",
+  "platform_terminal_status": "success",
+  "platform_terminal_updated_at": "2026-10-31T23:02:07+08:00",
+  "Worker_status": "success",
+  "worker_name": "pt-0977ee2b9b094ac5a0d61ad847cafb03-worker-0",
+  "program_final_at": "2026-10-31T23:01:33+08:00",
+  "native_phase_count": 59,
+  "all_native_phase_exitcodes_zero": true,
+  "all_native_child_groups_empty": true,
+  "program_elapsed_seconds": 2285.173,
+  "no_new_GPU_or_CCI_created_during_this_recovery": true,
+  "no_CCI_started_or_DNAT_changed_during_this_recovery_so_far": false,
+  "whole_account_aggregate_occupancy": null,
+  "scope": "This GPUjob and attended reuse of existing0GPUCCI only; no allaccountzero claim",
+  "screenshots": [
+    "evidence/specialist8807-1031d-terminal.png"
+  ],
+  "DOM_evidence": [
+    "evidence/specialist8807-1031d-terminal-home.txt",
+    "evidence/specialist8807-1031d-terminal-worker.txt",
+    "evidence/specialist8807-1101-CCI-final-stopped-empty.txt",
+    "evidence/specialist8807-1101-DNAT-final-unbound.txt"
+  ],
+  "full_goal_complete": false,
+  "existing_CPU_CCI_collection": {
+    "UID": "21cd0ad52d104386bb572414d99249d1",
+    "GPU": 0,
+    "actual_CPU": 2,
+    "actual_RAM_GiB": 8,
+    "stopped_and_empty": true,
+    "stop_observed_at": "2026-11-01T01:20:03.252298+08:00",
+    "after_restore_stopped_empty_at": "2026-11-01T01:22:49.153002+08:00",
+    "DNAT_unbound": true,
+    "DNAT_rule": "dnat-zhicheng-fb300263",
+    "port": 10076,
+    "original_command_restored": {
+      "status": "original_command_published_and_exact_readback_verified",
+      "at": "2026-10-31T17:22:41.847Z",
+      "sha256": "2c81f1b1fc679c393562231dcb6ab0d7b24532c1b959375eaebf138fe149d6f4"
+    },
+    "manual_console_stop_not_automatic_helper": true,
+    "deadline_at": "2026-11-01T01:27:49+08:00",
+    "closed_before_deadline": true,
+    "screenshot_capture": "Unavailable on two attempts; direct DOM evidence preserved",
+    "private_key_body_read": false,
+    "new_app_created": false
+  }
+}

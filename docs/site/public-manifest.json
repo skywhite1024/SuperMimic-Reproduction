@@ -4,33 +4,43 @@
   "reports": [
     {
       "report": "acro-library-20261027-b/unified-library-report.html",
-      "original_sha256": "2eb046911ade45ebc554540333ab343236ca623b9fdf6c7f4aaefad9a57e0506",
-      "public_sha256": "c4c7d9ffd8eee3cc5f56e6fc974ec6dc245bc338afe820715faa20186fee814a"
+      "original_sha256": "141e472448a1f2bb9bed6f3a5a9bf87bd263fd6fdb3bbae8e6a6bbbb3e82856d",
+      "public_sha256": "f5495328cae77038defea0e6a4772ed17763c01f5ffc6e2cccb2d69669b097fd"
     },
     {
       "report": "acro-library-20261027-b/action-bound-ablation-report.html",
       "original_sha256": "5fa978377904cc33f8b6fe1cce2a0bbba1f6323d5062bf365364f5a8518bcb7f",
-      "public_sha256": "508c1302d73afc2d2c416385a1a4cee85b0079ec099aa1c7c5158f909b6c4b4f"
+      "public_sha256": "6647a145aab86887bbfc6b62fa52bed950eb358c4ec0620274b50d57083c08cb",
+      "previously_recorded_public_sha256": "508c1302d73afc2d2c416385a1a4cee85b0079ec099aa1c7c5158f909b6c4b4f",
+      "hash_refresh_note": "Recomputed for actual publication bytes; historical original hash retained."
     },
     {
       "report": "interactive-g1-20261027-a/continuous-demo.html",
       "original_sha256": "dfb7b6d34893e53d631af6e145299b41e0d3f3187ae9fbb1f26599fed0cc2a6f",
-      "public_sha256": "3a3da9687d21ba231d476c85b3a11200033fb64359fb35265a8785e887753612"
+      "public_sha256": "65712a5ea6f120e4724ee43899d80739f9ed489edb8181b4864a825194d86642",
+      "previously_recorded_public_sha256": "3a3da9687d21ba231d476c85b3a11200033fb64359fb35265a8785e887753612",
+      "hash_refresh_note": "Recomputed for actual publication bytes; historical original hash retained."
     },
     {
       "report": "implementation/continuation-20261025-a/report/continuation-comparison.html",
       "original_sha256": "732fc6b89a90fc2d615919a2e83924cc508c4f5cf834d091d0d1d3d6845fcabc",
-      "public_sha256": "c8d028420e77a85afb0425b2dbda57eb83bc18d559ce086062eab119fc2dd82b"
+      "public_sha256": "7ea862eaf743f8f43dcf32050ddb34ff410de4aecf8d3f00d7ff032ec8f43c4d",
+      "previously_recorded_public_sha256": "c8d028420e77a85afb0425b2dbda57eb83bc18d559ce086062eab119fc2dd82b",
+      "hash_refresh_note": "Recomputed for actual publication bytes; historical original hash retained."
     },
     {
       "report": "implementation/report/supermimic-report.html",
       "original_sha256": "ce565785ad1122e6aed93f14412baf37756867e5b43a45f1be3e420ad2dea839",
-      "public_sha256": "0080e73197b575709651dbf13b3e45d0c1a25f17d3fa87c6061ecafd8e7f3f5e"
+      "public_sha256": "f1661900f7bedd3ab84a16abb73d375c52a5023fb46b0df814ff8d21b2f16f94",
+      "previously_recorded_public_sha256": "0080e73197b575709651dbf13b3e45d0c1a25f17d3fa87c6061ecafd8e7f3f5e",
+      "hash_refresh_note": "Recomputed for actual publication bytes; historical original hash retained."
     },
     {
       "report": "bones-seed-20261026-a/report/preparation-status.html",
       "original_sha256": "bc8e3564f25ae2d0903e91966dc9d27a364ac2781b448a8de88b3b96d30785ac",
-      "public_sha256": "e083ff5754b3c3fc311a1fbd97689f97ee586fc5f1e8391416cc18c4fe57e057"
+      "public_sha256": "5e49c31551df3ecc6f087da37f89a58fc19935b6bbaf04e6571eb747edec7af7",
+      "previously_recorded_public_sha256": "e083ff5754b3c3fc311a1fbd97689f97ee586fc5f1e8391416cc18c4fe57e057",
+      "hash_refresh_note": "Recomputed for actual publication bytes; historical original hash retained."
     },
     {
       "report": "acro-library-20261027-b/retention-1030-report.html",
@@ -47,6 +57,31 @@
       "original_sha256": "b5bdc529833ebdc27ad5def0c01a1f559252e6c68af59d277f1f93196a8ffe29",
       "public_sha256": "c39f752918d76e7995c094bb582abc642d2c6187d344b51cf9a166e4de711916",
       "public_source_validation_card_added_after_isolated_run": true
+    },
+    {
+      "report": "acro-library-20261027-b/qualified-expert-v2-1031-report.html",
+      "original_sha256": "bb35062bef683b31ac649b4873aecc644e2a13948e0388e48b710bb18862940d",
+      "public_sha256": "b3331ac7689738fbc619b27529486e9d6ffd83e754c69db4969ed9e968be3665"
+    },
+    {
+      "report": "acro-library-20261027-b/qualified-expert-v3-oldw02-1031-report.html",
+      "original_sha256": "ed57e467f80baee5549bcdb6c31f22bbacd00ff690af9697b6fe38dff989e688",
+      "public_sha256": "94332df32476943c4596701232866e73e9eb9de90d975709d2d3b0e46bff3088"
+    },
+    {
+      "report": "acro-library-20261027-b/teacher8808-repro1031c-report.html",
+      "original_sha256": "308d3cbf46c470ba2cde5a075a4149c951f1197b40877e05ee03b4a83a49c4e1",
+      "public_sha256": "3b0e152bbd458f4c538d61a3b3903e2fed9c33c945659bdf41d0dbb60dd9b9c9"
+    },
+    {
+      "report": "acro-library-20261027-b/specialist8807-1031d-report.html",
+      "original_sha256": "0d653e6f98d06449948cce3684d3dfba5451f4e78360be43316caa8121b9416a",
+      "public_sha256": "3e766d7443de213e729ab34fde25a5cb47f36583c3ad22f85f6d3606489e5312"
+    },
+    {
+      "report": "acro-library-20261027-b/specialist8807-1031d-numerical-report.html",
+      "original_sha256": "e5a4085b863b0590b288b96e3f096db17e5144745d37817ac26d450339c9f9d2",
+      "public_sha256": "63f6f03e6e1e08327c663a7a06f4fb476f873f2ad1e09a7325a955c93e9e9530"
     }
   ],
   "video_count": 298,
@@ -7312,6 +7347,536 @@
       "publication_copy_identical": true,
       "every_source_frame_and_failed_tail_preserved": true,
       "source_run": "specialist8808-bound20-corrected-cpu-1030"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/specialist8807-1031d-candidate-raw-cuda-r0/88_07_stageii_unitree_g1.mp4",
+      "original_sha256": "cced14bb17f2f61008134b4effd0778967bba41db2ddc5bf06f8e86e30591380",
+      "sha256": "286fb3917d4c2440b96cbc3053b0ecb3934171ccca295a69e564e14ca54f5050",
+      "bytes": 195075,
+      "frames": 64,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/specialist8807-1031d-parent-raw-cuda-r0/88_07_stageii_unitree_g1.mp4",
+      "original_sha256": "886d899998c29060be77187131748157d771bc4dbc948a82c0f3808e0c1a53b4",
+      "sha256": "bbe128519b18fad36fec32f77fa31dee34acf90eff51559c09dfcb8cf1ea17c2",
+      "bytes": 176501,
+      "frames": 64,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/qualified-expert-v2-1031-raw-sequences-cuda/seed-2.mp4",
+      "original_sha256": "2479f9f7146adca0c065912f6d2bdc73c72b822a035f230375cd0a1a6fefc284",
+      "sha256": "76f3b5b2a7e9c6c8e913ed8c82b1a58862043de8fad83734e172dc9d1d5c91d4",
+      "bytes": 5079223,
+      "frames": 3001,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/qualified-expert-v2-1031-raw-sequences-cuda/seed-0.mp4",
+      "original_sha256": "eeb77082391be6a11655d8044f36a9755be420ac3339791e3352d342926d735b",
+      "sha256": "e03ad3c4c257b8bf33da642780cb5e7cc943857d6a8f1f165afd4968ccf40409",
+      "bytes": 4814967,
+      "frames": 3001,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/qualified-expert-v2-1031-corrected-library-cuda/143_34_stageii_unitree_g1.mp4",
+      "original_sha256": "3bbfd15108f8ab2598634a7c3242d4bd5d648afd0de0cf9b591ccbfd8861b3a6",
+      "sha256": "8cf8b6cf9430d757c1b2a7584ad25002ea5a14a3ed20f98d3f42ebda5cdce75c",
+      "bytes": 379073,
+      "frames": 325,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/qualified-expert-v2-1031-corrected-library-cuda/90_15_stageii_unitree_g1.mp4",
+      "original_sha256": "aea792dc95eeec0706163e0929e3332ebdaf6af0effbaa00875134e33e955c9f",
+      "sha256": "228de33f018a4af08b0680b312d5e19dfed702468a8c5774df27ab48cc346b6e",
+      "bytes": 358106,
+      "frames": 246,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/qualified-expert-v2-1031-corrected-library-cuda/88_08_stageii_unitree_g1.mp4",
+      "original_sha256": "958508a43a2a5e3967e888c1426645cb8ad816f430efe9a170d524d92c024717",
+      "sha256": "322e5f0806c7ca2a8272ef23b590c231b6daa333d70b9e9fd4989346376e280a",
+      "bytes": 254835,
+      "frames": 119,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/qualified-expert-v2-1031-corrected-library-cuda/90_14_stageii_unitree_g1.mp4",
+      "original_sha256": "c89c995626c52f9730a5b37bc4c7151a31e4cec2b3afda23174c24464225ca32",
+      "sha256": "ddfc6c16fb30d804a3123e64c9fa8717eb6d5c12e604c82202016ec46fa13055",
+      "bytes": 287844,
+      "frames": 173,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/qualified-expert-v2-1031-corrected-library-cuda/90_19_stageii_unitree_g1.mp4",
+      "original_sha256": "d69c88523d65b35be264de0ea7cb48a82d81c9589f0cf98fa549c42abaf674c8",
+      "sha256": "87dd473c3677df1c1217619ced7655a9ca37003ecc8c49db9c355ad4fede643f",
+      "bytes": 408003,
+      "frames": 216,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/qualified-expert-v2-1031-corrected-library-cuda/90_08_stageii_unitree_g1.mp4",
+      "original_sha256": "cc6ce80151f5f68729b4ee3678556af62386a672ef01b7bbf69d3efb0bfb7765",
+      "sha256": "9d34c5e4d65d82c096e51731b922fefc89c17b6e4b7f3bcc581fc6168dbb1caa",
+      "bytes": 224679,
+      "frames": 139,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/qualified-expert-v2-1031-corrected-library-cuda/88_09_stageii_unitree_g1.mp4",
+      "original_sha256": "c1d970570c9e19110210ac3df2210a5dc5154dd42f323cf2022dc083650e25e3",
+      "sha256": "bea803a1d261d38b2f857c2acaa640ac41e666d2f395d4230f9528a1ec3c96e9",
+      "bytes": 340038,
+      "frames": 156,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/qualified-expert-v2-1031-corrected-library-cuda/88_11_stageii_unitree_g1.mp4",
+      "original_sha256": "1731069315e68eb54c293b538e672e546ed0d66c2519e8791c7529ab595a1bcb",
+      "sha256": "98562cb1a4eb5ef6d0a0ceece74c57257cbe73d7b259e32ba3013ab3865fbc24",
+      "bytes": 1472946,
+      "frames": 843,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/qualified-expert-v2-1031-corrected-library-cuda/88_07_stageii_unitree_g1.mp4",
+      "original_sha256": "5540812ce6ea05468455204e7bf21379fc349f16d49645400e4ddb5bd545fad7",
+      "sha256": "950f733e662a49030deaf7a7d8a2c753c30792c23c6380c215aa3eedb1e3acb5",
+      "bytes": 191005,
+      "frames": 64,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/qualified-expert-v2-1031-corrected-library-cuda/85_07_stageii_unitree_g1.mp4",
+      "original_sha256": "8586e9edfc7f99b2050d2fcfcf5fc41a83ce960f5742e223641f7e82e9cc0db9",
+      "sha256": "c77352f2f725f154516e83cc15605881b85cfd0b44761a4312566392785bf143",
+      "bytes": 391502,
+      "frames": 198,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/qualified-expert-v2-1031-corrected-library-cuda/89_01_stageii_unitree_g1.mp4",
+      "original_sha256": "e2dba7428e0f813a1f27a060fdd2660192c1776ba4fa2466893498080a90711c",
+      "sha256": "30a00255d4861138e5724dc4bb6852d5d97e87092959a81e67ea8389df67e36e",
+      "bytes": 1120808,
+      "frames": 970,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/qualified-expert-v2-1031-corrected-library-cuda/88_10_stageii_unitree_g1.mp4",
+      "original_sha256": "acb0c1770a4a456656522925feb5301517dac57022792997fc3a4116ab2680ae",
+      "sha256": "74fbd1b7347e4ae7730d7597f10846bfc2b604cdfb676704f1a1813fe14bf4cf",
+      "bytes": 344788,
+      "frames": 193,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/qualified-expert-v2-1031-corrected-library-cuda/88_06_stageii_unitree_g1.mp4",
+      "original_sha256": "ea728cf8e344bac35fac29dd52c42f4d4dfbe8b281f4ba8c7928a08166b48be2",
+      "sha256": "67f8b78908a3510a691d7d569f29f41e0ee4beb4cc688138172bd978ff5eebe6",
+      "bytes": 258089,
+      "frames": 95,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/qualified-expert-v2-1031-corrected-library-cuda/85_06_stageii_unitree_g1.mp4",
+      "original_sha256": "9db138c4d6f3adcefce965d729d59495dbfd1c364d6355deee1a8dfe1a8879a4",
+      "sha256": "9c7acefe70243381ed2e7b2c24c50be72d35d15bd04ee59944996f3833ad73ad",
+      "bytes": 371048,
+      "frames": 196,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/qualified-expert-v2-1031-corrected-library-cuda/88_03_stageii_unitree_g1.mp4",
+      "original_sha256": "670d0bdfdd9ba7282a232e442d323726102a1fc0d49180edc5756cb7603aebe9",
+      "sha256": "e067700dfe1911f1372ab5985d32f98bf3ff71a9b66abf8d706c8bd6b08f3db9",
+      "bytes": 62542,
+      "frames": 72,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/qualified-expert-v2-1031-raw-failures-cuda/90_15_stageii_unitree_g1.mp4",
+      "original_sha256": "9032c95c9b54326ae61a79338523faba0165749119f1af7b9e7b0e09739c877e",
+      "sha256": "76d34d9b9040031ba6221ee83bcd42b302f02c916baa76fb8442a41b439b3f40",
+      "bytes": 361696,
+      "frames": 246,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/qualified-expert-v2-1031-raw-failures-cuda/88_09_stageii_unitree_g1.mp4",
+      "original_sha256": "5b8d955b6f837df0040c1ad82f4eec7a31c94090845f3ea1ba4018a4ee235411",
+      "sha256": "7e19edcd8a57efe49806aaf1922119b0e7710fbf795718cb6335382ac826e78b",
+      "bytes": 338761,
+      "frames": 156,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/qualified-expert-v2-1031-raw-failures-cuda/85_06_stageii_unitree_g1.mp4",
+      "original_sha256": "9bc7ae78d86e46c16ead272084e3f160868add15d2c8909d895a361b5c16b965",
+      "sha256": "c6e0ed085b0807751b1cc83ca2840aaea3614dac8dff6c4337637dc050253ffc",
+      "bytes": 372614,
+      "frames": 196,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/qualified-expert-v2-1031-raw-failures-cuda/90_14_stageii_unitree_g1.mp4",
+      "original_sha256": "e1eb5356118070313ec6e7ca97970c1b33068ba68c90caf030b3779af9b2bb52",
+      "sha256": "41e4a317044620e5e7d92d0bd66da778eef65726f870f6528dd648978860fc1f",
+      "bytes": 291038,
+      "frames": 173,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/qualified-expert-v2-1031-raw-failures-cuda/88_07_stageii_unitree_g1.mp4",
+      "original_sha256": "1094609579007abe61187b98d669011579ee30f1f498df5fb69f45c7429f9c07",
+      "sha256": "74d838c7e0a38561052c9eacb05ea09445c72f09f610004f2317a38716bdaeb2",
+      "bytes": 189074,
+      "frames": 64,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/qualified-expert-v2-1031-raw-failures-cuda/88_06_stageii_unitree_g1.mp4",
+      "original_sha256": "40974a590de97af189df2db82a7aac0165c0432c05764e4cd4f1ad37adbcfada",
+      "sha256": "1b782e04ddf59fb5e768622c7ddf4b0c7cb7ab661bb1641b999a3be8cfea7bd1",
+      "bytes": 258417,
+      "frames": 95,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/qualified-expert-v2-1031-old-failures-cuda/fallAndGetUp1_subject5.mp4",
+      "original_sha256": "a3f39edc23c74884b34791f91100234c8a5ca895e37dc0e5f8de5ebc727925d4",
+      "sha256": "90cd53d266b84624de63b7325aa912d2875eba1abf89b65db1c1b19a3c51ab4d",
+      "bytes": 8348423,
+      "frames": 4206,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/qualified-expert-v2-1031-old-failures-cuda/jumps1_subject2.mp4",
+      "original_sha256": "c27202b4fb7b446b0e7c44567e30e78eb18fa33529371100e7b1404e2fd14dab",
+      "sha256": "100e8230fb16c38a88d0c9b1d8f02c9f892bea7dfc36c9b9de72c569ab194e9c",
+      "bytes": 11552943,
+      "frames": 6111,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/qualified-expert-v2-1031-corrected-sequences-cuda/seed-1.mp4",
+      "original_sha256": "b64f32d2a6b5a292a111fd6a62ae332b459bdd7f7de7403b652604bb542245a4",
+      "sha256": "2c0a2436631fb8c0c83e0d24dd4f15bb934f83e3bf8ceeeddb5dd5db43116ea7",
+      "bytes": 5778539,
+      "frames": 3001,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/qualified-expert-v2-1031-corrected-sequences-cuda/seed-0.mp4",
+      "original_sha256": "293e5b0be8aa4c2d0e52b57e1e4facd5bdc477c197b25c30264c85d138959c50",
+      "sha256": "8efd24eb8db7b9ef02ab461852512d513503587ca9c95ee40fde59beaea32c61",
+      "bytes": 4807067,
+      "frames": 3001,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/qualified-expert-v2-1031-corrected-sequences-cuda/seed-2.mp4",
+      "original_sha256": "fc18c8f130cf25f2be33ea41c06f32fc5f331fb2f16479166907b60897653cb9",
+      "sha256": "6ffd102de20d4c11bb4558c0b33cca1fddd6c365f23d9dbc9043f448d4c4df48",
+      "bytes": 4831871,
+      "frames": 3001,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/qualified-expert-v2-1031-raw-sequences-cuda/seed-1.mp4",
+      "original_sha256": "46b76c4ccadaab5e2b5ea4735da7c34c029d21b8a992266be1f636c0c0198757",
+      "sha256": "d807d9810cacdb21bec62e694744d573cb51ed293fb47c38be2f077e1e46cb29",
+      "bytes": 5631829,
+      "frames": 3001,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/specialist8807-1031d-candidate-corrected-cuda-r1/88_07_stageii_unitree_g1.mp4",
+      "original_sha256": "1d0ae4f7af0bc60c611e65d470337d6a02eaede9e6b8a9554806243f39f6a714",
+      "sha256": "52f025c9519123aa19ddc70ea047d5677656b752eeb34c4598c74b47fb6ed683",
+      "bytes": 195785,
+      "frames": 64,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/specialist8807-1031d-candidate-corrected-cuda-r0/88_07_stageii_unitree_g1.mp4",
+      "original_sha256": "6bc0997ac7448c06c53a2ebeb372ed19f07c643ec010299a8bcfe5f114650de4",
+      "sha256": "d2ec50656223e3f16994bc3ebfcf0c0aa402c494c1fcef50639bca9c86a4bc27",
+      "bytes": 192144,
+      "frames": 64,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/specialist8807-1031d-candidate-corrected-cuda-r2/88_07_stageii_unitree_g1.mp4",
+      "original_sha256": "0a7734ce6337d8b463f6d2657906786cfaba13d9a731e4eea7f7c799dc235a38",
+      "sha256": "2665297e0dbd555a1954a9f269409728b853087b7dfa8c7df345633a2a4f7d30",
+      "bytes": 190606,
+      "frames": 64,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/specialist8807-1031d-candidate-corrected-cpu-r0/88_07_stageii_unitree_g1.mp4",
+      "original_sha256": "6f05cd4b018c86a9ccebc4da08654dc19f7a85320041d774606198c0ac3e834a",
+      "sha256": "67d3b194d626e07b447c672aba65c0e38a946075403d6e4fe311595a0bce18e1",
+      "bytes": 196988,
+      "frames": 64,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/specialist8807-1031d-candidate-corrected-cpu-r2/88_07_stageii_unitree_g1.mp4",
+      "original_sha256": "cfde737e62bb51bec02c090300a593c78c06cd2aaa9f9badb67496b769da53c0",
+      "sha256": "b5a2e20a916d44cbf6809f5d8c2643b4e823fb1f00eb3fd3209166ca5f84913c",
+      "bytes": 197562,
+      "frames": 64,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/specialist8807-1031d-candidate-corrected-cpu-r1/88_07_stageii_unitree_g1.mp4",
+      "original_sha256": "36a1758981c5c8d72270712f32af75dbc4be558c512500b232a18ca35f707c92",
+      "sha256": "43334f14a152fd80c94ea624873217da204bb0922a5ab681ce508f9688625ab6",
+      "bytes": 196976,
+      "frames": 64,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/specialist8807-1031d-parent-corrected-cuda-r2/88_07_stageii_unitree_g1.mp4",
+      "original_sha256": "bf60d6bda15621d11b66c045fe6b073329a39cd769b98796044cc8ba2b703c22",
+      "sha256": "2af5c71227a4ecbdc9a62a095f92661c949e1e8addc9e55c18319685c86dd401",
+      "bytes": 176178,
+      "frames": 64,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/specialist8807-1031d-parent-corrected-cuda-r1/88_07_stageii_unitree_g1.mp4",
+      "original_sha256": "fe65b4343719fa8038d63b7a2ccf7c80376e4a97254b26ecc1136736f7bf29bb",
+      "sha256": "e1bd24e8ba321ca258570a50391d8e6da3697ac0454caef9f44643e031662ee5",
+      "bytes": 176621,
+      "frames": 64,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/specialist8807-1031d-parent-corrected-cuda-r0/88_07_stageii_unitree_g1.mp4",
+      "original_sha256": "1b430bc52ef0f01e930b2cd751b1a4a51053b03a6baedcd3ce9a3446d40cae93",
+      "sha256": "9dbdce6706579d71ef9642190ada667a6faf1438270d8af86f640c4429014de7",
+      "bytes": 176723,
+      "frames": 64,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/specialist8807-1031d-parent-corrected-cpu-r2/88_07_stageii_unitree_g1.mp4",
+      "original_sha256": "c821b3bc69f8162e5e603e90074dcdee26ee494d4bed4141a447dcd2ad7ec7b5",
+      "sha256": "d2e5551deb27684bbcc977d850d9cb7b647ac072547be72b63a5274562310c4b",
+      "bytes": 178508,
+      "frames": 64,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/specialist8807-1031d-parent-corrected-cpu-r1/88_07_stageii_unitree_g1.mp4",
+      "original_sha256": "a8e64775044bc62086f220d230ae602ed13991137463185e96fe8076491e8b80",
+      "sha256": "e782ff81d5f8feeeceddfb2e8634ecb5ec1554a99899ca072c9ae34775b96ddc",
+      "bytes": 178681,
+      "frames": 64,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/specialist8807-1031d-parent-corrected-cpu-r0/88_07_stageii_unitree_g1.mp4",
+      "original_sha256": "4b71b74989e4012ab9ec48a924603a2ab1497a4c77fa18f59a2afd6021b97341",
+      "sha256": "8ced1fa17aa713b41c360c6ee1537245f11014776ca4f787fa3b354d39d77568",
+      "bytes": 179272,
+      "frames": 64,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/specialist8807-1031d-candidate-raw-cuda-r1/88_07_stageii_unitree_g1.mp4",
+      "original_sha256": "4626a8cbbf9fe57c7226738bcb47b9474403e27df17c06094b4a974c3b690820",
+      "sha256": "3351ab3c0893fffdc07d007b0d9d96697ac863adfd40248043139ce33f59d72d",
+      "bytes": 194139,
+      "frames": 64,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/specialist8807-1031d-candidate-raw-cuda-r2/88_07_stageii_unitree_g1.mp4",
+      "original_sha256": "b00a054118094c6937e8447ef1fb01e38fc95b32bc7bec8d1852f3f5c435d46d",
+      "sha256": "b24a1043de4428f0d7fe6c948a1a36b6906226612e4b9962441dd5072ab5dcec",
+      "bytes": 195795,
+      "frames": 64,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/specialist8807-1031d-candidate-raw-cpu-r0/88_07_stageii_unitree_g1.mp4",
+      "original_sha256": "1c5cb40597aa04cc074c2008d90c378fdb8aa216688538ad545fb3ebc186454f",
+      "sha256": "17702d111c43fa2e33060ff165dd44d9241ffe457b64b0dabd72a477a5c3f248",
+      "bytes": 197058,
+      "frames": 64,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/specialist8807-1031d-candidate-raw-cpu-r1/88_07_stageii_unitree_g1.mp4",
+      "original_sha256": "ddf7c8ed8bf74138ae9e480fa2b90214659f238c9668e184ebbd2d6dbf8217fd",
+      "sha256": "2ac77bcfb5a4436a7f6ba3fbbce12fdc34a9a1340aa01c4c01bb83ef11bbe400",
+      "bytes": 197195,
+      "frames": 64,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/specialist8807-1031d-candidate-raw-cpu-r2/88_07_stageii_unitree_g1.mp4",
+      "original_sha256": "00a49a9b738102ba4e5656f41eb2ec2c6427335839185c21612694d747aa8666",
+      "sha256": "c878ebba2acd6f52fb82ad1e037a30fd30ce665f92f020b4bc1c83c19643c82e",
+      "bytes": 196268,
+      "frames": 64,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/specialist8807-1031d-parent-raw-cuda-r1/88_07_stageii_unitree_g1.mp4",
+      "original_sha256": "f1c0ac740eafad71669c90155cc08019ed30e9c94201183695024c56fa445cb5",
+      "sha256": "7200243d42b25dfed8fd07f883ba01ce13fb9433fc194372f8e21b96593954ae",
+      "bytes": 177346,
+      "frames": 64,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/specialist8807-1031d-parent-raw-cuda-r2/88_07_stageii_unitree_g1.mp4",
+      "original_sha256": "b98c969b9873e9bc115b2b39ed36e537f947ba44afda4bdfd6a9d2f78816212f",
+      "sha256": "aeb839d59362193ad1317fd63a57f3510191ef15a0c4eba6c5537e7c2c1b281e",
+      "bytes": 176442,
+      "frames": 64,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/specialist8807-1031d-parent-raw-cpu-r1/88_07_stageii_unitree_g1.mp4",
+      "original_sha256": "bacc193163219125096698a02262cb2ecaa92a3cc7f6e32d8befb606944c9ee7",
+      "sha256": "1fe98f63f157c0114727253d3eb40e3f14fd756f585627156daea12090c86e5d",
+      "bytes": 178549,
+      "frames": 64,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/specialist8807-1031d-parent-raw-cpu-r0/88_07_stageii_unitree_g1.mp4",
+      "original_sha256": "3e906ec5a3b78b2c76dab816f35ad52464f734fb8b27c6aeca9d743ba4d91d39",
+      "sha256": "945a2d0dd488770383d4c6c7ecdebe6256b0b6161bb13a011660aa8a14bce540",
+      "bytes": 178600,
+      "frames": 64,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
+    },
+    {
+      "file": "acro-library-20261027-b/videos/specialist8807-1031d-parent-raw-cpu-r2/88_07_stageii_unitree_g1.mp4",
+      "original_sha256": "faeb5d0c8ab7006620541f07a87dc6c97965ea5bf00a1a652cae1ec0ee79767c",
+      "sha256": "5d03ad2bf51b0f5b3712643a890a65df4379582dce8fe4a05cbf71ae9b4d6b92",
+      "bytes": 178466,
+      "frames": 64,
+      "full_decode_passed": true,
+      "every_source_frame_and_failed_tail_preserved": true,
+      "encoding": "H.264 yuv420p, maximum width 960; no time cuts; source unchanged"
     }
   ],
   "excluded_links": [
@@ -7324,5 +7889,6 @@
   ],
   "policy": "Metrics unchanged; local identities and console screenshots omitted; videos retain complete duration and frame rate.",
   "retention_1030_updated_at": "2026-10-30T07:30:53.661039+00:00",
-  "teacher_qualification_updated_at": "2026-10-30T09:23:00.372694+00:00"
+  "teacher_qualification_updated_at": "2026-10-30T09:23:00.372694+00:00",
+  "consolidated_at": "2026-11-05"
 }

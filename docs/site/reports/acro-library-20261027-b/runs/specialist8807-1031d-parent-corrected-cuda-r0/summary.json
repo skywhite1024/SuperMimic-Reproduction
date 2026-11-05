@@ -1,0 +1,70 @@
+{
+  "mode": "specialist8807-1031d-parent-corrected-cuda-r0",
+  "checkpoint": "/mnt/afs/USER_ID/SuperMimic/lafan1-20261024/experiments/continuation-20261025-a/policy/full_016000.pt",
+  "checkpoint_sha256": "0afcca9af97bd9db1f2dd083875898f962acab0b0a70c7313b221e575b70b05b",
+  "device": "cuda",
+  "observation_dim": 99,
+  "one_policy": true,
+  "backend": "mjwarp",
+  "seed": 0,
+  "evaluation_contract_version": 2,
+  "normalization": "original float32 0.1 maximum reward times complete resampled clip length minus one; post-physics gate at pre-action f+1; stop reward at first original failure, retain full physical failed tail",
+  "original_reward_only": true,
+  "auto_reset": false,
+  "post_initialization_resets": 0,
+  "completed_reference_clocks_held_only_after_their_metric_window": true,
+  "no_controlled_robot_state_writes_after_t0": true,
+  "wall_seconds": 12.781791199930012,
+  "groups": {
+    "new": {
+      "denominator": 1,
+      "passed": 0,
+      "macro_return_original": 0.034576427191495895,
+      "frame_weighted_return_original": 0.03457642973415435
+    }
+  },
+  "clips": [
+    {
+      "clip": "88_07_stageii_unitree_g1",
+      "group": "new",
+      "full_clip_steps": 126,
+      "elapsed_seconds": 2.52,
+      "post_initialization_resets": 0,
+      "norm_return_original": 0.034576427191495895,
+      "reward_sum_original_until_first_failure": 0.43566301465034485,
+      "normalization_denominator": 12.600000000000001,
+      "scored_steps": 32,
+      "first_original_hard_failure_s": 0.64,
+      "hard_failure_original_frames": 93,
+      "hard_failure_aligned_frames": 93,
+      "passed_original_hard_gate": false,
+      "root_xy_rmse_m": 0.7190423607826233,
+      "root_xy_peak_m": 1.0206398963928223,
+      "yaw_rmse_deg": 98.2245101928711,
+      "body_global_mean_m": 0.9181476831436157,
+      "body_local_mean_m": 0.5085175037384033,
+      "reference_inversion_frames": 27,
+      "inversion_observed_when_expected": true,
+      "end_pelvis_m": 0.15285611152648926,
+      "end_Rzz": 0.03403747081756592,
+      "end_root_speed_m_s": 0.24510763585567474
+    }
+  ],
+  "controller_variant": "specialist8807-bound20",
+  "reference_variant": "ground-calibration-v1",
+  "action_output_bound": [
+    -20,
+    20
+  ],
+  "one_deployed_policy": true,
+  "independent_specialist_not_unified": true,
+  "role": "parent",
+  "action_bound_observations": [
+    {
+      "clip": "88_07_stageii_unitree_g1",
+      "active_action_elements": 3654,
+      "clipped_elements": 0,
+      "peak_raw_output": 15.0625
+    }
+  ]
+}

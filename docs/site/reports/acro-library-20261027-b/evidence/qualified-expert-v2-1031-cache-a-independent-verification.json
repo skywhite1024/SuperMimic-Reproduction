@@ -1,0 +1,22 @@
+{
+  "status": "all_archive_members_and_frozen_source_validated_cloud_outputs_merged",
+  "at": "2026-10-31T18:22:27.608035+08:00",
+  "archive_bytes": 483395324,
+  "archive_sha256": "0ed5f36442a12582b79b0d5dcd5d047ad944dfc2c232e7968c1de4af425d0172",
+  "verified_files": 96,
+  "archive_members": 97,
+  "frozen_scientific_files": 25,
+  "new_cloud_outputs_copied": 52,
+  "new_updates": 1000,
+  "counts_CUDA": {
+    "raw_library": 9,
+    "corrected_library": 10,
+    "raw_sequences": 1,
+    "corrected_sequences": 1
+  },
+  "old_original_gate_CUDA": 38,
+  "predeclared_improvement_condition": false,
+  "candidate_adopted": false,
+  "full_goal_complete": false,
+  "matched_CPU_candidate_pending": true
+}

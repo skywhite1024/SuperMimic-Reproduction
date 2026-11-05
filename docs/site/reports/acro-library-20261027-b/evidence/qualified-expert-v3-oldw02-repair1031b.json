@@ -1,0 +1,28 @@
+{
+  "status": "runtime_UNI_binding_corrected_ready_to_resume_same_zero_update_hypothesis",
+  "failed_UID": "6740112b9ef8455cb40c97521da08626",
+  "failed_new_updates": 0,
+  "cause": "Missing SUPERMIMIC_UNI made runtime.references assert old40 at default local-style path",
+  "fixed_SUPERMIMIC_UNI": "/mnt/afs/USER_ID/SuperMimic/lafan1-20261024/uni",
+  "scientific_plan_sha256_unchanged": "9eb8e6246745d8d71ffaa10d8d7d3351d9f533ad468bc848279c872ef5dfc2a6",
+  "science_source_changes": 0,
+  "CPU6_retrained": false,
+  "failed_receipts_preserved_via_same_owner_move": {
+    "evidence/qualified-expert-v3-CUDA-execution.json": "99ab624d468a97d91927389ed9f6571679a5e9fc76f9277a0bc76e57ec8ee75f",
+    "evidence/qualified-expert-v3-cuda-00.log": "37504e6f820cadc434de16f98f82ff523792ce3a8352d5fefa5f21c67673bb9e"
+  },
+  "previous_failure_snapshot_sha256": "1f3867501772df22cdb4a32797c718935ff14d241ffc6a32a37c3cc016b06cfd",
+  "startup_bytes": 36696,
+  "startup_sha256": "099601d6c6ade5ec6579d15cdfd8cc2a5dc9e6b8590ceb630474da12981cbf33",
+  "namespace": "qualified-expert-v3-oldw02-init-1031b",
+  "total_seconds": 5400,
+  "initialization_seconds": 600,
+  "updates": 1000,
+  "WM_only": 200,
+  "GPU": 1,
+  "CPU": 4,
+  "RAM_GiB": 64,
+  "restarts": 0,
+  "syntax_and_LF_pass": true,
+  "actual_UID": null
+}

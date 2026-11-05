@@ -1,0 +1,26 @@
+{
+  "at": "2026-10-31T20:26:21.744580+08:00",
+  "job_name": "supermimic-teacher-repro-USER_ID-1031c",
+  "UID": "768d1c2dbda94dc9b48ed42ab4f8fdc3",
+  "platform_status": "成功",
+  "platform_created_at": "2026-10-31T20:14:28+08:00",
+  "platform_updated_at": "2026-10-31T20:18:46+08:00",
+  "actual_GPU": {
+    "GPU_count": 1,
+    "GPU_name": "NVIDIA H100 80GB HBM3",
+    "GPU_memory_bytes": 85017624576
+  },
+  "CPU": 4,
+  "RAM_GiB": 64,
+  "replicas": 1,
+  "restarts": 0,
+  "program_seconds": 213.136,
+  "native_child_groups_all_empty": true,
+  "training_updates": 0,
+  "CCI_started": false,
+  "DNAT_changed": false,
+  "existing_other_jobs_not_restarted": true,
+  "scope": "this finite diagnostic only; no account-wide aggregate claim",
+  "terminal_DOM": "teacher8808-repro1031c-terminal-home.txt",
+  "terminal_screenshot": "teacher8808-repro1031c-terminal.png"
+}

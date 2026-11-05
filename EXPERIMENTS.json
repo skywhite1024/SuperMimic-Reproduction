@@ -1,0 +1,110 @@
+{
+  "updated_at": "2026-11-05",
+  "scope": "SuperMimic · G1",
+  "experiments": [
+    {
+      "id": "G1-12K",
+      "route": "社区基线",
+      "report": "implementation/report/supermimic-report.html",
+      "title": "12K初始训练",
+      "status": "目标未达",
+      "finding": "0.802814归一化回报；3/40提前失败。"
+    },
+    {
+      "id": "G1-16K",
+      "route": "社区基线",
+      "report": "implementation/continuation-20261025-a/report/continuation-comparison.html",
+      "title": "16K受控续训",
+      "status": "限定基线达标",
+      "finding": "两次完整40条评测0提前失败；不代表未见动作泛化。"
+    },
+    {
+      "id": "BONES",
+      "route": "准备与暂停",
+      "report": "bones-seed-20261026-a/report/preparation-status.html",
+      "title": "BONES-SEED准备",
+      "status": "保持暂停",
+      "finding": "没有全库训练或论文规模复现结果。"
+    },
+    {
+      "id": "G1-CONT",
+      "route": "连续控制",
+      "report": "interactive-g1-20261027-a/continuous-demo.html",
+      "title": "连续控制与88_08专项",
+      "status": "限定验证",
+      "finding": "12条基础序列通过原门槛；高动态连续能力未达。"
+    },
+    {
+      "id": "G1-22-30K",
+      "route": "统一策略",
+      "report": "acro-library-20261027-b/unified-library-report.html",
+      "title": "统一训练及完整项目回顾",
+      "status": "目标未达",
+      "finding": "22K/26K/30K均有取舍；新技能、旧40和连续能力尚未共同提高。"
+    },
+    {
+      "id": "G1-BOUND",
+      "route": "诊断与对照",
+      "report": "acro-library-20261027-b/action-bound-ablation-report.html",
+      "title": "同权重动作限幅对照",
+      "status": "零更新诊断",
+      "finding": "控制器差异单列，不能当作训练收益。"
+    },
+    {
+      "id": "G1-RET1",
+      "route": "统一策略",
+      "report": "acro-library-20261027-b/retention-1030-report.html",
+      "title": "Retention v1",
+      "status": "候选未采用",
+      "finding": "1000次更新后匹配CUDA新旧能力回退。"
+    },
+    {
+      "id": "G1-TEACHER",
+      "route": "诊断与对照",
+      "report": "acro-library-20261027-b/teacher-qualification-1030-report.html",
+      "title": "历史教师资格控制",
+      "status": "历史限定通过",
+      "finding": "88_08单次通过；后续固定重复稳定性结果见1031c。"
+    },
+    {
+      "id": "G1-QV2",
+      "route": "统一策略",
+      "report": "acro-library-20261027-b/qualified-expert-v2-1031-report.html",
+      "title": "Qualified V2有限试验",
+      "status": "候选未采用",
+      "finding": "CUDA新15严格9/15、10/15；连续各1/3；未达到预设采用条件。"
+    },
+    {
+      "id": "G1-OLDW02",
+      "route": "准备与暂停",
+      "report": "acro-library-20261027-b/qualified-expert-v3-oldw02-1031-report.html",
+      "title": "旧教师权重0.2尝试",
+      "status": "训练前退出",
+      "finding": "新增更新0；不能判断该权重假设的训练效果。"
+    },
+    {
+      "id": "G1-8808-R3",
+      "route": "诊断与对照",
+      "report": "acro-library-20261027-b/teacher8808-repro1031c-report.html",
+      "title": "88_08教师固定三次重复",
+      "status": "稳定性不足",
+      "finding": "同初始输入，接触门槛仅2/3通过；未提升为稳定教师。"
+    },
+    {
+      "id": "G1-8807",
+      "route": "专项训练",
+      "report": "acro-library-20261027-b/specialist8807-1031d-report.html",
+      "title": "88_07专项1000更新",
+      "status": "严格验收未通过",
+      "finding": "局部姿态改善；严格各0/3，CUDA旧40降至0/40；候选未采用。"
+    },
+    {
+      "id": "G1-8807-N",
+      "route": "专项训练",
+      "report": "acro-library-20261027-b/specialist8807-1031d-numerical-report.html",
+      "title": "88_07数值回收历史补充",
+      "status": "历史补充",
+      "finding": "完整收尾与最终结论以上一项主报告为准。"
+    }
+  ]
+}

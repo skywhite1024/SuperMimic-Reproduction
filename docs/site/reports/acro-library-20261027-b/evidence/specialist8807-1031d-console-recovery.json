@@ -1,0 +1,196 @@
+{
+  "status": "complete_console_receipt_independently_verified",
+  "console_export": "[local-user-path]",
+  "console_export_bytes": 28161,
+  "console_export_sha256": "b0dadad941c9ce31238d174af94641e5b2a007a839479ede71d524482ec63e7f",
+  "log_rows": 115,
+  "complete_marker": true,
+  "chunks": 93,
+  "receipt_bytes": 146267,
+  "receipt_sha256": "dbe3ff911b9d1c3206a2642cf82efa8539230c059ec24dd2d5e871e8de60c9f1",
+  "receipt": "downloaded/specialist8807-1031d/recovered.json",
+  "events": [
+    {
+      "timestamp": "2026-10-31T14:23:39.966100754Z",
+      "s": "native_initialization_passed_fixed_parent_controls_starting",
+      "u": 0,
+      "pre": 0,
+      "post": 0,
+      "t": 11.405,
+      "h": "6abaf813f3606b7c9fd0a45342badde970896f23c3a8d95e3b8f15c0dd4d8857"
+    },
+    {
+      "timestamp": "2026-10-31T14:25:19.682853901Z",
+      "s": "parent_fixed_repetition_complete",
+      "u": 0,
+      "pre": 1,
+      "post": 0,
+      "t": 110.978,
+      "h": "7c2399a44ebaca8d736b6764c89ad4af3e62dc77347a4640a2deda1a43609836"
+    },
+    {
+      "timestamp": "2026-10-31T14:25:58.683634362Z",
+      "s": "parent_fixed_repetition_complete",
+      "u": 0,
+      "pre": 2,
+      "post": 0,
+      "t": 149.711,
+      "h": "9864a6635a6f216bb4483dc16e2041539473661483c691f66a502341f155a300"
+    },
+    {
+      "timestamp": "2026-10-31T14:26:37.684355275Z",
+      "s": "parent_fixed_repetition_complete",
+      "u": 0,
+      "pre": 3,
+      "post": 0,
+      "t": 189.115,
+      "h": "524b7be756eb99fed51bb2a51c473f0b8f222212bc349cf2388d35dacb640311"
+    },
+    {
+      "timestamp": "2026-10-31T14:27:17.683625644Z",
+      "s": "parent_fixed_repetition_complete",
+      "u": 0,
+      "pre": 4,
+      "post": 0,
+      "t": 228.702,
+      "h": "396e6d3348ec9a986f56b081c2a115ff801673ccaa93272eccc09d5d265bfebf"
+    },
+    {
+      "timestamp": "2026-10-31T14:27:57.682456135Z",
+      "s": "parent_fixed_repetition_complete",
+      "u": 0,
+      "pre": 5,
+      "post": 0,
+      "t": 268.699,
+      "h": "40324ebeef1626a29b86c8db2491fb6f17856a307dffb4b0df24973159c8e1e5"
+    },
+    {
+      "timestamp": "2026-10-31T14:28:37.684383889Z",
+      "s": "parent_fixed_repetition_complete",
+      "u": 0,
+      "pre": 6,
+      "post": 0,
+      "t": 309.533,
+      "h": "77daa8be803031ae7cc20ef56bba222223f06741c07922168e1388458d16f0de"
+    },
+    {
+      "timestamp": "2026-10-31T14:28:37.684556118Z",
+      "s": "training_started",
+      "u": null,
+      "pre": 6,
+      "post": 0,
+      "t": 309.539,
+      "h": "11661f16d504b9a74161318e4bd61f96826d73a31e6e7148c303eb44a1ed321c"
+    },
+    {
+      "timestamp": "2026-10-31T14:38:35.683374939Z",
+      "s": "training1000_and_export_readback_verified",
+      "u": 1000,
+      "pre": 6,
+      "post": 0,
+      "t": 907.412,
+      "h": "7a6594e50e23f6b2336536cd036e63d82fa68325d1a3b6d4d28a4e52669bc89d"
+    },
+    {
+      "timestamp": "2026-10-31T14:39:15.683395630Z",
+      "s": "candidate_fixed_repetition_complete",
+      "u": 1000,
+      "pre": 6,
+      "post": 1,
+      "t": 946.949,
+      "h": "1c417da84be5c9dcaa0ac5e9282b5dd8a288302aba43919cdd066c05f56217d1"
+    },
+    {
+      "timestamp": "2026-10-31T14:39:54.683259882Z",
+      "s": "candidate_fixed_repetition_complete",
+      "u": 1000,
+      "pre": 6,
+      "post": 2,
+      "t": 985.784,
+      "h": "7fde36817147f7a994c791fd62111eea3a47a2ad066fb71600ab5a65177041b5"
+    },
+    {
+      "timestamp": "2026-10-31T14:40:32.682317229Z",
+      "s": "candidate_fixed_repetition_complete",
+      "u": 1000,
+      "pre": 6,
+      "post": 3,
+      "t": 1024.318,
+      "h": "425be9bec5c316c9792be69e336bfe4c687eae1a2c25a50d54ad295bbb174e7c"
+    },
+    {
+      "timestamp": "2026-10-31T14:41:11.682908146Z",
+      "s": "candidate_fixed_repetition_complete",
+      "u": 1000,
+      "pre": 6,
+      "post": 4,
+      "t": 1063.402,
+      "h": "ee66aa11d7f00f272a73843e39786ba4c4c533ce0fdcb90f9b9a3c4bb780eaac"
+    },
+    {
+      "timestamp": "2026-10-31T14:41:50.683940726Z",
+      "s": "candidate_fixed_repetition_complete",
+      "u": 1000,
+      "pre": 6,
+      "post": 5,
+      "t": 1101.885,
+      "h": "e61089b34431da36282c572fab390bfe48176506c939b368ded44a960e3efaac"
+    },
+    {
+      "timestamp": "2026-10-31T14:42:28.683849016Z",
+      "s": "candidate_fixed_repetition_complete",
+      "u": 1000,
+      "pre": 6,
+      "post": 6,
+      "t": 1140.579,
+      "h": "46ad81291c14bcad470da2cc7f39befe3a31227d0f400525a612f323307d582b"
+    },
+    {
+      "timestamp": "2026-10-31T14:51:43.682647588Z",
+      "s": "candidate_fixed_repetition_complete",
+      "u": 1000,
+      "pre": 6,
+      "post": 6,
+      "t": 1695.454,
+      "h": "c49a10147f25172a5ffe4ea33e17214bda9296698837523a64b5355f7058e96e"
+    },
+    {
+      "timestamp": "2026-10-31T15:01:04.684099592Z",
+      "s": "candidate_fixed_repetition_complete",
+      "u": 1000,
+      "pre": 6,
+      "post": 6,
+      "t": 2256.077,
+      "h": "96e2b7156abbf2a8cc3162e3979cab8f52d294494a0b245025d71e04c7f28fd3"
+    },
+    {
+      "timestamp": "2026-10-31T15:01:04.684255327Z",
+      "s": "training1000_fixed_pre_post_controls_complete_boundary_scope_recorded",
+      "u": 1000,
+      "pre": 6,
+      "post": 6,
+      "t": 2256.088,
+      "h": "d4c0af29680bca89851414e0c3785fed24477ac8e552e2d6aef4623f233d8c8c"
+    },
+    {
+      "timestamp": "2026-10-31T15:01:33.700338770Z",
+      "s": "finite_specialist8807_phase_complete_acceptance_and_collection_pending",
+      "u": 1000,
+      "pre": 6,
+      "post": 6,
+      "t": 2285.162,
+      "h": "279d97487d6b6d03545fa7874fd78e47aed0d12cd6bb12597b4a2f9e5d7c07a1"
+    },
+    {
+      "timestamp": "2026-10-31T15:01:33.700513138Z",
+      "s": "finite_specialist8807_phase_complete_acceptance_and_collection_pending",
+      "u": 1000,
+      "pre": 6,
+      "post": 6,
+      "t": 2285.173,
+      "h": "288b96a9ea0fe157ade99c6bfc42ce06936a68d5e0672adacdd40d939efe44bb"
+    }
+  ],
+  "new_training_updates": 1000,
+  "actual_platform_terminal_requires_separate_UI_evidence": true
+}

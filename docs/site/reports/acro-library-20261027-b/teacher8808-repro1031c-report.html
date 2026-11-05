@@ -1,0 +1,280 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>88_08 教师复现性诊断</title><style>body{max-width:1050px;margin:30px auto;padding:0 20px;font:16px/1.7 system-ui,"Microsoft YaHei",sans-serif;color:#18273c}table{border-collapse:collapse;width:100%}td,th{border:1px solid #c9d4df;padding:8px;text-align:left}pre{white-space:pre-wrap;overflow-wrap:anywhere}img{max-width:100%}.card{padding:16px;background:#eef4fa;border-radius:8px}</style>
+<nav class="publication-navigation" style="padding:14px 22px;background:#e9efe6;color:#203b31;font:14px system-ui"><a href="../../index.html">← 人形研究总览与最新结论</a> · 2026-11-05归档</nav><h1>88_08 教师：固定三次复现性诊断</h1><p>2026-10-31 · 3 次 raw · seed=0 · 独立进程 · 1 张 H100 · 0 训练更新</p><div class="card"><strong>固定三次教师门槛通过 2/3；全部结果保留。</strong><p>本次固定三次之间仍出现状态轨迹差异。首个差异的时间及输入身份记录见下表；具体内核、求解器或隐藏状态来源尚未建立。</p><p>50 mm 接触门槛保持不变；没有提升教师资格或自动开始训练。完整新15＋旧40的统一策略目标仍未完成。</p></div>
+<h2>逐次结果</h2><table><tr><th>重复</th><th>seed</th><th>初始100ms后最大穿地/mm</th><th>跟踪通过</th><th>意外躯干接触</th><th>联合通过</th></tr><tr><td>0</td><td>0</td><td>30.866</td><td>True</td><td>0</td><td>True</td></tr><tr><td>1</td><td>0</td><td>46.221</td><td>True</td><td>0</td><td>True</td></tr><tr><td>2</td><td>0</td><td>51.368</td><td>True</td><td>0</td><td>False</td></tr></table>
+<h2>输入与差异起点</h2><pre>{
+  &quot;reference_identical_across_history_and_fixed3&quot;: true,
+  &quot;initial_state_identical_across_history_and_fixed3&quot;: true,
+  &quot;initial_history_identical_fixed3&quot;: true,
+  &quot;initial_goal_identical_fixed3&quot;: true,
+  &quot;first_action_identical_fixed3&quot;: true,
+  &quot;full_state_trajectory_identical_fixed3&quot;: false,
+  &quot;recorded_runtime_and_normalization_identical_fixed3&quot;: true,
+  &quot;earliest_state_divergence_among_fixed3&quot;: 1,
+  &quot;raw_teacher_passes_fixed3&quot;: 2,
+  &quot;training_updates&quot;: 0,
+  &quot;candidate_adopted&quot;: false,
+  &quot;teacher_promoted&quot;: false,
+  &quot;full_goal_complete&quot;: false
+}</pre><p>此前 V2 raw／校准在 88_08 使用逐元素相同的参考（Z位移0），初始状态和首动作相同；状态从第1步出现差异，动作从第16步出现差异。这是已观察的先后次序；不单独证明某个数值内核的因果来源。</p>
+<img src="evidence/teacher8808-repro1031c-contact-comparison.png" alt="全部历史和固定三次接触结果"><p><a href="evidence/teacher8808-repro1031c-contact-comparison.svg">下载 SVG 图</a></p>
+<h2>执行与证据</h2><p>平台已于20:18:46成功结束；原生清理记录无存活子进程。本轮没有启动CCI或修改DNAT。<a href="evidence/teacher8808-repro1031c-final-resource-verification.json">资源终态记录</a> · <a href="evidence/teacher8808-repro1031c-download-verification.json">结果下载核验</a></p><details><summary>平台终态截图</summary><img src="evidence/teacher8808-repro1031c-terminal.svg" alt="教师诊断作业成功终态"></details><p>实际作业 UID <code>768d1c2dbda94dc9b48ed42ab4f8fdc3</code>；程序总限时900秒，初始化120秒，单次评测180秒，零重启。初始化实际 11.927 秒，程序总计 213.136 秒。3 次未因单个通过或失败而增加或筛除。</p><p><a href="downloaded/teacher8808-repro1031c/recovered.json">完整已核验结果</a> · <a href="teacher8808-repro1031c-plan.json">预先固定计划</a> · <a href="evidence/teacher8808-v2-v3-evidence-comparison1031.json">V2/V3 证据比较</a> · <a href="evidence/teacher8808-repro1031c-final-assessment.json">本次结论 JSON</a> · <a href="qualified-expert-v3-oldw02-1031-report.html">前一轮门槛报告</a> · <a href="qualified-expert-v2-1031-report.html">上一轮29段完整视频</a></p>
+<details><summary>三次实际运行时和首次策略输入</summary><pre>[
+  {
+    &quot;mode&quot;: &quot;teacher8808-repro1031c-r0&quot;,
+    &quot;seed&quot;: 0,
+    &quot;read_only_hooks&quot;: true,
+    &quot;checkpoint_args&quot;: {
+      &quot;amp&quot;: &quot;bf16&quot;,
+      &quot;hist&quot;: 10,
+      &quot;goal_frames&quot;: 10,
+      &quot;z_dim&quot;: 32,
+      &quot;policy_hidden&quot;: [
+        2048,
+        1024,
+        512,
+        256
+      ]
+    },
+    &quot;normalization&quot;: {
+      &quot;obs_norm.mean&quot;: {
+        &quot;shape&quot;: [
+          99
+        ],
+        &quot;dtype&quot;: &quot;torch.float32&quot;,
+        &quot;sha256&quot;: &quot;b7df6f5b611182606d49245f5eae00f0757853bbe5c6bcd800414b1ae2d2f806&quot;
+      },
+      &quot;obs_norm.var&quot;: {
+        &quot;shape&quot;: [
+          99
+        ],
+        &quot;dtype&quot;: &quot;torch.float32&quot;,
+        &quot;sha256&quot;: &quot;bb7033a7fae407cad358d9c179369ef1f8f0e5a1dc79a88ee67f47aa316a393d&quot;
+      },
+      &quot;obs_norm.count&quot;: {
+        &quot;shape&quot;: [],
+        &quot;dtype&quot;: &quot;torch.float32&quot;,
+        &quot;sha256&quot;: &quot;fde0d716862b2780925b821af334283dec838f02540167e537682cd882637100&quot;
+      }
+    },
+    &quot;python&quot;: &quot;3.12.3&quot;,
+    &quot;torch&quot;: &quot;2.14.1+cu130&quot;,
+    &quot;CUDA_runtime&quot;: &quot;13.0&quot;,
+    &quot;GPU&quot;: &quot;NVIDIA H100 80GB HBM3&quot;,
+    &quot;compute_capability&quot;: [
+      9,
+      0
+    ],
+    &quot;float32_matmul_precision&quot;: &quot;high&quot;,
+    &quot;matmul_allow_tf32&quot;: true,
+    &quot;cudnn_allow_tf32&quot;: true,
+    &quot;deterministic_algorithms&quot;: false,
+    &quot;OMP_NUM_THREADS&quot;: &quot;4&quot;,
+    &quot;OPENBLAS_NUM_THREADS&quot;: &quot;4&quot;,
+    &quot;CUBLAS_WORKSPACE_CONFIG&quot;: null,
+    &quot;packages&quot;: {
+      &quot;mujoco&quot;: &quot;3.11.0&quot;,
+      &quot;mujoco-warp&quot;: &quot;3.11.0&quot;,
+      &quot;warp-lang&quot;: &quot;1.16.0&quot;,
+      &quot;unilab&quot;: &quot;1.5.1&quot;,
+      &quot;hydra-core&quot;: &quot;1.3.7&quot;
+    },
+    &quot;driver_version&quot;: &quot;580.95.05&quot;,
+    &quot;initial_history&quot;: {
+      &quot;shape&quot;: [
+        1,
+        10,
+        99
+      ],
+      &quot;dtype&quot;: &quot;torch.float32&quot;,
+      &quot;sha256&quot;: &quot;2a5bd9e28cc40518a655162aa19164e59a787b662dce5c80d02357a04dee9a61&quot;
+    },
+    &quot;initial_goal&quot;: {
+      &quot;shape&quot;: [
+        1,
+        730
+      ],
+      &quot;dtype&quot;: &quot;torch.float32&quot;,
+      &quot;sha256&quot;: &quot;bdf3a75ca887197b2918165d56a80acec0d708ac76300c2a5a4491a37b9409ca&quot;
+    },
+    &quot;first_raw_action&quot;: {
+      &quot;shape&quot;: [
+        1,
+        29
+      ],
+      &quot;dtype&quot;: &quot;torch.float32&quot;,
+      &quot;sha256&quot;: &quot;e0a49881d0fc426e262b6d9ef13d73afb2a8cf442120c2a04d9ab76110be031b&quot;
+    }
+  },
+  {
+    &quot;mode&quot;: &quot;teacher8808-repro1031c-r1&quot;,
+    &quot;seed&quot;: 0,
+    &quot;read_only_hooks&quot;: true,
+    &quot;checkpoint_args&quot;: {
+      &quot;amp&quot;: &quot;bf16&quot;,
+      &quot;hist&quot;: 10,
+      &quot;goal_frames&quot;: 10,
+      &quot;z_dim&quot;: 32,
+      &quot;policy_hidden&quot;: [
+        2048,
+        1024,
+        512,
+        256
+      ]
+    },
+    &quot;normalization&quot;: {
+      &quot;obs_norm.mean&quot;: {
+        &quot;shape&quot;: [
+          99
+        ],
+        &quot;dtype&quot;: &quot;torch.float32&quot;,
+        &quot;sha256&quot;: &quot;b7df6f5b611182606d49245f5eae00f0757853bbe5c6bcd800414b1ae2d2f806&quot;
+      },
+      &quot;obs_norm.var&quot;: {
+        &quot;shape&quot;: [
+          99
+        ],
+        &quot;dtype&quot;: &quot;torch.float32&quot;,
+        &quot;sha256&quot;: &quot;bb7033a7fae407cad358d9c179369ef1f8f0e5a1dc79a88ee67f47aa316a393d&quot;
+      },
+      &quot;obs_norm.count&quot;: {
+        &quot;shape&quot;: [],
+        &quot;dtype&quot;: &quot;torch.float32&quot;,
+        &quot;sha256&quot;: &quot;fde0d716862b2780925b821af334283dec838f02540167e537682cd882637100&quot;
+      }
+    },
+    &quot;python&quot;: &quot;3.12.3&quot;,
+    &quot;torch&quot;: &quot;2.14.1+cu130&quot;,
+    &quot;CUDA_runtime&quot;: &quot;13.0&quot;,
+    &quot;GPU&quot;: &quot;NVIDIA H100 80GB HBM3&quot;,
+    &quot;compute_capability&quot;: [
+      9,
+      0
+    ],
+    &quot;float32_matmul_precision&quot;: &quot;high&quot;,
+    &quot;matmul_allow_tf32&quot;: true,
+    &quot;cudnn_allow_tf32&quot;: true,
+    &quot;deterministic_algorithms&quot;: false,
+    &quot;OMP_NUM_THREADS&quot;: &quot;4&quot;,
+    &quot;OPENBLAS_NUM_THREADS&quot;: &quot;4&quot;,
+    &quot;CUBLAS_WORKSPACE_CONFIG&quot;: null,
+    &quot;packages&quot;: {
+      &quot;mujoco&quot;: &quot;3.11.0&quot;,
+      &quot;mujoco-warp&quot;: &quot;3.11.0&quot;,
+      &quot;warp-lang&quot;: &quot;1.16.0&quot;,
+      &quot;unilab&quot;: &quot;1.5.1&quot;,
+      &quot;hydra-core&quot;: &quot;1.3.7&quot;
+    },
+    &quot;driver_version&quot;: &quot;580.95.05&quot;,
+    &quot;initial_history&quot;: {
+      &quot;shape&quot;: [
+        1,
+        10,
+        99
+      ],
+      &quot;dtype&quot;: &quot;torch.float32&quot;,
+      &quot;sha256&quot;: &quot;2a5bd9e28cc40518a655162aa19164e59a787b662dce5c80d02357a04dee9a61&quot;
+    },
+    &quot;initial_goal&quot;: {
+      &quot;shape&quot;: [
+        1,
+        730
+      ],
+      &quot;dtype&quot;: &quot;torch.float32&quot;,
+      &quot;sha256&quot;: &quot;bdf3a75ca887197b2918165d56a80acec0d708ac76300c2a5a4491a37b9409ca&quot;
+    },
+    &quot;first_raw_action&quot;: {
+      &quot;shape&quot;: [
+        1,
+        29
+      ],
+      &quot;dtype&quot;: &quot;torch.float32&quot;,
+      &quot;sha256&quot;: &quot;e0a49881d0fc426e262b6d9ef13d73afb2a8cf442120c2a04d9ab76110be031b&quot;
+    }
+  },
+  {
+    &quot;mode&quot;: &quot;teacher8808-repro1031c-r2&quot;,
+    &quot;seed&quot;: 0,
+    &quot;read_only_hooks&quot;: true,
+    &quot;checkpoint_args&quot;: {
+      &quot;amp&quot;: &quot;bf16&quot;,
+      &quot;hist&quot;: 10,
+      &quot;goal_frames&quot;: 10,
+      &quot;z_dim&quot;: 32,
+      &quot;policy_hidden&quot;: [
+        2048,
+        1024,
+        512,
+        256
+      ]
+    },
+    &quot;normalization&quot;: {
+      &quot;obs_norm.mean&quot;: {
+        &quot;shape&quot;: [
+          99
+        ],
+        &quot;dtype&quot;: &quot;torch.float32&quot;,
+        &quot;sha256&quot;: &quot;b7df6f5b611182606d49245f5eae00f0757853bbe5c6bcd800414b1ae2d2f806&quot;
+      },
+      &quot;obs_norm.var&quot;: {
+        &quot;shape&quot;: [
+          99
+        ],
+        &quot;dtype&quot;: &quot;torch.float32&quot;,
+        &quot;sha256&quot;: &quot;bb7033a7fae407cad358d9c179369ef1f8f0e5a1dc79a88ee67f47aa316a393d&quot;
+      },
+      &quot;obs_norm.count&quot;: {
+        &quot;shape&quot;: [],
+        &quot;dtype&quot;: &quot;torch.float32&quot;,
+        &quot;sha256&quot;: &quot;fde0d716862b2780925b821af334283dec838f02540167e537682cd882637100&quot;
+      }
+    },
+    &quot;python&quot;: &quot;3.12.3&quot;,
+    &quot;torch&quot;: &quot;2.14.1+cu130&quot;,
+    &quot;CUDA_runtime&quot;: &quot;13.0&quot;,
+    &quot;GPU&quot;: &quot;NVIDIA H100 80GB HBM3&quot;,
+    &quot;compute_capability&quot;: [
+      9,
+      0
+    ],
+    &quot;float32_matmul_precision&quot;: &quot;high&quot;,
+    &quot;matmul_allow_tf32&quot;: true,
+    &quot;cudnn_allow_tf32&quot;: true,
+    &quot;deterministic_algorithms&quot;: false,
+    &quot;OMP_NUM_THREADS&quot;: &quot;4&quot;,
+    &quot;OPENBLAS_NUM_THREADS&quot;: &quot;4&quot;,
+    &quot;CUBLAS_WORKSPACE_CONFIG&quot;: null,
+    &quot;packages&quot;: {
+      &quot;mujoco&quot;: &quot;3.11.0&quot;,
+      &quot;mujoco-warp&quot;: &quot;3.11.0&quot;,
+      &quot;warp-lang&quot;: &quot;1.16.0&quot;,
+      &quot;unilab&quot;: &quot;1.5.1&quot;,
+      &quot;hydra-core&quot;: &quot;1.3.7&quot;
+    },
+    &quot;driver_version&quot;: &quot;580.95.05&quot;,
+    &quot;initial_history&quot;: {
+      &quot;shape&quot;: [
+        1,
+        10,
+        99
+      ],
+      &quot;dtype&quot;: &quot;torch.float32&quot;,
+      &quot;sha256&quot;: &quot;2a5bd9e28cc40518a655162aa19164e59a787b662dce5c80d02357a04dee9a61&quot;
+    },
+    &quot;initial_goal&quot;: {
+      &quot;shape&quot;: [
+        1,
+        730
+      ],
+      &quot;dtype&quot;: &quot;torch.float32&quot;,
+      &quot;sha256&quot;: &quot;bdf3a75ca887197b2918165d56a80acec0d708ac76300c2a5a4491a37b9409ca&quot;
+    },
+    &quot;first_raw_action&quot;: {
+      &quot;shape&quot;: [
+        1,
+        29
+      ],
+      &quot;dtype&quot;: &quot;torch.float32&quot;,
+      &quot;sha256&quot;: &quot;e0a49881d0fc426e262b6d9ef13d73afb2a8cf442120c2a04d9ab76110be031b&quot;
+    }
+  }
+]</pre></details></html>

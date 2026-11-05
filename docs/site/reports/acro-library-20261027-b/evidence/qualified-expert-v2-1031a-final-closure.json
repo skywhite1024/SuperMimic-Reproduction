@@ -1,0 +1,81 @@
+{
+  "status": "qualified_expert_v2_failed_init_teacher_download_deadline_0updates_resources_closed",
+  "recorded_at": "2026-10-31T14:30:09.4890542+08:00",
+  "job_name": "supermimic-qualified-v2-USER_ID-1031a",
+  "job_UID": "dd2eaca9dc7744c9a1c232dd5bf23005",
+  "submission_clicks": 1,
+  "platform_status": "失败",
+  "platform_created_at": "2026-10-31T14:03:12+08:00",
+  "platform_terminal_updated_at": "2026-10-31T14:13:05+08:00",
+  "platform_container_exit_code": 1,
+  "max_restarts": 0,
+  "Worker": "pt-dd2eaca9dc7744c9a1c232dd5bf23005-worker-0",
+  "Worker_status": "失败",
+  "active_Workers_in_this_job": 0,
+  "platform_terminal_verified": true,
+  "resource_release_verified": true,
+  "resource_release_scope": "This job has terminalFailed Worker,containerExitedWithCode1,restarts0. No running Worker remains for this job. This is control-plane resource closure,not whole-account or billing/GPU physical deallocation telemetry.",
+  "CCI_DNAT": {
+    "last_preflight_CCI": "已停止/0GPU/0of1",
+    "last_preflight_DNAT10076": "未绑定",
+    "checked_before_submission_at": "2026-10-31T13:54:10.8533391+08:00",
+    "changed_or_started_during_this_job": false,
+    "fresh_postjob_CCI_DNAT_recheck": false
+  },
+  "global_account_GPU_aggregate": null,
+  "global_account_H100_aggregate": null,
+  "failure": {
+    "phase": "initialization_teacher_weight_download",
+    "function": "download_teacher",
+    "file": "qualified_expert_v2_cpu_stage.py",
+    "line": 220,
+    "assertion": "assert time.monotonic()<deadline-20",
+    "exception": "AssertionError",
+    "log_timestamp": "2026-10-31T14:13:02.343+08:00",
+    "not_inferred": [
+      "GitHub unreachable",
+      "model regression",
+      "CUDA OOM",
+      "teacher quality gate failed"
+    ],
+    "partial_download_bytes_unknown": true
+  },
+  "confirmed_new_updates": 0,
+  "scientific_driver_started": false,
+  "scientific_driver_started_basis": "Final traceback exits wrapper at teacher download line200, before CPUpreflight and scientific driver calls. Full finalreceipt remains unavailable.",
+  "full_CPU_preflight_started": false,
+  "strict_CUDA_raw_cal_teacher_gate_executed": false,
+  "candidate_adopted": false,
+  "native_Linux_group_selftest_passed": true,
+  "actual_H100_4CPU_64GiB_probe_passed": true,
+  "platform_log_export": {
+    "gz": "evidence/qualified-expert-v2-1031a-platform-log.jsonl.gz",
+    "gz_bytes": 1163,
+    "gz_SHA256": "c4c7d74b9451c2664438fbd30a4d67ea064816e5c96dfb0d8b0a3525d55a0326",
+    "jsonl": "evidence/qualified-expert-v2-1031a-platform-log.jsonl",
+    "jsonl_SHA256": "45c0b3c9cfdfbd3683188196dc6fc50c2dc07f93ede52dcff7a53526871a5f9d",
+    "records": 16,
+    "complete_visible_record_set": true,
+    "long_receipt_Body_characters": 500,
+    "long_receipts_truncated_in_platform_export": true,
+    "final_full_JSON_recovered": false,
+    "final_visible_receipt_prefix": "INLINE_JOB_RECEIPT {\"status\": \"finite_inline_job_failed_all_partial_evidence_retained\", \"maximum_total_program_seconds\": 5400, \"initialization_maximum_seconds\": 600, \"shared_budget_origin\": 26018532.92678045, \"resource\": {\"CPU\": 4, \"memory_bytes\": 68719476736, \"GPU_requested\": 1, \"resource_mode\": \"allocated-h1001-cpu4-ram64-init\"}, \"GPU_already_allocated_during_CPU_preflight\": true, \"CPU_preflight_is_not_a_zero_GPU_job\": true, \"CPU_preflight_CUDA_VISIBLE_DEVICES\": \"\", \"confirmed_new_updates\": 0,",
+    "full_original_AFS_receipt": "/mnt/afs/USER_ID/SuperMimic/acro-library-20261027-b/evidence/qualified-expert-v2-inline-init-v1-execution.json",
+    "full_AFS_receipt_downloaded": false
+  },
+  "evidence": [
+    "evidence/qualified-expert-v2-1031a-terminal-home-dom.txt",
+    "evidence/qualified-expert-v2-1031a-terminal-worker-dom.txt",
+    "evidence/qualified-expert-v2-1031a-worker-exit-events-dom.txt",
+    "evidence/qualified-expert-v2-1031a-worker-exit-readable.jpg",
+    "evidence/qualified-expert-v2-1031a-startup-log.txt"
+  ],
+  "next_actions": [
+    "Only local0GPU at most2CPU within20minutes: diagnose exact transfer path and prepare offline-tested reuse of historical exact-SHA ownAFS teacher. Do not change frozen science,model hashes,thresholds or600/5400second budgets.",
+    "No automatic GPU resubmit,no CCI,no release publication. Any subsequent cloud action requires the next concrete reviewed execution step; historical cloud teacher existence/hash remains unverified."
+  ],
+  "new_GPU_retries": 0,
+  "new_CCI_starts": 0,
+  "full_goal_complete": false,
+  "BONES_route": "paused"
+}

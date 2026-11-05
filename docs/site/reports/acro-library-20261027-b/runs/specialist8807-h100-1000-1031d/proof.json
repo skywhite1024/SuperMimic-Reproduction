@@ -1,0 +1,64 @@
+{
+  "status": "updates_and_save_verified",
+  "device": "cuda",
+  "new_iterations": 1000,
+  "world_model_warmup_updates": 400,
+  "before": {
+    "wm": "e48b61010a25474c423ae486d17734c58742600f0e270a734261698bd66d99df",
+    "pi": "9bc644d003cd71c947070e6b9c0b622dd24a097ad9116311d439bba72f93c5cb",
+    "critic": "b88309a8aabedbc2c633b123bc72030fcbab615d8d8ba37346cb19f4a965caf0"
+  },
+  "after": {
+    "wm": "b6a5f9dbe9370770b6055f3924d2e6619576ce8c41d4b6b717676cb85f285145",
+    "pi": "39377c7f25acfdb17564a51e8c03160db86505920935d837e01edc0cc91e1cf7",
+    "critic": "a3cf9c2448c9fef73ca5792c6a706fa138052e2b7430847408db1cb464d39141"
+  },
+  "wall_seconds": 568.2907529566437,
+  "training_summary": {
+    "completed": true,
+    "iteration": 17000,
+    "sim_steps": 165677056,
+    "wall_time": 8381.596543073654,
+    "wall_h": 2.328028916782803,
+    "wm_loss": 3.6594248485565184,
+    "wm_err8": 6.2271679019927975,
+    "pi_loss": -2.9649731636047365,
+    "v_loss": 0.05476589158177376,
+    "imag_rew": 0.13708335295319557,
+    "pi_gradnorm": 10.306913509368897,
+    "imag_survival": 0.8804848361015319,
+    "sim_rew": 0.1853518362045288,
+    "ep_len": 41.97582372283936,
+    "ep_ret_norm": 0.007467120990157127,
+    "term_frac": 0.11844660194174757,
+    "it_per_s": 1.453874498531111,
+    "lr": 4.944881660053548e-05
+  },
+  "normalizer_tensors_unchanged": true,
+  "physical_success_not_inferred_from_training": true,
+  "spec": {
+    "variant": "specialist-8807-99d-1000",
+    "specialist_plan_sha256": "80a2ae20d00b403a873f973bd6bc5cd056e49c725c672631b428f33ea3cc9f4a",
+    "target_clip": "88_07_stageii_unitree_g1",
+    "parent_sha256": "0afcca9af97bd9db1f2dd083875898f962acab0b0a70c7313b221e575b70b05b",
+    "reference_sha256": "b8cfbb0470486e625bcc3b840fa33437c333ebe3a9fef8ef83655f07dbc7cc7d",
+    "reference_source": "https://github.com/lez666/chunwan-flip",
+    "original_policy_modified": false,
+    "BONES_downloaded": false,
+    "normalizers_frozen": true,
+    "reference_fps": 30,
+    "training_resets_allowed": true,
+    "evaluation_requires_zero_resets_after_t0": true
+  },
+  "final_iteration": 17000,
+  "export_path": "policy/specialist8807-h100-1000-1031d.pt",
+  "export_sha256": "bbe45f884af2847c5429b32232b5dc47a2ab820fc4d80f35e9ee47ee26a137d6",
+  "full_checkpoint_sha256": "f787706f292eb1385e8e78882faf0b3ea4b89e6e992835141eba92c8c9a09758",
+  "exported_PI_tensors_equal": true,
+  "functional_readback": {
+    "real_training_history_rows": 4,
+    "exact_output_equality": true
+  },
+  "final_unified_55_goal_complete": false,
+  "physical_acceptance_inferred": false
+}

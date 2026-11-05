@@ -1,0 +1,1005 @@
+{
+  "run": "qualified-expert-v2-corrected-sequences-cpu",
+  "checkpoint_sha256": "173d5f2fa187f12e4ef2e7a2a83040e5435f22dc7c456981a19f9e4f2fb943b7",
+  "reference_version": "continuous-corrected-v1",
+  "frozen_index_sha256": "92fdae6b84705548718fb90a09eb018158bf15d66d6c3b0028c5ed4d791ca799",
+  "contract_sha256": "9f986fbc647865312b6b1346b8c11da5d00a1ce8020ef96efc8da5339b4f73ce",
+  "denominator": 3,
+  "passed_original_hard_gate": 1,
+  "continuous_engineering_passed": 1,
+  "stage1_contract_application_retrospective": false,
+  "trials": [
+    {
+      "seed": 0,
+      "checks": {
+        "complete_120_seconds": true,
+        "no_resets": true,
+        "whole_sequence_tracking": true,
+        "all_complete_new_segments_tracking": true,
+        "terminal_hold": true
+      },
+      "continuous_engineering_passed": true,
+      "whole_sequence": {
+        "root_xy_rmse_m": 0.129633367061615,
+        "root_xy_peak_m": 0.7140303254127502,
+        "body_global_mean_m": 0.11308781802654266,
+        "body_local_mean_m": 0.04652775824069977,
+        "yaw_rmse_deg": 4.22116231918335,
+        "root_orientation_geodesic_rmse_deg": 5.76441501908029,
+        "inversion_frame_coverage": 0.9069767441860465,
+        "hard_failure_samples": 0,
+        "checks": {
+          "root_xy_rmse_m": true,
+          "root_xy_peak_m": true,
+          "body_global_mean_m": true,
+          "body_local_mean_m": true,
+          "yaw_rmse_deg": true,
+          "root_orientation_geodesic_rmse_deg": true,
+          "inversion_coverage": true,
+          "no_hard_failure": true
+        },
+        "passed": true
+      },
+      "new_full_segments": [
+        {
+          "source": "88_08_stageii_unitree_g1",
+          "physical_start_s": 5.6000000000000005,
+          "physical_end_s": 10.32,
+          "root_xy_rmse_m": 0.09265903383493423,
+          "root_xy_peak_m": 0.23168164491653442,
+          "body_global_mean_m": 0.13812491297721863,
+          "body_local_mean_m": 0.0982857495546341,
+          "yaw_rmse_deg": 16.95994758605957,
+          "root_orientation_geodesic_rmse_deg": 17.70103768484887,
+          "inversion_frame_coverage": 0.9069767441860465,
+          "hard_failure_samples": 0,
+          "checks": {
+            "root_xy_rmse_m": true,
+            "root_xy_peak_m": true,
+            "body_global_mean_m": true,
+            "body_local_mean_m": true,
+            "yaw_rmse_deg": true,
+            "root_orientation_geodesic_rmse_deg": true,
+            "inversion_coverage": true,
+            "no_hard_failure": true
+          },
+          "passed": true
+        },
+        {
+          "source": "89_01_stageii_unitree_g1",
+          "physical_start_s": 14.92,
+          "physical_end_s": 53.7,
+          "root_xy_rmse_m": 0.059742216020822525,
+          "root_xy_peak_m": 0.14450101554393768,
+          "body_global_mean_m": 0.08288904279470444,
+          "body_local_mean_m": 0.05512259528040886,
+          "yaw_rmse_deg": 2.2668700218200684,
+          "root_orientation_geodesic_rmse_deg": 5.231747429774013,
+          "inversion_frame_coverage": null,
+          "hard_failure_samples": 0,
+          "checks": {
+            "root_xy_rmse_m": true,
+            "root_xy_peak_m": true,
+            "body_global_mean_m": true,
+            "body_local_mean_m": true,
+            "yaw_rmse_deg": true,
+            "root_orientation_geodesic_rmse_deg": true,
+            "inversion_coverage": true,
+            "no_hard_failure": true
+          },
+          "passed": true
+        },
+        {
+          "source": "88_10_stageii_unitree_g1",
+          "physical_start_s": 58.300000000000004,
+          "physical_end_s": 66.0,
+          "root_xy_rmse_m": 0.06296808272600174,
+          "root_xy_peak_m": 0.1084093227982521,
+          "body_global_mean_m": 0.07572268694639206,
+          "body_local_mean_m": 0.04230243340134621,
+          "yaw_rmse_deg": 2.9367997646331787,
+          "root_orientation_geodesic_rmse_deg": 4.375501957513041,
+          "inversion_frame_coverage": null,
+          "hard_failure_samples": 0,
+          "checks": {
+            "root_xy_rmse_m": true,
+            "root_xy_peak_m": true,
+            "body_global_mean_m": true,
+            "body_local_mean_m": true,
+            "yaw_rmse_deg": true,
+            "root_orientation_geodesic_rmse_deg": true,
+            "inversion_coverage": true,
+            "no_hard_failure": true
+          },
+          "passed": true
+        },
+        {
+          "source": "88_03_stageii_unitree_g1",
+          "physical_start_s": 70.60000000000001,
+          "physical_end_s": 73.46000000000001,
+          "root_xy_rmse_m": 0.11010181158781052,
+          "root_xy_peak_m": 0.24433740973472595,
+          "body_global_mean_m": 0.10126449167728424,
+          "body_local_mean_m": 0.028254032135009766,
+          "yaw_rmse_deg": 2.037882089614868,
+          "root_orientation_geodesic_rmse_deg": 3.4892573243759744,
+          "inversion_frame_coverage": null,
+          "hard_failure_samples": 0,
+          "checks": {
+            "root_xy_rmse_m": true,
+            "root_xy_peak_m": true,
+            "body_global_mean_m": true,
+            "body_local_mean_m": true,
+            "yaw_rmse_deg": true,
+            "root_orientation_geodesic_rmse_deg": true,
+            "inversion_coverage": true,
+            "no_hard_failure": true
+          },
+          "passed": true
+        }
+      ],
+      "terminal_checks": {
+        "upright": true,
+        "root_speed": true,
+        "joint_speed": true
+      },
+      "original_trial": {
+        "seed": 0,
+        "elapsed_seconds": 120,
+        "post_initialization_resets": 0,
+        "hard_failure_frames": 0,
+        "first_hard_failure_s": null,
+        "original_return_until_first_failure": 0.86810302734375,
+        "root_xy_rmse_m": 0.129633367061615,
+        "root_xy_peak_m": 0.7140303254127502,
+        "yaw_rmse_deg": 4.22116231918335,
+        "body_global_mean_m": 0.11308781802654266,
+        "body_local_mean_m": 0.04652775824069977,
+        "passed_original_hard_gate": true,
+        "terminal_last_second_root_speed_peak_m_s": 0.14610907435417175,
+        "terminal_last_second_joint_speed_rms_rad_s": 0.1619492769241333,
+        "terminal_last_second_pelvis_min_m": 0.7763736844062805,
+        "terminal_last_second_Rzz_min": 0.9980303049087524,
+        "transition_windows": [
+          {
+            "source": "walk2_subject1",
+            "group": "old_lafan",
+            "time_s": 1.0,
+            "hard_failure": false,
+            "xy_peak_m": 0.024834755808115005
+          },
+          {
+            "source": "88_08_stageii_unitree_g1",
+            "group": "new_raw_full_clip",
+            "time_s": 4.8,
+            "hard_failure": false,
+            "xy_peak_m": 0.04744868725538254
+          },
+          {
+            "source": "dance1_subject1",
+            "group": "old_lafan",
+            "time_s": 10.32,
+            "hard_failure": false,
+            "xy_peak_m": 0.2648472487926483
+          },
+          {
+            "source": "89_01_stageii_unitree_g1",
+            "group": "new_raw_full_clip",
+            "time_s": 14.12,
+            "hard_failure": false,
+            "xy_peak_m": 0.14450101554393768
+          },
+          {
+            "source": "run1_subject2",
+            "group": "old_lafan",
+            "time_s": 53.7,
+            "hard_failure": false,
+            "xy_peak_m": 0.1672888845205307
+          },
+          {
+            "source": "88_10_stageii_unitree_g1",
+            "group": "new_raw_full_clip",
+            "time_s": 57.5,
+            "hard_failure": false,
+            "xy_peak_m": 0.1084093227982521
+          },
+          {
+            "source": "jumps1_subject1",
+            "group": "old_lafan",
+            "time_s": 66.0,
+            "hard_failure": false,
+            "xy_peak_m": 0.2310033142566681
+          },
+          {
+            "source": "88_03_stageii_unitree_g1",
+            "group": "new_raw_full_clip",
+            "time_s": 69.8,
+            "hard_failure": false,
+            "xy_peak_m": 0.24433740973472595
+          },
+          {
+            "source": "walk1_subject5",
+            "group": "old_lafan",
+            "time_s": 73.46,
+            "hard_failure": false,
+            "xy_peak_m": 0.11556579172611237
+          },
+          {
+            "source": "run2_subject4",
+            "group": "old_lafan",
+            "time_s": 77.26,
+            "hard_failure": false,
+            "xy_peak_m": 0.2594817876815796
+          },
+          {
+            "source": "dance2_subject3",
+            "group": "old_lafan",
+            "time_s": 81.06,
+            "hard_failure": false,
+            "xy_peak_m": 0.15784870088100433
+          },
+          {
+            "source": "jumps1_subject5",
+            "group": "old_lafan",
+            "time_s": 84.86,
+            "hard_failure": false,
+            "xy_peak_m": 0.1581457108259201
+          },
+          {
+            "source": "walk3_subject1",
+            "group": "old_lafan",
+            "time_s": 88.66,
+            "hard_failure": false,
+            "xy_peak_m": 0.46080198884010315
+          },
+          {
+            "source": "run2_subject1",
+            "group": "old_lafan",
+            "time_s": 92.46,
+            "hard_failure": false,
+            "xy_peak_m": 0.6442089676856995
+          },
+          {
+            "source": "dance2_subject5",
+            "group": "old_lafan",
+            "time_s": 96.26,
+            "hard_failure": false,
+            "xy_peak_m": 0.3285018801689148
+          },
+          {
+            "source": "jumps1_subject5",
+            "group": "old_lafan",
+            "time_s": 100.06,
+            "hard_failure": false,
+            "xy_peak_m": 0.12830568850040436
+          },
+          {
+            "source": "walk3_subject2",
+            "group": "old_lafan",
+            "time_s": 103.86,
+            "hard_failure": false,
+            "xy_peak_m": 0.17196537554264069
+          },
+          {
+            "source": "run2_subject1",
+            "group": "old_lafan",
+            "time_s": 107.66,
+            "hard_failure": false,
+            "xy_peak_m": 0.7140303254127502
+          },
+          {
+            "source": "dance2_subject2",
+            "group": "old_lafan",
+            "time_s": 111.46,
+            "hard_failure": false,
+            "xy_peak_m": 0.30272626876831055
+          },
+          {
+            "source": "jumps1_subject5",
+            "group": "old_lafan",
+            "time_s": 115.26,
+            "hard_failure": false,
+            "xy_peak_m": 0.11070331931114197
+          },
+          {
+            "source": "fixed_upright_terminal_hold",
+            "group": "terminal_hold",
+            "time_s": 116.2,
+            "hard_failure": false,
+            "xy_peak_m": 0.08826044946908951
+          }
+        ]
+      }
+    },
+    {
+      "seed": 1,
+      "checks": {
+        "complete_120_seconds": true,
+        "no_resets": true,
+        "whole_sequence_tracking": false,
+        "all_complete_new_segments_tracking": false,
+        "terminal_hold": true
+      },
+      "continuous_engineering_passed": false,
+      "whole_sequence": {
+        "root_xy_rmse_m": 2.947435140609741,
+        "root_xy_peak_m": 7.949129581451416,
+        "body_global_mean_m": 1.6429555416107178,
+        "body_local_mean_m": 0.2245960682630539,
+        "yaw_rmse_deg": 49.17668914794922,
+        "root_orientation_geodesic_rmse_deg": 68.21420662249406,
+        "inversion_frame_coverage": 0.9239130434782609,
+        "hard_failure_samples": 1716,
+        "checks": {
+          "root_xy_rmse_m": false,
+          "root_xy_peak_m": false,
+          "body_global_mean_m": false,
+          "body_local_mean_m": false,
+          "yaw_rmse_deg": false,
+          "root_orientation_geodesic_rmse_deg": false,
+          "inversion_coverage": true,
+          "no_hard_failure": false
+        },
+        "passed": false
+      },
+      "new_full_segments": [
+        {
+          "source": "88_07_stageii_unitree_g1",
+          "physical_start_s": 5.6000000000000005,
+          "physical_end_s": 8.120000000000001,
+          "root_xy_rmse_m": 0.7138538956642151,
+          "root_xy_peak_m": 1.2975598573684692,
+          "body_global_mean_m": 0.5787442326545715,
+          "body_local_mean_m": 0.17252300679683685,
+          "yaw_rmse_deg": 8.858389854431152,
+          "root_orientation_geodesic_rmse_deg": 14.130031118614157,
+          "inversion_frame_coverage": 0.7407407407407407,
+          "hard_failure_samples": 0,
+          "checks": {
+            "root_xy_rmse_m": false,
+            "root_xy_peak_m": false,
+            "body_global_mean_m": false,
+            "body_local_mean_m": false,
+            "yaw_rmse_deg": true,
+            "root_orientation_geodesic_rmse_deg": true,
+            "inversion_coverage": true,
+            "no_hard_failure": true
+          },
+          "passed": false
+        },
+        {
+          "source": "88_11_stageii_unitree_g1",
+          "physical_start_s": 12.72,
+          "physical_end_s": 46.42,
+          "root_xy_rmse_m": 0.050110556185245514,
+          "root_xy_peak_m": 0.13365736603736877,
+          "body_global_mean_m": 0.06502702087163925,
+          "body_local_mean_m": 0.045516762882471085,
+          "yaw_rmse_deg": 2.80771803855896,
+          "root_orientation_geodesic_rmse_deg": 5.01481989452909,
+          "inversion_frame_coverage": null,
+          "hard_failure_samples": 0,
+          "checks": {
+            "root_xy_rmse_m": true,
+            "root_xy_peak_m": true,
+            "body_global_mean_m": true,
+            "body_local_mean_m": true,
+            "yaw_rmse_deg": true,
+            "root_orientation_geodesic_rmse_deg": true,
+            "inversion_coverage": true,
+            "no_hard_failure": true
+          },
+          "passed": true
+        },
+        {
+          "source": "85_06_stageii_unitree_g1",
+          "physical_start_s": 51.02,
+          "physical_end_s": 58.84,
+          "root_xy_rmse_m": 0.06752677261829376,
+          "root_xy_peak_m": 0.21948859095573425,
+          "body_global_mean_m": 0.07895458489656448,
+          "body_local_mean_m": 0.0453060008585453,
+          "yaw_rmse_deg": 2.690164566040039,
+          "root_orientation_geodesic_rmse_deg": 7.599224245885404,
+          "inversion_frame_coverage": 1.0,
+          "hard_failure_samples": 0,
+          "checks": {
+            "root_xy_rmse_m": true,
+            "root_xy_peak_m": true,
+            "body_global_mean_m": true,
+            "body_local_mean_m": true,
+            "yaw_rmse_deg": true,
+            "root_orientation_geodesic_rmse_deg": true,
+            "inversion_coverage": true,
+            "no_hard_failure": true
+          },
+          "passed": true
+        },
+        {
+          "source": "88_09_stageii_unitree_g1",
+          "physical_start_s": 63.440000000000005,
+          "physical_end_s": 69.64,
+          "root_xy_rmse_m": 0.3673454225063324,
+          "root_xy_peak_m": 0.9630890488624573,
+          "body_global_mean_m": 0.38625648617744446,
+          "body_local_mean_m": 0.22042858600616455,
+          "yaw_rmse_deg": 47.50585174560547,
+          "root_orientation_geodesic_rmse_deg": 69.5610251324358,
+          "inversion_frame_coverage": 1.0,
+          "hard_failure_samples": 79,
+          "checks": {
+            "root_xy_rmse_m": false,
+            "root_xy_peak_m": false,
+            "body_global_mean_m": false,
+            "body_local_mean_m": false,
+            "yaw_rmse_deg": false,
+            "root_orientation_geodesic_rmse_deg": false,
+            "inversion_coverage": true,
+            "no_hard_failure": false
+          },
+          "passed": false
+        },
+        {
+          "source": "88_06_stageii_unitree_g1",
+          "physical_start_s": 74.24,
+          "physical_end_s": 78.0,
+          "root_xy_rmse_m": 2.803915023803711,
+          "root_xy_peak_m": 3.8163836002349854,
+          "body_global_mean_m": 2.836839199066162,
+          "body_local_mean_m": 0.612331748008728,
+          "yaw_rmse_deg": 95.65328216552734,
+          "root_orientation_geodesic_rmse_deg": 126.95117583934686,
+          "inversion_frame_coverage": null,
+          "hard_failure_samples": 189,
+          "checks": {
+            "root_xy_rmse_m": false,
+            "root_xy_peak_m": false,
+            "body_global_mean_m": false,
+            "body_local_mean_m": false,
+            "yaw_rmse_deg": false,
+            "root_orientation_geodesic_rmse_deg": false,
+            "inversion_coverage": true,
+            "no_hard_failure": false
+          },
+          "passed": false
+        }
+      ],
+      "terminal_checks": {
+        "upright": true,
+        "root_speed": true,
+        "joint_speed": true
+      },
+      "original_trial": {
+        "seed": 1,
+        "elapsed_seconds": 120,
+        "post_initialization_resets": 0,
+        "hard_failure_frames": 1716,
+        "first_hard_failure_s": 68.08,
+        "original_return_until_first_failure": 0.47201773524284363,
+        "root_xy_rmse_m": 2.947435140609741,
+        "root_xy_peak_m": 7.949129581451416,
+        "yaw_rmse_deg": 49.17668914794922,
+        "body_global_mean_m": 1.6429555416107178,
+        "body_local_mean_m": 0.2245960682630539,
+        "passed_original_hard_gate": false,
+        "terminal_last_second_root_speed_peak_m_s": 0.0848444402217865,
+        "terminal_last_second_joint_speed_rms_rad_s": 0.09519977122545242,
+        "terminal_last_second_pelvis_min_m": 0.77838534116745,
+        "terminal_last_second_Rzz_min": 0.9990986585617065,
+        "transition_windows": [
+          {
+            "source": "walk3_subject4",
+            "group": "old_lafan",
+            "time_s": 1.0,
+            "hard_failure": false,
+            "xy_peak_m": 0.02499048039317131
+          },
+          {
+            "source": "88_07_stageii_unitree_g1",
+            "group": "new_raw_full_clip",
+            "time_s": 4.8,
+            "hard_failure": false,
+            "xy_peak_m": 0.15940310060977936
+          },
+          {
+            "source": "dance2_subject5",
+            "group": "old_lafan",
+            "time_s": 8.12,
+            "hard_failure": false,
+            "xy_peak_m": 1.2975598573684692
+          },
+          {
+            "source": "88_11_stageii_unitree_g1",
+            "group": "new_raw_full_clip",
+            "time_s": 11.92,
+            "hard_failure": false,
+            "xy_peak_m": 0.11618094146251678
+          },
+          {
+            "source": "run1_subject2",
+            "group": "old_lafan",
+            "time_s": 46.42,
+            "hard_failure": false,
+            "xy_peak_m": 0.09496266394853592
+          },
+          {
+            "source": "85_06_stageii_unitree_g1",
+            "group": "new_raw_full_clip",
+            "time_s": 50.22,
+            "hard_failure": false,
+            "xy_peak_m": 0.04338943958282471
+          },
+          {
+            "source": "jumps1_subject1",
+            "group": "old_lafan",
+            "time_s": 58.84,
+            "hard_failure": false,
+            "xy_peak_m": 0.17279870808124542
+          },
+          {
+            "source": "88_09_stageii_unitree_g1",
+            "group": "new_raw_full_clip",
+            "time_s": 62.64,
+            "hard_failure": false,
+            "xy_peak_m": 0.5264439582824707
+          },
+          {
+            "source": "walk3_subject5",
+            "group": "old_lafan",
+            "time_s": 69.64,
+            "hard_failure": true,
+            "xy_peak_m": 1.1017985343933105
+          },
+          {
+            "source": "88_06_stageii_unitree_g1",
+            "group": "new_raw_full_clip",
+            "time_s": 73.44,
+            "hard_failure": true,
+            "xy_peak_m": 2.295646905899048
+          },
+          {
+            "source": "walk2_subject4",
+            "group": "old_lafan",
+            "time_s": 78.0,
+            "hard_failure": true,
+            "xy_peak_m": 4.712917327880859
+          },
+          {
+            "source": "run1_subject5",
+            "group": "old_lafan",
+            "time_s": 81.8,
+            "hard_failure": true,
+            "xy_peak_m": 7.4488983154296875
+          },
+          {
+            "source": "dance2_subject4",
+            "group": "old_lafan",
+            "time_s": 85.6,
+            "hard_failure": true,
+            "xy_peak_m": 6.365016937255859
+          },
+          {
+            "source": "jumps1_subject1",
+            "group": "old_lafan",
+            "time_s": 89.4,
+            "hard_failure": true,
+            "xy_peak_m": 5.998422622680664
+          },
+          {
+            "source": "walk2_subject3",
+            "group": "old_lafan",
+            "time_s": 93.2,
+            "hard_failure": true,
+            "xy_peak_m": 5.560558319091797
+          },
+          {
+            "source": "run2_subject1",
+            "group": "old_lafan",
+            "time_s": 97.0,
+            "hard_failure": true,
+            "xy_peak_m": 4.795732498168945
+          },
+          {
+            "source": "dance2_subject2",
+            "group": "old_lafan",
+            "time_s": 100.8,
+            "hard_failure": true,
+            "xy_peak_m": 7.921136856079102
+          },
+          {
+            "source": "jumps1_subject1",
+            "group": "old_lafan",
+            "time_s": 104.6,
+            "hard_failure": true,
+            "xy_peak_m": 5.278149604797363
+          },
+          {
+            "source": "walk1_subject1",
+            "group": "old_lafan",
+            "time_s": 108.4,
+            "hard_failure": false,
+            "xy_peak_m": 0.7844918966293335
+          },
+          {
+            "source": "run2_subject4",
+            "group": "old_lafan",
+            "time_s": 112.2,
+            "hard_failure": false,
+            "xy_peak_m": 0.25800126791000366
+          },
+          {
+            "source": "fixed_upright_terminal_hold",
+            "group": "terminal_hold",
+            "time_s": 116.0,
+            "hard_failure": false,
+            "xy_peak_m": 0.7535513639450073
+          }
+        ]
+      }
+    },
+    {
+      "seed": 2,
+      "checks": {
+        "complete_120_seconds": true,
+        "no_resets": true,
+        "whole_sequence_tracking": false,
+        "all_complete_new_segments_tracking": false,
+        "terminal_hold": false
+      },
+      "continuous_engineering_passed": false,
+      "whole_sequence": {
+        "root_xy_rmse_m": 4.159680366516113,
+        "root_xy_peak_m": 8.472341537475586,
+        "body_global_mean_m": 3.0494163036346436,
+        "body_local_mean_m": 0.49199116230010986,
+        "yaw_rmse_deg": 69.50824737548828,
+        "root_orientation_geodesic_rmse_deg": 100.82830321472471,
+        "inversion_frame_coverage": 0.6447368421052632,
+        "hard_failure_samples": 3975,
+        "checks": {
+          "root_xy_rmse_m": false,
+          "root_xy_peak_m": false,
+          "body_global_mean_m": false,
+          "body_local_mean_m": false,
+          "yaw_rmse_deg": false,
+          "root_orientation_geodesic_rmse_deg": false,
+          "inversion_coverage": false,
+          "no_hard_failure": false
+        },
+        "passed": false
+      },
+      "new_full_segments": [
+        {
+          "source": "85_07_stageii_unitree_g1",
+          "physical_start_s": 5.6000000000000005,
+          "physical_end_s": 13.5,
+          "root_xy_rmse_m": 0.04594183340668678,
+          "root_xy_peak_m": 0.11896087229251862,
+          "body_global_mean_m": 0.05502472445368767,
+          "body_local_mean_m": 0.03368924558162689,
+          "yaw_rmse_deg": 6.2933478355407715,
+          "root_orientation_geodesic_rmse_deg": 5.258160698396947,
+          "inversion_frame_coverage": 1.0,
+          "hard_failure_samples": 0,
+          "checks": {
+            "root_xy_rmse_m": true,
+            "root_xy_peak_m": true,
+            "body_global_mean_m": true,
+            "body_local_mean_m": true,
+            "yaw_rmse_deg": true,
+            "root_orientation_geodesic_rmse_deg": true,
+            "inversion_coverage": true,
+            "no_hard_failure": true
+          },
+          "passed": true
+        },
+        {
+          "source": "90_08_stageii_unitree_g1",
+          "physical_start_s": 18.1,
+          "physical_end_s": 23.62,
+          "root_xy_rmse_m": 0.09536575525999069,
+          "root_xy_peak_m": 0.22034430503845215,
+          "body_global_mean_m": 0.10847877711057663,
+          "body_local_mean_m": 0.05726568400859833,
+          "yaw_rmse_deg": 3.292029619216919,
+          "root_orientation_geodesic_rmse_deg": 7.273264871046662,
+          "inversion_frame_coverage": 0.9,
+          "hard_failure_samples": 0,
+          "checks": {
+            "root_xy_rmse_m": true,
+            "root_xy_peak_m": true,
+            "body_global_mean_m": true,
+            "body_local_mean_m": true,
+            "yaw_rmse_deg": true,
+            "root_orientation_geodesic_rmse_deg": true,
+            "inversion_coverage": true,
+            "no_hard_failure": true
+          },
+          "passed": true
+        },
+        {
+          "source": "90_19_stageii_unitree_g1",
+          "physical_start_s": 28.22,
+          "physical_end_s": 36.82,
+          "root_xy_rmse_m": 0.09528092294931412,
+          "root_xy_peak_m": 0.16553600132465363,
+          "body_global_mean_m": 0.12100527435541153,
+          "body_local_mean_m": 0.06478836387395859,
+          "yaw_rmse_deg": 7.700646877288818,
+          "root_orientation_geodesic_rmse_deg": 7.757293605989491,
+          "inversion_frame_coverage": 1.0,
+          "hard_failure_samples": 0,
+          "checks": {
+            "root_xy_rmse_m": true,
+            "root_xy_peak_m": true,
+            "body_global_mean_m": true,
+            "body_local_mean_m": true,
+            "yaw_rmse_deg": true,
+            "root_orientation_geodesic_rmse_deg": true,
+            "inversion_coverage": true,
+            "no_hard_failure": true
+          },
+          "passed": true
+        },
+        {
+          "source": "90_14_stageii_unitree_g1",
+          "physical_start_s": 41.42,
+          "physical_end_s": 48.32,
+          "root_xy_rmse_m": 1.2096939086914062,
+          "root_xy_peak_m": 1.866399884223938,
+          "body_global_mean_m": 1.4163955450057983,
+          "body_local_mean_m": 0.7671292424201965,
+          "yaw_rmse_deg": 102.32363891601562,
+          "root_orientation_geodesic_rmse_deg": 109.32626546258957,
+          "inversion_frame_coverage": 0.3,
+          "hard_failure_samples": 346,
+          "checks": {
+            "root_xy_rmse_m": false,
+            "root_xy_peak_m": false,
+            "body_global_mean_m": false,
+            "body_local_mean_m": false,
+            "yaw_rmse_deg": false,
+            "root_orientation_geodesic_rmse_deg": false,
+            "inversion_coverage": false,
+            "no_hard_failure": false
+          },
+          "passed": false
+        },
+        {
+          "source": "143_34_stageii_unitree_g1",
+          "physical_start_s": 52.92,
+          "physical_end_s": 65.88,
+          "root_xy_rmse_m": 1.369117259979248,
+          "root_xy_peak_m": 2.1963765621185303,
+          "body_global_mean_m": 1.496829628944397,
+          "body_local_mean_m": 0.6738623380661011,
+          "yaw_rmse_deg": 76.48052215576172,
+          "root_orientation_geodesic_rmse_deg": 110.3332925007997,
+          "inversion_frame_coverage": null,
+          "hard_failure_samples": 649,
+          "checks": {
+            "root_xy_rmse_m": false,
+            "root_xy_peak_m": false,
+            "body_global_mean_m": false,
+            "body_local_mean_m": false,
+            "yaw_rmse_deg": false,
+            "root_orientation_geodesic_rmse_deg": false,
+            "inversion_coverage": true,
+            "no_hard_failure": false
+          },
+          "passed": false
+        },
+        {
+          "source": "90_15_stageii_unitree_g1",
+          "physical_start_s": 70.48,
+          "physical_end_s": 80.3,
+          "root_xy_rmse_m": 4.889830589294434,
+          "root_xy_peak_m": 6.275345325469971,
+          "body_global_mean_m": 4.7618608474731445,
+          "body_local_mean_m": 0.8135370016098022,
+          "yaw_rmse_deg": 98.63319396972656,
+          "root_orientation_geodesic_rmse_deg": 115.13088354000446,
+          "inversion_frame_coverage": 0.3333333333333333,
+          "hard_failure_samples": 492,
+          "checks": {
+            "root_xy_rmse_m": false,
+            "root_xy_peak_m": false,
+            "body_global_mean_m": false,
+            "body_local_mean_m": false,
+            "yaw_rmse_deg": false,
+            "root_orientation_geodesic_rmse_deg": false,
+            "inversion_coverage": false,
+            "no_hard_failure": false
+          },
+          "passed": false
+        }
+      ],
+      "terminal_checks": {
+        "upright": false,
+        "root_speed": false,
+        "joint_speed": false
+      },
+      "original_trial": {
+        "seed": 2,
+        "elapsed_seconds": 120,
+        "post_initialization_resets": 0,
+        "hard_failure_frames": 3975,
+        "first_hard_failure_s": 39.4,
+        "original_return_until_first_failure": 0.26331138610839844,
+        "root_xy_rmse_m": 4.159680366516113,
+        "root_xy_peak_m": 8.472341537475586,
+        "yaw_rmse_deg": 69.50824737548828,
+        "body_global_mean_m": 3.0494163036346436,
+        "body_local_mean_m": 0.49199116230010986,
+        "passed_original_hard_gate": false,
+        "terminal_last_second_root_speed_peak_m_s": 0.8120220899581909,
+        "terminal_last_second_joint_speed_rms_rad_s": 2.414268970489502,
+        "terminal_last_second_pelvis_min_m": 0.06914744526147842,
+        "terminal_last_second_Rzz_min": -0.5716029405593872,
+        "transition_windows": [
+          {
+            "source": "walk2_subject4",
+            "group": "old_lafan",
+            "time_s": 1.0,
+            "hard_failure": false,
+            "xy_peak_m": 0.024822145700454712
+          },
+          {
+            "source": "85_07_stageii_unitree_g1",
+            "group": "new_raw_full_clip",
+            "time_s": 4.8,
+            "hard_failure": false,
+            "xy_peak_m": 0.03448234125971794
+          },
+          {
+            "source": "dance1_subject1",
+            "group": "old_lafan",
+            "time_s": 13.5,
+            "hard_failure": false,
+            "xy_peak_m": 0.12853842973709106
+          },
+          {
+            "source": "90_08_stageii_unitree_g1",
+            "group": "new_raw_full_clip",
+            "time_s": 17.3,
+            "hard_failure": false,
+            "xy_peak_m": 0.1869426965713501
+          },
+          {
+            "source": "run1_subject5",
+            "group": "old_lafan",
+            "time_s": 23.62,
+            "hard_failure": false,
+            "xy_peak_m": 0.11493995785713196
+          },
+          {
+            "source": "90_19_stageii_unitree_g1",
+            "group": "new_raw_full_clip",
+            "time_s": 27.42,
+            "hard_failure": false,
+            "xy_peak_m": 0.16430658102035522
+          },
+          {
+            "source": "jumps1_subject2",
+            "group": "old_lafan",
+            "time_s": 36.82,
+            "hard_failure": false,
+            "xy_peak_m": 0.36680251359939575
+          },
+          {
+            "source": "90_14_stageii_unitree_g1",
+            "group": "new_raw_full_clip",
+            "time_s": 40.62,
+            "hard_failure": true,
+            "xy_peak_m": 0.9816569685935974
+          },
+          {
+            "source": "walk3_subject4",
+            "group": "old_lafan",
+            "time_s": 48.32,
+            "hard_failure": true,
+            "xy_peak_m": 1.8662638664245605
+          },
+          {
+            "source": "143_34_stageii_unitree_g1",
+            "group": "new_raw_full_clip",
+            "time_s": 52.12,
+            "hard_failure": true,
+            "xy_peak_m": 1.1503729820251465
+          },
+          {
+            "source": "dance2_subject3",
+            "group": "old_lafan",
+            "time_s": 65.88,
+            "hard_failure": true,
+            "xy_peak_m": 2.849816083908081
+          },
+          {
+            "source": "90_15_stageii_unitree_g1",
+            "group": "new_raw_full_clip",
+            "time_s": 69.68,
+            "hard_failure": true,
+            "xy_peak_m": 3.165846586227417
+          },
+          {
+            "source": "walk4_subject1",
+            "group": "old_lafan",
+            "time_s": 80.3,
+            "hard_failure": true,
+            "xy_peak_m": 6.508047580718994
+          },
+          {
+            "source": "run1_subject2",
+            "group": "old_lafan",
+            "time_s": 84.1,
+            "hard_failure": true,
+            "xy_peak_m": 6.183470726013184
+          },
+          {
+            "source": "dance2_subject5",
+            "group": "old_lafan",
+            "time_s": 87.9,
+            "hard_failure": true,
+            "xy_peak_m": 7.280660152435303
+          },
+          {
+            "source": "jumps1_subject1",
+            "group": "old_lafan",
+            "time_s": 91.7,
+            "hard_failure": true,
+            "xy_peak_m": 7.565126895904541
+          },
+          {
+            "source": "walk3_subject1",
+            "group": "old_lafan",
+            "time_s": 95.5,
+            "hard_failure": true,
+            "xy_peak_m": 7.7996039390563965
+          },
+          {
+            "source": "run1_subject5",
+            "group": "old_lafan",
+            "time_s": 99.3,
+            "hard_failure": true,
+            "xy_peak_m": 7.571984767913818
+          },
+          {
+            "source": "dance1_subject2",
+            "group": "old_lafan",
+            "time_s": 103.1,
+            "hard_failure": true,
+            "xy_peak_m": 6.125175476074219
+          },
+          {
+            "source": "jumps1_subject2",
+            "group": "old_lafan",
+            "time_s": 106.9,
+            "hard_failure": true,
+            "xy_peak_m": 6.189890384674072
+          },
+          {
+            "source": "walk2_subject1",
+            "group": "old_lafan",
+            "time_s": 110.7,
+            "hard_failure": true,
+            "xy_peak_m": 7.15914249420166
+          },
+          {
+            "source": "run2_subject1",
+            "group": "old_lafan",
+            "time_s": 114.5,
+            "hard_failure": true,
+            "xy_peak_m": 6.688952922821045
+          },
+          {
+            "source": "fixed_upright_terminal_hold",
+            "group": "terminal_hold",
+            "time_s": 116.2,
+            "hard_failure": true,
+            "xy_peak_m": 5.795812129974365
+          }
+        ]
+      }
+    }
+  ]
+}

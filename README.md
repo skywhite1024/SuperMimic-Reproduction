@@ -4,8 +4,8 @@ Community-implementation experiments with **40 LAFAN1 motions**, **15 additional
 
 **中文：这是复现实验与工程记录。基础 LAFAN1 目标已达到；新增动作与旧动作兼顾的统一模型目标仍未全部达到。所有失败和完整分母保留。**
 
-- [Read the seven complete reports](https://skywhite1024.github.io/SuperMimic-Reproduction/)
-- [Browse the committed report assets](docs/site/): seven reports, 266 complete-duration browser video copies, figures and numerical results.
+- [Read the consolidated research reports](https://skywhite1024.github.io/SuperMimic-Reproduction/)
+- [Browse the committed report assets](docs/site/): 13 reports, 351 complete-duration browser video copies, figures and numerical results.
 - [Reproduction guide](docs/REPRODUCING.md) · [Evaluation protocol](docs/EVALUATION.md) · [Source/data attribution](THIRD_PARTY.md)
 - [Local/server Git workflow](docs/SERVER_WORKFLOW.md) · [Clean-clone 120-second validation](validation/clean-clone-continuous-seed0.json)
 - [Server source reconciliation](validation/cloud-source-reconciliation-20261029.json): historical AFS snapshot, matching public checkout, and separately retained server-only sources.
@@ -34,7 +34,7 @@ acro-library-20261027-b/             # unified 15-new + 40-old experiments and e
 envs/                              # GPU lock, CPU requirements and observed environment
 tools/                             # setup, asset/checkpoint retrieval and publication verification
 artifacts/manifest.json             # checkpoint identities; binaries are release assets
-docs/site/                         # complete report website, including all 266 videos
+docs/site/                         # complete report website, including all 351 indexed videos
 SOURCE_PROVENANCE.json              # original/public source hashes and publication transformations
 UPSTREAM.lock.json                 # pinned source and dataset revisions
 ```
@@ -82,3 +82,15 @@ The frozen raw-reference goal is false; all failures remain included.
 
 
 The [2026-10-30 teacher qualification](docs/TEACHER_QUALIFICATION.md) adds complete raw/calibrated stage2 controls,32full diagnostic videos and isolated CPU engineering evidence. The protected stage2 teacher is0/3; the historical8808specialist passes its one-motion control. These findings do not complete the unified55-motion goal or trigger another GPU job.
+
+## Research update — 2026-11-05
+
+The [consolidated site](https://skywhite1024.github.io/SuperMimic-Reproduction/) and [experiment registry](EXPERIMENTS.json) now include the completed Qualified V2 trial, the zero-update old-weight attempt, repeated 88_08 teacher diagnostics, 88_07 specialist closeout and the checkpoint rollback audit. The original reports and failure tails are retained.
+
+- Qualified V2 completed 1000 updates but was not adopted: CUDA new-motion strict counts are raw 9/15 and calibrated 10/15; strict continuous counts are 1/3 in each backend/reference condition.
+- The fixed three-run 88_08 teacher diagnostic passed the contact gate only 2/3 times. Historical one-motion controls do not establish stable qualification.
+- The finite 88_07 specialist improved pose tracking but failed strict acceptance and lost old-library retention; it was not adopted.
+- Keep 16K as the community baseline. The 22K rollback suggestion remains provisional, with missing matched evaluations; it is not a new best-model claim.
+- Manipulation research is maintained separately in the private SuperMimic-Manipulation repository; it is not part of this G1 result.
+
+Code and metadata for the later attempts are committed at their historical relative paths. Model binaries and third-party data remain outside Git; published models are identified in `artifacts/manifest.json`, and later retained artifacts in `docs/site/retained-artifacts.json`.

@@ -1,0 +1,341 @@
+{
+  "norm_return": 0.8474919199943542,
+  "norm_return_framew": 0.8493778705596924,
+  "n_failed": 0,
+  "failed": [],
+  "per_clip": {
+    "dance1_subject1": {
+      "norm_return": 0.8569257855415344,
+      "steps": 6573,
+      "failed": false,
+      "full_clip_steps": 6573,
+      "normalization_denominator": 657.3000000000001,
+      "reward_sum": 563.2573188364506
+    },
+    "dance1_subject2": {
+      "norm_return": 0.8064936399459839,
+      "steps": 6573,
+      "failed": false,
+      "full_clip_steps": 6573,
+      "normalization_denominator": 657.3000000000001,
+      "reward_sum": 530.1082695364953
+    },
+    "dance1_subject3": {
+      "norm_return": 0.8859866261482239,
+      "steps": 6573,
+      "failed": false,
+      "full_clip_steps": 6573,
+      "normalization_denominator": 657.3000000000001,
+      "reward_sum": 582.3590093672276
+    },
+    "dance2_subject1": {
+      "norm_return": 0.8167310357093811,
+      "steps": 11283,
+      "failed": false,
+      "full_clip_steps": 11283,
+      "normalization_denominator": 1128.3,
+      "reward_sum": 921.5176275908947
+    },
+    "dance2_subject2": {
+      "norm_return": 0.8414880037307739,
+      "steps": 11283,
+      "failed": false,
+      "full_clip_steps": 11283,
+      "normalization_denominator": 1128.3,
+      "reward_sum": 949.4509146094322
+    },
+    "dance2_subject3": {
+      "norm_return": 0.86748206615448,
+      "steps": 11283,
+      "failed": false,
+      "full_clip_steps": 11283,
+      "normalization_denominator": 1128.3,
+      "reward_sum": 978.7800152420997
+    },
+    "dance2_subject4": {
+      "norm_return": 0.8361882567405701,
+      "steps": 11283,
+      "failed": false,
+      "full_clip_steps": 11283,
+      "normalization_denominator": 1128.3,
+      "reward_sum": 943.4712100803852
+    },
+    "dance2_subject5": {
+      "norm_return": 0.8478211164474487,
+      "steps": 11283,
+      "failed": false,
+      "full_clip_steps": 11283,
+      "normalization_denominator": 1128.3,
+      "reward_sum": 956.5965656876564
+    },
+    "fallAndGetUp1_subject1": {
+      "norm_return": 0.8057066202163696,
+      "steps": 8410,
+      "failed": false,
+      "full_clip_steps": 8410,
+      "normalization_denominator": 841.0,
+      "reward_sum": 677.5992676019669
+    },
+    "fallAndGetUp1_subject4": {
+      "norm_return": 0.7967345118522644,
+      "steps": 8410,
+      "failed": false,
+      "full_clip_steps": 8410,
+      "normalization_denominator": 841.0,
+      "reward_sum": 670.0537244677544
+    },
+    "fallAndGetUp1_subject5": {
+      "norm_return": 0.7815573811531067,
+      "steps": 8410,
+      "failed": false,
+      "full_clip_steps": 8410,
+      "normalization_denominator": 841.0,
+      "reward_sum": 657.2897575497627
+    },
+    "fallAndGetUp2_subject2": {
+      "norm_return": 0.7996621131896973,
+      "steps": 8195,
+      "failed": false,
+      "full_clip_steps": 8195,
+      "normalization_denominator": 819.5,
+      "reward_sum": 655.3231017589569
+    },
+    "fallAndGetUp2_subject3": {
+      "norm_return": 0.8057954907417297,
+      "steps": 8195,
+      "failed": false,
+      "full_clip_steps": 8195,
+      "normalization_denominator": 819.5,
+      "reward_sum": 660.3494046628475
+    },
+    "fallAndGetUp3_subject1": {
+      "norm_return": 0.8241387605667114,
+      "steps": 5108,
+      "failed": false,
+      "full_clip_steps": 5108,
+      "normalization_denominator": 510.8,
+      "reward_sum": 420.9700788974762
+    },
+    "fight1_subject2": {
+      "norm_return": 0.8352265954017639,
+      "steps": 12243,
+      "failed": false,
+      "full_clip_steps": 12243,
+      "normalization_denominator": 1224.3,
+      "reward_sum": 1022.5679207503795
+    },
+    "fight1_subject3": {
+      "norm_return": 0.8294320702552795,
+      "steps": 12243,
+      "failed": false,
+      "full_clip_steps": 12243,
+      "normalization_denominator": 1224.3,
+      "reward_sum": 1015.4736836135387
+    },
+    "fight1_subject5": {
+      "norm_return": 0.8407081961631775,
+      "steps": 12243,
+      "failed": false,
+      "full_clip_steps": 12243,
+      "normalization_denominator": 1224.3,
+      "reward_sum": 1029.279044562578
+    },
+    "fightAndSports1_subject1": {
+      "norm_return": 0.8256499767303467,
+      "steps": 12256,
+      "failed": false,
+      "full_clip_steps": 12256,
+      "normalization_denominator": 1225.6000000000001,
+      "reward_sum": 1011.916611480713
+    },
+    "fightAndSports1_subject4": {
+      "norm_return": 0.8362166285514832,
+      "steps": 12256,
+      "failed": false,
+      "full_clip_steps": 12256,
+      "normalization_denominator": 1225.6000000000001,
+      "reward_sum": 1024.8670999526978
+    },
+    "jumps1_subject1": {
+      "norm_return": 0.8391016125679016,
+      "steps": 12221,
+      "failed": false,
+      "full_clip_steps": 12221,
+      "normalization_denominator": 1222.1000000000001,
+      "reward_sum": 1025.4660807192327
+    },
+    "jumps1_subject2": {
+      "norm_return": 0.8136103749275208,
+      "steps": 12221,
+      "failed": false,
+      "full_clip_steps": 12221,
+      "normalization_denominator": 1222.1000000000001,
+      "reward_sum": 994.3132391989233
+    },
+    "jumps1_subject5": {
+      "norm_return": 0.8435207605361938,
+      "steps": 12221,
+      "failed": false,
+      "full_clip_steps": 12221,
+      "normalization_denominator": 1222.1000000000001,
+      "reward_sum": 1030.8667214512827
+    },
+    "run1_subject2": {
+      "norm_return": 0.8551216721534729,
+      "steps": 11890,
+      "failed": false,
+      "full_clip_steps": 11890,
+      "normalization_denominator": 1189.0,
+      "reward_sum": 1016.7396681904793
+    },
+    "run1_subject5": {
+      "norm_return": 0.8415969610214233,
+      "steps": 11890,
+      "failed": false,
+      "full_clip_steps": 11890,
+      "normalization_denominator": 1189.0,
+      "reward_sum": 1000.6587866544724
+    },
+    "run2_subject1": {
+      "norm_return": 0.8396449685096741,
+      "steps": 12240,
+      "failed": false,
+      "full_clip_steps": 12240,
+      "normalization_denominator": 1224.0,
+      "reward_sum": 1027.725441455841
+    },
+    "run2_subject4": {
+      "norm_return": 0.817479133605957,
+      "steps": 12240,
+      "failed": false,
+      "full_clip_steps": 12240,
+      "normalization_denominator": 1224.0,
+      "reward_sum": 1000.5944595336914
+    },
+    "sprint1_subject2": {
+      "norm_return": 0.8383352160453796,
+      "steps": 13655,
+      "failed": false,
+      "full_clip_steps": 13655,
+      "normalization_denominator": 1365.5,
+      "reward_sum": 1144.746737509966
+    },
+    "sprint1_subject4": {
+      "norm_return": 0.8216467499732971,
+      "steps": 13655,
+      "failed": false,
+      "full_clip_steps": 13655,
+      "normalization_denominator": 1365.5,
+      "reward_sum": 1121.9586370885372
+    },
+    "walk1_subject1": {
+      "norm_return": 0.916945219039917,
+      "steps": 13065,
+      "failed": false,
+      "full_clip_steps": 13065,
+      "normalization_denominator": 1306.5,
+      "reward_sum": 1197.9889286756516
+    },
+    "walk1_subject2": {
+      "norm_return": 0.8814504146575928,
+      "steps": 13065,
+      "failed": false,
+      "full_clip_steps": 13065,
+      "normalization_denominator": 1306.5,
+      "reward_sum": 1151.614966750145
+    },
+    "walk1_subject5": {
+      "norm_return": 0.8903159499168396,
+      "steps": 13065,
+      "failed": false,
+      "full_clip_steps": 13065,
+      "normalization_denominator": 1306.5,
+      "reward_sum": 1163.197788566351
+    },
+    "walk2_subject1": {
+      "norm_return": 0.892842173576355,
+      "steps": 11908,
+      "failed": false,
+      "full_clip_steps": 11908,
+      "normalization_denominator": 1190.8,
+      "reward_sum": 1063.1964602947235
+    },
+    "walk2_subject3": {
+      "norm_return": 0.8928516507148743,
+      "steps": 11908,
+      "failed": false,
+      "full_clip_steps": 11908,
+      "normalization_denominator": 1190.8,
+      "reward_sum": 1063.2077456712723
+    },
+    "walk2_subject4": {
+      "norm_return": 0.890110194683075,
+      "steps": 11908,
+      "failed": false,
+      "full_clip_steps": 11908,
+      "normalization_denominator": 1190.8,
+      "reward_sum": 1059.9432198286056
+    },
+    "walk3_subject1": {
+      "norm_return": 0.8717252612113953,
+      "steps": 12330,
+      "failed": false,
+      "full_clip_steps": 12330,
+      "normalization_denominator": 1233.0,
+      "reward_sum": 1074.8372470736504
+    },
+    "walk3_subject2": {
+      "norm_return": 0.901269793510437,
+      "steps": 12330,
+      "failed": false,
+      "full_clip_steps": 12330,
+      "normalization_denominator": 1233.0,
+      "reward_sum": 1111.2656553983688
+    },
+    "walk3_subject3": {
+      "norm_return": 0.8199285268783569,
+      "steps": 12330,
+      "failed": false,
+      "full_clip_steps": 12330,
+      "normalization_denominator": 1233.0,
+      "reward_sum": 1010.9718736410141
+    },
+    "walk3_subject4": {
+      "norm_return": 0.8871386051177979,
+      "steps": 12330,
+      "failed": false,
+      "full_clip_steps": 12330,
+      "normalization_denominator": 1233.0,
+      "reward_sum": 1093.8419001102448
+    },
+    "walk3_subject5": {
+      "norm_return": 0.876453161239624,
+      "steps": 12330,
+      "failed": false,
+      "full_clip_steps": 12330,
+      "normalization_denominator": 1233.0,
+      "reward_sum": 1080.6667478084564
+    },
+    "walk4_subject1": {
+      "norm_return": 0.9286446571350098,
+      "steps": 8195,
+      "failed": false,
+      "full_clip_steps": 8195,
+      "normalization_denominator": 819.5,
+      "reward_sum": 761.0242965221405
+    }
+  },
+  "checkpoint_sha256": "44d68af11306f839fe1b4b37cd042f1eae7df116adaabd69bd8db593a16d334e",
+  "wall_seconds": 348.2545488141477,
+  "backend": "mjwarp",
+  "seed": 0,
+  "first_frame": true,
+  "deterministic_policy": true,
+  "observation_noise": false,
+  "action_noise": false,
+  "domain_randomization": false,
+  "friction": 1.0,
+  "normalization": "full resampled clip length minus one, including early failure",
+  "community_baseline": true,
+  "strict_paper_reproduction": false
+}

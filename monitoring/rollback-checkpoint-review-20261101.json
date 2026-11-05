@@ -1,0 +1,811 @@
+{
+  "generated_at": "2026-11-01T01:33:27.145726+08:00",
+  "scope": "Local file load/hash/content audit and historical metrics review only; no cloud inspection, new evaluation, rollback or training.",
+  "models": [
+    {
+      "label": "baseline12K",
+      "path": "implementation/downloaded/runs/baseline-seed0/last.pt",
+      "exists": true,
+      "bytes": 218547105,
+      "sha256": "8770016fac48e4938203f77c8e2cd55b553171d2bc3134b7cbb40b2c53f6b1f1",
+      "load_verified": true,
+      "iteration": 12000,
+      "observation_dim": 99,
+      "state_keys": [
+        "wm",
+        "pi",
+        "iteration",
+        "wall_time",
+        "sim_steps",
+        "args",
+        "saved_at",
+        "critic",
+        "opt_wm",
+        "opt_pi",
+        "opt_v"
+      ],
+      "wm_present": true,
+      "critic_present": true,
+      "optimizer_state_counts": {
+        "opt_wm": 14,
+        "opt_pi": 20,
+        "opt_v": 6
+      },
+      "full_training_state_present": true,
+      "exact_simulator_rng_replay_resume_claimed": false
+    },
+    {
+      "label": "baseline16K",
+      "path": "implementation/continuation-20261025-a/downloaded/policy/full_016000.pt",
+      "exists": true,
+      "bytes": 218547553,
+      "sha256": "0afcca9af97bd9db1f2dd083875898f962acab0b0a70c7313b221e575b70b05b",
+      "expected_sha256_matches": true,
+      "load_verified": true,
+      "iteration": 16000,
+      "observation_dim": 99,
+      "state_keys": [
+        "wm",
+        "pi",
+        "iteration",
+        "wall_time",
+        "sim_steps",
+        "args",
+        "saved_at",
+        "critic",
+        "opt_wm",
+        "opt_pi",
+        "opt_v"
+      ],
+      "wm_present": true,
+      "critic_present": true,
+      "optimizer_state_counts": {
+        "opt_wm": 14,
+        "opt_pi": 20,
+        "opt_v": 6
+      },
+      "full_training_state_present": true,
+      "exact_simulator_rng_replay_resume_claimed": false,
+      "export": {
+        "path": "implementation/continuation-20261025-a/downloaded/policy/ckpt_016000.pt",
+        "bytes": 71781957,
+        "sha256": "44d68af11306f839fe1b4b37cd042f1eae7df116adaabd69bd8db593a16d334e",
+        "load_verified": true,
+        "iteration": 16000,
+        "policy_tensors_equal_full": true
+      }
+    },
+    {
+      "label": "specialist8808_18K_export",
+      "path": "interactive-g1-20261027-a/policy/acro-h100-2000.pt",
+      "exists": true,
+      "bytes": 36481141,
+      "sha256": "0f4a7bc67ae9e3440711e401e37f8276102e59946177117d082a6d7aabe108b4",
+      "expected_sha256_matches": true,
+      "load_verified": true,
+      "iteration": null,
+      "observation_dim": 99,
+      "state_keys": [
+        "pi",
+        "args",
+        "variant"
+      ],
+      "wm_present": false,
+      "critic_present": false,
+      "optimizer_state_counts": {
+        "opt_wm": 0,
+        "opt_pi": 0,
+        "opt_v": 0
+      },
+      "full_training_state_present": false,
+      "exact_simulator_rng_replay_resume_claimed": false
+    },
+    {
+      "label": "unified22K",
+      "path": "acro-library-20261027-b/runs/unified-h100-4000/final-full.pt",
+      "exists": true,
+      "bytes": 219041503,
+      "sha256": "56a6714aa7e79f063f4089c7860a1d00195601f178223bf42b65acd0e587910e",
+      "expected_sha256_matches": true,
+      "load_verified": true,
+      "iteration": 22000,
+      "observation_dim": 101,
+      "state_keys": [
+        "wm",
+        "pi",
+        "iteration",
+        "wall_time",
+        "sim_steps",
+        "args",
+        "saved_at",
+        "critic",
+        "opt_wm",
+        "opt_pi",
+        "opt_v",
+        "variant"
+      ],
+      "wm_present": true,
+      "critic_present": true,
+      "optimizer_state_counts": {
+        "opt_wm": 14,
+        "opt_pi": 20,
+        "opt_v": 6
+      },
+      "full_training_state_present": true,
+      "exact_simulator_rng_replay_resume_claimed": false,
+      "export": {
+        "path": "acro-library-20261027-b/policy/unified-h100-4000.pt",
+        "bytes": 36646805,
+        "sha256": "cb83ce3a6b7a63f613bd8239848b40386f862a8ba765cb40668993ae34149642",
+        "load_verified": true,
+        "iteration": 22000,
+        "policy_tensors_equal_full": true
+      }
+    },
+    {
+      "label": "unified26K",
+      "path": "acro-library-20261027-b/runs/unified-h100-stage2-4000/final-full.pt",
+      "exists": true,
+      "bytes": 219041567,
+      "sha256": "807d5fac7ca128f892c950fa379133231cd5f741e83075ed017d105b2eec6eec",
+      "expected_sha256_matches": true,
+      "load_verified": true,
+      "iteration": 26000,
+      "observation_dim": 101,
+      "state_keys": [
+        "wm",
+        "pi",
+        "iteration",
+        "wall_time",
+        "sim_steps",
+        "args",
+        "saved_at",
+        "critic",
+        "opt_wm",
+        "opt_pi",
+        "opt_v",
+        "variant"
+      ],
+      "wm_present": true,
+      "critic_present": true,
+      "optimizer_state_counts": {
+        "opt_wm": 14,
+        "opt_pi": 20,
+        "opt_v": 6
+      },
+      "full_training_state_present": true,
+      "exact_simulator_rng_replay_resume_claimed": false,
+      "export": {
+        "path": "acro-library-20261027-b/policy/unified-h100-stage2-4000.pt",
+        "bytes": 36647285,
+        "sha256": "acc29fadbfc6ef65d4709cf336f72db0f42a6403d08247c98a35d02dbd2a9f35",
+        "load_verified": true,
+        "iteration": 26000,
+        "policy_tensors_equal_full": true
+      }
+    },
+    {
+      "label": "unified30K",
+      "path": "acro-library-20261027-b/runs/unified-h100-stage3-4000/final-full.pt",
+      "exists": true,
+      "bytes": 219041759,
+      "sha256": "93bb8b830145c54092518eba8db1fb020d020eb72cdad1b619b4fc5470cc213d",
+      "expected_sha256_matches": true,
+      "load_verified": true,
+      "iteration": 30000,
+      "observation_dim": 101,
+      "state_keys": [
+        "wm",
+        "pi",
+        "iteration",
+        "wall_time",
+        "sim_steps",
+        "args",
+        "saved_at",
+        "critic",
+        "opt_wm",
+        "opt_pi",
+        "opt_v",
+        "variant"
+      ],
+      "wm_present": true,
+      "critic_present": true,
+      "optimizer_state_counts": {
+        "opt_wm": 14,
+        "opt_pi": 20,
+        "opt_v": 6
+      },
+      "full_training_state_present": true,
+      "exact_simulator_rng_replay_resume_claimed": false,
+      "export": {
+        "path": "acro-library-20261027-b/policy/unified-h100-stage3-4000.pt",
+        "bytes": 36647413,
+        "sha256": "4aa7a15f8475d54064db33b3333b772e4976f3ac133f98c03a7e39e49604e3b3",
+        "load_verified": true,
+        "iteration": 30000,
+        "policy_tensors_equal_full": true
+      }
+    },
+    {
+      "label": "retention31K_rejected",
+      "path": "acro-library-20261027-b/runs/unified-retention-v1-h100-1000/final-full.pt",
+      "exists": true,
+      "bytes": 219042079,
+      "sha256": "e98afcbbb4f8a0b663cbfd20813e41137c3ecd822297c7e93f068383d2974329",
+      "load_verified": true,
+      "iteration": 31000,
+      "observation_dim": 101,
+      "state_keys": [
+        "wm",
+        "pi",
+        "iteration",
+        "wall_time",
+        "sim_steps",
+        "args",
+        "saved_at",
+        "critic",
+        "opt_wm",
+        "opt_pi",
+        "opt_v",
+        "variant"
+      ],
+      "wm_present": true,
+      "critic_present": true,
+      "optimizer_state_counts": {
+        "opt_wm": 14,
+        "opt_pi": 20,
+        "opt_v": 6
+      },
+      "full_training_state_present": true,
+      "exact_simulator_rng_replay_resume_claimed": false,
+      "export": {
+        "path": "acro-library-20261027-b/policy/unified-retention-v1-h100-1000.pt",
+        "bytes": 36647925,
+        "sha256": "21b92ba3a03044d3a2425d354360086c7c5e4817133168044bdf10849a58f184",
+        "load_verified": true,
+        "iteration": null,
+        "policy_tensors_equal_full": true
+      }
+    },
+    {
+      "label": "qualifiedExpertV2_31K_rejected",
+      "path": "acro-library-20261027-b/runs/unified-qualified-expert-v2-h100-1000/final-full.pt",
+      "exists": true,
+      "bytes": 219042079,
+      "sha256": "36a42345662a3adc0658d869e19d7aac3a2c529031da22d93f1583238114466a",
+      "load_verified": true,
+      "iteration": 31000,
+      "observation_dim": 101,
+      "state_keys": [
+        "wm",
+        "pi",
+        "iteration",
+        "wall_time",
+        "sim_steps",
+        "args",
+        "saved_at",
+        "critic",
+        "opt_wm",
+        "opt_pi",
+        "opt_v",
+        "variant"
+      ],
+      "wm_present": true,
+      "critic_present": true,
+      "optimizer_state_counts": {
+        "opt_wm": 14,
+        "opt_pi": 20,
+        "opt_v": 6
+      },
+      "full_training_state_present": true,
+      "exact_simulator_rng_replay_resume_claimed": false,
+      "export": {
+        "path": "acro-library-20261027-b/policy/qualified-expert-v2-h100-1000.pt",
+        "bytes": 36647893,
+        "sha256": "173d5f2fa187f12e4ef2e7a2a83040e5435f22dc7c456981a19f9e4f2fb943b7",
+        "load_verified": true,
+        "iteration": 31000,
+        "policy_tensors_equal_full": true
+      }
+    },
+    {
+      "label": "specialist8807_17K_rejected",
+      "path": "acro-library-20261027-b/runs/specialist8807-h100-1000-1031d/final-full.pt",
+      "exists": true,
+      "bytes": 218549919,
+      "sha256": "f787706f292eb1385e8e78882faf0b3ea4b89e6e992835141eba92c8c9a09758",
+      "expected_sha256_matches": true,
+      "load_verified": true,
+      "iteration": 17000,
+      "observation_dim": 99,
+      "state_keys": [
+        "wm",
+        "pi",
+        "iteration",
+        "wall_time",
+        "sim_steps",
+        "args",
+        "saved_at",
+        "critic",
+        "opt_wm",
+        "opt_pi",
+        "opt_v",
+        "variant"
+      ],
+      "wm_present": true,
+      "critic_present": true,
+      "optimizer_state_counts": {
+        "opt_wm": 14,
+        "opt_pi": 20,
+        "opt_v": 6
+      },
+      "full_training_state_present": true,
+      "exact_simulator_rng_replay_resume_claimed": false,
+      "export": {
+        "path": "acro-library-20261027-b/policy/specialist8807-h100-1000-1031d.pt",
+        "bytes": 36483445,
+        "sha256": "bbe45f884af2847c5429b32232b5dc47a2ab820fc4d80f35e9ee47ee26a137d6",
+        "load_verified": true,
+        "iteration": 17000,
+        "policy_tensors_equal_full": true
+      }
+    }
+  ],
+  "historical_metrics": {
+    "16cpu": {
+      "source": "acro-library-20261027-b/runs/old-16k-all55-v3/summary.json",
+      "source_sha256": "fd8281792e058128e1632bcb441b293813f6d9c496ec8054f91cacbe6b47aadb",
+      "backend": "cpu",
+      "reference": "raw",
+      "controller": "original-output",
+      "new_hard_gate": 5,
+      "old_hard_gate": 40,
+      "new_strict": null
+    },
+    "18cpu": {
+      "source": "acro-library-20261027-b/runs/parent-18k-all55-v3/summary.json",
+      "source_sha256": "bee7eebb04d9557bc0ce15c84fcec4d9cf02d17b2c744ba20b3ada30f1850b38",
+      "backend": "cpu",
+      "reference": "raw",
+      "controller": "original-output",
+      "new_hard_gate": 4,
+      "old_hard_gate": 2,
+      "new_strict": 2,
+      "quality_source": "acro-library-20261027-b/runs/parent-18k-all55-v3/combined-assessment.json",
+      "quality_source_sha256": "210e03c18f1cbe89b575b5c628cb8df934d2102699efc844b85b8fc2fba192af",
+      "quality_source_summary": {
+        "run": "parent-18k-all55-v3",
+        "new_denominator": 15,
+        "tracking_contract_sha256": "0036d9f100203e9d25990c47dfb5666508672fafbea60156a33fb63e56c1dcb1",
+        "contact_contract_sha256": "b3b52cbe3bb45696ca0e9de603db4d01270bc275ff376c2f2a3c370d171390a8",
+        "original_hard_gate_passed": 4,
+        "tracking_quality_passed": 2,
+        "contact_review_passed": 4,
+        "combined_engineering_passed": 2
+      }
+    },
+    "22raw": {
+      "source": "acro-library-20261027-b/runs/unified4000-cuda-all55/summary.json",
+      "source_sha256": "b7a9eb7c714af93385855a4dfc61b92b3b6e3991e9ac39fd7bb25a932d57cc6c",
+      "backend": "cuda",
+      "reference": "raw",
+      "controller": "original-output",
+      "new_hard_gate": 13,
+      "old_hard_gate": 39,
+      "new_strict": 8,
+      "quality_source": "acro-library-20261027-b/runs/unified4000-cuda-all55/combined-assessment.json",
+      "quality_source_sha256": "f1498327f091398404205324b2f84b11f409e6680e448402d391ad2591380f68",
+      "quality_source_summary": {
+        "run": "unified4000-cuda-all55",
+        "new_denominator": 15,
+        "tracking_contract_sha256": "0036d9f100203e9d25990c47dfb5666508672fafbea60156a33fb63e56c1dcb1",
+        "contact_contract_sha256": "b3b52cbe3bb45696ca0e9de603db4d01270bc275ff376c2f2a3c370d171390a8",
+        "original_hard_gate_passed": 13,
+        "tracking_quality_passed": 8,
+        "contact_review_passed": 11,
+        "combined_engineering_passed": 8
+      }
+    },
+    "26raw": {
+      "source": "acro-library-20261027-b/runs/unified-stage2-raw-cuda-new15/summary.json",
+      "source_sha256": "a8432486a99bfdd00d8e1db9d78a07c864272e17681bf5efc31cbb8987017b40",
+      "backend": "cuda",
+      "reference": "raw",
+      "controller": "original-output",
+      "new_hard_gate": 13,
+      "old_hard_gate": null,
+      "new_strict": 7,
+      "quality_source": "acro-library-20261027-b/runs/unified-stage2-raw-cuda-new15/combined-assessment.json",
+      "quality_source_sha256": "36d0e13f5fa96628e1c8889533e65a6683489b6ceb9f6d1286f2248a5f2e50b6",
+      "quality_source_summary": {
+        "run": "unified-stage2-raw-cuda-new15",
+        "new_denominator": 15,
+        "tracking_contract_sha256": "0036d9f100203e9d25990c47dfb5666508672fafbea60156a33fb63e56c1dcb1",
+        "contact_contract_sha256": "b3b52cbe3bb45696ca0e9de603db4d01270bc275ff376c2f2a3c370d171390a8",
+        "original_hard_gate_passed": 13,
+        "tracking_quality_passed": 10,
+        "contact_review_passed": 12,
+        "combined_engineering_passed": 7
+      }
+    },
+    "26cal": {
+      "source": "acro-library-20261027-b/runs/unified-stage2-corrected-cuda-all55/summary.json",
+      "source_sha256": "4b6c728f4fc1be61fd9683d7c3c67954d1e0d69fef5b520aee913b5191965ac6",
+      "backend": "cuda",
+      "reference": "ground-calibration-v1",
+      "controller": "original-output",
+      "new_hard_gate": 15,
+      "old_hard_gate": 38,
+      "new_strict": 7,
+      "quality_source": "acro-library-20261027-b/runs/unified-stage2-corrected-cuda-all55/combined-assessment.json",
+      "quality_source_sha256": "b1c38947e44d2c7d7de3a913510d4342590aac55e40ccc2046e3eed9487169a0",
+      "quality_source_summary": {
+        "run": "unified-stage2-corrected-cuda-all55",
+        "new_denominator": 15,
+        "tracking_contract_sha256": "0036d9f100203e9d25990c47dfb5666508672fafbea60156a33fb63e56c1dcb1",
+        "contact_contract_sha256": "b3b52cbe3bb45696ca0e9de603db4d01270bc275ff376c2f2a3c370d171390a8",
+        "original_hard_gate_passed": 15,
+        "tracking_quality_passed": 11,
+        "contact_review_passed": 11,
+        "combined_engineering_passed": 7
+      }
+    },
+    "30raw": {
+      "source": "acro-library-20261027-b/runs/unified-stage3-raw-cuda-new15/summary.json",
+      "source_sha256": "809497539bda906d1500092419677ce347ad620deedd54ecd63996502cf8e462",
+      "backend": "cuda",
+      "reference": "raw",
+      "controller": "original-output",
+      "new_hard_gate": 10,
+      "old_hard_gate": null,
+      "new_strict": 7,
+      "quality_source": "acro-library-20261027-b/runs/unified-stage3-raw-cuda-new15/combined-assessment.json",
+      "quality_source_sha256": "8f1b5341a854b84209990a8bb6f3761c6dc6dc99bb76ea6e5aa7f4bfe1a9bf76",
+      "quality_source_summary": {
+        "run": "unified-stage3-raw-cuda-new15",
+        "new_denominator": 15,
+        "tracking_contract_sha256": "0036d9f100203e9d25990c47dfb5666508672fafbea60156a33fb63e56c1dcb1",
+        "contact_contract_sha256": "b3b52cbe3bb45696ca0e9de603db4d01270bc275ff376c2f2a3c370d171390a8",
+        "original_hard_gate_passed": 10,
+        "tracking_quality_passed": 9,
+        "contact_review_passed": 9,
+        "combined_engineering_passed": 7
+      }
+    },
+    "30cal": {
+      "source": "acro-library-20261027-b/runs/unified-stage3-corrected-cuda-all55/summary.json",
+      "source_sha256": "53f09140d55b1cbc7aa9098200694537828178dc22f74e414ded8af9805b07cc",
+      "backend": "cuda",
+      "reference": "ground-calibration-v1",
+      "controller": "original-output",
+      "new_hard_gate": 12,
+      "old_hard_gate": 38,
+      "new_strict": 11,
+      "quality_source": "acro-library-20261027-b/runs/unified-stage3-corrected-cuda-all55/combined-assessment.json",
+      "quality_source_sha256": "b2b51c414058b2cefce30ee2916259b5a3d45abf293e7a0f2c60d5eb2f942648",
+      "quality_source_summary": {
+        "run": "unified-stage3-corrected-cuda-all55",
+        "new_denominator": 15,
+        "tracking_contract_sha256": "0036d9f100203e9d25990c47dfb5666508672fafbea60156a33fb63e56c1dcb1",
+        "contact_contract_sha256": "b3b52cbe3bb45696ca0e9de603db4d01270bc275ff376c2f2a3c370d171390a8",
+        "original_hard_gate_passed": 12,
+        "tracking_quality_passed": 12,
+        "contact_review_passed": 11,
+        "combined_engineering_passed": 11
+      }
+    },
+    "30braw": {
+      "source": "acro-library-20261027-b/runs/retention-v1-parent-bound20-raw-cuda-new15/summary.json",
+      "source_sha256": "ee6987731b7d5186e0312201c51dd2ed02f3a164f04807a79afa001b03c19b92",
+      "backend": "cuda",
+      "reference": "raw",
+      "controller": "action-output-bound-20-v1",
+      "new_hard_gate": 10,
+      "old_hard_gate": null,
+      "new_strict": 9,
+      "quality_source": "acro-library-20261027-b/runs/retention-v1-parent-bound20-raw-cuda-new15/combined-assessment.json",
+      "quality_source_sha256": "e82063657204028f9e628433c65dbee807fc58716a176d669ba3d4466b9c5561",
+      "quality_source_summary": {
+        "run": "retention-v1-parent-bound20-raw-cuda-new15",
+        "new_denominator": 15,
+        "tracking_contract_sha256": "0036d9f100203e9d25990c47dfb5666508672fafbea60156a33fb63e56c1dcb1",
+        "contact_contract_sha256": "b3b52cbe3bb45696ca0e9de603db4d01270bc275ff376c2f2a3c370d171390a8",
+        "original_hard_gate_passed": 10,
+        "tracking_quality_passed": 9,
+        "contact_review_passed": 11,
+        "combined_engineering_passed": 9
+      }
+    },
+    "30bcal": {
+      "source": "acro-library-20261027-b/runs/retention-v1-parent-bound20-corrected-cuda-all55/summary.json",
+      "source_sha256": "4e21ef42f60547e1e3eda3f4d2abd65d70ab2d961b7d6e7503d2a7c1a8f97f67",
+      "backend": "cuda",
+      "reference": "ground-calibration-v1",
+      "controller": "action-output-bound-20-v1",
+      "new_hard_gate": 12,
+      "old_hard_gate": 39,
+      "new_strict": 10,
+      "quality_source": "acro-library-20261027-b/runs/retention-v1-parent-bound20-corrected-cuda-all55/combined-assessment.json",
+      "quality_source_sha256": "43b0021e6094b9643b6bbe6ad3d8460502a192a3654b70a0f5d90c030d62cd6c",
+      "quality_source_summary": {
+        "run": "retention-v1-parent-bound20-corrected-cuda-all55",
+        "new_denominator": 15,
+        "tracking_contract_sha256": "0036d9f100203e9d25990c47dfb5666508672fafbea60156a33fb63e56c1dcb1",
+        "contact_contract_sha256": "b3b52cbe3bb45696ca0e9de603db4d01270bc275ff376c2f2a3c370d171390a8",
+        "original_hard_gate_passed": 12,
+        "tracking_quality_passed": 11,
+        "contact_review_passed": 10,
+        "combined_engineering_passed": 10
+      }
+    },
+    "31raw": {
+      "source": "acro-library-20261027-b/runs/retention-v1-raw-cuda-new15/summary.json",
+      "source_sha256": "a8ef295ada4e19265f459bbed01297c834643f31660e406302f53b92c60305da",
+      "backend": "cuda",
+      "reference": "raw",
+      "controller": "consistent-output-bound-20-retention-v1",
+      "new_hard_gate": 11,
+      "old_hard_gate": null,
+      "new_strict": 7,
+      "quality_source": "acro-library-20261027-b/runs/retention-v1-raw-cuda-new15/combined-assessment.json",
+      "quality_source_sha256": "f4cd3452dec1078f136eae262aa3c37bedffb49e7d9b0b2c7bfa7525ac404d61",
+      "quality_source_summary": {
+        "run": "retention-v1-raw-cuda-new15",
+        "new_denominator": 15,
+        "tracking_contract_sha256": "0036d9f100203e9d25990c47dfb5666508672fafbea60156a33fb63e56c1dcb1",
+        "contact_contract_sha256": "b3b52cbe3bb45696ca0e9de603db4d01270bc275ff376c2f2a3c370d171390a8",
+        "original_hard_gate_passed": 11,
+        "tracking_quality_passed": 9,
+        "contact_review_passed": 11,
+        "combined_engineering_passed": 7
+      }
+    },
+    "31cal": {
+      "source": "acro-library-20261027-b/runs/retention-v1-corrected-cuda-all55/summary.json",
+      "source_sha256": "2ea65a844d5216064d92333112b4a398dd9aab301739dd43408d5acc6b229e21",
+      "backend": "cuda",
+      "reference": "ground-calibration-v1",
+      "controller": "consistent-output-bound-20-retention-v1",
+      "new_hard_gate": 13,
+      "old_hard_gate": 37,
+      "new_strict": 9,
+      "quality_source": "acro-library-20261027-b/runs/retention-v1-corrected-cuda-all55/combined-assessment.json",
+      "quality_source_sha256": "dfbbd3c75c3d8851e398b60e7e428c51938f74130004a4e4784d077aa5b4b135",
+      "quality_source_summary": {
+        "run": "retention-v1-corrected-cuda-all55",
+        "new_denominator": 15,
+        "tracking_contract_sha256": "0036d9f100203e9d25990c47dfb5666508672fafbea60156a33fb63e56c1dcb1",
+        "contact_contract_sha256": "b3b52cbe3bb45696ca0e9de603db4d01270bc275ff376c2f2a3c370d171390a8",
+        "original_hard_gate_passed": 13,
+        "tracking_quality_passed": 11,
+        "contact_review_passed": 11,
+        "combined_engineering_passed": 9
+      }
+    }
+  },
+  "historical_continuous": {
+    "22raw": {
+      "run": "unified4000-frozen-continuous-v1",
+      "device": "cpu",
+      "source": "acro-library-20261027-b/runs/unified4000-frozen-continuous-v1/continuous-assessment.json",
+      "summary_source": "acro-library-20261027-b/runs/unified4000-frozen-continuous-v1/summary.json",
+      "denominator": 3,
+      "hard": 1,
+      "strict": 1,
+      "contract_sha256": "9f986fbc647865312b6b1346b8c11da5d00a1ce8020ef96efc8da5339b4f73ce",
+      "reference_index_sha256": "483ad3d2913eeca3d92d03e2b83805f011f145bf646ddb00e249a86a482f9542",
+      "stage1_retrospective": true,
+      "resets": 0,
+      "source_sha256_now": "d62f0744b51d8be9b100c20215e12b0a75435124b144d206bb7d0f37edb7b71a"
+    },
+    "22cal": {
+      "run": "unified4000-corrected-continuous-v1",
+      "device": "cpu",
+      "source": "acro-library-20261027-b/runs/unified4000-corrected-continuous-v1/continuous-assessment.json",
+      "summary_source": "acro-library-20261027-b/runs/unified4000-corrected-continuous-v1/summary.json",
+      "denominator": 3,
+      "hard": 1,
+      "strict": 1,
+      "contract_sha256": "9f986fbc647865312b6b1346b8c11da5d00a1ce8020ef96efc8da5339b4f73ce",
+      "reference_index_sha256": "92fdae6b84705548718fb90a09eb018158bf15d66d6c3b0028c5ed4d791ca799",
+      "stage1_retrospective": true,
+      "resets": 0,
+      "source_sha256_now": "8b955f23a2ea787610d0f1698e33b5f30b0aaffe2f7dac356ab4ef6fefffe05b"
+    },
+    "26raw": {
+      "run": "stage2-frozen-continuous-v1",
+      "device": "cpu",
+      "source": "acro-library-20261027-b/runs/stage2-frozen-continuous-v1/continuous-assessment.json",
+      "summary_source": "acro-library-20261027-b/runs/stage2-frozen-continuous-v1/summary.json",
+      "denominator": 3,
+      "hard": 2,
+      "strict": 1,
+      "contract_sha256": "9f986fbc647865312b6b1346b8c11da5d00a1ce8020ef96efc8da5339b4f73ce",
+      "reference_index_sha256": "483ad3d2913eeca3d92d03e2b83805f011f145bf646ddb00e249a86a482f9542",
+      "stage1_retrospective": false,
+      "resets": 0,
+      "source_sha256_now": "e4d975dbf6d2d3fd8c32758b97692ef1ea989afaf5f63ce7e0292a1a408df04d"
+    },
+    "26cal": {
+      "run": "stage2-corrected-continuous-v1",
+      "device": "cpu",
+      "source": "acro-library-20261027-b/runs/stage2-corrected-continuous-v1/continuous-assessment.json",
+      "summary_source": "acro-library-20261027-b/runs/stage2-corrected-continuous-v1/summary.json",
+      "denominator": 3,
+      "hard": 2,
+      "strict": 1,
+      "contract_sha256": "9f986fbc647865312b6b1346b8c11da5d00a1ce8020ef96efc8da5339b4f73ce",
+      "reference_index_sha256": "92fdae6b84705548718fb90a09eb018158bf15d66d6c3b0028c5ed4d791ca799",
+      "stage1_retrospective": false,
+      "resets": 0,
+      "source_sha256_now": "1d77f189f93c6c7a3f9e9731aa403be36e4bd457854805a7baaf647f37c37ab1"
+    },
+    "30raw": {
+      "run": "stage3-frozen-continuous-v1",
+      "device": "cpu",
+      "source": "acro-library-20261027-b/runs/stage3-frozen-continuous-v1/continuous-assessment.json",
+      "summary_source": "acro-library-20261027-b/runs/stage3-frozen-continuous-v1/summary.json",
+      "denominator": 3,
+      "hard": 0,
+      "strict": 0,
+      "contract_sha256": "9f986fbc647865312b6b1346b8c11da5d00a1ce8020ef96efc8da5339b4f73ce",
+      "reference_index_sha256": "483ad3d2913eeca3d92d03e2b83805f011f145bf646ddb00e249a86a482f9542",
+      "stage1_retrospective": false,
+      "resets": 0,
+      "source_sha256_now": "b2160366ce30163d7000d2a83c95be923a94df2b327c79569c6a119b3a14e714"
+    },
+    "30cal": {
+      "run": "stage3-corrected-continuous-v1",
+      "device": "cpu",
+      "source": "acro-library-20261027-b/runs/stage3-corrected-continuous-v1/continuous-assessment.json",
+      "summary_source": "acro-library-20261027-b/runs/stage3-corrected-continuous-v1/summary.json",
+      "denominator": 3,
+      "hard": 0,
+      "strict": 0,
+      "contract_sha256": "9f986fbc647865312b6b1346b8c11da5d00a1ce8020ef96efc8da5339b4f73ce",
+      "reference_index_sha256": "92fdae6b84705548718fb90a09eb018158bf15d66d6c3b0028c5ed4d791ca799",
+      "stage1_retrospective": false,
+      "resets": 0,
+      "source_sha256_now": "5eb7f483e5148882be645f8efc4de75ecb2f9f0079567ed5aada295fc9847259"
+    },
+    "30braw": {
+      "run": "retention-v1-parent-bound20-raw-continuous-cuda",
+      "device": "cuda",
+      "source": "acro-library-20261027-b/runs/retention-v1-parent-bound20-raw-continuous-cuda/continuous-assessment.json",
+      "summary_source": "acro-library-20261027-b/runs/retention-v1-parent-bound20-raw-continuous-cuda/summary.json",
+      "denominator": 3,
+      "hard": 0,
+      "strict": 0,
+      "contract_sha256": "9f986fbc647865312b6b1346b8c11da5d00a1ce8020ef96efc8da5339b4f73ce",
+      "reference_index_sha256": "483ad3d2913eeca3d92d03e2b83805f011f145bf646ddb00e249a86a482f9542",
+      "stage1_retrospective": false,
+      "resets": 0,
+      "source_sha256_now": "230df68bca7aa5c24b34351a804efe32ff137ffd561facb157ca433e8614b848"
+    },
+    "30bcal": {
+      "run": "retention-v1-parent-bound20-corrected-continuous-cuda",
+      "device": "cuda",
+      "source": "acro-library-20261027-b/runs/retention-v1-parent-bound20-corrected-continuous-cuda/continuous-assessment.json",
+      "summary_source": "acro-library-20261027-b/runs/retention-v1-parent-bound20-corrected-continuous-cuda/summary.json",
+      "denominator": 3,
+      "hard": 1,
+      "strict": 0,
+      "contract_sha256": "9f986fbc647865312b6b1346b8c11da5d00a1ce8020ef96efc8da5339b4f73ce",
+      "reference_index_sha256": "92fdae6b84705548718fb90a09eb018158bf15d66d6c3b0028c5ed4d791ca799",
+      "stage1_retrospective": false,
+      "resets": 0,
+      "source_sha256_now": "cfa016b7580dd7c5d5b9c42f882a6484708d0ac0710c9d807579c310f95c65ea"
+    },
+    "31raw": {
+      "run": "retention-v1-raw-continuous-cuda",
+      "device": "cuda",
+      "source": "acro-library-20261027-b/runs/retention-v1-raw-continuous-cuda/continuous-assessment.json",
+      "summary_source": "acro-library-20261027-b/runs/retention-v1-raw-continuous-cuda/summary.json",
+      "denominator": 3,
+      "hard": 1,
+      "strict": 0,
+      "contract_sha256": "9f986fbc647865312b6b1346b8c11da5d00a1ce8020ef96efc8da5339b4f73ce",
+      "reference_index_sha256": "483ad3d2913eeca3d92d03e2b83805f011f145bf646ddb00e249a86a482f9542",
+      "stage1_retrospective": false,
+      "resets": 0,
+      "source_sha256_now": "533e1e2fcbaf9c10a5b8318e1ad491f3d51b553c7a8caec348e429a4c8026412"
+    },
+    "31cal": {
+      "run": "retention-v1-corrected-continuous-cuda",
+      "device": "cuda",
+      "source": "acro-library-20261027-b/runs/retention-v1-corrected-continuous-cuda/continuous-assessment.json",
+      "summary_source": "acro-library-20261027-b/runs/retention-v1-corrected-continuous-cuda/summary.json",
+      "denominator": 3,
+      "hard": 1,
+      "strict": 0,
+      "contract_sha256": "9f986fbc647865312b6b1346b8c11da5d00a1ce8020ef96efc8da5339b4f73ce",
+      "reference_index_sha256": "92fdae6b84705548718fb90a09eb018158bf15d66d6c3b0028c5ed4d791ca799",
+      "stage1_retrospective": false,
+      "resets": 0,
+      "source_sha256_now": "3344d42198f0e2f9ee9ec4854e221b081f65ce8f72a26061814821358940a166"
+    }
+  },
+  "limitations": [
+    "18K specialist full checkpoint only has historical AFS path/hash; local export freshly verified, remote current existence not rechecked.",
+    "Historical 500-update intermediate checkpoints have AFS receipts, not a fresh remote existence guarantee.",
+    "Full checkpoint includes model/critic/optimizer state but does not prove exact environment/RNG/replay continuation.",
+    "99D baseline/specialists and 101D unified policies need explicit observation compatibility; no direct state-dict interchange.",
+    "Original-output historical metrics and bound20 results are separate comparisons; CPU and CUDA are not pooled."
+  ],
+  "recommendation": {
+    "baseline_and_old_skill_teacher": "baseline16K",
+    "provisional_unified_warm_start_for_raw_new_and_retention": "unified22K",
+    "continuous_and_calibrated_comparison_anchors": [
+      "unified26K",
+      "unified30K"
+    ],
+    "do_not_promote": [
+      "retention31K_rejected",
+      "qualifiedExpertV2_31K_rejected",
+      "specialist8807_17K_rejected"
+    ],
+    "not_a_completed_adoption_decision": true,
+    "next_minimum_evidence_before_training": "Compare 22K and 26K under the same present controller/backend and target failure metrics; reuse existing unchanged assessments.",
+    "single_next_research_hypothesis": "Observation-only global XY error feedback for an isolated skill branch; preserve native reward, physics and reference. This is a hypothesis, not a proven fix.",
+    "specialist8807_not_qualified_for_distillation": true,
+    "explicit_not_same_as_previously_tried_101D": "Separate observation-only feedback from the earlier globalXYreward change; reuse previous converter and identity evidence rather than rebuilding wrappers.",
+    "retention_research_after_target_qualification": "Preserve a frozen baseline/teacher; compare constrained residual/capacity expansion or distillation only after an expert is genuinely qualified, rather than unrestricted full-parameter single-clip fine-tuning."
+  },
+  "review_findings": {
+    "major_local_models_load_verified": 9,
+    "full_training_checkpoints_verified": 8,
+    "inference_only_specialist8808_export_verified": 1,
+    "all_compared_policy_exports_equal_full_PI_tensors": true,
+    "historical_stage_comparison_original_output": {
+      "22K": {
+        "CUDA_raw_new_hard": 13,
+        "CUDA_raw_new_strict": 8,
+        "CUDA_old_hard": 39,
+        "CPU_raw_continuous_strict": 1,
+        "CPU_calibrated_continuous_strict": 1
+      },
+      "26K": {
+        "CUDA_raw_new_hard": 13,
+        "CUDA_raw_new_strict": 7,
+        "CUDA_calibrated_new_hard": 15,
+        "CUDA_calibrated_new_strict": 7,
+        "CUDA_old_hard": 38,
+        "CPU_raw_continuous_strict": 1,
+        "CPU_calibrated_continuous_strict": 1
+      },
+      "30K": {
+        "CUDA_raw_new_hard": 10,
+        "CUDA_raw_new_strict": 7,
+        "CUDA_calibrated_new_hard": 12,
+        "CUDA_calibrated_new_strict": 11,
+        "CUDA_old_hard": 38,
+        "CPU_raw_continuous_strict": 0,
+        "CPU_calibrated_continuous_strict": 0
+      }
+    },
+    "latest_specialist_why_not_qualified": "Both CPU and CUDA raw/calibrated strict0/3; localpose/inversion improved but fixedworldXY and contact still fail. Old40collapse alone is not proof an isolated expert hypothesis failed, but it rules out unified deployment.",
+    "current_closure": "Executor latest completed closure: candidate models downloaded and verified,24 full videos,CPU/CUDA complete, collection CCI stopped-empty/DNATunbound. No pending login recovery inferred.",
+    "model_interface_caution": "16K and88_07/88_08specialists99D;22K/26K/30K101D. They cannot be interchanged as unmodified models.",
+    "existing_global_feedback_confound": {
+      "source": "interactive-g1-20261027-a/scripts/global_model.py",
+      "class": "GlobalPositionMDP",
+      "observation_added": "2D yaw-frame targetminusactual rootXY",
+      "reward_also_added": "1.5*exp(-XYerror_squared/.75**2)*.02",
+      "implication": "An observation-only ablation must explicitly use native reward. The general101D idea was already attempted; do not present it as new."
+    },
+    "exact_causal_claim_not_established": "Missing globalXY feedback is a plausible contributor to drift, not an isolated proven cause; optimizer/WM instability and sampling may also contribute.",
+    "user_current_request": "Review preservation and suitable rollback/direction only; no checkpoint replacement or new training executed."
+  },
+  "references": [
+    {
+      "title": "Perpetual Humanoid Control for Real-time Simulated Avatars",
+      "url": "https://arxiv.org/abs/2305.06456",
+      "used_for": "Capacity expansion as an external research precedent for avoiding forgetting; not local evidence."
+    },
+    {
+      "title": "CLOT: Closed-Loop Global Motion Tracking for Whole-Body Humanoid Teleoperation",
+      "url": "https://arxiv.org/abs/2602.15060",
+      "used_for": "Global feedback as an external hypothesis motivation; not proof of the local failure cause."
+    }
+  ]
+}
