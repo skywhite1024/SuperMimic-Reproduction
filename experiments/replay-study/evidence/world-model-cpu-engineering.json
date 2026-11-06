@@ -1,0 +1,395 @@
+{
+  "probe": {
+    "backend": "mujoco",
+    "device": "cpu",
+    "window_count": 440,
+    "horizon": 8,
+    "phases": [
+      0.0,
+      0.25,
+      0.5,
+      0.75
+    ],
+    "windows_per_clip": 8,
+    "parent_sha256": "0afcca9af97bd9db1f2dd083875898f962acab0b0a70c7313b221e575b70b05b",
+    "data_sha256": "f8a3c329f4663fd05db791a493ac89a5f19baadd8fbac87dea5b1384dcf4cd55",
+    "motion_names": [
+      "143_34_stageii_unitree_g1",
+      "85_06_stageii_unitree_g1",
+      "85_07_stageii_unitree_g1",
+      "88_03_stageii_unitree_g1",
+      "88_06_stageii_unitree_g1",
+      "88_07_stageii_unitree_g1",
+      "88_08_stageii_unitree_g1",
+      "88_09_stageii_unitree_g1",
+      "88_10_stageii_unitree_g1",
+      "88_11_stageii_unitree_g1",
+      "89_01_stageii_unitree_g1",
+      "90_08_stageii_unitree_g1",
+      "90_14_stageii_unitree_g1",
+      "90_15_stageii_unitree_g1",
+      "90_19_stageii_unitree_g1",
+      "dance1_subject1",
+      "dance1_subject2",
+      "dance1_subject3",
+      "dance2_subject1",
+      "dance2_subject2",
+      "dance2_subject3",
+      "dance2_subject4",
+      "dance2_subject5",
+      "fallAndGetUp1_subject1",
+      "fallAndGetUp1_subject4",
+      "fallAndGetUp1_subject5",
+      "fallAndGetUp2_subject2",
+      "fallAndGetUp2_subject3",
+      "fallAndGetUp3_subject1",
+      "fight1_subject2",
+      "fight1_subject3",
+      "fight1_subject5",
+      "fightAndSports1_subject1",
+      "fightAndSports1_subject4",
+      "jumps1_subject1",
+      "jumps1_subject2",
+      "jumps1_subject5",
+      "run1_subject2",
+      "run1_subject5",
+      "run2_subject1",
+      "run2_subject4",
+      "sprint1_subject2",
+      "sprint1_subject4",
+      "walk1_subject1",
+      "walk1_subject2",
+      "walk1_subject5",
+      "walk2_subject1",
+      "walk2_subject3",
+      "walk2_subject4",
+      "walk3_subject1",
+      "walk3_subject2",
+      "walk3_subject3",
+      "walk3_subject4",
+      "walk3_subject5",
+      "walk4_subject1"
+    ],
+    "purpose": "evaluation-only within-library baseline-policy transitions; never used for updates",
+    "no_post_initialization_resets": true,
+    "not_unseen_motion_generalization": true
+  },
+  "prediction_compute_device": "cpu",
+  "results": [
+    {
+      "checkpoint": "full_016000.pt",
+      "checkpoint_sha256": "0afcca9af97bd9db1f2dd083875898f962acab0b0a70c7313b221e575b70b05b",
+      "variant": null,
+      "groups": {
+        "old": {
+          "windows": 320,
+          "native_normalized_multistep_mse": 0.1254668883047998
+        },
+        "additional": {
+          "windows": 120,
+          "native_normalized_multistep_mse": 2.760733461380005
+        }
+      }
+    },
+    {
+      "checkpoint": "experiments/replay-study/runs/engineering-v2-rho000-seed0/final-full.pt",
+      "checkpoint_sha256": "3f480898e6c2ad6ab5592618cbbebbc145c266c72b23e412ee7d26ada41e3af1",
+      "variant": {
+        "study": "G1 replay allocation, course proposal 2026-11-06",
+        "phase": "engineering",
+        "old_replay_fraction": 0.0,
+        "seed": 0,
+        "observation_dim": 99,
+        "reference_variant": "raw",
+        "normalizers_fixed": true,
+        "parent_sha256": "0afcca9af97bd9db1f2dd083875898f962acab0b0a70c7313b221e575b70b05b",
+        "plan_sha256": "3d8b1d7ae933efb6a46e43274f2f6e05cfac86265d26869321dce0e5dcb7f9e3"
+      },
+      "groups": {
+        "old": {
+          "windows": 320,
+          "native_normalized_multistep_mse": 0.13002536166459322
+        },
+        "additional": {
+          "windows": 120,
+          "native_normalized_multistep_mse": 2.736638033390045
+        }
+      }
+    },
+    {
+      "checkpoint": "experiments/replay-study/runs/engineering-v2-rho025-seed0/final-full.pt",
+      "checkpoint_sha256": "ae9bcecd34d92879524231561896d0f7a368b933e9aa293239ad52c9c07c38c6",
+      "variant": {
+        "study": "G1 replay allocation, course proposal 2026-11-06",
+        "phase": "engineering",
+        "old_replay_fraction": 0.25,
+        "seed": 0,
+        "observation_dim": 99,
+        "reference_variant": "raw",
+        "normalizers_fixed": true,
+        "parent_sha256": "0afcca9af97bd9db1f2dd083875898f962acab0b0a70c7313b221e575b70b05b",
+        "plan_sha256": "3d8b1d7ae933efb6a46e43274f2f6e05cfac86265d26869321dce0e5dcb7f9e3"
+      },
+      "groups": {
+        "old": {
+          "windows": 320,
+          "native_normalized_multistep_mse": 0.12775367088615894
+        },
+        "additional": {
+          "windows": 120,
+          "native_normalized_multistep_mse": 2.7688775658607483
+        }
+      }
+    },
+    {
+      "checkpoint": "experiments/replay-study/runs/engineering-v2-rho050-seed0/final-full.pt",
+      "checkpoint_sha256": "26a93bd03ea937c2b73ee78b6cbc15710125718705d2da6b7c8540198cebdf1b",
+      "variant": {
+        "study": "G1 replay allocation, course proposal 2026-11-06",
+        "phase": "engineering",
+        "old_replay_fraction": 0.5,
+        "seed": 0,
+        "observation_dim": 99,
+        "reference_variant": "raw",
+        "normalizers_fixed": true,
+        "parent_sha256": "0afcca9af97bd9db1f2dd083875898f962acab0b0a70c7313b221e575b70b05b",
+        "plan_sha256": "3d8b1d7ae933efb6a46e43274f2f6e05cfac86265d26869321dce0e5dcb7f9e3"
+      },
+      "groups": {
+        "old": {
+          "windows": 320,
+          "native_normalized_multistep_mse": 0.12961250841617583
+        },
+        "additional": {
+          "windows": 120,
+          "native_normalized_multistep_mse": 2.771020253499349
+        }
+      }
+    },
+    {
+      "checkpoint": "experiments/replay-study/runs/engineering-v2-rho075-seed0/final-full.pt",
+      "checkpoint_sha256": "5ca7f3d834f32f1cdd48e16ba92a829535a36cc7b911e2a9a881f7bb09f9533c",
+      "variant": {
+        "study": "G1 replay allocation, course proposal 2026-11-06",
+        "phase": "engineering",
+        "old_replay_fraction": 0.75,
+        "seed": 0,
+        "observation_dim": 99,
+        "reference_variant": "raw",
+        "normalizers_fixed": true,
+        "parent_sha256": "0afcca9af97bd9db1f2dd083875898f962acab0b0a70c7313b221e575b70b05b",
+        "plan_sha256": "3d8b1d7ae933efb6a46e43274f2f6e05cfac86265d26869321dce0e5dcb7f9e3"
+      },
+      "groups": {
+        "old": {
+          "windows": 320,
+          "native_normalized_multistep_mse": 0.13105147276073695
+        },
+        "additional": {
+          "windows": 120,
+          "native_normalized_multistep_mse": 2.773849050203959
+        }
+      }
+    },
+    {
+      "checkpoint": "experiments/replay-study/runs/engineering-v3-rho000-seed1/final-full.pt",
+      "checkpoint_sha256": "833f5357016af7042458c3bc26c5f882f2f34a39a7448d165658b39d85cf286f",
+      "variant": {
+        "study": "G1 replay allocation, course proposal 2026-11-06",
+        "phase": "engineering",
+        "old_replay_fraction": 0.0,
+        "seed": 1,
+        "observation_dim": 99,
+        "reference_variant": "raw",
+        "normalizers_fixed": true,
+        "parent_sha256": "0afcca9af97bd9db1f2dd083875898f962acab0b0a70c7313b221e575b70b05b",
+        "plan_sha256": "460c6a5499707cce8f6c66f17f001069d2dba05da392ce51391028d5a82b2361"
+      },
+      "groups": {
+        "old": {
+          "windows": 320,
+          "native_normalized_multistep_mse": 0.13614813201129436
+        },
+        "additional": {
+          "windows": 120,
+          "native_normalized_multistep_mse": 2.7578922311464944
+        }
+      }
+    },
+    {
+      "checkpoint": "experiments/replay-study/runs/engineering-v3-rho000-seed2/final-full.pt",
+      "checkpoint_sha256": "ab3b7fa4a546e18a2db99826ec2164237fe47e3c96635488d1fdb152d6e026cb",
+      "variant": {
+        "study": "G1 replay allocation, course proposal 2026-11-06",
+        "phase": "engineering",
+        "old_replay_fraction": 0.0,
+        "seed": 2,
+        "observation_dim": 99,
+        "reference_variant": "raw",
+        "normalizers_fixed": true,
+        "parent_sha256": "0afcca9af97bd9db1f2dd083875898f962acab0b0a70c7313b221e575b70b05b",
+        "plan_sha256": "460c6a5499707cce8f6c66f17f001069d2dba05da392ce51391028d5a82b2361"
+      },
+      "groups": {
+        "old": {
+          "windows": 320,
+          "native_normalized_multistep_mse": 0.13643184676766396
+        },
+        "additional": {
+          "windows": 120,
+          "native_normalized_multistep_mse": 2.7514158050219217
+        }
+      }
+    },
+    {
+      "checkpoint": "experiments/replay-study/runs/engineering-v3-rho025-seed1/final-full.pt",
+      "checkpoint_sha256": "34ea09f658887c324bb2d208de4788d3b6b285cd47932224ff1f42707834b270",
+      "variant": {
+        "study": "G1 replay allocation, course proposal 2026-11-06",
+        "phase": "engineering",
+        "old_replay_fraction": 0.25,
+        "seed": 1,
+        "observation_dim": 99,
+        "reference_variant": "raw",
+        "normalizers_fixed": true,
+        "parent_sha256": "0afcca9af97bd9db1f2dd083875898f962acab0b0a70c7313b221e575b70b05b",
+        "plan_sha256": "460c6a5499707cce8f6c66f17f001069d2dba05da392ce51391028d5a82b2361"
+      },
+      "groups": {
+        "old": {
+          "windows": 320,
+          "native_normalized_multistep_mse": 0.13268627747893333
+        },
+        "additional": {
+          "windows": 120,
+          "native_normalized_multistep_mse": 2.757997512817383
+        }
+      }
+    },
+    {
+      "checkpoint": "experiments/replay-study/runs/engineering-v3-rho025-seed2/final-full.pt",
+      "checkpoint_sha256": "bfde893fcfaf4bb501336e99aada57698e0c12156203d34356d30493351b7528",
+      "variant": {
+        "study": "G1 replay allocation, course proposal 2026-11-06",
+        "phase": "engineering",
+        "old_replay_fraction": 0.25,
+        "seed": 2,
+        "observation_dim": 99,
+        "reference_variant": "raw",
+        "normalizers_fixed": true,
+        "parent_sha256": "0afcca9af97bd9db1f2dd083875898f962acab0b0a70c7313b221e575b70b05b",
+        "plan_sha256": "460c6a5499707cce8f6c66f17f001069d2dba05da392ce51391028d5a82b2361"
+      },
+      "groups": {
+        "old": {
+          "windows": 320,
+          "native_normalized_multistep_mse": 0.12927265744656324
+        },
+        "additional": {
+          "windows": 120,
+          "native_normalized_multistep_mse": 2.753082541624705
+        }
+      }
+    },
+    {
+      "checkpoint": "experiments/replay-study/runs/engineering-v3-rho050-seed1/final-full.pt",
+      "checkpoint_sha256": "bb39aa6ecca455d64e4d6b14f298c0d301cb52bac445fba38e9841b9b4fece39",
+      "variant": {
+        "study": "G1 replay allocation, course proposal 2026-11-06",
+        "phase": "engineering",
+        "old_replay_fraction": 0.5,
+        "seed": 1,
+        "observation_dim": 99,
+        "reference_variant": "raw",
+        "normalizers_fixed": true,
+        "parent_sha256": "0afcca9af97bd9db1f2dd083875898f962acab0b0a70c7313b221e575b70b05b",
+        "plan_sha256": "460c6a5499707cce8f6c66f17f001069d2dba05da392ce51391028d5a82b2361"
+      },
+      "groups": {
+        "old": {
+          "windows": 320,
+          "native_normalized_multistep_mse": 0.13023841828107835
+        },
+        "additional": {
+          "windows": 120,
+          "native_normalized_multistep_mse": 2.7298315286636354
+        }
+      }
+    },
+    {
+      "checkpoint": "experiments/replay-study/runs/engineering-v3-rho050-seed2/final-full.pt",
+      "checkpoint_sha256": "bd5fca136b2b081d50d4239b6fbbb0222c552a2a932ef4f791ce3dee0d0772ff",
+      "variant": {
+        "study": "G1 replay allocation, course proposal 2026-11-06",
+        "phase": "engineering",
+        "old_replay_fraction": 0.5,
+        "seed": 2,
+        "observation_dim": 99,
+        "reference_variant": "raw",
+        "normalizers_fixed": true,
+        "parent_sha256": "0afcca9af97bd9db1f2dd083875898f962acab0b0a70c7313b221e575b70b05b",
+        "plan_sha256": "460c6a5499707cce8f6c66f17f001069d2dba05da392ce51391028d5a82b2361"
+      },
+      "groups": {
+        "old": {
+          "windows": 320,
+          "native_normalized_multistep_mse": 0.1315619269385934
+        },
+        "additional": {
+          "windows": 120,
+          "native_normalized_multistep_mse": 2.7975008606910707
+        }
+      }
+    },
+    {
+      "checkpoint": "experiments/replay-study/runs/engineering-v3-rho075-seed1/final-full.pt",
+      "checkpoint_sha256": "d0a43074557217072ec4b3840de51f98bef215014d074bfbe9a20056066736aa",
+      "variant": {
+        "study": "G1 replay allocation, course proposal 2026-11-06",
+        "phase": "engineering",
+        "old_replay_fraction": 0.75,
+        "seed": 1,
+        "observation_dim": 99,
+        "reference_variant": "raw",
+        "normalizers_fixed": true,
+        "parent_sha256": "0afcca9af97bd9db1f2dd083875898f962acab0b0a70c7313b221e575b70b05b",
+        "plan_sha256": "460c6a5499707cce8f6c66f17f001069d2dba05da392ce51391028d5a82b2361"
+      },
+      "groups": {
+        "old": {
+          "windows": 320,
+          "native_normalized_multistep_mse": 0.12743194364011287
+        },
+        "additional": {
+          "windows": 120,
+          "native_normalized_multistep_mse": 2.7688365658124288
+        }
+      }
+    },
+    {
+      "checkpoint": "experiments/replay-study/runs/engineering-v3-rho075-seed2/final-full.pt",
+      "checkpoint_sha256": "70e26c76c2a276bf571e836a31a9f849c364932835394360a7d2c99a69a03b37",
+      "variant": {
+        "study": "G1 replay allocation, course proposal 2026-11-06",
+        "phase": "engineering",
+        "old_replay_fraction": 0.75,
+        "seed": 2,
+        "observation_dim": 99,
+        "reference_variant": "raw",
+        "normalizers_fixed": true,
+        "parent_sha256": "0afcca9af97bd9db1f2dd083875898f962acab0b0a70c7313b221e575b70b05b",
+        "plan_sha256": "460c6a5499707cce8f6c66f17f001069d2dba05da392ce51391028d5a82b2361"
+      },
+      "groups": {
+        "old": {
+          "windows": 320,
+          "native_normalized_multistep_mse": 0.12860423643141985
+        },
+        "additional": {
+          "windows": 120,
+          "native_normalized_multistep_mse": 2.7190404653549196
+        }
+      }
+    }
+  ]
+}

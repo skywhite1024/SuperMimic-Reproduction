@@ -1,0 +1,542 @@
+{
+  "date": "2026-11-06",
+  "status": "cpu_engineering_executed_gpu_pilot_pending",
+  "scientific_main_results": false,
+  "old_replay_fractions": [
+    0,
+    0.25,
+    0.5,
+    0.75
+  ],
+  "training_seeds": [
+    0,
+    1,
+    2
+  ],
+  "total_updates": 48,
+  "total_policy_updates": 36,
+  "cases": [
+    {
+      "run": "experiments/replay-study/runs/engineering-v2-rho000-seed0",
+      "proof_sha256": "fbe45a0f2302d2b87862a66c3a74a4f8880970280254bdbe23ff18b5a958d88a",
+      "variant": {
+        "study": "G1 replay allocation, course proposal 2026-11-06",
+        "phase": "engineering",
+        "old_replay_fraction": 0.0,
+        "seed": 0,
+        "observation_dim": 99,
+        "reference_variant": "raw",
+        "normalizers_fixed": true,
+        "parent_sha256": "0afcca9af97bd9db1f2dd083875898f962acab0b0a70c7313b221e575b70b05b",
+        "plan_sha256": "3d8b1d7ae933efb6a46e43274f2f6e05cfac86265d26869321dce0e5dcb7f9e3"
+      },
+      "device": "cpu",
+      "new_updates": 4,
+      "new_sim_transitions": 9472,
+      "wm_updates": 4,
+      "policy_updates": 3,
+      "wall_seconds": 10.799530700001924,
+      "normalizer_tensors_unchanged": true,
+      "checkpoint_sha256": "3f480898e6c2ad6ab5592618cbbebbc145c266c72b23e412ee7d26ada41e3af1",
+      "networks_changed": {
+        "wm": true,
+        "pi": true,
+        "critic": true
+      },
+      "actual_old_sampling_fraction": {
+        "wm_starts": 0.0,
+        "pi_consumed": 0.0
+      },
+      "execution_source_commit": "9f6a70d457420a951dcfc5074fc9c8f8d028f4ce",
+      "execution_source_sha256": {
+        "train.py": "1afe401cd9227085878750b1d04b024bf56f604b84dffa7f28566775cdac3b38",
+        "sampling.py": "e7370ec97abfe6fe1eb513443f62099b82a1a5aadf366f6eb3f98d83b04a3bac",
+        "study_runtime.py": "5ac36908d30f341ee54cc4d556384fd212b38c37b92f817223a3508ad9cb5e11"
+      }
+    },
+    {
+      "run": "experiments/replay-study/runs/engineering-v2-rho025-seed0",
+      "proof_sha256": "418ba8654cd6a10bc0ca531530c4cddf174dabf3ab3fa3aeffb0eb78a89a794e",
+      "variant": {
+        "study": "G1 replay allocation, course proposal 2026-11-06",
+        "phase": "engineering",
+        "old_replay_fraction": 0.25,
+        "seed": 0,
+        "observation_dim": 99,
+        "reference_variant": "raw",
+        "normalizers_fixed": true,
+        "parent_sha256": "0afcca9af97bd9db1f2dd083875898f962acab0b0a70c7313b221e575b70b05b",
+        "plan_sha256": "3d8b1d7ae933efb6a46e43274f2f6e05cfac86265d26869321dce0e5dcb7f9e3"
+      },
+      "device": "cpu",
+      "new_updates": 4,
+      "new_sim_transitions": 9472,
+      "wm_updates": 4,
+      "policy_updates": 3,
+      "wall_seconds": 10.314047700005176,
+      "normalizer_tensors_unchanged": true,
+      "checkpoint_sha256": "ae9bcecd34d92879524231561896d0f7a368b933e9aa293239ad52c9c07c38c6",
+      "networks_changed": {
+        "wm": true,
+        "pi": true,
+        "critic": true
+      },
+      "actual_old_sampling_fraction": {
+        "wm_starts": 0.15625,
+        "pi_consumed": 0.25
+      },
+      "execution_source_commit": "9f6a70d457420a951dcfc5074fc9c8f8d028f4ce",
+      "execution_source_sha256": {
+        "train.py": "1afe401cd9227085878750b1d04b024bf56f604b84dffa7f28566775cdac3b38",
+        "sampling.py": "e7370ec97abfe6fe1eb513443f62099b82a1a5aadf366f6eb3f98d83b04a3bac",
+        "study_runtime.py": "5ac36908d30f341ee54cc4d556384fd212b38c37b92f817223a3508ad9cb5e11"
+      }
+    },
+    {
+      "run": "experiments/replay-study/runs/engineering-v2-rho050-seed0",
+      "proof_sha256": "a0f16bd2f8a0c983031f39c18805f49e8037c70969cb7962c2404a572dc1f04b",
+      "variant": {
+        "study": "G1 replay allocation, course proposal 2026-11-06",
+        "phase": "engineering",
+        "old_replay_fraction": 0.5,
+        "seed": 0,
+        "observation_dim": 99,
+        "reference_variant": "raw",
+        "normalizers_fixed": true,
+        "parent_sha256": "0afcca9af97bd9db1f2dd083875898f962acab0b0a70c7313b221e575b70b05b",
+        "plan_sha256": "3d8b1d7ae933efb6a46e43274f2f6e05cfac86265d26869321dce0e5dcb7f9e3"
+      },
+      "device": "cpu",
+      "new_updates": 4,
+      "new_sim_transitions": 9472,
+      "wm_updates": 4,
+      "policy_updates": 3,
+      "wall_seconds": 10.766636500004097,
+      "normalizer_tensors_unchanged": true,
+      "checkpoint_sha256": "26a93bd03ea937c2b73ee78b6cbc15710125718705d2da6b7c8540198cebdf1b",
+      "networks_changed": {
+        "wm": true,
+        "pi": true,
+        "critic": true
+      },
+      "actual_old_sampling_fraction": {
+        "wm_starts": 0.5,
+        "pi_consumed": 0.5
+      },
+      "execution_source_commit": "9f6a70d457420a951dcfc5074fc9c8f8d028f4ce",
+      "execution_source_sha256": {
+        "train.py": "1afe401cd9227085878750b1d04b024bf56f604b84dffa7f28566775cdac3b38",
+        "sampling.py": "e7370ec97abfe6fe1eb513443f62099b82a1a5aadf366f6eb3f98d83b04a3bac",
+        "study_runtime.py": "5ac36908d30f341ee54cc4d556384fd212b38c37b92f817223a3508ad9cb5e11"
+      }
+    },
+    {
+      "run": "experiments/replay-study/runs/engineering-v2-rho075-seed0",
+      "proof_sha256": "04a9b95d2aab36adaf2290cef4fa21656986defae9e1f0c80781932eb4497715",
+      "variant": {
+        "study": "G1 replay allocation, course proposal 2026-11-06",
+        "phase": "engineering",
+        "old_replay_fraction": 0.75,
+        "seed": 0,
+        "observation_dim": 99,
+        "reference_variant": "raw",
+        "normalizers_fixed": true,
+        "parent_sha256": "0afcca9af97bd9db1f2dd083875898f962acab0b0a70c7313b221e575b70b05b",
+        "plan_sha256": "3d8b1d7ae933efb6a46e43274f2f6e05cfac86265d26869321dce0e5dcb7f9e3"
+      },
+      "device": "cpu",
+      "new_updates": 4,
+      "new_sim_transitions": 9472,
+      "wm_updates": 4,
+      "policy_updates": 3,
+      "wall_seconds": 11.224017900000035,
+      "normalizer_tensors_unchanged": true,
+      "checkpoint_sha256": "5ca7f3d834f32f1cdd48e16ba92a829535a36cc7b911e2a9a881f7bb09f9533c",
+      "networks_changed": {
+        "wm": true,
+        "pi": true,
+        "critic": true
+      },
+      "actual_old_sampling_fraction": {
+        "wm_starts": 0.71875,
+        "pi_consumed": 0.8333333333333334
+      },
+      "execution_source_commit": "9f6a70d457420a951dcfc5074fc9c8f8d028f4ce",
+      "execution_source_sha256": {
+        "train.py": "1afe401cd9227085878750b1d04b024bf56f604b84dffa7f28566775cdac3b38",
+        "sampling.py": "e7370ec97abfe6fe1eb513443f62099b82a1a5aadf366f6eb3f98d83b04a3bac",
+        "study_runtime.py": "5ac36908d30f341ee54cc4d556384fd212b38c37b92f817223a3508ad9cb5e11"
+      }
+    },
+    {
+      "run": "experiments/replay-study/runs/engineering-v3-rho000-seed1",
+      "proof_sha256": "08cb0de50b6b03203dc75534dd30c6ee099a39c54fa3b6329b4e50395e5fa49a",
+      "variant": {
+        "study": "G1 replay allocation, course proposal 2026-11-06",
+        "phase": "engineering",
+        "old_replay_fraction": 0.0,
+        "seed": 1,
+        "observation_dim": 99,
+        "reference_variant": "raw",
+        "normalizers_fixed": true,
+        "parent_sha256": "0afcca9af97bd9db1f2dd083875898f962acab0b0a70c7313b221e575b70b05b",
+        "plan_sha256": "460c6a5499707cce8f6c66f17f001069d2dba05da392ce51391028d5a82b2361"
+      },
+      "device": "cpu",
+      "new_updates": 4,
+      "new_sim_transitions": 9472,
+      "wm_updates": 4,
+      "policy_updates": 3,
+      "wall_seconds": 11.401741699999548,
+      "normalizer_tensors_unchanged": true,
+      "checkpoint_sha256": "833f5357016af7042458c3bc26c5f882f2f34a39a7448d165658b39d85cf286f",
+      "networks_changed": {
+        "wm": true,
+        "pi": true,
+        "critic": true
+      },
+      "actual_old_sampling_fraction": {
+        "wm_starts": 0.0,
+        "pi_consumed": 0.0
+      },
+      "execution_source_commit": "9f6a70d457420a951dcfc5074fc9c8f8d028f4ce",
+      "execution_source_sha256": {
+        "train.py": "68e471c4fd04890547248a7c1547fe0a321b63e1563e02083fc1d17b1dfc6751",
+        "sampling.py": "e7370ec97abfe6fe1eb513443f62099b82a1a5aadf366f6eb3f98d83b04a3bac",
+        "study_runtime.py": "5ac36908d30f341ee54cc4d556384fd212b38c37b92f817223a3508ad9cb5e11"
+      }
+    },
+    {
+      "run": "experiments/replay-study/runs/engineering-v3-rho000-seed2",
+      "proof_sha256": "e047e1b181fc51f19bacbc4186fb287c2713b35059cbf3a0c6402c92bdce8798",
+      "variant": {
+        "study": "G1 replay allocation, course proposal 2026-11-06",
+        "phase": "engineering",
+        "old_replay_fraction": 0.0,
+        "seed": 2,
+        "observation_dim": 99,
+        "reference_variant": "raw",
+        "normalizers_fixed": true,
+        "parent_sha256": "0afcca9af97bd9db1f2dd083875898f962acab0b0a70c7313b221e575b70b05b",
+        "plan_sha256": "460c6a5499707cce8f6c66f17f001069d2dba05da392ce51391028d5a82b2361"
+      },
+      "device": "cpu",
+      "new_updates": 4,
+      "new_sim_transitions": 9472,
+      "wm_updates": 4,
+      "policy_updates": 3,
+      "wall_seconds": 10.314382600001409,
+      "normalizer_tensors_unchanged": true,
+      "checkpoint_sha256": "ab3b7fa4a546e18a2db99826ec2164237fe47e3c96635488d1fdb152d6e026cb",
+      "networks_changed": {
+        "wm": true,
+        "pi": true,
+        "critic": true
+      },
+      "actual_old_sampling_fraction": {
+        "wm_starts": 0.0,
+        "pi_consumed": 0.0
+      },
+      "execution_source_commit": "9f6a70d457420a951dcfc5074fc9c8f8d028f4ce",
+      "execution_source_sha256": {
+        "train.py": "68e471c4fd04890547248a7c1547fe0a321b63e1563e02083fc1d17b1dfc6751",
+        "sampling.py": "e7370ec97abfe6fe1eb513443f62099b82a1a5aadf366f6eb3f98d83b04a3bac",
+        "study_runtime.py": "5ac36908d30f341ee54cc4d556384fd212b38c37b92f817223a3508ad9cb5e11"
+      }
+    },
+    {
+      "run": "experiments/replay-study/runs/engineering-v3-rho025-seed1",
+      "proof_sha256": "3709df62ffeee6cb0f2e772d07f1d814a094c3c923cd4820d93ca6db33b362bb",
+      "variant": {
+        "study": "G1 replay allocation, course proposal 2026-11-06",
+        "phase": "engineering",
+        "old_replay_fraction": 0.25,
+        "seed": 1,
+        "observation_dim": 99,
+        "reference_variant": "raw",
+        "normalizers_fixed": true,
+        "parent_sha256": "0afcca9af97bd9db1f2dd083875898f962acab0b0a70c7313b221e575b70b05b",
+        "plan_sha256": "460c6a5499707cce8f6c66f17f001069d2dba05da392ce51391028d5a82b2361"
+      },
+      "device": "cpu",
+      "new_updates": 4,
+      "new_sim_transitions": 9472,
+      "wm_updates": 4,
+      "policy_updates": 3,
+      "wall_seconds": 10.831005899999582,
+      "normalizer_tensors_unchanged": true,
+      "checkpoint_sha256": "34ea09f658887c324bb2d208de4788d3b6b285cd47932224ff1f42707834b270",
+      "networks_changed": {
+        "wm": true,
+        "pi": true,
+        "critic": true
+      },
+      "actual_old_sampling_fraction": {
+        "wm_starts": 0.3125,
+        "pi_consumed": 0.20833333333333337
+      },
+      "execution_source_commit": "9f6a70d457420a951dcfc5074fc9c8f8d028f4ce",
+      "execution_source_sha256": {
+        "train.py": "68e471c4fd04890547248a7c1547fe0a321b63e1563e02083fc1d17b1dfc6751",
+        "sampling.py": "e7370ec97abfe6fe1eb513443f62099b82a1a5aadf366f6eb3f98d83b04a3bac",
+        "study_runtime.py": "5ac36908d30f341ee54cc4d556384fd212b38c37b92f817223a3508ad9cb5e11"
+      }
+    },
+    {
+      "run": "experiments/replay-study/runs/engineering-v3-rho025-seed2",
+      "proof_sha256": "7723d2872f33e509ade684ddcf5bfcbf09bb687aa5e4d4ff024ba4d10395f256",
+      "variant": {
+        "study": "G1 replay allocation, course proposal 2026-11-06",
+        "phase": "engineering",
+        "old_replay_fraction": 0.25,
+        "seed": 2,
+        "observation_dim": 99,
+        "reference_variant": "raw",
+        "normalizers_fixed": true,
+        "parent_sha256": "0afcca9af97bd9db1f2dd083875898f962acab0b0a70c7313b221e575b70b05b",
+        "plan_sha256": "460c6a5499707cce8f6c66f17f001069d2dba05da392ce51391028d5a82b2361"
+      },
+      "device": "cpu",
+      "new_updates": 4,
+      "new_sim_transitions": 9472,
+      "wm_updates": 4,
+      "policy_updates": 3,
+      "wall_seconds": 10.597836500004632,
+      "normalizer_tensors_unchanged": true,
+      "checkpoint_sha256": "bfde893fcfaf4bb501336e99aada57698e0c12156203d34356d30493351b7528",
+      "networks_changed": {
+        "wm": true,
+        "pi": true,
+        "critic": true
+      },
+      "actual_old_sampling_fraction": {
+        "wm_starts": 0.25,
+        "pi_consumed": 0.33333333333333337
+      },
+      "execution_source_commit": "9f6a70d457420a951dcfc5074fc9c8f8d028f4ce",
+      "execution_source_sha256": {
+        "train.py": "68e471c4fd04890547248a7c1547fe0a321b63e1563e02083fc1d17b1dfc6751",
+        "sampling.py": "e7370ec97abfe6fe1eb513443f62099b82a1a5aadf366f6eb3f98d83b04a3bac",
+        "study_runtime.py": "5ac36908d30f341ee54cc4d556384fd212b38c37b92f817223a3508ad9cb5e11"
+      }
+    },
+    {
+      "run": "experiments/replay-study/runs/engineering-v3-rho050-seed1",
+      "proof_sha256": "003195e7e2c388279545a3561b65ebb247f6347f77ca89f061905d7c12214326",
+      "variant": {
+        "study": "G1 replay allocation, course proposal 2026-11-06",
+        "phase": "engineering",
+        "old_replay_fraction": 0.5,
+        "seed": 1,
+        "observation_dim": 99,
+        "reference_variant": "raw",
+        "normalizers_fixed": true,
+        "parent_sha256": "0afcca9af97bd9db1f2dd083875898f962acab0b0a70c7313b221e575b70b05b",
+        "plan_sha256": "460c6a5499707cce8f6c66f17f001069d2dba05da392ce51391028d5a82b2361"
+      },
+      "device": "cpu",
+      "new_updates": 4,
+      "new_sim_transitions": 9472,
+      "wm_updates": 4,
+      "policy_updates": 3,
+      "wall_seconds": 10.732154600002104,
+      "normalizer_tensors_unchanged": true,
+      "checkpoint_sha256": "bb39aa6ecca455d64e4d6b14f298c0d301cb52bac445fba38e9841b9b4fece39",
+      "networks_changed": {
+        "wm": true,
+        "pi": true,
+        "critic": true
+      },
+      "actual_old_sampling_fraction": {
+        "wm_starts": 0.53125,
+        "pi_consumed": 0.5416666666666667
+      },
+      "execution_source_commit": "9f6a70d457420a951dcfc5074fc9c8f8d028f4ce",
+      "execution_source_sha256": {
+        "train.py": "68e471c4fd04890547248a7c1547fe0a321b63e1563e02083fc1d17b1dfc6751",
+        "sampling.py": "e7370ec97abfe6fe1eb513443f62099b82a1a5aadf366f6eb3f98d83b04a3bac",
+        "study_runtime.py": "5ac36908d30f341ee54cc4d556384fd212b38c37b92f817223a3508ad9cb5e11"
+      }
+    },
+    {
+      "run": "experiments/replay-study/runs/engineering-v3-rho050-seed2",
+      "proof_sha256": "3485f900db576c4982421379890bf5e827d44187ac693415de23464ae38457f9",
+      "variant": {
+        "study": "G1 replay allocation, course proposal 2026-11-06",
+        "phase": "engineering",
+        "old_replay_fraction": 0.5,
+        "seed": 2,
+        "observation_dim": 99,
+        "reference_variant": "raw",
+        "normalizers_fixed": true,
+        "parent_sha256": "0afcca9af97bd9db1f2dd083875898f962acab0b0a70c7313b221e575b70b05b",
+        "plan_sha256": "460c6a5499707cce8f6c66f17f001069d2dba05da392ce51391028d5a82b2361"
+      },
+      "device": "cpu",
+      "new_updates": 4,
+      "new_sim_transitions": 9472,
+      "wm_updates": 4,
+      "policy_updates": 3,
+      "wall_seconds": 10.330123899999307,
+      "normalizer_tensors_unchanged": true,
+      "checkpoint_sha256": "bd5fca136b2b081d50d4239b6fbbb0222c552a2a932ef4f791ce3dee0d0772ff",
+      "networks_changed": {
+        "wm": true,
+        "pi": true,
+        "critic": true
+      },
+      "actual_old_sampling_fraction": {
+        "wm_starts": 0.625,
+        "pi_consumed": 0.5
+      },
+      "execution_source_commit": "9f6a70d457420a951dcfc5074fc9c8f8d028f4ce",
+      "execution_source_sha256": {
+        "train.py": "68e471c4fd04890547248a7c1547fe0a321b63e1563e02083fc1d17b1dfc6751",
+        "sampling.py": "e7370ec97abfe6fe1eb513443f62099b82a1a5aadf366f6eb3f98d83b04a3bac",
+        "study_runtime.py": "5ac36908d30f341ee54cc4d556384fd212b38c37b92f817223a3508ad9cb5e11"
+      }
+    },
+    {
+      "run": "experiments/replay-study/runs/engineering-v3-rho075-seed1",
+      "proof_sha256": "bb0e0a8a9fb43ea52e1b327f344ff19e6e8455cf0783127ada60bdb176741482",
+      "variant": {
+        "study": "G1 replay allocation, course proposal 2026-11-06",
+        "phase": "engineering",
+        "old_replay_fraction": 0.75,
+        "seed": 1,
+        "observation_dim": 99,
+        "reference_variant": "raw",
+        "normalizers_fixed": true,
+        "parent_sha256": "0afcca9af97bd9db1f2dd083875898f962acab0b0a70c7313b221e575b70b05b",
+        "plan_sha256": "460c6a5499707cce8f6c66f17f001069d2dba05da392ce51391028d5a82b2361"
+      },
+      "device": "cpu",
+      "new_updates": 4,
+      "new_sim_transitions": 9472,
+      "wm_updates": 4,
+      "policy_updates": 3,
+      "wall_seconds": 10.425747099994624,
+      "normalizer_tensors_unchanged": true,
+      "checkpoint_sha256": "d0a43074557217072ec4b3840de51f98bef215014d074bfbe9a20056066736aa",
+      "networks_changed": {
+        "wm": true,
+        "pi": true,
+        "critic": true
+      },
+      "actual_old_sampling_fraction": {
+        "wm_starts": 0.78125,
+        "pi_consumed": 0.75
+      },
+      "execution_source_commit": "9f6a70d457420a951dcfc5074fc9c8f8d028f4ce",
+      "execution_source_sha256": {
+        "train.py": "68e471c4fd04890547248a7c1547fe0a321b63e1563e02083fc1d17b1dfc6751",
+        "sampling.py": "e7370ec97abfe6fe1eb513443f62099b82a1a5aadf366f6eb3f98d83b04a3bac",
+        "study_runtime.py": "5ac36908d30f341ee54cc4d556384fd212b38c37b92f817223a3508ad9cb5e11"
+      }
+    },
+    {
+      "run": "experiments/replay-study/runs/engineering-v3-rho075-seed2",
+      "proof_sha256": "c1c2bfd97a3a33d92c5f73f0e14c43bd2e10c26d035e226bacd57a43e943f1cf",
+      "variant": {
+        "study": "G1 replay allocation, course proposal 2026-11-06",
+        "phase": "engineering",
+        "old_replay_fraction": 0.75,
+        "seed": 2,
+        "observation_dim": 99,
+        "reference_variant": "raw",
+        "normalizers_fixed": true,
+        "parent_sha256": "0afcca9af97bd9db1f2dd083875898f962acab0b0a70c7313b221e575b70b05b",
+        "plan_sha256": "460c6a5499707cce8f6c66f17f001069d2dba05da392ce51391028d5a82b2361"
+      },
+      "device": "cpu",
+      "new_updates": 4,
+      "new_sim_transitions": 9472,
+      "wm_updates": 4,
+      "policy_updates": 3,
+      "wall_seconds": 10.391052600003604,
+      "normalizer_tensors_unchanged": true,
+      "checkpoint_sha256": "70e26c76c2a276bf571e836a31a9f849c364932835394360a7d2c99a69a03b37",
+      "networks_changed": {
+        "wm": true,
+        "pi": true,
+        "critic": true
+      },
+      "actual_old_sampling_fraction": {
+        "wm_starts": 0.875,
+        "pi_consumed": 0.8333333333333334
+      },
+      "execution_source_commit": "9f6a70d457420a951dcfc5074fc9c8f8d028f4ce",
+      "execution_source_sha256": {
+        "train.py": "68e471c4fd04890547248a7c1547fe0a321b63e1563e02083fc1d17b1dfc6751",
+        "sampling.py": "e7370ec97abfe6fe1eb513443f62099b82a1a5aadf366f6eb3f98d83b04a3bac",
+        "study_runtime.py": "5ac36908d30f341ee54cc4d556384fd212b38c37b92f817223a3508ad9cb5e11"
+      }
+    }
+  ],
+  "initial_failure": {
+    "stage": "initialization",
+    "new_updates": 0,
+    "error": "ManagerRng.choice requires explicit keyword-only p; fixed in sampling.py; original empty run retained"
+  },
+  "strict_full_size_collection_coverage": {
+    "status": "all_four_strict_replay_pools_sampled",
+    "device": "cpu",
+    "physics_backend": "mujoco",
+    "num_envs": 1024,
+    "collected_steps": 64,
+    "new_optimizer_updates": 0,
+    "conditions": [
+      {
+        "rho": 0.0,
+        "minimum_available_starts": 494,
+        "wm_starts": 512,
+        "pi_proposed": 512
+      },
+      {
+        "rho": 0.25,
+        "minimum_available_starts": 494,
+        "wm_starts": 512,
+        "pi_proposed": 512
+      },
+      {
+        "rho": 0.5,
+        "minimum_available_starts": 494,
+        "wm_starts": 512,
+        "pi_proposed": 512
+      },
+      {
+        "rho": 0.75,
+        "minimum_available_starts": 494,
+        "wm_starts": 512,
+        "pi_proposed": 512
+      }
+    ],
+    "wall_seconds": 15.00122370000463
+  },
+  "baseline_summary": "baseline-cpu-full55.json",
+  "original_baseline_receipt_sha256": "9e59302a21ba3eb4e3aa3cc14f76d736bac3af6650bd8d55da415bf62d4dbcd2",
+  "world_model_diagnostics": "world-model-cpu-engineering.json",
+  "original_diagnostic_receipt_sha256": "fa6f9fd006c91046338317d8a7b9e43b0bfbc7465b9e3dacc0ba7a585f0f3da2",
+  "publication_source_sha256": {
+    "evaluate_matrix.py": "806d2ceab5dbadac70ed0236b9f8143b0cbae9347f641d88df6adbc7f9e9b989",
+    "inputs.lock.json": "72fa73425653c75f9d6c8361caa3722bea9e346b5237f3e443c81c50502a228a",
+    "plan.json": "460c6a5499707cce8f6c66f17f001069d2dba05da392ce51391028d5a82b2361",
+    "run_matrix.py": "2e056eaf79f33d473f027a23358015945258dc5d6d3758af4ccadb17fead8a9a",
+    "sampling.py": "755941bfbf509ae55e7ec6e5467fd8acd511e8260dc2cb6b716a3abcd58c13e9",
+    "study_runtime.py": "f08b1cfb9b59b4861f999f3133de476499bbe1df5db85a632b9492b0b25741a9",
+    "test_sampling.py": "46ba9d935ff2b84ec78eee1ed233f5aa5f063d181e2db2446d051f2a67d9c129",
+    "train.py": "71b8ca27cc90b6f6a76cb1964a3cd220d47a3e3d73dac84d5028e08aabafa6d0",
+    "wm_probe.py": "08f048424ba3ab36b1d212bac0b5b9b522380e6cf3f3d5189b3180bc64fedaca"
+  },
+  "limitations": [
+    "Four-update reduced-batch CPU trials verify execution only; no replay winner is selected.",
+    "Engineering source was uncommitted at execution; exact train/sampling/runtime hashes are retained per trial. The publication source adds portability, strict-receipt, provenance and memory checks after those trials.",
+    "The fresh CPU baseline and probe must not be mixed with CUDA physics scores.",
+    "Three seeds represent continuation training, not three independent pretraining baselines.",
+    "The original hard gate is not a strict tracking/contact-quality criterion.",
+    "Cloud console connection timed out three times. No current account-wide occupancy or quota was verified, and no cloud job was submitted.",
+    "Main budget remains unfrozen; 2000 updates is provisional."
+  ],
+  "cloud_jobs_submitted": 0,
+  "main_budget_frozen": false
+}
