@@ -1,5 +1,6 @@
 """One finite GPU pilot block using existing personal-AFS assets and environment."""
 import argparse
+import hashlib
 import json
 import os
 from pathlib import Path
@@ -21,7 +22,8 @@ def main():
     assert output.resolve().is_relative_to((STUDY/'runs').resolve()) and not output.exists()
     output.mkdir(parents=True)
     started = time.perf_counter()
-    state = {'status':'preparing','source_commit':a.expected_commit,'label':a.label,'stages':[]}
+    state = {'status':'preparing','source_commit':a.expected_commit,'label':a.label,'stages':[],
+             'input_transforms':[]}
     def save():
         state['wall_seconds'] = time.perf_counter()-started
         (output/'receipt.json').write_text(json.dumps(state,indent=2),encoding='utf-8')
@@ -31,10 +33,20 @@ def main():
         print('PILOT_STAGE_STARTED '+tag,flush=True)
         subprocess.run(command,cwd=ROOT,check=True,timeout=maximum)
         state['stages'].append({'stage':tag,'wall_seconds':time.perf_counter()-before}); save()
-    def stage(source, target, expected):
+    def stage(source, target, expected, original_sha256=None):
         assert source.resolve().is_relative_to(legacy)
         assert target.resolve().is_relative_to(ROOT.resolve())
-        assert sha(source) == expected, f'Existing AFS asset mismatch: {source.name}'
+        actual = sha(source)
+        if actual != expected:
+            assert original_sha256 and actual == original_sha256, f'Existing AFS asset mismatch: {source.name}'
+            raw = source.read_bytes().replace(b'\r\n',b'\n')
+            assert hashlib.sha256(raw).hexdigest() == expected, f'LF-only normalization mismatch: {source.name}'
+            if target.exists(): assert sha(target) == expected
+            else:
+                target.parent.mkdir(parents=True,exist_ok=True); target.write_bytes(raw)
+            state['input_transforms'].append({'file':target.relative_to(ROOT).as_posix(),
+                'transform':'CRLF to LF only; original unchanged','original_sha256':actual,'study_sha256':expected})
+            return
         if target.exists():
             assert sha(target) == expected
         else:
@@ -47,13 +59,16 @@ def main():
         source = json.loads((legacy/'lafan1-20261024/evidence/source-files.json').read_text())
         assert source['commit'] == 'faf7818e8abac3ec6abb8f00e6e904d3577f800b'
         old_uni = legacy/'lafan1-20261024/uni'
+        assets = json.loads((ROOT/'implementation/evidence/asset-downloads.json').read_text())
+        original_assets = {row['path']:row['sha256'] for row in assets['files']}
         inputs = json.loads((STUDY/'inputs.lock.json').read_text())
         for name, expected in inputs['motion_sha256'].items():
             relative = Path(name)
             source = old_uni/relative.relative_to('implementation/uni') if name.startswith('implementation/uni/') else legacy/relative
-            stage(source,ROOT/relative,expected)
-        assets = json.loads((ROOT/'implementation/evidence/asset-downloads.json').read_text())
+            original = original_assets.get(relative.relative_to('implementation/uni').as_posix()) if name.startswith('implementation/uni/') else None
+            stage(source,ROOT/relative,expected,original)
         for row in assets['files']:
+            if ('implementation/uni/'+row['path']) in inputs['motion_sha256']: continue
             stage(old_uni/row['path'],ROOT/'implementation/uni'/row['path'],row['sha256'])
         parent = ROOT/spec['parent_path']
         stage(legacy/'lafan1-20261024/experiments/continuation-20261025-a/policy/full_016000.pt',parent,spec['parent_sha256'])
