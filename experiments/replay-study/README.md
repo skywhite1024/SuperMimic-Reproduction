@@ -95,12 +95,16 @@ it does not allocate cloud resources or automatically restart failed jobs.
 python experiments/replay-study/run_matrix.py --execute --phase main --device cuda --prefix main-a
 python experiments/replay-study/evaluate_matrix.py --prefix main-a --label main-a
 python experiments/replay-study/evaluate_matrix.py --execute --prefix main-a --label main-a
+python experiments/replay-study/summarize_main.py --receipt experiments/replay-study/runs/evaluation-main-a/receipt.json --prefix main-a --output experiments/replay-study/runs/analysis-main-a
 ```
 
 Main execution rejects per-run budget overrides. `evaluate_matrix.py` requires
 all 12 successful main checkpoints from the same frozen plan, then evaluates
 the parent plus all 12 on CUDA/MJWarp. It preserves each complete trajectory and
 checks 40/15 denominators. It never substitutes a CPU score for GPU evaluation.
+The summary command requires all 13 verified evaluations and all 12 completed
+main runs, recomputes clip macro returns, and produces seed-level results,
+sample standard deviations, and a trade-off plot. It rejects pilot outputs.
 
 ## World-model diagnostic and reporting
 
