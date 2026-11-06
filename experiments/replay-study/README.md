@@ -58,8 +58,14 @@ remain unchanged. Attempt B stopped during a GitHub lazy-object fetch. Attempt
 C uses the preserved A/B Git object caches and the exact published repair blob,
 with a SHA-verified checkout and no network fetch. See
 `evidence/gpu-launch-20261106.json` for job identities and observed states.
-No formal replay comparison is complete. The budget remains unfrozen; the
-2,000-update / 7,200-second values are provisional, not results.
+Pilot C and its worker finished successfully at 17:39:30 on 2026-11-06.
+All four 100-update trials completed (400 updates total); the parent full55 CUDA
+baseline and five-model frozen-probe diagnostic completed. No formal replay
+comparison is complete. The main budget is now fixed at 2,000 updates (200
+world-model-only) per condition; see `evidence/main-budget-20261106.json`.
+`cloud_main.py` reads all complete pilot timing/memory proofs before main
+training and aborts if any fixed resource gate is unmet. These gates never
+change a condition budget or select a ratio by its outcome.
 
 ## Reproduce and continue
 
@@ -134,3 +140,16 @@ update counts, wall/GPU time and failed trials. Normalized return is not a
 success probability. CPU engineering diagnostics do not select a winning ratio.
 Optional no-reset continuous/hardware tests remain separate; no robot execution
 is performed by these scripts.
+
+## Finite cloud main entry point
+
+`cloud_main.py --pilot-root PILOT_SOURCE --expected-commit COMMIT --label main-e`
+reuses the SHA-verified personal-AFS assets and CUDA probe, executes the 12 main
+conditions sequentially, then all 13 full55 evaluations, diagnostics and analysis.
+The outer launch command bounds the entire program to 30 hours with zero
+automatic restarts. Progress includes actual iteration counts from native CSV
+logs. Each export log line is below the console 500-character Body limit.
+Download console logs as JSONL(.gz), then recover complete, SHA-checked JSON
+receipts with `python experiments/replay-study/collect_exports.py LOG.jsonl.gz
+--output NEW_DIRECTORY`. Queue time and billed GPU usage remain separate from
+measured program time.

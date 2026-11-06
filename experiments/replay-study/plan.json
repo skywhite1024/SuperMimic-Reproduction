@@ -1,14 +1,23 @@
 {
   "study": "G1 replay allocation, course proposal 2026-11-06",
-  "phase": "pilot_not_main_results",
+  "phase": "main_budget_frozen_before_main_outcomes",
   "parent_name": "lafan40-full",
   "parent_path": "implementation/continuation-20261025-a/downloaded/policy/full_016000.pt",
   "parent_sha256": "0afcca9af97bd9db1f2dd083875898f962acab0b0a70c7313b221e575b70b05b",
   "parent_iteration": 16000,
   "observation_dim": 99,
   "reference_variant": "raw",
-  "old_replay_fractions": [0.0, 0.25, 0.5, 0.75],
-  "training_seeds": [0, 1, 2],
+  "old_replay_fractions": [
+    0.0,
+    0.25,
+    0.5,
+    0.75
+  ],
+  "training_seeds": [
+    0,
+    1,
+    2
+  ],
   "old_motion_count": 40,
   "additional_motion_count": 15,
   "collection_old_fraction": 0.5,
@@ -17,16 +26,34 @@
   "same_fraction_for_world_model_and_policy_starts": true,
   "reward": "unchanged native 99D MDP",
   "normalizers": "frozen at common parent",
-  "pilot": {"seed": 100, "steps": 100, "wm_warmup": 20, "max_seconds": 900},
-  "provisional_main": {"steps": 2000, "wm_warmup": 200, "max_seconds": 7200},
-  "main_budget_frozen": false,
+  "pilot": {
+    "seed": 100,
+    "steps": 100,
+    "wm_warmup": 20,
+    "max_seconds": 900
+  },
+  "provisional_main": {
+    "steps": 2000,
+    "wm_warmup": 200,
+    "max_seconds": 7200
+  },
+  "main_budget_frozen": true,
   "total_gpu_hour_ceiling": 48,
   "common_training": {
-    "num_envs": 1024, "buffer_steps": 300, "wm_batches": 4,
-    "wm_batch": 512, "pi_batch": 512, "critic_epochs": 2,
-    "critic_minibatches": 2, "lr": 0.00005, "warmup_steps": 64,
-    "ckpt_every": 500, "log_every": 25, "compile": false
+    "num_envs": 1024,
+    "buffer_steps": 300,
+    "wm_batches": 4,
+    "wm_batch": 512,
+    "pi_batch": 512,
+    "critic_epochs": 2,
+    "critic_minibatches": 2,
+    "lr": 5e-05,
+    "warmup_steps": 64,
+    "ckpt_every": 500,
+    "log_every": 25,
+    "compile": false
   },
   "evaluation": "same GPU backend and raw references; full 40/15 denominators, original full-length normalized returns, failures and tracking errors; keep CPU engineering results separate",
-  "continuous_and_hardware": "optional, separate validation; no hardware execution authorized by this runner"
+  "continuous_and_hardware": "optional, separate validation; no hardware execution authorized by this runner",
+  "budget_decision": "experiments/replay-study/evidence/main-budget-20261106.json"
 }

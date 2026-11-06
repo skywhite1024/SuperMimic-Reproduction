@@ -1,6 +1,6 @@
 {
   "date": "2026-11-06",
-  "status": "pilot_c_running_cuda_baseline_not_main_results",
+  "status": "pilot_c_complete_not_main_results",
   "source_commit": "cfd02f3516b7ddbf574cdfcc594caa451c0318cb",
   "requested_gpus_per_job": 1,
   "replicas": 1,
@@ -35,12 +35,14 @@
       "label": "pilot-c",
       "job_uid": "fe7e5c085ec14d14afdeb1524c2b83c1",
       "created_at": "2026-11-06T17:20:32+08:00",
-      "platform_status": "running",
+      "platform_status": "success",
       "source_recovery": "New checkout reads preserved A/B object stores; repair blob verified by SHA256 and Git object ID; no GitHub request.",
-      "observed_stage": "CUDA/Warp initialization and kernel compilation for full55 parent baseline",
-      "training_updates_verified_at_this_snapshot": 0,
+      "observed_stage": "four pilots, full55 baseline and frozen probe diagnostics complete",
+      "training_updates_verified_at_this_snapshot": 400,
       "pilot_plan": "Four old-replay fractions, seed100 excluded from main seeds, 100 updates each.",
-      "main_results": false
+      "main_results": false,
+      "worker_status": "success",
+      "platform_terminal_at": "2026-11-06T17:39:30+08:00"
     }
   ],
   "LF_conversion_validation": {
@@ -50,8 +52,7 @@
     "historical_source_files_modified": false
   },
   "limitations": [
-    "Running status and compiled CUDA kernels do not establish completed optimizer updates.",
-    "Main training budget remains unfrozen until measured pilot timing and memory are available.",
-    "Final platform state and resource release of pilot C still require verification."
+    "Pilot checkpoints are not formal three-seed results.",
+    "Full timing and memory receipt export is included at the start of the finite main job."
   ]
 }

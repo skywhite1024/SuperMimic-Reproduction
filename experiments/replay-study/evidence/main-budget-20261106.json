@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-06",
+  "status": "fixed_budget_with_pre_execution_timing_memory_gate",
+  "pilot_job_uid": "fe7e5c085ec14d14afdeb1524c2b83c1",
+  "pilot_source_commit": "cfd02f3516b7ddbf574cdfcc594caa451c0318cb",
+  "observed_evidence": {
+    "platform_terminal": "success at 2026-11-06T17:39:30+08:00",
+    "worker_terminal": "success",
+    "pilot_conditions": 4,
+    "updates_per_pilot": 100,
+    "baseline_full55_completed": true,
+    "fixed_probe_windows": 440,
+    "model_probe_evaluations": 5,
+    "pilot_wall_minutes_including_baseline_and_probe": 18.97
+  },
+  "fixed_main": {
+    "steps": 2000,
+    "wm_warmup": 200,
+    "max_seconds": 7200
+  },
+  "training_seeds": [
+    0,
+    1,
+    2
+  ],
+  "old_replay_fractions": [
+    0,
+    0.25,
+    0.5,
+    0.75
+  ],
+  "decision_basis": "Successful 100-update constant-shape H100 pilot; observed first trial update-loop wall time about 95 seconds. Main budget fixed uniformly before any main outcomes; no ratio selected by pilot performance.",
+  "pre_execution_gate": {
+    "all_four_pilot_updates_equal": 100,
+    "maximum_each_pilot_wall_seconds_exclusive": 180,
+    "maximum_each_pilot_reserved_GiB_exclusive": 70,
+    "action_if_unmet": "abort and preserve records; do not adapt any condition budget"
+  },
+  "complete_pilot_timing_memory_receipts": "Read and SHA-exported by cloud_main before any main updates. Full local readback pending at freeze time; no exact peak-memory claim yet.",
+  "expected_duration": "About 9-12 GPU hours inferred from pilot throughput and full55 evaluation duration; not a guarantee or billed usage.",
+  "program_hard_deadline_seconds": 108000,
+  "per_training_stage_max_seconds": 7320,
+  "maximum_restarts": 0,
+  "gpus": 1,
+  "project_gpu_hour_ceiling": 48,
+  "maximum_stage_budget_hours": 29.083333333333332,
+  "limits": [
+    "Three continuation seeds share one pretrained parent.",
+    "No hardware execution.",
+    "Uniform starts do not imply uniform effective gradient mass because of native done masks.",
+    "Original gate counts are not strict physical-quality certification."
+  ]
+}
