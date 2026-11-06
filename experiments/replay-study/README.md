@@ -21,6 +21,9 @@ nonterminal reference frames. A balanced first reset covers all 55 clips.
 Collection rules are shared; realized trajectories can differ as policies change.
 Formal replay raises an error if an active clip has no eligible starts rather
 than silently dropping it. Engineering runs explicitly relax that requirement.
+The nominal ratio constrains sampled starts, not gradient contribution. Native
+done masks shorten windows after failures; receipts separately count WM starts,
+unmasked transitions and consumed policy starts. Report these effective counts.
 
 Each seed controls new collection and continuation updates; the parent training
 seed is shared. Loading full optimizer state does not restore historical replay,
