@@ -1,0 +1,57 @@
+{
+  "date": "2026-11-06",
+  "status": "pilot_c_running_cuda_baseline_not_main_results",
+  "source_commit": "cfd02f3516b7ddbf574cdfcc594caa451c0318cb",
+  "requested_gpus_per_job": 1,
+  "replicas": 1,
+  "vCPU": 4,
+  "host_memory_GiB": 64,
+  "maximum_program_seconds": 5400,
+  "maximum_restarts": 0,
+  "other_account_gpu_occupancy": "User reported 1-3 GPUs; one extra GPU bounds combined use at four.",
+  "quota_visibility": "User-quota UI denied iam.user.list; do not infer numeric remaining quota. Scheduler accepted the single-GPU submissions.",
+  "attempts": [
+    {
+      "label": "pilot-a",
+      "job_uid": "501d2bcd80874d4dad73a7ddcd6a4ee9",
+      "created_at": "2026-11-06T16:54:12+08:00",
+      "platform_terminal_at": "2026-11-06T16:54:54+08:00",
+      "platform_status": "failed",
+      "worker_status": "failed",
+      "new_training_updates": 0,
+      "cause": "Original CRLF CSV hash differs from frozen LF study hash; original data preserved."
+    },
+    {
+      "label": "pilot-b",
+      "job_uid": "214ff2e74ca64c46838631e28b95a4cf",
+      "created_at": "2026-11-06T17:10:04+08:00",
+      "last_failure_log_at": "2026-11-06T17:12:37.653+08:00",
+      "platform_status": "failed",
+      "worker_log_status": "failed",
+      "new_training_updates": 0,
+      "cause": "GitHub port 443 timed out while retrieving a promised .gitattributes blob during checkout."
+    },
+    {
+      "label": "pilot-c",
+      "job_uid": "fe7e5c085ec14d14afdeb1524c2b83c1",
+      "created_at": "2026-11-06T17:20:32+08:00",
+      "platform_status": "running",
+      "source_recovery": "New checkout reads preserved A/B object stores; repair blob verified by SHA256 and Git object ID; no GitHub request.",
+      "observed_stage": "CUDA/Warp initialization and kernel compilation for full55 parent baseline",
+      "training_updates_verified_at_this_snapshot": 0,
+      "pilot_plan": "Four old-replay fractions, seed100 excluded from main seeds, 100 updates each.",
+      "main_results": false
+    }
+  ],
+  "LF_conversion_validation": {
+    "old_motion_count": 40,
+    "all_original_to_study_hashes_matched": true,
+    "numeric_csv_tokens_modified": false,
+    "historical_source_files_modified": false
+  },
+  "limitations": [
+    "Running status and compiled CUDA kernels do not establish completed optimizer updates.",
+    "Main training budget remains unfrozen until measured pilot timing and memory are available.",
+    "Final platform state and resource release of pilot C still require verification."
+  ]
+}

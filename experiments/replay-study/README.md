@@ -47,9 +47,16 @@ were 0.844512 and 0.460141. This gate is not strict tracking/contact success.
 The CPU numbers must not be combined with historical CUDA results.
 
 `evidence/engineering-20261106.json` records the executed artifacts and limits.
-No new GPU job has been submitted: live account activity/quota could not be
-read because the cloud console connection timed out. The formal budget is
-unfrozen. The 2,000-update / 7,200-second values are provisional, not results.
+The initial CPU session could not access the cloud console. After login was
+restored, a single-GPU pilot was submitted. Attempt A stopped before updates
+because original CRLF motion files differed bytewise from the frozen LF study
+inputs. All 40 conversions were verified against both hashes; original files
+remain unchanged. Attempt B stopped during a GitHub lazy-object fetch. Attempt
+C uses the preserved A/B Git object caches and the exact published repair blob,
+with a SHA-verified checkout and no network fetch. See
+`evidence/gpu-launch-20261106.json` for job identities and observed states.
+No formal replay comparison is complete. The budget remains unfrozen; the
+2,000-update / 7,200-second values are provisional, not results.
 
 ## Reproduce and continue
 
