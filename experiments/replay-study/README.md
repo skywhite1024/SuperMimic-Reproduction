@@ -153,3 +153,11 @@ Download console logs as JSONL(.gz), then recover complete, SHA-checked JSON
 receipts with `python experiments/replay-study/collect_exports.py LOG.jsonl.gz
 --output NEW_DIRECTORY`. Queue time and billed GPU usage remain separate from
 measured program time.
+
+Execution snapshot (2026-11-06 18:06:53 Asia/Shanghai): formal job
+`256f172e0c1548358245119caca04c9f` is running from source commit
+`b6c3224d7a59f28bb69ae8bdc6a506b6db45d407`. The first condition has at least
+250 logged updates, including 50 joint policy updates; no formal condition or matrix is claimed complete. Exact
+pilot receipts were downloaded and verified (`gpu-pilot-complete-20261106.json`):
+100 updates took 91.76-95.75 seconds per trial; peak CUDA reserved memory was
+4.014 GiB. See `evidence/main-launch-20261106.json` for the launch snapshot.

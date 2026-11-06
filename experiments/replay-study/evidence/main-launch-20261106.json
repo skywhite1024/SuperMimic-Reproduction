@@ -1,0 +1,137 @@
+{
+  "status": "running_first_main_condition",
+  "observed_at": "2026-11-06T18:06:53.931+08:00",
+  "job_uid": "256f172e0c1548358245119caca04c9f",
+  "name": "sm-g1-replay-main-260010076-1106e",
+  "created_at": "2026-11-06T18:02:41+08:00",
+  "source_commit": "b6c3224d7a59f28bb69ae8bdc6a506b6db45d407",
+  "plan_sha256": "78d48ff2b031f9f8ee2b619e27414c8e40fcbfb8b5d7d436360a5e572793a28e",
+  "gpus": 1,
+  "max_restarts": 0,
+  "program_max_seconds": 108000,
+  "condition_updates": 2000,
+  "wm_only_updates": 200,
+  "planned_conditions": 12,
+  "formal_complete_conditions": 0,
+  "first_condition": "main-e-rho000-seed0",
+  "actual_updates_verified": 250,
+  "formal_matrix_complete": false,
+  "pilot_full_receipts_verified_locally": true,
+  "pilot_wall_seconds": [
+    95.75119515880942,
+    95.51848186552525,
+    91.76125290244818,
+    92.95639837160707
+  ],
+  "pilot_peak_reserved_GiB": 4.013671875,
+  "verified_console_log_sha256": "059cb7f7d18dfef8edf2ec5b87196725d1a1f36cde3e54e9a3533461d79e4860",
+  "main_start_export": {
+    "file_sha256": {
+      "experiments/replay-study/plan.json": "78d48ff2b031f9f8ee2b619e27414c8e40fcbfb8b5d7d436360a5e572793a28e",
+      "experiments/replay-study/runs/main-block-main-e/receipt.json": "2aa5bc5a27327b091c245f91589e260131b91602748d0b763a5c92b59ae336bd"
+    },
+    "files": {
+      "experiments/replay-study/plan.json": {
+        "additional_motion_count": 15,
+        "budget_decision": "experiments/replay-study/evidence/main-budget-20261106.json",
+        "collection_old_fraction": 0.5,
+        "collection_rule": "group-balanced, uniform clip and nonterminal frame; first reset covers every clip with an 80-slot balanced bootstrap",
+        "common_training": {
+          "buffer_steps": 300,
+          "ckpt_every": 500,
+          "compile": false,
+          "critic_epochs": 2,
+          "critic_minibatches": 2,
+          "log_every": 25,
+          "lr": 5e-05,
+          "num_envs": 1024,
+          "pi_batch": 512,
+          "warmup_steps": 64,
+          "wm_batch": 512,
+          "wm_batches": 4
+        },
+        "continuous_and_hardware": "optional, separate validation; no hardware execution authorized by this runner",
+        "evaluation": "same GPU backend and raw references; full 40/15 denominators, original full-length normalized returns, failures and tracking errors; keep CPU engineering results separate",
+        "main_budget_frozen": true,
+        "normalizers": "frozen at common parent",
+        "observation_dim": 99,
+        "old_motion_count": 40,
+        "old_replay_fractions": [
+          0.0,
+          0.25,
+          0.5,
+          0.75
+        ],
+        "parent_iteration": 16000,
+        "parent_name": "lafan40-full",
+        "parent_path": "implementation/continuation-20261025-a/downloaded/policy/full_016000.pt",
+        "parent_sha256": "0afcca9af97bd9db1f2dd083875898f962acab0b0a70c7313b221e575b70b05b",
+        "phase": "main_budget_frozen_before_main_outcomes",
+        "pilot": {
+          "max_seconds": 900,
+          "seed": 100,
+          "steps": 100,
+          "wm_warmup": 20
+        },
+        "provisional_main": {
+          "max_seconds": 7200,
+          "steps": 2000,
+          "wm_warmup": 200
+        },
+        "reference_variant": "raw",
+        "replay_rule": "group, uniform clip, uniform eligible replay start; preserve native history padding and done masks",
+        "reward": "unchanged native 99D MDP",
+        "same_fraction_for_world_model_and_policy_starts": true,
+        "study": "G1 replay allocation, course proposal 2026-11-06",
+        "total_gpu_hour_ceiling": 48,
+        "training_seeds": [
+          0,
+          1,
+          2
+        ]
+      },
+      "experiments/replay-study/runs/main-block-main-e/receipt.json": {
+        "budget_gate": "all four 100-update pilots under 180s and 70GiB reserved; main fixed at 2000/200",
+        "gpu": "NVIDIA H100 80GB HBM3",
+        "label": "main-e",
+        "packages": {
+          "mujoco": "3.11.0",
+          "torch": "2.14.1",
+          "unilab": "1.5.1",
+          "warp-lang": "1.16.0"
+        },
+        "pilot_timing_memory": [
+          {
+            "peak_cuda_allocated_bytes": 3941201408,
+            "peak_cuda_reserved_bytes": 4309647360,
+            "wall_seconds": 95.75119515880942
+          },
+          {
+            "peak_cuda_allocated_bytes": 3932922880,
+            "peak_cuda_reserved_bytes": 4309647360,
+            "wall_seconds": 95.51848186552525
+          },
+          {
+            "peak_cuda_allocated_bytes": 3934545408,
+            "peak_cuda_reserved_bytes": 4309647360,
+            "wall_seconds": 91.76125290244818
+          },
+          {
+            "peak_cuda_allocated_bytes": 3932926976,
+            "peak_cuda_reserved_bytes": 4309647360,
+            "wall_seconds": 92.95639837160707
+          }
+        ],
+        "plan_sha256": "78d48ff2b031f9f8ee2b619e27414c8e40fcbfb8b5d7d436360a5e572793a28e",
+        "python": "3.12.3 (main, Feb  4 2025, 14:48:35) [GCC 13.3.0]",
+        "runs": [],
+        "source_commit": "b6c3224d7a59f28bb69ae8bdc6a506b6db45d407",
+        "stages": [],
+        "status": "running",
+        "wall_seconds": 13.631735939532518
+      }
+    }
+  },
+  "resource_release": "Main worker active; pilot C worker terminal success. Formal resource release pending.",
+  "policy_updates_minimum_verified": 50
+}
