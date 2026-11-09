@@ -1,0 +1,45 @@
+{
+  "schema_version": "sports-video-frontend-transfer-validation/1.0",
+  "date": "2026-11-10",
+  "scope": "Source transfer only. No original data processing, model loading, GPU inference, retargeting, training or cloud action was rerun.",
+  "checks": [
+    {
+      "file": "prepare_gvhmr_identity.py",
+      "syntax_compile": "passed",
+      "help_exit_code": 0,
+      "help_usage": "usage: prepare_gvhmr_identity.py [-h] --video VIDEO",
+      "research_original_hash_unchanged": true
+    },
+    {
+      "file": "run_gvhmr_fixed_identity.py",
+      "syntax_compile": "passed",
+      "help_exit_code": 0,
+      "help_usage": "usage: run_gvhmr_fixed_identity.py [-h] --source-root SOURCE_ROOT",
+      "research_original_hash_unchanged": true
+    },
+    {
+      "file": "retarget_g1_headless.py",
+      "syntax_compile": "passed",
+      "help_exit_code": 0,
+      "help_usage": "usage: retarget_g1_headless.py [-h] --source-root SOURCE_ROOT",
+      "research_original_hash_unchanged": true
+    },
+    {
+      "file": "audit_g1_mapping.py",
+      "syntax_compile": "passed",
+      "help_exit_code": 0,
+      "help_usage": "usage: audit_g1_mapping.py [-h] --source-xml SOURCE_XML --runtime-xml",
+      "research_original_hash_unchanged": true
+    }
+  ],
+  "json_metadata_parses": true,
+  "published_file_types_only": [
+    ".py",
+    ".md",
+    ".json"
+  ],
+  "upstream_sources_assets_models_and_media_included": false,
+  "machine_absolute_paths_in_publication_text": false,
+  "research_originals_preserved": true,
+  "committed": false
+}

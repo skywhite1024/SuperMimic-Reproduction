@@ -1,0 +1,45 @@
+{
+  "status": "verified_cuda_interface_and_real_updates",
+  "scope": "existing engineering motions only; no sports inference/training/acceptance result",
+  "source_payload_sha256": "560897a164b5eba96c0a8cf27569eb1e01335eca9b6f50e15678d75fc452055f",
+  "complete_cloud_receipt_sha256": "9c0d4fe5a60d4aaa78fd75abf4cc67e9d212029fbab17b7228e492128d98eac6",
+  "reported_cloud_checkpoint_readback": true,
+  "local_checkpoint_bytes_downloaded": false,
+  "GPU": "NVIDIA H100 80GB HBM3",
+  "parent_sha256": "0afcca9af97bd9db1f2dd083875898f962acab0b0a70c7313b221e575b70b05b",
+  "stages": [
+    {
+      "feedback": "F0",
+      "new_updates": 20,
+      "policy_updates": 16,
+      "new_sim_transitions": 14592,
+      "new_decoder_column_max_abs": 0.0,
+      "normalizer_tensors_unchanged": true,
+      "initial_policy_identity": {
+        "max_abs_error": 1.6689300537109375e-06,
+        "absolute_tolerance": 2e-05,
+        "nonzero_xy_tested": true,
+        "exact_bitwise_equality_claimed": false
+      },
+      "peak_cuda_reserved_bytes": 1556086784,
+      "checkpoint_sha256": "ae2a57ab0d5c5ce30352a18099e054e4fbc1cbda5b4bee8049db621e1bf66b84"
+    },
+    {
+      "feedback": "F1",
+      "new_updates": 20,
+      "policy_updates": 16,
+      "new_sim_transitions": 14592,
+      "new_decoder_column_max_abs": 0.0005736961029469967,
+      "normalizer_tensors_unchanged": true,
+      "initial_policy_identity": {
+        "max_abs_error": 1.6689300537109375e-06,
+        "absolute_tolerance": 2e-05,
+        "nonzero_xy_tested": true,
+        "exact_bitwise_equality_claimed": false
+      },
+      "peak_cuda_reserved_bytes": 1556086784,
+      "checkpoint_sha256": "125721ae01cce8c0042cd5109af57ac0b40bcf158ad28acbc7cebf7e1f1ebff1"
+    }
+  ],
+  "post_run_change": "Added sub-500-character chunked receipt logging; CPU byte roundtrip verified, no second training claimed."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": "sports-video-frontend-transfer/1.0",
+  "date": "2026-11-10",
+  "source_workspace_relative_directory": "research/sports-video-execution-20261110/frontend-source",
+  "destination_repository_relative_directory": "experiments/sports-video/frontend",
+  "algorithm_changes": false,
+  "research_originals_and_receipts_preserved": true,
+  "files": [
+    {
+      "name": "prepare_gvhmr_identity.py",
+      "research_original_sha256": "173ba49b6a82cbed185f8189a3f78c9ab90416b3e7149a70c670bd3690586ceb",
+      "publication_sha256": "7988b935c01ff583cc2367998d760313541aeda5d5ddbf12842d6c16ac2e4982",
+      "change": "Add --gvhmr-source-root for --write-bbx-pt and use it instead of a sibling checkout default."
+    },
+    {
+      "name": "run_gvhmr_fixed_identity.py",
+      "research_original_sha256": "edcc0290efaf21340f014b65e238f34d7a385464c2e3146b034e2f011bc8bc66",
+      "publication_sha256": "06b49a5044403eb602a3b027506b48590ac6e9ea516246d599076847555d97bd",
+      "change": "Make --source-root explicit and required."
+    },
+    {
+      "name": "retarget_g1_headless.py",
+      "research_original_sha256": "920abcd0b3cd07b6077e56dd9130a8421b8fac2f3c8b9a0c60f703528dd9867a",
+      "publication_sha256": "1ed8755ef1951c78927387fd2fb9b4e06e4add7f75b925f37521f9649579adc6",
+      "change": "Make --source-root and --mapping-audit explicit and required."
+    },
+    {
+      "name": "audit_g1_mapping.py",
+      "research_original_sha256": "412e36aacd78fa5fe9791b19e13e83cda8e94d5d22e8a789fb73868b7ea45d73",
+      "publication_sha256": "412e36aacd78fa5fe9791b19e13e83cda8e94d5d22e8a789fb73868b7ea45d73",
+      "change": "Byte-for-byte copy."
+    }
+  ],
+  "verification_scope": "CLI --help and py_compile only after transfer; previous real preprocessing and MuJoCo evidence reused; no processing or inference rerun."
+}

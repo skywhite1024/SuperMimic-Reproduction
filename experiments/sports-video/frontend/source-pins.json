@@ -1,0 +1,127 @@
+{
+  "schema_version": "sports-video-frontend-source-pins/1.0",
+  "recorded_date": "2026-11-10",
+  "repositories": [
+    {
+      "name": "GVHMR",
+      "url": "https://github.com/zju3dv/GVHMR.git",
+      "commit": "ee960bb6e2ea2d381aa97f08e9b71ef320b624b1",
+      "sparse_directories": [
+        "docs",
+        "hmr4d",
+        "tools"
+      ],
+      "critical_files": [
+        {
+          "path": "tools/demo/demo.py",
+          "sha256": "5b0f9d5671bb0776ccde5acf2963bdd56fbcdccbc12572a7a03d3d986fe62f59"
+        },
+        {
+          "path": "hmr4d/configs/demo.yaml",
+          "sha256": "dc6c4a41fd40b7cffdb49c1fe37bf779fd48d400f7f04a2e17095d7be4888628"
+        },
+        {
+          "path": "hmr4d/utils/preproc/tracker.py",
+          "sha256": "8ff138321a98129ea9538ee55fa89695e9cc82431d94e5529290a0670c574362"
+        },
+        {
+          "path": "hmr4d/utils/body_model/smplx_lite.py",
+          "sha256": "b84b8a0a9da565347d1084c7322ba485aa12e14a84c3de44c016ab10bf3abaf1"
+        },
+        {
+          "path": "docs/INSTALL.md",
+          "sha256": "e4046db724bcfbc569e752e1961ead06dac0f87fb511ff0dd8c92b1482ab491d"
+        },
+        {
+          "path": "requirements.txt",
+          "sha256": "6d8b5d07dbd63f67483c8eafd1977476606e95966eb60cc8f3b09130bd432921"
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "39ada5d55fa388ae354b06f952865129cf4f8c60e0948b51a6887efa088c1ce6"
+        }
+      ]
+    },
+    {
+      "name": "GMR",
+      "url": "https://github.com/YanjieZe/GMR.git",
+      "commit": "25f56db79ac411258b377b6d4ccba0c8ff3372ac",
+      "sparse_directories": [
+        "assets/unitree_g1",
+        "general_motion_retargeting",
+        "scripts",
+        "third_party/poselib"
+      ],
+      "critical_files": [
+        {
+          "path": "scripts/gvhmr_to_robot.py",
+          "sha256": "3294cf9cb318712dd032462fd62ce1c207598d28867df6255914028cde0e65bc"
+        },
+        {
+          "path": "general_motion_retargeting/utils/smpl.py",
+          "sha256": "681c2803df11e25e0eda18b78b0e8fcb1cadb7990b1c27d4ef410e02f9a01bcb"
+        },
+        {
+          "path": "general_motion_retargeting/motion_retarget.py",
+          "sha256": "53dd6a2f88eab54f8a0575955f721c9861718c43566cfcb872235e392f156742"
+        },
+        {
+          "path": "general_motion_retargeting/params.py",
+          "sha256": "7865e2251ca4917bb5f412d23533652f6d1bf9d8af450d26305a5d5dc054271a"
+        },
+        {
+          "path": "general_motion_retargeting/ik_configs/smplx_to_g1.json",
+          "sha256": "e34e04804e19e54a34aae6de2bdc166b12a06dbbbcfd149cf687af56ad437797"
+        },
+        {
+          "path": "assets/unitree_g1/g1_mocap_29dof.xml",
+          "sha256": "943eb0d5e24dad6cb029d3331daf85c139c8f5d8ce9c62e751e3ff69a0e44416"
+        },
+        {
+          "path": "assets/unitree_g1/LICENSE",
+          "sha256": "6b1b754f76cd8c68f170513277737703cbd8f0872b701ae6124f4be4a3ae7ed8"
+        },
+        {
+          "path": "pyproject.toml",
+          "sha256": "d64d79011079229ecc1f015a3494213e77a77b3b5330f0da2b5932562e8b300e"
+        },
+        {
+          "path": "README.md",
+          "sha256": "963f34b1fb91473ff008466030cae9de857665bba9cd191cdf774814d78cff6e"
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "854bc18609996fb5e427ef8d28a9c7b1bbbe2b76b48f218ea1467823e0258fd4"
+        }
+      ]
+    }
+  ],
+  "upstream_source_vendored": false,
+  "model_files_vendored": false,
+  "robot_assets_vendored": false,
+  "required_headless_gvhmr_model_paths_relative_to_checkout": [
+    "inputs/checkpoints/body_models/smplx/SMPLX_NEUTRAL.npz",
+    "inputs/checkpoints/gvhmr/gvhmr_siga24_release.ckpt",
+    "inputs/checkpoints/hmr2/epoch=10-step=25000.ckpt",
+    "inputs/checkpoints/vitpose/vitpose-h-multi-coco.pth"
+  ],
+  "gmr_body_model": "Explicit --body-model-root and --body-model-ext npz|pkl; the licensed GVHMR SMPLX_NEUTRAL.npz may be reused.",
+  "license_boundaries": {
+    "no_model_registration_or_terms_acceptance": true,
+    "no_gated_weights_downloaded": true,
+    "GVHMR_source_license": "educational research nonprofit only; modifications open-source and non-commercial; LICENSE retained",
+    "GMR_source_license": "MIT",
+    "GMR_Unitree_G1_assets_license": "BSD-3-Clause (Unitree)",
+    "body_models": "User must provide appropriately licensed SMPL/SMPL-X files; no redistribution in publication repo"
+  },
+  "environments": {
+    "GVHMR_official": "Linux x86_64 Python 3.10, torch 2.3.0+cu121, torchvision 0.18.0+cu121, pytorch3d 0.7.6 official cp310 Linux wheel; requirements.txt pinned core; not installed here",
+    "GMR_plan": "Separate Python 3.10 environment; pip install -e ./GMR plus qpsolvers[daqp]; pinned source pyproject otherwise uses partly unpinned dependencies. Record pip freeze and direct_url before inference. Not installed or validated here.",
+    "local_mapping_mujoco_version": "3.11.0",
+    "local_inference_gpu_environment_verified": false
+  },
+  "mapping_evidence": "provenance/g1-mapping-audit.json",
+  "preprocessing_evidence": "provenance/preprocessing-summary.json",
+  "original_research_contract_workspace_relative_path": "research/sports-video-execution-20261110/frontend-source/source-contract.json",
+  "original_research_contract_sha256": "ea3fbbcbf9d1c3bb607d8228e1b53416d0fdb8e242edff082970815fe4498bab"
+}

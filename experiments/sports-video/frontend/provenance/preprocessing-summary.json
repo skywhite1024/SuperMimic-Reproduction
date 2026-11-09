@@ -1,0 +1,214 @@
+{
+  "schema_version": "sports-video-frontend-preparation-evidence/1.0",
+  "measured_date": "2026-11-10",
+  "scope": "Local source-video/PTS/crop preparation snapshot only; no 3D inference, retarget IK, training, or physical-success claim.",
+  "publication_content": "Aggregate measurements and artifact hashes only; no videos, images, poses, model data, upstream assets or upstream source are included.",
+  "workspace_root_hint": "The parent SuperMimic workspace; source artifacts are not distributed in this repository.",
+  "original_summary_path": "research/sports-video-execution-20261110/frontend-source/prepared/full-clips-summary.json",
+  "original_summary_sha256": "014e5431d7a4902098ce1337d4f2aee2ba5054adc6464e51688daaa5ee95dbee",
+  "original_validation_path": "research/sports-video-execution-20261110/frontend-source/prepared/full-preparation-validation.json",
+  "original_validation_sha256": "76d848671b42cec71207f59281d65785ba0e7b055fd3fc81516487c9fd99721b",
+  "total_source_frames": 1632,
+  "total_30hz_frames": 1956,
+  "clips": [
+    {
+      "clip_id": "fb20k_0044_rally_000",
+      "status": "model_ready_except_weights",
+      "frame_count": 428,
+      "source_identity_rejected_frames": 2,
+      "target_identity_rejected_frames": 2,
+      "unresolved_target_bbox_frames": 0,
+      "offline_retrospective_source_frames": [
+        0,
+        1
+      ],
+      "interpolated_source_bbox_frames": [],
+      "crop_duration_s": 0.006666666666667709,
+      "complete_source_frame_interval_selected": true,
+      "bbx_pt_sha256": "9a234638c8746abf55512b5bc5e1593541f545ce31720b916e449b9d6252a382",
+      "source_frames": 357,
+      "source_video_sha256": "ad9361a7f42826e427bf3aae2105d3c93283910403496321f7a694aa4ef47c41",
+      "prepared_video_sha256": "b822b79db3572c5d5b14cc58f6ba179faefb17b456fa093882524629fbb7c2aa",
+      "prepared_manifest_sha256": "5d536fbeba38b9b114e3ecea0e256b89b28731153e0d33295bf809f77cbd447a",
+      "source_pose_ledger_sha256": "0daf7028066f2000bf730c004b0c62baa370d61bf5b2efed5416d677b189c5a0",
+      "frame_map_sha256": "705de7191d4ef2f93ef371e6bd6055922a2e0a912496be553e9e1a76367cf836",
+      "receipt_sha256": "14ffad2fb1ed3a391c76e8b36faeb0681f2a0653be43435dfe114bb374ce153c",
+      "artifact_workspace_relative_directory": "research/sports-video-execution-20261110/frontend-source/prepared/fb20k_0044_rally_000_full_30hz",
+      "source_timestamp_interval_s": [
+        0.0,
+        14.24
+      ],
+      "target_timestamp_interval_s": [
+        0.0,
+        14.233333333333333
+      ],
+      "initial_frames_removed": false,
+      "missing_keypoints_filled": false,
+      "ground_anchor_allowed": false
+    },
+    {
+      "clip_id": "fb20k_0044_rally_001",
+      "status": "model_ready_except_weights",
+      "frame_count": 319,
+      "source_identity_rejected_frames": 2,
+      "target_identity_rejected_frames": 2,
+      "unresolved_target_bbox_frames": 0,
+      "offline_retrospective_source_frames": [
+        0,
+        1
+      ],
+      "interpolated_source_bbox_frames": [],
+      "crop_duration_s": 0.0,
+      "complete_source_frame_interval_selected": true,
+      "bbx_pt_sha256": "a49e1f07b8574bcbef0178efae35ec7c04defcab0e18e71e0596f283c0502928",
+      "source_frames": 266,
+      "source_video_sha256": "37e7d85b79befeec9ce4bcaad9072217bbeb5e614d0d3825bb658c9db90500ca",
+      "prepared_video_sha256": "a9b56ed26893f7e39ee27d6e821b306f74c1a5e5149d355e66140a23d5846fc8",
+      "prepared_manifest_sha256": "3b26a1ced32be1c2e98a73b51eab488fd97c0e9a397ed540ca8952d69c23632c",
+      "source_pose_ledger_sha256": "6be5a297ba69fa310298fb4c2b790c302e69f6c6dcd1f0c5f9f50007fe8db9fd",
+      "frame_map_sha256": "38f0c8258acca283456efc960ed39dc60088a45a632df2da062127957f52f9e0",
+      "receipt_sha256": "3bae6b9fb576509fffdca8a44618e6b57d578b307ffcd74a22ffec64ed36c039",
+      "artifact_workspace_relative_directory": "research/sports-video-execution-20261110/frontend-source/prepared/fb20k_0044_rally_001_full_30hz",
+      "source_timestamp_interval_s": [
+        0.0,
+        10.6
+      ],
+      "target_timestamp_interval_s": [
+        0.0,
+        10.6
+      ],
+      "initial_frames_removed": false,
+      "missing_keypoints_filled": false,
+      "ground_anchor_allowed": false
+    },
+    {
+      "clip_id": "fb20k_0045_rally_000",
+      "status": "model_ready_except_weights",
+      "frame_count": 520,
+      "source_identity_rejected_frames": 4,
+      "target_identity_rejected_frames": 4,
+      "unresolved_target_bbox_frames": 0,
+      "offline_retrospective_source_frames": [
+        0,
+        1
+      ],
+      "interpolated_source_bbox_frames": [
+        370,
+        380
+      ],
+      "crop_duration_s": 0.019999999999999574,
+      "complete_source_frame_interval_selected": true,
+      "bbx_pt_sha256": "007bb372c16be19e22eb4f7129e0ec6b2761227dcb3bf2a4f03292134db5f655",
+      "source_frames": 434,
+      "source_video_sha256": "ffd979af7260eaaceddf0732406b7855931f3cfa983f3beb7412f37cb62bbaf0",
+      "prepared_video_sha256": "8a98c77bdcdddb701f01039aff7a06155876afae559bb220a80aaccc65e4d762",
+      "prepared_manifest_sha256": "85388a1c273b7472a5de9e2d885aebc5d2cbbcdd40bb08db03d240d1e8b11c88",
+      "source_pose_ledger_sha256": "ec134b6186d3a843c2f3cd6044e5231708615d1b5855f88f31c97861a99eec51",
+      "frame_map_sha256": "a56db70788ddf28e45fb07eb50bfaf45f2bab6201c8e03e26be1d08e418f04d8",
+      "receipt_sha256": "564d282b833c2befa04a8a4892497f74f1a3e13fe63b8b09a0c09d03ed73803e",
+      "artifact_workspace_relative_directory": "research/sports-video-execution-20261110/frontend-source/prepared/fb20k_0045_rally_000_full_30hz",
+      "source_timestamp_interval_s": [
+        0.0,
+        17.32
+      ],
+      "target_timestamp_interval_s": [
+        0.0,
+        17.3
+      ],
+      "initial_frames_removed": false,
+      "missing_keypoints_filled": false,
+      "ground_anchor_allowed": false
+    },
+    {
+      "clip_id": "fb20k_0045_rally_001",
+      "status": "model_ready_except_weights",
+      "frame_count": 362,
+      "source_identity_rejected_frames": 2,
+      "target_identity_rejected_frames": 2,
+      "unresolved_target_bbox_frames": 0,
+      "offline_retrospective_source_frames": [
+        0,
+        1
+      ],
+      "interpolated_source_bbox_frames": [],
+      "crop_duration_s": 0.0066666666666659324,
+      "complete_source_frame_interval_selected": true,
+      "bbx_pt_sha256": "29f0af3ae469d623bbd1241f4c4f5944e9d3068f87757c05856116ee1e19662e",
+      "source_frames": 302,
+      "source_video_sha256": "6765c18a617b50d667c72eb4fd9845495dab87370069dd573b0d6ddc69eb41b3",
+      "prepared_video_sha256": "b6919881ec33f8a5a128b988d1d0b76d5801b21ef28625ceb509333e258f1440",
+      "prepared_manifest_sha256": "2bef0ebe18a9cdfb648d7e02fcbb508bc47bd4dcf89777e6c5976e5bb6225302",
+      "source_pose_ledger_sha256": "7a443e959a74139904a812291cd28752d9fa996e7d970502026a07508225240d",
+      "frame_map_sha256": "9a6ef4ed5dc6a8ca19cc26f913136fefbf9c4dfc4eb619cb382f8db02a4f2e93",
+      "receipt_sha256": "9cccc5b709e312af36ddc4062b29321ec40ff0bf01144f38d98f7b97f0501cc8",
+      "artifact_workspace_relative_directory": "research/sports-video-execution-20261110/frontend-source/prepared/fb20k_0045_rally_001_full_30hz",
+      "source_timestamp_interval_s": [
+        0.0,
+        12.04
+      ],
+      "target_timestamp_interval_s": [
+        0.0,
+        12.033333333333333
+      ],
+      "initial_frames_removed": false,
+      "missing_keypoints_filled": false,
+      "ground_anchor_allowed": false
+    },
+    {
+      "clip_id": "fb20k_0046_rally_001",
+      "status": "model_ready_except_weights",
+      "frame_count": 327,
+      "source_identity_rejected_frames": 2,
+      "target_identity_rejected_frames": 2,
+      "unresolved_target_bbox_frames": 0,
+      "offline_retrospective_source_frames": [
+        0,
+        1
+      ],
+      "interpolated_source_bbox_frames": [],
+      "crop_duration_s": 0.013333333333333641,
+      "complete_source_frame_interval_selected": true,
+      "bbx_pt_sha256": "cff6371b05246cae29ba59451794cdf6ef41223db6f97f373207b635483fc13d",
+      "source_frames": 273,
+      "source_video_sha256": "08d61b1e75c39a668714c671fdae74b758522636d8da6229b81a9237a7b6f1a3",
+      "prepared_video_sha256": "45f8509da72e068c194928ace77bcf0437b2e6a154a01c9e0e9e3951de100d33",
+      "prepared_manifest_sha256": "77932b5837d4d6b9e58127b3d03053f512c57f799c406da8fb1de3242ed1f8b5",
+      "source_pose_ledger_sha256": "be70dc6c06e4da838b4aae55799305a88cccedd9feccf4a633bfac466af9c03f",
+      "frame_map_sha256": "0a7e048dc2647a1d98ba66763f9ecb0fb8231354cfd586a3f75dd35b6a63f295",
+      "receipt_sha256": "6f4dc8fb5828eae7f16a317affcacc118e786a3d7e2432eb47b34930254fb126",
+      "artifact_workspace_relative_directory": "research/sports-video-execution-20261110/frontend-source/prepared/fb20k_0046_rally_001_full_30hz",
+      "source_timestamp_interval_s": [
+        0.0,
+        10.88
+      ],
+      "target_timestamp_interval_s": [
+        0.0,
+        10.866666666666667
+      ],
+      "initial_frames_removed": false,
+      "missing_keypoints_filled": false,
+      "ground_anchor_allowed": false
+    }
+  ],
+  "actual_checks": {
+    "full_first_clip_wrapper_reached_required_models_error": true,
+    "bbx_pt_written_and_loaded_with_torch": true,
+    "prepared_video_pts_redecoded": true,
+    "original_online_gate_flags_preserved": true,
+    "missing_source_keypoints_still_nan": true,
+    "inference_executed": false
+  },
+  "offline_crop_policy": {
+    "initial_retrospective_max_frames": 2,
+    "later_original_accepted_confirmation_frames": 3,
+    "original_detection_min_confidence": 0.35,
+    "interpolation_max_missing_frames": 1,
+    "interpolation_endpoint_max_span_s": 0.12,
+    "interpolation_endpoint_center_displacement_max_box_height_ratio": 0.75,
+    "raw_identity_mask": "identity_valid",
+    "crop_proposal_mask": "crop_bbox_usable",
+    "keypoints_filled": false,
+    "ground_anchors_allowed": false
+  },
+  "status_meaning": "model_ready_except_weights means crop/video/time inputs are ready; CUDA environment and model outputs have not been validated."
+}

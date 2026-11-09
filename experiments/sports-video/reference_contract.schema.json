@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/sports-reference/1.0",
+  "title": "Auditable G1 reference sidecar; validation is not physical success",
+  "type": "object",
+  "required": ["schema_version", "representation", "coordinate_frame", "world_frame_id", "quaternion_order", "position_unit", "joint_unit", "joint_names", "time", "adaptation"],
+  "properties": {
+    "schema_version": {"const": "sports-reference/1.0"},
+    "representation": {"enum": ["human_metric", "robot_adapted"]},
+    "coordinate_frame": {"const": "z_up_right_handed"},
+    "world_frame_id": {"type": "string", "minLength": 1},
+    "quaternion_order": {"const": "xyzw"},
+    "position_unit": {"const": "m"},
+    "joint_unit": {"const": "rad"},
+    "joint_names": {"type": "array", "minItems": 29, "maxItems": 29, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "time": {
+      "type": "object",
+      "required": ["provenance"],
+      "oneOf": [{"required": ["timestamps_s"], "not": {"required": ["timestamps_path"]}}, {"required": ["timestamps_path"], "not": {"required": ["timestamps_s"]}}],
+      "properties": {
+        "timestamps_s": {"type": "array", "minItems": 2, "items": {"type": "number"}},
+        "timestamps_path": {"type": "string", "minLength": 1},
+        "provenance": {"enum": ["source_pts", "resampled_source_pts", "export_declared_cfr", "unknown"]},
+        "motion_fps": {"type": "number", "exclusiveMinimum": 0},
+        "source_fps": {"type": "number", "exclusiveMinimum": 0},
+        "source_video_sha256": {"$ref": "#/$defs/sha256"},
+        "source_timestamps_sha256": {"$ref": "#/$defs/sha256"},
+        "resampling_evidence": {"type": "string", "minLength": 1}
+      }
+    },
+    "adaptation": {
+      "type": "object", "required": ["root_xy_scale", "time_scale"],
+      "properties": {
+        "root_xy_scale": {"type": "number", "exclusiveMinimum": 0},
+        "time_scale": {"type": "number", "exclusiveMinimum": 0},
+        "description": {"type": "string"}
+      }
+    },
+    "joint_mapping": {
+      "type": "object", "required": ["verified", "source_joint_names", "target_joint_names", "permutation", "sign", "offset_rad", "evidence"],
+      "properties": {
+        "verified": {"type": "boolean"},
+        "source_joint_names": {"$ref": "#/$defs/names"},
+        "target_joint_names": {"$ref": "#/$defs/names"},
+        "permutation": {"type": "array", "minItems": 29, "maxItems": 29, "uniqueItems": true, "items": {"type": "integer", "minimum": 0, "maximum": 28}},
+        "sign": {"type": "array", "minItems": 29, "maxItems": 29, "items": {"enum": [-1, 1]}},
+        "offset_rad": {"$ref": "#/$defs/vector29"},
+        "evidence": {"type": "string", "minLength": 1}
+      }
+    },
+    "robot_xml_sha256": {"$ref": "#/$defs/sha256"},
+    "ik_config_sha256": {"$ref": "#/$defs/sha256"},
+    "joint_velocity_limits_rad_s": {"type": "array", "minItems": 29, "maxItems": 29, "items": {"type": "number", "exclusiveMinimum": 0}},
+    "joint_limits_rad": {"type": "array", "minItems": 29, "maxItems": 29, "items": {"type": "array", "minItems": 2, "maxItems": 2, "items": {"type": "number"}}},
+    "motion_sha256": {"$ref": "#/$defs/sha256"}
+  },
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[0-9a-fA-F]{64}$"},
+    "names": {"type": "array", "minItems": 29, "maxItems": 29, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "vector29": {"type": "array", "minItems": 29, "maxItems": 29, "items": {"type": "number"}}
+  }
+}
