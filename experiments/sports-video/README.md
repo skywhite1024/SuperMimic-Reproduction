@@ -20,7 +20,7 @@ Both policies have 101 observation dimensions and start from the same full 16K c
 - Its full cloud receipt was recovered in 44 chunks and SHA256-verified. Both conditions collected 14,592 transitions and retained all normalizer tensors. F0's added columns remained exactly zero; F1's maximum added weight reached 0.0005736961. See [`engineering-evidence.json`](engineering-evidence.json). Checkpoint readback was verified on the cloud; checkpoint bytes were not downloaded locally.
 - All five full video intervals have real 30 Hz model inputs (1,956 target frames), identity crop caches, and source-PTS maps. The original 2D rejection flags remain available. Two isolated missing crop boxes are explicitly interpolated proposals, not contact or pose ground truth.
 - Compiled MuJoCo checks confirm the 29-DOF GMR/SDK export mapping and 30 forward-kinematics probes. Fifteen GMR joint ranges are narrower; six wrist range differences are rounding within 1e-5 rad. This does not prove dynamic equivalence.
-- The actual five-video GVHMR/GMR references, independent evaluation reference, and sports training results are still pending. Required SMPL/SMPL-X body models have not yet been located or provided.
+- With no SMPL-X model available, an alternative [GEM-X/SOMA-X frontend](frontend/gem-soma/README.md) has processed one complete 428-frame rally on CPU and produced a G1 reference. The unchanged 16K controller failed at 6.92 seconds of a planned 14.22 seconds. Reference contact/velocity quality, the remaining four clips, an independent evaluation reference and sports training are still under investigation; no sports success is claimed.
 
 ## Entry points
 

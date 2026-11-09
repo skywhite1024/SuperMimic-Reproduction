@@ -1,0 +1,150 @@
+{
+  "schema": "gem-soma-source-pins/1",
+  "sources": [
+    {
+      "commit": "4aef1452e5df171deff4f293c08e643eb450981e",
+      "name": "GEM-X",
+      "url": "https://github.com/NVlabs/GEM-X"
+    },
+    {
+      "commit": "d6aa640f7787498009c4e3d57fcc14a243905d10",
+      "version": "0.3.3",
+      "name": "SOMA-X",
+      "url": "https://github.com/NVlabs/SOMA-X"
+    },
+    {
+      "commit": "cbdb2b494a2af82137bf9b6f15122d60167281c4",
+      "name": "soma-retargeter",
+      "url": "https://github.com/NVIDIA/soma-retargeter"
+    }
+  ],
+  "weights": [
+    {
+      "repository": "nvidia/GEM-X",
+      "revision": "b111f2dcf3ebcf57965fd53499cb645dfa5ba25c",
+      "file": "motion_native77_e774_s292175.ckpt",
+      "size": 187134331,
+      "sha256": "c7790f4587e518bcea40cb8281c9be2233d37f6caa668835462542760dcf82aa",
+      "url": "https://huggingface.co/nvidia/GEM-X/resolve/b111f2dcf3ebcf57965fd53499cb645dfa5ba25c/motion_native77_e774_s292175.ckpt"
+    },
+    {
+      "repository": "nvidia/GEM-X",
+      "revision": "b111f2dcf3ebcf57965fd53499cb645dfa5ba25c",
+      "file": "motion_stats_raw.npz",
+      "size": 21320,
+      "sha256": "b7719b634e0fc1f001005605d117d77448c8d4a110923149df58529c68112ed6",
+      "url": "https://huggingface.co/nvidia/GEM-X/resolve/b111f2dcf3ebcf57965fd53499cb645dfa5ba25c/motion_stats_raw.npz"
+    },
+    {
+      "repository": "nvidia/GEM-X",
+      "revision": "b111f2dcf3ebcf57965fd53499cb645dfa5ba25c",
+      "file": "body_config.json",
+      "size": 1086,
+      "sha256": "61c29c72b93f88789ecb7beb21c526c78e92e24ffbce91d91e51984272b26368",
+      "url": "https://huggingface.co/nvidia/GEM-X/resolve/b111f2dcf3ebcf57965fd53499cb645dfa5ba25c/body_config.json"
+    },
+    {
+      "repository": "nvidia/GEM-X",
+      "revision": "b111f2dcf3ebcf57965fd53499cb645dfa5ba25c",
+      "file": "body_video_native77.yaml",
+      "size": 1286,
+      "sha256": "796a306aca61e0c928888a23d74996740795bfa7cd1735bdc184d1e5274a02d7",
+      "url": "https://huggingface.co/nvidia/GEM-X/resolve/b111f2dcf3ebcf57965fd53499cb645dfa5ba25c/body_video_native77.yaml"
+    },
+    {
+      "repository": "nvidia/GEM-X",
+      "revision": "b111f2dcf3ebcf57965fd53499cb645dfa5ba25c",
+      "file": "motion_native77.yaml",
+      "size": 823,
+      "sha256": "5d5dff8ee849d3bcf53c28ce60340114980fe59062fa427c1f343655849cad8d",
+      "url": "https://huggingface.co/nvidia/GEM-X/resolve/b111f2dcf3ebcf57965fd53499cb645dfa5ba25c/motion_native77.yaml"
+    },
+    {
+      "repository": "nvidia/GEM-X",
+      "revision": "b111f2dcf3ebcf57965fd53499cb645dfa5ba25c",
+      "file": "README.md",
+      "size": 13556,
+      "sha256": "bf7350079fd0682d0c63c7beb6bd546b2782002a8bd713a8b14da5a16c1052a7",
+      "url": "https://huggingface.co/nvidia/GEM-X/resolve/b111f2dcf3ebcf57965fd53499cb645dfa5ba25c/README.md"
+    },
+    {
+      "repository": "nvidia/GEM-X",
+      "revision": "b111f2dcf3ebcf57965fd53499cb645dfa5ba25c",
+      "file": "LICENSE",
+      "size": 11387,
+      "sha256": "d1a7d615ab8eff4de143b1456f46dabf232f54daf0fcf9a70442bb6f637a9e95",
+      "url": "https://huggingface.co/nvidia/GEM-X/resolve/b111f2dcf3ebcf57965fd53499cb645dfa5ba25c/LICENSE"
+    },
+    {
+      "repository": "nvidia/SOMA-X",
+      "revision": "d281db2d01553f7230c56e764cec00fe27ef23f7",
+      "file": "SOMA_neutral.npz",
+      "size": 26608121,
+      "sha256": "5829af4a5333abdba5ad449360b868faacee99d395971e62f35c0e7169432b63",
+      "url": "https://huggingface.co/nvidia/SOMA-X/resolve/d281db2d01553f7230c56e764cec00fe27ef23f7/SOMA_neutral.npz"
+    },
+    {
+      "repository": "nvidia/SOMA-X",
+      "revision": "d281db2d01553f7230c56e764cec00fe27ef23f7",
+      "file": "SOMA_template_rig.usda",
+      "size": 28306038,
+      "sha256": "a952cb7bdf4ccd801e355d53122d395b985b69d0d9181439edad5081bb171856",
+      "url": "https://huggingface.co/nvidia/SOMA-X/resolve/d281db2d01553f7230c56e764cec00fe27ef23f7/SOMA_template_rig.usda"
+    },
+    {
+      "repository": "nvidia/SOMA-X",
+      "revision": "d281db2d01553f7230c56e764cec00fe27ef23f7",
+      "file": "SOMA_procedural_transforms.json",
+      "size": 20045,
+      "sha256": "9853e19ab51625ffaa7d9e7ccf0e443272c2740837604e6bacd66604e8edf509",
+      "url": "https://huggingface.co/nvidia/SOMA-X/resolve/d281db2d01553f7230c56e764cec00fe27ef23f7/SOMA_procedural_transforms.json"
+    },
+    {
+      "repository": "nvidia/SOMA-X",
+      "revision": "d281db2d01553f7230c56e764cec00fe27ef23f7",
+      "file": "correctives_model.pt",
+      "size": 70549157,
+      "sha256": "411d061a651051a7a4ec941543495d35eac21e5a7a69c8ce042b89cd12772a43",
+      "url": "https://huggingface.co/nvidia/SOMA-X/resolve/d281db2d01553f7230c56e764cec00fe27ef23f7/correctives_model.pt"
+    },
+    {
+      "repository": "nvidia/SOMA-X",
+      "revision": "d281db2d01553f7230c56e764cec00fe27ef23f7",
+      "file": "README.md",
+      "size": 11019,
+      "sha256": "a799719b05779f38b79f4ab87856c1ef5eff53ea99036a855b54defcc1134407",
+      "url": "https://huggingface.co/nvidia/SOMA-X/resolve/d281db2d01553f7230c56e764cec00fe27ef23f7/README.md"
+    },
+    {
+      "repository": "nvidia/SOMA-X",
+      "revision": "d281db2d01553f7230c56e764cec00fe27ef23f7",
+      "file": "LICENSE",
+      "size": 11387,
+      "sha256": "d1a7d615ab8eff4de143b1456f46dabf232f54daf0fcf9a70442bb6f637a9e95",
+      "url": "https://huggingface.co/nvidia/SOMA-X/resolve/d281db2d01553f7230c56e764cec00fe27ef23f7/LICENSE"
+    },
+    {
+      "repository": "nvidia/GEM-X",
+      "revision": "b111f2dcf3ebcf57965fd53499cb645dfa5ba25c",
+      "file": "vitpose.pth",
+      "size": 3388483384,
+      "sha256": "8e3eec71dbd6bb745eba8c6debe3e4b97bcfd1d01f300099f2eedf50b9a80c8e",
+      "url": "https://huggingface.co/nvidia/GEM-X/resolve/b111f2dcf3ebcf57965fd53499cb645dfa5ba25c/vitpose.pth"
+    },
+    {
+      "repository": "nvidia/GEM-X",
+      "revision": "b111f2dcf3ebcf57965fd53499cb645dfa5ba25c",
+      "file": "body_s240000.ckpt",
+      "size": 3538753341,
+      "sha256": "e244d27f2834eb6382c5f6b9cbf2a38681b685514a1b2e86f8f3d2592d614959",
+      "url": "https://huggingface.co/nvidia/GEM-X/resolve/b111f2dcf3ebcf57965fd53499cb645dfa5ba25c/body_s240000.ckpt"
+    }
+  ],
+  "adapters": {
+    "verify_soma_bvh.py": "7bcbf85231ec4157a16b32a75732370d83ffee0a9eceeff65c1fdd675bb29083",
+    "convert_soma_csv.py": "311b8321c3840e14040c1d50c0c8d09359355cf1ec4df03ee437e14f13c2a66a",
+    "gem_to_soma_bvh.py": "bc9c09df5bc282baf2698b83865f7c1f218132d634ea5b6d1fca3c28d6e9f2bc",
+    "run_gem_fixed_identity.py": "04a801b13bdc8895524f12c79455b5ebea1b787cdeb539b3ba911174392f70dc",
+    "retarget_bvh_probe.py": "d70311e40b2ecfd4f61cdc19446ff9bbb2e5dcf40d121d7de453172efacb742f"
+  }
+}
