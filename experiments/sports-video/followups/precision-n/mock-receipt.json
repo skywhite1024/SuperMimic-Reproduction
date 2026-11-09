@@ -1,0 +1,10 @@
+{
+  "status": "pass",
+  "tests": 3,
+  "errors": 0,
+  "failures": 0,
+  "scope": "CPU mock verifies adapter shape/value preservation and gate bookkeeping only",
+  "cuda_executed": false,
+  "physics_executed": false,
+  "native_equivalence_verified": false
+}

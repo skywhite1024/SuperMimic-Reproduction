@@ -1,0 +1,109 @@
+{
+  "schema": "sports-regression-q-single-followup/1-editable-path-template",
+  "selection": "Selected because J batch parent completed but F0 failed fallAndGetUp1_subject5; outcome-triggered follow-up, not random held-out sampling",
+  "J_trigger": {
+    "parent": {
+      "summary_sha256": "7058bb3b7ca29537e7ff91ca3dab62d12e680f155a940a2f6133b48a6363e86a",
+      "status": "completed",
+      "observed_steps": 8410,
+      "planned_steps": 8410,
+      "norm_return_full_reference": 0.7813516045421114
+    },
+    "f0": {
+      "summary_sha256": "5dda3b7528d6264eae56fb40c3eb1ae33acaa62cad775e64d8988cb522c68b70",
+      "status": "native_hard_failure",
+      "observed_steps": 667,
+      "planned_steps": 8410,
+      "norm_return_full_reference": 0.06633006762347753
+    }
+  },
+  "target_clip": "fallAndGetUp1_subject5",
+  "target_source": {
+    "path": "/path/to/frozen-old40/fallAndGetUp1_subject5.csv",
+    "group": "old",
+    "fps": 30,
+    "sha256": "5e1d46a2e2ce2a35d30968ce6d082651eeec2793272c31b71dac5b25fc1d4c20",
+    "source_frames": 5047,
+    "reference_family": "old40"
+  },
+  "models": [
+    {
+      "id": "parent",
+      "path": "/path/to/existing-I-checkpoints/parent.pt",
+      "sha256": "0afcca9af97bd9db1f2dd083875898f962acab0b0a70c7313b221e575b70b05b",
+      "feedback": "F0",
+      "available": true,
+      "new_updates": 0
+    },
+    {
+      "id": "f0",
+      "path": "/path/to/existing-I-checkpoints/f0.pt",
+      "feedback": "F0",
+      "available": true,
+      "sha256": "899bc2ab11e8247b59f3a57349d492da758a448399740985a0b61a3cce4c41ff",
+      "new_updates": 100
+    },
+    {
+      "id": "f1",
+      "path": "/path/to/existing-I-checkpoints/f1.pt",
+      "feedback": "F1",
+      "available": true,
+      "sha256": "31f3bd442568dc503d9d38d9b88d0708ffca111c5952532eb09df3e3626650da",
+      "new_updates": 100
+    }
+  ],
+  "I_runtime": "/path/to/archived-I-runtime",
+  "I_source_spec": "/path/to/existing-I/evaluation-checkpoints.json",
+  "I_code_sha256": {
+    "evaluate.py": "b9abe5fe336767b855ef5e629730ffb7dc9c863d0d692a63709a76b4af1c20ed",
+    "sports_runtime.py": "93af38f8263bbf40bfd2676d4ff559c8089823072adc2506591f80f3b78e7be6",
+    "runtime-source-lock.json": "39c2bd247ea2f26195fdbd5e609ae7a200c6a3297983aa4de3766ba034837c13"
+  },
+  "uploaded_code_sha256": {
+    "run_regression_q.py": "3d691f6c873ddb6c1e2c07ee0055391938de404010a7250a33693a920401507d",
+    "worker_q.py": "47e44a36d8ebfb19d9f8ce2f88a1ef8c3f0e9a159ebe967c06e05c1a40b58b5e"
+  },
+  "cached_runtime": "/path/to/frozen-runtime-root",
+  "uni": "/path/to/frozen-runtime-root/implementation/uni",
+  "python": "/path/to/compatible-venv/bin/python",
+  "upload": "/path/to/this/followups/single-q",
+  "output": "/path/to/fresh-Q-output",
+  "resources": {
+    "H100": 2,
+    "CPU": 8,
+    "memory_GiB": 128,
+    "replicas": 1,
+    "max_restarts": 0
+  },
+  "budget": {
+    "overall_seconds": 900,
+    "outer_timeout_seconds": 890,
+    "kill_after_seconds": 10,
+    "coordinator_seconds": 860,
+    "per_model_max_seconds": 600,
+    "gpu0": [
+      "parent"
+    ],
+    "gpu1": [
+      "f0",
+      "f1"
+    ]
+  },
+  "protocol": {
+    "num_envs_each": 1,
+    "seed": 0,
+    "action_mode": "raw",
+    "start_frame": 0,
+    "max_steps": null,
+    "auto_reset": false,
+    "reward_or_termination_changed": false,
+    "checkpoint_precision_policy_changed": false,
+    "normalizers_changed": false,
+    "full_failure_prefixes_retained": true,
+    "formal_experiment": false,
+    "independent_E_star": false,
+    "training_performed": false
+  },
+  "actual_GPU_execution": "template_only_not_executed",
+  "actual_Q_plan_sha256": "237bf206f6bd16a044aeeb716f9b2630e9d28780bb5a00f4c8da4885877d9b5b"
+}

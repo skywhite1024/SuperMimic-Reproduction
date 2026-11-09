@@ -1,0 +1,10 @@
+{
+  "status": "pass",
+  "tests_run": 6,
+  "failures": 0,
+  "errors": 0,
+  "scope": "offline mock accounting only",
+  "cuda_executed": false,
+  "mujoco_executed": false,
+  "native_batch_equivalence_verified": false
+}

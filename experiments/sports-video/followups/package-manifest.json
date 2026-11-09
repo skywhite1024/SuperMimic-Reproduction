@@ -1,0 +1,95 @@
+{
+  "scope": "Worktree source/evidence packaging; new first-input helper AST and CPU tensor bookkeeping only; no CUDA, training, simulation, or repeated existing tests",
+  "I_sources_unchanged": true,
+  "executed_J_Q_N_sources_byte_identical": true,
+  "prohibited_binary_asset_count": 0,
+  "local_doc_links_checked": true,
+  "file_count": 21,
+  "bytes": 265974,
+  "files": {
+    "batch-j/evaluate_batch.py": {
+      "sha256": "d8f61e8f1ad3c7374993429c7180d68e3eeddd6e2d6fa4ab1046005cff50d0b5",
+      "bytes": 20971
+    },
+    "batch-j/mock-loop-receipt.json": {
+      "sha256": "215487f50d1daa8bb184294b2ff0e9bcc9551f113983eddd19378333ecb7fc3a",
+      "bytes": 418
+    },
+    "batch-j/mock-receipt.json": {
+      "sha256": "52d49825a3bc1e82c36332acb59a708c2cf4dad853cb5748d47edf7c98daa320",
+      "bytes": 226
+    },
+    "batch-j/run_reused_i.py": {
+      "sha256": "f36cf8aed8d0e8f9b9ed384ba6efa8c52476e2040cda6dce2da99c5e5ea0cd2d",
+      "bytes": 7803
+    },
+    "batch-j/test_batch_mock.py": {
+      "sha256": "14fbaa2a7ec58a2c0cc98bfdaa0ec8b35f3b7a1591fc78430302cac5a49562e2",
+      "bytes": 3827
+    },
+    "batch-j/test_mock_environment_loop.py": {
+      "sha256": "68fed83e046291bbd1bed74ae520f4e1c179d5cc66d944ab5f45c2cb497c8779",
+      "bytes": 5136
+    },
+    "evidence/j-actual.json": {
+      "sha256": "67b07e8b9c03c45f394f6231ce4b89e93ca2c5349ab326218d704bfd7a245ca7",
+      "bytes": 117443
+    },
+    "evidence/n-status.json": {
+      "sha256": "db667342aca05407b22739930fad95ec19a822dcc1816002a7688efaa0e276f3",
+      "bytes": 24556
+    },
+    "evidence/q-actual.json": {
+      "sha256": "2cd8abef93e7aedd453dade2e7ae9928a70fc8504531c05954a9d0a5f8bfa95a",
+      "bytes": 8106
+    },
+    "evidence/q-transport-hashes.json": {
+      "sha256": "c2a5493072e2f885cea5407bce2102e0cfa2d63e635dcb5e89bdd3b635a2bce1",
+      "bytes": 706
+    },
+    "frozen-i/runtime-source-lock.json": {
+      "sha256": "39c2bd247ea2f26195fdbd5e609ae7a200c6a3297983aa4de3766ba034837c13",
+      "bytes": 8440
+    },
+    "precision-n/diagnose_first_input.py": {
+      "sha256": "34b8fd2b60aaaa3fcebe891ff08af8a8bc40de27243b56a0f2414a0abd99262f",
+      "bytes": 18829
+    },
+    "precision-n/diagnose_precision.py": {
+      "sha256": "498df537c0a89807956a36bf15ad83180d670a928d4d04dfb8c801c566f8dc7d",
+      "bytes": 17498
+    },
+    "precision-n/first-input-preparation-check.json": {
+      "sha256": "e197776c19ca31ea319fd2c9d9d30dbd8e7ec908e1ed8c53dbbea9b9d18303d1",
+      "bytes": 925
+    },
+    "precision-n/mock-receipt.json": {
+      "sha256": "d63f847e2bc23c693c5ee148d5d7e8147f994c1ee3863921ee50f8535d520eea",
+      "bytes": 265
+    },
+    "precision-n/test_precision_mock.py": {
+      "sha256": "ddc639db752798e60d4727646440466cd88fa0fd61a9d97b94b543ac04aae29d",
+      "bytes": 3228
+    },
+    "README.md": {
+      "sha256": "cc7b7d1e3588453f83df83e5000cb7e312fab94e5dc3a0c0fd7061f605c789c7",
+      "bytes": 8789
+    },
+    "single-q/q-plan.example.json": {
+      "sha256": "1b3bd10bbc4c098deef1d2e9aaf9e43eaa8e0e790067a1a25b5551fbc04ae3b6",
+      "bytes": 3783
+    },
+    "single-q/run_regression_q.py": {
+      "sha256": "3d691f6c873ddb6c1e2c07ee0055391938de404010a7250a33693a920401507d",
+      "bytes": 6393
+    },
+    "single-q/worker_q.py": {
+      "sha256": "47e44a36d8ebfb19d9f8ce2f88a1ef8c3f0e9a159ebe967c06e05c1a40b58b5e",
+      "bytes": 3439
+    },
+    "source-provenance.json": {
+      "sha256": "2fbf84d864a1600b3dd206c519eb67aaee1fe0c0ca0b29b8360e70c66bada30d",
+      "bytes": 5193
+    }
+  }
+}

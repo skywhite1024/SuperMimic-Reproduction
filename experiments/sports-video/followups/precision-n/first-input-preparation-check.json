@@ -1,0 +1,17 @@
+{
+  "status": "prepared_static_and_CPU_tensor_checks_passed",
+  "script_sha256": "34b8fd2b60aaaa3fcebe891ff08af8a8bc40de27243b56a0f2414a0abd99262f",
+  "checks": [
+    "AST parsed",
+    "no physical step or backward call",
+    "native 101D observation and 73D per-frame goal slices cover exactly",
+    "differences localize seeded perturbations in actual saved N input tensors",
+    "repeat helper accepts history and frame tensors"
+  ],
+  "CUDA_executed": false,
+  "model_inference_executed": false,
+  "environment_created": false,
+  "training_performed": false,
+  "previously_verified_tests_rerun": false,
+  "checker_correction": "The initial checker assumed adding decimal 0.125 to a FP32 tensor produces an exactly 0.125 FP64 difference. The represented increment was 0.12500000360887498. The corrected check compares the actual represented tensor difference; no diagnostic or J tolerance was changed."
+}

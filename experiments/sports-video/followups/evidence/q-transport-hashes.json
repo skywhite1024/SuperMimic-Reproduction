@@ -1,0 +1,27 @@
+{
+  "preflight": {
+    "chunks": 2,
+    "sha256": "6a21cdad47c176df0c9eecf93f5eca511f2b5c8dbf91616d322f35e43fc33461",
+    "bytes": 215
+  },
+  "f0": {
+    "chunks": 14,
+    "sha256": "e59d6795a623b8d5503dcdcbc24a2d843f377e7d64383362fba26db952fca506",
+    "bytes": 2816
+  },
+  "parent": {
+    "chunks": 14,
+    "sha256": "69e8fba7e8141fae449c24a216ba9e9d69e2e8f0a89d60d40db8d2053fc48278",
+    "bytes": 2822
+  },
+  "f1": {
+    "chunks": 14,
+    "sha256": "b67f2502a3242297d7ac1d4f57277526db14394b80c867546921bd72eb6f7994",
+    "bytes": 2805
+  },
+  "final": {
+    "chunks": 6,
+    "sha256": "921c981bd57beb10b65d1c6179db4d26810719d49348a4ec609b174fe0e76bf8",
+    "bytes": 1108
+  }
+}

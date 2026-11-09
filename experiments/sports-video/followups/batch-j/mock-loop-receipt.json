@@ -1,0 +1,21 @@
+{
+  "status": "pass",
+  "scope": "complete evaluator loop with mocked physics/model/snapshot",
+  "worlds": 3,
+  "backend_steps": 4,
+  "observed_steps": [
+    2,
+    4,
+    3
+  ],
+  "post_stop_backend_steps_discarded": [
+    2,
+    0,
+    1
+  ],
+  "initial_resets": 1,
+  "cuda_executed": false,
+  "mujoco_executed": false,
+  "policy_executed": false,
+  "native_batch_equivalence_verified": false
+}

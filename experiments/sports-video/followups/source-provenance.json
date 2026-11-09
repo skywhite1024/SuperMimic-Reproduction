@@ -1,0 +1,106 @@
+{
+  "I_source_preserved_in_place": {
+    "train.py": "680c3b58f338593e16bfab81325cedea8df9a408ae944656358aa1cad9e404ef",
+    "sports_runtime.py": "93af38f8263bbf40bfd2676d4ff559c8089823072adc2506591f80f3b78e7be6",
+    "evaluate.py": "b9abe5fe336767b855ef5e629730ffb7dc9c863d0d692a63709a76b4af1c20ed"
+  },
+  "archived_I_runtime_lock_sha256": "39c2bd247ea2f26195fdbd5e609ae7a200c6a3297983aa4de3766ba034837c13",
+  "repository_runtime_lock_sha256": "eff2b5c42f7d33074cfa92b0eacf45882a26a4c556078e72ec6f65fe731de5d5",
+  "runtime_lock_entries": 63,
+  "runtime_lock_semantic_mapping_equal": true,
+  "runtime_lock_note": "The repository lock differs only in serialization; the original cloud lock bytes are preserved here for exact Q checks.",
+  "source_files_modified_by_this_package": false,
+  "I_existing_evidence_sha256": "240a169f7e34653b70c84e376722f7e61c0ae63a0f63767cae68efae5a1b37cf",
+  "copied_source_index": {
+    "batch-j/evaluate_batch.py": {
+      "sha256": "d8f61e8f1ad3c7374993429c7180d68e3eeddd6e2d6fa4ab1046005cff50d0b5",
+      "bytes": 20971,
+      "source_artifact": "cloud/sports-eval-j/payload/evaluate_batch.py",
+      "byte_identical": true
+    },
+    "batch-j/run_reused_i.py": {
+      "sha256": "f36cf8aed8d0e8f9b9ed384ba6efa8c52476e2040cda6dce2da99c5e5ea0cd2d",
+      "bytes": 7803,
+      "source_artifact": "cloud/sports-eval-j/payload/run_reused_i.py",
+      "byte_identical": true
+    },
+    "batch-j/test_batch_mock.py": {
+      "sha256": "14fbaa2a7ec58a2c0cc98bfdaa0ec8b35f3b7a1591fc78430302cac5a49562e2",
+      "bytes": 3827,
+      "source_artifact": "alternatives/training-ik/batch-evaluation/test_batch_mock.py",
+      "byte_identical": true
+    },
+    "batch-j/test_mock_environment_loop.py": {
+      "sha256": "68fed83e046291bbd1bed74ae520f4e1c179d5cc66d944ab5f45c2cb497c8779",
+      "bytes": 5136,
+      "source_artifact": "alternatives/training-ik/batch-evaluation/test_mock_environment_loop.py",
+      "byte_identical": true
+    },
+    "batch-j/mock-receipt.json": {
+      "sha256": "52d49825a3bc1e82c36332acb59a708c2cf4dad853cb5748d47edf7c98daa320",
+      "bytes": 226,
+      "source_artifact": "alternatives/training-ik/batch-evaluation/mock-receipt.json",
+      "byte_identical": true
+    },
+    "batch-j/mock-loop-receipt.json": {
+      "sha256": "215487f50d1daa8bb184294b2ff0e9bcc9551f113983eddd19378333ecb7fc3a",
+      "bytes": 418,
+      "source_artifact": "alternatives/training-ik/batch-evaluation/mock-loop-receipt.json",
+      "byte_identical": true
+    },
+    "precision-n/diagnose_precision.py": {
+      "sha256": "498df537c0a89807956a36bf15ad83180d670a928d4d04dfb8c801c566f8dc7d",
+      "bytes": 17498,
+      "source_artifact": "alternatives/training-ik/batch-evaluation/precision-diagnostic/diagnose_precision.py",
+      "byte_identical": true
+    },
+    "precision-n/test_precision_mock.py": {
+      "sha256": "ddc639db752798e60d4727646440466cd88fa0fd61a9d97b94b543ac04aae29d",
+      "bytes": 3228,
+      "source_artifact": "alternatives/training-ik/batch-evaluation/precision-diagnostic/test_precision_mock.py",
+      "byte_identical": true
+    },
+    "precision-n/mock-receipt.json": {
+      "sha256": "d63f847e2bc23c693c5ee148d5d7e8147f994c1ee3863921ee50f8535d520eea",
+      "bytes": 265,
+      "source_artifact": "alternatives/training-ik/batch-evaluation/precision-diagnostic/mock-receipt.json",
+      "byte_identical": true
+    },
+    "single-q/run_regression_q.py": {
+      "sha256": "3d691f6c873ddb6c1e2c07ee0055391938de404010a7250a33693a920401507d",
+      "bytes": 6393,
+      "source_artifact": "cloud/sports-regression-q/run_regression_q.py",
+      "byte_identical": true
+    },
+    "single-q/worker_q.py": {
+      "sha256": "47e44a36d8ebfb19d9f8ce2f88a1ef8c3f0e9a159ebe967c06e05c1a40b58b5e",
+      "bytes": 3439,
+      "source_artifact": "cloud/sports-regression-q/worker_q.py",
+      "byte_identical": true
+    },
+    "frozen-i/runtime-source-lock.json": {
+      "sha256": "39c2bd247ea2f26195fdbd5e609ae7a200c6a3297983aa4de3766ba034837c13",
+      "bytes": 8440,
+      "source_artifact": "cloud/transfer-i/downloaded/extracted/I/source/experiments/sports-video/runtime-source-lock.json",
+      "byte_identical": true
+    }
+  },
+  "prepared_not_executed_sources": {
+    "precision-n/diagnose_first_input.py": {
+      "sha256": "34b8fd2b60aaaa3fcebe891ff08af8a8bc40de27243b56a0f2414a0abd99262f",
+      "bytes": 18829,
+      "source_artifact": "alternatives/training-ik/batch-evaluation/precision-diagnostic/diagnose_first_input.py",
+      "CUDA_executed": false,
+      "training_performed": false
+    },
+    "precision-n/first-input-preparation-check.json": {
+      "sha256": "e197776c19ca31ea319fd2c9d9d30dbd8e7ec908e1ed8c53dbbea9b9d18303d1",
+      "scope": "New script AST and CPU tensor bookkeeping only; no previous mock rerun, no inference/simulation"
+    }
+  },
+  "actual_N_recovered": {
+    "receipt_sha256": "c75e0de0b723050b99d44445d36117708a3bd0b54fe0820cca165ac0a7622d1a",
+    "compact_evidence_sha256": "db667342aca05407b22739930fad95ec19a822dcc1816002a7688efaa0e276f3",
+    "original_N_source_modified": false
+  }
+}
