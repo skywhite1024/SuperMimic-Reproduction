@@ -105,7 +105,7 @@
     "inputs/checkpoints/hmr2/epoch=10-step=25000.ckpt",
     "inputs/checkpoints/vitpose/vitpose-h-multi-coco.pth"
   ],
-  "gmr_body_model": "Explicit --body-model-root and --body-model-ext npz|pkl; the licensed GVHMR SMPLX_NEUTRAL.npz may be reused.",
+  "gmr_body_model": "Explicit --body-model-root and --body-model-ext npz; reuse the exact licensed GVHMR SMPLX_NEUTRAL.npz, SHA256-checked against its inference receipt.",
   "license_boundaries": {
     "no_model_registration_or_terms_acceptance": true,
     "no_gated_weights_downloaded": true,

@@ -108,7 +108,9 @@ python audit_g1_mapping.py \
   --output /outputs/g1-mapping-audit.json
 ```
 
-Retarget using the matching receipt. The licensed GVHMR SMPL-X NPZ can be reused; choose `--body-model-ext npz` explicitly. PKL is also supported with an explicit `pkl` argument. The loader does not modify installed SMPL-X files or convert body-model data.
+Retarget using the matching receipt and the **exact same licensed SMPL-X NPZ** used by GVHMR; choose `--body-model-ext npz` explicitly. The adapter checks the upstream commit, receipt schema, and body-model SHA256 before importing the inference/IK dependencies or creating outputs. Another body-model release or a PKL conversion is not interchangeable: changed joint geometry would break the connection to the inferred pose. The loader does not modify installed SMPL-X files or convert body-model data.
+
+`python -m unittest discover -s . -p test_model_binding.py -v` checks this binding with temporary byte fixtures: a copied model is accepted; changed bytes, missing model provenance, and a different upstream commit are rejected. These checks exercise provenance only, without a body model or 3D inference.
 
 ```bash
 python retarget_g1_headless.py \

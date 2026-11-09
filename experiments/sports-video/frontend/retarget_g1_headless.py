@@ -18,6 +18,8 @@ import sys
 import numpy as np
 
 PIN = "25f56db79ac411258b377b6d4ccba0c8ff3372ac"
+GVHMR_PIN = "ee960bb6e2ea2d381aa97f08e9b71ef320b624b1"
+BODY_MODEL_KEY = "inputs/checkpoints/body_models/smplx/SMPLX_NEUTRAL.npz"
 
 
 def sha(path):
@@ -28,14 +30,28 @@ def sha(path):
     return h.hexdigest()
 
 
+def verify_body_model(body_file, receipt):
+    """Bind FK reconstruction to the exact body model used for inference."""
+    if (receipt.get("schema_version") != "gvhmr-fixed-identity-run/1.0"
+            or receipt.get("source_commit") != GVHMR_PIN):
+        raise ValueError("Expected a receipt from the pinned GVHMR adapter")
+    expected = receipt.get("model_sha256", {}).get(BODY_MODEL_KEY)
+    if not isinstance(expected, str) or len(expected) != 64:
+        raise ValueError("Inference receipt does not identify its SMPL-X model")
+    actual = sha(body_file)
+    if actual != expected:
+        raise ValueError("SMPL-X model differs from the model used for GVHMR inference; reuse the exact NPZ")
+    return actual
+
+
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--source-root", type=Path, required=True, help="Explicit pinned official GMR checkout")
     p.add_argument("--gvhmr-result", type=Path, required=True)
     p.add_argument("--inference-receipt", type=Path, required=True)
     p.add_argument("--prepared", type=Path, required=True)
-    p.add_argument("--body-model-root", type=Path, required=True, help="Parent of smplx/SMPLX_NEUTRAL.{npz,pkl}")
-    p.add_argument("--body-model-ext", choices=["npz", "pkl"], required=True)
+    p.add_argument("--body-model-root", type=Path, required=True, help="Parent of the exact smplx/SMPLX_NEUTRAL.npz used by GVHMR")
+    p.add_argument("--body-model-ext", choices=["npz"], required=True)
     p.add_argument("--mapping-audit", type=Path, required=True, help="Compiled G1 mapping audit for the exact source and runtime XML hashes")
     p.add_argument("--runtime-xml", type=Path, required=True)
     p.add_argument("--output-dir", type=Path, required=True)
@@ -55,6 +71,7 @@ def main():
     body_file = body_root/f"smplx/SMPLX_NEUTRAL.{a.body_model_ext}"
     if not body_file.is_file():
         raise FileNotFoundError(f"User-supplied licensed body model required: {body_file}")
+    body_model_sha256 = verify_body_model(body_file, receipt)
     if (sha(source_xml) != audit["source_xml_sha256"] or sha(runtime_xml) != audit["runtime_xml_sha256"]
             or not audit["mapping"]["verified"]):
         raise ValueError("G1 XML hashes differ from the compiled mapping audit; rerun the audit")
@@ -133,7 +150,7 @@ def main():
             "joint_mapping": mapping, "joint_limits_rad": limits.tolist(),
             "robot_xml_sha256": audit["runtime_xml_sha256"], "source_robot_xml_sha256": sha(source_xml),
             "ik_config_sha256": sha(ik_file), "motion_sha256": sha(out/"raw_robot_adapted.csv"),
-            "source_gvhmr_sha256": sha(result), "body_model_sha256": sha(body_file),
+            "source_gvhmr_sha256": sha(result), "body_model_sha256": body_model_sha256,
             "gmr_commit": PIN, "velocity_constraints": "upstream default disabled; audit actual reference velocities separately"}
         (out/"raw_robot_adapted.contract.json").write_text(json.dumps(contract, indent=2), encoding="utf-8")
         report = {"status": "retargeted_not_physical_success", "frames_in": len(times), "frames_out": len(motion),
@@ -141,6 +158,7 @@ def main():
             "runtime_limit_violations": [{"frame_index": int(i), "joint_name": mp["target_joint_names"][j],
                 "value_rad": float(joint[i,j]), "limits_rad": limits[j].tolist()} for i,j in violations],
             "body_model_ext_explicit": a.body_model_ext, "floor_offset_to_ground": False, "smoothing": False,
+            "body_model_matches_inference": True, "body_model_sha256": body_model_sha256,
             "joint_clipping": False, "solver": "daqp", "script_sha256": sha(__file__),
             "versions": {x: importlib.metadata.version(x) for x in ["mujoco", "mink", "smplx", "torch", "numpy", "scipy", "qpsolvers", "daqp"]}}
         (out/"retarget-receipt.json").write_text(json.dumps(report, indent=2), encoding="utf-8")
