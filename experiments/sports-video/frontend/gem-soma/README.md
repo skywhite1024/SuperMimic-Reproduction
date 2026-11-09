@@ -4,11 +4,13 @@ This alternative removes the SMPL/SMPL-X asset dependency. It uses the official 
 
 The first complete 428-frame badminton rally was inferred on CPU in 824.859 seconds and converted into a 30 Hz, 36-column G1 reference. The original 16K controller failed after 6.92 of 14.22 planned seconds. These are real pipeline and failure results, not successful sports tracking. `actual-evidence.json` records the outputs and checks.
 
+The later R job completed all five full rallies on one H100: 1,956 frames / 65.2 seconds, in 539.35 seconds total. [Compact R evidence](../../followups/evidence/r-actual.json) records versions, source/output hashes, identity rejections and basic geometry checks. All 30 PT outputs were finite; 12 rejected identity frames remain rejected. R repaired missing receipt metadata without changing the scientific entry. Subsequent local CPU conversion completed raw G1 retargeting of all five into 36-column CSVs, with zero explicit vertical offset and no ground/contact calibration. These five new references have not been used for training or controller evaluation; the I pilot still used the original CPU first-clip reference with its constant Z offset. Physical motion quality remains unaccepted. The first CPU/CUDA comparison used different decoded RGB and batch sizes, so it is not an isolated device-parity test.
+
 ## External dependencies
 
 Use separate environments for GEM and the retargeter if necessary. No third-party code, weights, body assets, sports footage, pose data or checkpoints are distributed here. The original upstream terms apply to each dependency. `source-pins.json` lists official URLs, revisions and verified model hashes.
 
-- GEM: Python 3.12, PyTorch 2.10.0, Transformers 5.3.0, py-soma-x 0.3.3. The completed run used CPU PyTorch. CUDA execution is a separate experiment.
+- GEM: Python 3.12, PyTorch 2.10.0, Transformers 5.3.0, py-soma-x 0.3.3. The first run used CPU PyTorch; the separate R run used PyTorch 2.10.0+cu128 on H100.
 - Retargeting: Newton 1.3.0, Warp 1.14.0, usd-core 26.3, NumPy, SciPy and MuJoCo. Supply an external `soma-retargeter` checkout and its G1 assets. `--retargeter-deps` optionally selects an isolated dependency directory.
 - Inputs: the full 30 Hz prepared-video directory from the adjacent fixed-identity preparer. Its crop convention was numerically checked against official GEM. Original identity rejections and proposal flags remain intact.
 

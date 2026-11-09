@@ -4,9 +4,17 @@ Continuation improved survival on the one trained badminton reference, but F0 al
 
 The public GEM-X / SOMA-X frontend produced a complete 428-frame G1 reference without SMPL-X assets. Starting from the existing 16K SuperMimic checkpoint, both short continuation conditions completed its 14.22-second CUDA / MuJoCo Warp rollout. This is a single training-clip result, not generalization or a validated badminton skill.
 
+## R: public frontend completed all five clips
+
+The subsequent R job completed public pretrained GEM-X / SOMA-X inference for **5/5 full rallies: 1,956 frames at 30 Hz, 65.2 seconds**, in 539.35 seconds total on one H100. It restored four genuine weight-download receipt sidecars missing from the previous package; the scientific entry, weights and prepared inputs were unchanged. It performed no training or controller evaluation. The downloaded archive and all 44 member hashes were verified; all 30 PT outputs were finite and matched the frozen frame clock and identity flags.
+
+The subsequent local CPU conversion completed **raw G1 retargeting for all five clips: 1,956 rows, 36 columns, 30 Hz**, with the original conversion settings. All 12 identity-rejected frames remain rejected, including two mid-clip interpolated crop proposals. These raw references have zero explicit vertical offset and no ground/contact calibration; they are not accepted sports motions or five trained/evaluated G1 clips. The CPU/CUDA first-clip comparison also changes decoded RGB and batch size, so its differences cannot be attributed solely to GPU numerics. See [compact R evidence](followups/evidence/r-actual.json) and the [frontend README](frontend/gem-soma/README.md). The I controller results below still use the **original CPU first-clip reference with its constant whole-clip Z offset**, not any of these new raw CUDA-derived references.
+
 ## What was actually trained
 
 The frontend uses public pretrained weights. The controller was **fine-tuned from the same 16K parent**, not trained from scratch: each condition completed 100 iterations, 400 world-model updates and 80 policy updates. Both observed 160,768 new simulation transitions. F0 and F1 have the same 101-dimensional observation interface; F0's extra columns remain zero and frozen, while F1 receives reference-yaw root XY error. Existing normalizer tensors, rewards and native failure conditions were unchanged.
+
+Both F0 and F1 used **50% new-reference / 50% old40 replay sampling**; the experimental difference was the extra XY observation only.
 
 The reference is the original retargeted motion with one constant whole-clip ground-height offset. It does not use the later contact or root-Z repair candidates. No P1 XY-repaired reference was used here.
 
@@ -67,6 +75,6 @@ Reference contact, jump fidelity and motion quality remain unaccepted. There is 
 
 [`sports-pilot-evidence.json`](sports-pilot-evidence.json) records the exact I hashes and downloaded actual metrics. The selected result archive was 439,726,080 bytes; its SHA256 and all 33 member hashes were verified locally. Both final checkpoint files were downloaded and matched the training proof. Videos are rendered from saved CUDA states using forward kinematics; they do not rerun the policy. Failed trajectories stop at their last real state.
 
-[`followups/README.md`](followups/README.md) provides J/N/Q source, finite-budget commands and compact evidence. The existing I `train.py`, `sports_runtime.py` and `evaluate.py` remain byte-identical to the downloaded run. The original cloud runtime-lock bytes are preserved separately; the existing repository lock has the same 63 hash entries with different serialization. No validated simulation or training tests were rerun for this packaging update.
+[`followups/README.md`](followups/README.md) provides J/N/Q source and finite-budget commands, plus compact J/N/Q/R evidence. R adds frontend metadata only. The existing I `train.py`, `sports_runtime.py` and `evaluate.py` remain byte-identical to the downloaded run. The original cloud runtime-lock bytes are preserved separately; the existing repository lock has the same 63 hash entries with different serialization. No validated simulation or training tests were rerun for this packaging update.
 
 The repository contains code and compact evidence, not broadcast videos, model weights or training checkpoints. Full local artifacts are described by the user's execution report outside this repository.

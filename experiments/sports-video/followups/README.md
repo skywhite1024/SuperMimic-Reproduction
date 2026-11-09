@@ -1,4 +1,4 @@
-# Frozen I follow-ups: J batch evaluation, N precision isolation, Q single-clip check
+# Frozen I follow-ups and R public-frontend evidence
 
 The continuation improved its trained badminton clip, but Q reproduced an old-motion failure of F0. J did not complete old40 and failed all original numerical parity checks. N confirmed identical-input BF16 batch-shape differences, but both completed repeat40 physical prefixes still failed. Read the [actual results](../ACTUAL-SPORTS-PILOT.md) before interpreting these diagnostic tools.
 
@@ -9,6 +9,9 @@ No weights, broadcast videos, reference CSVs or trajectory arrays are included. 
 | J | 40 CUDA environments; BF16 batch40 | 500 s/model, 1800 s outer | [120 retained clip records and 9 failed parity checks](evidence/j-actual.json) |
 | Q | 1 CUDA environment/model; original BF16 policy1 | 600 s/model, 900 s outer; 2 H100 lanes | [Three native outcomes on the selected subject5 clip](evidence/q-actual.json) |
 | N | Frozen-input forward comparisons and 1 physical environment with policy1/repeat40 | 110 s soft, 115 s TERM + 5 s KILL; 1 H100 | [4/6 complete prefixes, 1 zero-step stop, 1 not started; both completed repeat40 prefixes failed](evidence/n-status.json) |
+| R | Pretrained GEM-X/SOMA-X frontend only; no controller inference or training | 900 s maximum; 1 H100 | [5/5 rallies, 1,956 frames; verified outputs, retained identity rejections and quality limits](evidence/r-actual.json) |
+
+R completed in 539.35 seconds after restoring four genuine metadata sidecars omitted from the earlier package; its scientific entry and prepared inputs were unchanged. Its archive and all 44 members were verified. A subsequent local CPU conversion produced raw 36-column G1 references for all five clips, preserving all 1,956 frames and identity-rejection flags. No ground/contact calibration or five-clip training/control evaluation followed; I still trained on the original CPU first-clip reference with its constant Z offset. The first CPU/CUDA comparison is confounded by different decoded RGB and batching. Only compact metadata and the retarget-summary hash are included here; [frontend setup and interpretation](../frontend/gem-soma/README.md) remain separate from the J/N/Q controller protocols below.
 
 ## Required external artifacts
 

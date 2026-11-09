@@ -1,0 +1,473 @@
+{
+  "schema": "gem-r-actual-compact-evidence/1",
+  "date": "2026-11-10",
+  "status": "succeeded",
+  "scope": "Public pretrained frontend inference only; not five-clip controller training or evaluation.",
+  "correction": {
+    "previous_M_failure": "Required original weight-download receipt sidecars were missing from the package.",
+    "R_change": "Restored four genuine original sidecars; reused existing weights, prepared input bytes and scientific entry.",
+    "scientific_entry_modified": false,
+    "scientific_entry_sha256": "04a801b13bdc8895524f12c79455b5ebea1b787cdeb539b3ba911174392f70dc",
+    "original_sidecars": [
+      {
+        "name": "body_s240000.ckpt.download.json",
+        "sha256": "6820b9466e85e2d8eb9105d1fa30b417d9950e73d1983b2435e5a18d8255a6a0",
+        "genuine_original_receipt": true
+      },
+      {
+        "name": "vitpose.pth.download.json",
+        "sha256": "55b75ddaa45d7f0e9aa25078d2799c357cb3b388a24429b769361b8961466d0b",
+        "genuine_original_receipt": true
+      },
+      {
+        "name": "motion_native77_e774_s292175.ckpt.download.json",
+        "sha256": "bf311e691f3a06f1299933fe240223422622cc25140e9eac259cecf2c753c7f1",
+        "genuine_original_receipt": true
+      },
+      {
+        "name": "motion_stats_raw.npz.download.json",
+        "sha256": "6484ecc4c898cdd1df118f8bfdddc2612b99989c6a94dff86541fdf63d97cbe1",
+        "genuine_original_receipt": true
+      }
+    ],
+    "pip_install_performed_in_R": false,
+    "new_weights_downloaded_in_R": false,
+    "weight_identity_verification": "M prior full manifest hash verification + current size + original genuine sidecars; R did not rehash model contents."
+  },
+  "versions": {
+    "gem_source_commit_expected": "4aef1452e5df171deff4f293c08e643eb450981e",
+    "gem_source_archive_commit_note": "Pinned archive without .git; individual upstream source hashes recorded below.",
+    "gem_upstream_source_sha256": {
+      "gem/inference/body_video.py": "b290e64f66167b96bafbd3a7cbeb758238bf9d2c38bf4a672cfacad841171267",
+      "gem/inference/motion.py": "9ed56275d8a57a6b281f762d525288d2d0e69ca572a356938c934877ac36995e",
+      "gem/common/pose2d/native77.py": "0981bc46a099b351613f826f54eebd17810741f0485a49cf4e1dbb42dce236cc",
+      "gem/inference/camera_motion.py": "93fa9b76f76d8d906ba36a0c2ee2a68b5aa00ee6dd87a7a7d83ee55a9f2aca74"
+    },
+    "gem_weights_revision": "b111f2dcf3ebcf57965fd53499cb645dfa5ba25c",
+    "soma_assets_revision": "d281db2d01553f7230c56e764cec00fe27ef23f7",
+    "torch": "2.10.0+cu128",
+    "device": "cuda",
+    "gpu": "NVIDIA H100 80GB HBM3",
+    "batch_size": 4,
+    "world_geometry": "SOMA-X 0.3.3 / reference 0.2.0; xlo; correctives=false; no contact IK"
+  },
+  "counts": {
+    "inference_attempts": 5,
+    "inference_denominator": 5,
+    "inference_succeeded": 5,
+    "frames_30hz": 1956,
+    "encoded_duration_s": 65.2,
+    "source_frames_25hz": 1631,
+    "output_pt_files": 30,
+    "identity_invalid_frames": 12,
+    "source_video_ids": [
+      "0044",
+      "0045",
+      "0046"
+    ],
+    "independent_match_or_person_count_verified": false
+  },
+  "time": {
+    "total_R_elapsed_s": 539.3466995730996,
+    "maximum_s": 900,
+    "timing_note": "Total includes preflight; per-clip times include different initialization and I/O costs, not a controlled benchmark."
+  },
+  "download_verification": {
+    "archive_bytes": 30681774,
+    "archive_sha256": "7a7353278f6f5072b357a109e89d9036a44e86e63248da04948a8c2cb59317e7",
+    "verified_files": 44,
+    "all_member_bytes_and_sha256_match": true,
+    "six_named_PT_outputs_present_per_clip": true
+  },
+  "basic_quality": {
+    "analysis_device": "local_cpu",
+    "all_torch_load_weights_only": true,
+    "new_inference_for_audit": false,
+    "all_30_PT_files_finite": true,
+    "axes": "SOMA +Y up, X-Z horizontal, meters; raw learned world gauge, not calibrated court coordinates.",
+    "rejected_identity_frames_preserved": true,
+    "retarget_candidate_count": 5,
+    "finite_is_not_action_success": true,
+    "height_caution": "Foot-joint Y relative to one whole-sequence minimum is descriptive only, not shoe-sole clearance, contact truth or verified jump height.",
+    "native77_score_caution": "2D heatmap score, not calibrated 3D confidence.",
+    "analysis_source_sha256": "1e884a2f68ca7cbd2603ca63b423f36d333580c287f03b5d4bb7961d60c673a1",
+    "full_local_quality_json_sha256": "df0fa31921486efc171e3f954b6df07743fc298f5ca407a5b0ef2ce0bead85c8"
+  },
+  "clips": [
+    {
+      "clip_id": "fb20k_0044_rally_000",
+      "status": "succeeded",
+      "frames": 428,
+      "fps": 30,
+      "encoded_duration_s": 14.266666666666667,
+      "last_pts_s": 14.233333333333333,
+      "elapsed_inference_s": 121.47286522760987,
+      "source_video_id": "0044",
+      "source_video_sha256": "1ac5999828f4d789e246d3cfce2ef0fbd7b647cd4e40326a6629157b368899e7",
+      "original_source_frame_interval_inclusive": [
+        2194,
+        2550
+      ],
+      "source_unique_frames": 357,
+      "resampled_repeated_frames": 71,
+      "identity_invalid_indices": [
+        0,
+        1
+      ],
+      "interpolated_crop_frames": 0,
+      "person_reselected": false,
+      "all_tensor_values_finite": true,
+      "all_clock_and_frozen_map_checks_passed": true,
+      "hips_range_xyz_m": [
+        3.6181640625,
+        0.49890145659446716,
+        3.19580078125
+      ],
+      "hips_horizontal_XZ_path_length_m": 13.835561752319336,
+      "lower_foot_joint_Y_minus_sequence_min_median_m": 0.0834963321685791,
+      "right_wrist_above_head_frames": 8,
+      "right_knee_internal_angle_minmax_deg": [
+        61.37928771972656,
+        171.89651489257812
+      ],
+      "native77_body15_heatmap_score_below_0p30_fraction": 0.005763239875389408,
+      "format_ready_for_retarget_diagnostic": true,
+      "action_quality_accepted": false,
+      "receipt_sha256": "e3eacbbdc131e2eecaeb144b20b2bac987c9f95a80fb75fcc04d9e0a47752fba",
+      "frame_map_sha256": "705de7191d4ef2f93ef371e6bd6055922a2e0a912496be553e9e1a76367cf836",
+      "output_pt_sha256": {
+        "native77.pt": "ba92e3b7421b1a379144024d529840f04d698054d8d955a33aea03c2296b31c9",
+        "camera.pt": "7be0f9acecf82ea59874bc368a4f1f00ed5468791d524ceb25dddf3b32ec6213",
+        "conditions.pt": "f66ac48a732763d51abb18750e9ff5749d207cea4d6cfa8459aac4bfa04b861b",
+        "input_proposal_ledger.pt": "f135ce48cac835c1555310ef39cd853651db88c9a105d04ae88f6cacd4f0feb0",
+        "raw_predictions.pt": "df69072c5e57b2699154aa5d18f70586b2500caa99a7096631c6be4055f90cab",
+        "world_joints77.pt": "c32ef443b2c94cfa77fb176313176e15da5d457841fdb249a7e147540aca7d5c"
+      }
+    },
+    {
+      "clip_id": "fb20k_0044_rally_001",
+      "status": "succeeded",
+      "frames": 319,
+      "fps": 30,
+      "encoded_duration_s": 10.633333333333333,
+      "last_pts_s": 10.6,
+      "elapsed_inference_s": 86.34245325252414,
+      "source_video_id": "0044",
+      "source_video_sha256": "1ac5999828f4d789e246d3cfce2ef0fbd7b647cd4e40326a6629157b368899e7",
+      "original_source_frame_interval_inclusive": [
+        3897,
+        4162
+      ],
+      "source_unique_frames": 266,
+      "resampled_repeated_frames": 53,
+      "identity_invalid_indices": [
+        0,
+        1
+      ],
+      "interpolated_crop_frames": 0,
+      "person_reselected": false,
+      "all_tensor_values_finite": true,
+      "all_clock_and_frozen_map_checks_passed": true,
+      "hips_range_xyz_m": [
+        1.7978515625,
+        0.6804198622703552,
+        2.246826171875
+      ],
+      "hips_horizontal_XZ_path_length_m": 8.594502449035645,
+      "lower_foot_joint_Y_minus_sequence_min_median_m": 0.26348578929901123,
+      "right_wrist_above_head_frames": 17,
+      "right_knee_internal_angle_minmax_deg": [
+        99.04216766357422,
+        176.296875
+      ],
+      "native77_body15_heatmap_score_below_0p30_fraction": 0.005851619644723093,
+      "format_ready_for_retarget_diagnostic": true,
+      "action_quality_accepted": false,
+      "receipt_sha256": "9bc2a47a5b2574f5ca1ae47a08fb5f290c6158cfb8505888cb6a4c64c41ffbc3",
+      "frame_map_sha256": "38f0c8258acca283456efc960ed39dc60088a45a632df2da062127957f52f9e0",
+      "output_pt_sha256": {
+        "native77.pt": "6552fffa7c4ddb78d7834dd555b4a69c18d13afadf9093a8cd3bf14820015eb7",
+        "camera.pt": "8ef98b8af053ccd0f535fa41d22f0fa59355cc6b3c0e5c111e8de3c6348b0d3b",
+        "conditions.pt": "55384bace07426375c6b3d0da6a1b8650aa920abf2c6ac4c99160499f1d1ce53",
+        "input_proposal_ledger.pt": "fc4ea6ed4bde3a148f3e31c4bebba2237c2dff490b0da6f7502f6297b5e85d4d",
+        "raw_predictions.pt": "a3c36e13bcb2a7239a3bedab9342776c6923b83309da45f883d2cc7e06ecadcd",
+        "world_joints77.pt": "03f08092c8c442607a04c8deddaecca06f666132077e6b37ccc2d174f81c9e13"
+      }
+    },
+    {
+      "clip_id": "fb20k_0045_rally_000",
+      "status": "succeeded",
+      "frames": 520,
+      "fps": 30,
+      "encoded_duration_s": 17.333333333333332,
+      "last_pts_s": 17.3,
+      "elapsed_inference_s": 101.96822021901608,
+      "source_video_id": "0045",
+      "source_video_sha256": "139a5dd1073fb80497c8aaf2a99b3326970ba75066794313e641de997ae426cb",
+      "original_source_frame_interval_inclusive": [
+        240,
+        672
+      ],
+      "source_unique_frames": 433,
+      "resampled_repeated_frames": 87,
+      "identity_invalid_indices": [
+        0,
+        1,
+        444,
+        456
+      ],
+      "interpolated_crop_frames": 2,
+      "person_reselected": false,
+      "all_tensor_values_finite": true,
+      "all_clock_and_frozen_map_checks_passed": true,
+      "hips_range_xyz_m": [
+        1.93499755859375,
+        0.6789549589157104,
+        2.57421875
+      ],
+      "hips_horizontal_XZ_path_length_m": 16.822715759277344,
+      "lower_foot_joint_Y_minus_sequence_min_median_m": 0.3559083640575409,
+      "right_wrist_above_head_frames": 24,
+      "right_knee_internal_angle_minmax_deg": [
+        67.58493041992188,
+        179.48110961914062
+      ],
+      "native77_body15_heatmap_score_below_0p30_fraction": 0.009615384615384616,
+      "format_ready_for_retarget_diagnostic": true,
+      "action_quality_accepted": false,
+      "receipt_sha256": "fa64a711c2af450ac9fcb83bf6f390983c1dc95e08794c57427e067436b5ec19",
+      "frame_map_sha256": "a56db70788ddf28e45fb07eb50bfaf45f2bab6201c8e03e26be1d08e418f04d8",
+      "output_pt_sha256": {
+        "native77.pt": "07fe0fa00794fa81f6dde4af4bd677b17e0da4ae0a6a208dceac629abbc5ed22",
+        "camera.pt": "6ff9695ba99e0030e5d838556d2cedb8a895249c994f5cb3c2ff163d010a9e9f",
+        "conditions.pt": "f2fe4e58dfaefdd0264a61564b4d4f2deedab2c1011a60c7404e477d08df42b8",
+        "input_proposal_ledger.pt": "016783905dae4208a39b84bdda1f1125247b9b7a9acc8841a768d00824a6b546",
+        "raw_predictions.pt": "b7769d7ab396d140927e7598d83c60a9347894a8c903667a3d85c19647d0e7a9",
+        "world_joints77.pt": "04c04312151726bbadf9333b6ecbedfdb6cf71196f6ae95c4db0044d47958ab7"
+      }
+    },
+    {
+      "clip_id": "fb20k_0045_rally_001",
+      "status": "succeeded",
+      "frames": 362,
+      "fps": 30,
+      "encoded_duration_s": 12.066666666666666,
+      "last_pts_s": 12.033333333333333,
+      "elapsed_inference_s": 91.92528593167663,
+      "source_video_id": "0045",
+      "source_video_sha256": "139a5dd1073fb80497c8aaf2a99b3326970ba75066794313e641de997ae426cb",
+      "original_source_frame_interval_inclusive": [
+        857,
+        1158
+      ],
+      "source_unique_frames": 302,
+      "resampled_repeated_frames": 60,
+      "identity_invalid_indices": [
+        0,
+        1
+      ],
+      "interpolated_crop_frames": 0,
+      "person_reselected": false,
+      "all_tensor_values_finite": true,
+      "all_clock_and_frozen_map_checks_passed": true,
+      "hips_range_xyz_m": [
+        1.6513671875,
+        0.5468748807907104,
+        1.1038818359375
+      ],
+      "hips_horizontal_XZ_path_length_m": 6.028741359710693,
+      "lower_foot_joint_Y_minus_sequence_min_median_m": 0.12061986327171326,
+      "right_wrist_above_head_frames": 0,
+      "right_knee_internal_angle_minmax_deg": [
+        76.99544525146484,
+        178.32730102539062
+      ],
+      "native77_body15_heatmap_score_below_0p30_fraction": 0.0038674033149171273,
+      "format_ready_for_retarget_diagnostic": true,
+      "action_quality_accepted": false,
+      "receipt_sha256": "9c09a0946c766b42ce0a28a8faa44e0ba99746d36fc8261e03f6127dc8e4648e",
+      "frame_map_sha256": "9a6ef4ed5dc6a8ca19cc26f913136fefbf9c4dfc4eb619cb382f8db02a4f2e93",
+      "output_pt_sha256": {
+        "native77.pt": "f168b9a298ec4d30652144dd837e14329d43f7f7603b5e2eb550f449a1333e07",
+        "camera.pt": "223bc09083f9de0e52013e34e96c75aea25f1e25b4e13d88a74a78e8dc88edfa",
+        "conditions.pt": "5f79750019c0dfd01cfa9d353d9a14795a696964f18f9779798f7256ffab190c",
+        "input_proposal_ledger.pt": "6032c7f49ce2c3b497c03ad4b3c2f85f131c84c2a36ab063a495968a4e985861",
+        "raw_predictions.pt": "f6efe9a1ff7f66d08cd35f8aa98e536cc0da6e3416adfd0da59ec119d1d65ebc",
+        "world_joints77.pt": "bdb4095e8c7c2b8244692cbac780ce820676872a80391e12fbb84d42b5fd1b89"
+      }
+    },
+    {
+      "clip_id": "fb20k_0046_rally_001",
+      "status": "succeeded",
+      "frames": 327,
+      "fps": 30,
+      "encoded_duration_s": 10.9,
+      "last_pts_s": 10.866666666666667,
+      "elapsed_inference_s": 84.74082431197166,
+      "source_video_id": "0046",
+      "source_video_sha256": "263c7456643f96f37ad5ccc7d04c01c08d201209d49f141997405325709d0a2d",
+      "original_source_frame_interval_inclusive": [
+        1601,
+        1873
+      ],
+      "source_unique_frames": 273,
+      "resampled_repeated_frames": 54,
+      "identity_invalid_indices": [
+        0,
+        1
+      ],
+      "interpolated_crop_frames": 0,
+      "person_reselected": false,
+      "all_tensor_values_finite": true,
+      "all_clock_and_frozen_map_checks_passed": true,
+      "hips_range_xyz_m": [
+        1.9931640625,
+        0.359130859375,
+        2.6953125
+      ],
+      "hips_horizontal_XZ_path_length_m": 9.215563774108887,
+      "lower_foot_joint_Y_minus_sequence_min_median_m": 0.2162533402442932,
+      "right_wrist_above_head_frames": 16,
+      "right_knee_internal_angle_minmax_deg": [
+        62.1198844909668,
+        179.12417602539062
+      ],
+      "native77_body15_heatmap_score_below_0p30_fraction": 0.0016309887869520897,
+      "format_ready_for_retarget_diagnostic": true,
+      "action_quality_accepted": false,
+      "receipt_sha256": "8abc27ad711d814dee92a5e18e2b3adc07f5ccda12f33ed81e7992d3f72bcb8f",
+      "frame_map_sha256": "0a7e048dc2647a1d98ba66763f9ecb0fb8231354cfd586a3f75dd35b6a63f295",
+      "output_pt_sha256": {
+        "native77.pt": "fc04ae4b2450cf2aead4340dea87f43c9ca5b2b3b8fe74eee370de0740a665b2",
+        "camera.pt": "12c4d594e0c606d128eedccabf3a759d1e69ba969c2bc8a728c3b56383b840f4",
+        "conditions.pt": "f82d1e1b579c2274873dc84ed78c35c8c61362901ddb67dd03d1d491038e54f1",
+        "input_proposal_ledger.pt": "3703c7bb2dc951c5543e5bc3fffa1e8288c18c0e87155f4ba79d17aead7fe116",
+        "raw_predictions.pt": "bb6049e1a5a43d8039276e9b0b99e6fd67d3bc29256288621bfcbe4fab0f855e",
+        "world_joints77.pt": "1954152458b20e78e0d6e6ff2bc77b3df1b29f9aa41fef4a559dd8c4ad3789a3"
+      }
+    }
+  ],
+  "cpu_cuda_first_clip_descriptive_comparison": {
+    "clip_id": "fb20k_0044_rally_000",
+    "clock_and_ledger_equal": true,
+    "cpu_batch_size": 2,
+    "cuda_batch_size": 4,
+    "cpu_elapsed_s": 824.8589999999967,
+    "cuda_elapsed_s": 121.47286522760987,
+    "same_source_script_and_weights_revision": true,
+    "decoded_RGB_identical": false,
+    "RGB_difference_magnitude_measured": false,
+    "body15_2d_pixel_distance_mean": 0.6797231485167767,
+    "body15_2d_pixel_distance_p95": 2.4091827392578127,
+    "body15_own_hips_translation_orientation_removed_distance_mean_m": 0.0035280053347871267,
+    "body15_own_hips_translation_orientation_removed_distance_p95_m": 0.011638472508639072,
+    "raw_hips_XZ_distance_mean_m": 0.04546049506375864,
+    "raw_hips_XZ_distance_max_m": 0.09066630899906158,
+    "interpretation": "Descriptive paired outputs at identical source-frame clock; NOT an isolated GPU numerical parity test or accuracy test.",
+    "confounds": [
+      "Different decoded RGB documented by M reconstruction receipt (FFmpeg/encode pipeline variant).",
+      "CPU vs CUDA backend and kernels; body/native77 batch_size 2 vs 4.",
+      "Raw learned world origin and yaw are not externally calibrated."
+    ]
+  },
+  "limits": {
+    "training_performed_in_R": false,
+    "controller_evaluation_performed_in_R": false,
+    "new_body_model_trained": false,
+    "all_five_retargeted_claimed": true,
+    "all_five_trained_or_evaluated_claimed": false,
+    "contact_or_jump_fidelity_accepted": false,
+    "independent_E_star_available": false,
+    "sports_generalization_demonstrated": false,
+    "physical_G1_deployment": false,
+    "data_decision": "Retain old40; all five raw G1 references were converted, without ground/contact calibration or five-clip controller training/evaluation. 65.2 s from three source video IDs is insufficient for a generalization claim."
+  },
+  "provenance": {
+    "r_receipt_sha256": "5f2beb65c082204437f14399b3899bce3447adb409834416cd6feffc9ba197d6",
+    "local_download_verification_sha256": "99c96d454551dc9bc9e3e572e273a74797a24627aa15d8b8d4960e2b4e57c136",
+    "published_payload": "Metadata only; no PT/NPZ, broadcast footage, model assets, personal cloud paths or startup commands."
+  },
+  "retarget_followup": {
+    "status": "all_five_converted_and_audited_not_physical_acceptance",
+    "summary_sha256": "d7d0d51446f96aaf29bb8e654cac130befd67f50372b29877b1993e591dcd577",
+    "device": "cpu",
+    "converted_clips": 5,
+    "clip_denominator": 5,
+    "total_preserved_frames": 1956,
+    "fps": 30,
+    "columns": 36,
+    "units": "root metres / xyzw quaternion / joint radians",
+    "elapsed_s": 99.3827006999636,
+    "SOMA_retargeter_commit": "cbdb2b494a2af82137bf9b6f15122d60167281c4",
+    "explicit_vertical_offset_m": 0.0,
+    "postprocessing": {
+      "retarget_contact": false,
+      "retarget_postprocess": false,
+      "smoothing_weight": 0.0,
+      "IK_iterations": 24,
+      "joint_limit_objective_and_final_clamp": true
+    },
+    "XY_repair_applied": false,
+    "ground_or_contact_calibration_applied": false,
+    "identity_rejected_frames_retained": 12,
+    "physical_evaluation_performed": false,
+    "training_performed": false,
+    "physical_quality_accepted": false,
+    "clips": [
+      {
+        "clip_id": "fb20k_0044_rally_000",
+        "frames": 428,
+        "CSV_sha256": "5c75a837a1be46f496f2c775250e2d949e354bfbe9cf0cbdb386ae2d448c5618",
+        "runtime_joint_limit_violations": 0,
+        "identity_rejected_frames": [
+          0,
+          1
+        ]
+      },
+      {
+        "clip_id": "fb20k_0044_rally_001",
+        "frames": 319,
+        "CSV_sha256": "7490fe77eb6cd1cf3b3213a91668855251f57aea0bd16e2e187a41810e23ae88",
+        "runtime_joint_limit_violations": 0,
+        "identity_rejected_frames": [
+          0,
+          1
+        ]
+      },
+      {
+        "clip_id": "fb20k_0045_rally_000",
+        "frames": 520,
+        "CSV_sha256": "810c08ba0b7a3e28617dfa7ce2220abceb43f705312b63d67bf6a9c97cfbbc3c",
+        "runtime_joint_limit_violations": 0,
+        "identity_rejected_frames": [
+          0,
+          1,
+          444,
+          456
+        ]
+      },
+      {
+        "clip_id": "fb20k_0045_rally_001",
+        "frames": 362,
+        "CSV_sha256": "b6a94d8f25029147b45aceb520dc1939d7aef7212e3039ff0ac147c223cd2ad4",
+        "runtime_joint_limit_violations": 0,
+        "identity_rejected_frames": [
+          0,
+          1
+        ]
+      },
+      {
+        "clip_id": "fb20k_0046_rally_001",
+        "frames": 327,
+        "CSV_sha256": "6954db2e2d29e11d732678391f2e1af09670205445b6097b689ad08eacda95f1",
+        "runtime_joint_limit_violations": 0,
+        "identity_rejected_frames": [
+          0,
+          1
+        ]
+      }
+    ],
+    "joint_limit_caution": "Zero violations includes the original IK limit objective and final clamp; not dynamic feasibility.",
+    "I_training_reference_boundary": "Original CPU first-clip reference with its constant whole-clip Z offset; no new R raw reference was substituted."
+  }
+}
