@@ -1,0 +1,169 @@
+{
+  "schema": "I-actual-downloaded-summary/1",
+  "status": "verified_downloaded_actual_evidence",
+  "device": "cuda",
+  "backend": "mjwarp",
+  "action_mode": "raw",
+  "seed": 0,
+  "archive_sha256": "f295ee9b5251a883d7b0f1d6e8f6e02eb8a5e46222a581481ee46bb18e7426fa",
+  "evaluation_status": "incomplete_budget_or_errors",
+  "training": {
+    "f0": {
+      "status": "real_updates_and_checkpoint_readback_verified",
+      "new_updates": 100,
+      "new_sim_transitions": 160768,
+      "wm_updates": 400,
+      "policy_updates": 80,
+      "wall_seconds": 151.03247925406322,
+      "normalizer_tensors_unchanged": true,
+      "new_decoder_column_max_abs": 0.0,
+      "checkpoint_sha256": "899bc2ab11e8247b59f3a57349d492da758a448399740985a0b61a3cce4c41ff",
+      "peak_cuda_reserved_bytes": 4087349248,
+      "proof_sha256": "b6fb50559d204c944d169cf6132abeaacccfb21a4d4acdfd06c3ba67e01fbace",
+      "initial_policy_identity": {
+        "max_abs_error": 1.6689300537109375e-06,
+        "absolute_tolerance": 2e-05,
+        "nonzero_xy_tested": true,
+        "exact_bitwise_equality_claimed": false
+      },
+      "checkpoint_bytes": 219041631
+    },
+    "f1": {
+      "status": "real_updates_and_checkpoint_readback_verified",
+      "new_updates": 100,
+      "new_sim_transitions": 160768,
+      "wm_updates": 400,
+      "policy_updates": 80,
+      "wall_seconds": 90.87936301296577,
+      "normalizer_tensors_unchanged": true,
+      "new_decoder_column_max_abs": 0.0038193529471755028,
+      "checkpoint_sha256": "31f3bd442568dc503d9d38d9b88d0708ffca111c5952532eb09df3e3626650da",
+      "peak_cuda_reserved_bytes": 4070572032,
+      "proof_sha256": "e2698e136ddb20b7acd8bafcffd4c5c8c3fae3d211778e8272ec2db42140fb5f",
+      "initial_policy_identity": {
+        "max_abs_error": 1.6689300537109375e-06,
+        "absolute_tolerance": 2e-05,
+        "nonzero_xy_tested": true,
+        "exact_bitwise_equality_claimed": false
+      },
+      "checkpoint_bytes": 219041631
+    }
+  },
+  "sports1": {
+    "parent": {
+      "status": "native_hard_failure",
+      "observed_steps": 388,
+      "planned_steps": 711,
+      "observed_seconds": 7.76,
+      "first_native_hard_failure_s": 7.76,
+      "full_reference_completed": false,
+      "completed_without_native_failure": false,
+      "norm_return_full_reference": 0.3503799595661807,
+      "root_xy_rmse_m": 1.1492545321245378,
+      "root_xy_peak_m": 2.957965149770136,
+      "root_xy_final_error_m": 2.957965149770136,
+      "tracking_error_scope": "observed_prefix_only",
+      "common_7p76s_window": {
+        "steps": 388,
+        "seconds": 7.76,
+        "states_including_initial": 389,
+        "root_xy_rmse_m": 1.1492545321245378,
+        "root_xy_peak_m": 2.957965149770136,
+        "normalized_return_same_window_denominator": 0.6420622454936971
+      }
+    },
+    "f0": {
+      "status": "completed",
+      "observed_steps": 711,
+      "planned_steps": 711,
+      "observed_seconds": 14.22,
+      "first_native_hard_failure_s": null,
+      "full_reference_completed": true,
+      "completed_without_native_failure": true,
+      "norm_return_full_reference": 0.7624550057056394,
+      "root_xy_rmse_m": 0.2276716397285906,
+      "root_xy_peak_m": 0.4745997345729976,
+      "root_xy_final_error_m": 0.11992082971183513,
+      "tracking_error_scope": "full_reference",
+      "common_7p76s_window": {
+        "steps": 388,
+        "seconds": 7.76,
+        "states_including_initial": 389,
+        "root_xy_rmse_m": 0.12407626920750069,
+        "root_xy_peak_m": 0.4745997345729976,
+        "normalized_return_same_window_denominator": 0.7889670002413433
+      }
+    },
+    "f1": {
+      "status": "completed",
+      "observed_steps": 711,
+      "planned_steps": 711,
+      "observed_seconds": 14.22,
+      "first_native_hard_failure_s": null,
+      "full_reference_completed": true,
+      "completed_without_native_failure": true,
+      "norm_return_full_reference": 0.736470877516454,
+      "root_xy_rmse_m": 0.4014444765538213,
+      "root_xy_peak_m": 0.6654421591587582,
+      "root_xy_final_error_m": 0.4450672584166339,
+      "tracking_error_scope": "full_reference",
+      "common_7p76s_window": {
+        "steps": 388,
+        "seconds": 7.76,
+        "states_including_initial": 389,
+        "root_xy_rmse_m": 0.21047826371852438,
+        "root_xy_peak_m": 0.6609793742858726,
+        "normalized_return_same_window_denominator": 0.7712774738170128
+      }
+    }
+  },
+  "old40": {
+    "parent": {
+      "fixed_denominator": 40,
+      "status_counts": {
+        "completed": 2,
+        "not_run_engineering_budget": 38
+      },
+      "native_completed_without_failure": 2,
+      "native_hard_failures": 0,
+      "native_terminal_outcomes": 2,
+      "clips_with_any_observed_steps": 2,
+      "full_old40_retention_verified": false
+    },
+    "f0": {
+      "fixed_denominator": 40,
+      "status_counts": {
+        "completed": 2,
+        "not_run_engineering_budget": 38
+      },
+      "native_completed_without_failure": 2,
+      "native_hard_failures": 0,
+      "native_terminal_outcomes": 2,
+      "clips_with_any_observed_steps": 2,
+      "full_old40_retention_verified": false
+    },
+    "f1": {
+      "fixed_denominator": 40,
+      "status_counts": {
+        "completed": 1,
+        "truncated_engineering_deadline": 1,
+        "not_run_engineering_budget": 38
+      },
+      "native_completed_without_failure": 1,
+      "native_hard_failures": 0,
+      "native_terminal_outcomes": 1,
+      "clips_with_any_observed_steps": 2,
+      "full_old40_retention_verified": false
+    }
+  },
+  "common_window_reason": "minimum actual recorded prefix among all three models; no selected frames",
+  "sports_quality_accepted": false,
+  "archive_bytes": 439726080,
+  "verified_archive_member_count": 33,
+  "parent_checkpoint_sha256": "0afcca9af97bd9db1f2dd083875898f962acab0b0a70c7313b221e575b70b05b",
+  "reference_csv_sha256": "931498833939a23ad389a2bb366e2cc65d322412a9f6ab1b8537995d1a80fb74",
+  "frontend_training_performed": false,
+  "controller_training_from_scratch": false,
+  "old40_retention_verified": false,
+  "held_out_sports_evaluated": false
+}
