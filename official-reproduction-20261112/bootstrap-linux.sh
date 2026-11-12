@@ -32,6 +32,8 @@ fi
 export CONDA_PKGS_DIRS="$root/cache/conda"
 export UV_CACHE_DIR="$root/cache/uv"
 export PIP_DISABLE_PIP_VERSION_CHECK=1
+# Bootstrap and unit tests need no renderer; CPU containers may inherit EGL.
+export MUJOCO_GL=disable
 printf 'CONDA_EXECUTABLE=%s\n' "$conda_bin"
 package_index=${SUPERMIMIC_PYPI_INDEX:-https://pypi.org/simple}
 printf 'PACKAGE_INDEX=%s\n' "$package_index"
