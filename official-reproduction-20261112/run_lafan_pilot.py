@@ -1,4 +1,4 @@
-"""Finite CUDA training of an explicit learner profile on raw LAFAN40.
+"""Finite CUDA training on raw LAFAN40 or the verified unfiltered BONES pack.
 
 This verifies execution and checkpoint creation, not the paper's full benchmark.
 """
@@ -19,6 +19,8 @@ def main():
     parser.add_argument("--steps", type=int, default=1001)
     parser.add_argument("--num-envs", type=int, default=4096)
     parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument("--corpus", choices=("lafan40", "bones-raw"), default="lafan40",
+                        help="bones-raw is a capacity/training probe, not the filtered paper benchmark")
     parser.add_argument("--training-profile", choices=("public-default", "paper-a5-single-gpu"),
                         default="public-default")
     parser.add_argument("--goal-backend", choices=("official", "eager"), default="official",
@@ -61,8 +63,13 @@ def main():
 
     if not torch.cuda.is_available() or torch.cuda.device_count() != 1:
         raise RuntimeError("Pilot requires exactly one allocated CUDA GPU")
-    if len(np.load(motions / "motion_ends.npy")) != 40:
-        raise RuntimeError("Pilot denominator must be the frozen 40 clips")
+    ends = np.load(motions / "motion_ends.npy")
+    expected_clips = {"lafan40": 40, "bones-raw": 142220}[args.corpus]
+    if ends.ndim != 1 or len(ends) != expected_clips or not np.all(np.diff(ends, prepend=0) > 0):
+        raise RuntimeError(f"Expected {expected_clips} nonempty clips for {args.corpus}")
+    corpus = {"name": args.corpus, "clips": len(ends), "frames": int(ends[-1]),
+              "paper_name_filter_applied": False, "paper_feasibility_filter_applied": False}
+    print("TRAINING_CORPUS " + json.dumps(corpus), flush=True)
     task = "SuperMimic-GenCoord-G1"
     config = TrainConfig.from_task(task)
     profile = None
@@ -79,11 +86,12 @@ def main():
     config.env.commands["motion"].sampling_mode = "external"
     config.runner.max_iterations = args.steps
     config.runner.save_interval = args.steps - 1  # save both initial and final step
-    config.runner.run_name = f"official-lafan40-pilot-seed{args.seed}"
+    config.runner.run_name = f"official-{args.corpus}-pilot-seed{args.seed}"
     config.runner.log_interval = 10
     resolved = {
         "task": task, "seed": args.seed, "num_envs": args.num_envs,
         "collection_steps": args.steps, "motion_directory": str(motions),
+        "corpus": corpus,
         "runner": dataclasses.asdict(config.runner),
         "environment": dataclasses.asdict(config.env),
         "source_algorithm_modified": profile is not None,
@@ -99,9 +107,15 @@ def main():
         json.dumps(resolved, indent=2, default=str) + "\n", encoding="utf-8"
     )
     device = setup_device("cuda:0")
+    torch.cuda.reset_peak_memory_stats()
     env = create_env(config.env, args.num_envs, device)
     runner = runner_class(env=env, cfg=config.runner, task_id=task,
                              registry_name=None, device=device)
+    free_bytes, total_bytes = torch.cuda.mem_get_info()
+    initial_memory = {"free_bytes": free_bytes, "total_bytes": total_bytes,
+                      "torch_allocated_bytes": torch.cuda.memory_allocated(),
+                      "torch_reserved_bytes": torch.cuda.memory_reserved()}
+    print("CUDA_MEMORY_AFTER_INITIALIZATION " + json.dumps(initial_memory), flush=True)
     started = time.monotonic()
     runner.run()
     wandb.finish()
@@ -135,9 +149,15 @@ def main():
         "full_clip_evaluation_completed": False, "paper_results_reproduced": False,
         "goal_assembly_backend": args.goal_backend,
         "training_profile": args.training_profile,
+        "corpus": corpus,
+        "device_memory_after_initialization": initial_memory,
+        "peak_torch_memory_allocated_bytes": torch.cuda.max_memory_allocated(),
+        "peak_torch_memory_reserved_bytes": torch.cuda.max_memory_reserved(),
+        "memory_scope": "PyTorch allocator only; excludes Warp and other CUDA allocations",
     }
     (output / "result.json").write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
-    print("OFFICIAL_LAFAN_PILOT_PASS " + json.dumps(result), flush=True)
+    marker = "OFFICIAL_LAFAN_PILOT_PASS" if args.corpus == "lafan40" else "OFFICIAL_BONES_RAW_PILOT_PASS"
+    print(marker + " " + json.dumps(result), flush=True)
 
 
 if __name__ == "__main__":

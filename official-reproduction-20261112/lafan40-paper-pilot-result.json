@@ -1,0 +1,29 @@
+{
+  "status": "pilot_completed",
+  "collection_steps": 1001,
+  "seed": 42,
+  "num_envs": 4096,
+  "elapsed_training_seconds": 593.6545992642641,
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "checkpoints": [
+    {
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan40-paper-1112f/logs/SuperMimic-GenCoord-G1/2026-11-12_16-04-42/world_model.pt",
+      "bytes": 34990357,
+      "sha256": "e2b0736ba77c73a86f631c86ecebd065a70c61b6c53bdc0255d011f395e634be"
+    },
+    {
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan40-paper-1112f/logs/SuperMimic-GenCoord-G1/2026-11-12_16-04-42/actor.pt",
+      "bytes": 46439949,
+      "sha256": "893b12b5980b731a9a72299f31fa37cc352545ec29fe7f28eb1c3c2bc1d0267b"
+    },
+    {
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan40-paper-1112f/logs/SuperMimic-GenCoord-G1/2026-11-12_16-04-42/critic.pt",
+      "bytes": 929269,
+      "sha256": "544ba9dc940837550fe1c512132bdd773c3c31d73cb296761fa913464df29378"
+    }
+  ],
+  "full_clip_evaluation_completed": false,
+  "paper_results_reproduced": false,
+  "goal_assembly_backend": "eager",
+  "training_profile": "paper-a5-single-gpu"
+}
