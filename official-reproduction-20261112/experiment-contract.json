@@ -79,7 +79,7 @@
   ],
   "hardware_limit": "Physical robot experiments require a robot; simulation alone cannot validate those results.",
   "execution_status": {
-    "as_of": "2026-11-13T04:45:31.828426+08:00",
+    "as_of": "2026-11-13T04:50:49.727780+08:00",
     "windows_tests": 217,
     "linux_tests": 217,
     "raw_bones_cloud_readback": "passed 142220 clips, 51915358 frames; no paper filters",
@@ -408,7 +408,7 @@
     "pair_archive_local_verification": "bones-raw-pair-local-verification.json",
     "transfer_resource_state": "CPU CCI stopped; empty instances verified; DNAT unbound",
     "bones_raw_long_run": {
-      "status": "running_prerequisites",
+      "status": "running_training_initialization",
       "name": "supermimic-official-bones-long-260010076-1113m",
       "display_name": "260010076-SuperMimic-BONES-raw-320k-1113m",
       "gpu": 1,
@@ -452,7 +452,7 @@
       "ui_draft_created": true,
       "ui_command_dom_readback_matches": true,
       "local_command_syntax_verified": true,
-      "checkpoint_gpu_integration_verified": false,
+      "checkpoint_gpu_integration_verified": true,
       "change": "Embed exact three frozen Git blobs with individual SHA256; remove startup GitHub network dependency; training/evaluation and limits unchanged",
       "prior_job": "6057c0bbd7f44af09bfddcec972936e5",
       "requires_prior_job_terminal_before_submission": true,
@@ -461,12 +461,21 @@
       "bootstrap_roundtrip_verified": true,
       "uid": "283c2489542e47a68ca2493c1ad2d835",
       "created_at": "2026-11-13T04:44:07+08:00",
-      "last_verified_stage": "All three embedded Git blobs and both frozen evaluator files SHA256 passed;21step GPU checkpoint integration is loading LAFAN40",
+      "last_verified_stage": "Three complete intermediate model sets passed native GPU gate; rawBONES142220/51915358 initialized for320001-step training",
       "started_at": "2026-11-13T04:44:17+08:00",
       "program_deadline": "2026-11-13T21:44:17+08:00",
       "server_bootstrap_sha256_verified": true,
       "embedded_source_hashes_verified": true,
-      "complete_pair_gate_passed": true
+      "complete_pair_gate_passed": true,
+      "checkpoint_gpu_validation": "checkpoint-series-gpu-validation.json",
+      "checkpoint_gpu_steps_verified": [
+        1,
+        11,
+        21
+      ],
+      "training_started_at": "2026-11-13T04:48:12+08:00",
+      "training_stage_deadline": "2026-11-13T18:48:12+08:00",
+      "last_observed_collection_steps": 0
     }
   }
 }

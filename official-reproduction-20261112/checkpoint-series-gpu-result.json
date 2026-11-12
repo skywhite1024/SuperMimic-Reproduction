@@ -1,0 +1,117 @@
+{
+  "status": "pilot_completed",
+  "collection_steps": 21,
+  "seed": 42,
+  "num_envs": 4096,
+  "elapsed_training_seconds": 95.75077399238944,
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "checkpoints": [
+    {
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/checkpoint-series-gpu-1113m/logs/SuperMimic-GenCoord-G1/2026-11-12_20-46-29/world_model.pt",
+      "bytes": 34990357,
+      "sha256": "4529a4dfc730e2b6b853948c0edde816031568b359d309d8fcd6d13a93b4ad39"
+    },
+    {
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/checkpoint-series-gpu-1113m/logs/SuperMimic-GenCoord-G1/2026-11-12_20-46-29/actor.pt",
+      "bytes": 46439949,
+      "sha256": "5a05c8af96a13112b5cd7baf38df12b5da7eeb3724a013c49475b9d5d7f59d6a"
+    },
+    {
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/checkpoint-series-gpu-1113m/logs/SuperMimic-GenCoord-G1/2026-11-12_20-46-29/critic.pt",
+      "bytes": 929269,
+      "sha256": "c074568b9478c71549c3d5fd8b9e8c0114a9a0ee22efefc82b44bc5daea766bd"
+    }
+  ],
+  "full_clip_evaluation_completed": false,
+  "paper_results_reproduced": false,
+  "goal_assembly_backend": "eager",
+  "training_profile": "paper-a5-single-gpu",
+  "corpus": {
+    "name": "lafan40",
+    "clips": 40,
+    "frames": 441140,
+    "paper_name_filter_applied": false,
+    "paper_feasibility_filter_applied": false
+  },
+  "device_memory_after_initialization": {
+    "free_bytes": 78549155840,
+    "total_bytes": 85017624576,
+    "torch_allocated_bytes": 4469662208,
+    "torch_reserved_bytes": 4490002432
+  },
+  "peak_torch_memory_allocated_bytes": 18361843200,
+  "peak_torch_memory_reserved_bytes": 19893583872,
+  "memory_scope": "PyTorch allocator only; excludes Warp and other CUDA allocations",
+  "retained_checkpoint_series": [
+    {
+      "status": "model_snapshot_preserved",
+      "collection_steps": 1,
+      "files": [
+        {
+          "file": "world_model.pt",
+          "bytes": 34990357,
+          "sha256": "b6a1cb7bd2c376e9ce44c2095aa2fed359a7673904caeea77d3b41a70787e33f"
+        },
+        {
+          "file": "actor.pt",
+          "bytes": 46439949,
+          "sha256": "ca81221c15cdf7ec98eb67a7f49638fe6946f8baee899763418a571ed45e2411"
+        },
+        {
+          "file": "critic.pt",
+          "bytes": 929269,
+          "sha256": "0f31839f86cd86787552e41745f07d998f1c5c2a7ab0b4796a0c5f6a7555e24f"
+        }
+      ],
+      "full_training_resume_available": false,
+      "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state"
+    },
+    {
+      "status": "model_snapshot_preserved",
+      "collection_steps": 11,
+      "files": [
+        {
+          "file": "world_model.pt",
+          "bytes": 34990357,
+          "sha256": "6e84a3de8a63c85dac6df7e8e2b704d2c82bb84f2b7f52e5562e52a2d3ed0954"
+        },
+        {
+          "file": "actor.pt",
+          "bytes": 46439949,
+          "sha256": "a8401da833f8cca6202b1e64ccb122f64cd4becd9723428382ff994b50519fe3"
+        },
+        {
+          "file": "critic.pt",
+          "bytes": 929269,
+          "sha256": "dddd7769f5fdaaa72242dc34cbeab367cf3ab150cf38c23c9b222c72b07d3c1e"
+        }
+      ],
+      "full_training_resume_available": false,
+      "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state"
+    },
+    {
+      "status": "model_snapshot_preserved",
+      "collection_steps": 21,
+      "files": [
+        {
+          "file": "world_model.pt",
+          "bytes": 34990357,
+          "sha256": "4529a4dfc730e2b6b853948c0edde816031568b359d309d8fcd6d13a93b4ad39"
+        },
+        {
+          "file": "actor.pt",
+          "bytes": 46439949,
+          "sha256": "5a05c8af96a13112b5cd7baf38df12b5da7eeb3724a013c49475b9d5d7f59d6a"
+        },
+        {
+          "file": "critic.pt",
+          "bytes": 929269,
+          "sha256": "c074568b9478c71549c3d5fd8b9e8c0114a9a0ee22efefc82b44bc5daea766bd"
+        }
+      ],
+      "full_training_resume_available": false,
+      "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state"
+    }
+  ],
+  "full_training_resume_available": false
+}

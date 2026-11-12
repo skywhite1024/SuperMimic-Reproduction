@@ -1,0 +1,23 @@
+{
+  "status": "native_gpu_checkpoint_callback_verified",
+  "source_commit": "18921cb6861fdb425a9d800bb2d65530f008e669",
+  "job_uid": "283c2489542e47a68ca2493c1ad2d835",
+  "receipt": {
+    "i": 0,
+    "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/checkpoint-series-gpu-1113m/result.json",
+    "bytes": 4199,
+    "sha256": "11b74b905218caac8f72a3ffa981a3dde6b2d012892e8736804b2f0c52cb2387",
+    "chunks": 5
+  },
+  "local_file": "checkpoint-series-gpu-result.json",
+  "preserved_collection_steps": [
+    1,
+    11,
+    21
+  ],
+  "model_files": 9,
+  "server_finite_and_hash_checks_passed": true,
+  "exact_result_bytes_recovered": true,
+  "full_training_resume_available": false,
+  "scope": "Short LAFAN40 GPU integration of immutable native model snapshots; no policy quality or long-run success claim"
+}
