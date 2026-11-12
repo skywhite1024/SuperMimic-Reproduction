@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "source_sha256": "11edd363b4536faca470420611a2c73905ee7b8e2e11306b4f5fb301870c0574",
+  "arithmetic_fixture": "Actual complete LAFAN40 legacy-repeat vs paper-profile16k; training profiles differ, not a training-length experiment",
+  "complete_rows_verified": 40,
+  "success_transitions": {
+    "both_success": 39,
+    "recovered_success": 0,
+    "regressed_failure": 1,
+    "both_failure": 0
+  },
+  "equal_clip_mean_return_delta": -0.06241006128375626,
+  "independent_math_fsum_delta": -0.06241006128375626,
+  "real_mismatched_24env_protocol_rejected": true,
+  "BONES_results_available": false,
+  "scope": "Comparison accounting and protocol guard only; no new GPU training or evaluation"
+}
