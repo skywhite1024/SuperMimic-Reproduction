@@ -77,7 +77,7 @@
   ],
   "hardware_limit": "Physical robot experiments require a robot; simulation alone cannot validate those results.",
   "execution_status": {
-    "as_of": "2026-11-12T23:40:15+08:00",
+    "as_of": "2026-11-13T00:09:27+08:00",
     "windows_tests": 217,
     "linux_tests": 217,
     "raw_bones_cloud_readback": "passed 142220 clips, 51915358 frames; no paper filters",
@@ -85,7 +85,7 @@
     "eager_goal_pilot": "1001 steps completed; finite checkpoints",
     "eager_goal_full40": "0/40 successful full clips, all failed trajectories retained",
     "extended_lafan_run": {
-      "status": "starting",
+      "status": "running",
       "hypothesis": "Increasing collection steps from 1001 to 16001 improves full-clip tracking under the now-executable eager-goal profile",
       "source_and_launcher": "d34976b2b34367482b08be6a0d9e88eab9ee2d28",
       "start": "fresh seed 42; not checkpoint resume",
@@ -97,8 +97,38 @@
       "paper_results_reproduced": false,
       "command_sha256": "9e36a4cb33fe9d9b155150df04c936be6ce603f5efbd5757160d301d0a16645e",
       "uid": "0ca5720db044438f98af50c7ce74027d",
-      "created_at": "2026-11-12T23:40:15+08:00"
+      "created_at": "2026-11-12T23:40:15+08:00",
+      "last_observed_collection_steps": 10171
     },
-    "paper_results_reproduced": false
+    "paper_results_reproduced": false,
+    "paper_profile_pilot": {
+      "name": "supermimic-official-paper-260010076-1112f",
+      "display_name": "260010076-SuperMimic-official-paper-a5-1112f",
+      "uid": "ebd3b4405cee414a8c5699212de6b9cf",
+      "worker": "pt-ebd3b4405cee414a8c5699212de6b9cf-worker-0",
+      "created_at": "2026-11-13T00:01:16+08:00",
+      "program_started_at": "2026-11-13T00:02:13+08:00",
+      "program_deadline": "2026-11-13T00:32:13+08:00",
+      "status": "running",
+      "gpu": 1,
+      "vcpu": 4,
+      "ram_gib": 64,
+      "max_restarts": 0,
+      "max_program_seconds": 1800,
+      "steps": 1001,
+      "num_envs": 4096,
+      "seed": 42,
+      "launcher_commit": "3a129a9bf263f5afcfc9fe5a5fcebcb14a7fd19b",
+      "command_sha256": "382577085c562fed39a46f26787efb47a98ab50b86abd1ba38276ff649aae2e0",
+      "training_profile": "paper-a5-single-gpu",
+      "goal_assembly_backend": "eager",
+      "log": "logs/lafan40-paper-1112f.log",
+      "result": "runs/lafan40-paper-1112f/result.json",
+      "evaluation_result": "runs/lafan40-paper-1112f-full40/result.json",
+      "last_verified_stage": "3 adapter tests passed; loop started, first update compilation pending",
+      "source_algorithm_modified": true,
+      "vendor_files_modified": false,
+      "paper_results_reproduced": false
+    }
   }
 }

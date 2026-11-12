@@ -31,6 +31,12 @@
   "validation": {
     "cpu_tests_passed": 2,
     "command": "python -m pytest -q official-reproduction-20261112/test_paper_profile.py",
-    "gpu_training_verified": false
+    "gpu_training_verified": false,
+    "gpu_adapter_tests_passed": 3,
+    "gpu_test_seconds": 15.68,
+    "gpu": "NVIDIA H100 80GB HBM3",
+    "torch": "2.14.0+cu126",
+    "gpu_job_uid": "ebd3b4405cee414a8c5699212de6b9cf",
+    "gpu_test_scope": "CPU numerical checks plus actual CUDA-graph replay with changed LR; not full policy training"
   }
 }
