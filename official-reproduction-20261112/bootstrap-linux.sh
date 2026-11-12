@@ -33,13 +33,15 @@ export CONDA_PKGS_DIRS="$root/cache/conda"
 export UV_CACHE_DIR="$root/cache/uv"
 export PIP_DISABLE_PIP_VERSION_CHECK=1
 printf 'CONDA_EXECUTABLE=%s\n' "$conda_bin"
+package_index=${SUPERMIMIC_PYPI_INDEX:-https://pypi.org/simple}
+printf 'PACKAGE_INDEX=%s\n' "$package_index"
 if [[ ! -x "$prefix/bin/python" ]]; then
   "$conda_bin" create --prefix "$prefix" --override-channels --channel conda-forge python=3.13 pip -y
 fi
-"$prefix/bin/python" -m pip --isolated install --index-url https://pypi.org/simple uv==0.13.7 pytest==9.2.0
+"$prefix/bin/python" -m pip --isolated install --index-url "$package_index" uv==0.13.7 pytest==9.2.0
 "$prefix/bin/uv" pip install --python "$prefix/bin/python" --index-url https://download.pytorch.org/whl/cu126 torch==2.14.0
 cd "$repo"
-"$prefix/bin/uv" pip install --python "$prefix/bin/python" --index-url https://pypi.org/simple \
+"$prefix/bin/uv" pip install --python "$prefix/bin/python" --index-url "$package_index" \
   --constraint official-reproduction-20261112/runtime-constraints.txt \
   -e upstream/mjlab_research -e upstream/supermimic
 "$prefix/bin/python" -m pip check
