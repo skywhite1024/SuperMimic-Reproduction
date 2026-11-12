@@ -1,0 +1,47 @@
+{
+  "status": "targeted_velocity_component_cpu_validation_passed",
+  "verified_at": "2026-11-13T05:05:16.318758+08:00",
+  "tests": 10,
+  "python": "3.13.18",
+  "torch": "2.14.0+cpu",
+  "device": "cpu",
+  "checks": [
+    "test_heading_frame_ignores_pitch_and_keeps_world_yaw_rate",
+    "test_reference_projection_precedes_average_and_clip_edges_do_not_mix",
+    "test_held_command_lasts_250_controls_and_partial_reset_only_resamples_its_row",
+    "test_reference_commands_are_unclipped_and_standing_only_changes_uniform_commands",
+    "test_table_a6_tracking_denominators_regularizers_and_fall_thresholds",
+    "test_step_grid_preserves_plane_identities_and_coincident_axis_commands",
+    "test_step_error_uses_final_window_mean_vector_and_uncapped_survivor_median",
+    "test_downstream_return_freezes_all_decoder_weights_but_keeps_input_and_encoder_gradients",
+    "test_latent_alignment_is_reference_only_and_encoder_only",
+    "test_critics_follow_explicit_identity_through_time_flattening_and_shuffling"
+  ],
+  "files": [
+    {
+      "file": "paper_velocity_contract.py",
+      "sha256": "b8116384f1464d501d525c86f142abcae8ef94059aa8e25bcac45d611b8be5af"
+    },
+    {
+      "file": "paper_velocity_actor.py",
+      "sha256": "0b1be997d49ab74b26d0405eaf1e5f4c9be755fc50c3b7ad60f1e15cf98a81e0"
+    },
+    {
+      "file": "test_paper_velocity.py",
+      "sha256": "49b33a03e6b09fc24a8fd20a020fe19c1caef9ee486aa03e987e0842725ff29c"
+    }
+  ],
+  "native_model_source_sha256": "fbfbd5c836c2670a68776f9009b9463451d5115c753d0e592fba919f2d44b0ad",
+  "paper_sha256": "fe213017ab062f4acc3965da89abd3c29969163e144a2628a662b8ce46691009",
+  "paper_source": "Table A.6, Table A.4 and Appendix G; physical page16 rendered for formula verification",
+  "junit_sha256": "572bc099ae4cde7af92196d774ec2068bacb18b0ceed97a9eac6689882ddd711",
+  "step_test_grid_rows": 672,
+  "unique_physical_commands": 630,
+  "clip_boundary_rule_author_confirmed": false,
+  "reference_projection_order_author_confirmed": false,
+  "history_feature": "flattened_normalized_proprioception; feature extractor unspecified in paper",
+  "history_feature_author_confirmed": false,
+  "full_velocity_runner_implemented": false,
+  "velocity_gpu_training_executed": false,
+  "paper_results_reproduced": false
+}

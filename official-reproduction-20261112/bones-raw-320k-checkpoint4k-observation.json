@@ -1,0 +1,29 @@
+{
+  "status": "native_checkpoint_completion_observed",
+  "job_uid": "283c2489542e47a68ca2493c1ad2d835",
+  "collection_steps": 4001,
+  "server_timestamp": "2026-11-13T05:00:09.173+08:00",
+  "source_commit": "18921cb6861fdb425a9d800bb2d65530f008e669",
+  "checkpoint_folder": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-raw-320k-1113m/checkpoint-series/step-000004001",
+  "server_reported_files": [
+    {
+      "file": "world_model.pt",
+      "bytes": 34990357,
+      "sha256": "11d16c5c839c9bf9332d5ad86e60548e0fd1c636b07e6375aab641ad8e3f6c85"
+    },
+    {
+      "file": "actor.pt",
+      "bytes": 46439949,
+      "sha256": "c6488f8b15d27b509c801a138877d27e2a874396e6c9669944df5318764db946"
+    },
+    {
+      "file": "critic.pt",
+      "bytes": 929269,
+      "sha256": "9d3f6c82a144d34745d44abebe5c7e7d35c1049ccdf3669847ec02bbeec2d3e0"
+    }
+  ],
+  "evidence_type": "Expanded offline log prefix includes all three file hashes but truncates JSON suffix; not an original manifest byte download",
+  "full_original_manifest_recovered": false,
+  "local_model_download_verified": false,
+  "full_training_resume_available": false
+}
