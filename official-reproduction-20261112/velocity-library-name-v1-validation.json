@@ -1,0 +1,150 @@
+{
+  "status": "verified_walking_running_library",
+  "kind": "local_name_candidate_v1",
+  "verification_scope": "membership rule and selected data bytes only",
+  "created_at": "2026-11-12T21:48:01.766870+00:00",
+  "fps": 50,
+  "clips": 41828,
+  "frames": 15469495,
+  "duration_hours": 85.94163888888889,
+  "selection_rule": {
+    "regex": "(?:^|[_\\-\\s])(?:walk(?:ing)?|run(?:ning)?|jog(?:ging)?)(?=[_\\-\\s\\d]|$)",
+    "case_insensitive": true,
+    "selection_order": "source order bones then lafan40; original clip order within each",
+    "outcome_or_return_filter_applied": false,
+    "clips_shortened": false
+  },
+  "author_membership_confirmed": false,
+  "semantic_motion_quality_verified": false,
+  "paper_results_reproduced": false,
+  "parent_sources": [
+    {
+      "label": "bones",
+      "input_clips": 142220,
+      "input_frames": 51915358,
+      "selected_clips": 41812,
+      "selected_frames": 15276455,
+      "parent_protocol_sha256": "eb92a45fce231e113262e1dc82ef8b684a8f94db5b581381c8b8ceae5a92bc8e",
+      "parent_packed_sha256": {
+        "joint_names.json": "30355b480e4f89c97a693c72f8baf23902fd458d25e49b5df4741dd47aefce0d",
+        "joint_pos.npy": "d61e0ed202183fc1189fd28f3b16474d25eee1f8c517de829c92104d407d5ff3",
+        "joint_vel.npy": "2f060e4979122858a1f90387139378c48d9eaef15a460560e966fb517952b44e",
+        "motion_ends.npy": "9a46f7e3c8dcf4a33618f8a6409a1eebf8165aaac3a5619364582b0d4b8f17da",
+        "motion_names.json": "8cfa81c756867f8df643df0b2a3fa592cb1325f2bcd32c2991c63c98f10e3bfa",
+        "root_ang_vel_w.npy": "adb430462fa2fa00be96e6a24d5dee7736f75b1f4e0a4eb876d757edc22a0586",
+        "root_lin_vel_w.npy": "c40d34356104e567a9d655b8ed874454e03e9f5bc6fd1b3b8adbbeea9cc4d935",
+        "root_pos_w.npy": "0c8da96a199cb50a46ccfa5e0cf2f10d4e98958adfa28cec2d0005148226ce7e",
+        "root_quat_w.npy": "211b9c9ac8052a713a7a207125d9146dafb0ba2fca80f1cac64e28eb1d8ef077"
+      },
+      "parent_numeric_files_rehashed_this_run": false,
+      "membership_files_rehashed_this_run": true
+    },
+    {
+      "label": "lafan40",
+      "input_clips": 40,
+      "input_frames": 441140,
+      "selected_clips": 16,
+      "selected_frames": 193040,
+      "parent_protocol_sha256": "513379c24f9c0fc5411bc690f6da669726ba4f162dfb4f963dd325b8a5ccae79",
+      "parent_packed_sha256": {
+        "joint_names.json": "30355b480e4f89c97a693c72f8baf23902fd458d25e49b5df4741dd47aefce0d",
+        "joint_pos.npy": "64f0dff0d2e0d678a1f78213233124588044ba5781aa599c31b08d1348509a9b",
+        "joint_vel.npy": "11efc4b4b37b0818ea25a2dfa8676ed8f564a3443c97bf9c9680a346c06b23e0",
+        "motion_ends.npy": "fa4db64df8fe4d1f9362883b8c7b32d303a3865aeeab1c92fad0e89144cf8be5",
+        "motion_names.json": "b2b46cceb62efa50b159e13928b4c991b80b27a59b381ed603392cfa87e3c8b9",
+        "root_ang_vel_w.npy": "88ff137fd4a6dde1626dceae086c8a810da624d650855d69af1adc052565f9b5",
+        "root_lin_vel_w.npy": "7738f75d8de3b070a1d6407a06e1a971d5723abccc1e46a90a1aa86e93c486a0",
+        "root_pos_w.npy": "a57c5a8efc209c345ea4f7d83ef36936c0edfefb60f137757af69c6f4f7272fe",
+        "root_quat_w.npy": "9934171fce73559ec04d63db2bafee95575cd46196fe39aea425d677eae5303e"
+      },
+      "parent_numeric_files_rehashed_this_run": false,
+      "membership_files_rehashed_this_run": true
+    }
+  ],
+  "member_ledger": {
+    "file": "membership.csv",
+    "bytes": 5497362,
+    "sha256": "7d6d3dd95632ae12296ac35a960334e28d48b37e0943b5c721ed5e0774cc9941"
+  },
+  "selected_array_comparisons": [
+    {
+      "file": "joint_pos.npy",
+      "frames_compared": 15469495,
+      "all_selected_bytes_equal": true
+    },
+    {
+      "file": "joint_vel.npy",
+      "frames_compared": 15469495,
+      "all_selected_bytes_equal": true
+    },
+    {
+      "file": "root_ang_vel_w.npy",
+      "frames_compared": 15469495,
+      "all_selected_bytes_equal": true
+    },
+    {
+      "file": "root_lin_vel_w.npy",
+      "frames_compared": 15469495,
+      "all_selected_bytes_equal": true
+    },
+    {
+      "file": "root_pos_w.npy",
+      "frames_compared": 15469495,
+      "all_selected_bytes_equal": true
+    },
+    {
+      "file": "root_quat_w.npy",
+      "frames_compared": 15469495,
+      "all_selected_bytes_equal": true
+    }
+  ],
+  "packed_files": [
+    {
+      "file": "joint_names.json",
+      "bytes": 770,
+      "sha256": "4674408eab42a3a3cd5414072f2c7874217db6bc6394fb3efeb594be62593682"
+    },
+    {
+      "file": "joint_pos.npy",
+      "bytes": 1794461548,
+      "sha256": "b8c86d5e7ead5f50df070597d96a1a6fe2775d97ad413ad9fe11b7316efd4f0c"
+    },
+    {
+      "file": "joint_vel.npy",
+      "bytes": 1794461548,
+      "sha256": "ef6ad381610ac92d4e129e6ee21a6c988032dd8c4cdf9b71805f565b9f67fadc"
+    },
+    {
+      "file": "motion_ends.npy",
+      "bytes": 334752,
+      "sha256": "5628d1583a55433ea8aba8076197da104f50677c47243d27bcd3a4660cbe55c1"
+    },
+    {
+      "file": "motion_names.json",
+      "bytes": 1983965,
+      "sha256": "f79d725fb8f4ae936ded5cd286511d6ee94cb59e0997d2f5777317b498216931"
+    },
+    {
+      "file": "root_ang_vel_w.npy",
+      "bytes": 185634068,
+      "sha256": "4906062ba5353f24939c7471eb8952f3df550e41e58bcb61de00d478e0c702e1"
+    },
+    {
+      "file": "root_lin_vel_w.npy",
+      "bytes": 185634068,
+      "sha256": "54ff88d2d05cfa302ecfbaf39a5ff99e9e5b7e9c956d6a47998e83461148d5cf"
+    },
+    {
+      "file": "root_pos_w.npy",
+      "bytes": 185634068,
+      "sha256": "25d3039effb6451642b3b964e2f9e8539ce0979449e9e57ec1efa03db918460f"
+    },
+    {
+      "file": "root_quat_w.npy",
+      "bytes": 247512048,
+      "sha256": "6a656323308139e5a2ffb93a6b130907a855e65d6da3ba94cef54f87913b4f32"
+    }
+  ],
+  "builder_sha256": "1f33398521dfc263e879de5fd6b3397f96556b08d15ab27bec44fbb81144c007",
+  "elapsed_seconds": 17.078427899978124
+}
