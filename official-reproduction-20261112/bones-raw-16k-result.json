@@ -1,0 +1,45 @@
+{
+  "status": "pilot_completed",
+  "collection_steps": 16001,
+  "seed": 42,
+  "num_envs": 4096,
+  "elapsed_training_seconds": 2171.623228829354,
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "checkpoints": [
+    {
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-raw-16k-1113f/logs/SuperMimic-GenCoord-G1/2026-11-12_18-07-57/world_model.pt",
+      "bytes": 34990357,
+      "sha256": "b9dc3486a828b0ae161a2542f4ebeaaef258e7c26c42ebf3579986630fbd359f"
+    },
+    {
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-raw-16k-1113f/logs/SuperMimic-GenCoord-G1/2026-11-12_18-07-57/actor.pt",
+      "bytes": 46439949,
+      "sha256": "151ef8e8712936ed1d8019844c6ea7a3a6a48600c5138d787cebba5e549d3f32"
+    },
+    {
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-raw-16k-1113f/logs/SuperMimic-GenCoord-G1/2026-11-12_18-07-57/critic.pt",
+      "bytes": 929269,
+      "sha256": "f78dedf43c8613d1a4178f1c74ef6f0fdbfa2d27ca1e152214c2e76dd9f2d693"
+    }
+  ],
+  "full_clip_evaluation_completed": false,
+  "paper_results_reproduced": false,
+  "goal_assembly_backend": "eager",
+  "training_profile": "paper-a5-single-gpu",
+  "corpus": {
+    "name": "bones-raw",
+    "clips": 142220,
+    "frames": 51915358,
+    "paper_name_filter_applied": false,
+    "paper_feasibility_filter_applied": false
+  },
+  "device_memory_after_initialization": {
+    "free_bytes": 63770525696,
+    "total_bytes": 85017624576,
+    "torch_allocated_bytes": 19236814336,
+    "torch_reserved_bytes": 19268632576
+  },
+  "peak_torch_memory_allocated_bytes": 33216616960,
+  "peak_torch_memory_reserved_bytes": 34997272576,
+  "memory_scope": "PyTorch allocator only; excludes Warp and other CUDA allocations"
+}

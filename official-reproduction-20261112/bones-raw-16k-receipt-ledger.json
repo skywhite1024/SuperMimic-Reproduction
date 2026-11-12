@@ -1,0 +1,25 @@
+{
+  "status": "all_hashes_verified",
+  "training_job_uid": "af1bd6ee0f7c415abfd1f7c14143a82f",
+  "transport_job_uid": "9c550404bcd04511ae0e4f334bc4154e",
+  "transport": "zlib+base64 ACP live log chunks",
+  "log_sha256": "4a499578f6b27b05ead7ee0f541af614959a857847ac977bc4c89c6043ca28b0",
+  "files": [
+    {
+      "i": 0,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-raw-16k-1113f/result.json",
+      "bytes": 1729,
+      "sha256": "73314b1361432a75cb07ab06769475688369a6cf183cbd884696ec2c857a7a04",
+      "chunks": 3,
+      "local_file": "bones-raw-16k-result.json"
+    },
+    {
+      "i": 1,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-raw-16k-1113f/resolved-config.json",
+      "bytes": 42322,
+      "sha256": "e5e2232b9d160d62ee156fca5e83185746e7e36a0e3f6439467e3ea68883ed9f",
+      "chunks": 22,
+      "local_file": "bones-raw-16k-resolved-config.json"
+    }
+  ]
+}
