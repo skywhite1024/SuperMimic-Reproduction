@@ -1,0 +1,117 @@
+{
+  "status": "complete_pair_evidence_ready",
+  "files": [
+    {
+      "file": "evaluation-1k/result.json",
+      "bytes": 52066786,
+      "sha256": "1b2a9a774d5c732f31ea6d3e5e2f29cdb6fe03460ddc8f9d791bd169a4b340d1"
+    },
+    {
+      "file": "evaluation-1k/protocol.json",
+      "bytes": 4825,
+      "sha256": "3cf94002c77c4a35c82f409458e1a7f6b802a22fc5ee0b4c8268835aa2e3b2fa"
+    },
+    {
+      "file": "evaluation-1k/accounting.json",
+      "bytes": 1487,
+      "sha256": "7765fceb346430264123c94ef858e62caf8ac1003431e5d59e20be2a2f341b22"
+    },
+    {
+      "file": "evaluation-16k/result.json",
+      "bytes": 52070329,
+      "sha256": "f3520e006991fcc2a48f263305f35a7eada2a2de7e9483a6d0ae0f98f618db7b"
+    },
+    {
+      "file": "evaluation-16k/protocol.json",
+      "bytes": 4820,
+      "sha256": "eb92a45fce231e113262e1dc82ef8b684a8f94db5b581381c8b8ceae5a92bc8e"
+    },
+    {
+      "file": "evaluation-16k/accounting.json",
+      "bytes": 1482,
+      "sha256": "84a02e1b4ce13d6a22545691c367ab1fcc1c1a1fb3fd820e237a7f53adc7a751"
+    },
+    {
+      "file": "training-1k/models/world_model.pt",
+      "bytes": 34990357,
+      "sha256": "7b273aecb39e531d0f4d7679aac835e2b2af6900c8f8d4263615ae99050c2762"
+    },
+    {
+      "file": "training-1k/models/actor.pt",
+      "bytes": 46439949,
+      "sha256": "4507f77190d93a8549cb9f08905ab1f83f0d3fa77d67fdbede4a7655a6e6e019"
+    },
+    {
+      "file": "training-1k/models/critic.pt",
+      "bytes": 929269,
+      "sha256": "cb9e1df22f8bc67043c3328d5468cd388e8ee2f0de67616b893145f8e957f77b"
+    },
+    {
+      "file": "training-1k/result.json",
+      "bytes": 1734,
+      "sha256": "b9d63d66e5aca56fadc95a0dea6e187b2340c53a519974616308c1ebfab802d5"
+    },
+    {
+      "file": "training-1k/resolved-config.json",
+      "bytes": 42319,
+      "sha256": "6f88a13b6efeaefa6923ff61285c5c97db770e414cc789753ea1169d1ba66b12"
+    },
+    {
+      "file": "training-16k/models/world_model.pt",
+      "bytes": 34990357,
+      "sha256": "b9dc3486a828b0ae161a2542f4ebeaaef258e7c26c42ebf3579986630fbd359f"
+    },
+    {
+      "file": "training-16k/models/actor.pt",
+      "bytes": 46439949,
+      "sha256": "151ef8e8712936ed1d8019844c6ea7a3a6a48600c5138d787cebba5e549d3f32"
+    },
+    {
+      "file": "training-16k/models/critic.pt",
+      "bytes": 929269,
+      "sha256": "f78dedf43c8613d1a4178f1c74ef6f0fdbfa2d27ca1e152214c2e76dd9f2d693"
+    },
+    {
+      "file": "training-16k/result.json",
+      "bytes": 1729,
+      "sha256": "73314b1361432a75cb07ab06769475688369a6cf183cbd884696ec2c857a7a04"
+    },
+    {
+      "file": "training-16k/resolved-config.json",
+      "bytes": 42322,
+      "sha256": "e5e2232b9d160d62ee156fca5e83185746e7e36a0e3f6439467e3ea68883ed9f"
+    },
+    {
+      "file": "comparison/summary.json",
+      "bytes": 5134,
+      "sha256": "166c3e09e64022613555aadbc505fcbca1748b3706d8d3a963bcbd1ecf6ac8cc"
+    },
+    {
+      "file": "comparison/paired-motions.csv",
+      "bytes": 21525104,
+      "sha256": "6cc93180374c6e71ec2658986812f311799fdc3da853f54cc940d43284b6e2ba"
+    },
+    {
+      "file": "trajectories-1k/summary.json",
+      "bytes": 986,
+      "sha256": "f8ad88ed8da15c9feb84eabdaaa99de1e06a0ef3f2df40492a5ea423027adff9"
+    },
+    {
+      "file": "trajectories-1k/files.csv",
+      "bytes": 15148841,
+      "sha256": "b0ee993699c21a1112a000734a2052e7a6bc44b647ce90ac9ca38df7602e4b99"
+    },
+    {
+      "file": "trajectories-16k/summary.json",
+      "bytes": 986,
+      "sha256": "bded79b6ba1748f582f08b239badadfd4ce479457898f832d98b7665d3058637"
+    },
+    {
+      "file": "trajectories-16k/files.csv",
+      "bytes": 15180514,
+      "sha256": "fd6666dfccdbbb3077692d3c472f5d11b6c3114ed8c65dc22961c55405ffd2f2"
+    }
+  ],
+  "excluded": "Raw gated motion data and large trajectory NPZs are not copied; complete trajectories remain on AFS with per-file hash ledgers",
+  "paper_results_reproduced": false
+}

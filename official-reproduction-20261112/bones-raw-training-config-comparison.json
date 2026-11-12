@@ -1,0 +1,64 @@
+{
+  "status": "configuration_diff_reviewed",
+  "different_function_address_repr_paths": [
+    ".environment.events.base_com.func",
+    ".environment.events.encoder_bias.func",
+    ".environment.events.foot_friction.func",
+    ".environment.observations.actor.terms.actions.func",
+    ".environment.observations.actor.terms.base_ang_vel.func",
+    ".environment.observations.actor.terms.joint_pos.func",
+    ".environment.observations.actor.terms.joint_vel.func",
+    ".environment.observations.actor.terms.projected_gravity.func",
+    ".environment.observations.critic.terms.actions.func",
+    ".environment.observations.critic.terms.base_ang_vel.func",
+    ".environment.observations.critic.terms.base_lin_vel.func",
+    ".environment.observations.critic.terms.body_ori.func",
+    ".environment.observations.critic.terms.body_pos.func",
+    ".environment.observations.critic.terms.command.func",
+    ".environment.observations.critic.terms.joint_pos.func",
+    ".environment.observations.critic.terms.joint_vel.func",
+    ".environment.observations.critic.terms.motion_anchor_ori_b.func",
+    ".environment.observations.critic.terms.motion_anchor_pos_b.func",
+    ".environment.observations.full_state.terms.joint_pos.func",
+    ".environment.observations.full_state.terms.joint_vel.func",
+    ".environment.observations.full_state.terms.root_ang_vel.func",
+    ".environment.observations.full_state.terms.root_lin_vel.func",
+    ".environment.observations.full_state.terms.root_ori.func",
+    ".environment.observations.full_state.terms.root_pos.func",
+    ".environment.observations.goal.terms.command.func",
+    ".environment.observations.goal.terms.motion_anchor_ori_b.func",
+    ".environment.observations.goal.terms.motion_anchor_pos_b.func",
+    ".environment.rewards.action_rate_l2.func",
+    ".environment.rewards.joint_limit.func",
+    ".environment.rewards.motion_body_ang_vel.func",
+    ".environment.rewards.motion_body_lin_vel.func",
+    ".environment.rewards.motion_body_ori.func",
+    ".environment.rewards.motion_body_pos.func",
+    ".environment.rewards.motion_global_root_ori.func",
+    ".environment.rewards.motion_global_root_pos.func",
+    ".environment.scene.entities.robot.spec_fn",
+    ".environment.scene.terrain.spec_fn",
+    ".environment.terminations.anchor_ori.func",
+    ".environment.terminations.anchor_pos.func",
+    ".environment.terminations.motion_end.func",
+    ".environment.terminations.time_out.func"
+  ],
+  "other_differences": [
+    {
+      "path": ".collection_steps",
+      "reference": 1001,
+      "candidate": 16001
+    },
+    {
+      "path": ".runner.max_iterations",
+      "reference": 1001,
+      "candidate": 16001
+    },
+    {
+      "path": ".runner.save_interval",
+      "reference": 1000,
+      "candidate": 16000
+    }
+  ],
+  "limitation": "Removing only process addresses from equal function-name representations does not establish closure state or bitwise training equivalence"
+}

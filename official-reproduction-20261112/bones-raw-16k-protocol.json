@@ -1,0 +1,105 @@
+{
+  "task": "SuperMimic-GenCoord-G1",
+  "seed": 42,
+  "clips": 142220,
+  "num_envs": 1024,
+  "batch_order": "length",
+  "all_motions_included": true,
+  "subset_filter_applied": false,
+  "batch_reset": "fresh env reset; exact first frame; history filled with first sensor frame",
+  "inference_scope": "all resets, observations and steps across all batches after model construction",
+  "incomplete_result_policy": "completed batch receipts retained; never label an interrupted evaluation complete",
+  "start": "exact first reference frame via author reset_to_frame",
+  "success": "first termination is native motion_end with no failure term",
+  "termination_terms": {
+    "time_out": {
+      "time_out": true,
+      "params": {}
+    },
+    "motion_end": {
+      "time_out": true,
+      "params": {
+        "command_name": "motion"
+      }
+    },
+    "anchor_pos": {
+      "time_out": false,
+      "params": {
+        "command_name": "motion",
+        "threshold": 0.25
+      }
+    },
+    "anchor_ori": {
+      "time_out": false,
+      "params": {
+        "asset_cfg": "SceneEntityCfg(name='robot', joint_names=None, joint_ids=slice(None, None, None), body_names=None, body_ids=slice(None, None, None), geom_names=None, geom_ids=slice(None, None, None), site_names=None, site_ids=slice(None, None, None), actuator_names=None, actuator_ids=slice(None, None, None), tendon_names=None, tendon_ids=slice(None, None, None), camera_names=None, camera_ids=slice(None, None, None), light_names=None, light_ids=slice(None, None, None), material_names=None, material_ids=slice(None, None, None), texture_names=None, texture_ids=slice(None, None, None), pair_names=None, pair_ids=slice(None, None, None), preserve_order=False)",
+        "command_name": "motion",
+        "threshold": 0.8
+      }
+    }
+  },
+  "domain_randomization": false,
+  "observation_noise": false,
+  "robot_collision_friction": 1.0,
+  "physics": "unchanged author defaults",
+  "repeatability_verified": false,
+  "native_joint_limit_clipping_on_reset": true,
+  "training": {
+    "status": "pilot_completed",
+    "collection_steps": 16001,
+    "seed": 42,
+    "num_envs": 4096,
+    "elapsed_training_seconds": 2171.623228829354,
+    "gpu": "NVIDIA H100 80GB HBM3",
+    "checkpoints": [
+      {
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-raw-16k-1113f/logs/SuperMimic-GenCoord-G1/2026-11-12_18-07-57/world_model.pt",
+        "bytes": 34990357,
+        "sha256": "b9dc3486a828b0ae161a2542f4ebeaaef258e7c26c42ebf3579986630fbd359f"
+      },
+      {
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-raw-16k-1113f/logs/SuperMimic-GenCoord-G1/2026-11-12_18-07-57/actor.pt",
+        "bytes": 46439949,
+        "sha256": "151ef8e8712936ed1d8019844c6ea7a3a6a48600c5138d787cebba5e549d3f32"
+      },
+      {
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-raw-16k-1113f/logs/SuperMimic-GenCoord-G1/2026-11-12_18-07-57/critic.pt",
+        "bytes": 929269,
+        "sha256": "f78dedf43c8613d1a4178f1c74ef6f0fdbfa2d27ca1e152214c2e76dd9f2d693"
+      }
+    ],
+    "full_clip_evaluation_completed": false,
+    "paper_results_reproduced": false,
+    "goal_assembly_backend": "eager",
+    "training_profile": "paper-a5-single-gpu",
+    "corpus": {
+      "name": "bones-raw",
+      "clips": 142220,
+      "frames": 51915358,
+      "paper_name_filter_applied": false,
+      "paper_feasibility_filter_applied": false
+    },
+    "device_memory_after_initialization": {
+      "free_bytes": 63770525696,
+      "total_bytes": 85017624576,
+      "torch_allocated_bytes": 19236814336,
+      "torch_reserved_bytes": 19268632576
+    },
+    "peak_torch_memory_allocated_bytes": 33216616960,
+    "peak_torch_memory_reserved_bytes": 34997272576,
+    "memory_scope": "PyTorch allocator only; excludes Warp and other CUDA allocations"
+  },
+  "paper_results_reproduced": false,
+  "trajectory_state": "pre-action full_state; rewards and terminations are post-step",
+  "motion_files": {
+    "joint_names.json": "30355b480e4f89c97a693c72f8baf23902fd458d25e49b5df4741dd47aefce0d",
+    "joint_pos.npy": "d61e0ed202183fc1189fd28f3b16474d25eee1f8c517de829c92104d407d5ff3",
+    "joint_vel.npy": "2f060e4979122858a1f90387139378c48d9eaef15a460560e966fb517952b44e",
+    "motion_ends.npy": "9a46f7e3c8dcf4a33618f8a6409a1eebf8165aaac3a5619364582b0d4b8f17da",
+    "motion_names.json": "8cfa81c756867f8df643df0b2a3fa592cb1325f2bcd32c2991c63c98f10e3bfa",
+    "root_ang_vel_w.npy": "adb430462fa2fa00be96e6a24d5dee7736f75b1f4e0a4eb876d757edc22a0586",
+    "root_lin_vel_w.npy": "c40d34356104e567a9d655b8ed874454e03e9f5bc6fd1b3b8adbbeea9cc4d935",
+    "root_pos_w.npy": "0c8da96a199cb50a46ccfa5e0cf2f10d4e98958adfa28cec2d0005148226ce7e",
+    "root_quat_w.npy": "211b9c9ac8052a713a7a207125d9146dafb0ba2fca80f1cac64e28eb1d8ef077"
+  }
+}

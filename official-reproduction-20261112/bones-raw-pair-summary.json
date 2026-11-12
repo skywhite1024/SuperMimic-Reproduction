@@ -1,0 +1,119 @@
+{
+  "status": "complete_corpus_pairing_verified",
+  "clips": 142220,
+  "reference_frames": 51915358,
+  "identical_evaluation_protocol": true,
+  "identical_packed_motion_hashes": true,
+  "all_indices_paired_once": true,
+  "reference": {
+    "evaluation": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-raw-1k-full142220-1113h",
+    "result_sha256": "1b2a9a774d5c732f31ea6d3e5e2f29cdb6fe03460ddc8f9d791bd169a4b340d1",
+    "protocol_sha256": "3cf94002c77c4a35c82f409458e1a7f6b802a22fc5ee0b4c8268835aa2e3b2fa",
+    "accounting_sha256": "7765fceb346430264123c94ef858e62caf8ac1003431e5d59e20be2a2f341b22",
+    "training_collection_steps": 1001,
+    "training_seed": 42,
+    "training_profile": "paper-a5-single-gpu",
+    "checkpoints": [
+      {
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-raw-pilot-1113a/logs/SuperMimic-GenCoord-G1/2026-11-12_16-30-57/world_model.pt",
+        "bytes": 34990357,
+        "sha256": "7b273aecb39e531d0f4d7679aac835e2b2af6900c8f8d4263615ae99050c2762"
+      },
+      {
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-raw-pilot-1113a/logs/SuperMimic-GenCoord-G1/2026-11-12_16-30-57/actor.pt",
+        "bytes": 46439949,
+        "sha256": "4507f77190d93a8549cb9f08905ab1f83f0d3fa77d67fdbede4a7655a6e6e019"
+      },
+      {
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-raw-pilot-1113a/logs/SuperMimic-GenCoord-G1/2026-11-12_16-30-57/critic.pt",
+        "bytes": 929269,
+        "sha256": "cb9e1df22f8bc67043c3328d5468cd388e8ee2f0de67616b893145f8e957f77b"
+      }
+    ],
+    "successes": 97741,
+    "failures": 44479,
+    "mean_normalized_full_motion_return": 0.3656611297741464,
+    "frame_weighted_normalized_full_motion_return": 0.3292064447180448,
+    "tracked_fraction_frames": 0.7682390247602646,
+    "failure_termination_counts": {
+      "anchor_pos": 43021,
+      "anchor_pos+motion_end": 130,
+      "anchor_ori": 1139,
+      "anchor_ori+anchor_pos": 189
+    },
+    "all_trajectory_files_present_nonempty": true,
+    "trajectory_array_integrity_audited": false
+  },
+  "candidate": {
+    "evaluation": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-raw-16k-full142220-1113i",
+    "result_sha256": "f3520e006991fcc2a48f263305f35a7eada2a2de7e9483a6d0ae0f98f618db7b",
+    "protocol_sha256": "eb92a45fce231e113262e1dc82ef8b684a8f94db5b581381c8b8ceae5a92bc8e",
+    "accounting_sha256": "84a02e1b4ce13d6a22545691c367ab1fcc1c1a1fb3fd820e237a7f53adc7a751",
+    "training_collection_steps": 16001,
+    "training_seed": 42,
+    "training_profile": "paper-a5-single-gpu",
+    "checkpoints": [
+      {
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-raw-16k-1113f/logs/SuperMimic-GenCoord-G1/2026-11-12_18-07-57/world_model.pt",
+        "bytes": 34990357,
+        "sha256": "b9dc3486a828b0ae161a2542f4ebeaaef258e7c26c42ebf3579986630fbd359f"
+      },
+      {
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-raw-16k-1113f/logs/SuperMimic-GenCoord-G1/2026-11-12_18-07-57/actor.pt",
+        "bytes": 46439949,
+        "sha256": "151ef8e8712936ed1d8019844c6ea7a3a6a48600c5138d787cebba5e549d3f32"
+      },
+      {
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-raw-16k-1113f/logs/SuperMimic-GenCoord-G1/2026-11-12_18-07-57/critic.pt",
+        "bytes": 929269,
+        "sha256": "f78dedf43c8613d1a4178f1c74ef6f0fdbfa2d27ca1e152214c2e76dd9f2d693"
+      }
+    ],
+    "successes": 136056,
+    "failures": 6164,
+    "mean_normalized_full_motion_return": 0.8370130801609502,
+    "frame_weighted_normalized_full_motion_return": 0.8485842390050966,
+    "tracked_fraction_frames": 0.9779238929643902,
+    "failure_termination_counts": {
+      "anchor_pos": 5607,
+      "anchor_ori": 528,
+      "anchor_pos+motion_end": 1,
+      "anchor_ori+anchor_pos": 28
+    },
+    "all_trajectory_files_present_nonempty": true,
+    "trajectory_array_integrity_audited": false
+  },
+  "success_transitions": {
+    "both_success": 97558,
+    "recovered_success": 38498,
+    "regressed_failure": 183,
+    "both_failure": 5981
+  },
+  "success_rate_delta_percentage_points": 26.940655322739417,
+  "equal_clip_mean_return_delta": 0.4713519503868039,
+  "frame_weighted_return_delta": 0.5193777942870497,
+  "tracked_fraction_delta": 0.20968486820412566,
+  "per_clip_return_delta_quantiles": {
+    "0": -0.4459307675781122,
+    "0.05": 0.15278925046476577,
+    "0.5": 0.46789735299733903,
+    "0.95": 0.769207872146011,
+    "1": 0.9504947289608958
+  },
+  "per_clip_return_change_counts": {
+    "positive": 141371,
+    "negative": 849,
+    "exact_zero": 0
+  },
+  "paired_csv": {
+    "file": "paired-motions.csv",
+    "rows": 142220,
+    "bytes": 21525104,
+    "sha256": "6cc93180374c6e71ec2658986812f311799fdc3da853f54cc940d43284b6e2ba"
+  },
+  "limitations": [
+    "Descriptive comparison of frozen runs; no statistical significance claim",
+    "Matching evaluation contracts do not establish matching training configurations",
+    "Simulator determinism, strict pose/contact quality, held-out generalization and paper equivalence remain unverified"
+  ]
+}

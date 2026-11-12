@@ -1,0 +1,15 @@
+{
+  "status": "independent_local_full_corpus_recomputation_passed",
+  "clips": 142220,
+  "reference_frames": 51915358,
+  "method": "Python math.fsum over every recovered result record; no numpy comparator reuse",
+  "success_transitions": {
+    "recovered_success": 38498,
+    "both_success": 97558,
+    "both_failure": 5981,
+    "regressed_failure": 183
+  },
+  "equal_clip_mean_return_delta": 0.4713519503868039,
+  "full_results_sha256_verified": true,
+  "paper_results_reproduced": false
+}

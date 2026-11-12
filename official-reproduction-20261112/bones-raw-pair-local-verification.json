@@ -1,0 +1,46 @@
+{
+  "status": "local_pair_archive_verified",
+  "archive_sha256": "77c49a6efce70dc90e4cbf836ff67369038553c2599b293eaa01e16f4d0cf692",
+  "archive_bytes": 185928623,
+  "verified_members": 23,
+  "models": [
+    {
+      "file": "training-1k/models/world_model.pt",
+      "tensors": 26,
+      "finite": true,
+      "sha256": "7b273aecb39e531d0f4d7679aac835e2b2af6900c8f8d4263615ae99050c2762"
+    },
+    {
+      "file": "training-1k/models/actor.pt",
+      "tensors": 66,
+      "finite": true,
+      "sha256": "4507f77190d93a8549cb9f08905ab1f83f0d3fa77d67fdbede4a7655a6e6e019"
+    },
+    {
+      "file": "training-1k/models/critic.pt",
+      "tensors": 10,
+      "finite": true,
+      "sha256": "cb9e1df22f8bc67043c3328d5468cd388e8ee2f0de67616b893145f8e957f77b"
+    },
+    {
+      "file": "training-16k/models/world_model.pt",
+      "tensors": 26,
+      "finite": true,
+      "sha256": "b9dc3486a828b0ae161a2542f4ebeaaef258e7c26c42ebf3579986630fbd359f"
+    },
+    {
+      "file": "training-16k/models/actor.pt",
+      "tensors": 66,
+      "finite": true,
+      "sha256": "151ef8e8712936ed1d8019844c6ea7a3a6a48600c5138d787cebba5e549d3f32"
+    },
+    {
+      "file": "training-16k/models/critic.pt",
+      "tensors": 10,
+      "finite": true,
+      "sha256": "f78dedf43c8613d1a4178f1c74ef6f0fdbfa2d27ca1e152214c2e76dd9f2d693"
+    }
+  ],
+  "excluded_trajectory_arrays_checked_locally": false,
+  "paper_results_reproduced": false
+}

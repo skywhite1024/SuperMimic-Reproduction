@@ -1,5 +1,5 @@
 {
-  "status": "batch_transition_mapping_and_accounting_verified_trajectory_equivalence_unproven",
+  "status": "full_raw_corpus_execution_and_artifact_integrity_verified_trajectory_equivalence_unproven",
   "source_reference": "evaluate_lafan40.py at d34976b2b34367482b08be6a0d9e88eab9ee2d28",
   "protocol_changes": [
     "Full corpus evaluated in bounded batches; no membership filtering",
@@ -23,7 +23,7 @@
       "step_tolerance": 5
     }
   ],
-  "full_corpus_verified": false,
+  "full_corpus_verified": true,
   "paper_equivalence_verified": false,
   "cloud_job": {
     "status": "failed",
@@ -202,5 +202,7 @@
     "initial_mapping": "lafan40-batch24-initial-comparison.json",
     "comparison": "original-vs-batch24-comparison.json",
     "trajectories": "original-vs-batch24-trajectories.json"
-  }
+  },
+  "full_corpus_scope": "Two frozen raw BONES142220 runs; complete membership and saved-array integrity; no deterministic execution or paper equivalence claim",
+  "full_corpus_receipt_ledger": "bones-raw-pair-receipt-ledger.json"
 }

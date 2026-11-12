@@ -1,0 +1,10 @@
+{
+  "status": "targeted_cpu_validation_passed",
+  "script_sha256": "0cfcb65fee08f4d824db8bb09943144ee275c407ebb4bcbfd415c1162d482153",
+  "checks": {
+    "complete_archive_and_six_model_loads": "passed",
+    "valid_archive_with_wrong_member_digest_rejected": "passed",
+    "nonfinite_model_cannot_complete_verification": "passed"
+  },
+  "real_cloud_archive_validated": false
+}

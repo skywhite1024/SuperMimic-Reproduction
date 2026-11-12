@@ -1,0 +1,103 @@
+{
+  "status": "complete_pair_artifacts_recovered_and_verified",
+  "archive": {
+    "status": "archive_created_on_afs",
+    "file": "/mnt/afs/260010076/SuperMimic/official-20261112/exports/bones-raw-pair-1113k-evidence.tar.gz",
+    "bytes": 185928623,
+    "sha256": "77c49a6efce70dc90e4cbf836ff67369038553c2599b293eaa01e16f4d0cf692",
+    "members": 23,
+    "local_download_verified": false
+  },
+  "archive_download_verified": true,
+  "archive_member_count": 23,
+  "models_loaded_on_local_cpu": 6,
+  "all_server_trajectory_arrays_verified": 284440,
+  "files": [
+    {
+      "public_file": "bones-raw-pair-summary.json",
+      "bytes": 5134,
+      "sha256": "166c3e09e64022613555aadbc505fcbca1748b3706d8d3a963bcbd1ecf6ac8cc",
+      "source_local_relative_path": "comparison/summary.json",
+      "source_kind": "verified_archive_member"
+    },
+    {
+      "public_file": "bones-raw-pair-local-verification.json",
+      "bytes": 1467,
+      "sha256": "a486d8c090552890fe8e56d3b3e75d270202c8cac1b2fa2a9ed1cbb1a1d42d28",
+      "source_local_relative_path": "local-verification.json",
+      "source_kind": "local_validation"
+    },
+    {
+      "public_file": "bones-raw-pair-independent-recomputation.json",
+      "bytes": 506,
+      "sha256": "4217476fcfa4285d5416cb8b8895820e7eb38559ea9eaa732d2040f33fb86f9a",
+      "source_local_relative_path": "independent-recomputation.json",
+      "source_kind": "local_validation"
+    },
+    {
+      "public_file": "bones-raw-training-config-comparison.json",
+      "bytes": 3002,
+      "sha256": "09a726b6ac5e634ee4c6e243225836bf819b77b61f98598b62fe16f7bfdd4671",
+      "source_local_relative_path": "training-config-comparison.json",
+      "source_kind": "local_validation"
+    },
+    {
+      "public_file": "bones-raw-pair-package-manifest.json",
+      "bytes": 3871,
+      "sha256": "e2a1f38a53f84f987f97ebc29b679b7f00a7325fa86222c81d58c166f989ff86",
+      "source_local_relative_path": "package-manifest.json",
+      "source_kind": "verified_archive_member"
+    },
+    {
+      "public_file": "bones-raw-1k-resolved-config.json",
+      "bytes": 42319,
+      "sha256": "6f88a13b6efeaefa6923ff61285c5c97db770e414cc789753ea1169d1ba66b12",
+      "source_local_relative_path": "training-1k/resolved-config.json",
+      "source_kind": "verified_archive_member"
+    },
+    {
+      "public_file": "bones-raw-1k-protocol.json",
+      "bytes": 4825,
+      "sha256": "3cf94002c77c4a35c82f409458e1a7f6b802a22fc5ee0b4c8268835aa2e3b2fa",
+      "source_local_relative_path": "evaluation-1k/protocol.json",
+      "source_kind": "verified_archive_member"
+    },
+    {
+      "public_file": "bones-raw-1k-accounting.json",
+      "bytes": 1487,
+      "sha256": "7765fceb346430264123c94ef858e62caf8ac1003431e5d59e20be2a2f341b22",
+      "source_local_relative_path": "evaluation-1k/accounting.json",
+      "source_kind": "verified_archive_member"
+    },
+    {
+      "public_file": "bones-raw-1k-trajectory-integrity.json",
+      "bytes": 986,
+      "sha256": "f8ad88ed8da15c9feb84eabdaaa99de1e06a0ef3f2df40492a5ea423027adff9",
+      "source_local_relative_path": "trajectories-1k/summary.json",
+      "source_kind": "verified_archive_member"
+    },
+    {
+      "public_file": "bones-raw-16k-protocol.json",
+      "bytes": 4820,
+      "sha256": "eb92a45fce231e113262e1dc82ef8b684a8f94db5b581381c8b8ceae5a92bc8e",
+      "source_local_relative_path": "evaluation-16k/protocol.json",
+      "source_kind": "verified_archive_member"
+    },
+    {
+      "public_file": "bones-raw-16k-accounting.json",
+      "bytes": 1482,
+      "sha256": "84a02e1b4ce13d6a22545691c367ab1fcc1c1a1fb3fd820e237a7f53adc7a751",
+      "source_local_relative_path": "evaluation-16k/accounting.json",
+      "source_kind": "verified_archive_member"
+    },
+    {
+      "public_file": "bones-raw-16k-trajectory-integrity.json",
+      "bytes": 986,
+      "sha256": "bded79b6ba1748f582f08b239badadfd4ce479457898f832d98b7665d3058637",
+      "source_local_relative_path": "trajectories-16k/summary.json",
+      "source_kind": "verified_archive_member"
+    }
+  ],
+  "large_files": "Full evaluation records, paired CSV, trajectory hash ledgers and six models are retained in the local verified archive; raw trajectory arrays remain on AFS",
+  "paper_results_reproduced": false
+}
