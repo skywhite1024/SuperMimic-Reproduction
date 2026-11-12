@@ -1,0 +1,62 @@
+{
+  "status": "pinned_source_discrepancies_confirmed",
+  "source_commit": "abc124c1bd5976341034668af3d12c087f2f1f55",
+  "scope": "Isolated CPU calls to actual imported author classes; no GPU training and no custom fix applied",
+  "source_sha256": {
+    "tasks\\task_spec.py": "1a9935fec21d2cae607754c96aa50b6b8b5820ecdd198dbf1885eae863a8f389",
+    "models.py": "fbfbd5c836c2670a68776f9009b9463451d5115c753d0e592fba919f2d44b0ad",
+    "envs\\multi_task_world_model_env.py": "ed502488c55f7530f4c6ab1278cf1cdaac8fb8d8a2c356d1e4e6a2a0479997e9",
+    "runners\\supermimic_runner.py": "c19751a691cabfe579da973d9c384b7355c545292bdb7748155978a9d9d78d59"
+  },
+  "velocity_only_world_env_initialization": {
+    "error": "task_specs[0] must be the motion task",
+    "paper_requires_velocity_only": false,
+    "paper_training_mix": {
+      "motion": 0.5,
+      "velocity": 0.5
+    }
+  },
+  "pitched_root_frame_probe": {
+    "pitch_degrees": 45,
+    "source_command": [
+      0.7071068286895752,
+      0.0,
+      0.7071068286895752
+    ],
+    "heading_frame_command": [
+      1.0,
+      0.0,
+      1.0
+    ],
+    "maximum_absolute_difference": 0.2928931713104248
+  },
+  "two_clip_boundary_probe": {
+    "window": 3,
+    "source_command": [
+      2.0,
+      0.0,
+      0.0
+    ],
+    "within_first_clip_mean": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "velocity_actor_gradient_probe": {
+    "loss": "squared action sum, velocity slots only",
+    "decoder_absolute_gradient_sum": 68.34661203622818,
+    "decoder_gradients_present": true,
+    "velocity_encoder_input_features": 3,
+    "history_is_passed_only_to_decoder": true
+  },
+  "paper_velocity_experiment_reproduced": false,
+  "current_motion_only_BONES_runs_modified": false,
+  "paper_sources": [
+    "Appendix B",
+    "Table A.4",
+    "Appendix G.1-G.2"
+  ],
+  "relevant_public_issue": "https://github.com/HybridRobotics/supermimic/issues/2",
+  "important_distinction": "The velocity-only assertion is not the main paper blocker because the paper mixes both interfaces; enabling the public velocity slot alone does not implement the paper RL velocity objective."
+}

@@ -200,3 +200,21 @@ SuperMimic 训练入口使用单设备，没有找到自己的 DDP/torchrun 联�
 [全库配对比较工具](../official-reproduction-20261112/compare_complete_corpus_runs.py) 要求两个完整结果及其哈希绑定的计分收据，逐项核对评估协议和数据哈希，按全部动作索引配对；输出所有动作的CSV、成功/失败转移及两种完整参考长度归一化回报差。已用真实完整LAFAN40结果独立重算，并验证不同24环境协议会被拒绝，见 [验证记录](../official-reproduction-20261112/complete-corpus-comparator-validation.json)。这只验证比较工具，尚未产生BONES完整配对结论；相同评估协议也不能自动证明训练配置相同。
 
 [保存轨迹的完整性检查](../official-reproduction-20261112/audit_saved_trajectories.py) 将在CPU上逐份读取成功和失败的NPZ，校验压缩内容、形状、有限值与记录步数，再用float64累加已保存奖励，与结果收据核对，并保留每个文件的SHA256。它已通过完整小样本、有效ZIP内奖励被改变及截断NPZ三个针对性验证；完整BONES轨迹尚未执行该检查。当前计分收据的“文件存在且非空”不能代替这项数组检查，数组检查本身也不证明运动质量或仿真可重复性。
+
+## 10. 速度接口与论文 Appendix G 的进一步核对
+
+11月13日重新检查官方公开记录，[Release 页面](https://github.com/HybridRobotics/supermimic/releases) 仍无发布包。[Issue #2](https://github.com/HybridRobotics/supermimic/issues/2) 和草稿 [PR #3](https://github.com/HybridRobotics/supermimic/pull/3) 讨论的是只启用速度接口时被移除的 motion anchor。固定源码的实际类也会触发该断言，但论文 Appendix G 的两种训练都使用50/50的动作与速度接口，因此这条初始化错误本身不阻断论文规定的混合配置；不能把合入这个草稿当成完成速度实验。
+
+更关键的是，固定的官方提交 `abc124c` 与论文速度实验之间还缺少以下对应关系。结论针对本次导入的版本，没有推断作者私有训练代码的行为。
+
+| 项目 | 论文 Appendix B、Table A.4、Appendix G | 当前导入源码 |
+|---|---|---|
+| RL速度目标 | 速度跟踪奖励、仅跌倒终止；参考命令和随机保持命令混合 | `MultiTaskWorldModelEnv` 所有接口仍走动作跟踪奖励与终止；速度命令由参考速度加逐步噪声得到 |
+| 命令坐标系 | 平面速度在仅含yaw的heading坐标系，角速度取世界yaw分量 | `make_velocity_task` 使用完整根姿态的逆旋转，得到body坐标分量 |
+| 速度编码器 | 3D命令加10帧观测的特征，独立的两层256结构 | 编码器只接收3D命令，历史只送入共享解码器，编码器共用传入的网络宽度配置 |
+| 下游梯度 | 速度目标的回报梯度通过解码器传向编码器，但不更新解码器权重 | actor的普通forward和策略优化路径没有按接口冻结解码器权重；潜变量BC的stop-gradient不是这项冻结 |
+| critic与起始状态 | 每个接口自己的critic；从各自仿真环境的状态开始想象 | 当前runner构建单个critic，想象起始状态从共同回放池抽取 |
+
+已用实际导入的类做隔离CPU探针，见 [数值与源文件哈希](../official-reproduction-20261112/velocity-paper-contract-audit.json)：根pitch为45°、世界前向/转向速度均为1时，当前命令为 `(0.7071, 0, 0.7071)`，heading约定为 `(1, 0, 1)`；只经过速度槽的actor损失仍能对解码器产生非零梯度。另一个两片段探针确认，当前中心窗口可跨拼接边界，把后一段速度混入前一段；论文没有说明这一边界细节，需单独确定处理合同。探针没有运行GPU训练，也没有擅自合入社区补丁。
+
+因此，后续100,000步速度实验需要明确实现并验证上述训练路径，以及672个命令、每命令4次、5秒响应和最后2秒误差的评测；只把 `slot_mix` 改成50/50会得到当前公开实现的混合动作目标，不能标作论文的RL速度编码器。当前两组纯动作跟踪BONES评估保持原冻结版本。
