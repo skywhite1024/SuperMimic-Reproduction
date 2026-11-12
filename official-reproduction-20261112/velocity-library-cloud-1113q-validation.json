@@ -1,0 +1,29 @@
+{
+  "status": "verified_parent_cloud_velocity_library_passed",
+  "scope": "Fixed local name candidate; author membership and semantic quality unconfirmed",
+  "compared_fields": [
+    "status",
+    "kind",
+    "verification_scope",
+    "fps",
+    "clips",
+    "frames",
+    "duration_hours",
+    "selection_rule",
+    "author_membership_confirmed",
+    "semantic_motion_quality_verified",
+    "member_ledger",
+    "selected_array_comparisons",
+    "packed_files"
+  ],
+  "clips": 41828,
+  "frames": 15469495,
+  "packed_files_identical": 9,
+  "member_ledger_identical": true,
+  "reference_cloud_manifest_sha256": "2612e4da3b9fd20758f043b883d9e54c7e31c4b8f266f5d3b9f45933ffb1ee50",
+  "cloud_manifest_sha256": "ee75abce6dcbdbd4908cc6ad3495c23302b1e8642aea3b0ea28037980b1138e8",
+  "all18_parent_files_rehashed_and_match_protocol": true,
+  "reference": "Preserved cloud1113o pack; localv1 LAFAN parent drift separately documented",
+  "gpu_count": 0,
+  "paper_results_reproduced": false
+}
