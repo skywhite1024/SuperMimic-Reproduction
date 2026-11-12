@@ -2,13 +2,25 @@
 
 核查日期：2026-11-12，Asia/Shanghai。结论：**论文作者团队已经公开 SuperMimic 实现，值得成为下一阶段的官方对照基线；当前发布包仍有依赖与复现入口缺口，不能直接替换社区实现或接续旧权重。**
 
-截至 2026-11-12 23:39，官方源码与独立 Windows/Linux Conda 环境均已部署，分支 `ljd/official-supermimic` 已推送至现有公开仓库。Windows 与 Linux 各 217 项官方测试通过。原始 compiled 目标拼接在两次 H100 试跑中均于至少 201 次采样后发生 CUDA illegal memory access；同步报错定位于 `_compiled_assemble_goal` 的 Torch/Triton 内核。仅切换该函数为作者原始 eager 运算后，4096 环境、1001 次采样完成，三个最终检查点均可读且数值有限。此对照支持编译路径相关的判断，尚未证明具体底层根因。
+截至 2026-11-13 00:43，官方源码与独立 Windows/Linux Conda 环境均已部署，分支 `ljd/official-supermimic` 已推送至现有公开仓库。Windows 与 Linux 各 217 项官方测试通过。原始 compiled 目标拼接在两次 H100 试跑中均于至少 201 次采样后发生 CUDA illegal memory access；同步报错定位于 `_compiled_assemble_goal` 的 Torch/Triton 内核。切换该函数为作者原始 eager 运算后，以下三轮训练和全40评估均完成，最终检查点可读且数值有限。此对照支持编译路径相关的判断，尚未证明具体底层根因。
 
-首次完整 LAFAN40 评估为 **0/40 完成整段动作**；跟踪时长中位数 11.25 秒，范围 2.54–50.22 秒，40 条失败轨迹均保留。此结果是短训练对照，不能当作论文完整训练的效果结论。模型与评估收据见 [pilot result](../official-reproduction-20261112/lafan40-eager-pilot-result.json) 和 [full40 result](../official-reproduction-20261112/lafan40-eager-pilot-full40.json)。下一项有限实验保持同一 eager 配置，以 16,001 次采样检验训练量效应。
+LAFAN40 使用同一冻结动作集、4096个训练环境、seed 42，评估从每条动作首帧开始，关闭噪声与域随机化，采用作者原生终止条件；所有失败均保留。
+
+| 训练配置 | 采样步数 | 完成整段动作 | 等权动作平均归一化回报 | 训练时间 |
+|---|---:|---:|---:|---:|
+| 公开默认参数 + eager goal | 1,001 | 0/40 | 0.030332 | 205.42秒 |
+| 公开默认参数 + eager goal | 16,001 | 39/40 | 0.843299 | 2129.56秒 |
+| 本地论文参数适配 + eager goal | 1,001 | 17/40 | 0.285147 | 593.65秒 |
+
+归一化分母为完整参考帧数乘每步最大正回报0.1，提前失败后的剩余参考贡献零；并另存按参考帧数加权的汇总。论文汇总权重未获确认。公开默认16k唯一失败为 `fightAndSports1_subject4`，在131.06秒触发 `anchor_pos`。这是训练动作覆盖和原生回报，尚无严格姿态/接触质量或留出集结论。只有一个种子；适配版同时改变优化器、观测历史与调度，不能把提升归因于单项改动，编译缓存也使上述时长不适合直接比较算法效率。
+
+收据与逐条结果：[默认1k](../official-reproduction-20261112/lafan40-eager-pilot-summary.json)、[默认16k](../official-reproduction-20261112/lafan40-eager-16k-summary.json)、[适配1k](../official-reproduction-20261112/lafan40-paper-pilot-summary.json)。后两组逐条JSON由各自完整的40行云端日志重建，并与最终计数核对，记录了日志哈希；它们不是云端原始结果文件的逐字节下载副本。下一项有限实验以相同16,001步评估论文参数适配版。
 
 BONES 原始 G1 数据已完成下载与 SHA256 核验，142,220 条 CSV 全部转换成功，得到 51,915,358 个 50Hz 帧。转换仅适配原始厘米、角度和 Euler 字段，再调用作者的重采样及速度计算代码；未做名称筛选、可行性筛选或地面校准。5 条抽查与作者格式入口逐数组完全一致；内存有界打包在 16 条样本上与作者打包器完全一致。完整 13,575,450,990 字节压缩包已上传个人 AFS，服务器 SHA256 与本地一致；九个数据文件解包时的哈希均通过。解包器对附带校验清单的处理已修复并完成 16 条样本回归验证，云端九个数据文件已全部通过独立 SHA256 读回，最终目录为 `data/bones-packed-raw`，收据见 [bones-cloud-readback.json](../official-reproduction-20261112/bones-cloud-readback.json)。这些是未筛选的原始数据，尚不等于论文筛选后 129,514 条动作实验已复现。
 
-以下静态审查与历史对照保留初次审查时的证据边界；当前执行合同见 [experiment-contract.json](../official-reproduction-20261112/experiment-contract.json)，数据验证见 [bones-data-validation.json](../official-reproduction-20261112/bones-data-validation.json)。官方源文件未修改；离线训练包装器替换 W&B 产物上传/清理逻辑，并提供显式 `--goal-backend eager` 对照开关；该开关调用作者相同的目标计算函数，绕过其单独的 Torch 编译包装。学习方程和参数保持作者版本，但执行路径已变化，不能用此配置宣称官方原始性能复现。
+BONES 原始全库已在单张H100上完成1,001步论文参数适配版试跑，平台状态为成功，三个最终检查点数值有限。训练耗时358.59秒，PyTorch分配峰值约30.85GiB（不包含Warp及其他CUDA分配）。这证明当前配置可载入全库并进行训练；没有完成142,220条动作的全库策略评估。见 [BONES试跑收据](../official-reproduction-20261112/bones-raw-pilot-result.json)。
+
+以下静态审查与历史对照保留初次审查时的证据边界；当前执行合同见 [experiment-contract.json](../official-reproduction-20261112/experiment-contract.json)，数据验证见 [bones-data-validation.json](../official-reproduction-20261112/bones-data-validation.json)。官方源文件未修改；离线训练包装器替换 W&B 产物上传/清理逻辑，并提供显式 `--goal-backend eager` 对照开关；该开关调用作者相同的目标计算函数，绕过其单独的 Torch 编译包装。公开默认配置保持作者学习参数，论文适配版另改优化器、观测历史与学习率调度，不能用这些实验宣称官方原始性能复现。
 
 ## 1. 官方身份与发布日期
 
@@ -151,7 +163,7 @@ SuperMimic 训练入口使用单设备，没有找到自己的 DDP/torchrun 联�
 两项CPU数值检查通过：各网络参数仅进入一个Adam优化器，变化学习率下与标准Adam的更新一致；
 调度端点及单调性正确，学习率张量地址保持不变。11月13日00:02启动的单卡 `1112f`
 又通过三项适配层检查（15.68秒），包括CUDA graph重放使用变化后的学习率。
-该任务已进入训练循环；网络训练更新及最终策略效果仍待训练和全40评估收据确认。
+该任务已完成1,001步训练及完整全40评估，17条成功、23条失败；平台成功、退出码0，三个最终模型可读且数值有限。
 该入口尚未解决完整状态恢复、双卡同步、速度编码器配置或全库筛选缺失。
 
 按当前 SONIC 官方筛选脚本的固定版本

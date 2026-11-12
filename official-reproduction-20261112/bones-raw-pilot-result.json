@@ -1,0 +1,52 @@
+{
+  "status": "pilot_completed",
+  "collection_steps": 1001,
+  "seed": 42,
+  "num_envs": 4096,
+  "elapsed_training_seconds": 358.5850049909204,
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "checkpoints": [
+    {
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-raw-pilot-1113a/logs/SuperMimic-GenCoord-G1/2026-11-12_16-30-57/world_model.pt",
+      "bytes": 34990357,
+      "sha256": "7b273aecb39e531d0f4d7679aac835e2b2af6900c8f8d4263615ae99050c2762"
+    },
+    {
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-raw-pilot-1113a/logs/SuperMimic-GenCoord-G1/2026-11-12_16-30-57/actor.pt",
+      "bytes": 46439949,
+      "sha256": "4507f77190d93a8549cb9f08905ab1f83f0d3fa77d67fdbede4a7655a6e6e019"
+    },
+    {
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-raw-pilot-1113a/logs/SuperMimic-GenCoord-G1/2026-11-12_16-30-57/critic.pt",
+      "bytes": 929269,
+      "sha256": "cb9e1df22f8bc67043c3328d5468cd388e8ee2f0de67616b893145f8e957f77b"
+    }
+  ],
+  "full_clip_evaluation_completed": false,
+  "paper_results_reproduced": false,
+  "goal_assembly_backend": "eager",
+  "training_profile": "paper-a5-single-gpu",
+  "corpus": {
+    "name": "bones-raw",
+    "clips": 142220,
+    "frames": 51915358,
+    "paper_name_filter_applied": false,
+    "paper_feasibility_filter_applied": false
+  },
+  "device_memory_after_initialization": {
+    "free_bytes": 63770525696,
+    "total_bytes": 85017624576,
+    "torch_allocated_bytes": 19236814336,
+    "torch_reserved_bytes": 19268632576
+  },
+  "peak_torch_memory_allocated_bytes": 33130289664,
+  "peak_torch_memory_reserved_bytes": 34900803584,
+  "memory_scope": "PyTorch allocator only; excludes Warp and other CUDA allocations",
+  "cloud_receipt": {
+    "job_uid": "8728cf56ff474fd4a328e69541a97db4",
+    "platform_status": "success",
+    "exit_code": 0,
+    "platform_verified_at": "2026-11-13T00:43:56+08:00",
+    "provenance": "Complete OFFICIAL_BONES_RAW_PILOT_PASS JSON copied from live log; final platform status independently observed"
+  }
+}
