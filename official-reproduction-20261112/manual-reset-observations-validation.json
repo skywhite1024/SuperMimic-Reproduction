@@ -26,5 +26,7 @@
   "real_g1_reset_count": 5376,
   "real_g1_trial_resets": 8,
   "cached_vs_fresh_state_max_abs_difference": 4.448070526123047,
-  "real_g1_scope": "Both short21-step velocity models,672 worlds,4 trials each; fresh full states equal declared standing pose and physical state"
+  "real_g1_scope": "Both short21-step velocity models,672 worlds,4 trials each; fresh full states equal declared standing pose and physical state",
+  "corrected_corpus_v2_current_sha256": "9d3516e154e5889fd93a4d9d3409ae58f4e05fb3edbb6bd98c1e6199c4f34d63",
+  "corrected_corpus_v2_initial_reference_check": "Before every first action, compare fresh71D observation against intended native clipped reference state; validation by queued full40/fullcorpus evaluation pending"
 }

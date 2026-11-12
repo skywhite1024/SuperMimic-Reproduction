@@ -120,6 +120,7 @@ def main():
         "manual_reset_version": 2,
         "observation_cache_refreshed_after_pose_write": True,
         "actuator_histories_backfilled_after_pose_write": True,
+        "initial_reference_state_check": "Full71D matches native clipped reference; atol=1e-5,rtol=1e-5 before first action",
         "training": training, "paper_results_reproduced": False,
         "trajectory_state": "pre-action full_state; rewards and terminations are post-step",
         "motion_files": {p.name: digest(p) for p in sorted(motions.iterdir()) if p.is_file()},
@@ -149,6 +150,14 @@ def main():
         if not np.array_equal(command.motion.motion_ends.cpu().numpy(), ends):
             raise RuntimeError("Loaded motion boundaries differ from the frozen pack")
         rep = wm.representation
+        robot = base.scene["robot"]
+        limits = robot.data.soft_joint_pos_limits
+        if not torch.equal(limits, limits[:1].expand_as(limits)):
+            raise RuntimeError("Record per-world limits before evaluating heterogeneous joint limits")
+        protocol["native_joint_names"] = list(robot.joint_names)
+        protocol["native_soft_joint_pos_limits"] = limits[0].cpu().tolist()
+        (output / "protocol.json").write_text(json.dumps(protocol, indent=2, default=str) + "\n", encoding="utf-8")
+        max_first_state_error = 0.0
         records = [None] * count
         for batch_id, offset in enumerate(range(0, count, num_envs)):
             indices = order[offset:offset + num_envs]
@@ -160,6 +169,21 @@ def main():
             for slot, index in enumerate(indices):
                 command.reset_to_frame(torch.tensor([slot], device=device), int(starts[index]))
             obs, reset_audit = refresh_manual_reset_observations(base)
+            active_count = len(indices)
+            times = command.time_steps[:active_count]
+            expected_joint_pos = torch.clamp(command.joint_pos[:active_count],
+                limits[:active_count, :, 0], limits[:active_count, :, 1])
+            expected_state = torch.cat((command.motion.root_pos_w[times],
+                command.motion.root_quat_w[times], expected_joint_pos,
+                command.motion.root_lin_vel_w[times], command.motion.root_ang_vel_w[times],
+                command.joint_vel[:active_count]), -1)
+            actual_state = obs["full_state"][:active_count]
+            if not torch.allclose(actual_state, expected_state, atol=1e-5, rtol=1e-5):
+                raise RuntimeError("First actor observation does not match the intended native clipped reference")
+            first_error = float((actual_state - expected_state).abs().max())
+            max_first_state_error = max(max_first_state_error, first_error)
+            reset_audit.update(reference_initial_state_verified=True,
+                               reference_first_state_max_abs_error=first_error)
             print("CORPUS_MANUAL_RESET_REFRESH " + json.dumps(dict(batch=batch_id, **reset_audit)), flush=True)
             sim_ctx = wm.sim_context.read(base)
             active = np.zeros(num_envs, dtype=bool)
@@ -233,6 +257,8 @@ def main():
         result = {
             "status": "full_corpus_evaluation_completed", "clips": count,
             "manual_reset_version": 2,
+            "initial_reference_state_verified_for_all_clips": True,
+            "first_reference_state_max_abs_error": max_first_state_error,
             "num_envs": num_envs, "batch_order": args.order,
             "successes": sum(row["success"] for row in records),
             "failures": sum(not row["success"] for row in records),
