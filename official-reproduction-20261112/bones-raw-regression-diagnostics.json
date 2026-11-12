@@ -1,0 +1,24 @@
+{
+  "scope": "All183 success-to-failure transitions in this single frozen pair; descriptive only",
+  "regressions": 183,
+  "regression_failure_terms": {
+    "anchor_pos": 156,
+    "anchor_ori": 22,
+    "anchor_pos+anchor_ori": 5
+  },
+  "median_fraction_before_failure": 0.6675977653631285,
+  "regressions_failed_within_first_half": 37,
+  "regressions_reached_at_least_95pct": 5,
+  "median_reference_seconds": 5.64,
+  "negative_return_count": 849,
+  "negative_return_by_transition": {
+    "regressed_failure": 67,
+    "both_failure": 677,
+    "both_success": 102,
+    "recovered_success": 3
+  },
+  "causal_attribution": "Unknown; separate policy change, numerical repeatability and reference quality before claiming forgetting",
+  "source_paired_csv_sha256": "6cc93180374c6e71ec2658986812f311799fdc3da853f54cc940d43284b6e2ba",
+  "regressions_with_improved_return": 116,
+  "exact_zero_return_changes": 0
+}
