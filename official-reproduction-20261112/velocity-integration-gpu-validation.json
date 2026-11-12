@@ -1,0 +1,78 @@
+{
+  "status": "both_velocity_mode_gpu_integration_gates_passed",
+  "verified_at": "2026-11-13T06:02:51.912549+08:00",
+  "uid": "93dc02adb1e34784af9a80f8800240b0",
+  "source_commit": "569660dbc54ba5ce426a3def6729557ed19f417c",
+  "source_files": {
+    "run_velocity_training.py": "16c2bc53987eac38f4dd96de8131866602def8a371b50946ad9a4c87e5a3adc5",
+    "paper_velocity_runner.py": "c05bfb0cbcc43c218064438c8efde6195975edb573aac524f8fb8045288dbbd2",
+    "paper_velocity_runtime.py": "4ce5f9b470957cc958767dd0d95ac1d2cd2e8678719942c67d4ddd082f099c12",
+    "paper_velocity_actor.py": "0b1be997d49ab74b26d0405eaf1e5f4c9be755fc50c3b7ad60f1e15cf98a81e0",
+    "paper_velocity_contract.py": "b8116384f1464d501d525c86f142abcae8ef94059aa8e25bcac45d611b8be5af",
+    "paper_profile.py": "1c9f5f6efe7fb9858b8d0a285b40bb17f111e7303f12d8f76b28aae455f656b9",
+    "checkpoint_series.py": "4259461a2eb5989e2171de4eab7b726b7d8fbbd650f5b4e7fe76746a35236264",
+    "emit_json_receipts.py": "e9ea4f9e3f66edbb8becd3e2a78f73ebf9a79b0fba701dc11f2be3f3f33c34bb"
+  },
+  "gpu": 1,
+  "num_envs": 4096,
+  "collection_steps_per_mode": 21,
+  "clips": 40,
+  "frames": 441140,
+  "corpus": "LAFAN40 control library; not the paper walking/running set",
+  "modes": {
+    "rl": {
+      "learner_update_counts": {
+        "world_model": 6,
+        "policy": 6
+      },
+      "native_cuda_graphs_captured": {
+        "world_model": true,
+        "policy": true
+      },
+      "all_update_metrics_checked_finite": true,
+      "integration_replay_evidence": {
+        "finite_fields": 7,
+        "stored_control_steps": 21,
+        "simulator_interface_identity_verified": true,
+        "own_interface_imagined_starts_verified": true,
+        "command_ages_valid": true,
+        "velocity_reference_fraction": 0.4862583875656128
+      },
+      "elapsed_training_seconds": 652.1296342536807
+    },
+    "distill": {
+      "learner_update_counts": {
+        "world_model": 6,
+        "policy": 6
+      },
+      "native_cuda_graphs_captured": {
+        "world_model": true,
+        "policy": true
+      },
+      "all_update_metrics_checked_finite": true,
+      "integration_replay_evidence": {
+        "finite_fields": 7,
+        "stored_control_steps": 21,
+        "simulator_interface_identity_verified": true,
+        "own_interface_imagined_starts_verified": true,
+        "command_ages_valid": true,
+        "velocity_reference_fraction": 1.0
+      },
+      "elapsed_training_seconds": 445.16776632517576
+    }
+  },
+  "retained_model_sets_per_mode": 3,
+  "model_files_downloaded_locally": false,
+  "model_files_finite_checked_on_gpu": true,
+  "final_native_files_match_validated_snapshot": true,
+  "exact_original_json_receipts_verified": 4,
+  "receipt_ledger": "velocity-integration-1113n-receipt-ledger.json",
+  "step_test_completed": false,
+  "full100k_training_completed": false,
+  "paper_results_reproduced": false,
+  "limitations": [
+    "Short integration verifies execution and data routing, not learned locomotion quality",
+    "Local velocity adapter includes author-unconfirmed history features, reference window projection order, torso lean and smooth fall choices",
+    "No full optimizer/replay/simulator/RNG resume"
+  ]
+}

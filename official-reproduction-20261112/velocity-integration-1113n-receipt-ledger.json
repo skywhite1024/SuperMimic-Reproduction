@@ -1,0 +1,48 @@
+{
+  "status": "four_original_json_receipts_recovered_and_sha256_verified",
+  "verified_at": "2026-11-13T06:02:51.912549+08:00",
+  "log_lines": 2090,
+  "log_sha256": "3600e00d25546ed9b5ea7fd4c8508e509e6f701653778372705d4fe8942bfbfb",
+  "receipts": [
+    {
+      "i": 0,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/velocity-rl-integration-1113n/result.json",
+      "bytes": 4397,
+      "sha256": "1dd6c5c6b886933a8dfb7073930be84382d245e569d62e3f8b552ef77740e831",
+      "chunks": 5,
+      "local_file": "velocity-rl-integration-1113n-result.json",
+      "original_bytes_verified": true,
+      "published_original_result": true
+    },
+    {
+      "i": 1,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/velocity-rl-integration-1113n/resolved-config.json",
+      "bytes": 45082,
+      "sha256": "7ee56e4bb95da8d16b90bfa14519018937fb23c4b4c76db4944616796b80791c",
+      "chunks": 25,
+      "local_file": "velocity-rl-integration-1113n-resolved-config.json",
+      "original_bytes_verified": true,
+      "published_original_result": false
+    },
+    {
+      "i": 2,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/velocity-distill-integration-1113n/result.json",
+      "bytes": 4403,
+      "sha256": "0d580253f4c5a47d3ec2b5a5e6dbdd89ffc9c3c062e83cfe48d6417f51f196e1",
+      "chunks": 5,
+      "local_file": "velocity-distill-integration-1113n-result.json",
+      "original_bytes_verified": true,
+      "published_original_result": true
+    },
+    {
+      "i": 3,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/velocity-distill-integration-1113n/resolved-config.json",
+      "bytes": 44011,
+      "sha256": "c279ae70a31383627fffa5a503bc0776a976c9e2f2b1d86a01c5c170cb96284a",
+      "chunks": 24,
+      "local_file": "velocity-distill-integration-1113n-resolved-config.json",
+      "original_bytes_verified": true,
+      "published_original_result": false
+    }
+  ]
+}

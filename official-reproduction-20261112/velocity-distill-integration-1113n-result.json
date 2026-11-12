@@ -1,0 +1,126 @@
+{
+  "status": "velocity_training_completed",
+  "purpose": "integration",
+  "mode": "distill",
+  "collection_steps": 21,
+  "num_envs": 4096,
+  "seed": 42,
+  "clips": 40,
+  "frames": 441140,
+  "elapsed_training_seconds": 445.16776632517576,
+  "checkpoints": [
+    {
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/velocity-distill-integration-1113n/logs/SuperMimic-GenCoord-G1/2026-11-12_21-47-24/world_model.pt",
+      "bytes": 34990357,
+      "sha256": "a57cbeffccf6427007cc1dd173b778316718f519518821f7ba0ea9eabe57fea5"
+    },
+    {
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/velocity-distill-integration-1113n/logs/SuperMimic-GenCoord-G1/2026-11-12_21-47-24/actor.pt",
+      "bytes": 36580661,
+      "sha256": "ed9946a3c166fbde04ffe930aa4926f828be2a6e4189c624048bbcd076ec6f92"
+    },
+    {
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/velocity-distill-integration-1113n/logs/SuperMimic-GenCoord-G1/2026-11-12_21-47-24/critic.pt",
+      "bytes": 1174477,
+      "sha256": "a00b25292460e730283cc53b4c9c61e96492e980056b48b72b7b89bc18ff8f6f"
+    }
+  ],
+  "retained_checkpoint_series": [
+    {
+      "status": "model_snapshot_preserved",
+      "collection_steps": 1,
+      "files": [
+        {
+          "file": "world_model.pt",
+          "bytes": 34990357,
+          "sha256": "03d7c709638879943785f31cd927581018dc30d6d6b87d90da023ee436e471fc"
+        },
+        {
+          "file": "actor.pt",
+          "bytes": 36580661,
+          "sha256": "3db8e0a47cec512b7d8256f6d2cffdf3eb4156cfefa739f4084a642f99c9e870"
+        },
+        {
+          "file": "critic.pt",
+          "bytes": 1174477,
+          "sha256": "a2c75d241d8b75be4387d549dc4cd0f3885e2e1066fb1a323b71c9505c9cf728"
+        }
+      ],
+      "full_training_resume_available": false,
+      "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state",
+      "source": "native_callback",
+      "offline_artifact_logging_completed": true
+    },
+    {
+      "status": "model_snapshot_preserved",
+      "collection_steps": 11,
+      "files": [
+        {
+          "file": "world_model.pt",
+          "bytes": 34990357,
+          "sha256": "a338333fff46888c93c6b10d1203e2c4f101034090e2399f0f7ed600851f21e5"
+        },
+        {
+          "file": "actor.pt",
+          "bytes": 36580661,
+          "sha256": "4dd74276a1f9ced3bfc3651b8b3f4c064b184d50395dd823271369251a980d20"
+        },
+        {
+          "file": "critic.pt",
+          "bytes": 1174477,
+          "sha256": "7097faa1085ae0f1fdbe34325497fc42c29cadf0a29f8f254607c94bb8719b07"
+        }
+      ],
+      "full_training_resume_available": false,
+      "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state",
+      "source": "native_callback",
+      "offline_artifact_logging_completed": true
+    },
+    {
+      "status": "model_snapshot_preserved",
+      "collection_steps": 21,
+      "files": [
+        {
+          "file": "world_model.pt",
+          "bytes": 34990357,
+          "sha256": "a57cbeffccf6427007cc1dd173b778316718f519518821f7ba0ea9eabe57fea5"
+        },
+        {
+          "file": "actor.pt",
+          "bytes": 36580661,
+          "sha256": "ed9946a3c166fbde04ffe930aa4926f828be2a6e4189c624048bbcd076ec6f92"
+        },
+        {
+          "file": "critic.pt",
+          "bytes": 1174477,
+          "sha256": "a00b25292460e730283cc53b4c9c61e96492e980056b48b72b7b89bc18ff8f6f"
+        }
+      ],
+      "full_training_resume_available": false,
+      "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state",
+      "source": "native_callback",
+      "offline_artifact_logging_completed": true
+    }
+  ],
+  "independent_critics": 2,
+  "learner_update_counts": {
+    "world_model": 6,
+    "policy": 6
+  },
+  "native_cuda_graphs_captured": {
+    "world_model": true,
+    "policy": true
+  },
+  "all_update_metrics_checked_finite": true,
+  "integration_replay_evidence": {
+    "finite_fields": 7,
+    "stored_control_steps": 21,
+    "simulator_interface_identity_verified": true,
+    "own_interface_imagined_starts_verified": true,
+    "command_ages_valid": true,
+    "velocity_reference_fraction": 1.0
+  },
+  "full_training_resume_available": false,
+  "step_test_completed": false,
+  "paper_results_reproduced": false
+}

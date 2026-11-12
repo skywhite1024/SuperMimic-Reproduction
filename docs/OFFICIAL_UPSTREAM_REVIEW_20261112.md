@@ -282,3 +282,9 @@ Step-test工具生成每平面224个非站立点、合计672个平面/格点身�
 新增 [候选库构建器](../official-reproduction-20261112/prepare_velocity_library.py) 以固定、不区分大小写的动作名规则选取 `walk/walking/run/running/jog/jogging` 单词前缀，保留所有命中片段的完整帧。没有使用训练回报、成功率或人工挑选来筛选。BONES中41,812条、LAFAN40中16条，共41,828条、15,469,495帧、85.9416小时；加来源前缀避免名称冲突。六类float32数组的每个选中片段在落盘后重新打开并与原始数据逐字节比较，9个packed文件的总大小4,395,656,835字节，完整成员CSV及各文件哈希见本地记录；公开的 [验证清单](../official-reproduction-20261112/velocity-library-name-v1-validation.json) 仅含规则、计数和哈希，不包含动作坐标。
 
 清单的 `verified_walking_running_library` 仅表示名称规则及所选字节已经验证。作者精确成员、语义标签和物理质量均未确认，因此它是本地名称候选集，不能称作论文相同的walking/running库。当前打包与字节比较已在本地完成，服务器版本尚未建立。
+
+## 15. 双模式GPU验收完成与数据哈希差异（11月13日06:06）
+
+`1113n` 已于05:54:59完成，平台成功、退出码0。RL和蒸馏各21次采样、两个learner各6次更新，均捕获原生CUDA图；两模式的完整三模型保存点都是1、11、21，更新指标、回放字段和接口来源检查全部通过。RL参考命令占48.63%，蒸馏为100%。训练循环含首次编译分别计时652.13秒和445.17秒，不据此声称稳定速度或控制质量。两份原始结果及两份完整配置JSON均从离线日志恢复，字节数和SHA256完全匹配；见 [GPU验收](../official-reproduction-20261112/velocity-integration-gpu-validation.json)、[四份原始收据清单](../official-reproduction-20261112/velocity-integration-1113n-receipt-ledger.json)、[RL结果](../official-reproduction-20261112/velocity-rl-integration-1113n-result.json) 与 [蒸馏结果](../official-reproduction-20261112/velocity-distill-integration-1113n-result.json)。模型在服务器检查有限值与副本哈希，尚未把这些短跑模型下载到本机。
+
+零GPU候选库作业 `1113o` 于05:57:33开始，05:58:41退出1：六类数值数组都通过服务器落盘后的源片段字节比较，最后跨机器比较却报 `AssertionError: packed_files`。这是验收失败，不能写成云端候选库字节一致；原目录完整保留。新增 [只读差异审计器](../official-reproduction-20261112/audit_velocity_library.py)，分别记录完整文件、NPY头部和数组payload哈希，先写完整审计再判断，定位差异期间不改动两端数据。在完整本地候选库上的实际只读运行通过；服务器差异诊断待执行。

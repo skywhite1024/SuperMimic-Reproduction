@@ -1,0 +1,126 @@
+{
+  "status": "velocity_training_completed",
+  "purpose": "integration",
+  "mode": "rl",
+  "collection_steps": 21,
+  "num_envs": 4096,
+  "seed": 42,
+  "clips": 40,
+  "frames": 441140,
+  "elapsed_training_seconds": 652.1296342536807,
+  "checkpoints": [
+    {
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/velocity-rl-integration-1113n/logs/SuperMimic-GenCoord-G1/2026-11-12_21-35-30/world_model.pt",
+      "bytes": 34990357,
+      "sha256": "de648dd097a354eeba8a1ee9cb6f6a6866796ccc4977d5585b8026372b7a9d18"
+    },
+    {
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/velocity-rl-integration-1113n/logs/SuperMimic-GenCoord-G1/2026-11-12_21-35-30/actor.pt",
+      "bytes": 36580661,
+      "sha256": "09830d3525703bf00f0391cecaea1a62bb049e57dc30f43adeaf26f812f73752"
+    },
+    {
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/velocity-rl-integration-1113n/logs/SuperMimic-GenCoord-G1/2026-11-12_21-35-30/critic.pt",
+      "bytes": 1174477,
+      "sha256": "fb6973b07724d1a368a9e716864368f205a5cca5d7eec989dcc9c4e297287ac2"
+    }
+  ],
+  "retained_checkpoint_series": [
+    {
+      "status": "model_snapshot_preserved",
+      "collection_steps": 1,
+      "files": [
+        {
+          "file": "world_model.pt",
+          "bytes": 34990357,
+          "sha256": "99f824227510add66c5352fb2d6b4dcf448f9eecdf946eba9cf8a32a00974622"
+        },
+        {
+          "file": "actor.pt",
+          "bytes": 36580661,
+          "sha256": "ec2f12698cab3e4892aa38e06dad6d3ec6160a5dd83aa926dac667b2d0658a40"
+        },
+        {
+          "file": "critic.pt",
+          "bytes": 1174477,
+          "sha256": "a2c75d241d8b75be4387d549dc4cd0f3885e2e1066fb1a323b71c9505c9cf728"
+        }
+      ],
+      "full_training_resume_available": false,
+      "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state",
+      "source": "native_callback",
+      "offline_artifact_logging_completed": true
+    },
+    {
+      "status": "model_snapshot_preserved",
+      "collection_steps": 11,
+      "files": [
+        {
+          "file": "world_model.pt",
+          "bytes": 34990357,
+          "sha256": "c21be1ab2e935a122ff5768e17707fcbde7f9bf6207777c751ae47e67d8f6ae1"
+        },
+        {
+          "file": "actor.pt",
+          "bytes": 36580661,
+          "sha256": "5d6de4220acdd20547df27a37c33e85e1631f1fb3b6159b7961bafb1037d993a"
+        },
+        {
+          "file": "critic.pt",
+          "bytes": 1174477,
+          "sha256": "081224420007b9bf1b35100ae470b9d90d97b2c752f217d869a1a08ab7fde8a1"
+        }
+      ],
+      "full_training_resume_available": false,
+      "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state",
+      "source": "native_callback",
+      "offline_artifact_logging_completed": true
+    },
+    {
+      "status": "model_snapshot_preserved",
+      "collection_steps": 21,
+      "files": [
+        {
+          "file": "world_model.pt",
+          "bytes": 34990357,
+          "sha256": "de648dd097a354eeba8a1ee9cb6f6a6866796ccc4977d5585b8026372b7a9d18"
+        },
+        {
+          "file": "actor.pt",
+          "bytes": 36580661,
+          "sha256": "09830d3525703bf00f0391cecaea1a62bb049e57dc30f43adeaf26f812f73752"
+        },
+        {
+          "file": "critic.pt",
+          "bytes": 1174477,
+          "sha256": "fb6973b07724d1a368a9e716864368f205a5cca5d7eec989dcc9c4e297287ac2"
+        }
+      ],
+      "full_training_resume_available": false,
+      "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state",
+      "source": "native_callback",
+      "offline_artifact_logging_completed": true
+    }
+  ],
+  "independent_critics": 2,
+  "learner_update_counts": {
+    "world_model": 6,
+    "policy": 6
+  },
+  "native_cuda_graphs_captured": {
+    "world_model": true,
+    "policy": true
+  },
+  "all_update_metrics_checked_finite": true,
+  "integration_replay_evidence": {
+    "finite_fields": 7,
+    "stored_control_steps": 21,
+    "simulator_interface_identity_verified": true,
+    "own_interface_imagined_starts_verified": true,
+    "command_ages_valid": true,
+    "velocity_reference_fraction": 0.4862583875656128
+  },
+  "full_training_resume_available": false,
+  "step_test_completed": false,
+  "paper_results_reproduced": false
+}

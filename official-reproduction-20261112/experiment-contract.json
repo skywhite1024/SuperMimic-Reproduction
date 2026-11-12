@@ -496,14 +496,15 @@
       "paper_results_reproduced": false
     },
     "velocity_runtime": {
-      "status": "rl_gpu_gate_passed_distill_in_progress",
+      "status": "both_modes_gpu_integration_passed",
       "validation": "paper-velocity-runtime-validation.json",
       "entrypoint": "run_velocity_training.py",
       "full_runner_implemented": true,
       "real_g1_physics_executed": true,
       "velocity_cuda_graph_capture_verified": true,
       "full100k_training_completed": false,
-      "gpu_gate_scope": "RL21 collections only; distill pending"
+      "gpu_gate_scope": "RL and distill21 collections each; full100k and step test pending",
+      "gpu_validation": "velocity-integration-gpu-validation.json"
     },
     "velocity_library": {
       "status": "local_name_candidate_bytes_verified",
