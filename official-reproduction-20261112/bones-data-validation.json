@@ -63,5 +63,26 @@
     "filters_applied": false
   },
   "exact_paper_filter_manifest_available": false,
-  "raw_data_committed": false
+  "raw_data_committed": false,
+  "full_conversion": {
+    "status": "converted",
+    "clips": 142220,
+    "failed": 0,
+    "unprocessed": 0,
+    "input_frames": 124554605,
+    "frames": 51915358,
+    "input_fps": 120,
+    "output_fps": 50,
+    "name_filter_applied": false,
+    "feasibility_filter_applied": false,
+    "is_full_BONES_paper_benchmark": false,
+    "author_resampling_and_velocity_code_unchanged": true,
+    "seconds": 662.8
+  },
+  "bounded_packing_validation": {
+    "status": "passed",
+    "clips": 16,
+    "all_native_arrays_bitwise_equal": true,
+    "joint_and_motion_names_equal": true
+  }
 }
