@@ -1,0 +1,71 @@
+{
+  "status": "planned_not_reproduced",
+  "author_source": {
+    "supermimic": "abc124c1bd5976341034668af3d12c087f2f1f55",
+    "mjlab_research": "dd51a9fcc98791a2f0b018b3c7f71a3eefd5ecdd"
+  },
+  "stages": [
+    {
+      "name": "native_lafan40_cuda_pilot",
+      "task": "SuperMimic-GenCoord-G1",
+      "seed": 42,
+      "gpus": 1,
+      "environments": 4096,
+      "collection_steps": 1001,
+      "learner": "unmodified official defaults",
+      "actor_observation": "rep_state",
+      "history_length": 1,
+      "replay_ratio_configuration": 16,
+      "model_updates_per_collection_step": 0.4,
+      "acceptance": "Complete bounded training; native world model, actor and critic checkpoints are readable and finite; retain logs and resolved configuration.",
+      "limitation": "A startup and checkpoint pilot, not complete-clip policy evaluation or a paper result."
+    },
+    {
+      "name": "paper_configuration_alignment",
+      "required_differences_from_public_default": [
+        "Adam instead of hidden-layer Muon, with paper-specific beta values",
+        "Proprioceptive actor observations with 10-frame history",
+        "Cosine learning rate decay to 0.03 times initial over 250000 iterations",
+        "Training horizon of 320000 iterations and evaluation every 4000",
+        "Explicit full-state resume if runs are interrupted"
+      ],
+      "utd_note": "Public replay_ratio=16 yields 4096/(10*2048*8)*16 = 0.4 model/policy updates per simulator collection step; these are two parameterizations of the same update rate."
+    },
+    {
+      "name": "bones_training_set_benchmark",
+      "raw_clips": 142220,
+      "after_name_filter": 129667,
+      "after_feasibility_filter": 129514,
+      "hours": 264.56,
+      "targets_from_paper": [
+        {"gpus": 1, "hours": 3, "failed_motions": 25},
+        {"gpus": 2, "hours": 9.8, "failed_motions": 0}
+      ],
+      "unresolved": [
+        "Exact author name-filter list and surviving-clip manifest are absent from inspected source",
+        "Floating-feet filter's upright, standing-height and stationary gates are not numerically specified in the paper text",
+        "Public SuperMimic training entry does not implement two-GPU gradient synchronization"
+      ],
+      "evaluation": {
+        "start": "first frame of every motion",
+        "friction": 1.0,
+        "domain_randomization": false,
+        "observation_noise": false,
+        "physics": "deterministic",
+        "failure": "SuperMimic training termination criteria",
+        "denominator": "all frozen benchmark motions, including failed trajectories",
+        "claim": "coverage of training motions, not unseen-motion generalization"
+      }
+    },
+    {
+      "name": "other_paper_experiments",
+      "remaining": [
+        "LAFAN efficiency and PPO comparison",
+        "BONES subsets of 1, 7, 40 and 264 hours",
+        "Critic and imagination horizon ablations",
+        "100000-iteration velocity-encoder runs and 672-command, four-trial step-response evaluation"
+      ]
+    }
+  ],
+  "hardware_limit": "Physical robot experiments require a robot; simulation alone cannot validate those results."
+}
