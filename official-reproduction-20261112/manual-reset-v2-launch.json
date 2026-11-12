@@ -1,0 +1,120 @@
+{
+  "status": "running_bones1k_evaluation",
+  "name": "supermimic-official-corrected-eval-260010076-1113v",
+  "display_name": "260010076-SuperMimic-corrected-full-eval-1113v",
+  "gpu": 1,
+  "vcpu": 4,
+  "ram_gib": 64,
+  "replicas": 1,
+  "max_restarts": 0,
+  "max_program_seconds": 14400,
+  "lafan_timeout_seconds": 600,
+  "per_raw_evaluation_timeout_seconds": 6000,
+  "source_commit": "7ab27b841387f365a147133aadb16fbd0d706abf",
+  "source_files": {
+    "evaluate_motion_corpus_v2.py": "9d3516e154e5889fd93a4d9d3409ae58f4e05fb3edbb6bd98c1e6199c4f34d63",
+    "manual_reset_observations.py": "3933258bdcd8c80a30d3fc256bf3d82084ff9661f0d20c620bba07b518dc1f6d",
+    "audit_corpus_result.py": "86ab207b9435b03b6203d13338a441d9951c34307a3a359321cad4ad8c29676d",
+    "compare_complete_corpus_runs.py": "11edd363b4536faca470420611a2c73905ee7b8e2e11306b4f5fb301870c0574",
+    "emit_json_receipts.py": "e9ea4f9e3f66edbb8becd3e2a78f73ebf9a79b0fba701dc11f2be3f3f33c34bb"
+  },
+  "frozen_models": {
+    "lafan40": {
+      "run": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan40-paper-16k-1113b",
+      "steps": 16001,
+      "checkpoints": {
+        "world_model.pt": "1a6d71ed51a03b5a96c3e2be35b7c21429dda4dbb659d82af93f53d66d2bcbc0",
+        "actor.pt": "2fae78a0e28568c851251365adef7c0ba97501b83b7000b5ea20cf7b9415749d",
+        "critic.pt": "958dff191dca78eeb81d07cd60831cae93b5eef776c3a3e9f4bf53efd4250f51"
+      }
+    },
+    "bones1k": {
+      "run": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-raw-pilot-1113a",
+      "steps": 1001,
+      "checkpoints": {
+        "world_model.pt": "7b273aecb39e531d0f4d7679aac835e2b2af6900c8f8d4263615ae99050c2762",
+        "actor.pt": "4507f77190d93a8549cb9f08905ab1f83f0d3fa77d67fdbede4a7655a6e6e019",
+        "critic.pt": "cb9e1df22f8bc67043c3328d5468cd388e8ee2f0de67616b893145f8e957f77b"
+      }
+    },
+    "bones16k": {
+      "run": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-raw-16k-1113f",
+      "steps": 16001,
+      "checkpoints": {
+        "world_model.pt": "b9dc3486a828b0ae161a2542f4ebeaaef258e7c26c42ebf3579986630fbd359f",
+        "actor.pt": "151ef8e8712936ed1d8019844c6ea7a3a6a48600c5138d787cebba5e549d3f32",
+        "critic.pt": "f78dedf43c8613d1a4178f1c74ef6f0fdbfa2d27ca1e152214c2e76dd9f2d693"
+      }
+    }
+  },
+  "corrected_standing_gate_result_hashes": {
+    "rl": "1d956fb8dd2f76fa985171cc3fce4746ef633c96764267ee757fb1f4f7de3edc",
+    "distill": "39a74cbbf4fdeeed5ebcd9ba33a63563b2d7bbaa6e1841d6700e12846afc1225"
+  },
+  "command_sha256": "019930b4185bef57b5b9d45bbe34f76f61254c0ddd7a34b2b1991f13e895c6f2",
+  "bootstrap_characters": 21701,
+  "manual_reset_version": 2,
+  "hypothesis": "Reevaluate the same frozen1k/16k actors on all142220 raw motions with correct physical initial observations and control histories; retain all legacy results and failures",
+  "acceptance": [
+    "Completed40 motion check with accounting and fresh physical initial observations",
+    "Both142220 evaluations complete, all successes and failures retained",
+    "Exact matchingv2 protocols and packed bytes; all indices paired once",
+    "Original accounting/protocol/summary JSON recoverable; arrays remain for later full integrity audit"
+  ],
+  "prior_legacy_results_preserved": true,
+  "training_modified": false,
+  "old_vs_new_causal_cache_effect_claimed": false,
+  "repeatability_verified": false,
+  "trajectory_arrays_full_integrity_audit_included": false,
+  "paper_results_reproduced": false,
+  "local_command_syntax_verified": true,
+  "bootstrap_roundtrip_verified": true,
+  "submitted": true,
+  "current_task_max_concurrent_gpu_count_with_job": 4,
+  "fresh_duplicate_and_resource_check_required": false,
+  "output": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/manual-reset-v2-1113v",
+  "unique_json_receipts_at_end": 7,
+  "initial_reference_state_check_before_first_action": true,
+  "uid": "e0b55c6ef22048c289928b39f23e8d33",
+  "created_at": "2026-11-13T07:38:51+08:00",
+  "started_at": "2026-11-13T07:39:01+08:00",
+  "program_deadline": "2026-11-13T11:39:01+08:00",
+  "program_kill_deadline": "2026-11-13T11:39:31+08:00",
+  "lafan_stage_deadline": "2026-11-13T07:49:01+08:00",
+  "platform_status": "running",
+  "command_dom_readback_exact": true,
+  "command_dom_characters": 21701,
+  "source_hashes_verified": true,
+  "frozen_model_receipts_verified": true,
+  "prior_standing_receipts_verified": true,
+  "observed_at": "2026-11-13T07:53:21.369908+08:00",
+  "first_lafan_batch_initial_state_verification": {
+    "batch": 0,
+    "current_physical_state_verified": true,
+    "observation_cache_reset_and_recomputed": true,
+    "actuator_histories_backfilled": true,
+    "cached_vs_fresh_state_max_abs_difference": 7.743478775024414,
+    "reference_initial_state_verified": true,
+    "reference_first_state_max_abs_error": 4.76837158203125e-07
+  },
+  "last_progress_evidence": "manual-reset-v2-1113v-progress6.txt",
+  "last_verified_stage": "Complete40 accounting39success/1failure; first1024 rawBONES reference states verified; batch0 controlstep3000 reached; full142220 result pending",
+  "lafan40_accounting_gate": {
+    "clips": 40,
+    "successes": 39,
+    "failures": 1,
+    "mean_normalized_full_motion_return": 0.7971319807437383,
+    "tracked_fraction_frames": 0.9919662692115881
+  },
+  "first_bones1k_batch_initial_state_verification": {
+    "batch": 0,
+    "current_physical_state_verified": true,
+    "observation_cache_reset_and_recomputed": true,
+    "actuator_histories_backfilled": true,
+    "cached_vs_fresh_state_max_abs_difference": 5.497229099273682,
+    "reference_initial_state_verified": true,
+    "reference_first_state_max_abs_error": 9.525101631879807e-07
+  },
+  "bones1k_started_at": "2026-11-13T07:47:03+08:00",
+  "bones1k_stage_deadline": "2026-11-13T09:27:03+08:00"
+}

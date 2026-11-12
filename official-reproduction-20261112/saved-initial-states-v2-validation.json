@@ -1,0 +1,14 @@
+{
+  "status": "targeted_cpu_regression_passed",
+  "tests": 4,
+  "pytest_seconds": 0.17,
+  "scope": [
+    "Read all saved arrays and check two distinct reference first states including failed motion and native joint clipping",
+    "Reject cached first clip observation substituted into second motion despite result claiming fresh initialization",
+    "Reject unclipped initial joint position",
+    "Reject changed packed source bytes before reading trajectories"
+  ],
+  "real_v2_saved_trajectory_arrays_audited": false,
+  "new_cloud_job_submitted": false,
+  "paper_results_reproduced": false
+}

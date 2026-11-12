@@ -21,7 +21,7 @@ def digest(path):
         return hashlib.file_digest(stream, "sha256").hexdigest()
 
 
-def audit(folder, output, expected_clips):
+def audit(folder, output, expected_clips, *, initial_state_check=None):
     folder, output = Path(folder), Path(output)
     result = json.loads((folder / "result.json").read_text(encoding="utf-8"))
     accounting = json.loads((folder / "accounting.json").read_text(encoding="utf-8"))
@@ -68,6 +68,8 @@ def audit(folder, output, expected_clips):
                     summary["array_widths"] = widths
                 elif widths != summary["array_widths"]:
                     raise ValueError("State/action widths vary across stored motions")
+                if initial_state_check is not None:
+                    initial_state_check(row, state[0])
                 difference = abs(float(np.sum(rewards, dtype=np.float64)) - row["reward_sum"])
                 if not math.isfinite(difference) or difference > summary["reward_sum_absolute_tolerance"]:
                     raise ValueError(f"Stored reward sum differs from result at index {row['index']}")
