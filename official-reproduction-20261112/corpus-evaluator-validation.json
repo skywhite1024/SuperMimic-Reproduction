@@ -140,5 +140,33 @@
     "validation": "batch-inference-reset-validation.json",
     "change": "Keep all environment resets, observations and steps under one inference context after model construction",
     "vendor_files_modified": false
+  },
+  "batch_reset_fix_job": {
+    "status": "running",
+    "name": "supermimic-official-batch-260010076-1113g",
+    "display_name": "260010076-SuperMimic-batch-reset-fix-1113g",
+    "gpu": 1,
+    "vcpu": 4,
+    "ram_gib": 64,
+    "replicas": 1,
+    "max_restarts": 0,
+    "max_program_seconds": 1800,
+    "evaluation_timeout_seconds": 1200,
+    "launcher_commit": "f99eacb9d9f422bc3a84478b5e0b1b4ea23a33ff",
+    "command_sha256": "88248fede2178282248eb324131158794baccf6121300ec76d958e5c5464eb2a",
+    "num_envs": 24,
+    "order": "length",
+    "clips": 40,
+    "training": false,
+    "baseline_run": "lafan40-16k-1112e",
+    "change": "Inference context covers all batch reset/step work after model creation",
+    "previous_failed_job": "a4f8eeb5bece4e60a48e8a5f60c0c926",
+    "initial_state_tolerance": 1e-05,
+    "initial_action_tolerance": 0.0001,
+    "paper_results_reproduced": false,
+    "uid": "1b3745ad2a5e484e805a459424f0be4d",
+    "created_at": "2026-11-13T02:13:33+08:00",
+    "platform_updated_at": "2026-11-13T02:14:28+08:00",
+    "command_clipboard_exact_match": true
   }
 }
