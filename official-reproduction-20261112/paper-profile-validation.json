@@ -1,0 +1,36 @@
+{
+  "profile": {
+    "name": "paper-a5-single-gpu",
+    "provenance": "local interpretation of paper Tables A.4/A.5",
+    "optimizer": "Adam for every trainable network parameter; no Muon",
+    "actor_betas": [
+      0.9,
+      0.95
+    ],
+    "wm_and_critic_betas": [
+      0.9,
+      0.999
+    ],
+    "initial_lr": 0.0002,
+    "schedule": "cosine to 0.03 times initial by collection step 250000; then constant",
+    "schedule_unit": "zero-based simulator collection step, before its learner updates",
+    "schedule_unit_author_confirmed": false,
+    "actor_observation": "proprio",
+    "history_length": 10,
+    "gpus": 1,
+    "paper_training_length": 320000,
+    "limitations": [
+      "Does not supply the missing paper dataset filters or surviving-clip manifest",
+      "Does not implement multi-GPU gradient synchronization",
+      "Does not implement full training-state resume",
+      "Motion training only; velocity encoder architecture not aligned here",
+      "Uses the released simulator, normalization and return-sampler implementation"
+    ],
+    "paper_equivalence_verified": false
+  },
+  "validation": {
+    "cpu_tests_passed": 2,
+    "command": "python -m pytest -q official-reproduction-20261112/test_paper_profile.py",
+    "gpu_training_verified": false
+  }
+}

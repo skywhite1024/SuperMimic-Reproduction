@@ -1,4 +1,4 @@
-"""Finite CUDA pilot of the unchanged official default learner on raw LAFAN40.
+"""Finite CUDA training of an explicit learner profile on raw LAFAN40.
 
 This verifies execution and checkpoint creation, not the paper's full benchmark.
 """
@@ -19,6 +19,8 @@ def main():
     parser.add_argument("--steps", type=int, default=1001)
     parser.add_argument("--num-envs", type=int, default=4096)
     parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument("--training-profile", choices=("public-default", "paper-a5-single-gpu"),
+                        default="public-default")
     parser.add_argument("--goal-backend", choices=("official", "eager"), default="official",
                         help="Diagnostic: eager runs the author's same goal math without torch.compile")
     args = parser.parse_args()
@@ -63,6 +65,15 @@ def main():
         raise RuntimeError("Pilot denominator must be the frozen 40 clips")
     task = "SuperMimic-GenCoord-G1"
     config = TrainConfig.from_task(task)
+    profile = None
+    runner_class = SuperMimicRunner
+    if args.training_profile == "paper-a5-single-gpu":
+        if args.num_envs != 4096:
+            raise ValueError("The single-GPU table profile requires 4096 environments")
+        from paper_profile import configure_runner, install_paper_runner, profile_description
+        configure_runner(config.runner)
+        runner_class = install_paper_runner(SuperMimicRunner)
+        profile = profile_description()
     config.env.seed = args.seed
     config.env.commands["motion"].motion_file = str(motions)
     config.env.commands["motion"].sampling_mode = "external"
@@ -75,7 +86,10 @@ def main():
         "collection_steps": args.steps, "motion_directory": str(motions),
         "runner": dataclasses.asdict(config.runner),
         "environment": dataclasses.asdict(config.env),
-        "source_algorithm_modified": False,
+        "source_algorithm_modified": profile is not None,
+        "vendor_files_modified": False,
+        "training_profile": args.training_profile,
+        "paper_profile": profile,
         "goal_assembly_backend": args.goal_backend,
         "runtime_execution_modified": args.goal_backend != "official",
         "io_adapter": "offline checkpoint artifact logging; online pruning disabled",
@@ -86,7 +100,7 @@ def main():
     )
     device = setup_device("cuda:0")
     env = create_env(config.env, args.num_envs, device)
-    runner = SuperMimicRunner(env=env, cfg=config.runner, task_id=task,
+    runner = runner_class(env=env, cfg=config.runner, task_id=task,
                              registry_name=None, device=device)
     started = time.monotonic()
     runner.run()
@@ -120,6 +134,7 @@ def main():
         "gpu": torch.cuda.get_device_name(0), "checkpoints": artifacts,
         "full_clip_evaluation_completed": False, "paper_results_reproduced": False,
         "goal_assembly_backend": args.goal_backend,
+        "training_profile": args.training_profile,
     }
     (output / "result.json").write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
     print("OFFICIAL_LAFAN_PILOT_PASS " + json.dumps(result), flush=True)

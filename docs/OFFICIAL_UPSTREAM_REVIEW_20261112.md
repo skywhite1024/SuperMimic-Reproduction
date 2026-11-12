@@ -138,3 +138,24 @@ SuperMimic 训练入口使用单设备，没有找到自己的 DDP/torchrun 联�
 - 初次静态审查时尚未安装运行依赖；后续安装、测试与云端试跑结果见文首的执行状态。本节保留初次导入检查，不代表当前环境仍不可用。
 
 源码同步成功与实验复现成功是两个独立结论。初次审查完成源码同步；后续执行继续沿用这些固定版本，训练与评测结论必须另行验收。
+
+## 8. 论文配置适配与数据筛选补充核查
+
+`run_lafan_pilot.py --training-profile paper-a5-single-gpu` 通过独立的
+[paper_profile.py](../official-reproduction-20261112/paper_profile.py) 配置全参数 Adam、
+93D 本体感知的10帧历史，以及250,000次采样内衰减至初值0.03倍的余弦学习率。
+官方导入文件保持原样；此入口是本地对论文 Tables A.4/A.5 的显式解释，不能称为作者发布的完整配置。
+学习率以零起始的仿真采样步计数，在该步之后的模型/策略更新前生效；论文 iteration 与此计数方式的对应尚未获作者确认。
+运行长度由命令显式指定，1k试跑不等于论文320k完整训练。
+
+两项CPU数值检查通过：各网络参数仅进入一个Adam优化器，变化学习率下与标准Adam的更新一致；
+调度端点及单调性正确，学习率张量地址保持不变。CUDA graph 的兼容性仍须实际GPU训练验证。
+该入口尚未解决完整状态恢复、双卡同步、速度编码器配置或全库筛选缺失。
+
+按当前 SONIC 官方筛选脚本的固定版本
+[`1e1ec4f`](https://github.com/NVlabs/GR00T-WholeBodyControl/blob/1e1ec4f5f27e6c3e03048f693bd7c60cce04afda/gear_sonic/data_process/filter_and_copy_bones_data.py)
+对142,220个原始动作名做只读匹配，排除12,435条、剩余129,785条，与论文名称筛选后的129,667条不一致。
+当前SONIC规则还含 `handstand`、`cartwheel` 等关键词，不能未经成员核对就复制成SuperMimic筛选器。
+论文只说明沿用SONIC并补充少数词，没有给出确切版本和完整关键词；后续可行性筛选也有未量化门槛。
+因此暂不通过凑齐条数来建立“论文同一数据集”。详细计数与源文件哈希见
+[只读筛选核查](../official-reproduction-20261112/sonic-name-filter-audit.json)，原始数据未改变。
