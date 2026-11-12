@@ -101,5 +101,30 @@
     "max_normalized_return_difference": 0.3806537451063013,
     "comparison_passed_clips": 1,
     "claim": "Unchanged legacy evaluator is not repeatable in this runtime; batched evaluator equivalence remains unproven"
+  },
+  "batch_diagnostic_job": {
+    "status": "queued_no_pod",
+    "name": "supermimic-official-batch-260010076-1113e",
+    "display_name": "260010076-SuperMimic-batch-diagnostic-1113e",
+    "gpu": 1,
+    "vcpu": 4,
+    "ram_gib": 64,
+    "replicas": 1,
+    "max_restarts": 0,
+    "max_program_seconds": 1800,
+    "launcher_commit": "c4bfbdf881860bbbb547cb12c4934f301c6895a1",
+    "command_sha256": "d14904e0e3c0bbf137731eacaf2614c198873ab96eed75e1ac0e210f02ba741c",
+    "training": false,
+    "purpose": "Complete 24-env length-sorted and padded-last-batch diagnostic; retrieve exact JSON receipts in bounded log chunks",
+    "strict_trajectory_equivalence": false,
+    "comparison_mismatch_exit_2": "Recorded, not hidden; legacy itself has failed repeatability",
+    "initial_state_tolerance": 1e-05,
+    "initial_action_tolerance": 0.0001,
+    "full_corpus_verified": false,
+    "paper_results_reproduced": false,
+    "uid": "a4f8eeb5bece4e60a48e8a5f60c0c926",
+    "created_at": "2026-11-13T01:41:25+08:00",
+    "platform_updated_at": "2026-11-13T01:41:26+08:00",
+    "command_clipboard_exact_match": true
   }
 }

@@ -22,7 +22,7 @@ BONES 原始 G1 数据已完成下载与 SHA256 核验，142,220 条 CSV 全部�
 
 BONES 原始全库已在单张H100上完成1,001步论文参数适配版试跑，平台状态为成功，三个最终检查点数值有限。训练耗时358.59秒，PyTorch分配峰值约30.85GiB（不包含Warp及其他CUDA分配）。这证明当前配置可载入全库并进行训练；没有完成142,220条动作的全库策略评估。见 [BONES试跑收据](../official-reproduction-20261112/bones-raw-pilot-result.json)。
 
-新增 [分批全库评估入口](../official-reproduction-20261112/evaluate_motion_corpus.py) 复用上述原生评估协议，逐批重置环境及策略历史，并保留每条动作的结果和轨迹。按长度排序只改变批次顺序，不筛掉任何动作；完整结果必须含每个原始索引恰好一次。原始BONES在1024环境下，按原始顺序各批最长长度之和为184,425步，按长度排序为57,293步；这是参考长度计算，不是实际GPU速度实测。`1113c` 的首项一致性检查未通过，详见前述重复性问题；GPU分批一致性和全库执行尚未验收，见 [验证状态](../official-reproduction-20261112/corpus-evaluator-validation.json)。
+新增 [分批全库评估入口](../official-reproduction-20261112/evaluate_motion_corpus.py) 复用上述原生评估协议，逐批重置环境及策略历史，并保留每条动作的结果和轨迹。按长度排序只改变批次顺序，不筛掉任何动作；完整结果必须含每个原始索引恰好一次。原始BONES在1024环境下，按原始顺序各批最长长度之和为184,425步，按长度排序为57,293步；这是参考长度计算，不是实际GPU速度实测。`1113c` 的首项一致性检查未通过，详见前述重复性问题；后续 `1113e` 已提交24环境排序及末批补齐诊断（01:41排队，最长30分钟），单独检查首帧状态/动作映射并保留成绩差异；不能因诊断作业成功而宣称轨迹等价。GPU分批一致性和全库执行尚未验收，见 [验证状态](../official-reproduction-20261112/corpus-evaluator-validation.json)。
 
 以下静态审查与历史对照保留初次审查时的证据边界；当前执行合同见 [experiment-contract.json](../official-reproduction-20261112/experiment-contract.json)，数据验证见 [bones-data-validation.json](../official-reproduction-20261112/bones-data-validation.json)。官方源文件未修改；离线训练包装器替换 W&B 产物上传/清理逻辑，并提供显式 `--goal-backend eager` 对照开关；该开关调用作者相同的目标计算函数，绕过其单独的 Torch 编译包装。公开默认配置保持作者学习参数，论文适配版另改优化器、观测历史与学习率调度，不能用这些实验宣称官方原始性能复现。
 
