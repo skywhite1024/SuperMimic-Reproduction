@@ -1,0 +1,141 @@
+{
+  "status": "local_lafan_parent_data_drift_confirmed",
+  "verified_at": "2026-11-13T06:16:30.320432+08:00",
+  "local_source_checks": [
+    {
+      "label": "bones",
+      "files": [
+        {
+          "file": "joint_names.json",
+          "expected_sha256": "30355b480e4f89c97a693c72f8baf23902fd458d25e49b5df4741dd47aefce0d",
+          "actual_sha256": "30355b480e4f89c97a693c72f8baf23902fd458d25e49b5df4741dd47aefce0d",
+          "matches_protocol": true
+        },
+        {
+          "file": "joint_pos.npy",
+          "expected_sha256": "d61e0ed202183fc1189fd28f3b16474d25eee1f8c517de829c92104d407d5ff3",
+          "actual_sha256": "d61e0ed202183fc1189fd28f3b16474d25eee1f8c517de829c92104d407d5ff3",
+          "matches_protocol": true
+        },
+        {
+          "file": "joint_vel.npy",
+          "expected_sha256": "2f060e4979122858a1f90387139378c48d9eaef15a460560e966fb517952b44e",
+          "actual_sha256": "2f060e4979122858a1f90387139378c48d9eaef15a460560e966fb517952b44e",
+          "matches_protocol": true
+        },
+        {
+          "file": "motion_ends.npy",
+          "expected_sha256": "9a46f7e3c8dcf4a33618f8a6409a1eebf8165aaac3a5619364582b0d4b8f17da",
+          "actual_sha256": "9a46f7e3c8dcf4a33618f8a6409a1eebf8165aaac3a5619364582b0d4b8f17da",
+          "matches_protocol": true
+        },
+        {
+          "file": "motion_names.json",
+          "expected_sha256": "8cfa81c756867f8df643df0b2a3fa592cb1325f2bcd32c2991c63c98f10e3bfa",
+          "actual_sha256": "8cfa81c756867f8df643df0b2a3fa592cb1325f2bcd32c2991c63c98f10e3bfa",
+          "matches_protocol": true
+        },
+        {
+          "file": "root_ang_vel_w.npy",
+          "expected_sha256": "adb430462fa2fa00be96e6a24d5dee7736f75b1f4e0a4eb876d757edc22a0586",
+          "actual_sha256": "adb430462fa2fa00be96e6a24d5dee7736f75b1f4e0a4eb876d757edc22a0586",
+          "matches_protocol": true
+        },
+        {
+          "file": "root_lin_vel_w.npy",
+          "expected_sha256": "c40d34356104e567a9d655b8ed874454e03e9f5bc6fd1b3b8adbbeea9cc4d935",
+          "actual_sha256": "c40d34356104e567a9d655b8ed874454e03e9f5bc6fd1b3b8adbbeea9cc4d935",
+          "matches_protocol": true
+        },
+        {
+          "file": "root_pos_w.npy",
+          "expected_sha256": "0c8da96a199cb50a46ccfa5e0cf2f10d4e98958adfa28cec2d0005148226ce7e",
+          "actual_sha256": "0c8da96a199cb50a46ccfa5e0cf2f10d4e98958adfa28cec2d0005148226ce7e",
+          "matches_protocol": true
+        },
+        {
+          "file": "root_quat_w.npy",
+          "expected_sha256": "211b9c9ac8052a713a7a207125d9146dafb0ba2fca80f1cac64e28eb1d8ef077",
+          "actual_sha256": "211b9c9ac8052a713a7a207125d9146dafb0ba2fca80f1cac64e28eb1d8ef077",
+          "matches_protocol": true
+        }
+      ],
+      "all9_match": true
+    },
+    {
+      "label": "lafan40",
+      "files": [
+        {
+          "file": "joint_names.json",
+          "expected_sha256": "30355b480e4f89c97a693c72f8baf23902fd458d25e49b5df4741dd47aefce0d",
+          "actual_sha256": "30355b480e4f89c97a693c72f8baf23902fd458d25e49b5df4741dd47aefce0d",
+          "matches_protocol": true
+        },
+        {
+          "file": "joint_pos.npy",
+          "expected_sha256": "64f0dff0d2e0d678a1f78213233124588044ba5781aa599c31b08d1348509a9b",
+          "actual_sha256": "64f0dff0d2e0d678a1f78213233124588044ba5781aa599c31b08d1348509a9b",
+          "matches_protocol": true
+        },
+        {
+          "file": "joint_vel.npy",
+          "expected_sha256": "11efc4b4b37b0818ea25a2dfa8676ed8f564a3443c97bf9c9680a346c06b23e0",
+          "actual_sha256": "11efc4b4b37b0818ea25a2dfa8676ed8f564a3443c97bf9c9680a346c06b23e0",
+          "matches_protocol": true
+        },
+        {
+          "file": "motion_ends.npy",
+          "expected_sha256": "fa4db64df8fe4d1f9362883b8c7b32d303a3865aeeab1c92fad0e89144cf8be5",
+          "actual_sha256": "fa4db64df8fe4d1f9362883b8c7b32d303a3865aeeab1c92fad0e89144cf8be5",
+          "matches_protocol": true
+        },
+        {
+          "file": "motion_names.json",
+          "expected_sha256": "b2b46cceb62efa50b159e13928b4c991b80b27a59b381ed603392cfa87e3c8b9",
+          "actual_sha256": "b2b46cceb62efa50b159e13928b4c991b80b27a59b381ed603392cfa87e3c8b9",
+          "matches_protocol": true
+        },
+        {
+          "file": "root_ang_vel_w.npy",
+          "expected_sha256": "88ff137fd4a6dde1626dceae086c8a810da624d650855d69af1adc052565f9b5",
+          "actual_sha256": "22525132270a65583977138e0de87e82c66b14bb5af527c830bcea98ed57a192",
+          "matches_protocol": false
+        },
+        {
+          "file": "root_lin_vel_w.npy",
+          "expected_sha256": "7738f75d8de3b070a1d6407a06e1a971d5723abccc1e46a90a1aa86e93c486a0",
+          "actual_sha256": "7738f75d8de3b070a1d6407a06e1a971d5723abccc1e46a90a1aa86e93c486a0",
+          "matches_protocol": true
+        },
+        {
+          "file": "root_pos_w.npy",
+          "expected_sha256": "a57c5a8efc209c345ea4f7d83ef36936c0edfefb60f137757af69c6f4f7272fe",
+          "actual_sha256": "a57c5a8efc209c345ea4f7d83ef36936c0edfefb60f137757af69c6f4f7272fe",
+          "matches_protocol": true
+        },
+        {
+          "file": "root_quat_w.npy",
+          "expected_sha256": "9934171fce73559ec04d63db2bafee95575cd46196fe39aea425d677eae5303e",
+          "actual_sha256": "0e859f9b46cee0a44058b5617200054de20f3a8e0705b102789a2a03732e64b0",
+          "matches_protocol": false
+        }
+      ],
+      "all9_match": false
+    }
+  ],
+  "cloud_lafan9_match_frozen_protocol": true,
+  "cloud_evidence_original_config_sha256": "7ee56e4bb95da8d16b90bfa14519018937fb23c4b4c76db4944616796b80791c",
+  "affected_local_arrays": [
+    "root_ang_vel_w.npy",
+    "root_quat_w.npy"
+  ],
+  "npy_header_issue": false,
+  "underlying_local_change_cause_confirmed": false,
+  "local_v1_candidate_retained": true,
+  "local_v1_parent_protocol_claim_correction": "Only the small membership files were rehashed when buildingv1. Its parent_packed_sha256 entries were copied from historical protocols and are not proof of the numeric source files. The2 LAFAN files disagree; do not usev1 as the canonical protocol-matching library.",
+  "strict_builder_rehashes_all18_parent_files": true,
+  "strict_local_guard_rejected_before_output": true,
+  "strict_builder_sha256": "39862c4a0950f54395da17b0b28477053ee6081247790bf98b5b2ec7a2c2fc85",
+  "gpu_integration_validity": "Both integration modes used cloud LAFAN40, whose9 actual packed hashes match the frozen protocol; local drift does not alter these GPU execution gates",
+  "paper_results_reproduced": false
+}

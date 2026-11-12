@@ -1,0 +1,24 @@
+{
+  "status": "two_original_receipts_sha256_verified",
+  "exit_code": 1,
+  "receipts": [
+    {
+      "i": 0,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/data/velocity-walking-running-name-v1-1113o/library-manifest.json",
+      "bytes": 5753,
+      "sha256": "2612e4da3b9fd20758f043b883d9e54c7e31c4b8f266f5d3b9f45933ffb1ee50",
+      "chunks": 9,
+      "file": "velocity-library-cloud-1113o-manifest.json",
+      "original_bytes_verified": true
+    },
+    {
+      "i": 1,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/velocity-library-audit-1113p.json",
+      "bytes": 7565,
+      "sha256": "0dd30da2a8ad04004711ba525de895c9712056e48e0fcdb715dd575eb3691c32",
+      "chunks": 6,
+      "file": "velocity-library-audit-1113p-result.json",
+      "original_bytes_verified": true
+    }
+  ]
+}

@@ -507,13 +507,14 @@
       "gpu_validation": "velocity-integration-gpu-validation.json"
     },
     "velocity_library": {
-      "status": "local_name_candidate_bytes_verified",
+      "status": "local_parent_drift_confirmed_cloud_pack_requires_strict_parent_gate",
       "validation": "velocity-library-name-v1-validation.json",
       "clips": 41828,
       "frames": 15469495,
       "author_membership_confirmed": false,
       "semantic_motion_quality_verified": false,
-      "cloud_prepared": false
+      "cloud_prepared": false,
+      "local_correction": "velocity-library-local-parent-correction.json"
     }
   }
 }

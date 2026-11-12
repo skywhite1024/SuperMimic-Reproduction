@@ -2,9 +2,9 @@
 
 Membership is determined only by the frozen name expression, never returns or
 successes. This is a local candidate definition, not the authors' unpublished
-walking/running membership. Source protocols identify already audited parents;
-their small membership files are checked again, and every selected numeric
-element is compared against its parent after writing the output.
+walking/running membership. Every parent file is rehashed before selection,
+and every selected numeric element is compared against its parent after writing
+the output. A historical protocol does not establish current source bytes.
 """
 
 import argparse
@@ -42,9 +42,9 @@ def membership(label, folder, protocol):
     hashes = metadata["motion_files"]
     if set(hashes) != PACKED_FILES:
         raise ValueError("Parent protocol must identify all nine packed files")
-    for name in ("joint_names.json", "motion_names.json", "motion_ends.npy"):
+    for name in sorted(PACKED_FILES):
         if sha256(folder / name) != hashes[name]:
-            raise ValueError("Parent membership hash mismatch: " + label + "/" + name)
+            raise ValueError("Parent packed-file hash mismatch: " + label + "/" + name)
     names = json.loads((folder / "motion_names.json").read_text(encoding="utf-8"))
     joints = json.loads((folder / "joint_names.json").read_text(encoding="utf-8"))
     ends = np.load(folder / "motion_ends.npy", allow_pickle=False)
@@ -64,7 +64,7 @@ def membership(label, folder, protocol):
                "selected_clips": len(rows),
                "selected_frames": sum(r["source_end"] - r["source_start"] for r in rows),
                "parent_protocol_sha256": sha256(protocol), "parent_packed_sha256": hashes,
-               "parent_numeric_files_rehashed_this_run": False,
+               "parent_numeric_files_rehashed_this_run": True,
                "membership_files_rehashed_this_run": True}
     return rows, joints, int(ends[-1]), receipt
 

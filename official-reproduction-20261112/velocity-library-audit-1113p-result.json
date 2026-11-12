@@ -1,0 +1,190 @@
+{
+  "status": "cross_machine_library_diagnostic_completed",
+  "cloud_manifest_sha256": "2612e4da3b9fd20758f043b883d9e54c7e31c4b8f266f5d3b9f45933ffb1ee50",
+  "expected_manifest_sha256": "2d6cb917530c698f4645f350b0db85daef83f6941da1d2dfae43a356904f8b10",
+  "expected_payloads_sha256": "a8b301d1224b1a91fd1e918331a7e5905914341a6faa37f32ed41180bfaa0731",
+  "cloud_files_intact": true,
+  "all_numpy_payloads_equal": false,
+  "all_json_files_identical": true,
+  "all_complete_files_identical": false,
+  "metadata_differences": [],
+  "files": [
+    {
+      "file": "joint_names.json",
+      "current_file": {
+        "file": "joint_names.json",
+        "bytes": 770,
+        "sha256": "4674408eab42a3a3cd5414072f2c7874217db6bc6394fb3efeb594be62593682"
+      },
+      "matches_cloud_manifest": true,
+      "matches_local_complete_file": true
+    },
+    {
+      "file": "joint_pos.npy",
+      "current_file": {
+        "file": "joint_pos.npy",
+        "bytes": 1794461548,
+        "sha256": "b8c86d5e7ead5f50df070597d96a1a6fe2775d97ad413ad9fe11b7316efd4f0c"
+      },
+      "matches_cloud_manifest": true,
+      "matches_local_complete_file": true,
+      "array": {
+        "shape": [
+          15469495,
+          29
+        ],
+        "dtype": "<f4",
+        "header_bytes": 128,
+        "payload_sha256": "416d66ff918a47711127f0af1b7c0ab88fd586b31b919e584d02690b3d8f916b",
+        "payload_bytes": 1794461420
+      },
+      "matches_local_payload": true,
+      "npy_header_hex": "934e554d5059010076007b276465736372273a20273c6634272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a202831353436393439352c203239292c207d20202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a"
+    },
+    {
+      "file": "joint_vel.npy",
+      "current_file": {
+        "file": "joint_vel.npy",
+        "bytes": 1794461548,
+        "sha256": "ef6ad381610ac92d4e129e6ee21a6c988032dd8c4cdf9b71805f565b9f67fadc"
+      },
+      "matches_cloud_manifest": true,
+      "matches_local_complete_file": true,
+      "array": {
+        "shape": [
+          15469495,
+          29
+        ],
+        "dtype": "<f4",
+        "header_bytes": 128,
+        "payload_sha256": "68c46b9077fd467508fe563b54fe55a63fdd28ee93a5449c16ad896f35409837",
+        "payload_bytes": 1794461420
+      },
+      "matches_local_payload": true,
+      "npy_header_hex": "934e554d5059010076007b276465736372273a20273c6634272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a202831353436393439352c203239292c207d20202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a"
+    },
+    {
+      "file": "motion_ends.npy",
+      "current_file": {
+        "file": "motion_ends.npy",
+        "bytes": 334752,
+        "sha256": "5628d1583a55433ea8aba8076197da104f50677c47243d27bcd3a4660cbe55c1"
+      },
+      "matches_cloud_manifest": true,
+      "matches_local_complete_file": true,
+      "array": {
+        "shape": [
+          41828
+        ],
+        "dtype": "<i8",
+        "header_bytes": 128,
+        "payload_sha256": "59f03b1c4252fa2422d97d4fb3fd131f254228f76690433cf28c72437913a72b",
+        "payload_bytes": 334624
+      },
+      "matches_local_payload": true,
+      "npy_header_hex": "934e554d5059010076007b276465736372273a20273c6938272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a202834313832382c292c207d20202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a"
+    },
+    {
+      "file": "motion_names.json",
+      "current_file": {
+        "file": "motion_names.json",
+        "bytes": 1983965,
+        "sha256": "f79d725fb8f4ae936ded5cd286511d6ee94cb59e0997d2f5777317b498216931"
+      },
+      "matches_cloud_manifest": true,
+      "matches_local_complete_file": true
+    },
+    {
+      "file": "root_ang_vel_w.npy",
+      "current_file": {
+        "file": "root_ang_vel_w.npy",
+        "bytes": 185634068,
+        "sha256": "4ff8c99b5ceac4849210558cc8444bec208d08a849dd3b02334df8e6cfce017e"
+      },
+      "matches_cloud_manifest": true,
+      "matches_local_complete_file": false,
+      "array": {
+        "shape": [
+          15469495,
+          3
+        ],
+        "dtype": "<f4",
+        "header_bytes": 128,
+        "payload_sha256": "2f53d68ce1f224c04498e873afb307c36443dd2704d106b47b3a25b2b9a810b3",
+        "payload_bytes": 185633940
+      },
+      "matches_local_payload": false,
+      "npy_header_hex": "934e554d5059010076007b276465736372273a20273c6634272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a202831353436393439352c2033292c207d2020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a"
+    },
+    {
+      "file": "root_lin_vel_w.npy",
+      "current_file": {
+        "file": "root_lin_vel_w.npy",
+        "bytes": 185634068,
+        "sha256": "54ff88d2d05cfa302ecfbaf39a5ff99e9e5b7e9c956d6a47998e83461148d5cf"
+      },
+      "matches_cloud_manifest": true,
+      "matches_local_complete_file": true,
+      "array": {
+        "shape": [
+          15469495,
+          3
+        ],
+        "dtype": "<f4",
+        "header_bytes": 128,
+        "payload_sha256": "f8c4eaf8e085aa9bef52c6c1219dfdc7146b1540350450371682687905c19db2",
+        "payload_bytes": 185633940
+      },
+      "matches_local_payload": true,
+      "npy_header_hex": "934e554d5059010076007b276465736372273a20273c6634272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a202831353436393439352c2033292c207d2020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a"
+    },
+    {
+      "file": "root_pos_w.npy",
+      "current_file": {
+        "file": "root_pos_w.npy",
+        "bytes": 185634068,
+        "sha256": "25d3039effb6451642b3b964e2f9e8539ce0979449e9e57ec1efa03db918460f"
+      },
+      "matches_cloud_manifest": true,
+      "matches_local_complete_file": true,
+      "array": {
+        "shape": [
+          15469495,
+          3
+        ],
+        "dtype": "<f4",
+        "header_bytes": 128,
+        "payload_sha256": "b7ced69af87b3d69a8c8aeb513058810408e5da3d36e7fd8e97358be2eaa7a79",
+        "payload_bytes": 185633940
+      },
+      "matches_local_payload": true,
+      "npy_header_hex": "934e554d5059010076007b276465736372273a20273c6634272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a202831353436393439352c2033292c207d2020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a"
+    },
+    {
+      "file": "root_quat_w.npy",
+      "current_file": {
+        "file": "root_quat_w.npy",
+        "bytes": 247512048,
+        "sha256": "6865582419915b6d9252049363041994d7f5d863d416bc15dbfb93ac645cf5af"
+      },
+      "matches_cloud_manifest": true,
+      "matches_local_complete_file": false,
+      "array": {
+        "shape": [
+          15469495,
+          4
+        ],
+        "dtype": "<f4",
+        "header_bytes": 128,
+        "payload_sha256": "54f2eb6e1751a4fddc4ae71e027066bd936549cd9fec534a095f1bdf2eaec92a",
+        "payload_bytes": 247511920
+      },
+      "matches_local_payload": false,
+      "npy_header_hex": "934e554d5059010076007b276465736372273a20273c6634272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a202831353436393439352c2034292c207d2020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a"
+    }
+  ],
+  "numpy_version": "2.5.4",
+  "dataset_modified": false,
+  "author_membership_confirmed": false,
+  "paper_results_reproduced": false
+}
