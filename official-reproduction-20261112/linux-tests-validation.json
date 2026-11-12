@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "platform": "Linux",
+  "python": "3.13.18",
+  "torch": "2.14.0+cu126",
+  "cuda_visible_devices": "",
+  "official_tests": 217,
+  "failures": 0,
+  "warnings": 1,
+  "seconds": 68.89,
+  "xml_on_afs": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/diagnostic-evidence-1112d/linux-tests.xml",
+  "evidence_source": "ACP stdout from b42533c28e604d08a07b0e6c4d476982",
+  "official_source_modified": false,
+  "tests_process_has_goal_override": false
+}

@@ -2,7 +2,9 @@
 
 核查日期：2026-11-12，Asia/Shanghai。结论：**论文作者团队已经公开 SuperMimic 实现，值得成为下一阶段的官方对照基线；当前发布包仍有依赖与复现入口缺口，不能直接替换社区实现或接续旧权重。**
 
-截至 2026-11-12 23:24，官方源码与独立 Windows/Linux Conda 环境已部署，分支 `ljd/official-supermimic` 已推送至现有公开仓库。本机 217 项官方测试通过；Linux pip check、583 个源文件哈希和 H100 CUDA 运行探针通过，Linux 全套测试尚未完成。官方 4096 环境 LAFAN40 试跑记录到至少 201 次采样，随后在仿真推进中报告 CUDA illegal memory access，退出码 1；没有完成最终检查点验收或完整动作评估。同步 CUDA 诊断同样在至少 201 次采样后失败，但将报错定位至目标拼接 `_compiled_assemble_goal` 的 Torch/Triton 内核。下一项对照仅将此函数切换至作者原始 eager 运算；尚未证明根因或修复有效，不能宣称官方结果已复现。
+截至 2026-11-12 23:39，官方源码与独立 Windows/Linux Conda 环境均已部署，分支 `ljd/official-supermimic` 已推送至现有公开仓库。Windows 与 Linux 各 217 项官方测试通过。原始 compiled 目标拼接在两次 H100 试跑中均于至少 201 次采样后发生 CUDA illegal memory access；同步报错定位于 `_compiled_assemble_goal` 的 Torch/Triton 内核。仅切换该函数为作者原始 eager 运算后，4096 环境、1001 次采样完成，三个最终检查点均可读且数值有限。此对照支持编译路径相关的判断，尚未证明具体底层根因。
+
+首次完整 LAFAN40 评估为 **0/40 完成整段动作**；跟踪时长中位数 11.25 秒，范围 2.54–50.22 秒，40 条失败轨迹均保留。此结果是短训练对照，不能当作论文完整训练的效果结论。模型与评估收据见 [pilot result](../official-reproduction-20261112/lafan40-eager-pilot-result.json) 和 [full40 result](../official-reproduction-20261112/lafan40-eager-pilot-full40.json)。下一项有限实验保持同一 eager 配置，以 16,001 次采样检验训练量效应。
 
 BONES 原始 G1 数据已完成下载与 SHA256 核验，142,220 条 CSV 全部转换成功，得到 51,915,358 个 50Hz 帧。转换仅适配原始厘米、角度和 Euler 字段，再调用作者的重采样及速度计算代码；未做名称筛选、可行性筛选或地面校准。5 条抽查与作者格式入口逐数组完全一致；内存有界打包在 16 条样本上与作者打包器完全一致。完整 13,575,450,990 字节压缩包已上传个人 AFS，服务器 SHA256 与本地一致；九个数据文件解包时的哈希均通过。解包器对附带校验清单的处理已修复并完成 16 条样本回归验证，云端九个数据文件已全部通过独立 SHA256 读回，最终目录为 `data/bones-packed-raw`，收据见 [bones-cloud-readback.json](../official-reproduction-20261112/bones-cloud-readback.json)。这些是未筛选的原始数据，尚不等于论文筛选后 129,514 条动作实验已复现。
 
