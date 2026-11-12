@@ -494,6 +494,15 @@
       "velocity_gpu_training_executed": false,
       "full_velocity_runner_implemented": false,
       "paper_results_reproduced": false
+    },
+    "velocity_runtime": {
+      "status": "targeted_velocity_runtime_cpu_validation_passed",
+      "validation": "paper-velocity-runtime-validation.json",
+      "entrypoint": "run_velocity_training.py",
+      "full_runner_implemented": true,
+      "real_g1_physics_executed": false,
+      "velocity_cuda_graph_capture_verified": false,
+      "full100k_training_completed": false
     }
   }
 }

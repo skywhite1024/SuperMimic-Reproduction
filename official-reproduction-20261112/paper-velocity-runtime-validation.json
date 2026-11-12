@@ -1,0 +1,41 @@
+{
+  "status": "targeted_velocity_runtime_cpu_validation_passed",
+  "verified_at": "2026-11-13T05:27:10.814929+08:00",
+  "tests": 8,
+  "checks": [
+    "test_real_manager_routes_rewards_and_hard_failures_by_interface_once_per_dt[rl]",
+    "test_real_manager_routes_rewards_and_hard_failures_by_interface_once_per_dt[distill]",
+    "test_replay_views_keep_interfaces_separate_and_follow_ring_cursor_and_causal_history",
+    "test_world_model_routes_reward_fall_and_critic_identity_and_keeps_action_gradients[rl]",
+    "test_world_model_routes_reward_fall_and_critic_identity_and_keeps_action_gradients[distill]",
+    "test_world_model_own_interface_starts_and_command_age_continue_at_resampling_boundary",
+    "test_ten_frame_causal_warm_start_keeps_history_in_its_own_simulator_interface",
+    "test_final_tail_save_preserves_exact100000_weights_without_overwriting96001"
+  ],
+  "python": "3.13.18",
+  "torch": "2.14.0+cpu",
+  "files": [
+    {
+      "file": "paper_velocity_runtime.py",
+      "sha256": "4ce5f9b470957cc958767dd0d95ac1d2cd2e8678719942c67d4ddd082f099c12"
+    },
+    {
+      "file": "paper_velocity_runner.py",
+      "sha256": "c05bfb0cbcc43c218064438c8efde6195975edb573aac524f8fb8045288dbbd2"
+    },
+    {
+      "file": "run_velocity_training.py",
+      "sha256": "16c2bc53987eac38f4dd96de8131866602def8a371b50946ad9a4c87e5a3adc5"
+    },
+    {
+      "file": "test_paper_velocity_runtime.py",
+      "sha256": "5b7d067aa48bf1788aef679de049311bdfae218837dc195e790541a0f674d9d8"
+    }
+  ],
+  "junit_sha256": "f12ddc305668c521c0f4df9b7d8bca0c57cf76b98fa780b765aeb6d08b9cb191",
+  "scope": "Native RewardManager and TerminationManager plus native ReplayBuffer; deterministic tensor scene/FK/dynamics fixtures isolate routing; exact final-tail model save tested with real torch modules",
+  "real_g1_physics_executed": false,
+  "velocity_cuda_graph_capture_verified": false,
+  "full_100k_training_completed": false,
+  "paper_results_reproduced": false
+}
