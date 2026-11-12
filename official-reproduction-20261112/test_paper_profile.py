@@ -4,6 +4,7 @@ import copy
 import math
 
 import torch
+import pytest
 
 from paper_profile import build_adam_optimizers, cosine_lr, set_learning_rate_in_place
 
@@ -46,3 +47,33 @@ def test_schedule_endpoints_and_monotonicity():
     assert cosine_lr(320000) == cosine_lr(250000)
     values = [cosine_lr(step) for step in range(0, 320001, 1000)]
     assert all(a >= b for a, b in zip(values, values[1:]))
+
+
+@pytest.mark.skipif(not torch.cuda.is_available(), reason="CUDA graph needs a GPU")
+def test_captured_adam_uses_changed_learning_rate():
+    """A replay must consume the new LR, rather than the capture-time value."""
+    model = torch.nn.Linear(2, 1, bias=False, device="cuda")
+    with torch.no_grad():
+        model.weight.fill_(0.5)
+    reference = copy.deepcopy(model)
+    optimizers = build_adam_optimizers([model], 2e-4, device="cuda")
+    expected = build_adam_optimizers([reference], 2e-4, device="cuda")
+    model.weight.grad = torch.ones_like(model.weight)
+    reference.weight.grad = torch.ones_like(reference.weight)
+    stream = torch.cuda.Stream()
+    stream.wait_stream(torch.cuda.current_stream())
+    with torch.cuda.stream(stream):
+        for _ in range(3):
+            optimizers[0].step()
+            expected[0].step()
+    torch.cuda.current_stream().wait_stream(stream)
+    graph = torch.cuda.CUDAGraph()
+    with torch.cuda.graph(graph, stream=stream):
+        optimizers[0].step()
+    for lr in (2e-4, 6e-6, 1.03e-4):
+        set_learning_rate_in_place(optimizers, lr)
+        set_learning_rate_in_place(expected, lr)
+        graph.replay()
+        expected[0].step()
+        torch.cuda.synchronize()
+        torch.testing.assert_close(model.weight, reference.weight, rtol=0, atol=1e-7)
