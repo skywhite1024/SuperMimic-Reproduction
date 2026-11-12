@@ -59,10 +59,12 @@
         "friction": 1.0,
         "domain_randomization": false,
         "observation_noise": false,
-        "physics": "deterministic",
         "failure": "SuperMimic training termination criteria",
         "denominator": "all frozen benchmark motions, including failed trajectories",
-        "claim": "coverage of training motions, not unseen-motion generalization"
+        "claim": "coverage of training motions, not unseen-motion generalization",
+        "physics_target_from_paper": "deterministic",
+        "physics_runtime": "Author-default MuJoCo Warp on GPU; unchanged evaluator repeatability failed",
+        "deterministic_execution_verified": false
       }
     },
     {
@@ -77,7 +79,7 @@
   ],
   "hardware_limit": "Physical robot experiments require a robot; simulation alone cannot validate those results.",
   "execution_status": {
-    "as_of": "2026-11-13T01:03:49+08:00",
+    "as_of": "2026-11-13T01:45:20+08:00",
     "windows_tests": 217,
     "linux_tests": 217,
     "raw_bones_cloud_readback": "passed 142220 clips, 51915358 frames; no paper filters",
@@ -157,7 +159,7 @@
       "receipt": "bones-raw-pilot-result.json"
     },
     "paper_profile_extended_run": {
-      "status": "running",
+      "status": "success",
       "name": "supermimic-official-paper-260010076-1113b",
       "display_name": "260010076-SuperMimic-paper-a5-16k-1113b",
       "gpu": 1,
@@ -185,11 +187,32 @@
       "worker": "pt-558532aa6421437a91ff7b691b5d00d6-worker-0",
       "created_at": "2026-11-13T00:49:26+08:00",
       "platform_updated_at": "2026-11-13T00:49:38+08:00",
-      "last_verified_stage": "PAPER_PROFILE collection_step=4000 lr=0.000199877484791",
+      "last_verified_stage": "Training and all40 evaluation completed; exact JSON receipts hash-verified",
       "program_started_at": "2026-11-13T00:49:40+08:00",
       "program_deadline": "2026-11-13T01:49:40+08:00",
-      "last_observed_collection_steps": 4000,
-      "progress_timestamp": "2026-11-13T01:01:46.836+08:00"
+      "last_observed_collection_steps": 16001,
+      "progress_timestamp": "2026-11-13T01:01:46.836+08:00",
+      "full40_successes": 39,
+      "full40_failures": 1,
+      "mean_normalized_full_motion_return": 0.7904685449041426,
+      "summary": "lafan40-paper-16k-summary.json",
+      "elapsed_training_seconds": 2104.1604822166264,
+      "evaluation_seconds": 342.09797266870737
+    },
+    "evaluation_repeatability": {
+      "verified": false,
+      "unchanged_legacy_success_counts": [
+        39,
+        40
+      ],
+      "unchanged_legacy_mean_returns": [
+        0.8432989283183421,
+        0.8528786061878989
+      ],
+      "batched_40_env_successes": 38,
+      "original_and_repeat_data_checkpoint_hashes_match": true,
+      "repeat_summary": "lafan40-legacy-repeat-summary.json",
+      "causal_limit": "Observed numerical variation; no kernel-level attribution or evaluator equivalence claim"
     }
   }
 }

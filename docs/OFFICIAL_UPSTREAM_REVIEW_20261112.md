@@ -2,7 +2,7 @@
 
 核查日期：2026-11-12，Asia/Shanghai。结论：**论文作者团队已经公开 SuperMimic 实现，值得成为下一阶段的官方对照基线；当前发布包仍有依赖与复现入口缺口，不能直接替换社区实现或接续旧权重。**
 
-截至 2026-11-13 00:43，官方源码与独立 Windows/Linux Conda 环境均已部署，分支 `ljd/official-supermimic` 已推送至现有公开仓库。Windows 与 Linux 各 217 项官方测试通过。原始 compiled 目标拼接在两次 H100 试跑中均于至少 201 次采样后发生 CUDA illegal memory access；同步报错定位于 `_compiled_assemble_goal` 的 Torch/Triton 内核。切换该函数为作者原始 eager 运算后，以下三轮训练和全40评估均完成，最终检查点可读且数值有限。此对照支持编译路径相关的判断，尚未证明具体底层根因。
+截至 2026-11-13 02:00，官方源码与独立 Windows/Linux Conda 环境均已部署，分支 `ljd/official-supermimic` 已推送至现有公开仓库。Windows 与 Linux 各 217 项官方测试通过。原始 compiled 目标拼接在两次 H100 试跑中均于至少 201 次采样后发生 CUDA illegal memory access；同步报错定位于 `_compiled_assemble_goal` 的 Torch/Triton 内核。切换该函数为作者原始 eager 运算后，以下四轮训练和全40评估均完成，最终检查点可读且数值有限。此对照支持编译路径相关的判断，尚未证明具体底层根因。
 
 LAFAN40 使用同一冻结动作集、4096个训练环境、seed 42，评估从每条动作首帧开始，关闭噪声与域随机化，采用作者原生终止条件；所有失败均保留。
 
@@ -11,18 +11,21 @@ LAFAN40 使用同一冻结动作集、4096个训练环境、seed 42，评估从�
 | 公开默认参数 + eager goal | 1,001 | 0/40 | 0.030332 | 205.42秒 |
 | 公开默认参数 + eager goal | 16,001 | 39/40 | 0.843299 | 2129.56秒 |
 | 本地论文参数适配 + eager goal | 1,001 | 17/40 | 0.285147 | 593.65秒 |
+| 本地论文参数适配 + eager goal | 16,001 | 39/40 | 0.790469 | 2104.16秒 |
 
 归一化分母为完整参考帧数乘每步最大正回报0.1，提前失败后的剩余参考贡献零；并另存按参考帧数加权的汇总。论文汇总权重未获确认。公开默认16k唯一失败为 `fightAndSports1_subject4`，在131.06秒触发 `anchor_pos`。这是训练动作覆盖和原生回报，尚无严格姿态/接触质量或留出集结论。只有一个种子；适配版同时改变优化器、观测历史与调度，不能把提升归因于单项改动，编译缓存也使上述时长不适合直接比较算法效率。
 
 **重复性失败已确认：** `1113c` 对同一个默认16k检查点采用40环境、相同索引顺序的新评估入口，完成了40条动作，但得到38/40，与上述原始39/40不同。一致性检查按预设条件失败，后续24环境分批验证没有执行。随后未修改的旧入口重跑得到40/40，证明当前运行环境下旧入口自身也不重复；这不能反向证明新入口等价。保留全部原始结果与轨迹。因此39/40目前是一次观测，不是已验证的确定性成绩。 新诊断已验证两次数据及检查点哈希一致，40条动作的首帧状态和第一次动作逐位一致；后续状态在1至13帧内出现超过1e-5的分量差异。新增失败是 `fightAndSports1_subject1`（原12257步成功，新1250步失败）。[逐条轨迹诊断](../official-reproduction-20261112/original-vs-batched-trajectories.json) 与 [成绩比较](../official-reproduction-20261112/original-vs-batched-comparison.json) 已保存。`1113d` 已完成，旧入口重复运行的逐条最大归一化回报差为0.380654，最大长度差为5704步。作者依赖的 `mjlab/utils/random.py` 也注明 MuJoCo Warp 尚非完全确定性；具体到哪个内核仍未归因。
 
-收据与逐条结果：[默认1k](../official-reproduction-20261112/lafan40-eager-pilot-summary.json)、[默认16k](../official-reproduction-20261112/lafan40-eager-16k-summary.json)、[适配1k](../official-reproduction-20261112/lafan40-paper-pilot-summary.json)。后两组逐条JSON由各自完整的40行云端日志重建，并与最终计数核对，记录了日志哈希；它们不是云端原始结果文件的逐字节下载副本。论文参数适配版的16,001步对照任务 `1113b` 已启动；01:26:57日志确认16,001步训练完成（2104.16秒），01:33:15完成全部40动作评估，39/40成功，评估342.10秒；完整逐条收据待取回，不能据此判断优于默认配置。任务一张H100、最多一小时、零自动重启。
+收据与逐条结果：[默认1k](../official-reproduction-20261112/lafan40-eager-pilot-summary.json)、[默认16k](../official-reproduction-20261112/lafan40-eager-16k-summary.json)、[适配1k](../official-reproduction-20261112/lafan40-paper-pilot-summary.json)、[适配16k](../official-reproduction-20261112/lafan40-paper-16k-summary.json)。默认16k和适配1k的逐条JSON由各自完整的40行云端日志重建，并与最终计数核对，记录了日志哈希；它们不是云端原始结果文件的逐字节下载副本。
+
+适配16k的训练、配置、评估与协议，以及旧入口重跑的评估、协议和两份比较文件，现已通过短日志片段完整取回，八份文件均与服务器原始字节的SHA256一致，见 [收据清单](../official-reproduction-20261112/cloud-receipts-1113e-ledger.json)。适配16k唯一失败为 `fallAndGetUp1_subject5`，在57.70秒触发 `anchor_pos`；按参考帧数加权回报为0.796026。[旧入口重跑](../official-reproduction-20261112/lafan40-legacy-repeat-summary.json) 得到40/40、等权回报0.852879。重跑与原始运行仅有一条动作的首帧状态出现1.86e-9差异，首次动作全部逐位一致。只有单个训练种子和两次旧入口评估，尚不能可靠估计分布或判断配置优劣。
 
 BONES 原始 G1 数据已完成下载与 SHA256 核验，142,220 条 CSV 全部转换成功，得到 51,915,358 个 50Hz 帧。转换仅适配原始厘米、角度和 Euler 字段，再调用作者的重采样及速度计算代码；未做名称筛选、可行性筛选或地面校准。5 条抽查与作者格式入口逐数组完全一致；内存有界打包在 16 条样本上与作者打包器完全一致。完整 13,575,450,990 字节压缩包已上传个人 AFS，服务器 SHA256 与本地一致；九个数据文件解包时的哈希均通过。解包器对附带校验清单的处理已修复并完成 16 条样本回归验证，云端九个数据文件已全部通过独立 SHA256 读回，最终目录为 `data/bones-packed-raw`，收据见 [bones-cloud-readback.json](../official-reproduction-20261112/bones-cloud-readback.json)。这些是未筛选的原始数据，尚不等于论文筛选后 129,514 条动作实验已复现。
 
 BONES 原始全库已在单张H100上完成1,001步论文参数适配版试跑，平台状态为成功，三个最终检查点数值有限。训练耗时358.59秒，PyTorch分配峰值约30.85GiB（不包含Warp及其他CUDA分配）。这证明当前配置可载入全库并进行训练；没有完成142,220条动作的全库策略评估。见 [BONES试跑收据](../official-reproduction-20261112/bones-raw-pilot-result.json)。
 
-新增 [分批全库评估入口](../official-reproduction-20261112/evaluate_motion_corpus.py) 复用上述原生评估协议，逐批重置环境及策略历史，并保留每条动作的结果和轨迹。按长度排序只改变批次顺序，不筛掉任何动作；完整结果必须含每个原始索引恰好一次。原始BONES在1024环境下，按原始顺序各批最长长度之和为184,425步，按长度排序为57,293步；这是参考长度计算，不是实际GPU速度实测。`1113c` 的首项一致性检查未通过，详见前述重复性问题；后续 `1113e` 已提交24环境排序及末批补齐诊断（01:41排队，最长30分钟），单独检查首帧状态/动作映射并保留成绩差异；不能因诊断作业成功而宣称轨迹等价。GPU分批一致性和全库执行尚未验收，见 [验证状态](../official-reproduction-20261112/corpus-evaluator-validation.json)。
+新增 [分批全库评估入口](../official-reproduction-20261112/evaluate_motion_corpus.py) 复用上述原生评估协议，逐批重置环境及策略历史，并保留每条动作的结果和轨迹。按长度排序只改变批次顺序，不筛掉任何动作；完整结果必须含每个原始索引恰好一次。原始BONES在1024环境下，按原始顺序各批最长长度之和为184,425步，按长度排序为57,293步；这是参考长度计算，不是实际GPU速度实测。`1113c` 的首项一致性检查未通过，详见前述重复性问题；后续 `1113e` 在24环境排序评估的第二批重置处失败：第一批生成的传感器历史缓存属于 inference tensor，旧脚本在退出 `inference_mode` 后尝试原地清零。修复仅把所有批次的重置、观测及步进放入同一个推理上下文，模型构建与载入仍在其外，官方文件不变。使用固定依赖的真实 `ContactSensor.reset()` 在CPU上复现原错误，修复后的连续三次重置通过，见 [针对性验证](../official-reproduction-20261112/batch-inference-reset-validation.json)。新的GPU两批验证尚未完成；首帧映射和完整轨迹等价性需分别报告。GPU分批一致性和全库执行尚未验收，见 [验证状态](../official-reproduction-20261112/corpus-evaluator-validation.json)。
 
 以下静态审查与历史对照保留初次审查时的证据边界；当前执行合同见 [experiment-contract.json](../official-reproduction-20261112/experiment-contract.json)，数据验证见 [bones-data-validation.json](../official-reproduction-20261112/bones-data-validation.json)。官方源文件未修改；离线训练包装器替换 W&B 产物上传/清理逻辑，并提供显式 `--goal-backend eager` 对照开关；该开关调用作者相同的目标计算函数，绕过其单独的 Torch 编译包装。公开默认配置保持作者学习参数，论文适配版另改优化器、观测历史与学习率调度，不能用这些实验宣称官方原始性能复现。
 

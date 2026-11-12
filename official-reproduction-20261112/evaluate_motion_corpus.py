@@ -10,6 +10,7 @@ import hashlib
 import json
 import os
 import time
+from contextlib import ExitStack
 from pathlib import Path
 
 
@@ -105,6 +106,7 @@ def main():
         "num_envs": num_envs, "batch_order": args.order,
         "all_motions_included": True, "subset_filter_applied": False,
         "batch_reset": "fresh env reset; exact first frame; history filled with first sensor frame",
+        "inference_scope": "all resets, observations and steps across all batches after model construction",
         "incomplete_result_policy": "completed batch receipts retained; never label an interrupted evaluation complete",
         "start": "exact first reference frame via author reset_to_frame",
         "success": "first termination is native motion_end with no failure term",
@@ -124,7 +126,8 @@ def main():
         raise RuntimeError("CUDA evaluation required")
     started = time.monotonic()
     env = create_env(cfg, num_envs, device)
-    try:
+    with ExitStack() as evaluation:
+        evaluation.callback(env.close)
         wm = build_world_model(runner_cfg, env, device)
         wm.load_bundle(torch.load(checkpoints["world_model.pt"], map_location=device, weights_only=True))
         wm.dynamics.eval()
@@ -132,6 +135,10 @@ def main():
         actor.load_state_dict(torch.load(checkpoints["actor.pt"], map_location=device, weights_only=True))
         actor.eval()
         actor.set_slot_mix({"motion": 1.0})
+        # ContactSensor.update replaces history buffers with torch.roll results.
+        # Keep their later in-place reset inside the same inference context.
+        # Construct/load model parameters first, outside inference mode.
+        evaluation.enter_context(torch.inference_mode())
         env.reset()
         base = env.unwrapped
         command = base.command_manager.get_term("motion")
@@ -233,8 +240,6 @@ def main():
         (output / "result.json").write_text(json.dumps(result, indent=2) + "\n")
         print("OFFICIAL_CORPUS_EVAL_PASS " + json.dumps(
             {key: value for key, value in result.items() if key != "records"}), flush=True)
-    finally:
-        env.close()
 
 
 if __name__ == "__main__":

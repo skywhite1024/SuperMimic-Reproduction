@@ -1,0 +1,72 @@
+{
+  "status": "all_hashes_verified",
+  "job_uid": "a4f8eeb5bece4e60a48e8a5f60c0c926",
+  "transport": "zlib+base64 chunks from ACP live log; exact original JSON bytes reconstructed",
+  "log_sha256": "7ce11e5b183f9749f5512abf09af1e9c67027ee699b4204d5bd9b48df4bae0ca",
+  "files": [
+    {
+      "i": 0,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan40-paper-16k-1113b/result.json",
+      "bytes": 1732,
+      "sha256": "1baaedd98506ece12a60a06eaad5226c56debad45acfc342eef0738a3ab8446b",
+      "chunks": 3,
+      "local_file": "lafan40-paper-16k-result.json"
+    },
+    {
+      "i": 1,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan40-paper-16k-1113b/resolved-config.json",
+      "bytes": 42328,
+      "sha256": "f96c37b0930f9dab82d6a7c1040eccc03df58ae4174cc580990fabb913bf0ed6",
+      "chunks": 22,
+      "local_file": "lafan40-paper-16k-resolved-config.json"
+    },
+    {
+      "i": 2,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan40-paper-16k-1113b-full40/result.json",
+      "bytes": 12547,
+      "sha256": "aa6c5770c866847965745dc60994dec4c8de435696500bdcf651ed26a1d7a4df",
+      "chunks": 6,
+      "local_file": "lafan40-paper-16k-full40.json"
+    },
+    {
+      "i": 3,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan40-paper-16k-1113b-full40/protocol.json",
+      "bytes": 4393,
+      "sha256": "b3215c47922f81b2be015e60d648930697548dd2f6b36aa7579214455f9fa7bd",
+      "chunks": 7,
+      "local_file": "lafan40-paper-16k-protocol.json"
+    },
+    {
+      "i": 4,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan40-legacy-repeat-1113d/result.json",
+      "bytes": 12554,
+      "sha256": "56aaee917e323397c8b8b634a288660e4a9b56baca6f0287436bdf13090d6180",
+      "chunks": 6,
+      "local_file": "lafan40-legacy-repeat-full40.json"
+    },
+    {
+      "i": 5,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan40-legacy-repeat-1113d/protocol.json",
+      "bytes": 3749,
+      "sha256": "e1a4bbc1062fde4656b919195d09c4d017c6267c89b9318efaebd780c32e1f49",
+      "chunks": 6,
+      "local_file": "lafan40-legacy-repeat-protocol.json"
+    },
+    {
+      "i": 6,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/eval-repeat-diagnosis-1113d/original-vs-legacy-repeat-trajectories.json",
+      "bytes": 50536,
+      "sha256": "f3b3b9a24b28a87283ab100a53ed072cc574fe907732f6f3803986e0ab682677",
+      "chunks": 13,
+      "local_file": "original-vs-legacy-repeat-trajectories.json"
+    },
+    {
+      "i": 7,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/eval-repeat-diagnosis-1113d/original-vs-legacy-repeat-comparison.json",
+      "bytes": 10338,
+      "sha256": "d6c48c293dc861b9ea5cee159f268069858e82544eed2e3cb625fb5966d4e34d",
+      "chunks": 5,
+      "local_file": "original-vs-legacy-repeat-comparison.json"
+    }
+  ]
+}

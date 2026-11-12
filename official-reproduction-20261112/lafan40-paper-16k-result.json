@@ -1,0 +1,45 @@
+{
+  "status": "pilot_completed",
+  "collection_steps": 16001,
+  "seed": 42,
+  "num_envs": 4096,
+  "elapsed_training_seconds": 2104.1604822166264,
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "checkpoints": [
+    {
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan40-paper-16k-1113b/logs/SuperMimic-GenCoord-G1/2026-11-12_16-51-53/world_model.pt",
+      "bytes": 34990357,
+      "sha256": "1a6d71ed51a03b5a96c3e2be35b7c21429dda4dbb659d82af93f53d66d2bcbc0"
+    },
+    {
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan40-paper-16k-1113b/logs/SuperMimic-GenCoord-G1/2026-11-12_16-51-53/actor.pt",
+      "bytes": 46439949,
+      "sha256": "2fae78a0e28568c851251365adef7c0ba97501b83b7000b5ea20cf7b9415749d"
+    },
+    {
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan40-paper-16k-1113b/logs/SuperMimic-GenCoord-G1/2026-11-12_16-51-53/critic.pt",
+      "bytes": 929269,
+      "sha256": "958dff191dca78eeb81d07cd60831cae93b5eef776c3a3e9f4bf53efd4250f51"
+    }
+  ],
+  "full_clip_evaluation_completed": false,
+  "paper_results_reproduced": false,
+  "goal_assembly_backend": "eager",
+  "training_profile": "paper-a5-single-gpu",
+  "corpus": {
+    "name": "lafan40",
+    "clips": 40,
+    "frames": 441140,
+    "paper_name_filter_applied": false,
+    "paper_feasibility_filter_applied": false
+  },
+  "device_memory_after_initialization": {
+    "free_bytes": 78549155840,
+    "total_bytes": 85017624576,
+    "torch_allocated_bytes": 4469662208,
+    "torch_reserved_bytes": 4490002432
+  },
+  "peak_torch_memory_allocated_bytes": 18361843200,
+  "peak_torch_memory_reserved_bytes": 19895681024,
+  "memory_scope": "PyTorch allocator only; excludes Warp and other CUDA allocations"
+}

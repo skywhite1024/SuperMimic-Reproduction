@@ -103,7 +103,7 @@
     "claim": "Unchanged legacy evaluator is not repeatable in this runtime; batched evaluator equivalence remains unproven"
   },
   "batch_diagnostic_job": {
-    "status": "queued_no_pod",
+    "status": "failed",
     "name": "supermimic-official-batch-260010076-1113e",
     "display_name": "260010076-SuperMimic-batch-diagnostic-1113e",
     "gpu": 1,
@@ -125,6 +125,20 @@
     "uid": "a4f8eeb5bece4e60a48e8a5f60c0c926",
     "created_at": "2026-11-13T01:41:25+08:00",
     "platform_updated_at": "2026-11-13T01:41:26+08:00",
-    "command_clipboard_exact_match": true
+    "command_clipboard_exact_match": true,
+    "program_started_at": "2026-11-13T01:41:43+08:00",
+    "failed_at": "2026-11-13T01:49:03.669+08:00",
+    "exit_at": "2026-11-13T01:49:07.661+08:00",
+    "exit_code": 1,
+    "failure": "Inplace update to inference tensor outside InferenceMode is not allowed",
+    "failure_stage": "env.reset at transition from batch 0 to batch 1",
+    "exact_json_receipts_recovered": 8,
+    "receipt_ledger": "cloud-receipts-1113e-ledger.json"
+  },
+  "batch_context_fix": {
+    "status": "local_regression_passed_gpu_pending",
+    "validation": "batch-inference-reset-validation.json",
+    "change": "Keep all environment resets, observations and steps under one inference context after model construction",
+    "vendor_files_modified": false
   }
 }

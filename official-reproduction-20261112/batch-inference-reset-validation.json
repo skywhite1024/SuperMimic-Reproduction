@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "original_failure_reproduced": "Inplace update to inference tensor outside InferenceMode is not allowed.You can make a clone to get a normal tensor before doing inplace update.See https://github.com/pytorch/rfcs/pull/17 for more details.",
+  "fixed_context_reset_cycles": 3,
+  "test": "Actual pinned ContactSensor.reset with CPU inference-history tensors",
+  "scope": "Context lifetime regression only; GPU full-batch execution pending",
+  "torch": "2.14.0+cpu"
+}
