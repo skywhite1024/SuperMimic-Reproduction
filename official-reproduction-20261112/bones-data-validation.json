@@ -1,0 +1,67 @@
+{
+  "status": "extracted",
+  "archive_sha256": "52580ea8bced72ea9e2ff1e7b68f01c51c7f1099581e9a46b7c87e1dec106d8a",
+  "csv_files": 142220,
+  "csv_bytes": 51527587825,
+  "other_archive_files_by_suffix": {},
+  "elapsed_seconds": 434.0,
+  "name_filter_applied": false,
+  "feasibility_filter_applied": false,
+  "dataset": "bones-studio/seed",
+  "revision": "2f59b2077b9da34dd4e43618e705c7cb962c9a66",
+  "archive_bytes": 23499973647,
+  "raw_manifest_sha256": "5aabd5c89ef4c3a998c825a795ec3609645f17e25792700809c170ab00c1a421",
+  "viewer_commit": "d9963c21bee413e7eb63c1b88ae01cdcb2cf3601",
+  "format": {
+    "input_fps": 120,
+    "position_unit": "centimetres",
+    "joint_angle_unit": "degrees",
+    "root_rotation": "Three.js ZYX; Rz @ Ry @ Rx; scipy extrinsic xyz",
+    "output_fps": 50
+  },
+  "adapter_validation": {
+    "status": "passed",
+    "rotation_check": "Independent Rz @ Ry @ Rx matrices",
+    "units": "cm to m; deg to rad",
+    "samples": [
+      {
+        "path": "g1/csv/230509/vertical_mountain_climber_R_003__A359_M.csv",
+        "input_frames": 701,
+        "output_frames": 292,
+        "all_native_arrays_bitwise_equal": true,
+        "seconds": 0.119
+      },
+      {
+        "path": "g1/csv/220728/clap_enthusiastic_003__A041_M.csv",
+        "input_frames": 990,
+        "output_frames": 413,
+        "all_native_arrays_bitwise_equal": true,
+        "seconds": 0.037
+      },
+      {
+        "path": "g1/csv/230301/injured_R_leg_idle_right_to_idle_R_001__A232.csv",
+        "input_frames": 715,
+        "output_frames": 298,
+        "all_native_arrays_bitwise_equal": true,
+        "seconds": 0.031
+      },
+      {
+        "path": "g1/csv/231113/medium_big_heavy_one_hand_walk_ff_loop_180_R_002__A507.csv",
+        "input_frames": 598,
+        "output_frames": 249,
+        "all_native_arrays_bitwise_equal": true,
+        "seconds": 0.035
+      },
+      {
+        "path": "g1/csv/230103/kneeling_start_002__A098_M.csv",
+        "input_frames": 457,
+        "output_frames": 191,
+        "all_native_arrays_bitwise_equal": true,
+        "seconds": 0.025
+      }
+    ],
+    "filters_applied": false
+  },
+  "exact_paper_filter_manifest_available": false,
+  "raw_data_committed": false
+}
