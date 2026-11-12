@@ -19,6 +19,10 @@ def main():
     parser.add_argument("--steps", type=int, default=1001)
     parser.add_argument("--num-envs", type=int, default=4096)
     parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument("--checkpoint-interval", type=int,
+                        help="Native zero-based save interval; must divide steps-1. Default saves initial/final only")
+    parser.add_argument("--keep-checkpoint-series", action="store_true",
+                        help="Retain finite, hash-identified model snapshots; does not enable training resume")
     parser.add_argument("--corpus", choices=("lafan40", "bones-raw"), default="lafan40",
                         help="bones-raw is a capacity/training probe, not the filtered paper benchmark")
     parser.add_argument("--training-profile", choices=("public-default", "paper-a5-single-gpu"),
@@ -28,6 +32,9 @@ def main():
     args = parser.parse_args()
     if args.steps < 2:
         parser.error("At least two simulator collection steps are required")
+    save_interval = args.steps - 1 if args.checkpoint_interval is None else args.checkpoint_interval
+    if save_interval < 1 or (args.steps - 1) % save_interval:
+        parser.error("checkpoint-interval must be positive and divide steps-1 so the final step is saved")
     motions = args.motions.resolve()
     output = args.output.resolve()
     if not (motions / "motion_ends.npy").is_file():
@@ -52,8 +59,18 @@ def main():
 
     # The author's artifact helper contacts the online API to prune versions
     # even in offline mode. Keep its local artifact logging, with no API call.
+    checkpoint_receipts = []
+
     def log_offline_checkpoint(files):
         assert wandb.run is not None
+        if args.keep_checkpoint_series:
+            from checkpoint_series import preserve_checkpoint
+            # The native runner serializes uploads and invokes this exactly once
+            # at each zero-based save interval, after that iteration's updates.
+            completed_steps = len(checkpoint_receipts) * save_interval + 1
+            receipt = preserve_checkpoint(files, output / "checkpoint-series", completed_steps)
+            checkpoint_receipts.append(receipt)
+            print("MODEL_SNAPSHOT_PRESERVED " + json.dumps(receipt), flush=True)
         artifact = wandb.Artifact(f"model-{wandb.run.id}", type="model")
         for path in files:
             artifact.add_file(path)
@@ -85,7 +102,7 @@ def main():
     config.env.commands["motion"].motion_file = str(motions)
     config.env.commands["motion"].sampling_mode = "external"
     config.runner.max_iterations = args.steps
-    config.runner.save_interval = args.steps - 1  # save both initial and final step
+    config.runner.save_interval = save_interval
     config.runner.run_name = f"official-{args.corpus}-pilot-seed{args.seed}"
     config.runner.log_interval = 10
     resolved = {
@@ -101,6 +118,8 @@ def main():
         "goal_assembly_backend": args.goal_backend,
         "runtime_execution_modified": args.goal_backend != "official",
         "io_adapter": "offline checkpoint artifact logging; online pruning disabled",
+        "keep_checkpoint_series": args.keep_checkpoint_series,
+        "full_training_resume_available": False,
         "is_full_paper_reproduction": False,
     }
     (output / "resolved-config.json").write_text(
@@ -119,6 +138,10 @@ def main():
     started = time.monotonic()
     runner.run()
     wandb.finish()
+    if args.keep_checkpoint_series:
+        expected = list(range(1, args.steps + 1, save_interval))
+        if [item["collection_steps"] for item in checkpoint_receipts] != expected:
+            raise RuntimeError("IncompleteIntermediateCheckpointSeries")
     artifacts = []
 
     def assert_finite(value):
@@ -154,6 +177,8 @@ def main():
         "peak_torch_memory_allocated_bytes": torch.cuda.max_memory_allocated(),
         "peak_torch_memory_reserved_bytes": torch.cuda.max_memory_reserved(),
         "memory_scope": "PyTorch allocator only; excludes Warp and other CUDA allocations",
+        "retained_checkpoint_series": checkpoint_receipts,
+        "full_training_resume_available": False,
     }
     (output / "result.json").write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
     marker = "OFFICIAL_LAFAN_PILOT_PASS" if args.corpus == "lafan40" else "OFFICIAL_BONES_RAW_PILOT_PASS"

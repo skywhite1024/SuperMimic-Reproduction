@@ -112,6 +112,8 @@ BONES 原始全库已在单张H100上完成1,001步论文参数适配版试跑�
 
 影响：不能用这个参数声称“从原策略接着训练”，也不能作为我们中断恢复与增量学习实验的等价入口。正式续训前需要单独实现并验证恢复合同。旧16K/22K的 state_dict、normalizer 与接口都不同，也没有现成官方转换器。
 
+长跑准备补充（11月13日）：本地训练入口新增可选 `--checkpoint-interval N --keep-checkpoint-series`，保留每个保存时点的三个原生模型及有限值、尺寸和SHA256收据，防止下一次原生保存覆盖历史模型。计数遵循源码零起始迭代，间隔4000对应已完成采样步1、4001、8001等；为保证保存最终步，间隔必须整除 `steps-1`。默认行为仍只保存首尾。已通过 [CPU针对性验证](../official-reproduction-20261112/checkpoint-series-validation.json)，包括源文件覆盖后历史副本不变及非有限模型不能生成完成收据；尚未验证GPU长跑中的回调集成。这是模型快照保留，仍没有优化器、回放池、采样器、仿真和随机数状态，不能用它宣称完整续训。当前运行中的两组评估继续使用原冻结版本。
+
 ### P1（论文复现范围）：默认命令缺少全量实验闭环
 
 [train.py](../upstream/supermimic/src/supermimic/scripts/train.py) 默认引用一条 `lafan_run1_subject5`，支持本地多NPZ及 packed 数据，但没有随仓库提供论文全库固定清单、对应可核验的模型包、完整复现实验配置和结果导出命令。公开的 [benchmark.py](../upstream/supermimic/src/supermimic/scripts/benchmark.py) 测量仿真/世界模型速度，不能替代129,514条动作的逐条成功与回报评测。

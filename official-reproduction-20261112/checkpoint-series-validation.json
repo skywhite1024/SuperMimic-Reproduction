@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "scope": "CPU snapshot preservation and launcher argument validation; no GPU execution or training-resume claim",
+  "native_source_overwrite_does_not_change_retained_snapshot": true,
+  "both_snapshot_hash_sets_verified": true,
+  "duplicate_snapshot_rejected": true,
+  "nonfinite_snapshot_has_no_completion_manifest": true,
+  "invalid_save_schedule_rejected_before_output_creation": true,
+  "GPU_checkpoint_callback_integration_verified": false,
+  "full_training_resume_available": false,
+  "source_sha256": {
+    "checkpoint_series.py": "4259461a2eb5989e2171de4eab7b726b7d8fbbd650f5b4e7fe76746a35236264",
+    "run_lafan_pilot.py": "a26bfb8322be431071b9d4cfcb07ec3e4a0fa830d250085ffbc59948405fa5a8"
+  }
+}
