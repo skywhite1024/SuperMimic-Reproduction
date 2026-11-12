@@ -1,0 +1,10 @@
+{
+  "status": "cpu_fixtures_passed",
+  "complete_success_and_failure_files_checked": true,
+  "rewards_changed_inside_valid_zip_rejected": true,
+  "truncated_npz_rejected": true,
+  "failed_audit_has_no_completion_ledger": true,
+  "full_BONES_trajectory_audit_completed": false,
+  "source_sha256": "85237bfca17a64071305197c9e51518d45bf3cde6e0b8126855a29e394fc9e8b",
+  "scope": "Integrity auditor validation; no physics or GPU equivalence claim"
+}
