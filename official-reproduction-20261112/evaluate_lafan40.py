@@ -44,6 +44,12 @@ def main():
     if training["status"] != "pilot_completed":
         raise RuntimeError("A completed and validated pilot is required")
     resolved = json.loads((run / "resolved-config.json").read_text(encoding="utf-8"))
+    goal_backend = resolved.get("goal_assembly_backend", "official")
+    if goal_backend == "eager":
+        import supermimic.representations as representations
+        representations._compiled_assemble_goal = representations._assemble_goal
+    elif goal_backend != "official":
+        raise RuntimeError("Unknown goal assembly backend")
     task = resolved["task"]
     runner_cfg = load_runner_cfg({"runner_cfg": resolved["runner"]})
     check_representation_matches(task, runner_cfg.representation)
@@ -184,6 +190,7 @@ def main():
             "failures": sum(not row["success"] for row in records),
             "elapsed_seconds": time.monotonic() - started, "records": records,
             "paper_results_reproduced": False,
+            "goal_assembly_backend": goal_backend,
         }
         (output / "result.json").write_text(json.dumps(result, indent=2) + "\n")
         print("OFFICIAL_LAFAN_FULL40_EVAL_PASS " + json.dumps(result), flush=True)

@@ -1,0 +1,58 @@
+{
+  "status": "packed_files_readback_verified",
+  "clips": 142220,
+  "frames": 51915358,
+  "fps": 50,
+  "files": [
+    {
+      "file": "joint_names.json",
+      "bytes": 709,
+      "sha256": "30355b480e4f89c97a693c72f8baf23902fd458d25e49b5df4741dd47aefce0d"
+    },
+    {
+      "file": "joint_pos.npy",
+      "bytes": 6022181656,
+      "sha256": "d61e0ed202183fc1189fd28f3b16474d25eee1f8c517de829c92104d407d5ff3"
+    },
+    {
+      "file": "joint_vel.npy",
+      "bytes": 6022181656,
+      "sha256": "2f060e4979122858a1f90387139378c48d9eaef15a460560e966fb517952b44e"
+    },
+    {
+      "file": "motion_ends.npy",
+      "bytes": 1137888,
+      "sha256": "9a46f7e3c8dcf4a33618f8a6409a1eebf8165aaac3a5619364582b0d4b8f17da"
+    },
+    {
+      "file": "motion_names.json",
+      "bytes": 5308483,
+      "sha256": "8cfa81c756867f8df643df0b2a3fa592cb1325f2bcd32c2991c63c98f10e3bfa"
+    },
+    {
+      "file": "root_ang_vel_w.npy",
+      "bytes": 622984424,
+      "sha256": "adb430462fa2fa00be96e6a24d5dee7736f75b1f4e0a4eb876d757edc22a0586"
+    },
+    {
+      "file": "root_lin_vel_w.npy",
+      "bytes": 622984424,
+      "sha256": "c40d34356104e567a9d655b8ed874454e03e9f5bc6fd1b3b8adbbeea9cc4d935"
+    },
+    {
+      "file": "root_pos_w.npy",
+      "bytes": 622984424,
+      "sha256": "0c8da96a199cb50a46ccfa5e0cf2f10d4e98958adfa28cec2d0005148226ce7e"
+    },
+    {
+      "file": "root_quat_w.npy",
+      "bytes": 830645856,
+      "sha256": "211b9c9ac8052a713a7a207125d9146dafb0ba2fca80f1cac64e28eb1d8ef077"
+    }
+  ],
+  "manifest_sha256": "3312dfd4dd9b3cbd726a4d586e8f201f4d0751c8c324c6ac308bb7ac3c8ea683",
+  "output": "/mnt/afs/260010076/SuperMimic/official-20261112/data/bones-packed-raw",
+  "seconds": 61.90377894975245,
+  "paper_filters_applied": false,
+  "evidence_source": "ACP stdout BONES_READBACK_PASS, diagnostic 1112c, 2026-11-12"
+}

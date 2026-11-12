@@ -19,6 +19,8 @@ def main():
     parser.add_argument("--steps", type=int, default=1001)
     parser.add_argument("--num-envs", type=int, default=4096)
     parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument("--goal-backend", choices=("official", "eager"), default="official",
+                        help="Diagnostic: eager runs the author's same goal math without torch.compile")
     args = parser.parse_args()
     if args.steps < 2:
         parser.error("At least two simulator collection steps are required")
@@ -38,6 +40,11 @@ def main():
     from supermimic.runners.supermimic_runner import SuperMimicRunner
     from supermimic.scripts.train import TrainConfig
     from supermimic.scripts.train_utils import create_env, setup_device
+
+    if args.goal_backend == "eager":
+        import supermimic.representations as representations
+        representations._compiled_assemble_goal = representations._assemble_goal
+        print("DIAGNOSTIC_OVERRIDE goal assembly uses author eager function", flush=True)
 
     # The author's artifact helper contacts the online API to prune versions
     # even in offline mode. Keep its local artifact logging, with no API call.
@@ -69,6 +76,8 @@ def main():
         "runner": dataclasses.asdict(config.runner),
         "environment": dataclasses.asdict(config.env),
         "source_algorithm_modified": False,
+        "goal_assembly_backend": args.goal_backend,
+        "runtime_execution_modified": args.goal_backend != "official",
         "io_adapter": "offline checkpoint artifact logging; online pruning disabled",
         "is_full_paper_reproduction": False,
     }
@@ -110,6 +119,7 @@ def main():
         "elapsed_training_seconds": time.monotonic() - started,
         "gpu": torch.cuda.get_device_name(0), "checkpoints": artifacts,
         "full_clip_evaluation_completed": False, "paper_results_reproduced": False,
+        "goal_assembly_backend": args.goal_backend,
     }
     (output / "result.json").write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
     print("OFFICIAL_LAFAN_PILOT_PASS " + json.dumps(result), flush=True)
