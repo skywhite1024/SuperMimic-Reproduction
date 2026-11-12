@@ -1,5 +1,5 @@
 {
-  "status": "running_initialization",
+  "status": "running_training",
   "name": "supermimic-official-velocity-distill-260010076-1113s",
   "display_name": "260010076-SuperMimic-velocity-distill-100k-1113s",
   "mode": "distill",
@@ -59,8 +59,17 @@
   "ui_command_dom_readback_matches": true,
   "duplicate_and_resource_check_passed": true,
   "verified_at": "2026-11-13T06:44:23.143283+08:00",
-  "last_progress_evidence": "velocity-distill-100k-1113s-progress1.txt",
+  "last_progress_evidence": "velocity-distill-100k-1113s-progress2.txt",
   "training_stage_started_at": "2026-11-13T06:35:42+08:00",
   "training_stage_deadline": "2026-11-13T13:35:42+08:00",
-  "last_verified_stage": "All8 source hashes and canonical candidate gate passed; CLI loaded41828 clips15469495frames; actual training loop not yet observed"
+  "last_verified_stage": "Actual6631 realG1 mixed collection steps and finite metrics observed; full100k incomplete",
+  "last_observed_collection_steps": 6631,
+  "last_observed_total_environment_steps": 27160576,
+  "last_observed_metrics": {
+    "Loss/state": 0.0126,
+    "Policy/reward": 11.0153,
+    "Policy/grad_norm": 0.5862,
+    "Policy/value_function": 0.0384
+  },
+  "last_progress_verified_at": "2026-11-13T06:58:55.874519+08:00"
 }

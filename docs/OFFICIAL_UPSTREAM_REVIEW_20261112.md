@@ -1,5 +1,7 @@
 # SuperMimic 官方开源与本地迁移审查
 
+**11月13日初始化协议更正：** 下列旧LAFAN40表格及第9节原始BONES成绩来自本地 `manual-reset-v1` 评估入口。手动设置参考帧后，该入口读取了上一次reset的缓存观测，初始历史也可能受影响；执行器历史还需在最终姿态写入后回填。原始文件、全部失败及计分重算均保留，但这些成绩不能作为“初始观测已验证为参考首帧”的结果。修正后的v2评估必须重跑，见[第18节](#18-手动重置缓存回归与旧评估协议纠正)。三项运行中训练使用原生自动重置，不受此本地离线评估流程影响。
+
 核查日期：2026-11-12，Asia/Shanghai。结论：**论文作者团队已经公开 SuperMimic 实现，值得成为下一阶段的官方对照基线；当前发布包仍有依赖与复现入口缺口，不能直接替换社区实现或接续旧权重。**
 
 截至 2026-11-13 04:49，官方源码与独立 Windows/Linux Conda 环境均已部署，分支 `ljd/official-supermimic` 已推送至现有公开仓库。Windows 与 Linux 各 217 项官方测试通过。原始 compiled 目标拼接在两次 H100 试跑中均于至少 201 次采样后发生 CUDA illegal memory access；同步报错定位于 `_compiled_assemble_goal` 的 Torch/Triton 内核。切换该函数为作者原始 eager 运算后，以下四轮训练和全40评估均完成，最终检查点可读且数值有限。此对照支持编译路径相关的判断，尚未证明具体底层根因。
@@ -314,3 +316,13 @@ Step-test工具生成每平面224个非站立点、合计672个平面/格点身�
 初始状态采用固定机器人源码中的默认屈膝姿态、零速度，四次显式reset种子42至45，无物理随机化。每次完整71D初始状态都必须匹配声明姿态；这四次试验具有名义相同的初始条件，不声称独立随机扰动或GPU确定性。论文没有给出确切站立关节姿态及四次试验扰动，此处属于明确的本地协议选择。保存初始及post-step状态、pre-step动作、post-step heading速度，首次跌倒后终止该试验记录，用steps标识有效长度并将无效尾部填NaN；非跌倒试验必须完整250步。保存的NPZ会重新打开核对有效值、填充区和失败计数；all-fall保留raw error为null，0.9只用于显示。
 
 源码及API核对和Python语法检查已完成，[GPU验收条件](../official-reproduction-20261112/velocity-step-evaluator-plan.json) 已在执行前固定：使用两份已完成21步模型分别运行完整672×4试验，检查声明姿态、无中途manager重置、存活试验完整长度、全部失败和轨迹数组读回，并恢复原始结果与协议收据。尚未报告此项真实物理集成通过，短模型结果不用于论文速度成绩。
+
+## 18. 手动重置缓存回归与旧评估协议纠正
+
+`1113t` 于06:56:04开始，06:58:31被“观测到的完整71D初始状态必须匹配声明站立姿态”的检查拒绝，06:58:36退出1，尚无完成的物理试验。两份模型结果收据和五份源码哈希在失败前均核对通过；该失败保留，不放宽姿态检查。问题位于本地新增的手动重置流程：原生 `ObservationManager.compute(update_history=False)` 会返回缓存；写qpos/qvel后执行forward和sense，不会清空此观测缓存。
+
+新增 [手动重置刷新函数](../official-reproduction-20261112/manual_reset_observations.py)，按原生reset流程在最终姿态后对所有环境回填执行器历史，再forward/sense、重置观测缓存并显式 `compute(update_history=True)`。重新计算的full_state必须与当前物理状态一致，随后仍须通过原有默认站立姿态检查。使用真实原生ObservationManager和确定性张量/执行器夹具的 [回归检查](../official-reproduction-20261112/manual-reset-observations-validation.json) 已复现旧缓存返回并通过修复，1项、3.73秒；它不替代修正后真实G1验收。
+
+源码追查发现，本地旧 [LAFAN评估](../official-reproduction-20261112/evaluate_lafan40.py) 和 [完整动作评估v1](../official-reproduction-20261112/evaluate_motion_corpus.py) 同样在 `reset_to_frame` 后直接使用缓存读取。初始state/action上下文因此可能来自此前随机reset；10帧历史配置还会把该初始观测保留至后续历史替换完毕。这不否定原始文件校验和已记录分数的算术一致性，也不影响原生自动reset训练，但要求纠正首帧协议的科学资格并重新评估。具体分数变化尚未量化，不能假定修正一定提高成绩，也不能把旧的183条退化全部归因于此。
+
+旧入口和所有原始收据保持不变，新增 [完整动作评估v2](../official-reproduction-20261112/evaluate_motion_corpus_v2.py) 使用上述刷新函数并在协议/结果标明版本2。完整纠正范围及后续工作见 [初始化协议纠正记录](../official-reproduction-20261112/evaluation-initialization-correction.json)：先通过修正后的G1站立验收，再对同一冻结1k/16k模型各重跑全部142,220条；320k作业继续执行其冻结版本，旧最终评估将保留并另做v2评估。当前三项训练计划不变，速度RL已观察8,551步、蒸馏6,631步，指标有限；两个100k结果仍未完成。官方HEAD另于11月13日重新查询，仍为固定的 `abc124c1`。

@@ -1,0 +1,25 @@
+{
+  "status": "native_observation_manager_cached_reset_regression_reproduced_and_cpu_fix_passed",
+  "verified_at": "2026-11-13T07:07:53.504899+08:00",
+  "test": "test_manual_reset_observations.py",
+  "tests_passed": 1,
+  "test_seconds": 3.73,
+  "scope": "Actual native ObservationManager with deterministic tensor scene and actuator stubs; not realG1 physics",
+  "evidence": "After an in-place pose change, compute() returned the same cached object with old values; explicit cache reset/recompute returned current data and control backfill was called for every world",
+  "source_sha256": {
+    "manual_reset_observations.py": "3933258bdcd8c80a30d3fc256bf3d82084ff9661f0d20c620bba07b518dc1f6d",
+    "test_manual_reset_observations.py": "0af975836c133e53f460bf7d2fefb8a46c5e8edc3f8a5798266228e9e663b6a6",
+    "evaluate_velocity_step.py": "0b66c84ac1e899cbed82e423bf3feec36f1f7ed0ba5766c03e781e994a9b9fcb",
+    "evaluate_motion_corpus_v2.py": "b6d6e23e63e14b6b9c220da6f584561910f6451a3e26bb7bb3e1d1e438907f53"
+  },
+  "real_g1_corrected_reset_verified": false,
+  "prior_gpu_gate_failure": {
+    "uid": "0436486f0fef4750928f5e19f8eb3f39",
+    "source_commit": "6775f001f85cc6da0d7f2c2d71ed4f7ccebb5605",
+    "error": "Observed initial state differs from the declared standing pose",
+    "at": "2026-11-13T06:58:31+08:00",
+    "exit_code": 1
+  },
+  "original_motion_corpus_v1_sha256_unchanged": "6c43aa1f2dabd0f57aee60caa1440d76b61e2aca18fe96b019c9ce11839a715b",
+  "paper_results_reproduced": false
+}

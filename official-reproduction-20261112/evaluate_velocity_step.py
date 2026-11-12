@@ -49,6 +49,7 @@ def main():
     from paper_velocity_actor import PaperVelocityActor
     from paper_velocity_contract import aggregate_step_trials, heading_velocity, step_command_grid, velocity_fall
     from paper_velocity_runtime import root_gravity_z
+    from manual_reset_observations import refresh_manual_reset_observations
 
     if not torch.cuda.is_available() or torch.cuda.device_count() != 1:
         raise RuntimeError("The standing step test needs one allocated CUDA GPU")
@@ -129,6 +130,7 @@ def main():
         velocities = np.full((4, 672, 250, 3), np.nan, dtype=np.float32)
         steps = np.zeros((4, 672), dtype=np.int64)
         falls = np.zeros((4, 672), dtype=np.bool_)
+        reset_evidence = []
         protocol = {"purpose": args.purpose, "mode": training["mode"], "commands": grid,
             "grid_identities": 672, "unique_physical_commands": 630, "trials": 4, "fps": 50,
             "seconds": 5, "steady_state_seconds": 2, "trial_seeds": [args.seed + i for i in range(4)],
@@ -155,11 +157,9 @@ def main():
                 robot.write_joint_state_to_sim(robot.data.default_joint_pos.clone(),
                                                 torch.zeros_like(robot.data.default_joint_pos))
                 command.set_time_steps(all_ids, torch.zeros(672, device=device, dtype=torch.long))
-                base.scene.write_data_to_sim()
-                base.sim.forward()
-                command.update_relative_body_poses()
-                base.sim.sense()
-                obs = env.get_observations()
+                obs, refreshed = refresh_manual_reset_observations(base)
+                reset_evidence.append(refreshed)
+                print("VELOCITY_STEP_RESET_REFRESH " + json.dumps(dict(trial=trial, **refreshed)), flush=True)
                 states[trial, :, 0] = obs["full_state"].cpu().numpy()
                 expected_standing = torch.cat((robot.data.default_root_state[:, :7],
                     robot.data.default_joint_pos, torch.zeros(672, wm.num_actions + 6, device=device)), -1)
@@ -200,6 +200,8 @@ def main():
                 if not np.all(falls[trial] | (steps[trial] == 250)):
                     raise RuntimeError("A surviving trial lacks the full five-second response")
                 print(f"VELOCITY_STEP_TRIAL_COMPLETED trial={trial} fallen={falls[trial].sum()} steps={steps[trial].sum()}", flush=True)
+        protocol["manual_reset_refreshes"] = reset_evidence
+        write_json(output / "protocol.json", protocol)
         records = [dict(row, index=index, **aggregate_step_trials(row["command"],
             velocities[:, index], falls[:, index])) for index, row in enumerate(grid)]
         trace = output / "trajectories.npz"

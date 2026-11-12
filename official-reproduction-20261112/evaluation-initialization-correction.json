@@ -1,0 +1,25 @@
+{
+  "status": "manual_reset_initial_observation_protocol_requires_corrected_reevaluation",
+  "as_of": "2026-11-13T07:07:53.504899+08:00",
+  "affected_entrypoints": {
+    "evaluate_lafan40.py": "9e5caaea8a97dc72df7f25092ee4aa03d4522324b37bf9d92470ab8fecab60f8",
+    "evaluate_motion_corpus.py": "6c43aa1f2dabd0f57aee60caa1440d76b61e2aca18fe96b019c9ce11839a715b"
+  },
+  "mechanism": "Explicit reset_to_frame writes simulator state but does not invalidate ObservationManager cache; get_observations() returns prior reset observation until compute(update_history=True). Histories initialized from that observation can retain wrong initial samples for up to history_length controls. Native delayed-actuator histories also require backfill after the final pose write.",
+  "old_complete_receipt_bytes_and_score_arithmetic_remain_valid": true,
+  "old_scores_protocol_label": "Legacy manual-reset-v1; do not claim verified fresh first-reference observations",
+  "old_trajectory_initial_state_rows_may_be_cached_previous_reset_observations": true,
+  "score_change_magnitude_verified": false,
+  "source_training_affected": false,
+  "training_scope": "Native automatic reset and per-step observation updates unchanged; only local offline manual-pose evaluation entries affected",
+  "running_raw320k_job": "283c2489542e47a68ca2493c1ad2d835",
+  "running_frozen_final_evaluation_modified": false,
+  "running_frozen_final_eval_qualification": "Will retain legacy v1 output and run corrected v2 separately",
+  "required_next": [
+    "RealG1 corrected standing initialization gate",
+    "All142220 motions for the same frozen1k and16k actors using manual-reset-v2",
+    "Corrected v2 evaluation of320k final weights once complete"
+  ],
+  "preserve_legacy_results_and_failures": true,
+  "paper_results_reproduced": false
+}

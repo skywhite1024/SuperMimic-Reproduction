@@ -1,0 +1,14 @@
+{
+  "status": "failed_initial_pose_guard_log_preserved",
+  "uid": "0436486f0fef4750928f5e19f8eb3f39",
+  "source_commit": "6775f001f85cc6da0d7f2c2d71ed4f7ccebb5605",
+  "log_bytes": 20549,
+  "log_lines": 211,
+  "log_sha256": "a0cf7929ba3b506d3d0690a742a7d15b4420095334e9d0707817dd103bbbc51d",
+  "exit_code": 1,
+  "failure": "Observed initial state differs from the declared standing pose",
+  "failure_time": "2026-11-13T06:58:31+08:00",
+  "exit_time": "2026-11-13T06:58:36+08:00",
+  "first_physical_trial_completed": false,
+  "paper_results_reproduced": false
+}

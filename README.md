@@ -4,7 +4,7 @@
 
 Community-implementation experiments with **40 LAFAN1 motions**, **15 additional motions**, and **120-second continuous control**. This repository records the implementation, evaluation contracts, complete results, and failures. It is not the official SuperMimic implementation or a claim of reproducing all paper experiments.
 
-**2026-11-12 local review branch:** The authors have now released [official SuperMimic](https://github.com/HybridRobotics/supermimic). Pinned, unchanged source snapshots are available under [upstream/](upstream/README.md), alongside the historical community work. Read the [official-source review and migration assessment](docs/OFFICIAL_UPSTREAM_REVIEW_20261112.md); official runtime training and paper results are not yet verified here.
+**2026-11-13 official review branch:** The authors have released [official SuperMimic](https://github.com/HybridRobotics/supermimic). Pinned, unchanged sources are under [upstream/](upstream/README.md); Windows/Linux runtime checks and bounded training have run, and longer motion/velocity training is in progress. Read the [official-source review](docs/OFFICIAL_UPSTREAM_REVIEW_20261112.md), including its initialization correction: local manual-reset-v1 evaluations used cached initial observations and require corrected v2 reevaluation. Original receipts remain preserved; strict paper results are not claimed.
 
 **中文：这是复现实验与工程记录。基础 LAFAN1 目标已达到；新增动作与旧动作兼顾的统一模型目标仍未全部达到。所有失败和完整分母保留。**
 
@@ -25,6 +25,7 @@ Community-implementation experiments with **40 LAFAN1 motions**, **15 additional
 | Unified stage 3 (CUDA) | Raw new motions 10/15; calibrated new motions 12/15; old LAFAN1 38/40 | Combined tracking/contact quality: raw 7/15, calibrated 11/15 |
 | Unified stage 3 continuous tests | 0/3 strict passes; first failures approximately 9.16 s, 6.82 s, 40.98 s | Full failure tails retained; disabling automatic termination is not counted as passing |
 | BONES-SEED | Preparation snapshot only; paused | No full-library training claim |
+| BONES-SEED, official route | Raw320k motion training and two100k velocity runs in progress | Exact paper filtering is unconfirmed; offline scores require corrected manual-reset-v2 evaluation |
 
 CPU and CUDA evaluations are separate experiments. See report rows for exact protocol, checkpoint and backend. Do not combine their scores or select successful clips across different policies.
 

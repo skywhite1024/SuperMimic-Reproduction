@@ -1,7 +1,7 @@
 {
-  "status": "implemented_awaiting_real_g1_gpu_integration",
+  "status": "cpu_manual_reset_fix_passed_awaiting_corrected_gpu_gate",
   "entrypoint": "evaluate_velocity_step.py",
-  "sha256": "6cb90a8b79e8fd5a4fb84c07f6e040c3307a4baad724f7eae08b06468ceaf848",
+  "sha256": "0b66c84ac1e899cbed82e423bf3feec36f1f7ed0ba5766c03e781e994a9b9fcb",
   "static_syntax_checked": true,
   "real_g1_execution_verified": false,
   "predeclared_gpu_gate": {
@@ -20,10 +20,15 @@
       "Full result and protocol JSON receipts recoverable",
       "Recorded states independently reproduce first-fall flags and lengths",
       "Recorded heading velocities match independent float64 projection within1e-5",
-      "Scores recompute exactly from saved velocities"
+      "Scores recompute exactly from saved velocities",
+      "Explicit observation cache refresh and delayed-actuator backfill after manual pose writes"
     ]
   },
   "author_initial_pose_confirmed": false,
   "repeatability_verified": false,
-  "paper_results_reproduced": false
+  "paper_results_reproduced": false,
+  "manual_reset_helper": "manual_reset_observations.py",
+  "manual_reset_helper_sha256": "3933258bdcd8c80a30d3fc256bf3d82084ff9661f0d20c620bba07b518dc1f6d",
+  "prior_gpu_job_failed": true,
+  "prior_failure": "Initial pose guard rejected cached observations"
 }

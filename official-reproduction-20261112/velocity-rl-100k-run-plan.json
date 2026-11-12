@@ -59,13 +59,15 @@
   "ui_command_dom_readback_matches": true,
   "duplicate_and_resource_check_passed": true,
   "verified_at": "2026-11-13T06:44:23.143283+08:00",
-  "last_progress_evidence": "velocity-rl-100k-1113r-progress1.txt",
-  "last_observed_collection_steps": 191,
+  "last_progress_evidence": "velocity-rl-100k-1113r-progress2.txt",
+  "last_observed_collection_steps": 8551,
   "last_observed_metrics": {
-    "Loss/state": 0.1504,
-    "Policy/reward": 0.1445,
-    "Policy/grad_norm": 0.6835,
-    "Policy/value_function": 0.0102
+    "Loss/state": 0.0139,
+    "Policy/reward": 11.0085,
+    "Policy/grad_norm": 1.6164,
+    "Policy/value_function": 0.0363
   },
-  "last_verified_stage": "Actual realG1 mixed training iterations observed after fixed source and verified candidate gate; full100k incomplete"
+  "last_verified_stage": "Actual8551 realG1 mixed collection steps and finite metrics observed; full100k incomplete",
+  "last_observed_total_environment_steps": 35024896,
+  "last_progress_verified_at": "2026-11-13T06:58:55.874519+08:00"
 }
