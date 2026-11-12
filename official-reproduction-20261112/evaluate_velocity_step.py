@@ -207,11 +207,32 @@ def main():
                             heading_velocity=velocities, steps=steps, fallen=falls)
         del states, actions_saved, velocities
         with np.load(trace, allow_pickle=False) as data:
+            recomputed_heading = None
             for key, count in (("states", 251), ("actions", 250), ("heading_velocity", 250)):
                 values = data[key]
                 valid = np.arange(count)[None, None, :] < (steps[..., None] + (key == "states"))
                 if not np.isfinite(values[valid]).all() or not np.isnan(values[~valid]).all():
                     raise RuntimeError("Saved trace finite values or unused padding disagree with first-fall lengths")
+                if key == "states":
+                    post = values[:, :, 1:]
+                    gravity_z = 2 * np.square(post[..., 4:6]).sum(-1, dtype=np.float32) - 1
+                    fell = ((post[..., 2] < .35) | (1 + gravity_z > .7)) & valid[..., 1:]
+                    if (not np.array_equal(fell.any(-1), falls)
+                            or not np.array_equal(np.where(falls, fell.argmax(-1) + 1, 250), steps)):
+                        raise RuntimeError("Saved states do not reproduce first-fall flags and trace lengths")
+                    w, x, y, z = np.moveaxis(post[..., 3:7].astype(np.float64), -1, 0)
+                    yaw = np.arctan2(2 * (w * z + x * y), 1 - 2 * (y * y + z * z))
+                    c, sine = np.cos(yaw), np.sin(yaw)
+                    vx, vy = post[..., 36].astype(np.float64), post[..., 37].astype(np.float64)
+                    recomputed_heading = np.stack((c * vx + sine * vy,
+                        -sine * vx + c * vy, post[..., 41]), -1)
+                elif key == "heading_velocity":
+                    if not np.allclose(values[valid], recomputed_heading[valid], rtol=1e-5, atol=1e-5):
+                        raise RuntimeError("Saved heading velocities disagree with independent float64 state projection")
+                    for index, row in enumerate(grid):
+                        recalculated = aggregate_step_trials(row["command"], values[:, index], falls[:, index])
+                        if any(records[index][name] != value for name, value in recalculated.items()):
+                            raise RuntimeError("Saved velocity traces do not reproduce the command score")
             if not np.array_equal(data["steps"], steps) or not np.array_equal(data["fallen"], falls):
                 raise RuntimeError("Saved trial accounting differs")
         raw = [r["median_relative_error"] for r in records if r["median_relative_error"] is not None]
@@ -224,7 +245,11 @@ def main():
             "median_display_command_error": float(np.median([r["display_relative_error"] for r in records])),
             "records": records, "elapsed_seconds": time.monotonic() - started,
             "trajectory": {"file": trace.name, "bytes": trace.stat().st_size, "sha256": digest(trace),
-                           "saved_arrays_readback_verified": True, "padding": "NaN outside first-fall length"},
+                           "saved_arrays_readback_verified": True, "saved_falls_recomputed": True,
+                           "saved_heading_velocity_recomputed_float64": True,
+                           "heading_projection_tolerance": {"rtol": 1e-5, "atol": 1e-5},
+                           "command_scores_recomputed_from_saved_traces": True,
+                           "padding": "NaN outside first-fall length"},
             "protocol_sha256": digest(output / "protocol.json"), "paper_results_reproduced": False}
         write_json(output / "result.json", result)
         print("VELOCITY_STEP_TEST_COMPLETED " + json.dumps({k: v for k, v in result.items() if k != "records"}), flush=True)

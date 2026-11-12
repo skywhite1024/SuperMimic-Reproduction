@@ -1,7 +1,7 @@
 {
   "status": "implemented_awaiting_real_g1_gpu_integration",
   "entrypoint": "evaluate_velocity_step.py",
-  "sha256": "e4f879657d172a430a9eab172bb843880e2dedb6fd600dc062efabfe5341615c",
+  "sha256": "6cb90a8b79e8fd5a4fb84c07f6e040c3307a4baad724f7eae08b06468ceaf848",
   "static_syntax_checked": true,
   "real_g1_execution_verified": false,
   "predeclared_gpu_gate": {
@@ -17,7 +17,10 @@
       "Every physical failure retained with first-fall trace length",
       "No manager-driven mid-trial resets",
       "Saved trace arrays reread with finite valid samples and NaN-only invalid padding",
-      "Full result and protocol JSON receipts recoverable"
+      "Full result and protocol JSON receipts recoverable",
+      "Recorded states independently reproduce first-fall flags and lengths",
+      "Recorded heading velocities match independent float64 projection within1e-5",
+      "Scores recompute exactly from saved velocities"
     ]
   },
   "author_initial_pose_confirmed": false,
