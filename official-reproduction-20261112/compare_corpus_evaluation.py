@@ -28,8 +28,8 @@ def main():
     reference, candidate = read(args.reference), read(args.candidate)
     if reference["status"] != "full40_evaluation_completed":
         raise ValueError("Reference must be the completed frozen full40 evaluation")
-    if candidate["status"] != "full_corpus_evaluation_completed":
-        raise ValueError("Candidate must be a completed corpus evaluation")
+    if candidate["status"] not in ("full_corpus_evaluation_completed", "full40_evaluation_completed"):
+        raise ValueError("Candidate must be a completed corpus or legacy full40 evaluation")
     a = {row["index"]: row for row in reference["records"]}
     b = {row["index"]: row for row in candidate["records"]}
     if (len(reference["records"]) != 40 or len(candidate["records"]) != 40
@@ -58,8 +58,8 @@ def main():
         "scope": "40-clip outcome and return comparison; not trajectory equality or physics qualification",
         "reference_sha256": hashlib.sha256(args.reference.read_bytes()).hexdigest(),
         "candidate_sha256": hashlib.sha256(args.candidate.read_bytes()).hexdigest(),
-        "candidate_num_envs": candidate["num_envs"],
-        "candidate_batch_order": candidate["batch_order"],
+        "candidate_num_envs": candidate.get("num_envs", 40),
+        "candidate_batch_order": candidate.get("batch_order", "index"),
         "tolerances": {"normalized_return": args.max_return_difference, "steps": args.max_step_difference},
         "same_success_count": sum(row["same_success"] for row in differences),
         "passed_clips": sum(row["passed"] for row in differences),
@@ -68,6 +68,13 @@ def main():
         "records": differences,
     }
     args.output.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
+    for row in differences:
+        print("CMP_ROW " + json.dumps({"i": row["index"], "pass": int(row["passed"]),
+            "same": int(row["same_success"]), "terms": int(row["same_termination_terms"]),
+            "ds": row["step_difference"], "dr": row["normalized_return_difference"]}), flush=True)
+    print("CMP_SUMMARY " + json.dumps({"ok": int(passed), "pass": result["passed_clips"],
+        "same": result["same_success_count"], "ds": result["max_step_difference"],
+        "dr": result["max_normalized_return_difference"]}), flush=True)
     print("CORPUS_COMPARISON " + json.dumps(result), flush=True)
     if not passed:
         raise SystemExit(2)

@@ -51,5 +51,43 @@
     "walking_on_edge": 80,
     "push_obstacle": 72
   },
-  "data_modified": false
+  "data_modified": false,
+  "paper_example_audit": {
+    "results": {
+      "jump_off_50cm": {
+        "matches": 24,
+        "additional_to_current_sonic": 24,
+        "additional_examples": [
+          "jump_off_50cm_001__A415",
+          "jump_off_50cm_001__A415_M",
+          "jump_off_50cm_001__A416"
+        ]
+      },
+      "look_over_fence": {
+        "matches": 24,
+        "additional_to_current_sonic": 24,
+        "additional_examples": [
+          "look_over_fence_180_R_001__A460",
+          "look_over_fence_180_R_001__A460_M",
+          "look_over_fence_180_R_001__A461"
+        ]
+      },
+      "sit": {
+        "matches": 6303,
+        "additional_to_current_sonic": 156,
+        "additional_examples": [
+          "dance_basic_first_entry_position_R_002__A306",
+          "dance_basic_first_entry_position_R_002__A306_M",
+          "dance_basic_first_entry_position_R_002__A307"
+        ]
+      },
+      "climb": {
+        "matches": 180,
+        "additional_to_current_sonic": 0,
+        "additional_examples": []
+      }
+    },
+    "warning": "Do not use bare sit as a substring: it also matches position in normal dance motion names. Two explicit paper examples add 48 exclusions, still not the exact paper manifest.",
+    "data_modified": false
+  }
 }
