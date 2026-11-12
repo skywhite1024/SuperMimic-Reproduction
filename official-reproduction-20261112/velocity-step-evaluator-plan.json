@@ -1,0 +1,26 @@
+{
+  "status": "implemented_awaiting_real_g1_gpu_integration",
+  "entrypoint": "evaluate_velocity_step.py",
+  "sha256": "e4f879657d172a430a9eab172bb843880e2dedb6fd600dc062efabfe5341615c",
+  "static_syntax_checked": true,
+  "real_g1_execution_verified": false,
+  "predeclared_gpu_gate": {
+    "models": "Completed RL and distill21-step actors, no100k score claim",
+    "grid_identities_per_model": 672,
+    "trials_per_command": 4,
+    "total_trials_per_model": 2688,
+    "nominal_steps_per_surviving_trial": 250,
+    "initial_pose": "Exact pinned default knees-bent pose, zero velocity, all2688 initial states checked",
+    "required": [
+      "Both model tests complete with all672 records and2688 trials",
+      "All surviving trials cover250 control steps",
+      "Every physical failure retained with first-fall trace length",
+      "No manager-driven mid-trial resets",
+      "Saved trace arrays reread with finite valid samples and NaN-only invalid padding",
+      "Full result and protocol JSON receipts recoverable"
+    ]
+  },
+  "author_initial_pose_confirmed": false,
+  "repeatability_verified": false,
+  "paper_results_reproduced": false
+}
