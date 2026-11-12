@@ -1,0 +1,57 @@
+{
+  "status": "all_hashes_verified",
+  "evaluation_job_uid": "1b3745ad2a5e484e805a459424f0be4d",
+  "transport_job_uid": "302e7f0b2935470dba0473795dc43a21",
+  "transport": "zlib+base64 chunks from ACP live log; original JSON bytes recovered",
+  "log_sha256": "37bf81145b697be698c8987f03358a03c62d6458152c9097350fadb9f1e7c40a",
+  "files": [
+    {
+      "i": 0,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/corpus-batch-diagnostic-1113g-24/accounting.json",
+      "bytes": 1378,
+      "sha256": "d998cabda4167f0fbfe6b49534fda28a453cf9ca9c7ce7a483a4f1688ad55e44",
+      "chunks": 3,
+      "local_file": "lafan40-batch24-accounting.json"
+    },
+    {
+      "i": 1,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/corpus-batch-diagnostic-1113g-24/result.json",
+      "bytes": 14173,
+      "sha256": "bfadc27309b69ee3b642447d42717a836421a793cb81d9cfada22b5fedc82d82",
+      "chunks": 6,
+      "local_file": "lafan40-batch24-full40.json"
+    },
+    {
+      "i": 2,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/corpus-batch-diagnostic-1113g-24/protocol.json",
+      "bytes": 4173,
+      "sha256": "513379c24f9c0fc5411bc690f6da669726ba4f162dfb4f963dd325b8a5ccae79",
+      "chunks": 7,
+      "local_file": "lafan40-batch24-protocol.json"
+    },
+    {
+      "i": 3,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/corpus-batch-diagnostic-1113g-24/trajectory-diagnosis.json",
+      "bytes": 51434,
+      "sha256": "67bf0ba4589e82e62c59e5d9b53f7a6f1fd0cf17a51dd0f71f0d9fb575a7c758",
+      "chunks": 13,
+      "local_file": "original-vs-batch24-trajectories.json"
+    },
+    {
+      "i": 4,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/corpus-batch-diagnostic-1113g-24/comparison.json",
+      "bytes": 10306,
+      "sha256": "53059887e5b7a03ed6b45423b8ca20a8242ccd128f83335bfcb177d8c33c16bb",
+      "chunks": 5,
+      "local_file": "original-vs-batch24-comparison.json"
+    },
+    {
+      "i": 5,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/corpus-batch-diagnostic-1113g-24/initial-state-comparison.json",
+      "bytes": 234,
+      "sha256": "6ab433f16e81bbdc981ad541ea58cf462427397cce109ad69f5807c2a8fb0b3d",
+      "chunks": 1,
+      "local_file": "lafan40-batch24-initial-comparison.json"
+    }
+  ]
+}

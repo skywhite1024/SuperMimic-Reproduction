@@ -1,5 +1,5 @@
 {
-  "status": "same_env_mismatch_and_legacy_repeatability_failure_confirmed",
+  "status": "batch_transition_mapping_and_accounting_verified_trajectory_equivalence_unproven",
   "source_reference": "evaluate_lafan40.py at d34976b2b34367482b08be6a0d9e88eab9ee2d28",
   "protocol_changes": [
     "Full corpus evaluated in bounded batches; no membership filtering",
@@ -50,7 +50,7 @@
   "legacy_full40_successes": 39,
   "batched_single_batch_successes": 38,
   "second_batching_check_executed": false,
-  "reason": "Same 40-env index order produced a different result; need trajectory diagnosis and an unchanged legacy rerun before attribution",
+  "reason": "Inference context fix completed both batches. All40 identities and first-frame mapping verified; per-clip return tolerance still failed for14clips and runtime repeatability remains unverified.",
   "trajectory_diagnosis": {
     "status": "comparison_completed",
     "clips": 40,
@@ -136,13 +136,13 @@
     "receipt_ledger": "cloud-receipts-1113e-ledger.json"
   },
   "batch_context_fix": {
-    "status": "local_regression_passed_gpu_pending",
+    "status": "cpu_regression_and_gpu_batch_transition_passed",
     "validation": "batch-inference-reset-validation.json",
     "change": "Keep all environment resets, observations and steps under one inference context after model construction",
     "vendor_files_modified": false
   },
   "batch_reset_fix_job": {
-    "status": "running",
+    "status": "succeeded",
     "name": "supermimic-official-batch-260010076-1113g",
     "display_name": "260010076-SuperMimic-batch-reset-fix-1113g",
     "gpu": 1,
@@ -167,6 +167,40 @@
     "uid": "1b3745ad2a5e484e805a459424f0be4d",
     "created_at": "2026-11-13T02:13:33+08:00",
     "platform_updated_at": "2026-11-13T02:14:28+08:00",
-    "command_clipboard_exact_match": true
+    "command_clipboard_exact_match": true,
+    "program_started_at": "2026-11-13T02:14:30+08:00",
+    "program_deadline": "2026-11-13T02:44:30+08:00",
+    "last_verified_stage": "Complete24+16batch evaluation39/40; six original JSON artifacts recovered and SHA256 verified; all first actions exact, full trajectory equivalence failed",
+    "batch_transition_verified": true,
+    "exit_code": 0,
+    "completed_at": "2026-11-13T02:26:34.654+08:00",
+    "successes": 39,
+    "failures": 1,
+    "mean_normalized_full_motion_return": 0.8435972488499477,
+    "initial_state_max_abs": 2.384185791015625e-07,
+    "initial_action_max_abs": 0.0,
+    "complete_corpus_accounting_verified": true,
+    "first_frame_mapping_verified": true,
+    "exact_json_receipts_recovered": 6,
+    "receipt_ledger": "cloud-receipts-1113g-ledger.json",
+    "elapsed_evaluation_seconds": 635.6017178706825
+  },
+  "batch24_result": {
+    "clips": 40,
+    "successes": 39,
+    "failures": 1,
+    "elapsed_seconds": 635.6017178706825,
+    "mean_normalized_full_motion_return": 0.8435972488499477,
+    "same_success_clips_as_original": 40,
+    "comparison_passed_clips": 26,
+    "max_normalized_return_difference": 0.0038137706843692104,
+    "max_step_difference": 2,
+    "first_state_max_abs_difference": 2.384185791015625e-07,
+    "first_action_exact_clips": 40,
+    "exact_receipt_ledger": "cloud-receipts-1113g-ledger.json",
+    "accounting": "lafan40-batch24-accounting.json",
+    "initial_mapping": "lafan40-batch24-initial-comparison.json",
+    "comparison": "original-vs-batch24-comparison.json",
+    "trajectories": "original-vs-batch24-trajectories.json"
   }
 }
