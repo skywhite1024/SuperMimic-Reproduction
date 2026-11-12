@@ -38,8 +38,16 @@
       "after_feasibility_filter": 129514,
       "hours": 264.56,
       "targets_from_paper": [
-        {"gpus": 1, "hours": 3, "failed_motions": 25},
-        {"gpus": 2, "hours": 9.8, "failed_motions": 0}
+        {
+          "gpus": 1,
+          "hours": 3,
+          "failed_motions": 25
+        },
+        {
+          "gpus": 2,
+          "hours": 9.8,
+          "failed_motions": 0
+        }
       ],
       "unresolved": [
         "Exact author name-filter list and surviving-clip manifest are absent from inspected source",
@@ -67,5 +75,30 @@
       ]
     }
   ],
-  "hardware_limit": "Physical robot experiments require a robot; simulation alone cannot validate those results."
+  "hardware_limit": "Physical robot experiments require a robot; simulation alone cannot validate those results.",
+  "execution_status": {
+    "as_of": "2026-11-12T23:40:15+08:00",
+    "windows_tests": 217,
+    "linux_tests": 217,
+    "raw_bones_cloud_readback": "passed 142220 clips, 51915358 frames; no paper filters",
+    "native_compiled_pilot": "failed twice after at least 201 collection steps",
+    "eager_goal_pilot": "1001 steps completed; finite checkpoints",
+    "eager_goal_full40": "0/40 successful full clips, all failed trajectories retained",
+    "extended_lafan_run": {
+      "status": "starting",
+      "hypothesis": "Increasing collection steps from 1001 to 16001 improves full-clip tracking under the now-executable eager-goal profile",
+      "source_and_launcher": "d34976b2b34367482b08be6a0d9e88eab9ee2d28",
+      "start": "fresh seed 42; not checkpoint resume",
+      "unchanged": "same 4096 environments, raw 40 motions, learner, goal eager override and CUDA launch blocking",
+      "collection_steps": 16001,
+      "gpus": 1,
+      "max_seconds": 3600,
+      "evaluation": "all frozen 40 clips, fixed first-frame starts and native failures, including every failed trajectory",
+      "paper_results_reproduced": false,
+      "command_sha256": "9e36a4cb33fe9d9b155150df04c936be6ce603f5efbd5757160d301d0a16645e",
+      "uid": "0ca5720db044438f98af50c7ce74027d",
+      "created_at": "2026-11-12T23:40:15+08:00"
+    },
+    "paper_results_reproduced": false
+  }
 }
