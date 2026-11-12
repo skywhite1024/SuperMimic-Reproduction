@@ -1,0 +1,366 @@
+{
+  "review_date": "2026-11-12",
+  "repositories": [
+    {
+      "full_name": "HybridRobotics/supermimic",
+      "html_url": "https://github.com/HybridRobotics/supermimic",
+      "private": false,
+      "fork": false,
+      "created_at": "2026-11-10T10:46:56Z",
+      "updated_at": "2026-11-12T08:35:47Z",
+      "pushed_at": "2026-11-11T08:06:27Z",
+      "default_branch": "main",
+      "license": "Apache-2.0",
+      "release_count": 0,
+      "queried_at": "2026-11-12T08:38:59.838679+00:00"
+    },
+    {
+      "full_name": "HybridRobotics/mjlab_research",
+      "html_url": "https://github.com/HybridRobotics/mjlab_research",
+      "private": false,
+      "fork": false,
+      "created_at": "2026-11-10T11:38:04Z",
+      "updated_at": "2026-11-12T08:01:40Z",
+      "pushed_at": "2026-11-11T08:35:34Z",
+      "default_branch": "main",
+      "license": "Apache-2.0",
+      "release_count": 0,
+      "queried_at": "2026-11-12T08:39:00.765785+00:00"
+    }
+  ],
+  "official_lock_packages": [
+    {
+      "name": "mjlab",
+      "version": "1.5.0"
+    },
+    {
+      "name": "mujoco",
+      "version": "3.10.0"
+    },
+    {
+      "name": "mujoco-warp",
+      "version": "3.10.0.1"
+    },
+    {
+      "name": "rsl-rl-lib",
+      "version": "5.4.0"
+    },
+    {
+      "name": "torch",
+      "version": "2.10.0"
+    },
+    {
+      "name": "tyro",
+      "version": "1.0.6"
+    },
+    {
+      "name": "viser",
+      "version": "1.0.27"
+    },
+    {
+      "name": "warp-lang",
+      "version": "1.14.0"
+    },
+    {
+      "name": "warp-lang",
+      "version": "1.14.0"
+    }
+  ],
+  "dependency_project": {
+    "name": "mjlab",
+    "version": "1.6.0",
+    "requires-python": ">=3.11,<3.15",
+    "dependencies": [
+      "prettytable",
+      "tqdm",
+      "tyro>=1.0.1",
+      "torch>=2.14.0",
+      "torchrunx>=0.3.4",
+      "warp-lang>=1.15.0",
+      "mujoco-warp~=3.16.0",
+      "mujoco~=3.16.0",
+      "trimesh>=4.8.3",
+      "scipy>=1.15",
+      "viser>=1.1.1",
+      "mjviser>=0.0.16",
+      "mediapy>=1.2.7",
+      "numpy",
+      "imageio-ffmpeg<0.8",
+      "tensordict",
+      "rsl-rl-lib==5.5.2",
+      "tensorboard>=2.20.0",
+      "onnxscript>=0.5.4",
+      "wandb>=0.22.3"
+    ]
+  },
+  "runtime_training_executed": false,
+  "cloud_operations": false,
+  "pushed": false,
+  "lock_dependency_specifier_conflicts": [
+    {
+      "requirement": "torch>=2.14.0",
+      "locked_versions": [
+        "2.10.0"
+      ]
+    },
+    {
+      "requirement": "warp-lang>=1.15.0",
+      "locked_versions": [
+        "1.14.0"
+      ]
+    },
+    {
+      "requirement": "mujoco-warp~=3.16.0",
+      "locked_versions": [
+        "3.10.0.1"
+      ]
+    },
+    {
+      "requirement": "mujoco~=3.16.0",
+      "locked_versions": [
+        "3.10.0"
+      ]
+    },
+    {
+      "requirement": "viser>=1.1.1",
+      "locked_versions": [
+        "1.0.27"
+      ]
+    },
+    {
+      "requirement": "mjviser>=0.0.16",
+      "locked_versions": [
+        "0.0.14"
+      ]
+    },
+    {
+      "requirement": "mediapy>=1.2.7",
+      "locked_versions": [
+        "1.2.6"
+      ]
+    },
+    {
+      "requirement": "rsl-rl-lib==5.5.2",
+      "locked_versions": [
+        "5.4.0"
+      ]
+    }
+  ],
+  "import_verification": {
+    "upstream_git_blob_matches": 583,
+    "sha256_matches": 583,
+    "python_syntax_passes": 351,
+    "python_version": "3.13.9",
+    "runtime_tested": false
+  },
+  "repository_check": {
+    "raw_exit_code": 1,
+    "checks": {
+      "python": 633,
+      "json": 695,
+      "local_links": 209,
+      "videos": 351
+    },
+    "raw_errors": [
+      "File exceeds normal Git limit: experiments/sports-video/runs/cpu-engineering-f0-20261110/final-full.pt",
+      "File exceeds normal Git limit: experiments/sports-video/runs/cpu-engineering-f0-20261110/initial-full.pt",
+      "File exceeds normal Git limit: experiments/sports-video/runs/cpu-engineering-f0-20261110/last.pt",
+      "File exceeds normal Git limit: experiments/sports-video/runs/cpu-engineering-f1-20261110/final-full.pt",
+      "File exceeds normal Git limit: experiments/sports-video/runs/cpu-engineering-f1-20261110/initial-full.pt",
+      "File exceeds normal Git limit: experiments/sports-video/runs/cpu-engineering-f1-20261110/last.pt",
+      "File exceeds normal Git limit: experiments/replay-study/runs/engineering-v2-rho000-seed0/final-full.pt",
+      "File exceeds normal Git limit: experiments/replay-study/runs/engineering-v2-rho000-seed0/last.pt",
+      "File exceeds normal Git limit: experiments/replay-study/runs/engineering-v2-rho025-seed0/final-full.pt",
+      "File exceeds normal Git limit: experiments/replay-study/runs/engineering-v2-rho025-seed0/last.pt",
+      "File exceeds normal Git limit: experiments/replay-study/runs/engineering-v2-rho050-seed0/final-full.pt",
+      "File exceeds normal Git limit: experiments/replay-study/runs/engineering-v2-rho050-seed0/last.pt",
+      "File exceeds normal Git limit: experiments/replay-study/runs/engineering-v2-rho075-seed0/final-full.pt",
+      "File exceeds normal Git limit: experiments/replay-study/runs/engineering-v2-rho075-seed0/last.pt",
+      "File exceeds normal Git limit: experiments/replay-study/runs/engineering-v3-rho000-seed1/final-full.pt",
+      "File exceeds normal Git limit: experiments/replay-study/runs/engineering-v3-rho000-seed1/last.pt",
+      "File exceeds normal Git limit: experiments/replay-study/runs/engineering-v3-rho000-seed2/final-full.pt",
+      "File exceeds normal Git limit: experiments/replay-study/runs/engineering-v3-rho000-seed2/last.pt",
+      "File exceeds normal Git limit: experiments/replay-study/runs/engineering-v3-rho025-seed1/final-full.pt",
+      "File exceeds normal Git limit: experiments/replay-study/runs/engineering-v3-rho025-seed1/last.pt",
+      "File exceeds normal Git limit: experiments/replay-study/runs/engineering-v3-rho025-seed2/final-full.pt",
+      "File exceeds normal Git limit: experiments/replay-study/runs/engineering-v3-rho025-seed2/last.pt",
+      "File exceeds normal Git limit: experiments/replay-study/runs/engineering-v3-rho050-seed1/final-full.pt",
+      "File exceeds normal Git limit: experiments/replay-study/runs/engineering-v3-rho050-seed1/last.pt",
+      "File exceeds normal Git limit: experiments/replay-study/runs/engineering-v3-rho050-seed2/final-full.pt",
+      "File exceeds normal Git limit: experiments/replay-study/runs/engineering-v3-rho050-seed2/last.pt",
+      "File exceeds normal Git limit: experiments/replay-study/runs/engineering-v3-rho075-seed1/final-full.pt",
+      "File exceeds normal Git limit: experiments/replay-study/runs/engineering-v3-rho075-seed1/last.pt",
+      "File exceeds normal Git limit: experiments/replay-study/runs/engineering-v3-rho075-seed2/final-full.pt",
+      "File exceeds normal Git limit: experiments/replay-study/runs/engineering-v3-rho075-seed2/last.pt",
+      "File exceeds normal Git limit: acro-library-20261027-b/runs/replay-study-baseline-cpu-20261106-a/trajectory.npz"
+    ],
+    "all_errors_are_existing_ignored_runtime_artifacts": true,
+    "classified_runtime_files": [
+      {
+        "path": "experiments/sports-video/runs/cpu-engineering-f0-20261110/final-full.pt",
+        "tracked": false,
+        "ignored": true
+      },
+      {
+        "path": "experiments/sports-video/runs/cpu-engineering-f0-20261110/initial-full.pt",
+        "tracked": false,
+        "ignored": true
+      },
+      {
+        "path": "experiments/sports-video/runs/cpu-engineering-f0-20261110/last.pt",
+        "tracked": false,
+        "ignored": true
+      },
+      {
+        "path": "experiments/sports-video/runs/cpu-engineering-f1-20261110/final-full.pt",
+        "tracked": false,
+        "ignored": true
+      },
+      {
+        "path": "experiments/sports-video/runs/cpu-engineering-f1-20261110/initial-full.pt",
+        "tracked": false,
+        "ignored": true
+      },
+      {
+        "path": "experiments/sports-video/runs/cpu-engineering-f1-20261110/last.pt",
+        "tracked": false,
+        "ignored": true
+      },
+      {
+        "path": "experiments/replay-study/runs/engineering-v2-rho000-seed0/final-full.pt",
+        "tracked": false,
+        "ignored": true
+      },
+      {
+        "path": "experiments/replay-study/runs/engineering-v2-rho000-seed0/last.pt",
+        "tracked": false,
+        "ignored": true
+      },
+      {
+        "path": "experiments/replay-study/runs/engineering-v2-rho025-seed0/final-full.pt",
+        "tracked": false,
+        "ignored": true
+      },
+      {
+        "path": "experiments/replay-study/runs/engineering-v2-rho025-seed0/last.pt",
+        "tracked": false,
+        "ignored": true
+      },
+      {
+        "path": "experiments/replay-study/runs/engineering-v2-rho050-seed0/final-full.pt",
+        "tracked": false,
+        "ignored": true
+      },
+      {
+        "path": "experiments/replay-study/runs/engineering-v2-rho050-seed0/last.pt",
+        "tracked": false,
+        "ignored": true
+      },
+      {
+        "path": "experiments/replay-study/runs/engineering-v2-rho075-seed0/final-full.pt",
+        "tracked": false,
+        "ignored": true
+      },
+      {
+        "path": "experiments/replay-study/runs/engineering-v2-rho075-seed0/last.pt",
+        "tracked": false,
+        "ignored": true
+      },
+      {
+        "path": "experiments/replay-study/runs/engineering-v3-rho000-seed1/final-full.pt",
+        "tracked": false,
+        "ignored": true
+      },
+      {
+        "path": "experiments/replay-study/runs/engineering-v3-rho000-seed1/last.pt",
+        "tracked": false,
+        "ignored": true
+      },
+      {
+        "path": "experiments/replay-study/runs/engineering-v3-rho000-seed2/final-full.pt",
+        "tracked": false,
+        "ignored": true
+      },
+      {
+        "path": "experiments/replay-study/runs/engineering-v3-rho000-seed2/last.pt",
+        "tracked": false,
+        "ignored": true
+      },
+      {
+        "path": "experiments/replay-study/runs/engineering-v3-rho025-seed1/final-full.pt",
+        "tracked": false,
+        "ignored": true
+      },
+      {
+        "path": "experiments/replay-study/runs/engineering-v3-rho025-seed1/last.pt",
+        "tracked": false,
+        "ignored": true
+      },
+      {
+        "path": "experiments/replay-study/runs/engineering-v3-rho025-seed2/final-full.pt",
+        "tracked": false,
+        "ignored": true
+      },
+      {
+        "path": "experiments/replay-study/runs/engineering-v3-rho025-seed2/last.pt",
+        "tracked": false,
+        "ignored": true
+      },
+      {
+        "path": "experiments/replay-study/runs/engineering-v3-rho050-seed1/final-full.pt",
+        "tracked": false,
+        "ignored": true
+      },
+      {
+        "path": "experiments/replay-study/runs/engineering-v3-rho050-seed1/last.pt",
+        "tracked": false,
+        "ignored": true
+      },
+      {
+        "path": "experiments/replay-study/runs/engineering-v3-rho050-seed2/final-full.pt",
+        "tracked": false,
+        "ignored": true
+      },
+      {
+        "path": "experiments/replay-study/runs/engineering-v3-rho050-seed2/last.pt",
+        "tracked": false,
+        "ignored": true
+      },
+      {
+        "path": "experiments/replay-study/runs/engineering-v3-rho075-seed1/final-full.pt",
+        "tracked": false,
+        "ignored": true
+      },
+      {
+        "path": "experiments/replay-study/runs/engineering-v3-rho075-seed1/last.pt",
+        "tracked": false,
+        "ignored": true
+      },
+      {
+        "path": "experiments/replay-study/runs/engineering-v3-rho075-seed2/final-full.pt",
+        "tracked": false,
+        "ignored": true
+      },
+      {
+        "path": "experiments/replay-study/runs/engineering-v3-rho075-seed2/last.pt",
+        "tracked": false,
+        "ignored": true
+      },
+      {
+        "path": "acro-library-20261027-b/runs/replay-study-baseline-cpu-20261106-a/trajectory.npz",
+        "tracked": false,
+        "ignored": true
+      }
+    ],
+    "interpretation": "The existing release checker scans ignored runtime outputs. Its only errors are 31 pre-existing ignored large artifacts; it reported no Python, JSON, report-link, source-provenance or video-hash failures. No artifact was removed or added to Git."
+  },
+  "git_tree_identity": {
+    "supermimic": "01c280b0e336b9b2e4161db91a023eff032563eb",
+    "mjlab_research": "39c93eb75697b7809b8f10c09e3db7112054d322",
+    "both_match_upstream": true
+  },
+  "review_local_links": {
+    "checked": 18,
+    "missing": 0
+  }
+}

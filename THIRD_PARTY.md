@@ -6,6 +6,12 @@
 
 This is a community implementation. The original SuperMimic paper and authors should be cited separately; this repository does not represent official author code.
 
+## Official source snapshots added on 2026-11-12
+
+`upstream/supermimic` preserves [HybridRobotics/supermimic](https://github.com/HybridRobotics/supermimic) at `abc124c1bd5976341034668af3d12c087f2f1f55`, including the Apache-2.0 license and author acknowledgements. `upstream/mjlab_research` preserves [HybridRobotics/mjlab_research](https://github.com/HybridRobotics/mjlab_research) at `dd51a9fcc98791a2f0b018b3c7f71a3eefd5ecdd`, including its Apache-2.0 license and component notices. Robot assets retain upstream attribution and applicable terms. Both trees are byte-identical snapshots, separately identified by [SOURCES.lock.json](upstream/SOURCES.lock.json).
+
+These directories contain official upstream code; the historical experiments above remain community-implementation results. Importing official source does not attribute those experiments to the authors or establish reproduction of their results. No motion dataset or model-weight download is included in this import.
+
 ## Motion and robot assets
 
 - G1/LAFAN1 snapshot: [lvhaidong/LAFAN1_Retargeting_Dataset](https://huggingface.co/datasets/lvhaidong/LAFAN1_Retargeting_Dataset), revision `ce1572906efe6157840e8474d5a0d7aa87481e74`.

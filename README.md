@@ -4,6 +4,8 @@
 
 Community-implementation experiments with **40 LAFAN1 motions**, **15 additional motions**, and **120-second continuous control**. This repository records the implementation, evaluation contracts, complete results, and failures. It is not the official SuperMimic implementation or a claim of reproducing all paper experiments.
 
+**2026-11-12 local review branch:** The authors have now released [official SuperMimic](https://github.com/HybridRobotics/supermimic). Pinned, unchanged source snapshots are available under [upstream/](upstream/README.md), alongside the historical community work. Read the [official-source review and migration assessment](docs/OFFICIAL_UPSTREAM_REVIEW_20261112.md); official runtime training and paper results are not yet verified here.
+
 **中文：这是复现实验与工程记录。基础 LAFAN1 目标已达到；新增动作与旧动作兼顾的统一模型目标仍未全部达到。所有失败和完整分母保留。**
 
 - [Read the consolidated research reports](https://skywhite1024.github.io/SuperMimic-Reproduction/)
