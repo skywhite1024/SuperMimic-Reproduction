@@ -42,6 +42,7 @@ def main():
         raise FileExistsError(output)
     partial.mkdir(parents=True, exist_ok=True)
     seen = set()
+    manifest_member_seen = False
     with tarfile.open(args.archive, "r|gz") as archive:
         for member in archive:
             path = PurePosixPath(member.name)
@@ -49,6 +50,18 @@ def main():
             if member.isdir():
                 continue
             name = path.name
+            # The complete transfer archive also carries its manifest outside
+            # the packed directory. Verify it against the expected manifest hash.
+            if member.name == "packed-raw-verification.json":
+                assert member.isfile() and not manifest_member_seen
+                assert member.size == args.manifest.stat().st_size
+                source = archive.extractfile(member)
+                assert source is not None
+                with source:
+                    assert hashlib.sha256(source.read()).hexdigest() == args.manifest_sha256
+                manifest_member_seen = True
+                print("Embedded manifest SHA256 passed", flush=True)
+                continue
             assert member.isfile() and name in FIELDS and name not in seen
             seen.add(name)
             record = records[name]
