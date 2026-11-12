@@ -2,7 +2,11 @@
 
 核查日期：2026-11-12，Asia/Shanghai。结论：**论文作者团队已经公开 SuperMimic 实现，值得成为下一阶段的官方对照基线；当前发布包仍有依赖与复现入口缺口，不能直接替换社区实现或接续旧权重。**
 
-本轮完成历史回顾、实时仓库核查、源码引入、静态审查及源文件核验；没有执行官方模型训练、云端任务、权重上传或 Git 推送。
+截至 2026-11-12 21:57，已完成历史回顾、官方源码导入和本机独立 Conda 环境，217 项官方测试通过。分支已按用户要求改名为 `ljd/official-supermimic` 并推送至现有公开仓库。Linux 独立环境正在安装；前五次 CPU 部署尝试及网络失败均保留记录。目前尚无官方 GPU 训练结果。
+
+BONES 原始 G1 数据已完成下载与 SHA256 核验，142,220 条 CSV 全部转换成功，得到 51,915,358 个 50Hz 帧。转换仅适配原始厘米、角度和 Euler 字段，再调用作者的重采样及速度计算代码；未做名称筛选、可行性筛选或地面校准。5 条抽查与作者格式入口逐数组完全一致；内存有界打包在 16 条样本上与作者打包器完全一致。完整数据包正在上传个人 AFS，尚不等于论文筛选后 129,514 条动作实验已复现。
+
+以下静态审查与历史对照保留初次审查时的证据边界；当前执行合同见 [experiment-contract.json](../official-reproduction-20261112/experiment-contract.json)，数据验证见 [bones-data-validation.json](../official-reproduction-20261112/bones-data-validation.json)。官方源文件未修改；离线训练包装器仅替换 W&B 产物上传/清理逻辑，以避免离线模式仍请求在线 API，学习算法保持作者版本。
 
 ## 1. 官方身份与发布日期
 
@@ -20,7 +24,7 @@
 
 | 项目 | 固定值 |
 |---|---|
-| 新分支 | `codex/official-supermimic-review-20261112` |
+| 新分支 | `ljd/official-supermimic`（原名 `codex/official-supermimic-review-20261112`） |
 | 起点 | `codex/sports-video-xy-20261110`，`2efb0fcdce28e9920c16986b6456d0bcbeb060ca` |
 | 官方主仓库 | `abc124c1bd5976341034668af3d12c087f2f1f55` |
 | 官方 mjlab 依赖 | `dd51a9fcc98791a2f0b018b3c7f71a3eefd5ecdd` |

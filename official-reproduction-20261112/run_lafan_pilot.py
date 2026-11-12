@@ -34,9 +34,21 @@ def main():
     import numpy as np
     import torch
     import wandb
+    import supermimic.runners.supermimic_runner as runner_module
     from supermimic.runners.supermimic_runner import SuperMimicRunner
     from supermimic.scripts.train import TrainConfig
     from supermimic.scripts.train_utils import create_env, setup_device
+
+    # The author's artifact helper contacts the online API to prune versions
+    # even in offline mode. Keep its local artifact logging, with no API call.
+    def log_offline_checkpoint(files):
+        assert wandb.run is not None
+        artifact = wandb.Artifact(f"model-{wandb.run.id}", type="model")
+        for path in files:
+            artifact.add_file(path)
+        wandb.run.log_artifact(artifact)
+
+    runner_module.log_model_artifact = log_offline_checkpoint
 
     if not torch.cuda.is_available() or torch.cuda.device_count() != 1:
         raise RuntimeError("Pilot requires exactly one allocated CUDA GPU")
@@ -57,6 +69,7 @@ def main():
         "runner": dataclasses.asdict(config.runner),
         "environment": dataclasses.asdict(config.env),
         "source_algorithm_modified": False,
+        "io_adapter": "offline checkpoint artifact logging; online pruning disabled",
         "is_full_paper_reproduction": False,
     }
     (output / "resolved-config.json").write_text(
