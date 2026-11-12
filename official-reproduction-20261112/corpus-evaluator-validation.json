@@ -1,0 +1,28 @@
+{
+  "status": "syntax_checked_gpu_validation_pending",
+  "source_reference": "evaluate_lafan40.py at d34976b2b34367482b08be6a0d9e88eab9ee2d28",
+  "protocol_changes": [
+    "Full corpus evaluated in bounded batches; no membership filtering",
+    "Index order for same-batch comparison; stable descending length order for efficient full-corpus evaluation",
+    "Environment managers and actor history reset between batches; incomplete last batch padded and excluded from records",
+    "Nonfinite active rewards now fail explicitly; completed batch receipts survive interruption"
+  ],
+  "planned_gpu_checks": [
+    {
+      "num_envs": 40,
+      "order": "index",
+      "baseline": "lafan40-16k-1112e-full40",
+      "normalized_return_tolerance": 1e-06,
+      "step_tolerance": 0
+    },
+    {
+      "num_envs": 24,
+      "order": "length",
+      "baseline": "lafan40-16k-1112e-full40",
+      "normalized_return_tolerance": 0.001,
+      "step_tolerance": 5
+    }
+  ],
+  "full_corpus_verified": false,
+  "paper_equivalence_verified": false
+}
