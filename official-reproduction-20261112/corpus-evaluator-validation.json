@@ -1,5 +1,5 @@
 {
-  "status": "syntax_checked_gpu_validation_pending",
+  "status": "gpu_validation_submitted",
   "source_reference": "evaluate_lafan40.py at d34976b2b34367482b08be6a0d9e88eab9ee2d28",
   "protocol_changes": [
     "Full corpus evaluated in bounded batches; no membership filtering",
@@ -24,5 +24,25 @@
     }
   ],
   "full_corpus_verified": false,
-  "paper_equivalence_verified": false
+  "paper_equivalence_verified": false,
+  "cloud_job": {
+    "status": "queued",
+    "name": "supermimic-official-eval-260010076-1113c",
+    "display_name": "260010076-SuperMimic-corpus-eval-check-1113c",
+    "gpu": 1,
+    "vcpu": 4,
+    "ram_gib": 64,
+    "replicas": 1,
+    "max_restarts": 0,
+    "max_program_seconds": 2400,
+    "launcher_commit": "d4ea5d5ab20c313282dc89acf6acf44c7c217112",
+    "command_sha256": "6db72c969030faa18497334f35c9bda35729bdab26e7f967e7768cd26fc79a6b",
+    "purpose": "Verify corpus evaluator against completed 16k public-default full40; same 40 environments and then 24 environments with length ordering and last-batch padding",
+    "training": false,
+    "baseline_run": "lafan40-16k-1112e-full40",
+    "paper_results_reproduced": false,
+    "uid": "e383088ac7c844dc8994e90732ec21dd",
+    "created_at": "2026-11-13T01:01:43+08:00",
+    "platform_updated_at": "2026-11-13T01:01:45+08:00"
+  }
 }

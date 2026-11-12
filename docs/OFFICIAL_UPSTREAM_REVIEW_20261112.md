@@ -14,11 +14,13 @@ LAFAN40 使用同一冻结动作集、4096个训练环境、seed 42，评估从�
 
 归一化分母为完整参考帧数乘每步最大正回报0.1，提前失败后的剩余参考贡献零；并另存按参考帧数加权的汇总。论文汇总权重未获确认。公开默认16k唯一失败为 `fightAndSports1_subject4`，在131.06秒触发 `anchor_pos`。这是训练动作覆盖和原生回报，尚无严格姿态/接触质量或留出集结论。只有一个种子；适配版同时改变优化器、观测历史与调度，不能把提升归因于单项改动，编译缓存也使上述时长不适合直接比较算法效率。
 
-收据与逐条结果：[默认1k](../official-reproduction-20261112/lafan40-eager-pilot-summary.json)、[默认16k](../official-reproduction-20261112/lafan40-eager-16k-summary.json)、[适配1k](../official-reproduction-20261112/lafan40-paper-pilot-summary.json)。后两组逐条JSON由各自完整的40行云端日志重建，并与最终计数核对，记录了日志哈希；它们不是云端原始结果文件的逐字节下载副本。下一项有限实验以相同16,001步评估论文参数适配版。
+收据与逐条结果：[默认1k](../official-reproduction-20261112/lafan40-eager-pilot-summary.json)、[默认16k](../official-reproduction-20261112/lafan40-eager-16k-summary.json)、[适配1k](../official-reproduction-20261112/lafan40-paper-pilot-summary.json)。后两组逐条JSON由各自完整的40行云端日志重建，并与最终计数核对，记录了日志哈希；它们不是云端原始结果文件的逐字节下载副本。论文参数适配版的16,001步对照任务 `1113b` 已启动；01:01:46日志确认完成4,000步，尚无最终策略评估结果。任务一张H100、最多一小时、零自动重启。
 
 BONES 原始 G1 数据已完成下载与 SHA256 核验，142,220 条 CSV 全部转换成功，得到 51,915,358 个 50Hz 帧。转换仅适配原始厘米、角度和 Euler 字段，再调用作者的重采样及速度计算代码；未做名称筛选、可行性筛选或地面校准。5 条抽查与作者格式入口逐数组完全一致；内存有界打包在 16 条样本上与作者打包器完全一致。完整 13,575,450,990 字节压缩包已上传个人 AFS，服务器 SHA256 与本地一致；九个数据文件解包时的哈希均通过。解包器对附带校验清单的处理已修复并完成 16 条样本回归验证，云端九个数据文件已全部通过独立 SHA256 读回，最终目录为 `data/bones-packed-raw`，收据见 [bones-cloud-readback.json](../official-reproduction-20261112/bones-cloud-readback.json)。这些是未筛选的原始数据，尚不等于论文筛选后 129,514 条动作实验已复现。
 
 BONES 原始全库已在单张H100上完成1,001步论文参数适配版试跑，平台状态为成功，三个最终检查点数值有限。训练耗时358.59秒，PyTorch分配峰值约30.85GiB（不包含Warp及其他CUDA分配）。这证明当前配置可载入全库并进行训练；没有完成142,220条动作的全库策略评估。见 [BONES试跑收据](../official-reproduction-20261112/bones-raw-pilot-result.json)。
+
+新增 [分批全库评估入口](../official-reproduction-20261112/evaluate_motion_corpus.py) 复用上述原生评估协议，逐批重置环境及策略历史，并保留每条动作的结果和轨迹。按长度排序只改变批次顺序，不筛掉任何动作；完整结果必须含每个原始索引恰好一次。原始BONES在1024环境下，按原始顺序各批最长长度之和为184,425步，按长度排序为57,293步；这是参考长度计算，不是实际GPU速度实测。`1113c` 已提交，用同一默认16k检查点验证40环境同序评估及24环境排序分批评估，最长40分钟。比较包含全部失败，超出已声明容差会返回失败；GPU一致性和全库执行尚未验收，见 [验证状态](../official-reproduction-20261112/corpus-evaluator-validation.json)。
 
 以下静态审查与历史对照保留初次审查时的证据边界；当前执行合同见 [experiment-contract.json](../official-reproduction-20261112/experiment-contract.json)，数据验证见 [bones-data-validation.json](../official-reproduction-20261112/bones-data-validation.json)。官方源文件未修改；离线训练包装器替换 W&B 产物上传/清理逻辑，并提供显式 `--goal-backend eager` 对照开关；该开关调用作者相同的目标计算函数，绕过其单独的 Torch 编译包装。公开默认配置保持作者学习参数，论文适配版另改优化器、观测历史与学习率调度，不能用这些实验宣称官方原始性能复现。
 
