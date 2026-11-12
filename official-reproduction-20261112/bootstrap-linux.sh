@@ -12,6 +12,11 @@ conda_bin=$(command -v conda || true)
 if [[ -z "$conda_bin" && -x /opt/conda/bin/conda ]]; then
   conda_bin=/opt/conda/bin/conda
 fi
+# Reuse only the Conda executable; create a separate environment below our run root.
+existing_conda=/mnt/afs/260010076/sensecore-envs/miniforge3-26.7.2-0/bin/conda
+if [[ -z "$conda_bin" && -x "$existing_conda" ]]; then
+  conda_bin="$existing_conda"
+fi
 if [[ -z "$conda_bin" ]]; then
   conda_bin="$root/miniforge/bin/conda"
   if [[ ! -x "$conda_bin" ]]; then
@@ -27,6 +32,7 @@ fi
 export CONDA_PKGS_DIRS="$root/cache/conda"
 export UV_CACHE_DIR="$root/cache/uv"
 export PIP_DISABLE_PIP_VERSION_CHECK=1
+printf 'CONDA_EXECUTABLE=%s\n' "$conda_bin"
 if [[ ! -x "$prefix/bin/python" ]]; then
   "$conda_bin" create --prefix "$prefix" --override-channels --channel conda-forge python=3.13 pip -y
 fi
