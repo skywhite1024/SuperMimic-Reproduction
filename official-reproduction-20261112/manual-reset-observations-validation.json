@@ -12,7 +12,7 @@
     "evaluate_velocity_step.py": "0b66c84ac1e899cbed82e423bf3feec36f1f7ed0ba5766c03e781e994a9b9fcb",
     "evaluate_motion_corpus_v2.py": "b6d6e23e63e14b6b9c220da6f584561910f6451a3e26bb7bb3e1d1e438907f53"
   },
-  "real_g1_corrected_reset_verified": false,
+  "real_g1_corrected_reset_verified": true,
   "prior_gpu_gate_failure": {
     "uid": "0436486f0fef4750928f5e19f8eb3f39",
     "source_commit": "6775f001f85cc6da0d7f2c2d71ed4f7ccebb5605",
@@ -21,5 +21,10 @@
     "exit_code": 1
   },
   "original_motion_corpus_v1_sha256_unchanged": "6c43aa1f2dabd0f57aee60caa1440d76b61e2aca18fe96b019c9ce11839a715b",
-  "paper_results_reproduced": false
+  "paper_results_reproduced": false,
+  "gpu_validation": "velocity-step-gpu-validation.json",
+  "real_g1_reset_count": 5376,
+  "real_g1_trial_resets": 8,
+  "cached_vs_fresh_state_max_abs_difference": 4.448070526123047,
+  "real_g1_scope": "Both short21-step velocity models,672 worlds,4 trials each; fresh full states equal declared standing pose and physical state"
 }

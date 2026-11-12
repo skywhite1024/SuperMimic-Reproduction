@@ -1,0 +1,90 @@
+{
+  "status": "corrected_real_g1_standing_step_pipeline_verified",
+  "verified_at": "2026-11-13T07:23:15.291792+08:00",
+  "uid": "ac674d2c2b0a4a969521f48d71bb6cdd",
+  "source_commit": "b76a781afce26270925ef8689885c12d9d4edf08",
+  "source_files": {
+    "evaluate_velocity_step.py": "0b66c84ac1e899cbed82e423bf3feec36f1f7ed0ba5766c03e781e994a9b9fcb",
+    "paper_velocity_actor.py": "0b1be997d49ab74b26d0405eaf1e5f4c9be755fc50c3b7ad60f1e15cf98a81e0",
+    "paper_velocity_contract.py": "b8116384f1464d501d525c86f142abcae8ef94059aa8e25bcac45d611b8be5af",
+    "paper_velocity_runtime.py": "4ce5f9b470957cc958767dd0d95ac1d2cd2e8678719942c67d4ddd082f099c12",
+    "manual_reset_observations.py": "3933258bdcd8c80a30d3fc256bf3d82084ff9661f0d20c620bba07b518dc1f6d",
+    "emit_json_receipts.py": "e9ea4f9e3f66edbb8becd3e2a78f73ebf9a79b0fba701dc11f2be3f3f33c34bb"
+  },
+  "source_actor_training_steps": 21,
+  "purpose": "integration",
+  "models": {
+    "rl": {
+      "commands": 672,
+      "total_trials": 2688,
+      "fallen_trials": 2688,
+      "all_declared_initial_poses_verified": true,
+      "all_fall_commands": 672,
+      "median_defined_command_error": null,
+      "median_display_command_error": 0.9,
+      "elapsed_seconds": 112.71128087863326,
+      "trajectory": {
+        "file": "trajectories.npz",
+        "bytes": 21647475,
+        "sha256": "346f2e64479211dbc015c21015d527c6413bd6297b9efc1fd971d7be690c1d2f",
+        "saved_arrays_readback_verified": true,
+        "saved_falls_recomputed": true,
+        "saved_heading_velocity_recomputed_float64": true,
+        "heading_projection_tolerance": {
+          "rtol": 1e-05,
+          "atol": 1e-05
+        },
+        "command_scores_recomputed_from_saved_traces": true,
+        "padding": "NaN outside first-fall length"
+      }
+    },
+    "distill": {
+      "commands": 672,
+      "total_trials": 2688,
+      "fallen_trials": 2688,
+      "all_declared_initial_poses_verified": true,
+      "all_fall_commands": 672,
+      "median_defined_command_error": null,
+      "median_display_command_error": 0.9,
+      "elapsed_seconds": 44.78112046793103,
+      "trajectory": {
+        "file": "trajectories.npz",
+        "bytes": 17463589,
+        "sha256": "a4a7b42a12446c8557d522ce9206c975da87e9613ece1faf4d079238c1561a39",
+        "saved_arrays_readback_verified": true,
+        "saved_falls_recomputed": true,
+        "saved_heading_velocity_recomputed_float64": true,
+        "heading_projection_tolerance": {
+          "rtol": 1e-05,
+          "atol": 1e-05
+        },
+        "command_scores_recomputed_from_saved_traces": true,
+        "padding": "NaN outside first-fall length"
+      }
+    }
+  },
+  "all8_physical_reset_refreshes_verified": true,
+  "cached_vs_fresh_state_max_abs_differences": {
+    "rl": [
+      4.448070526123047,
+      4.448070526123047,
+      4.448070526123047,
+      4.448070526123047
+    ],
+    "distill": [
+      4.448070526123047,
+      4.448070526123047,
+      4.448070526123047,
+      4.448070526123047
+    ]
+  },
+  "original_json_receipts_verified": 4,
+  "receipt_ledger": "velocity-step-1113u-receipt-ledger.json",
+  "local_independent_recomputation": "velocity-step-1113u-comparison.json",
+  "trajectory_files_downloaded_locally": false,
+  "all_short_model_trials_fell": true,
+  "learned_velocity_control_quality_verified": false,
+  "paper_results_reproduced": false,
+  "repeatability_verified": false,
+  "initial_pose_author_confirmed": false
+}

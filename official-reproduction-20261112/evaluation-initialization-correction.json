@@ -21,5 +21,8 @@
     "Corrected v2 evaluation of320k final weights once complete"
   ],
   "preserve_legacy_results_and_failures": true,
-  "paper_results_reproduced": false
+  "paper_results_reproduced": false,
+  "corrected_real_g1_standing_gate_passed": true,
+  "gate_validation": "velocity-step-gpu-validation.json",
+  "complete_corrected_corpus_reevaluation_pending": true
 }

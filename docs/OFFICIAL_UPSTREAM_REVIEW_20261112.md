@@ -323,6 +323,14 @@ Step-test工具生成每平面224个非站立点、合计672个平面/格点身�
 
 新增 [手动重置刷新函数](../official-reproduction-20261112/manual_reset_observations.py)，按原生reset流程在最终姿态后对所有环境回填执行器历史，再forward/sense、重置观测缓存并显式 `compute(update_history=True)`。重新计算的full_state必须与当前物理状态一致，随后仍须通过原有默认站立姿态检查。使用真实原生ObservationManager和确定性张量/执行器夹具的 [回归检查](../official-reproduction-20261112/manual-reset-observations-validation.json) 已复现旧缓存返回并通过修复，1项、3.73秒；它不替代修正后真实G1验收。
 
-源码追查发现，本地旧 [LAFAN评估](../official-reproduction-20261112/evaluate_lafan40.py) 和 [完整动作评估v1](../official-reproduction-20261112/evaluate_motion_corpus.py) 同样在 `reset_to_frame` 后直接使用缓存读取。初始state/action上下文因此可能来自此前随机reset；10帧历史配置还会把该初始观测保留至后续历史替换完毕。这不否定原始文件校验和已记录分数的算术一致性，也不影响原生自动reset训练，但要求纠正首帧协议的科学资格并重新评估。具体分数变化尚未量化，不能假定修正一定提高成绩，也不能把旧的183条退化全部归因于此。
+源码追查发现，本地旧 [LAFAN评估](../official-reproduction-20261112/evaluate_lafan40.py) 和 [完整动作评估v1](../official-reproduction-20261112/evaluate_motion_corpus.py) 同样在 `reset_to_frame` 后直接使用缓存读取。初始state/action上下文因此来自此前env.reset的观测；这些评估设置 `sampling_mode=start`，原生reset会使用全库第0帧，而后续手动重置才移至各自参考片段。10帧历史配置还会把该初始观测保留至后续历史替换完毕。这不否定原始文件校验和已记录分数的算术一致性，也不影响原生自动reset训练，但要求纠正首帧协议的科学资格并重新评估。具体分数变化尚未量化，不能假定修正一定提高成绩，也不能把旧的183条退化全部归因于此。
 
 旧入口和所有原始收据保持不变，新增 [完整动作评估v2](../official-reproduction-20261112/evaluate_motion_corpus_v2.py) 使用上述刷新函数并在协议/结果标明版本2。完整纠正范围及后续工作见 [初始化协议纠正记录](../official-reproduction-20261112/evaluation-initialization-correction.json)：先通过修正后的G1站立验收，再对同一冻结1k/16k模型各重跑全部142,220条；320k作业继续执行其冻结版本，旧最终评估将保留并另做v2评估。当前三项训练计划不变，速度RL已观察8,551步、蒸馏6,631步，指标有限；两个100k结果仍未完成。官方HEAD另于11月13日重新查询，仍为固定的 `abc124c1`。
+
+## 19. 修正后站立评估真实GPU验收完成（11月13日07:18）
+
+新作业 `1113u` 使用固定提交 `b76a781`，07:15:01开始、07:18:49成功退出0。两模型各672个命令、每命令4次试验，共5,376次；全部完整71D初始状态符合声明站立姿态及实际物理状态，四次批量重置/模型均刷新缓存并回填执行器历史。刷新前后full_state的最大分量差为4.44807，八次均非零；这是混合量纲状态分量差，不解释为位置误差。修正后保持原严格姿态门槛通过，支持先前失败由缓存观测引起的判断。见 [GPU流程验收](../official-reproduction-20261112/velocity-step-gpu-validation.json)。
+
+这两份模型仅训练21步，**每模型2,688次试验全部跌倒，672个命令全部all-fall**。原始中位误差为null，0.9仅作为图示上限；没有把失败记成有限误差平局，也没有报告已学会速度控制。完整保存首次跌倒前轨迹，服务器重新读取NPZ验证有效值与无效NaN填充、从保存状态复算首次跌倒和float64 heading速度、从保存速度复算全部命令得分。两份轨迹文件合计39,111,064字节，尚未下载本机。
+
+四份结果/协议原文件已完整恢复并核对字节数和SHA256，见 [收据清单](../official-reproduction-20261112/velocity-step-1113u-receipt-ledger.json)。[独立比较工具](../official-reproduction-20261112/compare_velocity_step_results.py) 又使用Python statistics核对全部672条计数及中位数；[比较记录](../official-reproduction-20261112/velocity-step-1113u-comparison.json) 保留672个双方all-fall，有限误差平局为0。该流程验收与21步模型的控制能力是不同结论；100k模型仍在训练，完成后使用同一修正协议评估。下一项有限实验是修正后的v2动作评估，先验证固定LAFAN40模型，再对原1k/16k冻结模型各重评全部142,220条，并保留所有旧版成绩及失败。

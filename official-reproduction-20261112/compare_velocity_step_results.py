@@ -39,6 +39,11 @@ def inspect(folder, mode, purpose):
         raise ValueError("Experimental comparison requires both complete100k actors")
     if not result["all_declared_initial_poses_verified"]:
         raise ValueError("Standing initialization was not verified")
+    refreshes = protocol.get("manual_reset_refreshes", [])
+    if len(refreshes) != 4 or not all(item["current_physical_state_verified"]
+            and item["observation_cache_reset_and_recomputed"] and item["actuator_histories_backfilled"]
+            for item in refreshes):
+        raise ValueError("Complete fresh physical resets and observation histories are required")
     records = result["records"]
     if len(records) != 672 or [r["index"] for r in records] != list(range(672)):
         raise ValueError("Complete unique ordered command identities are required")

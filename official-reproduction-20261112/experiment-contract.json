@@ -681,6 +681,20 @@
       "exit_code": 1,
       "error": "Observed initial state differs from the declared standing pose"
     },
-    "evaluation_initialization_correction": "evaluation-initialization-correction.json"
+    "evaluation_initialization_correction": "evaluation-initialization-correction.json",
+    "velocity_step_corrected_integration": {
+      "status": "completed_and_all_four_exact_receipts_verified",
+      "uid": "ac674d2c2b0a4a969521f48d71bb6cdd",
+      "source_commit": "b76a781afce26270925ef8689885c12d9d4edf08",
+      "started_at": "2026-11-13T07:15:01+08:00",
+      "program_deadline": "2026-11-13T08:05:01+08:00",
+      "source_and_model_result_hashes_verified": true,
+      "trial_gate_passed": true,
+      "paper_results_reproduced": false,
+      "exit_code": 0,
+      "gpu_validation": "velocity-step-gpu-validation.json",
+      "all_short_model_trials_fell": true,
+      "learned_control_quality_verified": false
+    }
   }
 }

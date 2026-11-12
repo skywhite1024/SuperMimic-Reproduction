@@ -1,0 +1,47 @@
+{
+  "status": "four_original_step_test_json_receipts_sha256_verified",
+  "log_bytes": 89958,
+  "log_lines": 541,
+  "log_sha256": "17e22662be996f017f010a2826acf55595f050d79a55c41042a3c33142685247",
+  "uid": "ac674d2c2b0a4a969521f48d71bb6cdd",
+  "exit_code": 0,
+  "completed_at": "2026-11-13T07:18:49+08:00",
+  "receipts": [
+    {
+      "i": 0,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/velocity-rl-step-integration-1113u/result.json",
+      "bytes": 269113,
+      "sha256": "1d956fb8dd2f76fa985171cc3fce4746ef633c96764267ee757fb1f4f7de3edc",
+      "chunks": 28,
+      "file": "velocity-rl-step-1113u-result.json",
+      "original_bytes_verified": true
+    },
+    {
+      "i": 1,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/velocity-rl-step-integration-1113u/protocol.json",
+      "bytes": 113691,
+      "sha256": "342e0a902c524adeab07a1a5bc3ead0e8a2be793a8fd49e186023d619672e87b",
+      "chunks": 28,
+      "file": "velocity-rl-step-1113u-protocol.json",
+      "original_bytes_verified": true
+    },
+    {
+      "i": 2,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/velocity-distill-step-integration-1113u/result.json",
+      "bytes": 269117,
+      "sha256": "39a74cbbf4fdeeed5ebcd9ba33a63563b2d7bbaa6e1841d6700e12846afc1225",
+      "chunks": 28,
+      "file": "velocity-distill-step-1113u-result.json",
+      "original_bytes_verified": true
+    },
+    {
+      "i": 3,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/velocity-distill-step-integration-1113u/protocol.json",
+      "bytes": 113702,
+      "sha256": "30328c944263874647021328df83691f0566d22ae9cc0d6a7bdc5108f504b2d9",
+      "chunks": 28,
+      "file": "velocity-distill-step-1113u-protocol.json",
+      "original_bytes_verified": true
+    }
+  ]
+}

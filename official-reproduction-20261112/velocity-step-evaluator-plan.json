@@ -1,9 +1,9 @@
 {
-  "status": "cpu_manual_reset_fix_passed_awaiting_corrected_gpu_gate",
+  "status": "corrected_real_g1_gpu_integration_passed",
   "entrypoint": "evaluate_velocity_step.py",
   "sha256": "0b66c84ac1e899cbed82e423bf3feec36f1f7ed0ba5766c03e781e994a9b9fcb",
   "static_syntax_checked": true,
-  "real_g1_execution_verified": false,
+  "real_g1_execution_verified": true,
   "predeclared_gpu_gate": {
     "models": "Completed RL and distill21-step actors, no100k score claim",
     "grid_identities_per_model": 672,
@@ -30,5 +30,7 @@
   "manual_reset_helper": "manual_reset_observations.py",
   "manual_reset_helper_sha256": "3933258bdcd8c80a30d3fc256bf3d82084ff9661f0d20c620bba07b518dc1f6d",
   "prior_gpu_job_failed": true,
-  "prior_failure": "Initial pose guard rejected cached observations"
+  "prior_failure": "Initial pose guard rejected cached observations",
+  "gpu_validation": "velocity-step-gpu-validation.json",
+  "learned_control_quality_verified": false
 }
