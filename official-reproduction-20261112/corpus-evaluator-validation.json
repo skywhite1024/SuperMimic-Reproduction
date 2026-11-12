@@ -1,5 +1,5 @@
 {
-  "status": "same_environment_comparison_failed",
+  "status": "same_env_mismatch_and_legacy_repeatability_failure_confirmed",
   "source_reference": "evaluate_lafan40.py at d34976b2b34367482b08be6a0d9e88eab9ee2d28",
   "protocol_changes": [
     "Full corpus evaluated in bounded batches; no membership filtering",
@@ -50,5 +50,56 @@
   "legacy_full40_successes": 39,
   "batched_single_batch_successes": 38,
   "second_batching_check_executed": false,
-  "reason": "Same 40-env index order produced a different result; need trajectory diagnosis and an unchanged legacy rerun before attribution"
+  "reason": "Same 40-env index order produced a different result; need trajectory diagnosis and an unchanged legacy rerun before attribution",
+  "trajectory_diagnosis": {
+    "status": "comparison_completed",
+    "clips": 40,
+    "same_frozen_motion_hashes": true,
+    "same_checkpoint_hashes": true,
+    "first_state_exact_clips": 40,
+    "first_action_exact_clips": 40,
+    "same_success_clips": 39,
+    "reference_protocol_seed": 42,
+    "candidate_protocol_seed": 42,
+    "causal_limit": "Locates divergence; does not by itself attribute it to evaluator code or numerical simulation"
+  },
+  "repeat_diagnostic_job": {
+    "status": "succeeded",
+    "name": "supermimic-official-repeat-260010076-1113d",
+    "display_name": "260010076-SuperMimic-eval-repeat-diagnostic-1113d",
+    "gpu": 1,
+    "vcpu": 4,
+    "ram_gib": 64,
+    "replicas": 1,
+    "max_restarts": 0,
+    "max_program_seconds": 1800,
+    "launcher_commit": "c602ec5e4a1f2cc124cde97b1f9eb90203072621",
+    "command_sha256": "be33103a23496c7a2c976b02fae6eeed79f8471ef9043f14080e01520783e06a",
+    "purpose": "Locate first saved trajectory divergence and rerun unchanged legacy evaluator to distinguish code changes from numerical repeatability",
+    "training": false,
+    "reference": "lafan40-16k-1112e-full40",
+    "candidate": "corpus-eval-regression-1113c-40",
+    "comparison_mismatch_exit_2": "retained as a diagnosed difference; not considered tool execution failure",
+    "paper_results_reproduced": false,
+    "uid": "c85fc002be164fef8478deb54c0476bd",
+    "created_at": "2026-11-13T01:24:33+08:00",
+    "platform_updated_at": "2026-11-13T01:24:34+08:00",
+    "command_clipboard_exact_match": true,
+    "program_started_at": "2026-11-13T01:24:48+08:00",
+    "program_deadline": "2026-11-13T01:54:48+08:00",
+    "evaluation_completed_at": "2026-11-13T01:32:22.185+08:00",
+    "comparison_completed_at": "2026-11-13T01:32:32.197+08:00"
+  },
+  "comparison_report": "original-vs-batched-comparison.json",
+  "trajectory_report": "original-vs-batched-trajectories.json",
+  "legacy_repeat": {
+    "successes": 40,
+    "original_successes": 39,
+    "elapsed_seconds": 414.47462831810117,
+    "same_success_clips": 39,
+    "max_step_difference": 5704,
+    "max_normalized_return_difference": 0.3806537451063013,
+    "comparison_passed_clips": 1,
+    "claim": "Unchanged legacy evaluator is not repeatable in this runtime; batched evaluator equivalence remains unproven"
+  }
 }

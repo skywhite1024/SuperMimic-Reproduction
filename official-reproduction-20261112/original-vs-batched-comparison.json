@@ -1,0 +1,383 @@
+{
+  "status": "difference_requires_review",
+  "scope": "40-clip outcome and return comparison; not trajectory equality or physics qualification",
+  "reference_sha256": "367d369c144471e03e1830fcfd5199d57c5eded38422b5456366465e4488e86c",
+  "candidate_sha256": "03f58fb8e244109b831447b5cd34aa8ed18305654a113e2957e67c80dd839bd2",
+  "candidate_num_envs": 40,
+  "candidate_batch_order": "index",
+  "tolerances": {
+    "normalized_return": 1e-06,
+    "steps": 0
+  },
+  "same_success_count": 39,
+  "passed_clips": 0,
+  "max_normalized_return_difference": 0.7441988996077302,
+  "max_step_difference": 11007,
+  "records": [
+    {
+      "index": 0,
+      "name": "dance1_subject1",
+      "same_success": true,
+      "same_termination_terms": true,
+      "step_difference": 0,
+      "normalized_return_difference": 6.805540830041993e-05,
+      "passed": false
+    },
+    {
+      "index": 1,
+      "name": "dance1_subject2",
+      "same_success": true,
+      "same_termination_terms": true,
+      "step_difference": 0,
+      "normalized_return_difference": 0.0010416730286359132,
+      "passed": false
+    },
+    {
+      "index": 2,
+      "name": "dance1_subject3",
+      "same_success": true,
+      "same_termination_terms": true,
+      "step_difference": 0,
+      "normalized_return_difference": 0.0003168352655465747,
+      "passed": false
+    },
+    {
+      "index": 3,
+      "name": "dance2_subject1",
+      "same_success": true,
+      "same_termination_terms": true,
+      "step_difference": 0,
+      "normalized_return_difference": 0.0016600720089844083,
+      "passed": false
+    },
+    {
+      "index": 4,
+      "name": "dance2_subject2",
+      "same_success": true,
+      "same_termination_terms": true,
+      "step_difference": 0,
+      "normalized_return_difference": 0.0008312238245616142,
+      "passed": false
+    },
+    {
+      "index": 5,
+      "name": "dance2_subject3",
+      "same_success": true,
+      "same_termination_terms": true,
+      "step_difference": 0,
+      "normalized_return_difference": 0.0007685203863210772,
+      "passed": false
+    },
+    {
+      "index": 6,
+      "name": "dance2_subject4",
+      "same_success": true,
+      "same_termination_terms": true,
+      "step_difference": 0,
+      "normalized_return_difference": 7.461812550209275e-05,
+      "passed": false
+    },
+    {
+      "index": 7,
+      "name": "dance2_subject5",
+      "same_success": true,
+      "same_termination_terms": true,
+      "step_difference": 0,
+      "normalized_return_difference": 0.00024872694992503555,
+      "passed": false
+    },
+    {
+      "index": 8,
+      "name": "fallAndGetUp1_subject1",
+      "same_success": true,
+      "same_termination_terms": true,
+      "step_difference": 0,
+      "normalized_return_difference": 0.0006306298088622056,
+      "passed": false
+    },
+    {
+      "index": 9,
+      "name": "fallAndGetUp1_subject4",
+      "same_success": true,
+      "same_termination_terms": true,
+      "step_difference": 0,
+      "normalized_return_difference": 0.0058986688164068225,
+      "passed": false
+    },
+    {
+      "index": 10,
+      "name": "fallAndGetUp1_subject5",
+      "same_success": true,
+      "same_termination_terms": true,
+      "step_difference": 0,
+      "normalized_return_difference": 0.0005808037388708826,
+      "passed": false
+    },
+    {
+      "index": 11,
+      "name": "fallAndGetUp2_subject2",
+      "same_success": true,
+      "same_termination_terms": true,
+      "step_difference": 0,
+      "normalized_return_difference": 0.0033126093979912188,
+      "passed": false
+    },
+    {
+      "index": 12,
+      "name": "fallAndGetUp2_subject3",
+      "same_success": true,
+      "same_termination_terms": true,
+      "step_difference": 0,
+      "normalized_return_difference": 0.007556679587231257,
+      "passed": false
+    },
+    {
+      "index": 13,
+      "name": "fallAndGetUp3_subject1",
+      "same_success": true,
+      "same_termination_terms": true,
+      "step_difference": 0,
+      "normalized_return_difference": 0.0019289642820500433,
+      "passed": false
+    },
+    {
+      "index": 14,
+      "name": "fight1_subject2",
+      "same_success": true,
+      "same_termination_terms": true,
+      "step_difference": 0,
+      "normalized_return_difference": 0.001745842582161597,
+      "passed": false
+    },
+    {
+      "index": 15,
+      "name": "fight1_subject3",
+      "same_success": true,
+      "same_termination_terms": true,
+      "step_difference": 0,
+      "normalized_return_difference": 0.0007151439481702983,
+      "passed": false
+    },
+    {
+      "index": 16,
+      "name": "fight1_subject5",
+      "same_success": true,
+      "same_termination_terms": true,
+      "step_difference": 0,
+      "normalized_return_difference": 0.00018588858965403385,
+      "passed": false
+    },
+    {
+      "index": 17,
+      "name": "fightAndSports1_subject1",
+      "same_success": false,
+      "same_termination_terms": false,
+      "step_difference": 11007,
+      "normalized_return_difference": 0.7441988996077302,
+      "passed": false
+    },
+    {
+      "index": 18,
+      "name": "fightAndSports1_subject4",
+      "same_success": true,
+      "same_termination_terms": true,
+      "step_difference": 1,
+      "normalized_return_difference": 0.002160512444011498,
+      "passed": false
+    },
+    {
+      "index": 19,
+      "name": "jumps1_subject1",
+      "same_success": true,
+      "same_termination_terms": true,
+      "step_difference": 0,
+      "normalized_return_difference": 0.0005054207586667635,
+      "passed": false
+    },
+    {
+      "index": 20,
+      "name": "jumps1_subject2",
+      "same_success": true,
+      "same_termination_terms": true,
+      "step_difference": 0,
+      "normalized_return_difference": 0.006645987484948698,
+      "passed": false
+    },
+    {
+      "index": 21,
+      "name": "jumps1_subject5",
+      "same_success": true,
+      "same_termination_terms": true,
+      "step_difference": 0,
+      "normalized_return_difference": 0.0007265967285988121,
+      "passed": false
+    },
+    {
+      "index": 22,
+      "name": "run1_subject2",
+      "same_success": true,
+      "same_termination_terms": true,
+      "step_difference": 0,
+      "normalized_return_difference": 0.0005764936580759013,
+      "passed": false
+    },
+    {
+      "index": 23,
+      "name": "run1_subject5",
+      "same_success": true,
+      "same_termination_terms": true,
+      "step_difference": 0,
+      "normalized_return_difference": 0.0006380843202416745,
+      "passed": false
+    },
+    {
+      "index": 24,
+      "name": "run2_subject1",
+      "same_success": true,
+      "same_termination_terms": true,
+      "step_difference": 0,
+      "normalized_return_difference": 0.0007782811639053974,
+      "passed": false
+    },
+    {
+      "index": 25,
+      "name": "run2_subject4",
+      "same_success": true,
+      "same_termination_terms": true,
+      "step_difference": 0,
+      "normalized_return_difference": 0.0003173500975063935,
+      "passed": false
+    },
+    {
+      "index": 26,
+      "name": "sprint1_subject2",
+      "same_success": true,
+      "same_termination_terms": true,
+      "step_difference": 0,
+      "normalized_return_difference": 0.00022682114425167117,
+      "passed": false
+    },
+    {
+      "index": 27,
+      "name": "sprint1_subject4",
+      "same_success": true,
+      "same_termination_terms": true,
+      "step_difference": 0,
+      "normalized_return_difference": 0.0006197981305058126,
+      "passed": false
+    },
+    {
+      "index": 28,
+      "name": "walk1_subject1",
+      "same_success": true,
+      "same_termination_terms": true,
+      "step_difference": 0,
+      "normalized_return_difference": 0.0003020054183600417,
+      "passed": false
+    },
+    {
+      "index": 29,
+      "name": "walk1_subject2",
+      "same_success": true,
+      "same_termination_terms": true,
+      "step_difference": 0,
+      "normalized_return_difference": 9.779212062617601e-05,
+      "passed": false
+    },
+    {
+      "index": 30,
+      "name": "walk1_subject5",
+      "same_success": true,
+      "same_termination_terms": true,
+      "step_difference": 0,
+      "normalized_return_difference": 0.0004343406967140167,
+      "passed": false
+    },
+    {
+      "index": 31,
+      "name": "walk2_subject1",
+      "same_success": true,
+      "same_termination_terms": true,
+      "step_difference": 0,
+      "normalized_return_difference": 0.00015368057310566192,
+      "passed": false
+    },
+    {
+      "index": 32,
+      "name": "walk2_subject3",
+      "same_success": true,
+      "same_termination_terms": true,
+      "step_difference": 0,
+      "normalized_return_difference": 0.0006513795556164436,
+      "passed": false
+    },
+    {
+      "index": 33,
+      "name": "walk2_subject4",
+      "same_success": true,
+      "same_termination_terms": true,
+      "step_difference": 0,
+      "normalized_return_difference": 0.0002448942028352041,
+      "passed": false
+    },
+    {
+      "index": 34,
+      "name": "walk3_subject1",
+      "same_success": true,
+      "same_termination_terms": true,
+      "step_difference": 0,
+      "normalized_return_difference": 1.1171278858037868e-05,
+      "passed": false
+    },
+    {
+      "index": 35,
+      "name": "walk3_subject2",
+      "same_success": true,
+      "same_termination_terms": true,
+      "step_difference": 0,
+      "normalized_return_difference": 0.0021808329305309667,
+      "passed": false
+    },
+    {
+      "index": 36,
+      "name": "walk3_subject3",
+      "same_success": true,
+      "same_termination_terms": true,
+      "step_difference": 0,
+      "normalized_return_difference": 0.0003697768647675966,
+      "passed": false
+    },
+    {
+      "index": 37,
+      "name": "walk3_subject4",
+      "same_success": true,
+      "same_termination_terms": true,
+      "step_difference": 0,
+      "normalized_return_difference": 0.0002284571389465202,
+      "passed": false
+    },
+    {
+      "index": 38,
+      "name": "walk3_subject5",
+      "same_success": true,
+      "same_termination_terms": true,
+      "step_difference": 0,
+      "normalized_return_difference": 0.00022372744017375875,
+      "passed": false
+    },
+    {
+      "index": 39,
+      "name": "walk4_subject1",
+      "same_success": true,
+      "same_termination_terms": true,
+      "step_difference": 0,
+      "normalized_return_difference": 2.4839204846503618e-05,
+      "passed": false
+    }
+  ],
+  "retrieval": {
+    "method": "Reconstructed from complete JSON stdout records copied from ACP live log; not byte-identical download of AFS JSON",
+    "job_uid": "c85fc002be164fef8478deb54c0476bd",
+    "local_log_sha256": "cc52dc2e85dd232e43320d897b308e0439f187eb2b1d42e07dda7bbfe68bc939"
+  }
+}
