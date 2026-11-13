@@ -1,0 +1,72 @@
+{
+  "status": "running_input_preflight_passed",
+  "submitted": true,
+  "name": "supermimic-official-wm-forecast-260010076-1113af",
+  "display_name": "260010076-SuperMimic-WM-8transition-1113af",
+  "gpu": 1,
+  "vcpu": 4,
+  "ram_gib": 64,
+  "replicas": 1,
+  "max_restarts": 0,
+  "max_program_seconds": 1800,
+  "worker_timeout_seconds": 1500,
+  "source_commit": "613db399749058fb29db53e58af05ac338703976",
+  "source_files": {
+    "evaluate_saved_wm_forecasts.py": "b352013cecd18e3d6feb05ae8d079d148f45fffabdf2cf00cdbdb0e3ef971ad3",
+    "emit_json_receipts.py": "e9ea4f9e3f66edbb8becd3e2a78f73ebf9a79b0fba701dc11f2be3f3f33c34bb",
+    "trajectory-ledger.csv": "a2f93b21ecca6fa4c4a28b5fb6a6380270ec75c514777dc46d9aefcb6e0982cd"
+  },
+  "native_wm_learner_sha256": "1e2d489a607677032d9d90de2511c2e8e1750bd845dcc7966026f23a65842665",
+  "command_sha256": "829070af7ebca4af215797984c3beac31ee21ddb55033598a8abb9c224e27b8c",
+  "bootstrap_characters": 16205,
+  "models": {
+    "1k": {
+      "collection_steps": 1001,
+      "checkpoint": {
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan40-paper-1112f/logs/SuperMimic-GenCoord-G1/2026-11-12_16-04-42/world_model.pt",
+        "bytes": 34990357,
+        "sha256": "e2b0736ba77c73a86f631c86ecebd065a70c61b6c53bdc0255d011f395e634be"
+      }
+    },
+    "16k": {
+      "collection_steps": 16001,
+      "checkpoint": {
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan40-paper-16k-1113b/logs/SuperMimic-GenCoord-G1/2026-11-12_16-51-53/world_model.pt",
+        "bytes": 34990357,
+        "sha256": "1a6d71ed51a03b5a96c3e2be35b7c21429dda4dbb659d82af93f53d66d2bcbc0"
+      }
+    }
+  },
+  "windows_per_model": 437276,
+  "forecast_transitions": 8,
+  "trajectories": 40,
+  "failed_trajectories_included": 1,
+  "hypothesis": "Measure1..8transition native nominal-weighted forecast errors of frozen1k/16k WMs on every complete identical correctedLAFAN40 physical trajectory window",
+  "acceptance": [
+    "Both exact frozenWM hashes and nativefunction source verified",
+    "All437276windows/model complete with no crossclip windows",
+    "All per-window8x4 rawgroupMSE retained and reread",
+    "Everyclip first/last window rawphysical errors independently recomputed inNumPy",
+    "Exact result/protocol and originalfourtrainingJSON receipts recovered"
+  ],
+  "output": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/wm-forecast-8transition-1113af",
+  "expected_original_json_receipts": 6,
+  "online_paper_distribution_reproduced": false,
+  "dataset_scale_sweep_completed": false,
+  "exact_paper_aggregation_confirmed": false,
+  "paper_results_reproduced": false,
+  "local_bash_syntax_passed": true,
+  "embedded_python_ast_passed": true,
+  "bootstrap_roundtrip_passed": true,
+  "created_at": "2026-11-13T11:50:51+08:00",
+  "command_dom_readback_exact": true,
+  "command_dom_readback_characters": 16205,
+  "current_task_requested_gpu_total": 2,
+  "uid": "18a7ab96e67544508413c3724310daba",
+  "started_at": "2026-11-13T11:51:08+08:00",
+  "program_deadline": "2026-11-13T12:21:08+08:00",
+  "program_kill_deadline": "2026-11-13T12:21:38+08:00",
+  "input_models_data_ledger_and_native_source_hashes_verified": true,
+  "actual_worker_sha256": "b352013cecd18e3d6feb05ae8d079d148f45fffabdf2cf00cdbdb0e3ef971ad3",
+  "progress_evidence": "wm-forecast-8transition-1113af-progress1.txt"
+}
