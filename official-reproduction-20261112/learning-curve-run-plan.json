@@ -1,0 +1,97 @@
+{
+  "status": "prepared_not_submitted",
+  "submitted": false,
+  "name": "supermimic-official-lafan-curve-260010076-1113ag",
+  "display_name": "260010076-SuperMimic-LAFAN-curve-64k-1113ag",
+  "gpu": 1,
+  "vcpu": 4,
+  "ram_gib": 64,
+  "replicas": 1,
+  "max_restarts": 0,
+  "max_program_seconds": 25200,
+  "forced_kill_after_seconds": 30,
+  "global_timeout_overrides_sum_of_stage_limits": true,
+  "source_commit": "2cb77b9612fc9b4c8f0813aedab2e72b6d5f4207",
+  "source_files": {
+    "run_lafan_learning_curve.py": "47bb4f5f26984d0f986c7c05ed7d28bf758868f78c9bd2e4202ae3975d416deb",
+    "run_lafan_pilot.py": "c037a29917cb7eaabf4cf6a1f0f0347d835349f0547a96daece452e92b7b727c",
+    "paper_profile.py": "1c9f5f6efe7fb9858b8d0a285b40bb17f111e7303f12d8f76b28aae455f656b9",
+    "checkpoint_series.py": "4259461a2eb5989e2171de4eab7b726b7d8fbbd650f5b4e7fe76746a35236264",
+    "select_completed_checkpoint.py": "2c36b36006375345ee51e87fbb237a7552321dbec6258812a6da21360de84542",
+    "evaluate_motion_corpus_v2.py": "6d53c5b7292513c2aef77765a4954a88a1600d355c5217fec47a36b499a20351",
+    "manual_reset_observations.py": "3933258bdcd8c80a30d3fc256bf3d82084ff9661f0d20c620bba07b518dc1f6d",
+    "audit_corpus_result.py": "86ab207b9435b03b6203d13338a441d9951c34307a3a359321cad4ad8c29676d",
+    "audit_saved_trajectories.py": "cf9e186d350f41d4287bfe962674c79f08f5d0874ea13034c02f4b4721d17163",
+    "audit_saved_initial_states_v2.py": "a4e3edc99cfdf09c96028f6fbb76bd8764c1fda6a6c6b5fcb4019ff65e0ef762",
+    "emit_json_receipts.py": "e9ea4f9e3f66edbb8becd3e2a78f73ebf9a79b0fba701dc11f2be3f3f33c34bb"
+  },
+  "native_runner_sha256": "c19751a691cabfe579da973d9c384b7355c545292bdb7748155978a9d9d78d59",
+  "command_sha256": "f787cf65d5f4b320e8109812b4d888a66acf0423443d35187478b8427e0890bd",
+  "bootstrap_characters": 37773,
+  "canonical_motion_hashes": {
+    "joint_names.json": "30355b480e4f89c97a693c72f8baf23902fd458d25e49b5df4741dd47aefce0d",
+    "joint_pos.npy": "64f0dff0d2e0d678a1f78213233124588044ba5781aa599c31b08d1348509a9b",
+    "joint_vel.npy": "11efc4b4b37b0818ea25a2dfa8676ed8f564a3443c97bf9c9680a346c06b23e0",
+    "motion_ends.npy": "fa4db64df8fe4d1f9362883b8c7b32d303a3865aeeab1c92fad0e89144cf8be5",
+    "motion_names.json": "b2b46cceb62efa50b159e13928b4c991b80b27a59b381ed603392cfa87e3c8b9",
+    "root_ang_vel_w.npy": "88ff137fd4a6dde1626dceae086c8a810da624d650855d69af1adc052565f9b5",
+    "root_lin_vel_w.npy": "7738f75d8de3b070a1d6407a06e1a971d5723abccc1e46a90a1aa86e93c486a0",
+    "root_pos_w.npy": "a57c5a8efc209c345ea4f7d83ef36936c0edfefb60f137757af69c6f4f7272fe",
+    "root_quat_w.npy": "9934171fce73559ec04d63db2bafee95575cd46196fe39aea425d677eae5303e"
+  },
+  "integration": {
+    "collection_steps": 21,
+    "checkpoint_interval": 10,
+    "retained_steps": [
+      1,
+      11,
+      21
+    ],
+    "evaluation_steps": [
+      11
+    ],
+    "training_timeout_seconds": 900,
+    "evaluation_timeout_seconds": 600,
+    "expected_original_json_receipts": 9
+  },
+  "main": {
+    "collection_steps": 64001,
+    "checkpoint_interval": 4000,
+    "retained_snapshots": 17,
+    "evaluation_steps": [
+      1,
+      8001,
+      16001,
+      24001,
+      32001,
+      40001,
+      48001,
+      56001,
+      64001
+    ],
+    "training_timeout_seconds": 14400,
+    "per_point_evaluation_timeout_seconds": 900,
+    "per_audit_timeout_seconds": 180,
+    "expected_original_json_receipts": 49
+  },
+  "gates": [
+    "Actual short native CUDA training completes with three distinct world-model snapshots",
+    "All intermediate hashes and monotonic asynchronous availability observations verified",
+    "Step11 selected from completed21-step parent, all40 native trajectories and saved arrays audited",
+    "Only after integration passes start fresh64001-collection training",
+    "All nine fixed evaluations retain all failures, full-reference denominators and independent saved-array audits"
+  ],
+  "threshold_convention": "First observed sampledcheckpoint >=0.82; no exact crossing/interpolation",
+  "timing_definition": "Program-entry and runner.run-entry monotonic elapsed times; snapshot availability after asynchronous callback; includes warmup/save overhead; evalaftertraining",
+  "seed": 42,
+  "training_profile": "paper-a5-single-gpu",
+  "goal_backend": "author eager goal math",
+  "evaluation_protocol": "manual-reset-v2",
+  "output": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-curve-64k-1113ag",
+  "matched_ppo_sim_completed": false,
+  "multiseed": false,
+  "paper_results_reproduced": false,
+  "local_bash_syntax_passed": true,
+  "embedded_python_ast_passed": true,
+  "bootstrap_roundtrip_passed": true
+}
