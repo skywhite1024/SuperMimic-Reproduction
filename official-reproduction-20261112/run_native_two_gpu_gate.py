@@ -64,6 +64,9 @@ def main():
         raise RuntimeError('Exactly two allocated visible GPUs and two torchrun ranks required')
     rank=int(os.environ['RANK']);local_rank=int(os.environ['LOCAL_RANK'])
     torch.cuda.set_device(local_rank)
+    properties=torch.cuda.get_device_properties(local_rank)
+    if 'H100' not in properties.name or properties.total_memory<75_000_000_000:
+        raise RuntimeError('This fixed integration requires full-memory H100 GPUs')
     dist.init_process_group('nccl',timeout=timedelta(seconds=180),device_id=torch.device(f'cuda:{local_rank}'))
     output=args.output.resolve();motions=args.motions.resolve()
     env=None;report=dict(status='starting',rank=rank,local_rank=local_rank,world_size=2,
@@ -111,14 +114,14 @@ def main():
         modules=dict(dynamics=runner._dynamics,actor=runner.policy_learner.actor,critic=runner.policy_learner.critic)
         report['initial_model_state_hashes']={name:model_hash(module) for name,module in modules.items()}
         report['initial_learned_parameter_hashes']={name:parameter_hash(module) for name,module in modules.items()}
+        report['sim_context_state_sha256']=model_hash(runner._sim_context)
         report['gpu']=torch.cuda.get_device_name(local_rank)
         report['device_properties']=str(torch.cuda.get_device_properties(local_rank))
         torch.manual_seed(42+rank)
-        with torch.inference_mode():
-            env.reset();runner._seed_sim_history()
-            first=env.get_observations()['full_state']
-            assert torch.isfinite(first).all()
-            report['initial_real_state_sha256']=tensor_hash(first)
+        env.reset();runner._seed_sim_history()
+        first=env.get_observations()['full_state']
+        assert torch.isfinite(first).all()
+        report['initial_real_state_sha256']=tensor_hash(first)
         should_train=Ratio(env.num_envs/cfg.runner.wm.num_batches/cfg.runner.wm.batch_size/
             cfg.runner.wm.horizon*cfg.runner.replay_ratio)
         started=time.monotonic();outer_updates=0;local_sim_steps=0;observations=[]
@@ -135,7 +138,9 @@ def main():
                 outer_updates+=1
             row=dict(collection_steps=step+1,local_simulator_steps=local_sim_steps,
                 native_learner_outer_updates=outer_updates,
+                learning_rate=float(optimizers[0].param_groups[0]['lr']),
                 optimizer_steps=dict(runner._native_dp_optimizer_counts))
+            assert math.isclose(row['learning_rate'],math.sqrt(2)*cosine_lr(step),rel_tol=1e-6)
             if (step+1) in (1,11,21):
                 row['model_state_hashes']={name:model_hash(module) for name,module in modules.items()}
                 observations.append(row)
@@ -154,7 +159,10 @@ def main():
             path=folder/name;torch.save(payload,path)
             loaded=torch.load(path,map_location=device,weights_only=True)
             if name=='world_model.pt':
-                assert all(torch.equal(loaded['dynamics'][key],value) for key,value in runner._dynamics.state_dict().items())
+                assert set(loaded)=={'dynamics','sim_context'}
+                for part,module in [('dynamics',runner._dynamics),('sim_context',runner._sim_context)]:
+                    assert set(loaded[part])==set(module.state_dict())
+                    assert all(torch.equal(loaded[part][key],value) for key,value in module.state_dict().items())
             else:
                 module=modules['actor' if name=='actor.pt' else 'critic']
                 assert all(torch.equal(loaded[key],value) for key,value in module.state_dict().items())
@@ -176,7 +184,9 @@ def main():
         assert participants[0]['initial_model_state_hashes']==participants[1]['initial_model_state_hashes']
         assert participants[0]['final_model_state_hashes']==participants[1]['final_model_state_hashes']
         assert participants[0]['initial_real_state_sha256']!=participants[1]['initial_real_state_sha256']
-        for key in ('optimizer_steps','actor_real_observation_count','shared_sampler_value_sha256','shared_sampler_count_sha256'):
+        assert {row['local_rank'] for row in participants}=={0,1}
+        for key in ('optimizer_steps','actor_real_observation_count','shared_sampler_value_sha256',
+                    'shared_sampler_count_sha256','sim_context_state_sha256'):
             assert participants[0][key]==participants[1][key]
         # Native actor normalizer uses one latest real observation per step.
         assert all(row['actor_real_observation_count']==8192*21 for row in participants)
