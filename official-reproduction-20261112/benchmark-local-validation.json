@@ -1,17 +1,18 @@
 {
   "status": "local_benchmark_cpu_preparation_verified",
   "source_files": {
-    "benchmark_local_checkpoint.py": "678eb24ed54823482cfa17d87cdf73cf42f44479017c643b3e463096f2b0301b",
-    "test_benchmark_local_checkpoint.py": "7cc52dd5fb0fa11573a1f0e14e2a45c99e8cd64abeb59085765b93240c573292"
+    "benchmark_local_checkpoint.py": "c619f74883e6a32d52839d714dafd1e531ded983015d6a12d48f5bd0ab6a083a",
+    "test_benchmark_local_checkpoint.py": "b6c70d1e1a162231750a91581f3e39059d0de62865e2b98c0ba7b8bb5b20f4a3"
   },
   "based_on_pinned_author_benchmark": "abc124c1bd5976341034668af3d12c087f2f1f55:src/supermimic/scripts/benchmark.py",
   "purpose": "Prepare explicit local frozen-checkpoint timing; does not provide GPU measurements",
   "cpu_tests": {
-    "passed": 2,
-    "pytest_seconds": 0.03,
+    "passed": 3,
+    "pytest_seconds": 1.63,
     "scope": [
       "Verify warmup calls and GPU synchronization stay outside measured intervals",
-      "Bind actual published16k LAFAN result/config/protocol and reject wrong model or unexpected source members"
+      "Bind actual published16k LAFAN result/config/protocol and reject wrong model or unexpected source members",
+      "Read precision metadata through the modern API after native configure_torch_backends; legacy read error reproduced on installedTorch2.14 CPU"
     ]
   },
   "native_play_cfg_strict_json_validation_passed": true,
@@ -41,5 +42,12 @@
   "input_models": "Frozen completed LAFAN40 paper16k three-model hashes, protocol68964390d769af2fd193655190cc1464a0cf5cb1e2b9def45b79deb3a749b25b",
   "required_next": "One bounded64world actualCUDA integration after an existingGPU slot frees; if successful run declared sizes with per-size process limits and preserve every failed/missing size",
   "paper_speedup_reproduced": false,
-  "exact_paper_benchmark_conditions_confirmed": false
+  "exact_paper_benchmark_conditions_confirmed": false,
+  "precision_api_regression": {
+    "legacy_read_after_native_configuration": "RuntimeError: mixed legacy/new TF32 API status when reading cuda.matmul.allow_tf32",
+    "fixed_read": "torch.backends.cuda.matmul.fp32_precision, matching native mjlab configure_torch_backends forTorch>=2.9",
+    "observed_modern_precision": "tf32",
+    "validated_platform": "WindowsTorch2.14.0+cpu; noCUDAbenchmark claimed",
+    "learning_or_physics_code_modified": false
+  }
 }

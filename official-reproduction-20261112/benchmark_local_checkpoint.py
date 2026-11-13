@@ -58,6 +58,18 @@ def validate_receipts(training, resolved, protocol):
     return protocol['motion_files']
 
 
+def precision_metadata(torch_module):
+    """Use the same new precision API as mjlab on the pinned Torch2.14.
+
+    Reading legacy allow_tf32/get_float32_matmul_precision after mjlab sets
+    fp32_precision raises a mixed-API error, even when no CUDA work is run.
+    """
+    precision = torch_module.backends.cuda.matmul.fp32_precision
+    return {'cuda_matmul_fp32_precision':precision,
+        'global_fp32_precision':torch_module.backends.fp32_precision,
+        'tf32_matmul_allowed':precision=='tf32'}
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--run', type=Path, required=True)
@@ -143,8 +155,7 @@ def main():
         if abs(env.unwrapped.step_dt-.02)>1e-9 or cfg.decimation!=4 or abs(cfg.sim.mujoco.timestep-.005)>1e-9:
             raise ValueError('Expected50Hz control with four5ms MuJoCo substeps')
         record.update(gpu=torch.cuda.get_device_name(0),torch=torch.__version__,
-            torch_cuda=torch.version.cuda,tf32_matmul_allowed=torch.backends.cuda.matmul.allow_tf32,
-            float32_matmul_precision=torch.get_float32_matmul_precision(),
+            torch_cuda=torch.version.cuda,**precision_metadata(torch),
             control_dt=env.unwrapped.step_dt,physics_dt=cfg.sim.mujoco.timestep,decimation=cfg.decimation,
             run_result_sha256=sha(args.run/'result.json'),resolved_config_sha256=sha(args.run/'resolved-config.json'),
             motion_protocol_sha256=sha(args.motion_protocol),

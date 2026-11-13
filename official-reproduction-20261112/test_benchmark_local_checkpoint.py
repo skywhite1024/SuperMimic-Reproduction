@@ -40,3 +40,20 @@ def test_real_lafan_receipts_bind_same_model_and_reject_mismatched_source():
     changed['motion_files']['unexpected.npy'] = changed['motion_files'].pop('root_quat_w.npy')
     with pytest.raises(ValueError,match='same completed40clip model'):
         benchmark.validate_receipts(train,resolved,changed)
+
+
+def test_precision_metadata_works_after_native_new_api_configuration():
+    import torch
+    from mjlab.utils.torch import configure_torch_backends
+    old = (torch.backends.cuda.matmul.fp32_precision,torch.backends.cudnn.fp32_precision,
+        torch.backends.cudnn.benchmark,torch.backends.cudnn.deterministic)
+    try:
+        configure_torch_backends(allow_tf32=True)
+        metadata = benchmark.precision_metadata(torch)
+        assert metadata['cuda_matmul_fp32_precision']=='tf32'
+        assert metadata['tf32_matmul_allowed'] is True
+    finally:
+        torch.backends.cuda.matmul.fp32_precision = old[0]
+        torch.backends.cudnn.fp32_precision = old[1]
+        torch.backends.cudnn.benchmark = old[2]
+        torch.backends.cudnn.deterministic = old[3]
