@@ -1,0 +1,9 @@
+{
+  "download_file": "logs-acp-20261113T135352.txt.gz",
+  "lines": 61,
+  "gzip_bytes": 11925,
+  "gzip_sha256": "b75f16500f6e9bc69fe3a7d9eadb7a8bce41f57cbe42ec0e30dbc074c5826527",
+  "decompressed_bytes": 18211,
+  "decompressed_sha256": "ca115db4d414c3b1bf98acbbd700020c4a7b6687ed5cf5b82979dc9b473191ee",
+  "original_timestamped_stdout_preserved": true
+}

@@ -1,0 +1,381 @@
+{
+  "task": "SuperMimic-GenCoord-G1",
+  "seed": 42,
+  "clips": 40,
+  "num_envs": 40,
+  "batch_order": "index",
+  "all_motions_included": true,
+  "subset_filter_applied": false,
+  "batch_reset": "fresh env reset; exact first frame; history filled with first sensor frame",
+  "inference_scope": "all resets, observations and steps across all batches after model construction",
+  "incomplete_result_policy": "completed batch receipts retained; never label an interrupted evaluation complete",
+  "start": "exact first reference frame via author reset_to_frame",
+  "success": "first termination is native motion_end with no failure term",
+  "termination_terms": {
+    "time_out": {
+      "time_out": true,
+      "params": {}
+    },
+    "motion_end": {
+      "time_out": true,
+      "params": {
+        "command_name": "motion"
+      }
+    },
+    "anchor_pos": {
+      "time_out": false,
+      "params": {
+        "command_name": "motion",
+        "threshold": 0.25
+      }
+    },
+    "anchor_ori": {
+      "time_out": false,
+      "params": {
+        "asset_cfg": "SceneEntityCfg(name='robot', joint_names=None, joint_ids=slice(None, None, None), body_names=None, body_ids=slice(None, None, None), geom_names=None, geom_ids=slice(None, None, None), site_names=None, site_ids=slice(None, None, None), actuator_names=None, actuator_ids=slice(None, None, None), tendon_names=None, tendon_ids=slice(None, None, None), camera_names=None, camera_ids=slice(None, None, None), light_names=None, light_ids=slice(None, None, None), material_names=None, material_ids=slice(None, None, None), texture_names=None, texture_ids=slice(None, None, None), pair_names=None, pair_ids=slice(None, None, None), preserve_order=False)",
+        "command_name": "motion",
+        "threshold": 0.8
+      }
+    }
+  },
+  "domain_randomization": false,
+  "observation_noise": false,
+  "robot_collision_friction": 1.0,
+  "physics": "unchanged author defaults",
+  "repeatability_verified": false,
+  "native_joint_limit_clipping_on_reset": true,
+  "manual_reset_version": 2,
+  "observation_cache_refreshed_after_pose_write": true,
+  "actuator_histories_backfilled_after_pose_write": true,
+  "initial_reference_state_check": "Full71D matches native clipped reference; atol=1e-5,rtol=1e-5 before first action",
+  "training": {
+    "status": "pilot_completed",
+    "collection_steps": 16001,
+    "seed": 42,
+    "num_envs": 4096,
+    "elapsed_training_seconds": 2023.7995013995096,
+    "gpu": "NVIDIA H100 80GB HBM3",
+    "checkpoints": [
+      {
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/no-critic-h32-16k-1113ah/main/training/logs/SuperMimic-GenCoord-G1/2026-11-13_04-56-23/world_model.pt",
+        "bytes": 34990357,
+        "sha256": "e16f333a7a99640b3d5d5fd99f4b91a41f2fe343f9f7d8b4795d3d20a0a8f1c5"
+      },
+      {
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/no-critic-h32-16k-1113ah/main/training/logs/SuperMimic-GenCoord-G1/2026-11-13_04-56-23/actor.pt",
+        "bytes": 46439949,
+        "sha256": "91cf1639128c00cb01a5f6b9fb1f0b83b7917ca819f79f7b0f60bf1df8bacdde"
+      }
+    ],
+    "full_clip_evaluation_completed": false,
+    "paper_results_reproduced": false,
+    "goal_assembly_backend": "eager",
+    "training_profile": "paper-a5-single-gpu",
+    "critic_enabled": false,
+    "policy_ablation": {
+      "imagination_horizon": 32,
+      "critic_enabled": false,
+      "gamma": 0.99,
+      "native_learner": "BpttPolicyLearner",
+      "scope": "Local A5 ablation; gamma0.99 and shared hyperparameters retained; no bootstrap or critic fit in native BPTT variant",
+      "paper_equivalence_verified": false
+    },
+    "corpus": {
+      "name": "lafan40",
+      "clips": 40,
+      "frames": 441140,
+      "paper_name_filter_applied": false,
+      "paper_feasibility_filter_applied": false
+    },
+    "device_memory_after_initialization": {
+      "free_bytes": 78549155840,
+      "total_bytes": 85017624576,
+      "torch_allocated_bytes": 4468735488,
+      "torch_reserved_bytes": 4490002432
+    },
+    "peak_torch_memory_allocated_bytes": 18359721472,
+    "peak_torch_memory_reserved_bytes": 19212009472,
+    "memory_scope": "PyTorch allocator only; excludes Warp and other CUDA allocations",
+    "retained_checkpoint_series": [
+      {
+        "status": "model_snapshot_preserved",
+        "collection_steps": 1,
+        "files": [
+          {
+            "file": "world_model.pt",
+            "bytes": 34990357,
+            "sha256": "dacc1d5fcd3406dcdadb8c593169431cb0bc99ef027dfd1077d51d611b6189ab"
+          },
+          {
+            "file": "actor.pt",
+            "bytes": 46439949,
+            "sha256": "ca81221c15cdf7ec98eb67a7f49638fe6946f8baee899763418a571ed45e2411"
+          }
+        ],
+        "full_training_resume_available": false,
+        "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state"
+      },
+      {
+        "status": "model_snapshot_preserved",
+        "collection_steps": 4001,
+        "files": [
+          {
+            "file": "world_model.pt",
+            "bytes": 34990357,
+            "sha256": "4f867c82a7f2f01a1c0cf8ae20ffda33ecc91a4f183acceab6078d07cfcecab1"
+          },
+          {
+            "file": "actor.pt",
+            "bytes": 46439949,
+            "sha256": "887770c18da992c346aa5bf024283a4b445349eb1b78ac960238b532e8231834"
+          }
+        ],
+        "full_training_resume_available": false,
+        "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state"
+      },
+      {
+        "status": "model_snapshot_preserved",
+        "collection_steps": 8001,
+        "files": [
+          {
+            "file": "world_model.pt",
+            "bytes": 34990357,
+            "sha256": "9b770e7cd49b05ac115989754e5e21979b0cd205d067c0b58de3310e0232af66"
+          },
+          {
+            "file": "actor.pt",
+            "bytes": 46439949,
+            "sha256": "66fb9a77e299e3778d799df13cbdee36435ab3639662ad550a0b221af8a9c4a5"
+          }
+        ],
+        "full_training_resume_available": false,
+        "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state"
+      },
+      {
+        "status": "model_snapshot_preserved",
+        "collection_steps": 12001,
+        "files": [
+          {
+            "file": "world_model.pt",
+            "bytes": 34990357,
+            "sha256": "ea4d1e754102b50ec084b4fa5962786b21be4bf17fb9cd80d3f6957a42a7caa3"
+          },
+          {
+            "file": "actor.pt",
+            "bytes": 46439949,
+            "sha256": "da4d3e84f302058d3c7563d218188ffaf5bfc3db552821a5c5e7141902c2f565"
+          }
+        ],
+        "full_training_resume_available": false,
+        "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state"
+      },
+      {
+        "status": "model_snapshot_preserved",
+        "collection_steps": 16001,
+        "files": [
+          {
+            "file": "world_model.pt",
+            "bytes": 34990357,
+            "sha256": "e16f333a7a99640b3d5d5fd99f4b91a41f2fe343f9f7d8b4795d3d20a0a8f1c5"
+          },
+          {
+            "file": "actor.pt",
+            "bytes": 46439949,
+            "sha256": "91cf1639128c00cb01a5f6b9fb1f0b83b7917ca819f79f7b0f60bf1df8bacdde"
+          }
+        ],
+        "full_training_resume_available": false,
+        "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state"
+      }
+    ],
+    "checkpoint_timing_file": "checkpoint-times.json",
+    "runner_returned_observation": {
+      "utc": "2026-11-13T05:30:06.985543+00:00",
+      "seconds_since_program_entry": 2075.7576089594513,
+      "seconds_since_runner_run_entry": 2023.2149086724967
+    },
+    "full_training_resume_available": false
+  },
+  "paper_results_reproduced": false,
+  "checkpoint_selection": {
+    "parent_result_sha256": "c477a1d1bef5a681fffb14f4ef342b501e54c7364014e6b80908113f25dc0236",
+    "parent_collection_steps": 16001,
+    "evaluated_collection_steps": 16001,
+    "kind": "retained_snapshot",
+    "files": [
+      {
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/no-critic-h32-16k-1113ah/main/training/checkpoint-series/step-000016001/world_model.pt",
+        "bytes": 34990357,
+        "sha256": "e16f333a7a99640b3d5d5fd99f4b91a41f2fe343f9f7d8b4795d3d20a0a8f1c5"
+      },
+      {
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/no-critic-h32-16k-1113ah/main/training/checkpoint-series/step-000016001/actor.pt",
+        "bytes": 46439949,
+        "sha256": "91cf1639128c00cb01a5f6b9fb1f0b83b7917ca819f79f7b0f60bf1df8bacdde"
+      }
+    ],
+    "manifest_sha256": "3edfe63e06f846e0a5ef7ee797e70b2bca7d9d73dc42bad16b4fa58821dc84bc",
+    "resolved_config_sha256": "c795fc122335ba99be6233873af1e26c02ad77eee09d4cf7108c01f2a0cd6c49"
+  },
+  "trajectory_state": "pre-action full_state; rewards and terminations are post-step",
+  "motion_files": {
+    "joint_names.json": "30355b480e4f89c97a693c72f8baf23902fd458d25e49b5df4741dd47aefce0d",
+    "joint_pos.npy": "64f0dff0d2e0d678a1f78213233124588044ba5781aa599c31b08d1348509a9b",
+    "joint_vel.npy": "11efc4b4b37b0818ea25a2dfa8676ed8f564a3443c97bf9c9680a346c06b23e0",
+    "motion_ends.npy": "fa4db64df8fe4d1f9362883b8c7b32d303a3865aeeab1c92fad0e89144cf8be5",
+    "motion_names.json": "b2b46cceb62efa50b159e13928b4c991b80b27a59b381ed603392cfa87e3c8b9",
+    "root_ang_vel_w.npy": "88ff137fd4a6dde1626dceae086c8a810da624d650855d69af1adc052565f9b5",
+    "root_lin_vel_w.npy": "7738f75d8de3b070a1d6407a06e1a971d5723abccc1e46a90a1aa86e93c486a0",
+    "root_pos_w.npy": "a57c5a8efc209c345ea4f7d83ef36936c0edfefb60f137757af69c6f4f7272fe",
+    "root_quat_w.npy": "9934171fce73559ec04d63db2bafee95575cd46196fe39aea425d677eae5303e"
+  },
+  "native_joint_names": [
+    "left_hip_pitch_joint",
+    "left_hip_roll_joint",
+    "left_hip_yaw_joint",
+    "left_knee_joint",
+    "left_ankle_pitch_joint",
+    "left_ankle_roll_joint",
+    "right_hip_pitch_joint",
+    "right_hip_roll_joint",
+    "right_hip_yaw_joint",
+    "right_knee_joint",
+    "right_ankle_pitch_joint",
+    "right_ankle_roll_joint",
+    "waist_yaw_joint",
+    "waist_roll_joint",
+    "waist_pitch_joint",
+    "left_shoulder_pitch_joint",
+    "left_shoulder_roll_joint",
+    "left_shoulder_yaw_joint",
+    "left_elbow_joint",
+    "left_wrist_roll_joint",
+    "left_wrist_pitch_joint",
+    "left_wrist_yaw_joint",
+    "right_shoulder_pitch_joint",
+    "right_shoulder_roll_joint",
+    "right_shoulder_yaw_joint",
+    "right_elbow_joint",
+    "right_wrist_roll_joint",
+    "right_wrist_pitch_joint",
+    "right_wrist_yaw_joint"
+  ],
+  "native_soft_joint_pos_limits": [
+    [
+      -2.2601749897003174,
+      2.6092751026153564
+    ],
+    [
+      -0.34906482696533203,
+      2.792564868927002
+    ],
+    [
+      -2.481839895248413,
+      2.481839895248413
+    ],
+    [
+      0.061086416244506836,
+      2.7314467430114746
+    ],
+    [
+      -0.8028565645217896,
+      0.4537865221500397
+    ],
+    [
+      -0.23561999201774597,
+      0.23561999201774597
+    ],
+    [
+      -2.2601749897003174,
+      2.6092751026153564
+    ],
+    [
+      -2.792564868927002,
+      0.34906482696533203
+    ],
+    [
+      -2.481839895248413,
+      2.481839895248413
+    ],
+    [
+      0.061086416244506836,
+      2.7314467430114746
+    ],
+    [
+      -0.8028565645217896,
+      0.4537865221500397
+    ],
+    [
+      -0.23561999201774597,
+      0.23561999201774597
+    ],
+    [
+      -2.3561999797821045,
+      2.3561999797821045
+    ],
+    [
+      -0.46799996495246887,
+      0.46799996495246887
+    ],
+    [
+      -0.46799996495246887,
+      0.46799996495246887
+    ],
+    [
+      -2.801219940185547,
+      2.3824195861816406
+    ],
+    [
+      -1.3962149620056152,
+      2.0595147609710693
+    ],
+    [
+      -2.3561999797821045,
+      2.3561999797821045
+    ],
+    [
+      -0.8901199102401733,
+      1.9373198747634888
+    ],
+    [
+      -1.7749979496002197,
+      1.7749979496002197
+    ],
+    [
+      -1.4529869556427002,
+      1.4529869556427002
+    ],
+    [
+      -1.4529869556427002,
+      1.4529869556427002
+    ],
+    [
+      -2.801219940185547,
+      2.3824195861816406
+    ],
+    [
+      -2.0595147609710693,
+      1.3962149620056152
+    ],
+    [
+      -2.3561999797821045,
+      2.3561999797821045
+    ],
+    [
+      -0.8901199102401733,
+      1.9373198747634888
+    ],
+    [
+      -1.7749979496002197,
+      1.7749979496002197
+    ],
+    [
+      -1.4529869556427002,
+      1.4529869556427002
+    ],
+    [
+      -1.4529869556427002,
+      1.4529869556427002
+    ]
+  ]
+}

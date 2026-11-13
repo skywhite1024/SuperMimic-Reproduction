@@ -1,0 +1,13 @@
+{
+  "status": "complete",
+  "worker_returncode": 0,
+  "worker_elapsed_seconds": 178.18591510597616,
+  "whole_program_seconds": 1800,
+  "quality_evaluation_completed": false,
+  "paper_results_reproduced": false,
+  "ppo_update_calls": 3,
+  "real_simulator_steps": 589824,
+  "imagined_transitions": 0,
+  "world_model_updates": 0,
+  "worker_result_sha256": "de479ec4722a248a41b742e967e7650d508584564ee53326a9bc3e317584823b"
+}

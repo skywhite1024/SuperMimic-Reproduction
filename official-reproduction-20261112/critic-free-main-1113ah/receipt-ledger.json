@@ -1,0 +1,69 @@
+{
+  "status": "nine_main_original_json_receipts_recovered_and_SHA256_verified",
+  "job_uid": "0531349142e248b6a2e95e5b0f6e4706",
+  "receipts": [
+    {
+      "i": 0,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/no-critic-h32-16k-1113ah/main/training/result.json",
+      "bytes": 5317,
+      "sha256": "c477a1d1bef5a681fffb14f4ef342b501e54c7364014e6b80908113f25dc0236",
+      "chunks": 6
+    },
+    {
+      "i": 1,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/no-critic-h32-16k-1113ah/main/training/resolved-config.json",
+      "bytes": 42742,
+      "sha256": "c795fc122335ba99be6233873af1e26c02ad77eee09d4cf7108c01f2a0cd6c49",
+      "chunks": 22
+    },
+    {
+      "i": 2,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/no-critic-h32-16k-1113ah/main/training/checkpoint-times.json",
+      "bytes": 4227,
+      "sha256": "55c8d0d9d7eadf5b18979fdf6154aa908335cfcc3a684ce3353fb9330f906683",
+      "chunks": 4
+    },
+    {
+      "i": 3,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/no-critic-h32-16k-1113ah/main/eval-000016001/result.json",
+      "bytes": 14308,
+      "sha256": "51623128ce3726ac892a3b49f29a740908ddeb13541220093bad22088a84590c",
+      "chunks": 7
+    },
+    {
+      "i": 4,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/no-critic-h32-16k-1113ah/main/eval-000016001/protocol.json",
+      "bytes": 12674,
+      "sha256": "117355dc69c6c483e67090d51928bf18085c20bb1a2d1f680c97613799cc5db3",
+      "chunks": 14
+    },
+    {
+      "i": 5,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/no-critic-h32-16k-1113ah/main/eval-000016001/accounting.json",
+      "bytes": 1378,
+      "sha256": "4dded7d2b64d49d7bddfae807e95670b82a6e5946803fd901ea07bad7ce71e8e",
+      "chunks": 3
+    },
+    {
+      "i": 6,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/no-critic-h32-16k-1113ah/main/eval-000016001/audit/summary.json",
+      "bytes": 965,
+      "sha256": "04b402a312715293b3571e585a58b910ef981895c0d51e4a45b71f2b682ffced",
+      "chunks": 3
+    },
+    {
+      "i": 7,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/no-critic-h32-16k-1113ah/main/eval-000016001/audit/initial-states.json",
+      "bytes": 720,
+      "sha256": "016e657149363e385c63c35969742294324665dcd3e73603f2669da42eb8ab31",
+      "chunks": 2
+    },
+    {
+      "i": 8,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/no-critic-h32-16k-1113ah/main/result.json",
+      "bytes": 2193,
+      "sha256": "752afcb940d04ec34852635fe9e57db9e952c3d8ea56c4b2faad1ca124b358e6",
+      "chunks": 4
+    }
+  ]
+}

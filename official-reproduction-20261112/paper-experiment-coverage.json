@@ -2,10 +2,10 @@
   "status": "scope_audit_incomplete_paper_reproduction",
   "goal_complete": false,
   "scope_redefined": false,
-  "as_of": "2026-11-13T13:25:24.365368+08:00",
+  "as_of": "2026-11-13T13:57:39.166750+08:00",
   "paper_pdf_sha256": "fe213017ab062f4acc3965da89abd3c29969163e144a2628a662b8ce46691009",
   "upstream_supermimic_commit": "abc124c1bd5976341034668af3d12c087f2f1f55",
-  "code_and_evidence_commit": "4a43a58cecde8e873f709c37f986aa83f1c66b9e",
+  "code_and_evidence_commit": "dd1cfbb5773bfdeba9f6ce180e387ecd6545cb4f",
   "rows": [
     {
       "id": "local_environment",
@@ -108,7 +108,19 @@
         "learning-curve-integration-1113ag/receipt-ledger.json",
         "learning-curve-integration-1113ag/validation.json"
       ],
-      "qualification": "Actual21collection CUDA integration preserved three distinct models; selected11 model completed all40 v2 evaluations and saved-array/initial-state audits. Fresh64001 run is live with17snapshots and9fixed evaluation points; no completed curve, matched PPO-Sim or strictpaper efficiency claim yet."
+      "qualification": "Actual21collection CUDA integration preserved three distinct models; selected11 model completed all40 v2 evaluations and saved-array/initial-state audits. Fresh64001 run is live with17snapshots and9fixed evaluation points; no completed curve, matched PPO-Sim or strictpaper efficiency claim yet.",
+      "PPO_Sim_integration": {
+        "status": "actual8192G1_PPO_gate_completed_and_originals_verified",
+        "uid": "12b951aa6d3c4027b867c5591b1af8dc",
+        "evidence": [
+          "ppo-sim-integration-run-plan.json",
+          "ppo-sim-integration-1113aj/validation.json"
+        ],
+        "real_simulator_steps": 589824,
+        "imagined_transitions": 0,
+        "world_model_updates": 0,
+        "limitation": "Three PPO updates, not full18h1/4/8GPU curves or fixed-start policy quality"
+      }
     },
     {
       "id": "dataset_scaling",
@@ -168,14 +180,14 @@
         7,
         8
       ],
-      "status": "native_critic_free_cuda_integration_and_all40_audits_verified_main16k_running",
+      "status": "H32_no_critic16k_full40_endpoint_complete_and_arrays_verified",
       "evidence": [
-        "critic-ablation-cpu-validation.json",
         "critic-free-h32-run-plan.json",
-        "critic-free-integration-1113ah/receipt-ledger.json",
-        "critic-free-integration-1113ah/validation.json"
+        "critic-free-main-1113ah/receipt-ledger.json",
+        "critic-free-main-1113ah/validation.json",
+        "critic-free-main-1113ah/critic-endpoint-comparison.json"
       ],
-      "qualification": "NativeBPTT H32/gamma0.99, exactly2models, real21-collection CUDA integration; step11 full40 result0/40 retained, all arrays/firststates audited. Fresh16k main started. One seed; not ten horizons, training-return curves, matched timing or push recovery."
+      "qualification": "Single seed42 H32 endpoint: no-critic25/40 mean.63547762 versus previous critic39/40 mean.79713198 on exact same canonical40 hashes. Five two-model snapshots and127MB arrays verified. Not ten-case training-return horizon sweep, matched threshold timing or push recovery; compare timed64k retained16001 when available."
     },
     {
       "id": "push_recovery",
@@ -243,5 +255,5 @@
     "Recover timedLAFAN64k complete ninepoint curve and all original receipts after finite livejob ends",
     "Continue realG1 PPO-WM/PPO-Sim, critic horizons, push andmultiGPU matched experiments; retain missingexactauthor inputs andhardware limitation"
   ],
-  "last_status_update": "2026-11-13T13:25:24.365368+08:00"
+  "last_status_update": "2026-11-13T13:57:39.166750+08:00"
 }

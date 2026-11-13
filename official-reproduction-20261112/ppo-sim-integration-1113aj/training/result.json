@@ -1,0 +1,244 @@
+{
+  "status": "real_G1_simulator_PPO_integration_completed",
+  "updates": [
+    {
+      "update": 1,
+      "collection_steps": 24,
+      "simulator_steps": 196608,
+      "rollout_steps": 24,
+      "num_envs": 8192,
+      "source": "MuJoCo env.step only",
+      "binary_done_rows": 2459,
+      "timeout_rows": 17,
+      "reward_sum": -17027.35546875,
+      "stored_rewards_match_native_RSL_timeout_bootstrap": true,
+      "stored_dones_match_simulator": true,
+      "collect_seconds": 26.959095027297735,
+      "sampler_distribution_updates": 1,
+      "trace": {
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-integration-1113aj/training/trace/update-001.npz",
+        "bytes": 1395142,
+        "sha256": "d9dd327b12e6e1fe8333449ed5829ca415dedf8ead8218b0d4e1bc296dc1a7c1",
+        "readback_verified": true
+      },
+      "learn_seconds": 1.1595131130889058,
+      "losses": {
+        "value": 0.6866236060857773,
+        "surrogate": 0.3614023533649743,
+        "entropy": 41.098795127868655
+      },
+      "actor_before": "4d839ec9217efcce040cce41a89fe3b5b7af10a274111f412ee2c81b4778ffe6",
+      "actor_after": "82ed2e4a55e794d66edace00740d3949132dd86349222e13818240689d0f03fd",
+      "critic_before": "45a2ed9b8221ac3df3a091fb92ae06ea8f9b5af7f6da222e5deb4d3db141fc96",
+      "critic_after": "608a3278b5feb903a08957543e291d7d493470d8a274b99ff00aa6be71a00438",
+      "native_actor_and_critic_changed_and_finite": true,
+      "imagined_transitions": 0,
+      "world_model_updates": 0,
+      "native_actor_normalization_count": 196608,
+      "episode_statistics": {
+        "recent_completed_episodes": 100,
+        "mean_raw_episode_return": -2.250311198234558,
+        "scope": "Native logger last100 completed real simulator episodes, not fixed-start full-clip return"
+      }
+    },
+    {
+      "update": 2,
+      "collection_steps": 48,
+      "simulator_steps": 393216,
+      "rollout_steps": 24,
+      "num_envs": 8192,
+      "source": "MuJoCo env.step only",
+      "binary_done_rows": 8699,
+      "timeout_rows": 21,
+      "reward_sum": -18963.19921875,
+      "stored_rewards_match_native_RSL_timeout_bootstrap": true,
+      "stored_dones_match_simulator": true,
+      "collect_seconds": 1.3537253309041262,
+      "sampler_distribution_updates": 2,
+      "trace": {
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-integration-1113aj/training/trace/update-002.npz",
+        "bytes": 1402069,
+        "sha256": "b0b49afa1f4b010ec278cdcc11494d3814833716db027fa5734d148d8375b48f",
+        "readback_verified": true
+      },
+      "learn_seconds": 0.6878647869452834,
+      "losses": {
+        "value": 0.2938730701804161,
+        "surrogate": -0.010188134145573713,
+        "entropy": 41.08400821685791
+      },
+      "actor_before": "82ed2e4a55e794d66edace00740d3949132dd86349222e13818240689d0f03fd",
+      "actor_after": "9712c9d7c0ca9c7cc5dc591fcf20a8196c4e798b9437ef48fec6b6adb3e03e4b",
+      "critic_before": "608a3278b5feb903a08957543e291d7d493470d8a274b99ff00aa6be71a00438",
+      "critic_after": "b32ce903c17e3134a0a66ef8b30838e68513583f70174ef4874a6a69529054f2",
+      "native_actor_and_critic_changed_and_finite": true,
+      "imagined_transitions": 0,
+      "world_model_updates": 0,
+      "native_actor_normalization_count": 393216,
+      "episode_statistics": {
+        "recent_completed_episodes": 100,
+        "mean_raw_episode_return": -2.3506931865215304,
+        "scope": "Native logger last100 completed real simulator episodes, not fixed-start full-clip return"
+      }
+    },
+    {
+      "update": 3,
+      "collection_steps": 72,
+      "simulator_steps": 589824,
+      "rollout_steps": 24,
+      "num_envs": 8192,
+      "source": "MuJoCo env.step only",
+      "binary_done_rows": 8716,
+      "timeout_rows": 14,
+      "reward_sum": -18224.166015625,
+      "stored_rewards_match_native_RSL_timeout_bootstrap": true,
+      "stored_dones_match_simulator": true,
+      "collect_seconds": 1.3378808293491602,
+      "sampler_distribution_updates": 3,
+      "trace": {
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-integration-1113aj/training/trace/update-003.npz",
+        "bytes": 1401016,
+        "sha256": "87f8bee40d5955e9585349c02764081810a8af53d1309b3934cb639b662daf19",
+        "readback_verified": true
+      },
+      "learn_seconds": 0.6847875518724322,
+      "losses": {
+        "value": 0.23420810252428054,
+        "surrogate": -0.00903678427766863,
+        "entropy": 41.01478099822998
+      },
+      "actor_before": "9712c9d7c0ca9c7cc5dc591fcf20a8196c4e798b9437ef48fec6b6adb3e03e4b",
+      "actor_after": "8d14ccfbbd0ab7c1e8c4196ac2c3d0fbbc3cd6983c6e3ad53e98edb7209a42d3",
+      "critic_before": "b32ce903c17e3134a0a66ef8b30838e68513583f70174ef4874a6a69529054f2",
+      "critic_after": "fb89ee58b7418b0ae8003d14e99cfd9b7b51feaaea7eac5dd81d46528863934d",
+      "native_actor_and_critic_changed_and_finite": true,
+      "imagined_transitions": 0,
+      "world_model_updates": 0,
+      "native_actor_normalization_count": 589824,
+      "episode_statistics": {
+        "recent_completed_episodes": 100,
+        "mean_raw_episode_return": -2.0432327681779863,
+        "scope": "Native logger last100 completed real simulator episodes, not fixed-start full-clip return"
+      }
+    }
+  ],
+  "paper_results_reproduced": false,
+  "quality_evaluation_completed": false,
+  "world_model_updates": 0,
+  "imagined_transitions": 0,
+  "dimensions": {
+    "actor_input": 1570,
+    "actor_goal": 640,
+    "history": 10,
+    "proprio": 93,
+    "critic_input": 771,
+    "actions": 29
+  },
+  "initial_model_state_hashes": {
+    "actor": "4d839ec9217efcce040cce41a89fe3b5b7af10a274111f412ee2c81b4778ffe6",
+    "critic": "45a2ed9b8221ac3df3a091fb92ae06ea8f9b5af7f6da222e5deb4d3db141fc96"
+  },
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "max_step_reward": 0.1,
+  "checkpoint_sets": [
+    {
+      "ppo_update": 1,
+      "collection_steps": 24,
+      "files": [
+        {
+          "file": "actor.pt",
+          "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-integration-1113aj/training/checkpoints/update-001/actor.pt",
+          "bytes": 46439949,
+          "sha256": "403d5faebf5ee7f4fcf8a2176ff9df443ded7cb35f5a45ae891fbbbc464991a3",
+          "model_state_readback_verified": true
+        },
+        {
+          "file": "critic.pt",
+          "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-integration-1113aj/training/checkpoints/update-001/critic.pt",
+          "bytes": 929269,
+          "sha256": "5fa9b3cb864483a8f7d52ab7a64e00a2f2348380806a3ba87a1b16c00abfe284",
+          "model_state_readback_verified": true
+        },
+        {
+          "file": "ppo.pt",
+          "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-integration-1113aj/training/checkpoints/update-001/ppo.pt",
+          "bytes": 119851915,
+          "sha256": "6e938c555e6bcfef604b53954dbde05a1ee7db90bc89d73230c9194bd1fd49aa",
+          "model_state_readback_verified": true
+        }
+      ],
+      "native_actor_state_sha256": "82ed2e4a55e794d66edace00740d3949132dd86349222e13818240689d0f03fd",
+      "native_critic_state_sha256": "608a3278b5feb903a08957543e291d7d493470d8a274b99ff00aa6be71a00438"
+    },
+    {
+      "ppo_update": 2,
+      "collection_steps": 48,
+      "files": [
+        {
+          "file": "actor.pt",
+          "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-integration-1113aj/training/checkpoints/update-002/actor.pt",
+          "bytes": 46439949,
+          "sha256": "f6f9ac800b7d6ce6095b807ad92b80c3153970cf8aaa3e5d96178a4521670bd5",
+          "model_state_readback_verified": true
+        },
+        {
+          "file": "critic.pt",
+          "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-integration-1113aj/training/checkpoints/update-002/critic.pt",
+          "bytes": 929269,
+          "sha256": "3c49e1ca25931dedaaf9c354b71b0d98619b4c3896a3a2bac9dad0da4a06ae4c",
+          "model_state_readback_verified": true
+        },
+        {
+          "file": "ppo.pt",
+          "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-integration-1113aj/training/checkpoints/update-002/ppo.pt",
+          "bytes": 119851915,
+          "sha256": "8a11eb87f4dda3d960698502e10c6a8c4b5c65bf016fceb7d75a36a2b0b7fa00",
+          "model_state_readback_verified": true
+        }
+      ],
+      "native_actor_state_sha256": "9712c9d7c0ca9c7cc5dc591fcf20a8196c4e798b9437ef48fec6b6adb3e03e4b",
+      "native_critic_state_sha256": "b32ce903c17e3134a0a66ef8b30838e68513583f70174ef4874a6a69529054f2"
+    },
+    {
+      "ppo_update": 3,
+      "collection_steps": 72,
+      "files": [
+        {
+          "file": "actor.pt",
+          "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-integration-1113aj/training/checkpoints/update-003/actor.pt",
+          "bytes": 46439949,
+          "sha256": "e2472d1330822e844d41afd5e3e2a292557c35186c41fc8c09c6ff48dabfa4ee",
+          "model_state_readback_verified": true
+        },
+        {
+          "file": "critic.pt",
+          "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-integration-1113aj/training/checkpoints/update-003/critic.pt",
+          "bytes": 929269,
+          "sha256": "ac0f983857a1f81e7b9a3b2e90d8c4e2428235f5c554c5c1d7d38f055e0d0b0f",
+          "model_state_readback_verified": true
+        },
+        {
+          "file": "ppo.pt",
+          "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-integration-1113aj/training/checkpoints/update-003/ppo.pt",
+          "bytes": 119851915,
+          "sha256": "7a2353d9d50594cef2ca166243ecc1782e934d7fce4fd03b3744e3e84a7e6e00",
+          "model_state_readback_verified": true
+        }
+      ],
+      "native_actor_state_sha256": "8d14ccfbbd0ab7c1e8c4196ac2c3d0fbbc3cd6983c6e3ad53e98edb7209a42d3",
+      "native_critic_state_sha256": "fb89ee58b7418b0ae8003d14e99cfd9b7b51feaaea7eac5dd81d46528863934d"
+    }
+  ],
+  "ppo_update_calls": 3,
+  "collection_steps": 72,
+  "simulator_steps": 589824,
+  "elapsed_training_seconds": 38.42618581838906,
+  "return_sampler_distribution_updates": 3,
+  "final_model_state_hashes": {
+    "actor": "8d14ccfbbd0ab7c1e8c4196ac2c3d0fbbc3cd6983c6e3ad53e98edb7209a42d3",
+    "critic": "fb89ee58b7418b0ae8003d14e99cfd9b7b51feaaea7eac5dd81d46528863934d"
+  },
+  "all_model_and_trace_readbacks_verified": true,
+  "source_config_sha256": "1d02e5dccc8d1a7bc4d64912b2a4f916f640e9bfdd9b7b287debdda61b81518f",
+  "checkpoint_manifest_sha256": "80f960e0e42daffbc96d4ef1a207c5df1264ac35d559942db631e72a4b62b57a"
+}

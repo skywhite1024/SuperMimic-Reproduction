@@ -1,0 +1,34 @@
+{
+  "status": "four_original_PPO_Sim_JSON_files_recovered_and_SHA256_verified",
+  "job_uid": "12b951aa6d3c4027b867c5591b1af8dc",
+  "receipts": [
+    {
+      "i": 0,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-integration-1113aj/training/resolved-config.json",
+      "bytes": 44012,
+      "sha256": "1d02e5dccc8d1a7bc4d64912b2a4f916f640e9bfdd9b7b287debdda61b81518f",
+      "chunks": 23
+    },
+    {
+      "i": 1,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-integration-1113aj/training/checkpoint-manifest.json",
+      "bytes": 3933,
+      "sha256": "80f960e0e42daffbc96d4ef1a207c5df1264ac35d559942db631e72a4b62b57a",
+      "chunks": 4
+    },
+    {
+      "i": 2,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-integration-1113aj/training/result.json",
+      "bytes": 10603,
+      "sha256": "de479ec4722a248a41b742e967e7650d508584564ee53326a9bc3e317584823b",
+      "chunks": 10
+    },
+    {
+      "i": 3,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-integration-1113aj/result.json",
+      "bytes": 422,
+      "sha256": "2cd1b632a21583a2d0a24e03d98a23f376a0330376bd4853d057e89b4e88b11e",
+      "chunks": 1
+    }
+  ]
+}

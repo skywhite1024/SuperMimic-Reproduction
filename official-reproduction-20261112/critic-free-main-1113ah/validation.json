@@ -1,0 +1,29 @@
+{
+  "status": "no_critic_H32_16k_original_results_and_full40_audits_verified",
+  "original_json_receipts": 9,
+  "all_original_byte_counts_and_sha256_verified": true,
+  "parent_and_evaluated_collection_steps": 16001,
+  "critic_enabled": false,
+  "imagination_horizon": 32,
+  "gamma": 0.99,
+  "preserved_snapshot_steps": [
+    1,
+    4001,
+    8001,
+    12001,
+    16001
+  ],
+  "exactly_two_native_models_in_all_five_sets": true,
+  "five_distinct_actor_and_world_model_hashes": true,
+  "clips": 40,
+  "reference_frames": 441140,
+  "successes": 25,
+  "failures": 15,
+  "saved_steps": 335806,
+  "mean_normalized_full_motion_return_recomputed": 0.6354776196957028,
+  "all_saved_trajectory_arrays_and_initial_states_verified_on_cloud": true,
+  "raw_NPZ_and_weights_downloaded_locally": false,
+  "single_seed": true,
+  "training_episode_return_sweep_completed": false,
+  "paper_results_reproduced": false
+}

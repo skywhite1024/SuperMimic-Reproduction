@@ -1,0 +1,73 @@
+{
+  "scope": "Single seed fixed-start full40 endpoint; all failures retained",
+  "with_critic_mean": 0.7971319807437383,
+  "without_critic_mean": 0.6354776196957028,
+  "mean_difference": -0.16165436104803543,
+  "clips_with_lower_without_critic": 15,
+  "clips_with_higher_without_critic": 25,
+  "success_transitions": {
+    "Both succeed": 24,
+    "Critic only succeeds": 15,
+    "No critic only succeeds": 1,
+    "Both fail": 0
+  },
+  "most_negative_deltas": [
+    {
+      "name": "fallAndGetUp1_subject1",
+      "with_critic": 0.7853513225024356,
+      "without_critic": 0.04369450894062278,
+      "delta": -0.7416568135618128,
+      "with_critic_success": true,
+      "without_critic_success": false,
+      "reference_frames": 8411,
+      "with_critic_saved_steps": 8411,
+      "without_critic_saved_steps": 453
+    },
+    {
+      "name": "fightAndSports1_subject1",
+      "with_critic": 0.761530484829217,
+      "without_critic": 0.031193150354047343,
+      "delta": -0.7303373344751697,
+      "with_critic_success": true,
+      "without_critic_success": false,
+      "reference_frames": 12257,
+      "with_critic_saved_steps": 12257,
+      "without_critic_saved_steps": 480
+    },
+    {
+      "name": "dance2_subject4",
+      "with_critic": 0.7806989428259512,
+      "without_critic": 0.05334054333258034,
+      "delta": -0.7273583994933709,
+      "with_critic_success": true,
+      "without_critic_success": false,
+      "reference_frames": 11284,
+      "with_critic_saved_steps": 11284,
+      "without_critic_saved_steps": 649
+    },
+    {
+      "name": "fallAndGetUp2_subject2",
+      "with_critic": 0.7826606576956954,
+      "without_critic": 0.08253752970963484,
+      "delta": -0.7001231279860606,
+      "with_critic_success": true,
+      "without_critic_success": false,
+      "reference_frames": 8196,
+      "with_critic_saved_steps": 8196,
+      "without_critic_saved_steps": 787
+    },
+    {
+      "name": "jumps1_subject2",
+      "with_critic": 0.7584510052370843,
+      "without_critic": 0.07401401288606221,
+      "delta": -0.6844369923510221,
+      "with_critic_success": true,
+      "without_critic_success": false,
+      "reference_frames": 12222,
+      "with_critic_saved_steps": 12222,
+      "without_critic_saved_steps": 1138
+    }
+  ],
+  "uncertainty_or_causal_effect_established": false,
+  "paper_results_reproduced": false
+}

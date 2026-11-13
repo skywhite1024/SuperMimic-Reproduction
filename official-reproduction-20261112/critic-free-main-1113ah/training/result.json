@@ -1,0 +1,148 @@
+{
+  "status": "pilot_completed",
+  "collection_steps": 16001,
+  "seed": 42,
+  "num_envs": 4096,
+  "elapsed_training_seconds": 2023.7995013995096,
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "checkpoints": [
+    {
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/no-critic-h32-16k-1113ah/main/training/logs/SuperMimic-GenCoord-G1/2026-11-13_04-56-23/world_model.pt",
+      "bytes": 34990357,
+      "sha256": "e16f333a7a99640b3d5d5fd99f4b91a41f2fe343f9f7d8b4795d3d20a0a8f1c5"
+    },
+    {
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/no-critic-h32-16k-1113ah/main/training/logs/SuperMimic-GenCoord-G1/2026-11-13_04-56-23/actor.pt",
+      "bytes": 46439949,
+      "sha256": "91cf1639128c00cb01a5f6b9fb1f0b83b7917ca819f79f7b0f60bf1df8bacdde"
+    }
+  ],
+  "full_clip_evaluation_completed": false,
+  "paper_results_reproduced": false,
+  "goal_assembly_backend": "eager",
+  "training_profile": "paper-a5-single-gpu",
+  "critic_enabled": false,
+  "policy_ablation": {
+    "imagination_horizon": 32,
+    "critic_enabled": false,
+    "gamma": 0.99,
+    "native_learner": "BpttPolicyLearner",
+    "scope": "Local A5 ablation; gamma0.99 and shared hyperparameters retained; no bootstrap or critic fit in native BPTT variant",
+    "paper_equivalence_verified": false
+  },
+  "corpus": {
+    "name": "lafan40",
+    "clips": 40,
+    "frames": 441140,
+    "paper_name_filter_applied": false,
+    "paper_feasibility_filter_applied": false
+  },
+  "device_memory_after_initialization": {
+    "free_bytes": 78549155840,
+    "total_bytes": 85017624576,
+    "torch_allocated_bytes": 4468735488,
+    "torch_reserved_bytes": 4490002432
+  },
+  "peak_torch_memory_allocated_bytes": 18359721472,
+  "peak_torch_memory_reserved_bytes": 19212009472,
+  "memory_scope": "PyTorch allocator only; excludes Warp and other CUDA allocations",
+  "retained_checkpoint_series": [
+    {
+      "status": "model_snapshot_preserved",
+      "collection_steps": 1,
+      "files": [
+        {
+          "file": "world_model.pt",
+          "bytes": 34990357,
+          "sha256": "dacc1d5fcd3406dcdadb8c593169431cb0bc99ef027dfd1077d51d611b6189ab"
+        },
+        {
+          "file": "actor.pt",
+          "bytes": 46439949,
+          "sha256": "ca81221c15cdf7ec98eb67a7f49638fe6946f8baee899763418a571ed45e2411"
+        }
+      ],
+      "full_training_resume_available": false,
+      "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state"
+    },
+    {
+      "status": "model_snapshot_preserved",
+      "collection_steps": 4001,
+      "files": [
+        {
+          "file": "world_model.pt",
+          "bytes": 34990357,
+          "sha256": "4f867c82a7f2f01a1c0cf8ae20ffda33ecc91a4f183acceab6078d07cfcecab1"
+        },
+        {
+          "file": "actor.pt",
+          "bytes": 46439949,
+          "sha256": "887770c18da992c346aa5bf024283a4b445349eb1b78ac960238b532e8231834"
+        }
+      ],
+      "full_training_resume_available": false,
+      "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state"
+    },
+    {
+      "status": "model_snapshot_preserved",
+      "collection_steps": 8001,
+      "files": [
+        {
+          "file": "world_model.pt",
+          "bytes": 34990357,
+          "sha256": "9b770e7cd49b05ac115989754e5e21979b0cd205d067c0b58de3310e0232af66"
+        },
+        {
+          "file": "actor.pt",
+          "bytes": 46439949,
+          "sha256": "66fb9a77e299e3778d799df13cbdee36435ab3639662ad550a0b221af8a9c4a5"
+        }
+      ],
+      "full_training_resume_available": false,
+      "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state"
+    },
+    {
+      "status": "model_snapshot_preserved",
+      "collection_steps": 12001,
+      "files": [
+        {
+          "file": "world_model.pt",
+          "bytes": 34990357,
+          "sha256": "ea4d1e754102b50ec084b4fa5962786b21be4bf17fb9cd80d3f6957a42a7caa3"
+        },
+        {
+          "file": "actor.pt",
+          "bytes": 46439949,
+          "sha256": "da4d3e84f302058d3c7563d218188ffaf5bfc3db552821a5c5e7141902c2f565"
+        }
+      ],
+      "full_training_resume_available": false,
+      "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state"
+    },
+    {
+      "status": "model_snapshot_preserved",
+      "collection_steps": 16001,
+      "files": [
+        {
+          "file": "world_model.pt",
+          "bytes": 34990357,
+          "sha256": "e16f333a7a99640b3d5d5fd99f4b91a41f2fe343f9f7d8b4795d3d20a0a8f1c5"
+        },
+        {
+          "file": "actor.pt",
+          "bytes": 46439949,
+          "sha256": "91cf1639128c00cb01a5f6b9fb1f0b83b7917ca819f79f7b0f60bf1df8bacdde"
+        }
+      ],
+      "full_training_resume_available": false,
+      "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state"
+    }
+  ],
+  "checkpoint_timing_file": "checkpoint-times.json",
+  "runner_returned_observation": {
+    "utc": "2026-11-13T05:30:06.985543+00:00",
+    "seconds_since_program_entry": 2075.7576089594513,
+    "seconds_since_runner_run_entry": 2023.2149086724967
+  },
+  "full_training_resume_available": false
+}

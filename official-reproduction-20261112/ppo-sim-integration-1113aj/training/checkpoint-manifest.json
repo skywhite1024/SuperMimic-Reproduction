@@ -1,0 +1,89 @@
+[
+  {
+    "ppo_update": 1,
+    "collection_steps": 24,
+    "files": [
+      {
+        "file": "actor.pt",
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-integration-1113aj/training/checkpoints/update-001/actor.pt",
+        "bytes": 46439949,
+        "sha256": "403d5faebf5ee7f4fcf8a2176ff9df443ded7cb35f5a45ae891fbbbc464991a3",
+        "model_state_readback_verified": true
+      },
+      {
+        "file": "critic.pt",
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-integration-1113aj/training/checkpoints/update-001/critic.pt",
+        "bytes": 929269,
+        "sha256": "5fa9b3cb864483a8f7d52ab7a64e00a2f2348380806a3ba87a1b16c00abfe284",
+        "model_state_readback_verified": true
+      },
+      {
+        "file": "ppo.pt",
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-integration-1113aj/training/checkpoints/update-001/ppo.pt",
+        "bytes": 119851915,
+        "sha256": "6e938c555e6bcfef604b53954dbde05a1ee7db90bc89d73230c9194bd1fd49aa",
+        "model_state_readback_verified": true
+      }
+    ],
+    "native_actor_state_sha256": "82ed2e4a55e794d66edace00740d3949132dd86349222e13818240689d0f03fd",
+    "native_critic_state_sha256": "608a3278b5feb903a08957543e291d7d493470d8a274b99ff00aa6be71a00438"
+  },
+  {
+    "ppo_update": 2,
+    "collection_steps": 48,
+    "files": [
+      {
+        "file": "actor.pt",
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-integration-1113aj/training/checkpoints/update-002/actor.pt",
+        "bytes": 46439949,
+        "sha256": "f6f9ac800b7d6ce6095b807ad92b80c3153970cf8aaa3e5d96178a4521670bd5",
+        "model_state_readback_verified": true
+      },
+      {
+        "file": "critic.pt",
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-integration-1113aj/training/checkpoints/update-002/critic.pt",
+        "bytes": 929269,
+        "sha256": "3c49e1ca25931dedaaf9c354b71b0d98619b4c3896a3a2bac9dad0da4a06ae4c",
+        "model_state_readback_verified": true
+      },
+      {
+        "file": "ppo.pt",
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-integration-1113aj/training/checkpoints/update-002/ppo.pt",
+        "bytes": 119851915,
+        "sha256": "8a11eb87f4dda3d960698502e10c6a8c4b5c65bf016fceb7d75a36a2b0b7fa00",
+        "model_state_readback_verified": true
+      }
+    ],
+    "native_actor_state_sha256": "9712c9d7c0ca9c7cc5dc591fcf20a8196c4e798b9437ef48fec6b6adb3e03e4b",
+    "native_critic_state_sha256": "b32ce903c17e3134a0a66ef8b30838e68513583f70174ef4874a6a69529054f2"
+  },
+  {
+    "ppo_update": 3,
+    "collection_steps": 72,
+    "files": [
+      {
+        "file": "actor.pt",
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-integration-1113aj/training/checkpoints/update-003/actor.pt",
+        "bytes": 46439949,
+        "sha256": "e2472d1330822e844d41afd5e3e2a292557c35186c41fc8c09c6ff48dabfa4ee",
+        "model_state_readback_verified": true
+      },
+      {
+        "file": "critic.pt",
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-integration-1113aj/training/checkpoints/update-003/critic.pt",
+        "bytes": 929269,
+        "sha256": "ac0f983857a1f81e7b9a3b2e90d8c4e2428235f5c554c5c1d7d38f055e0d0b0f",
+        "model_state_readback_verified": true
+      },
+      {
+        "file": "ppo.pt",
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-integration-1113aj/training/checkpoints/update-003/ppo.pt",
+        "bytes": 119851915,
+        "sha256": "7a2353d9d50594cef2ca166243ecc1782e934d7fce4fd03b3744e3e84a7e6e00",
+        "model_state_readback_verified": true
+      }
+    ],
+    "native_actor_state_sha256": "8d14ccfbbd0ab7c1e8c4196ac2c3d0fbbc3cd6983c6e3ad53e98edb7209a42d3",
+    "native_critic_state_sha256": "fb89ee58b7418b0ae8003d14e99cfd9b7b51feaaea7eac5dd81d46528863934d"
+  }
+]
