@@ -114,8 +114,11 @@
         18
       ],
       "status": "not_executed",
-      "evidence": [],
-      "qualification": "LAFAN40 versus full rawBONES is not this subset sweep; subset membership and prediction-error normalization/holdout need explicit treatment."
+      "evidence": [
+        "evaluate_saved_wm_forecasts.py",
+        "saved-wm-forecast-cpu-validation.json"
+      ],
+      "qualification": "1/7/40/264hour sweep not executed. Explicit9state/8action metric prepared on fixed completeLAFAN40 physical traces; realGPU measurement next. Nativewm.horizon8 window scores7transitions. Offline fixed trajectories are not onlinepaper rollout measurement; source subset/aggregation still need confirmation."
     },
     {
       "id": "rollout_speed",
@@ -225,9 +228,9 @@
   "original_scope_retained": true,
   "no_new_cloud_jobs_submitted_by_this_audit": true,
   "next_execution_priority": [
-    "Finish existing4GPU jobs, rawv2 arrays and final-model fixed evaluations",
-    "Prepare faithful local-checkpoint throughput/PPO-WM entry with explicit computation scope; execute after GPU slot frees",
-    "Continue matchedPPO-Sim,duration,horizon,push experiments; retain unresolved exact author inputs and hardware limitation"
+    "Finish frozenraw320k and separately evaluate finalmodel with correctedv2 plus completearrayaudit",
+    "Execute explicit8transition sharedtrajectory WM forecast diagnostic; then extend data-scale/online metric with declared subset membership",
+    "Continue realG1 PPO-WM/PPO-Sim, critic horizons, push andmultiGPU matched experiments; retain missingexactauthor inputs andhardware limitation"
   ],
   "last_status_update": "2026-11-13T11:38:02.453152+08:00"
 }

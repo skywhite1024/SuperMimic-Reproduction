@@ -1,0 +1,19 @@
+{
+  "status": "explicit_eight_transition_metric_cpu_verified",
+  "tests_passed": 2,
+  "pytest_seconds": 3.8,
+  "tests": [
+    "Actual native _rollout: eight action/state slots score seven transitions; nine slots score eight; exact action sequence verified",
+    "Actual zero native Dynamics: eight open-loop transitions without teacher forcing;1cm physical root shift gives1/70 native normalized MSE; NumPy physical groups and saved-array float64 aggregation agree"
+  ],
+  "worker_sha256": "b352013cecd18e3d6feb05ae8d079d148f45fffabdf2cf00cdbdb0e3ef971ad3",
+  "test_sha256": "aefa39aa0b35c115f0f1babd1d0734d3d80c6534dff3cea7919ac36b67f29e92",
+  "native_wm_learner_sha256": "1e2d489a607677032d9d90de2511c2e8e1750bd845dcc7966026f23a65842665",
+  "input_trajectory_windows_per_model": 437276,
+  "models": 2,
+  "forecast_transitions": 8,
+  "gpu_measurement_executed": false,
+  "exact_paper_aggregation_confirmed": false,
+  "dataset_scale_sweep_completed": false,
+  "paper_results_reproduced": false
+}
