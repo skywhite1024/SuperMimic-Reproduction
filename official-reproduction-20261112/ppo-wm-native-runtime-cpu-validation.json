@@ -1,0 +1,35 @@
+{
+  "status": "new_native_ppo_runtime_cpu_instrumentation_verified",
+  "passed_tests": 1,
+  "pytest_seconds": 5.892,
+  "runtime_source_sha256": "3236ad438813bcfa3ff4e5e0faee516a7e4ecc7a86dd68ddca0ccb42bdecd84c",
+  "test_source_sha256": "912c822874aca4eaf5e6070667338235f1e9df4dffca61c47cfe74bd2fff3e2b",
+  "synthetic_full_motion_goal_width": 640,
+  "actor_input_width": 1570,
+  "proprio": 93,
+  "history": 10,
+  "actual_RSL_PPO_update_calls": 2,
+  "synthetic_rows": 8,
+  "rollout_steps": 4,
+  "checks": [
+    "Native actor and critic change after each real RSL update",
+    "Declared uint8/float conversions match every captured storage row",
+    "32 probability entries per mode roundtrip through saved NPZ",
+    "Same native mean-network initialization in the two modes",
+    "Full640D motion-target width rather than previous18D interface fixture"
+  ],
+  "initial_test_failure": {
+    "reason": "Test fixture assumed a six-dimensional goal reduction; released ten-frame goal drops30 relative-position dimensions",
+    "repaired": "Use released actor_goal_dim and full29-joint ten-frame target widths; runtime source unchanged"
+  },
+  "static_python_ast_passed": [
+    "ppo_wm_native_runtime.py",
+    "run_ppo_wm_integration.py",
+    "run_ppo_wm_integration_pair.py",
+    "test_ppo_wm_native_runtime.py"
+  ],
+  "gpu_or_G1_worker_executed": false,
+  "paper_equivalence_verified": false,
+  "vendor_files_modified": false,
+  "existing_cloud_payloads_modified": false
+}
