@@ -419,3 +419,11 @@ CPU会话首次发生原因不明的提前停止，随后在同一绝对截止�
 这是固定状态下的观察契约检查，证明当前 `compute_wm_obs()` 丢弃 `sim_ctx` 所产生的差异；没有创建G1模拟器，没有测量学习成绩下降，也没有推断现有模型失败由它导致。它涉及我们使用的gencoord/proprio训练路径，应随冻结配置保留为发布代码的限制。当前运行中的基线继续保持原版本；没有合入未审查PR、重写vendor或中途改变随机化。后续若比较修正实现，需要独立训练、同一完整评估并保留两组结果。
 
 本次同时查看的 [PR #4](https://github.com/HybridRobotics/supermimic/pull/4)、[PR #5](https://github.com/HybridRobotics/supermimic/pull/5) 和 [PR #21](https://github.com/HybridRobotics/supermimic/pull/21) 分别涉及参数迭代器、critic尾批次、PPO日志累计；它们也是未合并提案。当前actor优化器传入参数list，critic使用的H32×4096（混合接口各2048）样本数可被4整除；这两个特定边界不能由PR标题直接判定已破坏当前基线。PPO日志问题留给后续PPO入口处理，不把日志中的计数或累计时间自动当作完整原始墙钟证据。
+
+## 29. 原生网络接入PPO接口，CPU验证通过
+
+新增 [PPO模型适配](../official-reproduction-20261112/paper_ppo_models.py)，将发布的 `MultiEncoderAE` 直接作为PPO均值网络，保留目标编码器、latent32、H10×93D历史、2048/1024/512/256解码器、LayerNorm/GELU与原生归一化。它只将BaseRunner拼接的平坦历史/目标还原成原生TensorDict，并添加RSL Gaussian分布；motion之外的接口必须为零权重。评论家直接使用原生256/128网络，不再叠加RSL观察归一化。原生演员/评论家可分别从适配器取出，保留原有state_dict结构。
+
+[两项CPU检查](../official-reproduction-20261112/test_paper_ppo_models.py) 使用合成18D目标而非真实动作目标，验证相同原生权重下输出、归一化状态及每个参数梯度逐位一致，适配器构造不改变CPU RNG，并执行8行×8步的实际RSL PPO更新，检查参数改变与有限值。初次CPU尝试暴露RSL不支持空hidden_dims；改用随即丢弃的1单元临时网络并恢复其初始化RNG后通过，记录见 [模型适配验收](../official-reproduction-20261112/paper-ppo-models-cpu-validation.json)。
+
+这只消除了后续对照入口的网络接口障碍。真实G1/世界模型、完整动作目标维度、CUDA更新、重置采样、终止约定、数据成员和训练日程仍需接入并独立验证。第26节的float终止存储仅在CPU测试里显式选择，没有偷偷改动发布的PPO或运行中训练；第28节的发布观察偏置问题同样没有在这个网络适配中修复。当前没有新的PPO-Sim或PPO-WM实验成绩。

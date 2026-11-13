@@ -140,9 +140,11 @@
       "evidence": [
         "pinned-experiment-entrypoint-review.json",
         "probe_ppo_wm_termination_contract.py",
-        "ppo-wm-termination-contract-cpu.json"
+        "ppo-wm-termination-contract-cpu.json",
+        "paper_ppo_models.py",
+        "paper-ppo-models-cpu-validation.json"
       ],
-      "qualification": "Released PPO-WM/RSL5.5.2 CPU contract probe verifies fractional term_prob is truncated by uint8 done storage beforeGAE;8synthetic rows/32steps/2nativePPOupdates. Default flatMLP/H1/rep_state also differs from main actor architecture/H10proprio. No G1WM GPU mechanism training or64xclaim; author termination convention remains unconfirmed."
+      "qualification": "Nativeactor/criticRSLmodelinterfaces pass2CPUchecks:bitwiseoutputs/normalizers/gradientsandactualsyntheticPPOupdate;18Dsyntheticgoal,norealG1/CUDA/fullrunner. Releasedsoftterminationuint8gapverifiedseparately. Fullsampler,termination,library,scheduleandfourrolloutconfigsnotexecuted;no64xclaim."
     },
     {
       "id": "critic_horizons",
@@ -211,5 +213,5 @@
     "Prepare faithful local-checkpoint throughput/PPO-WM entry with explicit computation scope; execute after GPU slot frees",
     "Continue matchedPPO-Sim,duration,horizon,push experiments; retain unresolved exact author inputs and hardware limitation"
   ],
-  "last_status_update": "2026-11-13T09:20:26.419575+08:00"
+  "last_status_update": "2026-11-13T09:37:25.586985+08:00"
 }

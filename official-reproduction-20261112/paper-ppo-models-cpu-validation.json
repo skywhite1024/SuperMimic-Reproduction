@@ -1,0 +1,56 @@
+{
+  "status": "native_ppo_model_interfaces_cpu_verified",
+  "source_files": {
+    "paper_ppo_models.py": "08463f540b76a6dfe7086e7fbcaab447453078c6b42ac307a8f181dfa062f570",
+    "test_paper_ppo_models.py": "0a7653343facb316a21b3aeffbb4c6d7a802c550fab62a2f8c6d904b1abf3362"
+  },
+  "native_source_files": {
+    "upstream/supermimic/src/supermimic/models.py": "fbfbd5c836c2670a68776f9009b9463451d5115c753d0e592fba919f2d44b0ad",
+    "upstream/supermimic/src/supermimic/tasks/task_spec.py": "1a9935fec21d2cae607754c96aa50b6b8b5820ecdd198dbf1885eae863a8f389"
+  },
+  "cpu_checks": {
+    "passed": 2,
+    "pytest_seconds": 5.48,
+    "scope": [
+      "Bitwise nativeactor outputs,normalization state,andparametergradients foridenticalweights",
+      "AdapterconstructionpreservesCPU RNG",
+      "Real RSLPPO update changesnativeactordecoder;finiteactor/critic/distributionparameters"
+    ]
+  },
+  "synthetic_input": {
+    "proprio_width": 93,
+    "history": 10,
+    "motion_goal_width": 18,
+    "real_motion_goals_used": false,
+    "critic_width": 119,
+    "ppo_rows": 8,
+    "ppo_rollout_steps": 8,
+    "ppo_epochs": 1,
+    "ppo_minibatches": 2
+  },
+  "network_sizes": {
+    "goal_encoder_and_decoder": [
+      2048,
+      1024,
+      512,
+      256
+    ],
+    "latent": 32,
+    "critic": [
+      256,
+      128
+    ]
+  },
+  "initial_cpu_attempt": {
+    "failed": 2,
+    "pytest_seconds": 5.49,
+    "reason": "RSLMLPconstructorrequiresnonemptyhidden_dims;emptytemporaryplaceholderrejectedbeforePPOupdate",
+    "repair": "Use1unittemporaryMLP,discarditandpreserveconstructionCPURNG"
+  },
+  "termination_in_update_test": "Explicitfloatstorage,syntheticprobability.25;thisdoesnotconfirmthepaperterminationconvention",
+  "g1_physics_executed": false,
+  "cuda_executed": false,
+  "full_ppo_runner_implemented": false,
+  "paper_equivalence_verified": false,
+  "vendor_or_active_training_modified": false
+}
