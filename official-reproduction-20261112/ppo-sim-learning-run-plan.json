@@ -1,5 +1,5 @@
 {
-  "status": "actual_G1_gate_full40_audits_passed_main_training_running",
+  "status": "user_paused_training_or_pipeline_incomplete",
   "submitted": true,
   "name": "supermimic-official-ppo-sim-260010076-1113ak",
   "display_name": "260010076-SuperMimic-PPO-Sim-2048-1113ak",
@@ -103,10 +103,10 @@
   "uid": "a30dd1b7e5f2479192d96dc7b80fbc29",
   "created_at": "2026-11-13T14:12:52+08:00",
   "observed_at": "2026-11-13T14:44:59.329343+08:00",
-  "platform_status": "running",
+  "platform_status": "stopped",
   "startup_command_exact_editor_clipboard_readback": true,
   "editor_clipboard_characters": 47791,
-  "queued_allocated_worker_replicas": 1,
+  "queued_allocated_worker_replicas": 0,
   "program_started_at": "2026-11-13T14:17:51+08:00",
   "program_deadline": "2026-11-13T18:47:51+08:00",
   "forced_exit_deadline": "2026-11-13T18:48:21+08:00",
@@ -187,5 +187,15 @@
   },
   "local_startup_log_sha256": "fc79417eda7b96718ae3fd0d4cff93797d829c6c2d965b402600fd646c941bec",
   "full_main_quality_curve_completed": false,
-  "original_final_JSON_receipts_pending": true
+  "original_final_JSON_receipts_pending": true,
+  "status_before_user_pause": "actual_G1_gate_full40_audits_passed_main_training_running",
+  "user_paused_at": "2026-11-13T15:36:32.821206+08:00",
+  "resume_requires_explicit_user_request": true,
+  "pause_evidence": "user-pause-20261113.json",
+  "last_read_only_observation_at_pause": {
+    "updates": 1800,
+    "simulator_steps": 353894400,
+    "is_exact_stop_counter": false,
+    "evidence": "user-pause-20261113.json"
+  }
 }

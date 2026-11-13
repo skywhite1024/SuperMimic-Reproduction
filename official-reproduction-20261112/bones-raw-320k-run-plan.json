@@ -1,5 +1,5 @@
 {
-  "status": "running_training",
+  "status": "user_paused_training_incomplete",
   "name": "supermimic-official-bones-long-260010076-1113m",
   "display_name": "260010076-SuperMimic-BONES-raw-320k-1113m",
   "gpu": 1,
@@ -77,5 +77,17 @@
     "Policy/value_function": 0.0075
   },
   "checkpoint4k_completion_observed": true,
-  "checkpoint4k_observation": "bones-raw-320k-checkpoint4k-observation.json"
+  "checkpoint4k_observation": "bones-raw-320k-checkpoint4k-observation.json",
+  "status_before_user_pause": "running_training",
+  "platform_status": "stopped",
+  "user_paused_at": "2026-11-13T15:36:32.821206+08:00",
+  "resume_requires_explicit_user_request": true,
+  "pause_evidence": "user-pause-20261113.json",
+  "queued_allocated_worker_replicas": 0,
+  "counter_at_pause_record": {
+    "last_observed_collections": 295111,
+    "last_observed_total_steps": 1208774656,
+    "is_exact_stop_counter": false,
+    "evidence": "user-pause-20261113.json"
+  }
 }

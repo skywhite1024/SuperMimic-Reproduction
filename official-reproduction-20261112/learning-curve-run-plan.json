@@ -1,5 +1,5 @@
 {
-  "status": "main_training_worker_exited0_ninepoint_evaluation_in_progress",
+  "status": "user_paused_evaluation_incomplete",
   "submitted": true,
   "name": "supermimic-official-lafan-curve-260010076-1113ag",
   "display_name": "260010076-SuperMimic-LAFAN-curve-64k-1113ag",
@@ -203,6 +203,14 @@
       "initial_states_audit_sha256": "cbbffac727e1173be6d67e74e52c9d63ddee52307cd2b0feb9a8e7fdd3e2f50c"
     }
   ],
-  "latest_evaluation_collection_step_started": 24001,
-  "original_source_and_running_payload_modified": false
+  "latest_evaluation_collection_step_started": 48001,
+  "original_source_and_running_payload_modified": false,
+  "status_before_user_pause": "main_training_worker_exited0_ninepoint_evaluation_in_progress",
+  "platform_status": "stopped",
+  "user_paused_at": "2026-11-13T15:36:32.821206+08:00",
+  "resume_requires_explicit_user_request": true,
+  "pause_evidence": "user-pause-20261113.json",
+  "queued_allocated_worker_replicas": 0,
+  "previous_latest_evaluation_collection_step_started": 24001,
+  "complete_main_evaluation_points_at_pause": 6
 }

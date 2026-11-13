@@ -1,0 +1,61 @@
+{
+  "status": "user_paused",
+  "observed_at": "2026-11-13T15:36:32.821206+08:00",
+  "user_request": "先中断当前实验，然后阶段性总结分析当前进展",
+  "resume_requires_explicit_user_request": true,
+  "new_jobs_allowed": false,
+  "goal_complete": false,
+  "known_task_running_or_queued_GPU_requests": 0,
+  "resource_scope": "These three task-owned jobs show stopped and their Workers deleted; no account-wide occupancy claim",
+  "jobs": [
+    {
+      "label": "BONES raw320k",
+      "uid": "283c2489542e47a68ca2493c1ad2d835",
+      "name": "supermimic-official-bones-long-260010076-1113m",
+      "evidence": "paused-bones320k-dom.txt",
+      "status": "user_paused_training_incomplete",
+      "last_observed_collections": 295111,
+      "counter_source": "Read-only existing Worker terminal observed at 2026-11-13T07:24:54.773980+00:00; UI transcription, not a recovered original JSON",
+      "platform_status": "stopped",
+      "worker_observed_status": "deleted",
+      "local_DOM_sha256": "bc18ab165eb36c647f25b357ba384c3baefa7f57ce0a38fec7ed982882e1823f"
+    },
+    {
+      "label": "LAFAN64k curve",
+      "uid": "c1e4e8fa7121499fa06c38189278c10d",
+      "name": "supermimic-official-lafan-curve-260010076-1113ag",
+      "evidence": "paused-lafan64k-dom.txt",
+      "status": "user_paused_evaluation_incomplete",
+      "training_collections_completed": 64001,
+      "complete_main_evaluation_points": 6,
+      "planned_main_evaluation_points": 9,
+      "interrupted_evaluation_collection": 48001,
+      "platform_status": "stopped",
+      "worker_observed_status": "deleted",
+      "local_DOM_sha256": "525f38e676b9245fff56068bcba7a17d79de5efc7e6bb49a351425a9ac223946"
+    },
+    {
+      "label": "PPO-Sim2048",
+      "uid": "a30dd1b7e5f2479192d96dc7b80fbc29",
+      "name": "supermimic-official-ppo-sim-260010076-1113ak",
+      "evidence": "paused-ppo-sim2048-dom.txt",
+      "status": "user_paused_training_or_pipeline_incomplete",
+      "last_observed_updates": 1800,
+      "last_observed_real_transitions": 353894400,
+      "observed_retained_model_sets": 6,
+      "counter_source": "Persisted result inspected read-only at 2026-11-13T07:23:26.036839+00:00; UI transcription, not a recovered original JSON",
+      "platform_status": "stopped",
+      "worker_observed_status": "deleted",
+      "local_DOM_sha256": "bb2508b068ea6daa6d14b1d8588279760946bf1080e6dfee1d3a721529c2f5d7"
+    }
+  ],
+  "prepared_two_GPU_gate_submitted": false,
+  "afs_files_not_deleted_by_pause": true,
+  "fresh_after_stop_AFS_inventory_verified": false,
+  "training_resume_qualification": "Native model snapshots omit a complete optimizer/replay/RNG state; they support inference/evaluation but not a verified exact training resume",
+  "lafan_points": "learning-curve-paused-points-1113ag.json",
+  "lafan49_original_main_JSONs_recovered": false,
+  "PPO39_original_main_JSONs_recovered": false,
+  "raw320k_final_corrected_evaluation_completed": false,
+  "paper_results_reproduced": false
+}

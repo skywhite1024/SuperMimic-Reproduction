@@ -1,0 +1,68 @@
+{
+  "status": "user_paused_partial_driver_log_results",
+  "completed_main_points": [
+    {
+      "collection_steps": 1,
+      "successes": 0,
+      "failures": 40,
+      "reference_frames": 441140,
+      "mean_normalized_full_motion_return": 0.0012686791407130063,
+      "status": "complete_driver_log_observed",
+      "original_json_receipts_recovered": false,
+      "source": "paused offline log; bounded service message, complete point original remains AFS"
+    },
+    {
+      "collection_steps": 8001,
+      "successes": 30,
+      "failures": 10,
+      "reference_frames": 441140,
+      "mean_normalized_full_motion_return": 0.6571451610036788,
+      "status": "complete_driver_log_observed",
+      "original_json_receipts_recovered": false,
+      "source": "paused offline log; bounded service message, complete point original remains AFS"
+    },
+    {
+      "collection_steps": 16001,
+      "successes": 35,
+      "failures": 5,
+      "reference_frames": 441140,
+      "mean_normalized_full_motion_return": 0.7858569384223237,
+      "status": "complete_driver_log_observed",
+      "original_json_receipts_recovered": false,
+      "source": "paused offline log; bounded service message, complete point original remains AFS"
+    },
+    {
+      "collection_steps": 24001,
+      "successes": 39,
+      "failures": 1,
+      "reference_frames": 441140,
+      "mean_normalized_full_motion_return": 0.8290067885958701,
+      "status": "complete_driver_log_observed",
+      "original_json_receipts_recovered": false,
+      "source": "paused offline log; bounded service message, complete point original remains AFS"
+    },
+    {
+      "collection_steps": 32001,
+      "successes": 40,
+      "failures": 0,
+      "reference_frames": 441140,
+      "mean_normalized_full_motion_return": 0.8426915365563167,
+      "status": "complete_driver_log_observed",
+      "original_json_receipts_recovered": false,
+      "source": "paused offline log; bounded service message, complete point original remains AFS"
+    },
+    {
+      "collection_steps": 40001,
+      "successes": 39,
+      "failures": 1,
+      "reference_frames": 441140,
+      "mean_normalized_full_motion_return": 0.8407842547342782,
+      "status": "complete_driver_log_observed",
+      "original_json_receipts_recovered": false,
+      "source": "paused offline log; bounded service message, complete point original remains AFS"
+    }
+  ],
+  "source_gzip_sha256": "23d13d8c5e5de6dbcd15f33bf7bb86d9898701966fc9e9f45c98587b9fa70d08",
+  "all49_originals_recovered": false,
+  "paper_results_reproduced": false
+}
