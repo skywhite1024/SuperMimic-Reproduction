@@ -1,0 +1,38 @@
+{
+  "status": "cpu_preparation_verified_gpu_sweep_not_executed",
+  "source_files": {
+    "run_benchmark_sweep.py": "a7e764098ab901118ad10275c4a29f64b351390850df75734d38a2e0e37246f9",
+    "test_run_benchmark_sweep.py": "ba417d452e3902aa583b0a9a3c0bfba426b6331cd8262f7acf97b7cf1d49f036",
+    "benchmark_local_checkpoint.py": "c619f74883e6a32d52839d714dafd1e531ded983015d6a12d48f5bd0ab6a083a"
+  },
+  "cpu_checks": {
+    "passed": 5,
+    "pytest_seconds": 0.03,
+    "scope": [
+      "Recompute reportedSPS andunequal-scope ratios from timing intervals",
+      "Rejectzero,NaN,infinite durations",
+      "Rejectmissingrepeat andshortintegrationasfullmeasurement"
+    ]
+  },
+  "declared_sizes": [
+    64,
+    128,
+    256,
+    512,
+    1024,
+    2048,
+    4096,
+    8192,
+    16384,
+    32768,
+    65536
+  ],
+  "per_case_timeout_seconds": 900,
+  "kill_after_seconds": 30,
+  "whole_cloud_program_timeout_seconds": 12600,
+  "requires_same_worker_completed_gpu_integration": true,
+  "linux_process_supervision_executed": false,
+  "gpu_sweep_executed": false,
+  "scientific_throughput_result_available": false,
+  "paper_speedup_reproduced": false
+}
