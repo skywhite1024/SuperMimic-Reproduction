@@ -348,3 +348,15 @@ Step-test工具生成每平面224个非站立点、合计672个平面/格点身�
 ## 21. 相同39/40计数掩盖不同失败片段
 
 对相同三份哈希固定的16,001步LAFAN模型，将旧v1保存结果和新v2日志重建的全部40条按索引、名称、参考帧数逐条核对：[完整诊断记录](../official-reproduction-20261112/manual-reset-v1-v2-lafan40-diagnostic.json)。两次均39/40，但旧失败 `fallAndGetUp1_subject5` 在新版完成，旧成功 `run1_subject5` 在新版由 `anchor_pos` 提前终止，另38条均完成。均值从0.7904685449041426到0.7971319807437383，观察差0.006663435839595551；23条回报上升、17条下降。此处只记录两次输出的描述差异，没有把不同协议与尚未确认的GPU数值重复性分离，不能据此估计缓存修复的因果效果或宣称性能提升。新版原始协议收据及NPZ审核尚待完成；当前诊断没有在本机确认两次完整源数据哈希相等。
+
+## 22. 标准本地数据恢复与真实保存数组验收完成
+
+有限CPU传输会话已取回215,031,668字节证据包，52个成员的路径、大小、SHA256及包哈希全部核对。包包含两份标准LAFAN数组、修正版40条评测的原始result/protocol/accounting、全部40份轨迹，以及两份21步速度模型的原始结果/协议和轨迹。大型数组留在本地与AFS；[恢复及验收记录](../official-reproduction-20261112/canonical-lafan-recovery-1113y-verification.json) 记录小型证据和哈希。
+
+本地另建 `official-execution-20261112/lafan40-canonical-1113y/packed`，九份文件均与旧、新两份云端协议的源文件哈希相等。原本地数据和非标准v1速度库保留。四元数数组441,140×4中仅355个分量不同，最大绝对差1.19209e-7；角速度441,140×3中838个分量不同，最大差8.94070e-6。数值差异较小，但不能据此把不同字节标为同一冻结输入；形成原因仍未证实。第21节尚未取回协议的限制现已补齐：新版原始result的全部40条记录与先前日志重建逐字段一致，新旧九份数据哈希相等；对缓存修复的因果效果仍未作估计。
+
+已在本机读取全部40份NPZ，共165,518,259字节、437,596控制步，39成功和1失败均包括。ZIP CRC、float32类型、71D状态/29D动作、有限值、步数及奖励合计全部通过，最大奖励合计差为0；[逐文件清单](../official-reproduction-20261112/manual-reset-v2-lafan40-trajectory-ledger.csv) 固定每份轨迹。独立NumPy核查全部保存首帧与标准源数据及原生关节限位裁剪一致，最大分量差4.76837e-7，见 [轨迹完整性](../official-reproduction-20261112/manual-reset-v2-lafan40-trajectory-audit.json) 与 [首帧核查](../official-reproduction-20261112/manual-reset-v2-lafan40-initial-states-audit.json)。这验证保存数组及初始化协议，不代替策略重放或严格接触质量评估。
+
+两份短速度NPZ也已取回并用 [本地数组审核器](../official-reproduction-20261112/audit_velocity_step_arrays.py) 重新读取。两模型各2,688次试验、合计5,376个保存初始状态均匹配声明站立姿态；从保存状态以float64重算首次跌倒，从四元数/世界速度重算heading投影，并从保存速度核对全部命令误差。投影最大差RL为1.07369e-7、蒸馏为9.10511e-8，均在既定容差内；全部试验仍为跌倒，原始误差null保持不变。见 [RL本地数组验收](../official-reproduction-20261112/velocity-rl-step-1113u-local-arrays-audit.json) 和 [蒸馏本地数组验收](../official-reproduction-20261112/velocity-distill-step-1113u-local-arrays-audit.json)。没有由此宣称21步模型具备速度控制能力。
+
+CPU会话首次发生原因不明的提前停止，随后在同一绝对截止时间内恢复，完成传输后已核对应用停止、实例列表为空、原DNAT规则未绑定，未新增GPU。容器cgroup实测限制2核/8GiB，页面节点规格另显示8核/32GiB，该差异如实保留。三个冻结训练作业未修改；完整BONES v2重评已观察到1k模型完成74,752条，下一批首帧检查通过，整个全库评测和100k速度测试尚未完成。

@@ -622,5 +622,8 @@
   "independent_local_mean_recomputation": 0.7971319807437383,
   "trajectory_arrays_read_back": false,
   "complete_original_receipts_pending": true,
-  "paper_results_reproduced": false
+  "paper_results_reproduced": false,
+  "original_receipts_recovered_later": true,
+  "original_receipt_evidence": "canonical-lafan-recovery-1113y-verification.json",
+  "interim_record_preserved_for_history": true
 }

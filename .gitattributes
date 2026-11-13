@@ -8,3 +8,7 @@
 
 # Preserve original sanitized program-log spacing as evidence.
 *.log -whitespace
+
+# Preserve emitted Windows audit bytes, including hash-bound CSV CRLF endings.
+official-reproduction-20261112/manual-reset-v2-lafan40-initial-states-audit.json -whitespace
+official-reproduction-20261112/manual-reset-v2-lafan40-trajectory-ledger.csv -whitespace

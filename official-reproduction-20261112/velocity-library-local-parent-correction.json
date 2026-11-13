@@ -137,5 +137,10 @@
   "strict_local_guard_rejected_before_output": true,
   "strict_builder_sha256": "39862c4a0950f54395da17b0b28477053ee6081247790bf98b5b2ec7a2c2fc85",
   "gpu_integration_validity": "Both integration modes used cloud LAFAN40, whose9 actual packed hashes match the frozen protocol; local drift does not alter these GPU execution gates",
-  "paper_results_reproduced": false
+  "paper_results_reproduced": false,
+  "canonical_local_pack_recovered": true,
+  "canonical_local_pack": "C:/project/sensecore/SuperMimic/official-execution-20261112/lafan40-canonical-1113y/packed",
+  "canonical_all9_hashes_match_cloud": true,
+  "recovery_record": "canonical-lafan-recovery-1113y-verification.json",
+  "old_local_source_preserved": true
 }

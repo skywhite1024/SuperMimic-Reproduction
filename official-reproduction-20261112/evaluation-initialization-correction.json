@@ -1,6 +1,6 @@
 {
   "status": "manual_reset_initial_observation_protocol_requires_corrected_reevaluation",
-  "as_of": "2026-11-13T07:45:20.113795+08:00",
+  "as_of": "2026-11-13T08:29:25.646153+08:00",
   "affected_entrypoints": {
     "evaluate_lafan40.py": "9e5caaea8a97dc72df7f25092ee4aa03d4522324b37bf9d92470ab8fecab60f8",
     "evaluate_motion_corpus.py": "6c43aa1f2dabd0f57aee60caa1440d76b61e2aca18fe96b019c9ce11839a715b"
@@ -27,5 +27,8 @@
   "complete_corrected_corpus_reevaluation_pending": true,
   "corrected_corpus_reevaluation_submitted": true,
   "corrected_corpus_reevaluation_uid": "e0b55c6ef22048c289928b39f23e8d33",
-  "corrected_corpus_reevaluation_record": "manual-reset-v2-launch.json"
+  "corrected_corpus_reevaluation_record": "manual-reset-v2-launch.json",
+  "corrected40_original_result_protocol_accounting_recovered": true,
+  "corrected40_all_saved_arrays_and_first_states_verified_locally": true,
+  "corrected40_evidence": "canonical-lafan-recovery-1113y-verification.json"
 }

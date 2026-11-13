@@ -1,0 +1,123 @@
+{
+  "status": "canonical_local_pack_and_real_saved_arrays_verified",
+  "verified_at": "2026-11-13T08:27:29.797315+08:00",
+  "archive": {
+    "file": "C:\\project\\sensecore\\SuperMimic\\official-execution-20261112\\canonical-lafan-recovery-1113y.tar.gz",
+    "bytes": 215031668,
+    "sha256": "fdc2a4c1107652f62cca34dcf876e2a95f049596858bf99889c8d0753f52ca0b",
+    "members": 52,
+    "all_member_bytes_and_sha256_verified": true
+  },
+  "canonical_pack": "C:\\project\\sensecore\\SuperMimic\\official-execution-20261112\\lafan40-canonical-1113y\\packed",
+  "packed_files": [
+    {
+      "file": "joint_names.json",
+      "bytes": 709,
+      "sha256": "30355b480e4f89c97a693c72f8baf23902fd458d25e49b5df4741dd47aefce0d",
+      "source": "unchanged_existing_local_pack"
+    },
+    {
+      "file": "joint_pos.npy",
+      "bytes": 51172368,
+      "sha256": "64f0dff0d2e0d678a1f78213233124588044ba5781aa599c31b08d1348509a9b",
+      "source": "unchanged_existing_local_pack"
+    },
+    {
+      "file": "joint_vel.npy",
+      "bytes": 51172368,
+      "sha256": "11efc4b4b37b0818ea25a2dfa8676ed8f564a3443c97bf9c9680a346c06b23e0",
+      "source": "unchanged_existing_local_pack"
+    },
+    {
+      "file": "motion_ends.npy",
+      "bytes": 448,
+      "sha256": "fa4db64df8fe4d1f9362883b8c7b32d303a3865aeeab1c92fad0e89144cf8be5",
+      "source": "unchanged_existing_local_pack"
+    },
+    {
+      "file": "motion_names.json",
+      "bytes": 802,
+      "sha256": "b2b46cceb62efa50b159e13928b4c991b80b27a59b381ed603392cfa87e3c8b9",
+      "source": "unchanged_existing_local_pack"
+    },
+    {
+      "file": "root_ang_vel_w.npy",
+      "bytes": 5293808,
+      "sha256": "88ff137fd4a6dde1626dceae086c8a810da624d650855d69af1adc052565f9b5",
+      "source": "canonical_cloud_recovery"
+    },
+    {
+      "file": "root_lin_vel_w.npy",
+      "bytes": 5293808,
+      "sha256": "7738f75d8de3b070a1d6407a06e1a971d5723abccc1e46a90a1aa86e93c486a0",
+      "source": "unchanged_existing_local_pack"
+    },
+    {
+      "file": "root_pos_w.npy",
+      "bytes": 5293808,
+      "sha256": "a57c5a8efc209c345ea4f7d83ef36936c0edfefb60f137757af69c6f4f7272fe",
+      "source": "unchanged_existing_local_pack"
+    },
+    {
+      "file": "root_quat_w.npy",
+      "bytes": 7058368,
+      "sha256": "9934171fce73559ec04d63db2bafee95575cd46196fe39aea425d677eae5303e",
+      "source": "canonical_cloud_recovery"
+    }
+  ],
+  "all9_match_old_and_corrected_cloud_protocol": true,
+  "old_local_pack_preserved": true,
+  "old_local_velocity_candidate_preserved": true,
+  "old_drift_cause_confirmed": false,
+  "old_vs_canonical_numeric_differences": [
+    {
+      "file": "root_quat_w.npy",
+      "shape": [
+        441140,
+        4
+      ],
+      "unequal_values": 355,
+      "maximum_abs_difference": 1.1920928955078125e-07,
+      "mean_abs_difference": 5.816906604377255e-12
+    },
+    {
+      "file": "root_ang_vel_w.npy",
+      "shape": [
+        441140,
+        3
+      ],
+      "unequal_values": 838,
+      "maximum_abs_difference": 8.940696716308594e-06,
+      "mean_abs_difference": 1.0174122277316126e-09
+    }
+  ],
+  "corrected40_original_receipts": [
+    {
+      "file": "manual-reset-v2-lafan40-result.json",
+      "bytes": 14335,
+      "sha256": "d7abed73a1456036889cf36852d6c26118ea34061b9a713c941c2e4e7b49f3a7",
+      "original_cloud_bytes_preserved": true
+    },
+    {
+      "file": "manual-reset-v2-lafan40-protocol.json",
+      "bytes": 7863,
+      "sha256": "68964390d769af2fd193655190cc1464a0cf5cb1e2b9def45b79deb3a749b25b",
+      "original_cloud_bytes_preserved": true
+    },
+    {
+      "file": "manual-reset-v2-lafan40-accounting.json",
+      "bytes": 1378,
+      "sha256": "8cbc17ca850c81e3ef080dfdeabdc1877bb76edec5665d39a5d0665e52b09266",
+      "original_cloud_bytes_preserved": true
+    }
+  ],
+  "corrected40_log_reconstruction_records_exactly_match_original": true,
+  "corrected40_all_trajectory_arrays_verified_locally": true,
+  "corrected40_all_first_reference_states_verified_locally": true,
+  "short_velocity_trial_arrays_verified_locally": true,
+  "short_velocity_trials_all_fell": true,
+  "cpu_cci_stopped_empty_verified": true,
+  "dnat_unbound_verified": true,
+  "training_jobs_modified": false,
+  "paper_results_reproduced": false
+}

@@ -1,0 +1,32 @@
+{
+  "status": "complete_local_step_arrays_verified",
+  "mode": "distill",
+  "auditor_sha256": "0a08fe0a7c5ac01265b0e838e578ba176dac95291b50b43cdee7a70c03b9feec",
+  "purpose": "integration",
+  "result_sha256": "39a74cbbf4fdeeed5ebcd9ba33a63563b2d7bbaa6e1841d6700e12846afc1225",
+  "protocol_sha256": "30328c944263874647021328df83691f0566d22ae9cc0d6a7bdc5108f504b2d9",
+  "npz_sha256": "a4a7b42a12446c8557d522ce9206c975da87e9613ece1faf4d079238c1561a39",
+  "npz_bytes": 17463589,
+  "commands": 672,
+  "trials": 2688,
+  "initial_states_verified": 2688,
+  "valid_control_steps": 43008,
+  "fallen_trials": 2688,
+  "all_fall_commands": 672,
+  "maximum_heading_projection_abs_error": 9.105106157925036e-08,
+  "all_arrays_crc_dtype_finite_padding_verified": true,
+  "first_fall_recomputed_from_saved_states_float64": true,
+  "heading_projection_recomputed_float64": true,
+  "all_command_errors_recomputed_from_saved_velocities": true,
+  "heading_projection_tolerance": {
+    "atol": 1e-05,
+    "rtol": 1e-05
+  },
+  "score_comparison_tolerance": {
+    "atol": 1e-12,
+    "rtol": 1e-12
+  },
+  "policy_replay_executed": false,
+  "repeatability_verified": false,
+  "paper_results_reproduced": false
+}

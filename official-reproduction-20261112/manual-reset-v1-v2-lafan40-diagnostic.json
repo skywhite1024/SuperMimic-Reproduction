@@ -8,13 +8,13 @@
     "critic.pt": "958dff191dca78eeb81d07cd60831cae93b5eef776c3a3e9f4bf53efd4250f51"
   },
   "all40_indices_names_lengths_paired": true,
-  "exact_current_packed_byte_identity_verified_here": false,
-  "corrected_protocol_original_receipt_pending": true,
+  "exact_current_packed_byte_identity_verified_here": true,
+  "corrected_protocol_original_receipt_pending": false,
   "clips": 40,
   "reference_frames": 441140,
   "legacy_protocol": "manual-reset-v1; cached initial observation qualification revoked",
   "corrected_protocol": "manual-reset-v2; actual40 first-reference states verified",
-  "corrected_result_source": "manual-reset-v2-lafan40-interim.json: live-log reconstruction; original JSON pending",
+  "corrected_result_source": "manual-reset-v2-lafan40-result.json: original cloud bytes recovered and SHA256 verified",
   "corrected_log_sha256": "16c2b7f5b9b54047fff306c4bd62cf9db2531f95cbc416bb6144de5b2604acaa",
   "legacy_mean": 0.7904685449041426,
   "corrected_mean": 0.7971319807437383,
@@ -678,8 +678,9 @@
     "One legacy run versus one corrected run; initialization/control histories differ and GPU numerical repeatability is not established",
     "Same39/40 aggregate count conceals one changed failure in each direction",
     "No trajectory physics or contact-quality qualification from returns or terminal counts",
-    "New complete protocol JSON and NPZ audit still pending"
+    "Complete40 NPZ arrays and first-reference states now independently audited locally; no policy replay or strict contact quality claim"
   ],
   "legacy_local_result_file_sha256": "aa6c5770c866847965745dc60994dec4c8de435696500bdcf651ed26a1d7a4df",
-  "legacy_result_source": "Existing saved v1 result file; this diagnostic does not re-establish original cloud byte provenance"
+  "legacy_result_source": "Existing saved v1 result file; this diagnostic does not re-establish original cloud byte provenance",
+  "corrected_protocol_sha256": "68964390d769af2fd193655190cc1464a0cf5cb1e2b9def45b79deb3a749b25b"
 }
