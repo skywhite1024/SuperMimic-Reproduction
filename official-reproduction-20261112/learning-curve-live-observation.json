@@ -1,8 +1,8 @@
 {
-  "observed_at": "2026-11-13T12:37:59.085454+08:00",
+  "observed_at": "2026-11-13T14:57:02.908433+08:00",
   "job_name": "supermimic-official-lafan-curve-260010076-1113ag",
   "uid": "c1e4e8fa7121499fa06c38189278c10d",
-  "status": "short_cuda_integration_verified_main64k_training_running",
+  "status": "main_training_worker_exited0_ninepoint_evaluation_in_progress",
   "created_at": "2026-11-13T12:22:10+08:00",
   "program_started_at": "2026-11-13T12:22:23+08:00",
   "program_deadline": "2026-11-13T19:22:23+08:00",
@@ -36,14 +36,56 @@
     "per_point_evaluation_timeout_seconds": 900,
     "per_audit_timeout_seconds": 180,
     "expected_original_json_receipts": 49,
-    "status": "training_running",
+    "status": "training_worker_exit0_then_nine_point_evaluation",
     "training_start_observed_between": [
       "2026-11-13T12:26:41.763744+08:00",
       "2026-11-13T12:28:18+08:00"
     ],
-    "training_updates_not_observed_in_outer_log": true,
-    "stage_log": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-curve-64k-1113ag/main/training.log"
+    "training_updates_not_observed_in_outer_log": false,
+    "stage_log": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-curve-64k-1113ag/main/training.log",
+    "completed_training_original_result_recovered": false
   },
   "goal_complete": false,
-  "paper_results_reproduced": false
+  "paper_results_reproduced": false,
+  "recorded_at": "2026-11-13T15:05:12.341437+08:00",
+  "training_worker_exit": {
+    "script": "run_lafan_pilot.py",
+    "returncode": 0,
+    "elapsed_seconds": 8468.51185983792
+  },
+  "completed_main_evaluation_points": [
+    {
+      "collection_steps": 1,
+      "status": "complete",
+      "mean_normalized_full_motion_return": 0.0012686791407130063,
+      "successes": 0,
+      "failures": 40,
+      "reference_frames": 441140,
+      "checkpoint_time": {
+        "collection_steps": 1,
+        "callback_entry_after_native_save": {
+          "utc": "2026-11-13T04:29:57.252442+00:00",
+          "seconds_since_program_entry": 73.40138119086623,
+          "seconds_since_runner_run_entry": 21.79761016368866
+        },
+        "retained_snapshot_complete": {
+          "utc": "2026-11-13T04:29:58.711872+00:00",
+          "seconds_since_program_entry": 74.8608111217618,
+          "seconds_since_runner_run_entry": 23.257040094584227
+        },
+        "offline_artifact_logging_returned": {
+          "utc": "2026-11-13T04:29:59.255450+00:00",
+          "seconds_since_program_entry": 75.4043911062181,
+          "seconds_since_runner_run_entry": 23.800620079040527
+        }
+      },
+      "result_sha256": "122694e91c65febd681db5cea5b39be711d6cb4a7a79eff17b3de5e9db68a10e",
+      "protocol_sha256": "c8ac8e9109532ef5feedf75599e4c7b608e793ee88ac6dd951943ed853e82cd7",
+      "accounting_sha256": "6aab71156695a2bde28f7a6aa3f7b7aafdf7aa26f747c60ce5aa8ffc8aeb6080",
+      "trajectory_audit_sha256": "584dcaa72e92101f545a3d77904bffa7c8d549eb8f71db2e71d7f253486eb9f4",
+      "initial_states_audit_sha256": "a5a66c2755a41f5ad72812457606f09adf6d36ee0cb75ebd684102a150e266b5"
+    }
+  ],
+  "latest_evaluation_collection_step_started": 8001,
+  "final_nine_point_curve_complete": false
 }
