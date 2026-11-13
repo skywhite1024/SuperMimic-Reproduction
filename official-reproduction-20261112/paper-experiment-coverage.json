@@ -2,10 +2,10 @@
   "status": "scope_audit_incomplete_paper_reproduction",
   "goal_complete": false,
   "scope_redefined": false,
-  "as_of": "2026-11-13T08:42:49.702697+08:00",
+  "as_of": "2026-11-13T12:58:26.839311+08:00",
   "paper_pdf_sha256": "fe213017ab062f4acc3965da89abd3c29969163e144a2628a662b8ce46691009",
   "upstream_supermimic_commit": "abc124c1bd5976341034668af3d12c087f2f1f55",
-  "code_and_evidence_commit": "764cbfd8fcb1ee537329189d8ed635e65e208a09",
+  "code_and_evidence_commit": "aec7e3b5b92542b63a2ae4ea3c39762a0cdf4808",
   "rows": [
     {
       "id": "local_environment",
@@ -169,9 +169,14 @@
         7,
         8
       ],
-      "status": "not_executed",
-      "evidence": [],
-      "qualification": "CurrentH32-with-critic alone does not cover10 configurations. Training episode return differs from fixed-start fullclip scores."
+      "status": "native_critic_free_cuda_integration_and_all40_audits_verified_main16k_running",
+      "evidence": [
+        "critic-ablation-cpu-validation.json",
+        "critic-free-h32-run-plan.json",
+        "critic-free-integration-1113ah/receipt-ledger.json",
+        "critic-free-integration-1113ah/validation.json"
+      ],
+      "qualification": "NativeBPTT H32/gamma0.99, exactly2models, real21-collection CUDA integration; step11 full40 result0/40 retained, all arrays/firststates audited. Fresh16k main started. One seed; not ten horizons, training-return curves, matched timing or push recovery."
     },
     {
       "id": "push_recovery",
@@ -233,11 +238,11 @@
     }
   ],
   "original_scope_retained": true,
-  "no_new_cloud_jobs_submitted_by_this_audit": true,
+  "no_new_cloud_jobs_submitted_by_this_audit": false,
   "next_execution_priority": [
     "Finish frozen raw320k and separately evaluate finalmodel with correctedv2 plus completearrayaudit",
     "Recover timedLAFAN64k complete ninepoint curve and all original receipts after finite livejob ends",
     "Continue realG1 PPO-WM/PPO-Sim, critic horizons, push andmultiGPU matched experiments; retain missingexactauthor inputs andhardware limitation"
   ],
-  "last_status_update": "2026-11-13T12:37:59.085454+08:00"
+  "last_status_update": "2026-11-13T12:58:26.839311+08:00"
 }

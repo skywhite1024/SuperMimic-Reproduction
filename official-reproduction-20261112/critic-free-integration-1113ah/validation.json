@@ -1,0 +1,31 @@
+{
+  "status": "native_no_critic_cuda_integration_original_receipts_verified",
+  "parent_collection_steps": 21,
+  "evaluated_collection_steps": 11,
+  "critic_enabled": false,
+  "imagination_horizon": 32,
+  "gamma": 0.99,
+  "native_learner": "BpttPolicyLearner",
+  "preserved_snapshot_steps": [
+    1,
+    11,
+    21
+  ],
+  "three_distinct_world_models": true,
+  "three_distinct_actors": true,
+  "exactly_two_models_in_every_snapshot": true,
+  "program_and_runner_elapsed_clocks_monotonic": true,
+  "clips": 40,
+  "successes": 0,
+  "failures": 40,
+  "reference_frames": 441140,
+  "saved_steps": 1205,
+  "original_json_receipts": 9,
+  "all_original_receipt_hashes_verified": true,
+  "mean_normalized_full_motion_return_recomputed": 0.000505536793549203,
+  "all_saved_trajectory_arrays_audited_on_cloud": true,
+  "all_saved_initial_states_audited_on_cloud": true,
+  "trajectory_arrays_recovered_locally": false,
+  "whole_16k_job_complete": false,
+  "paper_results_reproduced": false
+}
