@@ -1,0 +1,136 @@
+{
+  "status": "termination_boundary_diagnostic_completed",
+  "platform": "CPU; synthetic observations/rewards; actual released termination and PPO code",
+  "torch_version": "2.14.0+cpu",
+  "rsl_rl_version": "5.5.2",
+  "seed_per_arm": 42,
+  "probe_sha256": "d16c436141bc96b38d3f88a4698ab303860667450857d77412e6dcfea32d6549",
+  "native_ppo_actor_hidden_dims": [
+    512,
+    256,
+    128
+  ],
+  "native_ppo_critic_hidden_dims": [
+    512,
+    256,
+    128
+  ],
+  "source_files": {
+    "ppo_runner": {
+      "path": "C:\\project\\sensecore\\SuperMimic\\publication\\SuperMimic-Reproduction\\upstream\\supermimic\\src\\supermimic\\runners\\ppo_runner.py",
+      "sha256": "04fd4484ca9dd03e86c795d9ffb1e0c584f59754513f39ba824924c5f4e8ab6e"
+    },
+    "world_model_env": {
+      "path": "C:\\project\\sensecore\\SuperMimic\\publication\\SuperMimic-Reproduction\\upstream\\supermimic\\src\\supermimic\\envs\\world_model_env.py",
+      "sha256": "359fcab19230c5448644a5a30e626767c0eb1a3078c57437f468cf953d627319"
+    },
+    "rsl_ppo": {
+      "path": "C:\\Users\\260010076\\anaconda3\\envs\\supermimic-official\\Lib\\site-packages\\rsl_rl\\algorithms\\ppo.py",
+      "sha256": "125673c31542dc9e8d85c997d2dc1c6928bbb541dc904484484b719c7c73c572"
+    },
+    "rsl_rollout_storage": {
+      "path": "C:\\Users\\260010076\\anaconda3\\envs\\supermimic-official\\Lib\\site-packages\\rsl_rl\\storage\\rollout_storage.py",
+      "sha256": "5925570deb48a483f53a919bf40624b23baf59fb65de7ffd1b7daa31779546f4"
+    }
+  },
+  "thresholds": {
+    "height": 0.25,
+    "tilt": 0.8,
+    "softness": 0.05
+  },
+  "reference_height_errors": [
+    0.0,
+    0.125,
+    0.20000000298023224,
+    0.24899999797344208,
+    0.25,
+    0.2750000059604645,
+    0.30000001192092896,
+    0.5
+  ],
+  "native_soft_termination_probabilities": [
+    2.06115369216775e-09,
+    4.539787187241018e-05,
+    0.01798621378839016,
+    0.48001062870025635,
+    0.5,
+    0.8807971477508545,
+    0.9820137619972229,
+    1.0
+  ],
+  "fractional_probabilities_truncated_to_zero": 7,
+  "arms": [
+    {
+      "mode": "released_uint8_storage",
+      "storage_dtype": "torch.uint8",
+      "stored_termination": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "gae_continuation": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "native_ppo_update_losses": {
+        "value": 0.46412844955921173,
+        "surrogate": 0.004305248148739338,
+        "entropy": 41.14171028137207
+      },
+      "actor_updated_and_finite": true,
+      "rollout_steps": 32,
+      "parallel_synthetic_envs": 8
+    },
+    {
+      "mode": "diagnostic_float_storage",
+      "storage_dtype": "torch.float32",
+      "stored_termination": [
+        2.06115369216775e-09,
+        4.539787187241018e-05,
+        0.01798621378839016,
+        0.48001062870025635,
+        0.5,
+        0.8807971477508545,
+        0.9820137619972229,
+        1.0
+      ],
+      "gae_continuation": [
+        1.0,
+        0.9999545812606812,
+        0.9820137619972229,
+        0.5199893712997437,
+        0.5,
+        0.11920285224914551,
+        0.0179862380027771,
+        0.0
+      ],
+      "native_ppo_update_losses": {
+        "value": 0.3119424730539322,
+        "surrogate": -0.00197630375623703,
+        "entropy": 41.14071083068848
+      },
+      "actor_updated_and_finite": true,
+      "rollout_steps": 32,
+      "parallel_synthetic_envs": 8
+    }
+  ],
+  "conclusion": "Released PPO-WM forwards continuous soft termination to RSL uint8 storage; fractional probabilities become zero before GAE.",
+  "alternative_is_only_a_diagnostic": true,
+  "author_intended_ppo_termination_confirmed": false,
+  "paper_equivalent_ppo_wm_implemented": false,
+  "g1_physics_executed": false,
+  "cuda_executed": false,
+  "policy_quality_evaluated": false,
+  "vendor_files_modified": false
+}

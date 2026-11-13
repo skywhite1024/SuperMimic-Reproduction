@@ -393,3 +393,13 @@ CPU会话首次发生原因不明的提前停止，随后在同一绝对截止�
 新增 [本地测速入口](../official-reproduction-20261112/benchmark_local_checkpoint.py)，使用已完成LAFAN40、16k训练的三模型收据和匹配动作协议，逐文件核对模型与九份数据；不依赖W&B登录或远程产物。它明确保留发布脚本的两个不同计算范围：带actor的完整原生env.step，以及固定随机输入、输出不回灌的WM dynamics前向。后者分别测量记录梯度的前向和inference前向，均不包含反向传播。两侧都显式预热，使用CUDA同步边界及重复的wall-clock计时；默认20次预热、3组各500步。原生模拟器在WM测量前关闭，显存分别记录Torch分配统计和设备级快照，不把Torch统计当作包含所有Warp分配的进程总量。
 
 可测批次覆盖64至65,536；实际运行必须按批次隔离并限时，超时、OOM、缺失结果均保留并标记未完成，不能用0SPS冒充测量。完整实验尚未启动：先在释放的GPU上验证64环境的有界短流程，再决定是否执行已声明批次。当前完成真实公开result/config/protocol的输入绑定、错误模型/数据成员拒绝、计时边界及现代精度接口共三项CPU检查，以及原生环境配置可序列化检查，见 [准备验收](../official-reproduction-20261112/benchmark-local-validation.json)。准备中已复现Torch2.14的元数据读取问题：原生mjlab使用 `fp32_precision` 新接口后，读取旧 `allow_tf32` 标志会报新旧API混用错误；新增入口改读同一现代接口，回归通过。旧的未提交准备文件另存为superseded，没有消耗GPU试跑。因此没有报告新的速度数字，也未宣称复现论文的吞吐倍率、微分速度或完整控制链速度提升。
+
+## 26. PPO-WM终止概率进入RSL缓冲区时被截断：CPU最小复现
+
+在冻结的发布源码及本机RSL-RL5.5.2上，发现一个影响机制对照解释的接口问题：`WorldModelEnv.step()` 返回连续的 `term_prob`，由原生高度/倾斜阈值经sigmoid得到；`PpoRunner.imagine()` 将它直接作为 `dones` 传给PPO。RSL的 `RolloutStorage.dones` 为 `uint8`，`add_transition()` 用 `copy_()` 写入，随后GAE使用 `1.0 - dones.float()`。因此小于1的正概率被截为0，不能保留连续终止权重。
+
+[可执行最小复现](../official-reproduction-20261112/probe_ppo_wm_termination_contract.py) 实际调用原生终止函数、`PpoRunner.imagine()`、RSL存储及PPO更新，使用8个合成观察行、32步和seed42；没有创建G1模拟器或训练世界模型。比如在高度阈值0.25m、softness0.05下，0.25/0.275/0.30m的高度误差分别产生0.5/0.880797/0.982014的终止概率，进入原生缓冲区后均为0，GAE继续系数均为1。对照仅将该临时实例的存储改为float32，原始概率得以保留。两次真实PPO更新均改变演员参数且结果有限，完整数值、依赖版本与四份实际源码哈希见 [CPU收据](../official-reproduction-20261112/ppo-wm-termination-contract-cpu.json)。没有改动vendor、已安装依赖或任何运行中的训练。
+
+这个结果证明当前发布入口与所装RSL版本之间的数值转换行为，不证明作者论文运行时使用了同一版本或终止约定，也没有量化它对学习成绩的影响。临时float存储只是诊断，不能据此宣布它就是论文正确实现；硬阈值、Bernoulli采样与连续折扣也不是同一实验。后续PPO-WM训练必须记录并明确其终止处理，再讨论与主方法的机制对照。
+
+另外，发布的PPO默认演员/评论家均为512/256/128的平坦MLP，而主方法采用目标latent编码及2048/1024/512/256解码器、256/128评论家；PPO还默认H1、`rep_state`，主参数适配是H10、93D proprio。仅把rollout batch改为4k/8k/16k不能消除这些结构与观察差异。当前未启动新的PPO-WM GPU训练，也未宣称复现64倍 imagined-step结果。

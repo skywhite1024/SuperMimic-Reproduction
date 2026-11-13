@@ -136,11 +136,13 @@
       "paper_pages": [
         8
       ],
-      "status": "source_review_only",
+      "status": "source_and_cpu_contract_review_only",
       "evidence": [
-        "pinned-experiment-entrypoint-review.json"
+        "pinned-experiment-entrypoint-review.json",
+        "probe_ppo_wm_termination_contract.py",
+        "ppo-wm-termination-contract-cpu.json"
       ],
-      "qualification": "Released PpoRunner.imagine uses wm_env reset/step. Starting point exists; matched architecture/library/schedule and full runs not executed. No64x claim."
+      "qualification": "Released PPO-WM/RSL5.5.2 CPU contract probe verifies fractional term_prob is truncated by uint8 done storage beforeGAE;8synthetic rows/32steps/2nativePPOupdates. Default flatMLP/H1/rep_state also differs from main actor architecture/H10proprio. No G1WM GPU mechanism training or64xclaim; author termination convention remains unconfirmed."
     },
     {
       "id": "critic_horizons",
@@ -209,5 +211,5 @@
     "Prepare faithful local-checkpoint throughput/PPO-WM entry with explicit computation scope; execute after GPU slot frees",
     "Continue matchedPPO-Sim,duration,horizon,push experiments; retain unresolved exact author inputs and hardware limitation"
   ],
-  "last_status_update": "2026-11-13T08:59:20.438932+08:00"
+  "last_status_update": "2026-11-13T09:20:26.419575+08:00"
 }
