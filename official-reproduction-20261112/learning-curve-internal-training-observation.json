@@ -1,0 +1,31 @@
+{
+  "status": "actual_internal_native_training_updates_observed",
+  "uid": "c1e4e8fa7121499fa06c38189278c10d",
+  "worker_utc": "2026-11-13T06:18:15.143474+00:00",
+  "displayed_learning_iteration": 4937,
+  "collection_steps": 49371,
+  "total_simulator_steps": 202223616,
+  "target_collection_steps": 64001,
+  "retained_manifest_steps": [
+    1,
+    4001,
+    8001,
+    12001,
+    16001,
+    20001,
+    24001,
+    28001,
+    32001,
+    36001,
+    40001,
+    44001,
+    48001
+  ],
+  "retained_manifest_count": 13,
+  "completed_parent_result_exists": false,
+  "final_quality_curve_available": false,
+  "source": "Read-only existing Worker Web Terminal, transcript inspected visually",
+  "screenshot": "lafan-curve-64k-1113ag-live-training-20261113T061815Z.png",
+  "screenshot_sha256": "bf19c24d310de5ee8263b237101743e9366b54743596a17273fcc00b3a681eff",
+  "running_payload_modified": false
+}

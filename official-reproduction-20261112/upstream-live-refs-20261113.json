@@ -1,0 +1,16 @@
+{
+  "recorded_at": "2026-11-13T14:44:59.329343+08:00",
+  "method": "Current goal turn git ls-remote HEAD, official repository page andPR15/16 read",
+  "supermimic": "abc124c1bd5976341034668af3d12c087f2f1f55",
+  "mjlab_research": "dd51a9fcc98791a2f0b018b3c7f71a3eefd5ecdd",
+  "refs_changed": false,
+  "URLs": [
+    "https://github.com/HybridRobotics/supermimic",
+    "https://github.com/HybridRobotics/supermimic/pull/15",
+    "https://github.com/HybridRobotics/supermimic/pull/16"
+  ],
+  "PR15_state_visible": "open",
+  "PR16_state_visible": "open",
+  "complete_author_dataset_manifest_or_PPO_Sim_configuration_verified": false,
+  "no_external_comments_or_messages_sent": true
+}

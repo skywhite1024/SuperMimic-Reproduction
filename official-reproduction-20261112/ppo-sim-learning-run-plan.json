@@ -1,5 +1,5 @@
 {
-  "status": "submitted_queued",
+  "status": "actual_G1_gate_full40_audits_passed_main_training_running",
   "submitted": true,
   "name": "supermimic-official-ppo-sim-260010076-1113ak",
   "display_name": "260010076-SuperMimic-PPO-Sim-2048-1113ak",
@@ -102,14 +102,90 @@
   "bootstrap_roundtrip_passed": true,
   "uid": "a30dd1b7e5f2479192d96dc7b80fbc29",
   "created_at": "2026-11-13T14:12:52+08:00",
-  "observed_at": "2026-11-13T14:13:50.073415+08:00",
-  "platform_status": "queued",
+  "observed_at": "2026-11-13T14:44:59.329343+08:00",
+  "platform_status": "running",
   "startup_command_exact_editor_clipboard_readback": true,
   "editor_clipboard_characters": 47791,
-  "queued_allocated_worker_replicas": 0,
-  "program_started_at": null,
-  "program_deadline": null,
-  "forced_exit_deadline": null,
+  "queued_allocated_worker_replicas": 1,
+  "program_started_at": "2026-11-13T14:17:51+08:00",
+  "program_deadline": "2026-11-13T18:47:51+08:00",
+  "forced_exit_deadline": "2026-11-13T18:48:21+08:00",
   "scheduling_note": "4.5hour program clock begins on actual program execution; not on queue entry",
-  "screenshot": "ppo-sim-2048-1113ak-submitted.png"
+  "screenshot": "ppo-sim-2048-1113ak-submitted.png",
+  "main_training_started_at": "2026-11-13T14:21:33.869187+08:00",
+  "main_training_deadline": "2026-11-13T15:51:33.869187+08:00",
+  "main_training_forced_exit_deadline": "2026-11-13T15:52:03.869187+08:00",
+  "source_and_motion_hash_preflight_passed": true,
+  "allocated_worker_replicas": 1,
+  "completed_gate_full40_log_point": {
+    "status": "complete",
+    "ppo_update": 3,
+    "collection_steps": 72,
+    "real_simulator_steps": 589824,
+    "successes": 0,
+    "failures": 40,
+    "mean_normalized_full_motion_return": 0.0006668651990350726,
+    "checkpoint_selection": {
+      "kind": "PPO-Sim_native_actor_snapshot",
+      "training_algorithm": "PPO-Sim",
+      "parent_result_sha256": "de479ec4722a248a41b742e967e7650d508584564ee53326a9bc3e317584823b",
+      "resolved_config_sha256": "1d02e5dccc8d1a7bc4d64912b2a4f916f640e9bfdd9b7b287debdda61b81518f",
+      "manifest_sha256": "80f960e0e42daffbc96d4ef1a207c5df1264ac35d559942db631e72a4b62b57a",
+      "parent_ppo_updates": 3,
+      "evaluated_ppo_update": 3,
+      "parent_collection_steps": 72,
+      "evaluated_collection_steps": 72,
+      "files": [
+        {
+          "file": "actor.pt",
+          "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-integration-1113aj/training/checkpoints/update-003/actor.pt",
+          "bytes": 46439949,
+          "sha256": "e2472d1330822e844d41afd5e3e2a292557c35186c41fc8c09c6ff48dabfa4ee",
+          "model_state_readback_verified": true
+        },
+        {
+          "file": "critic.pt",
+          "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-integration-1113aj/training/checkpoints/update-003/critic.pt",
+          "bytes": 929269,
+          "sha256": "ac0f983857a1f81e7b9a3b2e90d8c4e2428235f5c554c5c1d7d38f055e0d0b0f",
+          "model_state_readback_verified": true
+        },
+        {
+          "file": "ppo.pt",
+          "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-integration-1113aj/training/checkpoints/update-003/ppo.pt",
+          "bytes": 119851915,
+          "sha256": "7a2353d9d50594cef2ca166243ecc1782e934d7fce4fd03b3744e3e84a7e6e00",
+          "model_state_readback_verified": true
+        }
+      ],
+      "no_world_model_loaded": true,
+      "deterministic_native_actor_mean": true
+    },
+    "all_saved_arrays_and_initial_states_verified": true,
+    "receipts": {
+      "result.json": "e8fc204bf9bdeccbf36f830fee4c05fb3409f4fa516508e27691d97069a77e38",
+      "protocol.json": "06b265d6969e5771998cffec2d5d8221e9058c9d988a5177c5ce9e241285b4ba",
+      "accounting.json": "a678092d7fac837ae6a87c2d8533d3cd0baeea0dbad8f1fe31fc752b972f3b1a",
+      "audit/summary.json": "ac4501f79fa6c83543e316b1639077ea19211c6636fb3db0d7989ca0aa8a1818",
+      "audit/initial-states.json": "c2a4e0e570b24761e6db494a46cf2d86431dc4eb964f75130165fd18ff5c2331"
+    }
+  },
+  "gate_original_five_JSON_recovered_locally": false,
+  "main_latest_persisted_readback": {
+    "worker_utc": "2026-11-13T06:40:16.885200+00:00",
+    "status": "training",
+    "persisted_updates": 512,
+    "collection_steps": 12288,
+    "real_simulator_steps": 100663296,
+    "native_actor_normalization_count": 100663296,
+    "native_parameters_finite": true,
+    "actor_parameters_changed": true,
+    "retained_checkpoint_sets": 4,
+    "source": "Read-only worker terminal reading existing training/result.json; screenshot transcribed",
+    "screenshot": "ppo-sim-2048-1113ak-result-readback.png",
+    "screenshot_sha256": "84df879311b72b59868a7e49fedb616c22324937f47aeff65af90424a222fbaa"
+  },
+  "local_startup_log_sha256": "fc79417eda7b96718ae3fd0d4cff93797d829c6c2d965b402600fd646c941bec",
+  "full_main_quality_curve_completed": false,
+  "original_final_JSON_receipts_pending": true
 }
