@@ -7,6 +7,7 @@ from pathlib import Path
 import subprocess
 import sys
 import time
+from datetime import datetime, timezone
 
 from select_completed_checkpoint import digest, select_completed_checkpoint
 
@@ -23,7 +24,8 @@ def write(path, value):
 def execute(script, arguments, log, timeout_seconds):
     command = [sys.executable, str(SCRIPTS / script), *map(str, arguments)]
     print("CURVE_STAGE_START " + json.dumps({"script": script, "log": str(log),
-          "timeout_seconds": timeout_seconds}), flush=True)
+          "timeout_seconds": timeout_seconds,
+          "utc": datetime.now(timezone.utc).isoformat()}), flush=True)
     started = time.monotonic()
     # GNU timeout terminates the worker process group, including compile workers.
     with log.open("w", encoding="utf-8") as stream:
@@ -63,7 +65,8 @@ def verify_training(run, steps, interval):
     return timing
 
 
-def run_case(folder, motions, steps, interval, points, train_timeout, eval_timeout):
+def run_case(folder, motions, steps, interval, points, train_timeout, eval_timeout,
+             *, policy_horizon=None, without_critic=False):
     folder.mkdir()
     run = folder / "training"
     report = {"status": "training", "collection_steps": steps, "evaluation_steps": points,
@@ -76,11 +79,19 @@ def run_case(folder, motions, steps, interval, points, train_timeout, eval_timeo
     write(folder / "result.json", report)
     receipts = []
     try:
+        extra = (["--policy-horizon", policy_horizon] if policy_horizon is not None else [])
+        if without_critic:
+            extra += ["--without-critic"]
         execute("run_lafan_pilot.py", ["--motions", motions, "--output", run,
             "--steps", steps, "--checkpoint-interval", interval, "--keep-checkpoint-series",
             "--record-checkpoint-times", "--corpus", "lafan40", "--num-envs", 4096,
-            "--seed", 42, "--training-profile", "paper-a5-single-gpu", "--goal-backend", "eager"],
+            "--seed", 42, "--training-profile", "paper-a5-single-gpu", "--goal-backend", "eager", *extra],
             folder / "training.log", train_timeout)
+        training = json.loads((run / "result.json").read_bytes())
+        if without_critic and (training["critic_enabled"] is not False or
+                {Path(r["path"]).name for r in training["checkpoints"]} != {"world_model.pt", "actor.pt"}):
+            raise ValueError("No-critic run must produce exactly two native model checkpoints")
+        report.update(critic_enabled=not without_critic, imagination_horizon=policy_horizon or 32)
         timing = verify_training(run, steps, interval)
         report["training_snapshots_and_monotonic_timing_verified"] = True
         report["retained_snapshots"] = len(timing["checkpoints"])

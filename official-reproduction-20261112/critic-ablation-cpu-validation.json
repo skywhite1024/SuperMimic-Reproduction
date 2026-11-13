@@ -1,0 +1,18 @@
+{
+  "status": "native_critic_and_bptt_cpu_updates_and_two_model_selection_verified",
+  "passed": 7,
+  "skipped": 1,
+  "seconds": 5.44,
+  "new_checks": 3,
+  "cuda_graph_check": "skipped on local CPU; actual bounded CUDA integration remains required",
+  "shared_gamma": 0.99,
+  "tested_horizon": 8,
+  "planned_gpu_horizon": 32,
+  "actual_actor_gradient_update_verified": true,
+  "native_no_critic_bootstrap_zero_verified": true,
+  "configuration_roundtrip_variant_verified": true,
+  "two_file_checkpoint_selection_and_legacy_three_file_requirement_verified": true,
+  "gpu_execution_completed": false,
+  "full16k_experiment_completed": false,
+  "paper_results_reproduced": false
+}

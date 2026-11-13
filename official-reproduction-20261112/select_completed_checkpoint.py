@@ -42,9 +42,10 @@ def select_completed_checkpoint(run, collection_step=None):
         paths = [folder / r["file"] for r in records]
         selection.update(kind="retained_snapshot", evaluated_collection_steps=collection_step,
                          manifest_sha256=digest(manifest_path))
-    required = {"world_model.pt", "actor.pt", "critic.pt"}
-    if len(paths) != 3 or {p.name for p in paths} != required:
-        raise ValueError("Exactly the three native models are required")
+    required = ({"world_model.pt", "actor.pt"} if training.get("critic_enabled") is False
+                else {"world_model.pt", "actor.pt", "critic.pt"})
+    if len(paths) != len(required) or {p.name for p in paths} != required:
+        raise ValueError("Exactly the declared native models are required")
     checkpoints = {}
     for path, record in zip(paths, records, strict=True):
         if collection_step is not None and record["file"] != path.name:

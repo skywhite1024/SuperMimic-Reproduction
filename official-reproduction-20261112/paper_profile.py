@@ -6,6 +6,7 @@ paper's iteration convention and complete benchmark manifest remain unresolved.
 """
 
 import math
+import dataclasses
 
 import torch
 
@@ -61,6 +62,25 @@ def configure_runner(cfg):
     cfg.replay_ratio = 16
 
 
+def configure_critic_ablation(cfg, horizon, without_critic=False):
+    """Change only imagination H and the native learner variant after A5 setup."""
+    from supermimic.learners.policy_learner import BpttPolicyLearnerCfg
+    if horizon not in (8, 16, 32, 64, 128):
+        raise ValueError("Expected a Figure4 imagination horizon")
+    if without_critic:
+        values = dataclasses.asdict(cfg.policy)
+        cfg.policy = BpttPolicyLearnerCfg(**{
+            field.name: values[field.name]
+            for field in dataclasses.fields(BpttPolicyLearnerCfg)
+        })
+    cfg.policy.horizon = horizon
+    return {"imagination_horizon": horizon, "critic_enabled": not without_critic,
+            "gamma": cfg.policy.gamma,
+            "native_learner": "BpttPolicyLearner" if without_critic else "ActorCriticPolicyLearner",
+            "scope": "Local A5 ablation; gamma0.99 and shared hyperparameters retained; no bootstrap or critic fit in native BPTT variant",
+            "paper_equivalence_verified": False}
+
+
 def build_adam_optimizers(modules, lr, betas=(0.9, 0.999), device="cpu"):
     """Cover each parameter once, with CUDA-graph-safe tensor learning rates."""
     params, seen = [], set()
@@ -111,12 +131,13 @@ def install_paper_runner(base_runner):
             self._paper_optimizers = [
                 *self.world_model_learner.optimizers,
                 *self.policy_learner.actor_optimizers,
-                *self.policy_learner.critic_optimizers,
+                *getattr(self.policy_learner, "critic_optimizers", []),
             ]
-            if len(self._paper_optimizers) != 3 or any(
+            expected = 3 if isinstance(self.cfg.policy, policy_module.ActorCriticPolicyLearnerCfg) else 2
+            if len(self._paper_optimizers) != expected or any(
                 type(opt) is not torch.optim.Adam for opt in self._paper_optimizers
             ):
-                raise RuntimeError("Expected exactly three all-Adam learners")
+                raise RuntimeError(f"Expected exactly {expected} all-Adam learners")
 
         def step(self):
             step = self._paper_step

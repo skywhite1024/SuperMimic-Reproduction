@@ -28,6 +28,10 @@ def main():
                         help="Retain finite, hash-identified model snapshots; does not enable training resume")
     parser.add_argument("--record-checkpoint-times", action="store_true",
                         help="Record asynchronous checkpoint availability times separately from model manifests")
+    parser.add_argument("--policy-horizon", type=int, choices=(8, 16, 32, 64, 128),
+                        help="Explicit local critic-horizon ablation after applying the A5 profile")
+    parser.add_argument("--without-critic", action="store_true",
+                        help="Use the author's native BPTT learner; save exactly world_model and actor")
     parser.add_argument("--corpus", choices=("lafan40", "bones-raw"), default="lafan40",
                         help="bones-raw is a capacity/training probe, not the filtered paper benchmark")
     parser.add_argument("--training-profile", choices=("public-default", "paper-a5-single-gpu"),
@@ -35,6 +39,8 @@ def main():
     parser.add_argument("--goal-backend", choices=("official", "eager"), default="official",
                         help="Diagnostic: eager runs the author's same goal math without torch.compile")
     args = parser.parse_args()
+    if (args.policy_horizon is not None or args.without_critic) and args.training_profile != "paper-a5-single-gpu":
+        parser.error("Critic/horizon ablation requires the explicit A5 profile")
     if args.steps < 2:
         parser.error("At least two simulator collection steps are required")
     if args.record_checkpoint_times and not args.keep_checkpoint_series:
@@ -83,7 +89,8 @@ def main():
             # The native runner serializes uploads and invokes this exactly once
             # at each zero-based save interval, after that iteration's updates.
             completed_steps = len(checkpoint_receipts) * save_interval + 1
-            receipt = preserve_checkpoint(files, output / "checkpoint-series", completed_steps)
+            receipt = preserve_checkpoint(files, output / "checkpoint-series", completed_steps,
+                                          without_critic=args.without_critic)
             checkpoint_receipts.append(receipt)
             preserved = clock_observation() if args.record_checkpoint_times else None
             print("MODEL_SNAPSHOT_PRESERVED " + json.dumps(receipt), flush=True)
@@ -119,6 +126,7 @@ def main():
     task = "SuperMimic-GenCoord-G1"
     config = TrainConfig.from_task(task)
     profile = None
+    ablation = None
     runner_class = SuperMimicRunner
     if args.training_profile == "paper-a5-single-gpu":
         if args.num_envs != 4096:
@@ -127,6 +135,10 @@ def main():
         configure_runner(config.runner)
         runner_class = install_paper_runner(SuperMimicRunner)
         profile = profile_description()
+        if args.policy_horizon is not None or args.without_critic:
+            from paper_profile import configure_critic_ablation
+            ablation = configure_critic_ablation(config.runner, args.policy_horizon or 32,
+                                                 args.without_critic)
     config.env.seed = args.seed
     config.env.commands["motion"].motion_file = str(motions)
     config.env.commands["motion"].sampling_mode = "external"
@@ -144,6 +156,7 @@ def main():
         "vendor_files_modified": False,
         "training_profile": args.training_profile,
         "paper_profile": profile,
+        "policy_ablation": ablation,
         "goal_assembly_backend": args.goal_backend,
         "runtime_execution_modified": args.goal_backend != "official",
         "io_adapter": "offline checkpoint artifact logging; online pruning disabled",
@@ -189,7 +202,10 @@ def main():
             for child in value:
                 assert_finite(child)
 
-    for name in ("world_model.pt", "actor.pt", "critic.pt"):
+    model_names = ("world_model.pt", "actor.pt") if args.without_critic else ("world_model.pt", "actor.pt", "critic.pt")
+    if args.without_critic and list((output / "logs" / task).glob("*/critic.pt")):
+        raise RuntimeError("Unexpected critic checkpoint in no-critic experiment")
+    for name in model_names:
         paths = list((output / "logs" / task).glob(f"*/{name}"))
         if len(paths) != 1:
             raise RuntimeError(f"ExpectedOneCheckpoint_{name}")
@@ -206,6 +222,8 @@ def main():
         "full_clip_evaluation_completed": False, "paper_results_reproduced": False,
         "goal_assembly_backend": args.goal_backend,
         "training_profile": args.training_profile,
+        "critic_enabled": not args.without_critic,
+        "policy_ablation": ablation,
         "corpus": corpus,
         "device_memory_after_initialization": initial_memory,
         "peak_torch_memory_allocated_bytes": torch.cuda.max_memory_allocated(),

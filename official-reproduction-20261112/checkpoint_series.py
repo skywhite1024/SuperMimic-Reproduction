@@ -6,7 +6,7 @@ from pathlib import Path
 import shutil
 
 
-def preserve_checkpoint(files, output, collection_steps):
+def preserve_checkpoint(files, output, collection_steps, *, without_critic=False):
     """Copy the three native model files before the next native save overwrites them.
 
     Called by the runner's single checkpoint worker. The runner waits for that
@@ -16,10 +16,12 @@ def preserve_checkpoint(files, output, collection_steps):
     import torch
 
     files = [Path(path) for path in files]
-    required = {"world_model.pt", "actor.pt", "critic.pt"}
+    required = {"world_model.pt", "actor.pt"} if without_critic else {"world_model.pt", "actor.pt", "critic.pt"}
     models = [path for path in files if path.name in required]
-    if len(models) != 3 or {path.name for path in models} != required:
-        raise ValueError("A complete native world-model/actor/critic set is required")
+    if len(models) != len(required) or {path.name for path in models} != required:
+        raise ValueError("A complete declared native model set is required")
+    if without_critic and any(p.name == "critic.pt" for p in files):
+        raise ValueError("No-critic snapshots must not contain a critic")
     if collection_steps < 1:
         raise ValueError("A positive completed collection-step count is required")
     destination = Path(output) / f"step-{collection_steps:09d}"
