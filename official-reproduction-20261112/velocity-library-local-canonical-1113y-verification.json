@@ -1,0 +1,74 @@
+{
+  "status": "canonical_local_cloud_velocity_library_byte_identity_verified",
+  "verified_at": "2026-11-13T08:33:19.587503+08:00",
+  "local_path": "C:\\project\\sensecore\\SuperMimic\\official-execution-20261112\\velocity-walking-running-canonical-1113y",
+  "cloud_source_manifest": "velocity-library-cloud-1113q-manifest.json",
+  "cloud_manifest_sha256": "ee75abce6dcbdbd4908cc6ad3495c23302b1e8642aea3b0ea28037980b1138e8",
+  "local_manifest_sha256": "b1d3bb0cba1017f8b8aec198ea34976a8ff41f5dd2f30a0665022129577f8032",
+  "clips": 41828,
+  "frames": 15469495,
+  "fps": 50,
+  "packed_bytes": 4395656835,
+  "packed_files": [
+    {
+      "file": "joint_names.json",
+      "bytes": 770,
+      "sha256": "4674408eab42a3a3cd5414072f2c7874217db6bc6394fb3efeb594be62593682"
+    },
+    {
+      "file": "joint_pos.npy",
+      "bytes": 1794461548,
+      "sha256": "b8c86d5e7ead5f50df070597d96a1a6fe2775d97ad413ad9fe11b7316efd4f0c"
+    },
+    {
+      "file": "joint_vel.npy",
+      "bytes": 1794461548,
+      "sha256": "ef6ad381610ac92d4e129e6ee21a6c988032dd8c4cdf9b71805f565b9f67fadc"
+    },
+    {
+      "file": "motion_ends.npy",
+      "bytes": 334752,
+      "sha256": "5628d1583a55433ea8aba8076197da104f50677c47243d27bcd3a4660cbe55c1"
+    },
+    {
+      "file": "motion_names.json",
+      "bytes": 1983965,
+      "sha256": "f79d725fb8f4ae936ded5cd286511d6ee94cb59e0997d2f5777317b498216931"
+    },
+    {
+      "file": "root_ang_vel_w.npy",
+      "bytes": 185634068,
+      "sha256": "4ff8c99b5ceac4849210558cc8444bec208d08a849dd3b02334df8e6cfce017e"
+    },
+    {
+      "file": "root_lin_vel_w.npy",
+      "bytes": 185634068,
+      "sha256": "54ff88d2d05cfa302ecfbaf39a5ff99e9e5b7e9c956d6a47998e83461148d5cf"
+    },
+    {
+      "file": "root_pos_w.npy",
+      "bytes": 185634068,
+      "sha256": "25d3039effb6451642b3b964e2f9e8539ce0979449e9e57ec1efa03db918460f"
+    },
+    {
+      "file": "root_quat_w.npy",
+      "bytes": 247512048,
+      "sha256": "6865582419915b6d9252049363041994d7f5d863d416bc15dbfb93ac645cf5af"
+    }
+  ],
+  "membership_ledger": {
+    "file": "membership.csv",
+    "bytes": 5497362,
+    "sha256": "7d6d3dd95632ae12296ac35a960334e28d48b37e0943b5c721ed5e0774cc9941"
+  },
+  "all9_actual_local_file_hashes_independently_recomputed": true,
+  "all18_parent_file_hashes_checked_by_strict_builder": true,
+  "all_selected_numeric_elements_compared_by_builder": true,
+  "names_boundaries_and_member_count_recomputed": true,
+  "same_name_selection_rule_and_parent_sources": true,
+  "cloud_and_local_arrays_exactly_equal": true,
+  "old_local_noncanonical_inputs_preserved": true,
+  "author_membership_confirmed": false,
+  "semantic_motion_quality_verified": false,
+  "paper_results_reproduced": false
+}

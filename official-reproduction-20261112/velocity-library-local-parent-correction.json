@@ -142,5 +142,9 @@
   "canonical_local_pack": "C:/project/sensecore/SuperMimic/official-execution-20261112/lafan40-canonical-1113y/packed",
   "canonical_all9_hashes_match_cloud": true,
   "recovery_record": "canonical-lafan-recovery-1113y-verification.json",
-  "old_local_source_preserved": true
+  "old_local_source_preserved": true,
+  "canonical_local_velocity_library_rebuilt": true,
+  "canonical_local_velocity_library": "C:\\project\\sensecore\\SuperMimic\\official-execution-20261112\\velocity-walking-running-canonical-1113y",
+  "all9_local_cloud_candidate_file_hashes_match": true,
+  "canonical_candidate_verification": "velocity-library-local-canonical-1113y-verification.json"
 }
