@@ -402,6 +402,8 @@ CPU会话首次发生原因不明的提前停止，随后在同一绝对截止�
 
 这个结果证明当前发布入口与所装RSL版本之间的数值转换行为，不证明作者论文运行时使用了同一版本或终止约定，也没有量化它对学习成绩的影响。临时float存储只是诊断，不能据此宣布它就是论文正确实现；硬阈值、Bernoulli采样与连续折扣也不是同一实验。后续PPO-WM训练必须记录并明确其终止处理，再讨论与主方法的机制对照。
 
+随后公开复查发现，相同问题已有社区贡献者Afloat16于11月11日提出的 [PR #16](https://github.com/HybridRobotics/supermimic/pull/16)。本次查看时仍为Open、无reviews，描述的是另一套CPU依赖版本下的回归；因此不能将本地独立复现称为首次发现，也不能将该提案视为维护者确认或官方已合并修复。
+
 另外，发布的PPO默认演员/评论家均为512/256/128的平坦MLP，而主方法采用目标latent编码及2048/1024/512/256解码器、256/128评论家；PPO还默认H1、`rep_state`，主参数适配是H10、93D proprio。仅把rollout batch改为4k/8k/16k不能消除这些结构与观察差异。当前未启动新的PPO-WM GPU训练，也未宣称复现64倍 imagined-step结果。
 
 ## 27. 完整批次吞吐扫描调度入口
@@ -409,3 +411,11 @@ CPU会话首次发生原因不明的提前停止，随后在同一绝对截止�
 新增 [有限批次扫描](../official-reproduction-20261112/run_benchmark_sweep.py)，依次测量64、128、256、512、1024、2048、4096、8192、16384、32768、65536环境。它要求同一worker实际完成64环境GPU短流程，再运行每路径20次预热及3组各500次控制步测量。每个批次使用独立Linux进程和GNU timeout，15分钟后终止，30秒后强制结束；完整入口由云端启动器再设3.5小时总上限。
 
 所有批次在开始前写入账本；每项保留退出码、日志、原始结果文件的字节数与哈希。只有退出码0、完整重复次数、有限正计时、SPS与控制步数重算一致、两种WM梯度模式均有效，且模型/数据/运行时元数据与短流程一致的结果才计为有效。失败、超时、缺少收据不生成0SPS，扫描结束也可能是 `finished_with_failed_sizes`。已完成五项CPU数值接收检查，见 [准备记录](../official-reproduction-20261112/benchmark-sweep-local-validation.json)；实际Linux进程监督与GPU批次扫描尚未执行。计时仍采用第25节所述不同计算范围，不能把扫描成功当作论文倍率或控制质量复现。
+
+## 28. GenCoord想象观察遗漏编码器偏置：原生函数CPU复核
+
+公开 [PR #15](https://github.com/HybridRobotics/supermimic/pull/15) 提出了GenCoord偏置处理问题，本次查看仍未合并、无reviews。我们进一步使用本机原生 `GenCoordRepresentation.compute_actor_sensor()`、`SimContext` 和mjlab `joint_pos_rel(biased=True)` 作独立CPU复核：[脚本](../official-reproduction-20261112/probe_gencoord_encoder_bias.py)、[收据](../official-reproduction-20261112/gencoord-encoder-bias-contract-cpu.json)。它读取冻结BONES16k训练配置，确认gencoord/proprio、真实观察启用biased joint position、编码器偏置随机化范围为±0.01rad。三组合成71D状态相同，偏置分别为0、+0.005、−0.005rad，得到3×93D传感器。零偏置控制一致；非零偏置时，原生真实关节观察改变，而GenCoord合成观察完全不变，关节通道最大差均约0.005rad。
+
+这是固定状态下的观察契约检查，证明当前 `compute_wm_obs()` 丢弃 `sim_ctx` 所产生的差异；没有创建G1模拟器，没有测量学习成绩下降，也没有推断现有模型失败由它导致。它涉及我们使用的gencoord/proprio训练路径，应随冻结配置保留为发布代码的限制。当前运行中的基线继续保持原版本；没有合入未审查PR、重写vendor或中途改变随机化。后续若比较修正实现，需要独立训练、同一完整评估并保留两组结果。
+
+本次同时查看的 [PR #4](https://github.com/HybridRobotics/supermimic/pull/4)、[PR #5](https://github.com/HybridRobotics/supermimic/pull/5) 和 [PR #21](https://github.com/HybridRobotics/supermimic/pull/21) 分别涉及参数迭代器、critic尾批次、PPO日志累计；它们也是未合并提案。当前actor优化器传入参数list，critic使用的H32×4096（混合接口各2048）样本数可被4整除；这两个特定边界不能由PR标题直接判定已破坏当前基线。PPO日志问题留给后续PPO入口处理，不把日志中的计数或累计时间自动当作完整原始墙钟证据。

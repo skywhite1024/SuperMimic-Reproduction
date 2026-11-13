@@ -1,0 +1,51 @@
+{
+  "status": "native_encoder_bias_contract_diagnostic_completed",
+  "platform": "CPU, synthetic full states and asset tensors; actual native observation/representation functions",
+  "torch_version": "2.14.0+cpu",
+  "probe_sha256": "42021747985e41dee31cc64f47d9fd9236bcb4c981deac0f3996e9da71da75e0",
+  "frozen_training_config": {
+    "path": "official-reproduction-20261112\\bones-raw-16k-resolved-config.json",
+    "sha256": "e5e2232b9d160d62ee156fca5e83185746e7e36a0e3f6439467e3ea68883ed9f"
+  },
+  "native_sources": {
+    "observations": {
+      "path": "C:\\project\\sensecore\\SuperMimic\\publication\\SuperMimic-Reproduction\\upstream\\mjlab_research\\src\\mjlab\\envs\\mdp\\observations.py",
+      "sha256": "610b2682fada5fbd7784416e53ba3375cd9e480542737ee4bd5b1f5af79b4b72"
+    },
+    "representations": {
+      "path": "C:\\project\\sensecore\\SuperMimic\\publication\\SuperMimic-Reproduction\\upstream\\supermimic\\src\\supermimic\\representations.py",
+      "sha256": "b863f79d32acd1486b9e03d0ff6a3f65cbc3bf353ef0d4688ef8dbb7d7c89869"
+    },
+    "sim_context": {
+      "path": "C:\\project\\sensecore\\SuperMimic\\publication\\SuperMimic-Reproduction\\upstream\\supermimic\\src\\supermimic\\sim_context.py",
+      "sha256": "f02bf48a675dbebf82e5074d5106d9337995913cc263b98ed2e09747b9c50d38"
+    }
+  },
+  "joint_bias_randomization_range": [
+    -0.01,
+    0.01
+  ],
+  "raw_bias_per_row": [
+    0.0,
+    0.005,
+    -0.005
+  ],
+  "maximum_joint_sensor_difference_per_row": [
+    0.0,
+    0.005000002682209015,
+    0.005000002682209015
+  ],
+  "sensor_dimensions": [
+    3,
+    93
+  ],
+  "zero_bias_control_matches": true,
+  "nonzero_bias_does_not_change_native_synthetic_sensor": true,
+  "conclusion": "GenCoord compute_wm_obs discards sim_ctx; native biased joint observation changes while synthesized proprio does not.",
+  "policy_quality_effect_measured": false,
+  "g1_physics_executed": false,
+  "cuda_executed": false,
+  "vendor_or_installed_files_modified": false,
+  "running_training_modified": false,
+  "related_unmerged_pr": "https://github.com/HybridRobotics/supermimic/pull/15"
+}
