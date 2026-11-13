@@ -1,0 +1,58 @@
+{
+  "status": "interim_same_save_cadence_single_seed_endpoint_comparison",
+  "critic_source": "Frozen1113ag driver step16001 point; five original JSON hashes available, original files pending",
+  "critic_point": {
+    "collection_steps": 16001,
+    "status": "complete",
+    "mean_normalized_full_motion_return": 0.7858569384223237,
+    "successes": 35,
+    "failures": 5,
+    "reference_frames": 441140,
+    "checkpoint_time": {
+      "collection_steps": 16001,
+      "callback_entry_after_native_save": {
+        "utc": "2026-11-13T05:06:00.343482+00:00",
+        "seconds_since_program_entry": 2236.4924214817584,
+        "seconds_since_runner_run_entry": 2184.888650454581
+      },
+      "retained_snapshot_complete": {
+        "utc": "2026-11-13T05:06:01.423841+00:00",
+        "seconds_since_program_entry": 2237.5727817080915,
+        "seconds_since_runner_run_entry": 2185.969010680914
+      },
+      "offline_artifact_logging_returned": {
+        "utc": "2026-11-13T05:06:01.970692+00:00",
+        "seconds_since_program_entry": 2238.1196332722902,
+        "seconds_since_runner_run_entry": 2186.5158622451127
+      }
+    },
+    "result_sha256": "28f0cd1c1281e3afc6b7a459f84d0279211a39119ec0ed57a3e861a3753a3070",
+    "protocol_sha256": "4c330c9fc8a73b2d528db89b0fe75093369566d7352ebfcbbc79613f23e39205",
+    "accounting_sha256": "efed77c5803a2d270e9b2d816fa9f193aab331fc97f152a52423923e4029a056",
+    "trajectory_audit_sha256": "565475399f0d4f4e376a8594c8296486416214728fed77c1fc4ae7ebe992b645",
+    "initial_states_audit_sha256": "cbbffac727e1173be6d67e74e52c9d63ddee52307cd2b0feb9a8e7fdd3e2f50c"
+  },
+  "without_critic_original_result_sha256": "51623128ce3726ac892a3b49f29a740908ddeb13541220093bad22088a84590c",
+  "without_critic_successes": 25,
+  "without_critic_failures": 15,
+  "without_critic_mean_recomputed": 0.6354776196957028,
+  "mean_difference": 0.15037931872662091,
+  "success_count_difference": 10,
+  "compared_collection_steps": 16001,
+  "real_simulator_steps_per_run": 65540096,
+  "configured_save_cadence": 4000,
+  "seed": 42,
+  "imagination_horizon": 32,
+  "critic_snapshot_available_since_runner_entry": 2185.969010680914,
+  "without_critic_snapshot_available_since_runner_entry": 2022.6561983320862,
+  "earlier_other_critic_run_retained": {
+    "successes": 39,
+    "mean": 0.7971319807437383,
+    "result": "manual-reset-v2-lafan40-result.json"
+  },
+  "causal_or_multiseed_effect_established": false,
+  "CUDA_and_evaluation_repeatability_verified": false,
+  "full_critic_horizon_sweep_or_push_recovery_complete": false,
+  "paper_results_reproduced": false,
+  "qualification": "Same planned4000-step save cadence,canonical data,H32 andseed; different learner/RNG streams. Earlier critic39/40 andthis35/40 bothretained; cause of between-run/evaluation variation notisolated. Current criticoriginalfiles notyet locallyrecovered."
+}

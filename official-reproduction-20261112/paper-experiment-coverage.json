@@ -2,7 +2,7 @@
   "status": "scope_audit_incomplete_paper_reproduction",
   "goal_complete": false,
   "scope_redefined": false,
-  "as_of": "2026-11-13T15:05:12.341437+08:00",
+  "as_of": "2026-11-13T15:08:34.744521+08:00",
   "paper_pdf_sha256": "fe213017ab062f4acc3965da89abd3c29969163e144a2628a662b8ce46691009",
   "upstream_supermimic_commit": "abc124c1bd5976341034668af3d12c087f2f1f55",
   "code_and_evidence_commit": "18efd16ad7d161ebb335fd81292f1280fe65c9ce",
@@ -113,7 +113,7 @@
         "learning-curve-integration-1113ag/validation.json",
         "learning-curve-main-interim-1113ag.json"
       ],
-      "qualification": "Native64001 training worker exited0 after8468.51s; frozen driver proceeded to fixed full40 evaluations. Step1 complete0/40 mean.00126868; step8001 started inlatestcapturedlog. All49mainoriginals and finalninepointcurve pending. No matchedPPO-Sim,paper timing ormultiseed efficiency claim.",
+      "qualification": "Native64001workerexited0; completeddriverlogpoints1/8001/16001 score0/30/35successes and.001269/.657145/.785857mean; step24001started. All49mainoriginals/finalninepointcurve pending. No paper-equivalent ormultiseed efficiency claim.",
       "PPO_Sim_integration": {
         "status": "actual8192G1_PPO_gate_completed_and_originals_verified",
         "uid": "12b951aa6d3c4027b867c5591b1af8dc",

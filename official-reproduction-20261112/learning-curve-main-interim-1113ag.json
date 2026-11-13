@@ -1,7 +1,7 @@
 {
   "status": "main_training_worker_exited0_ninepoint_evaluation_in_progress",
-  "recorded_at": "2026-11-13T15:05:12.341437+08:00",
-  "log_recovered_at": "2026-11-13T14:57:02.908433+08:00",
+  "recorded_at": "2026-11-13T15:08:34.744521+08:00",
+  "log_recovered_at": "2026-11-13T15:06:57.707993+08:00",
   "uid": "c1e4e8fa7121499fa06c38189278c10d",
   "source_commit": "2cb77b9612fc9b4c8f0813aedab2e72b6d5f4207",
   "training_worker_exit": {
@@ -41,12 +41,132 @@
       "accounting_sha256": "6aab71156695a2bde28f7a6aa3f7b7aafdf7aa26f747c60ce5aa8ffc8aeb6080",
       "trajectory_audit_sha256": "584dcaa72e92101f545a3d77904bffa7c8d549eb8f71db2e71d7f253486eb9f4",
       "initial_states_audit_sha256": "a5a66c2755a41f5ad72812457606f09adf6d36ee0cb75ebd684102a150e266b5"
+    },
+    {
+      "collection_steps": 8001,
+      "status": "complete",
+      "mean_normalized_full_motion_return": 0.6571451610036788,
+      "successes": 30,
+      "failures": 10,
+      "reference_frames": 441140,
+      "checkpoint_time": {
+        "collection_steps": 8001,
+        "callback_entry_after_native_save": {
+          "utc": "2026-11-13T04:48:35.560641+00:00",
+          "seconds_since_program_entry": 1191.7095809206367,
+          "seconds_since_runner_run_entry": 1140.105809893459
+        },
+        "retained_snapshot_complete": {
+          "utc": "2026-11-13T04:48:36.612887+00:00",
+          "seconds_since_program_entry": 1192.7618277408183,
+          "seconds_since_runner_run_entry": 1141.1580567136407
+        },
+        "offline_artifact_logging_returned": {
+          "utc": "2026-11-13T04:48:37.138932+00:00",
+          "seconds_since_program_entry": 1193.2878728993237,
+          "seconds_since_runner_run_entry": 1141.6841018721461
+        }
+      },
+      "result_sha256": "f987cc0f4a187bfc372ca1a30b16c0915887e060ba0a42993e0e1319ea43ea2a",
+      "protocol_sha256": "59949c5914b8624c4531a10305fdc22094a97028163608651c201e4cce23c8f1",
+      "accounting_sha256": "6a7661a4e6cab78f39ed55aacda795fd662b4806084e0d8f042d31627e9e39e6",
+      "trajectory_audit_sha256": "8ae189f84da25c6e19910510f7cfe719b9bcf906a4444231ea23f2f4c8ddfe08",
+      "initial_states_audit_sha256": "bf031acd9ad01b348cf685fd7af621625e3d86c2f49ecd903c61ea536a949970"
+    },
+    {
+      "collection_steps": 16001,
+      "status": "complete",
+      "mean_normalized_full_motion_return": 0.7858569384223237,
+      "successes": 35,
+      "failures": 5,
+      "reference_frames": 441140,
+      "checkpoint_time": {
+        "collection_steps": 16001,
+        "callback_entry_after_native_save": {
+          "utc": "2026-11-13T05:06:00.343482+00:00",
+          "seconds_since_program_entry": 2236.4924214817584,
+          "seconds_since_runner_run_entry": 2184.888650454581
+        },
+        "retained_snapshot_complete": {
+          "utc": "2026-11-13T05:06:01.423841+00:00",
+          "seconds_since_program_entry": 2237.5727817080915,
+          "seconds_since_runner_run_entry": 2185.969010680914
+        },
+        "offline_artifact_logging_returned": {
+          "utc": "2026-11-13T05:06:01.970692+00:00",
+          "seconds_since_program_entry": 2238.1196332722902,
+          "seconds_since_runner_run_entry": 2186.5158622451127
+        }
+      },
+      "result_sha256": "28f0cd1c1281e3afc6b7a459f84d0279211a39119ec0ed57a3e861a3753a3070",
+      "protocol_sha256": "4c330c9fc8a73b2d528db89b0fe75093369566d7352ebfcbbc79613f23e39205",
+      "accounting_sha256": "efed77c5803a2d270e9b2d816fa9f193aab331fc97f152a52423923e4029a056",
+      "trajectory_audit_sha256": "565475399f0d4f4e376a8594c8296486416214728fed77c1fc4ae7ebe992b645",
+      "initial_states_audit_sha256": "cbbffac727e1173be6d67e74e52c9d63ddee52307cd2b0feb9a8e7fdd3e2f50c"
     }
   ],
-  "latest_evaluation_collection_step_started": 8001,
+  "latest_evaluation_collection_step_started": 24001,
   "main_original_49_JSON_recovered": false,
   "final_nine_point_curve_complete": false,
-  "local_log_sha256": "97e5ea8763d7ec51b837f4a0d5b6f16f8a3c6f7161ccc0e94ca063edb5ba54e2",
+  "local_log_sha256": "e62fd5b4877506e0e2c6eab6769601e495092888f39d0657c5c382802e298496",
   "evidence_scope": "Frozen driver stage exit and complete point log with original result/protocol/accounting/audit hashes; final original files pending",
-  "paper_results_reproduced": false
+  "paper_results_reproduced": false,
+  "same_save_cadence_16k_interim_comparison": {
+    "status": "interim_same_save_cadence_single_seed_endpoint_comparison",
+    "critic_source": "Frozen1113ag driver step16001 point; five original JSON hashes available, original files pending",
+    "critic_point": {
+      "collection_steps": 16001,
+      "status": "complete",
+      "mean_normalized_full_motion_return": 0.7858569384223237,
+      "successes": 35,
+      "failures": 5,
+      "reference_frames": 441140,
+      "checkpoint_time": {
+        "collection_steps": 16001,
+        "callback_entry_after_native_save": {
+          "utc": "2026-11-13T05:06:00.343482+00:00",
+          "seconds_since_program_entry": 2236.4924214817584,
+          "seconds_since_runner_run_entry": 2184.888650454581
+        },
+        "retained_snapshot_complete": {
+          "utc": "2026-11-13T05:06:01.423841+00:00",
+          "seconds_since_program_entry": 2237.5727817080915,
+          "seconds_since_runner_run_entry": 2185.969010680914
+        },
+        "offline_artifact_logging_returned": {
+          "utc": "2026-11-13T05:06:01.970692+00:00",
+          "seconds_since_program_entry": 2238.1196332722902,
+          "seconds_since_runner_run_entry": 2186.5158622451127
+        }
+      },
+      "result_sha256": "28f0cd1c1281e3afc6b7a459f84d0279211a39119ec0ed57a3e861a3753a3070",
+      "protocol_sha256": "4c330c9fc8a73b2d528db89b0fe75093369566d7352ebfcbbc79613f23e39205",
+      "accounting_sha256": "efed77c5803a2d270e9b2d816fa9f193aab331fc97f152a52423923e4029a056",
+      "trajectory_audit_sha256": "565475399f0d4f4e376a8594c8296486416214728fed77c1fc4ae7ebe992b645",
+      "initial_states_audit_sha256": "cbbffac727e1173be6d67e74e52c9d63ddee52307cd2b0feb9a8e7fdd3e2f50c"
+    },
+    "without_critic_original_result_sha256": "51623128ce3726ac892a3b49f29a740908ddeb13541220093bad22088a84590c",
+    "without_critic_successes": 25,
+    "without_critic_failures": 15,
+    "without_critic_mean_recomputed": 0.6354776196957028,
+    "mean_difference": 0.15037931872662091,
+    "success_count_difference": 10,
+    "compared_collection_steps": 16001,
+    "real_simulator_steps_per_run": 65540096,
+    "configured_save_cadence": 4000,
+    "seed": 42,
+    "imagination_horizon": 32,
+    "critic_snapshot_available_since_runner_entry": 2185.969010680914,
+    "without_critic_snapshot_available_since_runner_entry": 2022.6561983320862,
+    "earlier_other_critic_run_retained": {
+      "successes": 39,
+      "mean": 0.7971319807437383,
+      "result": "manual-reset-v2-lafan40-result.json"
+    },
+    "causal_or_multiseed_effect_established": false,
+    "CUDA_and_evaluation_repeatability_verified": false,
+    "full_critic_horizon_sweep_or_push_recovery_complete": false,
+    "paper_results_reproduced": false,
+    "qualification": "Same planned4000-step save cadence,canonical data,H32 andseed; different learner/RNG streams. Earlier critic39/40 andthis35/40 bothretained; cause of between-run/evaluation variation notisolated. Current criticoriginalfiles notyet locallyrecovered."
+  }
 }
