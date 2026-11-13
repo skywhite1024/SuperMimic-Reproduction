@@ -1,0 +1,39 @@
+{
+  "status": "CPU_two_rank_collectives_verified",
+  "rank": 0,
+  "world_size": 2,
+  "backend": "gloo",
+  "native_critic_input": 771,
+  "actual_gradient_allreduce": true,
+  "clipping_after_global_average": true,
+  "maximum_parameter_error": 8.326023817062378e-06,
+  "maximum_gradient_error": 5.362380761653185e-09,
+  "single_concatenated_FP32_optimizer_bitwise_equivalence_claimed": false,
+  "FP32_Adam_step_difference_explained_by_observed_gradient_rounding": true,
+  "native_critic_state_sha256": "bf215a25200fe3d30359d5d112199e17b2408db0219ae3dd729f1a3d5f859dba",
+  "rank_critic_state_hashes_identical": true,
+  "native_actor_input": {
+    "proprio": 93,
+    "history": 10,
+    "goal": 640
+  },
+  "normalizers": 3,
+  "active_normalizers": 2,
+  "inactive_normalizers_preserved": true,
+  "normalizer_sample_counts": [
+    0,
+    8,
+    8
+  ],
+  "normalizer_reference_was_computed_before_process_group": true,
+  "normalizer_extra_sample_gathering": false,
+  "maximum_actor_state_error": 2.384185791015625e-07,
+  "maximum_actor_mean_error": 8.940696716308594e-07,
+  "normalization_matches_independent_single_process_reference": true,
+  "sampler_records": 4,
+  "sampler_distribution_updates": 2,
+  "sampler_state_exact": true,
+  "locally_unused_parameter_averaged_as_zero": true,
+  "simulator_or_NCCL_executed": false,
+  "paper_two_H100_training_reproduced": false
+}

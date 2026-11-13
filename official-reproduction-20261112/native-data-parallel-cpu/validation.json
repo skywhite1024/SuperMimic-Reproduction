@@ -1,0 +1,133 @@
+{
+  "status": "actual_two_CPU_Gloo_rank_components_verified_NCCL_G1_pending",
+  "as_of": "2026-11-13T14:31:40.933135+08:00",
+  "accepted_attempt": 6,
+  "final_pytest_seconds": 8.46,
+  "final_tests": 1,
+  "rank_processes": 2,
+  "backend": "gloo",
+  "original_rank_receipts": [
+    {
+      "file": "rank-0.json",
+      "bytes": 1404,
+      "sha256": "03a330b201119ebcae68a154683d264f68aaa8adf454bbaf4528322bfbb5a428"
+    },
+    {
+      "file": "rank-1.json",
+      "bytes": 1404,
+      "sha256": "6c9a19a98e70641eb619a86a398e2f13237b32f541de2aaf64b682bae95aaaba"
+    }
+  ],
+  "all_attempts_retained": [
+    {
+      "attempt": 1,
+      "file": "attempts/attempt-1.xml",
+      "bytes": 7527,
+      "sha256": "6c11f1ae1875b232bab6dc47e649abfd5ee918902c9c8d3282b7218a72afe28e",
+      "tests": 1,
+      "failures": 1,
+      "errors": 0,
+      "seconds": 8.104,
+      "accepted_validation": false,
+      "reason": "Original FP32 whole-parameter closeness assumption failed"
+    },
+    {
+      "attempt": 2,
+      "file": "attempts/attempt-2.xml",
+      "bytes": 7530,
+      "sha256": "86b988e7fc31b60657c3dfbd0868ee5bdde9fe350743884acbdbfd65dac67021",
+      "tests": 1,
+      "failures": 1,
+      "errors": 0,
+      "seconds": 8.163,
+      "accepted_validation": false,
+      "reason": "Diagnostic confirms gradient difference5.36e-9, Adam parameter difference8.33e-6"
+    },
+    {
+      "attempt": 3,
+      "file": "attempts/attempt-3.xml",
+      "bytes": 7560,
+      "sha256": "f7c6196baf95310b544a1ac9dde8a1090e7858c0d259e77705ccf75a3f143ace",
+      "tests": 1,
+      "failures": 1,
+      "errors": 0,
+      "seconds": 8.218,
+      "accepted_validation": false,
+      "reason": "Gradient and analytic Adam checks passed; inactive-normalizer update assertion was wrong"
+    },
+    {
+      "attempt": 4,
+      "file": "attempts/attempt-4.xml",
+      "bytes": 410,
+      "sha256": "7d29c6373fd14c78fd0c914991705247ae426a618c840ff221b4b0da1ce364d0",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "seconds": 8.327,
+      "accepted_validation": false,
+      "reason": "Passed former fixture, INVALID normalization reference: both already-concatenated copies were all-reduced again"
+    },
+    {
+      "attempt": 5,
+      "file": "attempts/attempt-5.xml",
+      "bytes": 7514,
+      "sha256": "a8c8289bcbf1b3fb0fad297de02b9518e314feb00b5a8dd4d34226612bfe7262",
+      "tests": 1,
+      "failures": 1,
+      "errors": 0,
+      "seconds": 8.044,
+      "accepted_validation": false,
+      "reason": "Independent pre-process-group reference exposed incorrect history-count expectation; native actor updates latestframe only"
+    },
+    {
+      "attempt": 6,
+      "file": "attempts/attempt-6.xml",
+      "bytes": 410,
+      "sha256": "dca68990c44e9363877cfc76d6a20bb2c406c67955cde36f4e2f6ff6c42b6b43",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "seconds": 8.464,
+      "accepted_validation": true,
+      "reason": "Independent pre-process-group reference and exact8-real-observation counts pass; native RSL handles distributed moments once"
+    }
+  ],
+  "runtime_source_hashes": {
+    "native_data_parallel.py": "f0135de254ffb9f2e19b9b260cb63d20a57250205ada37854a2fda120e279382",
+    "test_native_data_parallel.py": "5368a8ef097a579c3f6669a40feb2b87310a3c08ab0f31db865608f6e6d3f8d8",
+    "run_native_two_gpu_gate.py": "d7da3768788938504dcef716d8be1610cec2ed4c6040d9b378927805944a659d"
+  },
+  "installed_RSL_normalizer_source_sha256": "5d2c08bb5a111de2fa1d333e874a9dd54747481f019e0879c5e0d97acf99ec39",
+  "gradient_scope": "Native771D critic; averaged gradients before norm/element clipping; actual Adam update atsqrt2LR; rankmodelstates identical",
+  "normalizer_scope": "Original native actor93Dlatestframe/640Dmotion, history10; global counts8 each and inactivevelocity0; reference beforePG",
+  "sampler_scope": "Exact native ReturnSampler over gathered real episode rows; four records,two distributions,value/count/effort match",
+  "FP32_parameter_match_to_single_concatenated_batch_claimed": false,
+  "maximum_FP32_gradient_difference": 5.362380761653185e-09,
+  "maximum_FP32_Adam_parameter_difference": 8.326023817062378e-06,
+  "analytic_first_Adam_step_difference_check_passed": true,
+  "simulator_executed": false,
+  "NCCL_executed": false,
+  "native_runner_sync_installer_and_two_GPU_entrypoint_GPU_validated": false,
+  "true_two_GPU_entrypoint_prepared": true,
+  "two_GPU_job_submitted": false,
+  "proposed_actual_gate": {
+    "local_envs": 4096,
+    "global_envs": 8192,
+    "local_collections": 21,
+    "global_real_steps": 172032,
+    "rank_count": 2,
+    "backend": "nccl",
+    "learner_CUDA_graphs": false,
+    "all_Adam": true,
+    "LR_multiplier": "sqrt2",
+    "final_native_models_per_rank": 3,
+    "independent_real_streams_required": true,
+    "identical_initial_and_final_learned_models_required": true
+  },
+  "limitations": [
+    "CPU components only; actualNCCL/crossGPU/nativeG1integration unvalidated",
+    "Native losses/sampling retained; Python-gradient collective dispatch bypasses CUDA learner graphs",
+    "No paper throughput equivalence,quality result or full training-state resume",
+    "Do not submit2GPU while existing3GPU requests would exceed4GPU own-task cap"
+  ]
+}
