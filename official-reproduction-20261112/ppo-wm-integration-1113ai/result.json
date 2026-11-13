@@ -1,0 +1,52 @@
+{
+  "status": "complete",
+  "arms": [
+    {
+      "mode": "released_uint8",
+      "returncode": 0,
+      "elapsed_seconds": 175.79098457470536,
+      "status": "complete",
+      "initial_state_hashes": {
+        "actor": "327bb7ae94348ee9ee6fad77693be0799b9c316469c4783f87e94f6d2533ff28",
+        "critic": "029be140665fa0afd77f20bf5e23cc55b0e95ea7acdec027c4b7368bc03d7b2f",
+        "world_model": "67bf9211a2a0c29afe00b81af5d99b4d13b6d6235243efb7d79fd1901c88e76c"
+      },
+      "dimensions": {
+        "actor_input": 1570,
+        "goal": 640,
+        "history": 10,
+        "proprio": 93,
+        "critic_input": 771,
+        "actions": 29
+      },
+      "result_sha256": "acc2c5602bb9841adc2573ea5f47d9d303b358c933ea1301cedee1b832e36263"
+    },
+    {
+      "mode": "diagnostic_float",
+      "returncode": 0,
+      "elapsed_seconds": 104.58544182777405,
+      "status": "complete",
+      "initial_state_hashes": {
+        "actor": "327bb7ae94348ee9ee6fad77693be0799b9c316469c4783f87e94f6d2533ff28",
+        "critic": "029be140665fa0afd77f20bf5e23cc55b0e95ea7acdec027c4b7368bc03d7b2f",
+        "world_model": "67bf9211a2a0c29afe00b81af5d99b4d13b6d6235243efb7d79fd1901c88e76c"
+      },
+      "dimensions": {
+        "actor_input": 1570,
+        "goal": 640,
+        "history": 10,
+        "proprio": 93,
+        "critic_input": 771,
+        "actions": 29
+      },
+      "result_sha256": "eb2dc8163b27274fd665728bb49d2b5115487d65fccdb2ef8a1da366e5d4abed"
+    }
+  ],
+  "same_initial_native_weights_verified": true,
+  "matched_paper_training": false,
+  "paper_results_reproduced": false,
+  "quality_evaluation_completed": false,
+  "whole_program_limit_seconds": 2400,
+  "per_arm_training_limit_seconds": 900,
+  "per_arm_forced_kill_grace_seconds": 30
+}

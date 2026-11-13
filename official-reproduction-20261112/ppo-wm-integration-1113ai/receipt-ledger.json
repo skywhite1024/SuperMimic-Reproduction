@@ -1,0 +1,56 @@
+{
+  "status": "seven_original_ppo_wm_json_receipts_recovered_and_sha256_verified",
+  "job_uid": "f452a0089dd047fdb61c79e97ce38aab",
+  "original_log_sha256": "dd8d23c2a0d0f9fde8b602020ca89efd58d8759e0d7a7832eb7927cfbf461217",
+  "receipts": [
+    {
+      "i": 0,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-integration-1113ai/released_uint8/resolved-config.json",
+      "bytes": 43220,
+      "sha256": "ebfff2a49398b5604cd37905adcae74ce4ae5f0a29a6a0ebba1123e9544e14db",
+      "chunks": 22
+    },
+    {
+      "i": 1,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-integration-1113ai/released_uint8/initial-model-state.json",
+      "bytes": 423,
+      "sha256": "3bd3d4e50e808722888433151c14ac78d9a58b35dac1f875ada3c8cabfaed30d",
+      "chunks": 1
+    },
+    {
+      "i": 2,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-integration-1113ai/released_uint8/result.json",
+      "bytes": 7405,
+      "sha256": "acc2c5602bb9841adc2573ea5f47d9d303b358c933ea1301cedee1b832e36263",
+      "chunks": 9
+    },
+    {
+      "i": 3,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-integration-1113ai/diagnostic_float/resolved-config.json",
+      "bytes": 43224,
+      "sha256": "08acadaf8199c212ae32710286a1c5458160ee4457d27d80ad26dd0b1788cb33",
+      "chunks": 22
+    },
+    {
+      "i": 4,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-integration-1113ai/diagnostic_float/initial-model-state.json",
+      "bytes": 423,
+      "sha256": "3bd3d4e50e808722888433151c14ac78d9a58b35dac1f875ada3c8cabfaed30d",
+      "chunks": 1
+    },
+    {
+      "i": 5,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-integration-1113ai/diagnostic_float/result.json",
+      "bytes": 7428,
+      "sha256": "eb2dc8163b27274fd665728bb49d2b5115487d65fccdb2ef8a1da366e5d4abed",
+      "chunks": 9
+    },
+    {
+      "i": 6,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-integration-1113ai/result.json",
+      "bytes": 1751,
+      "sha256": "5e0b76cc02dbd9ccdfdeb6df87126753930601821cf9d3a83db2cd8e28d0046b",
+      "chunks": 3
+    }
+  ]
+}

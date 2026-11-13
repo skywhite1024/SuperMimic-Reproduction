@@ -1,0 +1,57 @@
+{
+  "status": "actual_realG1_PPO_WM_pair_original_receipts_verified",
+  "original_json_receipts": 7,
+  "all_original_byte_counts_and_sha256_verified": true,
+  "same_initial_native_actor_critic_world_model_verified": true,
+  "actual_G1_native_PPO_update_calls": 6,
+  "total_real_simulator_steps": 245760,
+  "total_imagined_transitions": 786432,
+  "arms": [
+    {
+      "mode": "released_uint8",
+      "ppo_update_calls": 3,
+      "real_simulator_steps": 122880,
+      "imagined_transitions": 393216,
+      "fractional_probability_positions": 311002,
+      "fractional_positions_truncated_to_zero": 311002,
+      "logical_training_elapsed_seconds": 44.365059584379196,
+      "same_initial_state_hashes": {
+        "actor": "327bb7ae94348ee9ee6fad77693be0799b9c316469c4783f87e94f6d2533ff28",
+        "critic": "029be140665fa0afd77f20bf5e23cc55b0e95ea7acdec027c4b7368bc03d7b2f",
+        "world_model": "67bf9211a2a0c29afe00b81af5d99b4d13b6d6235243efb7d79fd1901c88e76c"
+      },
+      "final_state_hashes": {
+        "actor": "c16adde6aebae84ee8d6f5f54818fcc6fd46b849478066bbc3c4bada87a885b5",
+        "critic": "e11c3951fbdb710eb411956c159f06a556a21c69ee7cbeab4db46d7374556da3",
+        "world_model": "9c77ad6ca63234061c821a8d65e238a02b2bc4af0e6383461d9ed25a3515a77c"
+      }
+    },
+    {
+      "mode": "diagnostic_float",
+      "ppo_update_calls": 3,
+      "real_simulator_steps": 122880,
+      "imagined_transitions": 393216,
+      "fractional_probability_positions": 301318,
+      "fractional_positions_truncated_to_zero": 0,
+      "logical_training_elapsed_seconds": 43.859784584492445,
+      "same_initial_state_hashes": {
+        "actor": "327bb7ae94348ee9ee6fad77693be0799b9c316469c4783f87e94f6d2533ff28",
+        "critic": "029be140665fa0afd77f20bf5e23cc55b0e95ea7acdec027c4b7368bc03d7b2f",
+        "world_model": "67bf9211a2a0c29afe00b81af5d99b4d13b6d6235243efb7d79fd1901c88e76c"
+      },
+      "final_state_hashes": {
+        "actor": "97391582ecf7c6268884bc0ae7c6a0c2e913a3c757cf857cbb82f82c031bee5a",
+        "critic": "a0a558abe94203ed514b57e32d65b835a0cfffc5d30656f77c0c745f14e90add",
+        "world_model": "0f86d79bf9027e8c36bfd688a58e1cd64ffd78c190ed827da31b359b63ef8ede"
+      }
+    }
+  ],
+  "all_declared_conversion_counts_and_finite_losses_checked": true,
+  "all_native_models_changed_and_saved_bundles_checked_on_cloud": true,
+  "probability_traces_and_checkpoints_downloaded_locally": false,
+  "quality_evaluation_completed": false,
+  "paper_results_reproduced": false,
+  "is_PPO_Sim": false,
+  "full_four_batch_comparison_completed": false,
+  "float_termination_author_confirmed": false
+}

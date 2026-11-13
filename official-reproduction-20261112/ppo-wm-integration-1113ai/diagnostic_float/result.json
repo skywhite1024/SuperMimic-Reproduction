@@ -1,0 +1,167 @@
+{
+  "status": "real_g1_native_network_ppo_wm_integration_completed",
+  "termination_mode": "diagnostic_float",
+  "outer_iterations": 3,
+  "real_collections": 30,
+  "real_simulator_steps": 122880,
+  "real_native_ppo_updates": 3,
+  "imagined_transitions": 393216,
+  "world_model_update_calls": 3,
+  "wm_batches_per_call": 10,
+  "wm_window_state_slots": 8,
+  "wm_scored_transitions_per_window": 7,
+  "elapsed_training_seconds": 43.859784584492445,
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "dimensions": {
+    "actor_input": 1570,
+    "goal": 640,
+    "history": 10,
+    "proprio": 93,
+    "critic_input": 771,
+    "actions": 29
+  },
+  "initial_state_hashes": {
+    "actor": "327bb7ae94348ee9ee6fad77693be0799b9c316469c4783f87e94f6d2533ff28",
+    "critic": "029be140665fa0afd77f20bf5e23cc55b0e95ea7acdec027c4b7368bc03d7b2f",
+    "world_model": "67bf9211a2a0c29afe00b81af5d99b4d13b6d6235243efb7d79fd1901c88e76c"
+  },
+  "final_state_hashes": {
+    "actor": "97391582ecf7c6268884bc0ae7c6a0c2e913a3c757cf857cbb82f82c031bee5a",
+    "critic": "a0a558abe94203ed514b57e32d65b835a0cfffc5d30656f77c0c745f14e90add",
+    "world_model": "0f86d79bf9027e8c36bfd688a58e1cd64ffd78c190ed827da31b359b63ef8ede"
+  },
+  "all_three_native_models_changed_and_finite": true,
+  "updates": [
+    {
+      "update": 1,
+      "termination_mode": "diagnostic_float",
+      "storage_dtype": "torch.float32",
+      "imagined_steps": 131072,
+      "fractional_probability_positions": 111230,
+      "fractional_positions_truncated_to_zero": 0,
+      "stored_matches_declared_conversion": true,
+      "probability_min": 2.0703341263583752e-09,
+      "probability_max": 1.0,
+      "probability_mean": 0.3461124897003174,
+      "actor_before": "3e32c1b83d4e577042a5f081395f764d5bb535a6b357e9df1d01471addc8585f",
+      "actor_after": "064d7abcdd880d5e337ea85d4710a6c1e2597e42c7763a130c7c304e79a68c17",
+      "critic_before": "029be140665fa0afd77f20bf5e23cc55b0e95ea7acdec027c4b7368bc03d7b2f",
+      "critic_after": "3b092920bad76a08eddaaecb6f6184b36cee67437ec2be3ba6eb6ca4873e098c",
+      "actor_and_critic_changed": true,
+      "losses": {
+        "value": 13.417173290252686,
+        "surrogate": 0.31946958114858715,
+        "entropy": 41.181633377075194
+      },
+      "trace": {
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-integration-1113ai/diagnostic_float/termination-traces/update-001.npz",
+        "bytes": 841964,
+        "sha256": "b3c1989114562458280df85df0fc12d60654d7ca532f1b80c225d14fb7c75fb6",
+        "readback_verified": true
+      }
+    },
+    {
+      "update": 2,
+      "termination_mode": "diagnostic_float",
+      "storage_dtype": "torch.float32",
+      "imagined_steps": 131072,
+      "fractional_probability_positions": 99235,
+      "fractional_positions_truncated_to_zero": 0,
+      "stored_matches_declared_conversion": true,
+      "probability_min": 2.0780406284615083e-09,
+      "probability_max": 1.0,
+      "probability_mean": 0.4691930115222931,
+      "actor_before": "36645937a68b1f599e8184fd6b6856b6852606eb5179f6949d876ec1a4f2c775",
+      "actor_after": "f93a2bb54f07364e77ddad6a658d7246d38437a5963e5e6fe1eb34497bf95367",
+      "critic_before": "3b092920bad76a08eddaaecb6f6184b36cee67437ec2be3ba6eb6ca4873e098c",
+      "critic_after": "cc4e0c26bbaf7ed82909dc39edba9be982172fca92399b7e0d43677f8b3276ea",
+      "actor_and_critic_changed": true,
+      "losses": {
+        "value": 1.7097398340702057,
+        "surrogate": -0.014835794270038605,
+        "entropy": 41.19185028076172
+      },
+      "trace": {
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-integration-1113ai/diagnostic_float/termination-traces/update-002.npz",
+        "bytes": 763442,
+        "sha256": "c5f30984bdc11bec6ae094db41e9f73ee98f4d4027875f0c82f3e585755053c4",
+        "readback_verified": true
+      }
+    },
+    {
+      "update": 3,
+      "termination_mode": "diagnostic_float",
+      "storage_dtype": "torch.float32",
+      "imagined_steps": 131072,
+      "fractional_probability_positions": 90853,
+      "fractional_positions_truncated_to_zero": 0,
+      "stored_matches_declared_conversion": true,
+      "probability_min": 2.085402073248588e-09,
+      "probability_max": 1.0,
+      "probability_mean": 0.5111892819404602,
+      "actor_before": "4dffacd8e3c4828bbb7e2c2980cf1577abad008a411d486163509aec2c8d8009",
+      "actor_after": "97391582ecf7c6268884bc0ae7c6a0c2e913a3c757cf857cbb82f82c031bee5a",
+      "critic_before": "cc4e0c26bbaf7ed82909dc39edba9be982172fca92399b7e0d43677f8b3276ea",
+      "critic_after": "a0a558abe94203ed514b57e32d65b835a0cfffc5d30656f77c0c745f14e90add",
+      "actor_and_critic_changed": true,
+      "losses": {
+        "value": 0.5693912535905838,
+        "surrogate": -0.02251332612358965,
+        "entropy": 41.193509864807126
+      },
+      "trace": {
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-integration-1113ai/diagnostic_float/termination-traces/update-003.npz",
+        "bytes": 711560,
+        "sha256": "8207e84fc689887bfacc6643c8e1af7d3be60ca40b04c55b5121217d6330377a",
+        "readback_verified": true
+      }
+    }
+  ],
+  "native_released_save_format": "world_model.pt bundle + actor.pt with actor/critic RSL state dicts",
+  "final_actor_and_critic_save_readback_verified": true,
+  "snapshots": [
+    [
+      {
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-integration-1113ai/diagnostic_float/released-checkpoints/outer-001/world_model.pt",
+        "bytes": 34990357,
+        "sha256": "3b3861133685ce983f34ea8fceb31849a819dba5be6d218913912fd6aad16639"
+      },
+      {
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-integration-1113ai/diagnostic_float/released-checkpoints/outer-001/actor.pt",
+        "bytes": 47370006,
+        "sha256": "38ad0c0e14bf5bb37b0a0407bd6771268e826c7c7b598ba3d8130c165e467c54"
+      }
+    ],
+    [
+      {
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-integration-1113ai/diagnostic_float/released-checkpoints/outer-002/world_model.pt",
+        "bytes": 34990357,
+        "sha256": "56f5c37b99eff83d5035a0bef75ab9a5f12d7ab811ab66883780dc17b8dbb444"
+      },
+      {
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-integration-1113ai/diagnostic_float/released-checkpoints/outer-002/actor.pt",
+        "bytes": 47370006,
+        "sha256": "f9122f56dc91c3dba02a5a9a6f744c946953af44af2bc1766216533edef4d2d7"
+      }
+    ],
+    [
+      {
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-integration-1113ai/diagnostic_float/released-checkpoints/outer-003/world_model.pt",
+        "bytes": 34990357,
+        "sha256": "33cae9a1bab32147b6e3af0e3202d598ce026b9e5aec4607193f301196221929"
+      },
+      {
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-integration-1113ai/diagnostic_float/released-checkpoints/outer-003/actor.pt",
+        "bytes": 47370006,
+        "sha256": "fb55b46c4993b659883ca4b0891f4e439bb03ba3c8c9bbf2b27f15735f0c493d"
+      }
+    ]
+  ],
+  "final_world_model_and_context_save_readback_verified": true,
+  "full_training_resume_available": false,
+  "source_config_sha256": "08acadaf8199c212ae32710286a1c5458160ee4457d27d80ad26dd0b1788cb33",
+  "g1_physics_executed": true,
+  "quality_evaluation_completed": false,
+  "paper_results_reproduced": false,
+  "matched_return_or_64x_advantage_claimed": false
+}
