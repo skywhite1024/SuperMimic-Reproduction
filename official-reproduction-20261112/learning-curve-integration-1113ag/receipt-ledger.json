@@ -1,0 +1,72 @@
+{
+  "status": "nine_original_integration_json_receipts_recovered_and_sha256_verified",
+  "job_uid": "c1e4e8fa7121499fa06c38189278c10d",
+  "original_log_sha256": "8d6c6989ebac1a9738797f1f91ea51cfc242040a69bed8793d0c61ab85735993",
+  "whole_job_complete": false,
+  "main_training_live": true,
+  "receipts": [
+    {
+      "i": 0,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-curve-64k-1113ag/integration/training/result.json",
+      "bytes": 4497,
+      "sha256": "d82a583e98a7d3bb31b6a98124db930ffa55c9cca881bbc3196af699b3f085a3",
+      "chunks": 6
+    },
+    {
+      "i": 1,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-curve-64k-1113ag/integration/training/resolved-config.json",
+      "bytes": 42431,
+      "sha256": "220122890384cceaf533edde5426fc528b5b43bc630dfef2aafe9326a0ee2a10",
+      "chunks": 22
+    },
+    {
+      "i": 2,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-curve-64k-1113ag/integration/training/checkpoint-times.json",
+      "bytes": 2808,
+      "sha256": "7bcd1d9427323ec1d8ffe7d38dc62e1e2932534aa922e40cca37bcefc66e4c48",
+      "chunks": 4
+    },
+    {
+      "i": 3,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-curve-64k-1113ag/integration/eval-000000011/result.json",
+      "bytes": 14176,
+      "sha256": "48d893d4d4b279072b2a67e12b3a30c1bf82b33ac52142bb899b0327bf19686f",
+      "chunks": 6
+    },
+    {
+      "i": 4,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-curve-64k-1113ag/integration/eval-000000011/protocol.json",
+      "bytes": 12094,
+      "sha256": "7003ab0161382439231a049af3b230e1724c1e84a7ab3ae48ea876bd15076d7e",
+      "chunks": 13
+    },
+    {
+      "i": 5,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-curve-64k-1113ag/integration/eval-000000011/accounting.json",
+      "bytes": 1383,
+      "sha256": "48508c3cde3eae79237faeb0a1dfa41737eb339126a6d82f0d9e65633aeebd3a",
+      "chunks": 3
+    },
+    {
+      "i": 6,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-curve-64k-1113ag/integration/eval-000000011/audit/summary.json",
+      "bytes": 959,
+      "sha256": "080bd5b9e1d2feb1157d91c2e5e827b0828d0a9ea88dcf98f89b5973c940d9ef",
+      "chunks": 3
+    },
+    {
+      "i": 7,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-curve-64k-1113ag/integration/eval-000000011/audit/initial-states.json",
+      "bytes": 720,
+      "sha256": "a0477c9e8bad71b6c714a42455a061fff14d6a87799ffb779aa875f108584d70",
+      "chunks": 2
+    },
+    {
+      "i": 8,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-curve-64k-1113ag/integration/result.json",
+      "bytes": 2173,
+      "sha256": "2113a58b8c476924608fb0f1c1f6bcc609321383f75f75b4e309217aa15c4ca2",
+      "chunks": 4
+    }
+  ]
+}

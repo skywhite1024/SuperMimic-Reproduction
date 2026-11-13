@@ -1,0 +1,49 @@
+{
+  "observed_at": "2026-11-13T12:37:59.085454+08:00",
+  "job_name": "supermimic-official-lafan-curve-260010076-1113ag",
+  "uid": "c1e4e8fa7121499fa06c38189278c10d",
+  "status": "short_cuda_integration_verified_main64k_training_running",
+  "created_at": "2026-11-13T12:22:10+08:00",
+  "program_started_at": "2026-11-13T12:22:23+08:00",
+  "program_deadline": "2026-11-13T19:22:23+08:00",
+  "forced_exit_deadline": "2026-11-13T19:22:53+08:00",
+  "source_commit": "2cb77b9612fc9b4c8f0813aedab2e72b6d5f4207",
+  "command_sha256": "f787cf65d5f4b320e8109812b4d888a66acf0423443d35187478b8427e0890bd",
+  "resources": {
+    "gpu": 1,
+    "vcpu": 4,
+    "ram_gib": 64,
+    "replicas": 1,
+    "max_restarts": 0
+  },
+  "integration_validation": "learning-curve-integration-1113ag/validation.json",
+  "main": {
+    "collection_steps": 64001,
+    "checkpoint_interval": 4000,
+    "retained_snapshots": 17,
+    "evaluation_steps": [
+      1,
+      8001,
+      16001,
+      24001,
+      32001,
+      40001,
+      48001,
+      56001,
+      64001
+    ],
+    "training_timeout_seconds": 14400,
+    "per_point_evaluation_timeout_seconds": 900,
+    "per_audit_timeout_seconds": 180,
+    "expected_original_json_receipts": 49,
+    "status": "training_running",
+    "training_start_observed_between": [
+      "2026-11-13T12:26:41.763744+08:00",
+      "2026-11-13T12:28:18+08:00"
+    ],
+    "training_updates_not_observed_in_outer_log": true,
+    "stage_log": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-curve-64k-1113ag/main/training.log"
+  },
+  "goal_complete": false,
+  "paper_results_reproduced": false
+}

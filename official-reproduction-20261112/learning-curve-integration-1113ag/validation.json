@@ -1,0 +1,25 @@
+{
+  "status": "actual_cuda_integration_original_receipts_independently_verified",
+  "parent_collection_steps": 21,
+  "evaluated_collection_steps": 11,
+  "preserved_snapshot_steps": [
+    1,
+    11,
+    21
+  ],
+  "three_distinct_world_models": true,
+  "program_and_runner_elapsed_clocks_monotonic": true,
+  "clips": 40,
+  "successes": 0,
+  "failures": 40,
+  "reference_frames": 441140,
+  "saved_steps": 1213,
+  "original_json_receipts": 9,
+  "all_original_receipt_hashes_verified": true,
+  "mean_normalized_full_motion_return_recomputed": 0.0005012177381286517,
+  "all_saved_trajectory_arrays_audited_on_cloud": true,
+  "all_saved_initial_states_audited_on_cloud": true,
+  "trajectory_arrays_recovered_locally": false,
+  "whole_64k_job_complete": false,
+  "paper_results_reproduced": false
+}

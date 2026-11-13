@@ -99,12 +99,16 @@
         6,
         7
       ],
-      "status": "partial",
+      "status": "timed64k_training_running_after_actual_cuda_integration_and_all40_audits",
       "evidence": [
         "manual-reset-v2-lafan40-result.json",
-        "manual-reset-v2-lafan40-accounting.json"
+        "manual-reset-v2-lafan40-accounting.json",
+        "learning-curve-run-plan.json",
+        "learning-curve-live-observation.json",
+        "learning-curve-integration-1113ag/receipt-ledger.json",
+        "learning-curve-integration-1113ag/validation.json"
       ],
-      "qualification": "One16k checkpoint39/40mean0.797132 is not a matched efficiency curve. train_ppo.py updates on WM rollouts, not PPO-Sim."
+      "qualification": "Actual21collection CUDA integration preserved three distinct models; selected11 model completed all40 v2 evaluations and saved-array/initial-state audits. Fresh64001 run is live with17snapshots and9fixed evaluation points; no completed curve, matched PPO-Sim or strictpaper efficiency claim yet."
     },
     {
       "id": "dataset_scaling",
@@ -231,9 +235,9 @@
   "original_scope_retained": true,
   "no_new_cloud_jobs_submitted_by_this_audit": true,
   "next_execution_priority": [
-    "Finish frozenraw320k and separately evaluate finalmodel with correctedv2 plus completearrayaudit",
-    "Execute explicit8transition sharedtrajectory WM forecast diagnostic; then extend data-scale/online metric with declared subset membership",
+    "Finish frozen raw320k and separately evaluate finalmodel with correctedv2 plus completearrayaudit",
+    "Recover timedLAFAN64k complete ninepoint curve and all original receipts after finite livejob ends",
     "Continue realG1 PPO-WM/PPO-Sim, critic horizons, push andmultiGPU matched experiments; retain missingexactauthor inputs andhardware limitation"
   ],
-  "last_status_update": "2026-11-13T12:01:40.456044+08:00"
+  "last_status_update": "2026-11-13T12:37:59.085454+08:00"
 }
