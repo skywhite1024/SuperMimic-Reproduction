@@ -2,7 +2,7 @@
   "status": "scope_audit_incomplete_paper_reproduction",
   "goal_complete": false,
   "scope_redefined": false,
-  "as_of": "2026-11-13T12:58:26.839311+08:00",
+  "as_of": "2026-11-13T13:12:39.246126+08:00",
   "paper_pdf_sha256": "fe213017ab062f4acc3965da89abd3c29969163e144a2628a662b8ce46691009",
   "upstream_supermimic_commit": "abc124c1bd5976341034668af3d12c087f2f1f55",
   "code_and_evidence_commit": "aec7e3b5b92542b63a2ae4ea3c39762a0cdf4808",
@@ -152,15 +152,14 @@
       "paper_pages": [
         8
       ],
-      "status": "source_and_cpu_contract_review_only",
+      "status": "native_full_goal_runtime_cpu_verified_realG1_cuda_pair_submitted_queued",
       "evidence": [
-        "pinned-experiment-entrypoint-review.json",
-        "probe_ppo_wm_termination_contract.py",
         "ppo-wm-termination-contract-cpu.json",
-        "paper_ppo_models.py",
-        "paper-ppo-models-cpu-validation.json"
+        "paper-ppo-models-cpu-validation.json",
+        "ppo-wm-native-runtime-cpu-validation.json",
+        "ppo-wm-integration-run-plan.json"
       ],
-      "qualification": "Nativeactor/criticRSLmodelinterfaces pass2CPUchecks:bitwiseoutputs/normalizers/gradientsandactualsyntheticPPOupdate;18Dsyntheticgoal,norealG1/CUDA/fullrunner. Releasedsoftterminationuint8gapverifiedseparately. Fullsampler,termination,library,scheduleandfourrolloutconfigsnotexecuted;no64xclaim."
+      "qualification": "Real RSL CPU updates with native640D goal/93x10 history and exact termination traces passed. Two-arm realG1 CUDA integration queued, not started. Uniform resets and released PPO hyperparameters are not matched to the paper; no four-batch or64x claim."
     },
     {
       "id": "critic_horizons",
@@ -244,5 +243,5 @@
     "Recover timedLAFAN64k complete ninepoint curve and all original receipts after finite livejob ends",
     "Continue realG1 PPO-WM/PPO-Sim, critic horizons, push andmultiGPU matched experiments; retain missingexactauthor inputs andhardware limitation"
   ],
-  "last_status_update": "2026-11-13T12:58:26.839311+08:00"
+  "last_status_update": "2026-11-13T13:12:39.246126+08:00"
 }
