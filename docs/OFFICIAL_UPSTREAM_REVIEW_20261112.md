@@ -540,3 +540,14 @@ RL作业 `1113r` 于10:37:07.139正常退出，蒸馏作业 `1113s` 于10:34:58.
 此次也补齐[1k原始配置](../official-reproduction-20261112/lafan40-paper-pilot-resolved-config.json)。两个runner配置只在 `max_iterations`（1001/16001）和 `save_interval`（1000/16000）上不同；物理环境配置在忽略序列化函数对象的内存地址后相等，动作库路径一致。三个已发布1k/16k结果及16k配置与此次再次回收逐字节一致。两份世界模型在相同物理context下分别使用各自冻结的标准化参数。
 
 论文图3(c)说明误差来自在线策略rollouts并按nominal error归一化。本项使用同一16k策略的固定真实轨迹，未覆盖1/7/40/264小时子集；论文究竟取末端误差还是窗口均值、以及具体转移数口径仍需独立确认。因此0.01015或0.01199不能直接标成“达到论文0.007–0.011”。发布配置八状态槽对应七次评分转移的事实保留，后续比较必须显式声明计数和聚合定义。原BONES320k长训练仍按冻结源码运行。
+
+
+## 39. LAFAN40 checkpoint timing and learning-curve execution (prepared)
+
+The previous 16k corrected full40 score is one endpoint, not a measured learning curve. The new runner records asynchronous checkpoint callback entry, retained-copy completion and offline-logging return in a separate timing ledger. It records both program-entry elapsed time (including setup) and runner.run elapsed time. Native warmup, graph capture and snapshot overhead remain included; evaluation is performed after training. These are checkpoint-availability observations, not exact collection/update completion times.
+
+The corrected v2 evaluator now accepts an explicit retained collection step only from an actually completed parent run. It verifies the parent receipt, original resolved configuration hash, immutable snapshot manifest and all three native model sizes/hashes. The parent training result retains its true final length; intermediate evaluation never fabricates a completed shorter training run.
+
+Two CPU checks passed (1.27 s): selecting an intermediate native weight set after final-weight overwrite, and rejecting unfinished parents, absent steps and same-size corrupted model bytes. CUDA timing integration is still pending at this source commit. The finite cloud sequence is a 21-collection integration with retained steps 1/11/21 and a complete40 evaluation of step11; only after its timing/model/trajectory checks pass will a fresh64,001-collection single-H100 A5-profile run begin. It retains17 snapshots and evaluates nine predeclared points: 1,8001,16001,24001,32001,40001,48001,56001,64001. Every point uses seed42, the same canonical40 pack, v2 initialization, full-reference normalization with missing tails contributing zero, and saved-array/first-state audits.
+
+The threshold result will be the first observed sampled checkpoint at or above0.82, if any. It cannot establish an exact unsampled crossing time, multi-seed uncertainty, matched PPO-Sim advantage or strict paper equivalence. Existing running BONES320k source and evaluation remain frozen. Source: [worker](../official-reproduction-20261112/run_lafan_learning_curve.py), [CPU validation](../official-reproduction-20261112/learning-curve-cpu-validation.json).

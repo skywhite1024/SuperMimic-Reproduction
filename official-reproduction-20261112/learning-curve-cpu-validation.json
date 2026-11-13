@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "tests": 2,
+  "pytest_seconds": 1.27,
+  "scope": "CPU: retained model remains distinct after native final overwrite; incomplete parent, missing step and same-length corrupt snapshot rejected",
+  "actual_cuda_integration_completed": false,
+  "source_sha256": {
+    "run_lafan_pilot.py": "c037a29917cb7eaabf4cf6a1f0f0347d835349f0547a96daece452e92b7b727c",
+    "select_completed_checkpoint.py": "2c36b36006375345ee51e87fbb237a7552321dbec6258812a6da21360de84542",
+    "evaluate_motion_corpus_v2.py": "6d53c5b7292513c2aef77765a4954a88a1600d355c5217fec47a36b499a20351",
+    "run_lafan_learning_curve.py": "47bb4f5f26984d0f986c7c05ed7d28bf758868f78c9bd2e4202ae3975d416deb",
+    "test_completed_checkpoint_selection.py": "1112a8966ccf088a5dcafb0bc8c19304baf314fb7ea60bee1b5ce329b3484513"
+  }
+}

@@ -9,10 +9,13 @@ import hashlib
 import json
 import os
 import time
+from datetime import datetime, timezone
 from pathlib import Path
 
 
 def main():
+    entry_started = time.monotonic()
+    entry_utc = datetime.now(timezone.utc).isoformat()
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--motions", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
@@ -23,6 +26,8 @@ def main():
                         help="Native zero-based save interval; must divide steps-1. Default saves initial/final only")
     parser.add_argument("--keep-checkpoint-series", action="store_true",
                         help="Retain finite, hash-identified model snapshots; does not enable training resume")
+    parser.add_argument("--record-checkpoint-times", action="store_true",
+                        help="Record asynchronous checkpoint availability times separately from model manifests")
     parser.add_argument("--corpus", choices=("lafan40", "bones-raw"), default="lafan40",
                         help="bones-raw is a capacity/training probe, not the filtered paper benchmark")
     parser.add_argument("--training-profile", choices=("public-default", "paper-a5-single-gpu"),
@@ -32,6 +37,8 @@ def main():
     args = parser.parse_args()
     if args.steps < 2:
         parser.error("At least two simulator collection steps are required")
+    if args.record_checkpoint_times and not args.keep_checkpoint_series:
+        parser.error("record-checkpoint-times requires keep-checkpoint-series")
     save_interval = args.steps - 1 if args.checkpoint_interval is None else args.checkpoint_interval
     if save_interval < 1 or (args.steps - 1) % save_interval:
         parser.error("checkpoint-interval must be positive and divide steps-1 so the final step is saved")
@@ -60,8 +67,16 @@ def main():
     # The author's artifact helper contacts the online API to prune versions
     # even in offline mode. Keep its local artifact logging, with no API call.
     checkpoint_receipts = []
+    checkpoint_times = []
+
+    def clock_observation():
+        now = time.monotonic()
+        return {"utc": datetime.now(timezone.utc).isoformat(),
+                "seconds_since_program_entry": now - entry_started,
+                "seconds_since_runner_run_entry": now - started}
 
     def log_offline_checkpoint(files):
+        callback_entry = clock_observation() if args.record_checkpoint_times else None
         assert wandb.run is not None
         if args.keep_checkpoint_series:
             from checkpoint_series import preserve_checkpoint
@@ -70,11 +85,25 @@ def main():
             completed_steps = len(checkpoint_receipts) * save_interval + 1
             receipt = preserve_checkpoint(files, output / "checkpoint-series", completed_steps)
             checkpoint_receipts.append(receipt)
+            preserved = clock_observation() if args.record_checkpoint_times else None
             print("MODEL_SNAPSHOT_PRESERVED " + json.dumps(receipt), flush=True)
         artifact = wandb.Artifact(f"model-{wandb.run.id}", type="model")
         for path in files:
             artifact.add_file(path)
         wandb.run.log_artifact(artifact)
+        if args.record_checkpoint_times:
+            checkpoint_times.append({"collection_steps": completed_steps,
+                "callback_entry_after_native_save": callback_entry,
+                "retained_snapshot_complete": preserved,
+                "offline_artifact_logging_returned": clock_observation()})
+            timing = {"schema_version": 1, "program_entry_utc": entry_utc,
+                "runner_run_entry_utc": run_entry_utc,
+                "time_definition": "Monotonic elapsed wall time. Program entry includes imports, config and environment/model initialization; runner.run entry excludes that setup. Both include native warmup, graph capture and snapshot overhead. Evaluation runs separately after training.",
+                "asynchronous_callback_caveat": "Callback entry is after native serialization and may be delayed by thread scheduling. Retained-snapshot completion is an observed availability upper bound, not an exact collection/update completion timestamp.",
+                "checkpoints": checkpoint_times}
+            (output / "checkpoint-times.json").write_text(
+                json.dumps(timing, indent=2) + "\n", encoding="utf-8", newline="\n")
+            print("CHECKPOINT_TIME_OBSERVED " + json.dumps(checkpoint_times[-1]), flush=True)
 
     runner_module.log_model_artifact = log_offline_checkpoint
 
@@ -119,6 +148,7 @@ def main():
         "runtime_execution_modified": args.goal_backend != "official",
         "io_adapter": "offline checkpoint artifact logging; online pruning disabled",
         "keep_checkpoint_series": args.keep_checkpoint_series,
+        "record_checkpoint_times": args.record_checkpoint_times,
         "full_training_resume_available": False,
         "is_full_paper_reproduction": False,
     }
@@ -136,12 +166,16 @@ def main():
                       "torch_reserved_bytes": torch.cuda.memory_reserved()}
     print("CUDA_MEMORY_AFTER_INITIALIZATION " + json.dumps(initial_memory), flush=True)
     started = time.monotonic()
+    run_entry_utc = datetime.now(timezone.utc).isoformat()
     runner.run()
+    runner_returned = clock_observation() if args.record_checkpoint_times else None
     wandb.finish()
     if args.keep_checkpoint_series:
         expected = list(range(1, args.steps + 1, save_interval))
         if [item["collection_steps"] for item in checkpoint_receipts] != expected:
             raise RuntimeError("IncompleteIntermediateCheckpointSeries")
+        if args.record_checkpoint_times and [x["collection_steps"] for x in checkpoint_times] != expected:
+            raise RuntimeError("IncompleteCheckpointTimingLedger")
     artifacts = []
 
     def assert_finite(value):
@@ -178,6 +212,8 @@ def main():
         "peak_torch_memory_reserved_bytes": torch.cuda.max_memory_reserved(),
         "memory_scope": "PyTorch allocator only; excludes Warp and other CUDA allocations",
         "retained_checkpoint_series": checkpoint_receipts,
+        "checkpoint_timing_file": "checkpoint-times.json" if args.record_checkpoint_times else None,
+        "runner_returned_observation": runner_returned,
         "full_training_resume_available": False,
     }
     (output / "result.json").write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")

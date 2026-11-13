@@ -28,6 +28,8 @@ def main():
     parser.add_argument("--expected-clips", type=int, required=True)
     parser.add_argument("--num-envs", type=int, default=1024)
     parser.add_argument("--order", choices=("index", "length"), default="length")
+    parser.add_argument("--checkpoint-collection-step", type=int,
+                        help="Select a retained snapshot from a completed parent run; default uses final models")
     args = parser.parse_args()
     if args.num_envs < 1 or args.expected_clips < 1:
         parser.error("positive environment and clip counts are required")
@@ -46,11 +48,11 @@ def main():
     from manual_reset_observations import refresh_manual_reset_observations
 
     run, motions, output = args.run.resolve(), args.motions.resolve(), args.output.resolve()
-    # Refuse an initial/partial checkpoint while the training process is active.
-    training = json.loads((run / "result.json").read_text(encoding="utf-8"))
-    if training["status"] != "pilot_completed":
-        raise RuntimeError("A completed and validated pilot is required")
+    from select_completed_checkpoint import select_completed_checkpoint
+    training, checkpoints, checkpoint_selection = select_completed_checkpoint(
+        run, args.checkpoint_collection_step)
     resolved = json.loads((run / "resolved-config.json").read_text(encoding="utf-8"))
+    checkpoint_selection["resolved_config_sha256"] = digest(run / "resolved-config.json")
     goal_backend = resolved.get("goal_assembly_backend", "official")
     if goal_backend == "eager":
         import supermimic.representations as representations
@@ -72,12 +74,6 @@ def main():
     order = (np.arange(count) if args.order == "index"
              else np.argsort(-lengths, kind="stable"))
     assert set(order.tolist()) == set(range(count))
-    checkpoints = {}
-    for record in training["checkpoints"]:
-        path = Path(record["path"])
-        if digest(path) != record["sha256"]:
-            raise RuntimeError("Checkpoint hash mismatch: " + path.name)
-        checkpoints[path.name] = path
     output.mkdir(parents=True, exist_ok=False)
 
     cfg = load_env_cfg(task, play=True)
@@ -122,6 +118,7 @@ def main():
         "actuator_histories_backfilled_after_pose_write": True,
         "initial_reference_state_check": "Full71D matches native clipped reference; atol=1e-5,rtol=1e-5 before first action",
         "training": training, "paper_results_reproduced": False,
+        "checkpoint_selection": checkpoint_selection,
         "trajectory_state": "pre-action full_state; rewards and terminations are post-step",
         "motion_files": {p.name: digest(p) for p in sorted(motions.iterdir()) if p.is_file()},
     }
