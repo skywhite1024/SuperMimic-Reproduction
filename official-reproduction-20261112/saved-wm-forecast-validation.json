@@ -1,0 +1,82 @@
+{
+  "status": "complete_shared_trajectory_eight_transition_forecast_verified",
+  "job_uid": "18a7ab96e67544508413c3724310daba",
+  "whole_program_exit_code": 0,
+  "completed_at": "2026-11-13T11:54:06.527+08:00",
+  "original_json_receipts_verified": 6,
+  "original_result_sha256": "5688fea7862cedcc0c3db90975077c448244f0fd8d2c3d9d47eb1cba8546bff9",
+  "original_protocol_sha256": "f6d7cdf79a7e7ebb8a0746beaed08902216f0001b5990b81a71790add6951d5b",
+  "windows_per_model": 437276,
+  "trajectories_per_model": 40,
+  "failed_source_trajectories_per_model": 1,
+  "actual_actions_per_window": 8,
+  "states_per_window": 9,
+  "native_unused_padding_action": 1,
+  "native_training_horizon8_window_scored_transitions": 7,
+  "all_raw_group_mse_arrays_verified_on_cloud": true,
+  "all_raw_group_arrays_downloaded_locally": false,
+  "local_checks": "Recomputed weighted group aggregation, window-weighted clip aggregation, nominal weights and physical context consistency from originalJSON; checked original training bytes and config differences.",
+  "metric": "Native nominal-weighted MSE averaged over70 channels: rootpos3, sqrt(1/2)rotmat9,jointpos29,jointvel29. Each1..8transition horizon reported separately; window-mean and equal-clip means remain separate.",
+  "original_1k_result_and_16k_result_config_byte_identical_to_previous_publication": true,
+  "recovered_original1k_resolved_config_sha256": "6bdf7df89305a4821119e7574370420d89df7b8986f4be24ab93c32091ca25d9",
+  "critical_runner_configs_equal": true,
+  "runner_differences": {
+    "save_interval": [
+      1000,
+      16000
+    ],
+    "max_iterations": [
+      1001,
+      16001
+    ]
+  },
+  "physical_environment_configs_equal_ignoring_serialized_object_addresses": true,
+  "motion_directory_equal": true,
+  "models": [
+    {
+      "model": "1k",
+      "windows": 437276,
+      "transitions_scored": 8,
+      "eighth_transition_normalized_state_mse": 1.752111430401407,
+      "mean_first7_normalized_state_mse": 0.5721152549238789,
+      "mean_first8_normalized_state_mse": 0.71961477685857,
+      "raw_group_array": {
+        "file": "1k-group-mse.npy",
+        "bytes": 55971456,
+        "sha256": "10512719006fa44743b151bc357ced3b71dbe5fb9ca9ea7f815a6ea6d9b4c866"
+      },
+      "sample_windows_independently_checked": 80,
+      "sample_max_abs_group_mse_difference": 7.800881256514458e-07,
+      "combined_sample_comparison_tolerance": {
+        "atol": 1e-07,
+        "rtol": 0.0002
+      }
+    },
+    {
+      "model": "16k",
+      "windows": 437276,
+      "transitions_scored": 8,
+      "eighth_transition_normalized_state_mse": 0.02487394368668383,
+      "mean_first7_normalized_state_mse": 0.010145323205770914,
+      "mean_first8_normalized_state_mse": 0.011986400765885028,
+      "raw_group_array": {
+        "file": "16k-group-mse.npy",
+        "bytes": 55971456,
+        "sha256": "914d9a3556ceb4729f91475f2b945993b240331b2375e7b886f47eb136fd2480"
+      },
+      "sample_windows_independently_checked": 80,
+      "sample_max_abs_group_mse_difference": 3.1145934009657594e-07,
+      "combined_sample_comparison_tolerance": {
+        "atol": 1e-07,
+        "rtol": 0.0002
+      }
+    }
+  ],
+  "raw_artifact_root": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/wm-forecast-8transition-1113af",
+  "online_paper_distribution_reproduced": false,
+  "dataset_scale_sweep_completed": false,
+  "held_out_generalization_claimed": false,
+  "exact_paper_error_aggregation_confirmed": false,
+  "multi_seed_or_single_factor_causal_claim": false,
+  "paper_results_reproduced": false
+}

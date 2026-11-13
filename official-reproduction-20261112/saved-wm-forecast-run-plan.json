@@ -1,5 +1,5 @@
 {
-  "status": "running_input_preflight_passed",
+  "status": "completed_all_windows_original6JSON_and_aggregates_verified",
   "submitted": true,
   "name": "supermimic-official-wm-forecast-260010076-1113af",
   "display_name": "260010076-SuperMimic-WM-8transition-1113af",
@@ -68,5 +68,11 @@
   "program_kill_deadline": "2026-11-13T12:21:38+08:00",
   "input_models_data_ledger_and_native_source_hashes_verified": true,
   "actual_worker_sha256": "b352013cecd18e3d6feb05ae8d079d148f45fffabdf2cf00cdbdb0e3ef971ad3",
-  "progress_evidence": "wm-forecast-8transition-1113af-progress1.txt"
+  "progress_evidence": "wm-forecast-8transition-1113af-progress1.txt",
+  "platform_status": "success",
+  "completed_at": "2026-11-13T11:54:06.527+08:00",
+  "program_exit_code": 0,
+  "all_windows_per_model_completed": 437276,
+  "original_receipt_folder": "C:\\project\\sensecore\\SuperMimic\\official-execution-20261112\\wm-forecast-8transition-1113af-receipts",
+  "all_first_and_last_windows_numpy_checks_passed": true
 }

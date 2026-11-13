@@ -1,0 +1,54 @@
+{
+  "status": "six_original_forecast_and_training_receipts_recovered_and_verified",
+  "job_uid": "18a7ab96e67544508413c3724310daba",
+  "whole_program_exit_code": 0,
+  "completed_at": "2026-11-13T11:54:06.527+08:00",
+  "source_log_sha256": "7787534df0e7d0c998fc2404a6b37294d7f4b4cb51515a7221ccc390efc3b6ef",
+  "all_original_aggregate_rates_recomputed": true,
+  "critical_runner_configs_equal": true,
+  "original_raw_group_arrays_recovered_locally": false,
+  "receipts": [
+    {
+      "i": 0,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/wm-forecast-8transition-1113af/result.json",
+      "bytes": 163213,
+      "sha256": "5688fea7862cedcc0c3db90975077c448244f0fd8d2c3d9d47eb1cba8546bff9",
+      "chunks": 145
+    },
+    {
+      "i": 1,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/wm-forecast-8transition-1113af/protocol.json",
+      "bytes": 6674,
+      "sha256": "f6d7cdf79a7e7ebb8a0746beaed08902216f0001b5990b81a71790add6951d5b",
+      "chunks": 6
+    },
+    {
+      "i": 2,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan40-paper-1112f/result.json",
+      "bytes": 1172,
+      "sha256": "223d67b7537be7e552993b7da25c00c70dfe96025d6419538cda6ddfffaa38e5",
+      "chunks": 3
+    },
+    {
+      "i": 3,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan40-paper-1112f/resolved-config.json",
+      "bytes": 42158,
+      "sha256": "6bdf7df89305a4821119e7574370420d89df7b8986f4be24ab93c32091ca25d9",
+      "chunks": 22
+    },
+    {
+      "i": 4,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan40-paper-16k-1113b/result.json",
+      "bytes": 1732,
+      "sha256": "1baaedd98506ece12a60a06eaad5226c56debad45acfc342eef0738a3ab8446b",
+      "chunks": 3
+    },
+    {
+      "i": 5,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan40-paper-16k-1113b/resolved-config.json",
+      "bytes": 42328,
+      "sha256": "f96c37b0930f9dab82d6a7c1040eccc03df58ae4174cc580990fabb913bf0ed6",
+      "chunks": 22
+    }
+  ]
+}

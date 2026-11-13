@@ -116,9 +116,12 @@
       "status": "not_executed",
       "evidence": [
         "evaluate_saved_wm_forecasts.py",
-        "saved-wm-forecast-cpu-validation.json"
+        "saved-wm-forecast-cpu-validation.json",
+        "saved-wm-forecast-result.json",
+        "saved-wm-forecast-validation.json",
+        "saved-wm-forecast-receipt-ledger.json"
       ],
-      "qualification": "1/7/40/264hour sweep not executed. Explicit9state/8action metric prepared on fixed completeLAFAN40 physical traces; realGPU measurement next. Nativewm.horizon8 window scores7transitions. Offline fixed trajectories are not onlinepaper rollout measurement; source subset/aggregation still need confirmation."
+      "qualification": "1/7/40/264hour dataset sweep not executed. Explicit8transition frozen1k/16k WM diagnostic completed on every437276 identical correctedLAFAN40 physical window; rawarrays cloud-verified and sixoriginalJSON recovered. NativewindowH8scores7; exactpaperonline distribution/aggregation remains unresolved."
     },
     {
       "id": "rollout_speed",
@@ -232,5 +235,5 @@
     "Execute explicit8transition sharedtrajectory WM forecast diagnostic; then extend data-scale/online metric with declared subset membership",
     "Continue realG1 PPO-WM/PPO-Sim, critic horizons, push andmultiGPU matched experiments; retain missingexactauthor inputs andhardware limitation"
   ],
-  "last_status_update": "2026-11-13T11:38:02.453152+08:00"
+  "last_status_update": "2026-11-13T12:01:40.456044+08:00"
 }
