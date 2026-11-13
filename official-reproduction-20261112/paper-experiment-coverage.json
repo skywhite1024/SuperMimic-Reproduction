@@ -180,15 +180,17 @@
         9,
         19
       ],
-      "status": "both100k_training_complete_final5376trial_evaluation_running",
+      "status": "complete100k_proxy_training_full5376trial_tests_and_independent_arrays_audit",
       "evidence": [
         "velocity-integration-gpu-validation.json",
         "velocity-step-gpu-validation.json",
         "velocity-library-local-canonical-1113y-verification.json",
         "velocity-100k-training-completion-validation.json",
-        "velocity-step-100k-final-run-plan.json"
+        "velocity-step-100k-final-run-plan.json",
+        "velocity-100k-step-validation.json",
+        "velocity-100k-step-cloud-audit-receipt-ledger.json"
       ],
-      "qualification": "Both100k runs each39997WM/policy updates and26modelsets, original4JSON recovered. Final1113ad after preserved1113xpreflight failure; no final tracking score yet. Exactauthor library/pose/feature extractor unresolved."
+      "qualification": "RLmedian5.527%/0falls;distill23.464%/3falls.672grididentities630uniquecommands,4nominallyidenticalstandingtrials. One trainingseed; exactauthor corpus,pose,historyfeature unresolved. Qualifiedlocal result, no strictpaper/multiseed/hardware claim."
     },
     {
       "id": "real_g1",
@@ -227,5 +229,5 @@
     "Prepare faithful local-checkpoint throughput/PPO-WM entry with explicit computation scope; execute after GPU slot frees",
     "Continue matchedPPO-Sim,duration,horizon,push experiments; retain unresolved exact author inputs and hardware limitation"
   ],
-  "last_status_update": "2026-11-13T11:13:43.324356+08:00"
+  "last_status_update": "2026-11-13T11:38:02.453152+08:00"
 }

@@ -34,7 +34,8 @@
   ],
   "all_update_metrics_checked_finite": false,
   "full_training_resume_available": false,
-  "velocity_task_scores_available": false,
+  "velocity_task_scores_available": true,
   "paper_results_reproduced": false,
-  "qualification": "Name-filter candidate library; exact author membership/standing pose and repeatability unresolved. Original training step_test_completed=false remains unchanged."
+  "qualification": "Original training step_test_completed=false fields remain historically unchanged. Subsequent complete5second local standing test and CPU arrays verified; exactauthor library/pose/historyfeature and repeatability unresolved.",
+  "subsequent_full_step_test": "velocity-100k-step-validation.json"
 }

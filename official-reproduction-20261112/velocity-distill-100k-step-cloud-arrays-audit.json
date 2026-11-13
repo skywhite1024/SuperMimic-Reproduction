@@ -1,0 +1,32 @@
+{
+  "status": "complete_local_step_arrays_verified",
+  "mode": "distill",
+  "auditor_sha256": "0a08fe0a7c5ac01265b0e838e578ba176dac95291b50b43cdee7a70c03b9feec",
+  "purpose": "experiment",
+  "result_sha256": "40882c449d3b112d3f2a6d2ab9b1836a09fa0ebdc3326d4cb6687f836c9c83e9",
+  "protocol_sha256": "345738a718f9e6a7d9fe80de90e5719b42e438f9493dffc53fea3a62f4c15616",
+  "npz_sha256": "c09708bb1f7697ef4480c21e0d7ea905bbb4e9d015a3d009d6d68787650bf225",
+  "npz_bytes": 259115159,
+  "commands": 672,
+  "trials": 2688,
+  "initial_states_verified": 2688,
+  "valid_control_steps": 671741,
+  "fallen_trials": 3,
+  "all_fall_commands": 0,
+  "maximum_heading_projection_abs_error": 6.283364111236978e-07,
+  "all_arrays_crc_dtype_finite_padding_verified": true,
+  "first_fall_recomputed_from_saved_states_float64": true,
+  "heading_projection_recomputed_float64": true,
+  "all_command_errors_recomputed_from_saved_velocities": true,
+  "heading_projection_tolerance": {
+    "atol": 1e-05,
+    "rtol": 1e-05
+  },
+  "score_comparison_tolerance": {
+    "atol": 1e-12,
+    "rtol": 1e-12
+  },
+  "policy_replay_executed": false,
+  "repeatability_verified": false,
+  "paper_results_reproduced": false
+}

@@ -1,0 +1,61 @@
+{
+  "status": "seven_original_final_scores_and_cpu_arrays_audit_receipts_verified",
+  "job_uid": "4938f0d58d7248c49254a1a8b0e1e5f6",
+  "whole_program_exit_code": 0,
+  "completed_at": "2026-11-13T11:29:22.249+08:00",
+  "source_log_sha256": "3411e1c48c51d39362157bd153115588ca103d34ccbfc8cdcd8f270cc50b7c2b",
+  "five_original_evaluation_receipts_byte_identical_to_ad_export": true,
+  "total_trials_audited": 5376,
+  "original_npz_recovered_locally": false,
+  "receipts": [
+    {
+      "i": 0,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/velocity-step-100k-1113ad/rl/result.json",
+      "bytes": 331339,
+      "sha256": "042579baa887a44bd65898c8d4384d4bb95dfbbe00fb09674b6e88632e01545a",
+      "chunks": 173
+    },
+    {
+      "i": 1,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/velocity-step-100k-1113ad/rl/protocol.json",
+      "bytes": 134844,
+      "sha256": "04ef90e62eb516f8f9785c0166c84f430820d71f2a4be2451ab185abeb079bcf",
+      "chunks": 40
+    },
+    {
+      "i": 2,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/velocity-step-100k-1113ad/distill/result.json",
+      "bytes": 328794,
+      "sha256": "40882c449d3b112d3f2a6d2ab9b1836a09fa0ebdc3326d4cb6687f836c9c83e9",
+      "chunks": 174
+    },
+    {
+      "i": 3,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/velocity-step-100k-1113ad/distill/protocol.json",
+      "bytes": 134869,
+      "sha256": "345738a718f9e6a7d9fe80de90e5719b42e438f9493dffc53fea3a62f4c15616",
+      "chunks": 40
+    },
+    {
+      "i": 4,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/velocity-step-100k-1113ad/comparison.json",
+      "bytes": 286890,
+      "sha256": "d21c0f0e12874edcdb32874882d5cbd8187e0613c6b6731fe52ea1be6c51052c",
+      "chunks": 116
+    },
+    {
+      "i": 5,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/velocity-arrays-100k-1113ae/rl-arrays.json",
+      "bytes": 1177,
+      "sha256": "1c5110df8f28b8cb250d44e048ea207827f434cb65fb9213b93a55a66438c41a",
+      "chunks": 3
+    },
+    {
+      "i": 6,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/velocity-arrays-100k-1113ae/distill-arrays.json",
+      "bytes": 1182,
+      "sha256": "7e022bc064a25274c5794044cd5cbbdc909c0e624537a8ca6d3c609c2c2f5411",
+      "chunks": 3
+    }
+  ]
+}

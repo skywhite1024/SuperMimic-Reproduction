@@ -1,0 +1,105 @@
+{
+  "status": "complete100k_velocity_step_scores_and_all5376_saved_trials_verified",
+  "experiment_uid": "7366be4c44154ade98b36f96163edad9",
+  "experiment_completed_at": "2026-11-13T11:17:45.585+08:00",
+  "cpu_audit_uid": "4938f0d58d7248c49254a1a8b0e1e5f6",
+  "cpu_audit_completed_at": "2026-11-13T11:29:22.249+08:00",
+  "exact_original_experiment_jsons": 5,
+  "exact_original_audit_and_repeated_jsons": 7,
+  "repeated5_original_receipts_byte_identical": true,
+  "total_trial_initial_states_verified": 5376,
+  "all_arrays_crc_dtype_finite_padding_verified": true,
+  "all_first_falls_and_heading_velocities_recomputed": true,
+  "all_command_errors_recomputed_independently_in_numpy_float64": true,
+  "full672_identity_comparison_recomputed": true,
+  "unique_physical_commands": 630,
+  "comparison_counts": {
+    "rl_lower": 644,
+    "distill_lower": 28,
+    "finite_tie": 0,
+    "both_all_fall": 0
+  },
+  "cases": [
+    {
+      "mode": "rl",
+      "trials": 2688,
+      "fallen_trials": 0,
+      "all_fall_commands": 0,
+      "median_relative_command_error": 0.05527163257718411,
+      "saved_initial_states_verified": 2688,
+      "saved_control_steps": 672000,
+      "npz_bytes": 259432540,
+      "npz_sha256": "c075835c7cf3cd8c768750eab6d29024cedb9c4dc4f67d83752357cf42687755",
+      "maximum_heading_projection_abs_error": 6.094078240925782e-07,
+      "result_sha256": "042579baa887a44bd65898c8d4384d4bb95dfbbe00fb09674b6e88632e01545a",
+      "protocol_sha256": "04ef90e62eb516f8f9785c0166c84f430820d71f2a4be2451ab185abeb079bcf",
+      "per_plane": [
+        {
+          "plane": "vx-vy",
+          "identities": 224,
+          "median_relative_command_error": 0.06369142929982435
+        },
+        {
+          "plane": "vx-wz",
+          "identities": 224,
+          "median_relative_command_error": 0.04997229990213376
+        },
+        {
+          "plane": "vy-wz",
+          "identities": 224,
+          "median_relative_command_error": 0.05558499772317178
+        }
+      ]
+    },
+    {
+      "mode": "distill",
+      "trials": 2688,
+      "fallen_trials": 3,
+      "all_fall_commands": 0,
+      "median_relative_command_error": 0.2346363339034102,
+      "saved_initial_states_verified": 2688,
+      "saved_control_steps": 671741,
+      "npz_bytes": 259115159,
+      "npz_sha256": "c09708bb1f7697ef4480c21e0d7ea905bbb4e9d015a3d009d6d68787650bf225",
+      "maximum_heading_projection_abs_error": 6.283364111236978e-07,
+      "result_sha256": "40882c449d3b112d3f2a6d2ab9b1836a09fa0ebdc3326d4cb6687f836c9c83e9",
+      "protocol_sha256": "345738a718f9e6a7d9fe80de90e5719b42e438f9493dffc53fea3a62f4c15616",
+      "per_plane": [
+        {
+          "plane": "vx-vy",
+          "identities": 224,
+          "median_relative_command_error": 0.20263557711904528
+        },
+        {
+          "plane": "vx-wz",
+          "identities": 224,
+          "median_relative_command_error": 0.18116953552527562
+        },
+        {
+          "plane": "vy-wz",
+          "identities": 224,
+          "median_relative_command_error": 0.34044301838247465
+        }
+      ]
+    }
+  ],
+  "formula": "For each surviving five-second trial, norm(mean(last100 heading velocity samples)-command)/norm(command); per-command median across surviving trials; reported overall median across672 command identities.",
+  "nominal_trial_poses_identical": true,
+  "domain_randomization": false,
+  "observation_noise": false,
+  "falling_trial_errors_remain_null": true,
+  "all_fall_command_errors_would_remain_null": true,
+  "display_error_capped_at": 0.9,
+  "comparison_uses_uncapped_raw_errors": true,
+  "arrays_verified_on_cloud_cpu": true,
+  "original_npz_recovered_locally": false,
+  "original_npz_root": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/velocity-step-100k-1113ad",
+  "independent_policy_physics_replay_executed": false,
+  "repeatability_verified": false,
+  "author_library_membership_confirmed": false,
+  "author_standing_pose_confirmed": false,
+  "author_history_feature_extractor_confirmed": false,
+  "multi_seed_significance_claimed": false,
+  "long_duration_or_real_robot_success_claimed": false,
+  "paper_results_reproduced": false
+}

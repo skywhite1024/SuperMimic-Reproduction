@@ -1,5 +1,5 @@
 {
-  "status": "running_rl_evaluation",
+  "status": "completed_original5JSON_comparison_and_independent_array_audit_verified",
   "submitted": true,
   "name": "supermimic-official-velocity-final-step-260010076-1113ad",
   "display_name": "260010076-SuperMimic-velocity-final-step-100k-1113ad",
@@ -63,5 +63,11 @@
   "all26_model_sets_per_mode_and_final_live_models_rehashed": true,
   "all_training_result_and_config_hashes_match_recovered_originals": true,
   "progress_evidence": "velocity-step-100k-1113ad-progress1.txt",
-  "current_task_concurrent_gpus": 2
+  "current_task_concurrent_gpus": 2,
+  "platform_status": "success",
+  "completed_at": "2026-11-13T11:17:45.585+08:00",
+  "program_exit_code": 0,
+  "original_receipt_folder": "C:\\project\\sensecore\\SuperMimic\\official-execution-20261112\\velocity-step-100k-1113ad-receipts",
+  "all5376_declared_initial_poses_verified": true,
+  "saved_array_independent_cpu_audit": "1113ae_complete_all5376"
 }
