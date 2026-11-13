@@ -1,0 +1,92 @@
+{
+  "status": "all_available_original_sweep_receipts_recovered_and_verified",
+  "job_uid": "b99aca368fbb40009d7c049214452d3b",
+  "whole_program_exit_code": 0,
+  "source_log_sha256": "a6b52497a225e7ac7b61962fe93681ca3f5978e18a9a2370a36cb5187286424d",
+  "receipts": [
+    {
+      "i": 0,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/local-benchmark-sweep-1113ab/summary.json",
+      "bytes": 24883,
+      "sha256": "b0dbac7bc0b8e608cbe67fc6375854f642f6399fae82d18bbd44d168798a6c6d",
+      "chunks": 17
+    },
+    {
+      "i": 1,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/local-benchmark-sweep-1113ab/batch-64/result.json",
+      "bytes": 43444,
+      "sha256": "432ee103f10f1a262e1dbb3e5a71043477a8f27fe5ec1a8b17a54a98f0a77dfb",
+      "chunks": 26
+    },
+    {
+      "i": 2,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/local-benchmark-sweep-1113ab/batch-128/result.json",
+      "bytes": 43453,
+      "sha256": "1a11bbe6a22831fafdb4ae8231832b4dc5e75287bb123572da76413df25ad9d2",
+      "chunks": 26
+    },
+    {
+      "i": 3,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/local-benchmark-sweep-1113ab/batch-256/result.json",
+      "bytes": 43450,
+      "sha256": "89c172b6114a16108ed9947480e8dcff94bae78ae3c85e0318d42a798eb247a4",
+      "chunks": 26
+    },
+    {
+      "i": 4,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/local-benchmark-sweep-1113ab/batch-512/result.json",
+      "bytes": 43450,
+      "sha256": "560f178403112fc4074dcd52e0687e4c32d55f55b992951eb71cfd07d7bfe635",
+      "chunks": 26
+    },
+    {
+      "i": 5,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/local-benchmark-sweep-1113ab/batch-1024/result.json",
+      "bytes": 43456,
+      "sha256": "74ba08d3995ec2d245a4389149315cab4291e2ac17208a755a369cceba58b38d",
+      "chunks": 26
+    },
+    {
+      "i": 6,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/local-benchmark-sweep-1113ab/batch-2048/result.json",
+      "bytes": 43454,
+      "sha256": "c520491af171840a213553d83d82c32aabfa2b33f646d0e1961f537ccaf7df17",
+      "chunks": 26
+    },
+    {
+      "i": 7,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/local-benchmark-sweep-1113ab/batch-4096/result.json",
+      "bytes": 43451,
+      "sha256": "df4615dc2c00dbcb703ca989df175278c08dfcde0d9dc22761cf1603f4ca61d1",
+      "chunks": 26
+    },
+    {
+      "i": 8,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/local-benchmark-sweep-1113ab/batch-8192/result.json",
+      "bytes": 43448,
+      "sha256": "4644e9d5b97d466e8b86f52b6bce59e4c63eab95c60d87cfe1fb4df3b7c698bf",
+      "chunks": 26
+    },
+    {
+      "i": 9,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/local-benchmark-sweep-1113ab/batch-16384/result.json",
+      "bytes": 43454,
+      "sha256": "bb0fe85f88c2061afef285ec6a4c94e87c7d3218f72f4cd634c2e009a9d30141",
+      "chunks": 26
+    },
+    {
+      "i": 10,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/local-benchmark-sweep-1113ab/batch-32768/result.json",
+      "bytes": 43447,
+      "sha256": "b0498edc74822840cb363fa828f3d5fc184f4b0a0b07515056d7aa351cb40fc1",
+      "chunks": 26
+    },
+    {
+      "i": 11,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/local-benchmark-sweep-1113ab/batch-65536/result.json",
+      "bytes": 43449,
+      "sha256": "fc448e75a9f95e62499f41b2a62b872eb1ac1566de500665397ddd5fa05cb66b",
+      "chunks": 26
+    }
+  ]
+}

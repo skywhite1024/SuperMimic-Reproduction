@@ -1,0 +1,25 @@
+{
+  "status": "two_original_100k_training_json_receipts_verified",
+  "mode": "rl",
+  "log_source": "C:\\Users\\260010076\\Downloads\\logs-acp-20261113T104230.txt.gz",
+  "log_sha256": "c4f4ae8875f54d3f352c875e57d12969451e09680c056fa61b07e4c99bedb75f",
+  "receipts": [
+    {
+      "i": 0,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/velocity-rl-100k-1113r/result.json",
+      "bytes": 24394,
+      "sha256": "925d8a6e07acf2122ca63dcf3d9b64ec45879b80cf1459dc48afb529a23acdea",
+      "chunks": 16
+    },
+    {
+      "i": 1,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/velocity-rl-100k-1113r/resolved-config.json",
+      "bytes": 51200,
+      "sha256": "052aeb8750d720752e41703d3cea39510e93963211361cb0299544ab05677fa8",
+      "chunks": 31
+    }
+  ],
+  "snapshot_manifests_and_weights_rechecked_here": false,
+  "final_step_job_will_recheck_all26_model_sets_on_afs": true,
+  "whole_exit_code": 0
+}

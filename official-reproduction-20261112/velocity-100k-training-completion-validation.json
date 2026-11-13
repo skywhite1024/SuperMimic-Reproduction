@@ -1,0 +1,40 @@
+{
+  "status": "both100k_training_original_receipts_verified",
+  "cases": [
+    {
+      "mode": "rl",
+      "collection_steps": 100000,
+      "world_model_updates": 39997,
+      "policy_updates": 39997,
+      "native_cuda_graphs_captured": {
+        "world_model": true,
+        "policy": true
+      },
+      "model_sets": 26,
+      "elapsed_training_seconds": 14642.013511307538,
+      "result_sha256": "925d8a6e07acf2122ca63dcf3d9b64ec45879b80cf1459dc48afb529a23acdea",
+      "resolved_config_sha256": "052aeb8750d720752e41703d3cea39510e93963211361cb0299544ab05677fa8",
+      "all_update_metrics_checked_finite": false
+    },
+    {
+      "mode": "distill",
+      "collection_steps": 100000,
+      "world_model_updates": 39997,
+      "policy_updates": 39997,
+      "native_cuda_graphs_captured": {
+        "world_model": true,
+        "policy": true
+      },
+      "model_sets": 26,
+      "elapsed_training_seconds": 14189.352054711431,
+      "result_sha256": "78767ec1ebd452d723353f0e2ee237862d2fb101b4b23f85b13b62bf3795d111",
+      "resolved_config_sha256": "e687b0e44be3883ef5cf730ab6ca9b17bac3c9c2cc2fd28503b9bb95711074aa",
+      "all_update_metrics_checked_finite": false
+    }
+  ],
+  "all_update_metrics_checked_finite": false,
+  "full_training_resume_available": false,
+  "velocity_task_scores_available": false,
+  "paper_results_reproduced": false,
+  "qualification": "Name-filter candidate library; exact author membership/standing pose and repeatability unresolved. Original training step_test_completed=false remains unchanged."
+}

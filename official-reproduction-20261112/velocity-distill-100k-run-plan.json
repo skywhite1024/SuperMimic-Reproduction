@@ -1,5 +1,5 @@
 {
-  "status": "running_training",
+  "status": "completed_original_result_and_config_recovered",
   "name": "supermimic-official-velocity-distill-260010076-1113s",
   "display_name": "260010076-SuperMimic-velocity-distill-100k-1113s",
   "mode": "distill",
@@ -52,18 +52,18 @@
   "created_at": "2026-11-13T06:35:28+08:00",
   "started_at": "2026-11-13T06:35:41+08:00",
   "program_deadline": "2026-11-13T14:05:41+08:00",
-  "platform_status": "running",
+  "platform_status": "success",
   "source_hashes_verified": true,
   "source_verification_evidence": "velocity-distill-100k-1113s-progress1.txt",
   "data_prerequisite_exact_receipts_verified": true,
   "ui_command_dom_readback_matches": true,
   "duplicate_and_resource_check_passed": true,
   "verified_at": "2026-11-13T06:44:23.143283+08:00",
-  "last_progress_evidence": "velocity-distill-100k-1113s-progress2.txt",
+  "last_progress_evidence": "velocity-distill-100k-1113s-progress4.txt",
   "training_stage_started_at": "2026-11-13T06:35:42+08:00",
   "training_stage_deadline": "2026-11-13T13:35:42+08:00",
-  "last_verified_stage": "Actual6631 realG1 mixed collection steps and finite metrics observed; full100k incomplete",
-  "last_observed_collection_steps": 6631,
+  "last_verified_stage": "Observed48351 actual collections and finite sampled training metrics; complete training/final evaluation pending",
+  "last_observed_collection_steps": 48351,
   "last_observed_total_environment_steps": 27160576,
   "last_observed_metrics": {
     "Loss/state": 0.0126,
@@ -71,5 +71,24 @@
     "Policy/grad_norm": 0.5862,
     "Policy/value_function": 0.0384
   },
-  "last_progress_verified_at": "2026-11-13T06:58:55.874519+08:00"
+  "last_progress_verified_at": "2026-11-13T06:58:55.874519+08:00",
+  "last_progress_observed_at": "2026-11-13T08:35:12.343020+08:00",
+  "original_receipt_folder": "C:\\project\\sensecore\\SuperMimic\\official-execution-20261112\\velocity-distill-100k-final-receipts",
+  "program_exit_code": 0,
+  "completion_evidence": {
+    "mode": "distill",
+    "collection_steps": 100000,
+    "world_model_updates": 39997,
+    "policy_updates": 39997,
+    "native_cuda_graphs_captured": {
+      "world_model": true,
+      "policy": true
+    },
+    "model_sets": 26,
+    "elapsed_training_seconds": 14189.352054711431,
+    "result_sha256": "78767ec1ebd452d723353f0e2ee237862d2fb101b4b23f85b13b62bf3795d111",
+    "resolved_config_sha256": "e687b0e44be3883ef5cf730ab6ca9b17bac3c9c2cc2fd28503b9bb95711074aa",
+    "all_update_metrics_checked_finite": false
+  },
+  "completed_at": "2026-11-13T10:34:58.562+08:00"
 }

@@ -123,15 +123,18 @@
       "paper_pages": [
         8
       ],
-      "status": "gpu_integration_verified_full11size_sweep_running",
+      "status": "eleven_size_gpu_sweep_completed_explicit_unequal_scopes",
       "evidence": [
         "pinned-experiment-entrypoint-review.json",
         "benchmark-local-validation.json",
         "benchmark-integration-gpu-result.json",
         "benchmark-integration-gpu-validation.json",
-        "benchmark-sweep-run-plan.json"
+        "benchmark-sweep-run-plan.json",
+        "benchmark-sweep-summary.json",
+        "benchmark-sweep-validation.json",
+        "benchmark-sweep-measurements.csv"
       ],
-      "qualification": "Actual64worldH1003pathintegrationpassedexit0withoriginalreceipt;full11size3x500sweep1113abrunning,first64sizevalid. Unequalscopesnativeenv+actorversusWMdynamics-onlyforward;nofull-paper/controlchainspeedupclaim."
+      "qualification": "All11 sizes64..65536 valid;20warmups,3x500steps. Nativeenv+actor versus WMdynamics-only fixed-input forward with/without grad recording; no backward/full-control or strictpaper speedup claim."
     },
     {
       "id": "ppo_world_model",
@@ -177,13 +180,15 @@
         9,
         19
       ],
-      "status": "running_proxy",
+      "status": "both100k_training_complete_final5376trial_evaluation_running",
       "evidence": [
         "velocity-integration-gpu-validation.json",
         "velocity-step-gpu-validation.json",
-        "velocity-library-local-canonical-1113y-verification.json"
+        "velocity-library-local-canonical-1113y-verification.json",
+        "velocity-100k-training-completion-validation.json",
+        "velocity-step-100k-final-run-plan.json"
       ],
-      "qualification": "Existing1113r/s live.21step pipeline5376trials allfell, not final scores. Author library membership,feature extractor,standing/trial details unconfirmed."
+      "qualification": "Both100k runs each39997WM/policy updates and26modelsets, original4JSON recovered. Final1113ad after preserved1113xpreflight failure; no final tracking score yet. Exactauthor library/pose/feature extractor unresolved."
     },
     {
       "id": "real_g1",
@@ -200,7 +205,7 @@
       "id": "corrected_evaluation",
       "requirement": "Full raw1k/16k paired v2 evaluation and every saved trajectory audit",
       "paper_pages": [],
-      "status": "complete_evaluation_and_pair_receipts_raw_array_audit_running",
+      "status": "complete_v2_evaluation_pair_and_all284480_arrays_verified",
       "evidence": [
         "manual-reset-v2-lafan40-trajectory-audit.json",
         "manual-reset-v2-lafan40-initial-states-audit.json",
@@ -208,9 +213,11 @@
         "manual-reset-v2-completion-verification.json",
         "manual-reset-v2-bones1k-accounting.json",
         "manual-reset-v2-bones16k-accounting.json",
-        "manual-reset-v2-pair-summary.json"
+        "manual-reset-v2-pair-summary.json",
+        "manual-reset-v2-cloud-audit-validation.json",
+        "manual-reset-v2-cloud-audit-receipt-ledger.json"
       ],
-      "qualification": "Completecorrected142220pair:1k106561success/35659failuremean.43635064078565766;16k136562success/5658failuremean.8462458372855294;30179recovered178regressed. SevenoriginalJSONbytes/SHAverified;284480NPZCPUaudit1113wrunning,rawarrayauditsnotcomplete."
+      "qualification": "All saved arrays including failures and all initial states audited on cloud; six exact original auditJSON recovered locally. Raw result/pairedCSV/large rawNPZ remainAFS; no physics replay/strict quality certification."
     }
   ],
   "original_scope_retained": true,
@@ -220,5 +227,5 @@
     "Prepare faithful local-checkpoint throughput/PPO-WM entry with explicit computation scope; execute after GPU slot frees",
     "Continue matchedPPO-Sim,duration,horizon,push experiments; retain unresolved exact author inputs and hardware limitation"
   ],
-  "last_status_update": "2026-11-13T10:34:34.368473+08:00"
+  "last_status_update": "2026-11-13T11:13:43.324356+08:00"
 }

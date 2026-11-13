@@ -1,0 +1,110 @@
+{
+  "status": "eleven_original_gpu_measurements_recomputed",
+  "valid_sizes": 11,
+  "failed_sizes": 0,
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "seed": 42,
+  "warmup": 20,
+  "steps_per_repeat": 500,
+  "repeats": 3,
+  "all_original_duration_rates_and_ratios_recomputed": true,
+  "all_model_data_runtime_bindings_match": true,
+  "original_receipt_count": 12,
+  "comparison_scope": "full native env+actor versus WM dynamics-only; diagnostic unequal-scope ratio",
+  "simulator_finite_check_scope": "Initial and final state only; no all-intermediate-state or solver-warning quality claim",
+  "worker_logs_recovered_locally": false,
+  "worker_log_hashes_preserved_in_original_summary": true,
+  "paper_speedup_reproduced": false,
+  "differentiation_or_full_control_speedup_claimed": false,
+  "rows": [
+    {
+      "num_envs": 64,
+      "simulator_actor_sps": 4463.003510927678,
+      "wm_grad_recording_sps": 55160.8012982293,
+      "wm_inference_sps": 77173.74852155894,
+      "unequal_scope_grad_ratio": 12.359569326613324,
+      "unequal_scope_inference_ratio": 17.291886132869664
+    },
+    {
+      "num_envs": 128,
+      "simulator_actor_sps": 8182.824242302286,
+      "wm_grad_recording_sps": 105966.88324640888,
+      "wm_inference_sps": 146697.82169580815,
+      "unequal_scope_grad_ratio": 12.949915592540513,
+      "unequal_scope_inference_ratio": 17.92752934096185
+    },
+    {
+      "num_envs": 256,
+      "simulator_actor_sps": 15057.35130581018,
+      "wm_grad_recording_sps": 218540.04134674228,
+      "wm_inference_sps": 300200.33342061576,
+      "unequal_scope_grad_ratio": 14.51384356439995,
+      "unequal_scope_inference_ratio": 19.937127541467234
+    },
+    {
+      "num_envs": 512,
+      "simulator_actor_sps": 27146.163158747993,
+      "wm_grad_recording_sps": 415924.35619585204,
+      "wm_inference_sps": 601478.7837509235,
+      "unequal_scope_grad_ratio": 15.321662724988752,
+      "unequal_scope_inference_ratio": 22.15704592334235
+    },
+    {
+      "num_envs": 1024,
+      "simulator_actor_sps": 48275.084609192934,
+      "wm_grad_recording_sps": 866573.7152849118,
+      "wm_inference_sps": 1213572.8978852748,
+      "unequal_scope_grad_ratio": 17.950744619096778,
+      "unequal_scope_inference_ratio": 25.13870058871272
+    },
+    {
+      "num_envs": 2048,
+      "simulator_actor_sps": 84565.48220153344,
+      "wm_grad_recording_sps": 1745759.740945776,
+      "wm_inference_sps": 2495145.983163809,
+      "unequal_scope_grad_ratio": 20.643880877842612,
+      "unequal_scope_inference_ratio": 29.50548992575323
+    },
+    {
+      "num_envs": 4096,
+      "simulator_actor_sps": 141134.52607109273,
+      "wm_grad_recording_sps": 3468799.979889691,
+      "wm_inference_sps": 4824723.987572766,
+      "unequal_scope_grad_ratio": 24.57796881071026,
+      "unequal_scope_inference_ratio": 34.18528493263541
+    },
+    {
+      "num_envs": 8192,
+      "simulator_actor_sps": 208156.8168438695,
+      "wm_grad_recording_sps": 6983258.190433691,
+      "wm_inference_sps": 8009874.849385713,
+      "unequal_scope_grad_ratio": 33.54806388911859,
+      "unequal_scope_inference_ratio": 38.4800025809081
+    },
+    {
+      "num_envs": 16384,
+      "simulator_actor_sps": 270374.5136592274,
+      "wm_grad_recording_sps": 9112489.142834714,
+      "wm_inference_sps": 9108513.354293821,
+      "unequal_scope_grad_ratio": 33.70321048203473,
+      "unequal_scope_inference_ratio": 33.68850573606187
+    },
+    {
+      "num_envs": 32768,
+      "simulator_actor_sps": 317765.4407119448,
+      "wm_grad_recording_sps": 9694006.97105024,
+      "wm_inference_sps": 9661951.68214074,
+      "unequal_scope_grad_ratio": 30.50680070598956,
+      "unequal_scope_inference_ratio": 30.40592350286237
+    },
+    {
+      "num_envs": 65536,
+      "simulator_actor_sps": 346155.6961931205,
+      "wm_grad_recording_sps": 9904133.675169459,
+      "wm_inference_sps": 9848883.031141162,
+      "unequal_scope_grad_ratio": 28.6117888109053,
+      "unequal_scope_inference_ratio": 28.452176692324205
+    }
+  ],
+  "original_summary_sha256": "b0dbac7bc0b8e608cbe67fc6375854f642f6399fae82d18bbd44d168798a6c6d"
+}

@@ -1,0 +1,610 @@
+{
+  "status": "benchmark_sweep_completed",
+  "coordinator_sha256": "a7e764098ab901118ad10275c4a29f64b351390850df75734d38a2e0e37246f9",
+  "integration": {
+    "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/local-benchmark-integration-1113z/result.json",
+    "sha256": "b19bc1fdd43dbae91dbb10d973ece4ae4f718d0f0a2eca6c9b2f74fcf310230c"
+  },
+  "worker_sha256": "c619f74883e6a32d52839d714dafd1e531ded983015d6a12d48f5bd0ab6a083a",
+  "declared_sizes": [
+    64,
+    128,
+    256,
+    512,
+    1024,
+    2048,
+    4096,
+    8192,
+    16384,
+    32768,
+    65536
+  ],
+  "per_case_timeout_seconds": 900,
+  "kill_after_seconds": 30,
+  "timing": {
+    "warmup_per_path": 20,
+    "steps_per_repeat": 500,
+    "repeats": 3
+  },
+  "comparison_scope": "full native env+actor versus WM dynamics-only; diagnostic unequal-scope ratio",
+  "paper_speedup_reproduced": false,
+  "policy_quality_evaluated": false,
+  "all_sizes_valid": true,
+  "cases": [
+    {
+      "num_envs": 64,
+      "status": "valid_measurement",
+      "result_path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/local-benchmark-sweep-1113ab/batch-64/result.json",
+      "log_path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/local-benchmark-sweep-1113ab/batch-64.log",
+      "exit_code": 0,
+      "wall_seconds": 180.5389922298491,
+      "log_bytes": 95941,
+      "log_sha256": "af7789c44956cd8fc314c90257cd72dde090120d60aa70678c5db36ae53bf484",
+      "result_bytes": 43444,
+      "result_sha256": "432ee103f10f1a262e1dbb3e5a71043477a8f27fe5ec1a8b17a54a98f0a77dfb",
+      "worker_status": "benchmark_case_completed",
+      "simulator_median_sps": 4463.003510927678,
+      "world_model_modes": [
+        {
+          "inference_mode": false,
+          "autograd_enabled": true,
+          "seconds_per_repeat": [
+            0.5833909027278423,
+            0.5787390246987343,
+            0.5801221020519733
+          ],
+          "steps_per_second": [
+            54851.72951853231,
+            55292.625232345046,
+            55160.8012982293
+          ],
+          "included": "Dynamics forward:normalizers,action transform,MLP,state integration; noactor,reward,FKgoals,history,observations or backward pass",
+          "inputs": "Seed42 fixed random batch, reused eachcall as released benchmark; physical validity not claimed"
+        },
+        {
+          "inference_mode": true,
+          "autograd_enabled": false,
+          "seconds_per_repeat": [
+            0.41464877128601074,
+            0.4120180085301399,
+            0.41693100705742836
+          ],
+          "steps_per_second": [
+            77173.74852155894,
+            77666.50810764049,
+            76751.30767041344
+          ],
+          "included": "Dynamics forward:normalizers,action transform,MLP,state integration; noactor,reward,FKgoals,history,observations or backward pass",
+          "inputs": "Seed42 fixed random batch, reused eachcall as released benchmark; physical validity not claimed"
+        }
+      ],
+      "diagnostic_unequal_scope_ratios": {
+        "False": 12.359569326613324,
+        "True": 17.291886132869664
+      }
+    },
+    {
+      "num_envs": 128,
+      "status": "valid_measurement",
+      "result_path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/local-benchmark-sweep-1113ab/batch-128/result.json",
+      "log_path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/local-benchmark-sweep-1113ab/batch-128.log",
+      "exit_code": 0,
+      "wall_seconds": 108.27919184416533,
+      "log_bytes": 197982,
+      "log_sha256": "94527b62dfb748689208ef23545643cc6498ec49eadeaafc0637ac89a17da5f6",
+      "result_bytes": 43453,
+      "result_sha256": "1a11bbe6a22831fafdb4ae8231832b4dc5e75287bb123572da76413df25ad9d2",
+      "worker_status": "benchmark_case_completed",
+      "simulator_median_sps": 8182.824242302286,
+      "world_model_modes": [
+        {
+          "inference_mode": false,
+          "autograd_enabled": true,
+          "seconds_per_repeat": [
+            0.6094180159270763,
+            0.6039622761309147,
+            0.5989769510924816
+          ],
+          "steps_per_second": [
+            105018.22776381181,
+            105966.88324640888,
+            106848.85266998937
+          ],
+          "included": "Dynamics forward:normalizers,action transform,MLP,state integration; noactor,reward,FKgoals,history,observations or backward pass",
+          "inputs": "Seed42 fixed random batch, reused eachcall as released benchmark; physical validity not claimed"
+        },
+        {
+          "inference_mode": true,
+          "autograd_enabled": false,
+          "seconds_per_repeat": [
+            0.43865880742669106,
+            0.4362253397703171,
+            0.43627096340060234
+          ],
+          "steps_per_second": [
+            145899.27049554503,
+            146713.16442483032,
+            146697.82169580815
+          ],
+          "included": "Dynamics forward:normalizers,action transform,MLP,state integration; noactor,reward,FKgoals,history,observations or backward pass",
+          "inputs": "Seed42 fixed random batch, reused eachcall as released benchmark; physical validity not claimed"
+        }
+      ],
+      "diagnostic_unequal_scope_ratios": {
+        "False": 12.949915592540513,
+        "True": 17.92752934096185
+      }
+    },
+    {
+      "num_envs": 256,
+      "status": "valid_measurement",
+      "result_path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/local-benchmark-sweep-1113ab/batch-256/result.json",
+      "log_path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/local-benchmark-sweep-1113ab/batch-256.log",
+      "exit_code": 0,
+      "wall_seconds": 106.96498795971274,
+      "log_bytes": 407748,
+      "log_sha256": "004a0539597a17cdf964da34af98d9b9d354b09b8de03328413b23b9e3a12fd1",
+      "result_bytes": 43450,
+      "result_sha256": "89c172b6114a16108ed9947480e8dcff94bae78ae3c85e0318d42a798eb247a4",
+      "worker_status": "benchmark_case_completed",
+      "simulator_median_sps": 15057.35130581018,
+      "world_model_modes": [
+        {
+          "inference_mode": false,
+          "autograd_enabled": true,
+          "seconds_per_repeat": [
+            0.5920219980180264,
+            0.5843678191304207,
+            0.5857050232589245
+          ],
+          "steps_per_second": [
+            216208.18217653892,
+            219040.12474621338,
+            218540.04134674228
+          ],
+          "included": "Dynamics forward:normalizers,action transform,MLP,state integration; noactor,reward,FKgoals,history,observations or backward pass",
+          "inputs": "Seed42 fixed random batch, reused eachcall as released benchmark; physical validity not claimed"
+        },
+        {
+          "inference_mode": true,
+          "autograd_enabled": false,
+          "seconds_per_repeat": [
+            0.42553865164518356,
+            0.42766575142741203,
+            0.4263819381594658
+          ],
+          "steps_per_second": [
+            300795.2380004416,
+            299299.15961887705,
+            300200.33342061576
+          ],
+          "included": "Dynamics forward:normalizers,action transform,MLP,state integration; noactor,reward,FKgoals,history,observations or backward pass",
+          "inputs": "Seed42 fixed random batch, reused eachcall as released benchmark; physical validity not claimed"
+        }
+      ],
+      "diagnostic_unequal_scope_ratios": {
+        "False": 14.51384356439995,
+        "True": 19.937127541467234
+      }
+    },
+    {
+      "num_envs": 512,
+      "status": "valid_measurement",
+      "result_path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/local-benchmark-sweep-1113ab/batch-512/result.json",
+      "log_path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/local-benchmark-sweep-1113ab/batch-512.log",
+      "exit_code": 0,
+      "wall_seconds": 110.93309577554464,
+      "log_bytes": 913048,
+      "log_sha256": "3ea75617c176a6927586e743fc203eda2df5f12ff757fb17804bfbd0c86413a2",
+      "result_bytes": 43450,
+      "result_sha256": "560f178403112fc4074dcd52e0687e4c32d55f55b992951eb71cfd07d7bfe635",
+      "worker_status": "benchmark_case_completed",
+      "simulator_median_sps": 27146.163158747993,
+      "world_model_modes": [
+        {
+          "inference_mode": false,
+          "autograd_enabled": true,
+          "seconds_per_repeat": [
+            0.6154965348541737,
+            0.6174751669168472,
+            0.5938778035342693
+          ],
+          "steps_per_second": [
+            415924.35619585204,
+            414591.5718007724,
+            431065.1088094214
+          ],
+          "included": "Dynamics forward:normalizers,action transform,MLP,state integration; noactor,reward,FKgoals,history,observations or backward pass",
+          "inputs": "Seed42 fixed random batch, reused eachcall as released benchmark; physical validity not claimed"
+        },
+        {
+          "inference_mode": true,
+          "autograd_enabled": false,
+          "seconds_per_repeat": [
+            0.4280151166021824,
+            0.42561767250299454,
+            0.42104168608784676
+          ],
+          "steps_per_second": [
+            598109.7163863457,
+            601478.7837509235,
+            608015.805700027
+          ],
+          "included": "Dynamics forward:normalizers,action transform,MLP,state integration; noactor,reward,FKgoals,history,observations or backward pass",
+          "inputs": "Seed42 fixed random batch, reused eachcall as released benchmark; physical validity not claimed"
+        }
+      ],
+      "diagnostic_unequal_scope_ratios": {
+        "False": 15.321662724988752,
+        "True": 22.15704592334235
+      }
+    },
+    {
+      "num_envs": 1024,
+      "status": "valid_measurement",
+      "result_path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/local-benchmark-sweep-1113ab/batch-1024/result.json",
+      "log_path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/local-benchmark-sweep-1113ab/batch-1024.log",
+      "exit_code": 0,
+      "wall_seconds": 115.45800675079226,
+      "log_bytes": 1678781,
+      "log_sha256": "38203cd56102d49bf338241cf1066901e63d1485d0d3257941faf57771764277",
+      "result_bytes": 43456,
+      "result_sha256": "74ba08d3995ec2d245a4389149315cab4291e2ac17208a755a369cceba58b38d",
+      "worker_status": "benchmark_case_completed",
+      "simulator_median_sps": 48275.084609192934,
+      "world_model_modes": [
+        {
+          "inference_mode": false,
+          "autograd_enabled": true,
+          "seconds_per_repeat": [
+            0.5890381038188934,
+            0.5908325985074043,
+            0.5971012152731419
+          ],
+          "steps_per_second": [
+            869213.7175516583,
+            866573.7152849118,
+            857476.0641975706
+          ],
+          "included": "Dynamics forward:normalizers,action transform,MLP,state integration; noactor,reward,FKgoals,history,observations or backward pass",
+          "inputs": "Seed42 fixed random batch, reused eachcall as released benchmark; physical validity not claimed"
+        },
+        {
+          "inference_mode": true,
+          "autograd_enabled": false,
+          "seconds_per_repeat": [
+            0.42189472168684006,
+            0.4197542257606983,
+            0.42238733917474747
+          ],
+          "steps_per_second": [
+            1213572.8978852748,
+            1219761.3950690539,
+            1212157.5447794816
+          ],
+          "included": "Dynamics forward:normalizers,action transform,MLP,state integration; noactor,reward,FKgoals,history,observations or backward pass",
+          "inputs": "Seed42 fixed random batch, reused eachcall as released benchmark; physical validity not claimed"
+        }
+      ],
+      "diagnostic_unequal_scope_ratios": {
+        "False": 17.950744619096778,
+        "True": 25.13870058871272
+      }
+    },
+    {
+      "num_envs": 2048,
+      "status": "valid_measurement",
+      "result_path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/local-benchmark-sweep-1113ab/batch-2048/result.json",
+      "log_path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/local-benchmark-sweep-1113ab/batch-2048.log",
+      "exit_code": 0,
+      "wall_seconds": 114.29023814946413,
+      "log_bytes": 3428359,
+      "log_sha256": "663cd65cae549cc4ce8a1683c5bf610c8a3ee6e9944486001918bf018b207fc0",
+      "result_bytes": 43454,
+      "result_sha256": "c520491af171840a213553d83d82c32aabfa2b33f646d0e1961f537ccaf7df17",
+      "worker_status": "benchmark_case_completed",
+      "simulator_median_sps": 84565.48220153344,
+      "world_model_modes": [
+        {
+          "inference_mode": false,
+          "autograd_enabled": true,
+          "seconds_per_repeat": [
+            0.5824205838143826,
+            0.5884977914392948,
+            0.5865641050040722
+          ],
+          "steps_per_second": [
+            1758179.6187449803,
+            1740023.5224257906,
+            1745759.740945776
+          ],
+          "included": "Dynamics forward:normalizers,action transform,MLP,state integration; noactor,reward,FKgoals,history,observations or backward pass",
+          "inputs": "Seed42 fixed random batch, reused eachcall as released benchmark; physical validity not claimed"
+        },
+        {
+          "inference_mode": true,
+          "autograd_enabled": false,
+          "seconds_per_repeat": [
+            0.41424259170889854,
+            0.41039682924747467,
+            0.40912094339728355
+          ],
+          "steps_per_second": [
+            2471981.443954458,
+            2495145.983163809,
+            2502927.353209655
+          ],
+          "included": "Dynamics forward:normalizers,action transform,MLP,state integration; noactor,reward,FKgoals,history,observations or backward pass",
+          "inputs": "Seed42 fixed random batch, reused eachcall as released benchmark; physical validity not claimed"
+        }
+      ],
+      "diagnostic_unequal_scope_ratios": {
+        "False": 20.643880877842612,
+        "True": 29.50548992575323
+      }
+    },
+    {
+      "num_envs": 4096,
+      "status": "valid_measurement",
+      "result_path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/local-benchmark-sweep-1113ab/batch-4096/result.json",
+      "log_path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/local-benchmark-sweep-1113ab/batch-4096.log",
+      "exit_code": 0,
+      "wall_seconds": 122.86319192126393,
+      "log_bytes": 6846496,
+      "log_sha256": "4c9516f2fe545c6598969c2534b758fba13a0f2b9112a2be607e953d8c55d8c3",
+      "result_bytes": 43451,
+      "result_sha256": "df4615dc2c00dbcb703ca989df175278c08dfcde0d9dc22761cf1603f4ca61d1",
+      "worker_status": "benchmark_case_completed",
+      "simulator_median_sps": 141134.52607109273,
+      "world_model_modes": [
+        {
+          "inference_mode": false,
+          "autograd_enabled": true,
+          "seconds_per_repeat": [
+            0.5904059074819088,
+            0.5945866852998734,
+            0.5901646949350834
+          ],
+          "steps_per_second": [
+            3468799.979889691,
+            3444409.4538832693,
+            3470217.750360812
+          ],
+          "included": "Dynamics forward:normalizers,action transform,MLP,state integration; noactor,reward,FKgoals,history,observations or backward pass",
+          "inputs": "Seed42 fixed random batch, reused eachcall as released benchmark; physical validity not claimed"
+        },
+        {
+          "inference_mode": true,
+          "autograd_enabled": false,
+          "seconds_per_repeat": [
+            0.4233732260763645,
+            0.42448024079203606,
+            0.4277005046606064
+          ],
+          "steps_per_second": [
+            4837339.429750806,
+            4824723.987572766,
+            4788397.436250751
+          ],
+          "included": "Dynamics forward:normalizers,action transform,MLP,state integration; noactor,reward,FKgoals,history,observations or backward pass",
+          "inputs": "Seed42 fixed random batch, reused eachcall as released benchmark; physical validity not claimed"
+        }
+      ],
+      "diagnostic_unequal_scope_ratios": {
+        "False": 24.57796881071026,
+        "True": 34.18528493263541
+      }
+    },
+    {
+      "num_envs": 8192,
+      "status": "valid_measurement",
+      "result_path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/local-benchmark-sweep-1113ab/batch-8192/result.json",
+      "log_path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/local-benchmark-sweep-1113ab/batch-8192.log",
+      "exit_code": 0,
+      "wall_seconds": 142.76503028348088,
+      "log_bytes": 13766593,
+      "log_sha256": "879334c68dd8c2d3e8b9f0bb67f9ead0f0169665b18448ab72494681e6ddfb37",
+      "result_bytes": 43448,
+      "result_sha256": "4644e9d5b97d466e8b86f52b6bce59e4c63eab95c60d87cfe1fb4df3b7c698bf",
+      "worker_status": "benchmark_case_completed",
+      "simulator_median_sps": 208156.8168438695,
+      "world_model_modes": [
+        {
+          "inference_mode": false,
+          "autograd_enabled": true,
+          "seconds_per_repeat": [
+            0.5947466678917408,
+            0.5865456908941269,
+            0.5842428915202618
+          ],
+          "steps_per_second": [
+            6886965.864843781,
+            6983258.190433691,
+            7010782.774509717
+          ],
+          "included": "Dynamics forward:normalizers,action transform,MLP,state integration; noactor,reward,FKgoals,history,observations or backward pass",
+          "inputs": "Seed42 fixed random batch, reused eachcall as released benchmark; physical validity not claimed"
+        },
+        {
+          "inference_mode": true,
+          "autograd_enabled": false,
+          "seconds_per_repeat": [
+            0.5113687887787819,
+            0.5114388652145863,
+            0.5113542377948761
+          ],
+          "steps_per_second": [
+            8009874.849385713,
+            8008777.350703347,
+            8010102.776625591
+          ],
+          "included": "Dynamics forward:normalizers,action transform,MLP,state integration; noactor,reward,FKgoals,history,observations or backward pass",
+          "inputs": "Seed42 fixed random batch, reused eachcall as released benchmark; physical validity not claimed"
+        }
+      ],
+      "diagnostic_unequal_scope_ratios": {
+        "False": 33.54806388911859,
+        "True": 38.4800025809081
+      }
+    },
+    {
+      "num_envs": 16384,
+      "status": "valid_measurement",
+      "result_path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/local-benchmark-sweep-1113ab/batch-16384/result.json",
+      "log_path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/local-benchmark-sweep-1113ab/batch-16384.log",
+      "exit_code": 0,
+      "wall_seconds": 176.4133603349328,
+      "log_bytes": 27606617,
+      "log_sha256": "43b77f92a049b5703c18383c68b89994d07eef8507485a42dec03095d9a76f73",
+      "result_bytes": 43454,
+      "result_sha256": "bb0fe85f88c2061afef285ec6a4c94e87c7d3218f72f4cd634c2e009a9d30141",
+      "worker_status": "benchmark_case_completed",
+      "simulator_median_sps": 270374.5136592274,
+      "world_model_modes": [
+        {
+          "inference_mode": false,
+          "autograd_enabled": true,
+          "seconds_per_repeat": [
+            0.8969429768621922,
+            0.8993512764573097,
+            0.8989859819412231
+          ],
+          "steps_per_second": [
+            9133245.04603221,
+            9108787.872375758,
+            9112489.142834714
+          ],
+          "included": "Dynamics forward:normalizers,action transform,MLP,state integration; noactor,reward,FKgoals,history,observations or backward pass",
+          "inputs": "Seed42 fixed random batch, reused eachcall as released benchmark; physical validity not claimed"
+        },
+        {
+          "inference_mode": true,
+          "autograd_enabled": false,
+          "seconds_per_repeat": [
+            0.8990998938679695,
+            0.9000940062105656,
+            0.8993783816695213
+          ],
+          "steps_per_second": [
+            9111334.631302908,
+            9101271.582163593,
+            9108513.354293821
+          ],
+          "included": "Dynamics forward:normalizers,action transform,MLP,state integration; noactor,reward,FKgoals,history,observations or backward pass",
+          "inputs": "Seed42 fixed random batch, reused eachcall as released benchmark; physical validity not claimed"
+        }
+      ],
+      "diagnostic_unequal_scope_ratios": {
+        "False": 33.70321048203473,
+        "True": 33.68850573606187
+      }
+    },
+    {
+      "num_envs": 32768,
+      "status": "valid_measurement",
+      "result_path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/local-benchmark-sweep-1113ab/batch-32768/result.json",
+      "log_path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/local-benchmark-sweep-1113ab/batch-32768.log",
+      "exit_code": 0,
+      "wall_seconds": 250.1638761162758,
+      "log_bytes": 53912800,
+      "log_sha256": "4156ad03cb66b187eb27d171ba5e949a1e7501b89a473c238f09148fa467ec65",
+      "result_bytes": 43447,
+      "result_sha256": "b0498edc74822840cb363fa828f3d5fc184f4b0a0b07515056d7aa351cb40fc1",
+      "worker_status": "benchmark_case_completed",
+      "simulator_median_sps": 317765.4407119448,
+      "world_model_modes": [
+        {
+          "inference_mode": false,
+          "autograd_enabled": true,
+          "seconds_per_repeat": [
+            1.6775725446641445,
+            1.694429237395525,
+            1.6901163831353188
+          ],
+          "steps_per_second": [
+            9766492.693333944,
+            9669332.680533497,
+            9694006.97105024
+          ],
+          "included": "Dynamics forward:normalizers,action transform,MLP,state integration; noactor,reward,FKgoals,history,observations or backward pass",
+          "inputs": "Seed42 fixed random batch, reused eachcall as released benchmark; physical validity not claimed"
+        },
+        {
+          "inference_mode": true,
+          "autograd_enabled": false,
+          "seconds_per_repeat": [
+            1.6937717981636524,
+            1.6985104940831661,
+            1.6957236528396606
+          ],
+          "steps_per_second": [
+            9673085.841766374,
+            9646098.777178219,
+            9661951.68214074
+          ],
+          "included": "Dynamics forward:normalizers,action transform,MLP,state integration; noactor,reward,FKgoals,history,observations or backward pass",
+          "inputs": "Seed42 fixed random batch, reused eachcall as released benchmark; physical validity not claimed"
+        }
+      ],
+      "diagnostic_unequal_scope_ratios": {
+        "False": 30.50680070598956,
+        "True": 30.40592350286237
+      }
+    },
+    {
+      "num_envs": 65536,
+      "status": "valid_measurement",
+      "result_path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/local-benchmark-sweep-1113ab/batch-65536/result.json",
+      "log_path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/local-benchmark-sweep-1113ab/batch-65536.log",
+      "exit_code": 0,
+      "wall_seconds": 388.62238020822406,
+      "log_bytes": 109360352,
+      "log_sha256": "597919149a53df9328e063c730a94a3c08a60accb893449975670ceb12b8d296",
+      "result_bytes": 43449,
+      "result_sha256": "fc448e75a9f95e62499f41b2a62b872eb1ac1566de500665397ddd5fa05cb66b",
+      "worker_status": "benchmark_case_completed",
+      "simulator_median_sps": 346155.6961931205,
+      "world_model_modes": [
+        {
+          "inference_mode": false,
+          "autograd_enabled": true,
+          "seconds_per_repeat": [
+            3.2909844368696213,
+            3.3085175417363644,
+            3.3195817060768604
+          ],
+          "steps_per_second": [
+            9956899.106812205,
+            9904133.675169459,
+            9871123.20206325
+          ],
+          "included": "Dynamics forward:normalizers,action transform,MLP,state integration; noactor,reward,FKgoals,history,observations or backward pass",
+          "inputs": "Seed42 fixed random batch, reused eachcall as released benchmark; physical validity not claimed"
+        },
+        {
+          "inference_mode": true,
+          "autograd_enabled": false,
+          "seconds_per_repeat": [
+            3.326355528086424,
+            3.32707779109478,
+            3.333067089319229
+          ],
+          "steps_per_second": [
+            9851021.552963907,
+            9848883.031141162,
+            9831185.24826717
+          ],
+          "included": "Dynamics forward:normalizers,action transform,MLP,state integration; noactor,reward,FKgoals,history,observations or backward pass",
+          "inputs": "Seed42 fixed random batch, reused eachcall as released benchmark; physical validity not claimed"
+        }
+      ],
+      "diagnostic_unequal_scope_ratios": {
+        "False": 28.6117888109053,
+        "True": 28.452176692324205
+      }
+    }
+  ],
+  "all_sizes_attempted": true,
+  "valid_sizes": 11,
+  "failed_sizes": 0
+}

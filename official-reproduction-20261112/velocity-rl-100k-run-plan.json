@@ -1,5 +1,5 @@
 {
-  "status": "running_training",
+  "status": "completed_original_result_and_config_recovered",
   "name": "supermimic-official-velocity-rl-260010076-1113r",
   "display_name": "260010076-SuperMimic-velocity-rl-100k-1113r",
   "mode": "rl",
@@ -52,22 +52,41 @@
   "created_at": "2026-11-13T06:30:06+08:00",
   "started_at": "2026-11-13T06:30:18+08:00",
   "program_deadline": "2026-11-13T14:00:18+08:00",
-  "platform_status": "running",
+  "platform_status": "success",
   "source_hashes_verified": true,
   "source_verification_evidence": "velocity-rl-100k-1113r-source-dom.txt",
   "data_prerequisite_exact_receipts_verified": true,
   "ui_command_dom_readback_matches": true,
   "duplicate_and_resource_check_passed": true,
   "verified_at": "2026-11-13T06:44:23.143283+08:00",
-  "last_progress_evidence": "velocity-rl-100k-1113r-progress2.txt",
-  "last_observed_collection_steps": 8551,
+  "last_progress_evidence": "velocity-rl-100k-1113r-progress4.txt",
+  "last_observed_collection_steps": 48961,
   "last_observed_metrics": {
     "Loss/state": 0.0139,
     "Policy/reward": 11.0085,
     "Policy/grad_norm": 1.6164,
     "Policy/value_function": 0.0363
   },
-  "last_verified_stage": "Actual8551 realG1 mixed collection steps and finite metrics observed; full100k incomplete",
+  "last_verified_stage": "Observed48961 actual collections and finite sampled training metrics; complete training/final evaluation pending",
   "last_observed_total_environment_steps": 35024896,
-  "last_progress_verified_at": "2026-11-13T06:58:55.874519+08:00"
+  "last_progress_verified_at": "2026-11-13T06:58:55.874519+08:00",
+  "last_progress_observed_at": "2026-11-13T08:35:12.343020+08:00",
+  "original_receipt_folder": "C:\\project\\sensecore\\SuperMimic\\official-execution-20261112\\velocity-rl-100k-final-receipts",
+  "program_exit_code": 0,
+  "completion_evidence": {
+    "mode": "rl",
+    "collection_steps": 100000,
+    "world_model_updates": 39997,
+    "policy_updates": 39997,
+    "native_cuda_graphs_captured": {
+      "world_model": true,
+      "policy": true
+    },
+    "model_sets": 26,
+    "elapsed_training_seconds": 14642.013511307538,
+    "result_sha256": "925d8a6e07acf2122ca63dcf3d9b64ec45879b80cf1459dc48afb529a23acdea",
+    "resolved_config_sha256": "052aeb8750d720752e41703d3cea39510e93963211361cb0299544ab05677fa8",
+    "all_update_metrics_checked_finite": false
+  },
+  "completed_at": "2026-11-13T10:37:07.139+08:00"
 }

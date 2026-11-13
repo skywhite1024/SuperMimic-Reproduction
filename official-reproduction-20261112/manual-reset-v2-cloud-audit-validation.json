@@ -1,0 +1,41 @@
+{
+  "status": "all284480_saved_trajectory_arrays_and_initial_states_verified",
+  "original_receipts_verified": true,
+  "historical_evaluator_receipts_unchanged": true,
+  "all_saved_arrays_read_on_cloud": true,
+  "all_saved_arrays_downloaded_locally": false,
+  "raw_bones_ledgers_and_npz_remain_on_afs": true,
+  "verified_bytes": 35413859741,
+  "verified_steps": 93296731,
+  "cases": [
+    {
+      "label": "lafan40",
+      "clips": 40,
+      "bytes": 165518259,
+      "steps": 437596,
+      "successes": 39,
+      "failures": 1,
+      "maximum_abs_initial_state_error": 4.76837158203125e-07
+    },
+    {
+      "label": "bones1k",
+      "clips": 142220,
+      "bytes": 15934895324,
+      "steps": 41972593,
+      "successes": 106561,
+      "failures": 35659,
+      "maximum_abs_initial_state_error": 3.814697265625e-06
+    },
+    {
+      "label": "bones16k",
+      "clips": 142220,
+      "bytes": 19313446158,
+      "steps": 50886542,
+      "successes": 136562,
+      "failures": 5658,
+      "maximum_abs_initial_state_error": 3.814697265625e-06
+    }
+  ],
+  "scope": "All ZIP CRCs, float32 finite arrays,71D states/29D actions, lengths/reward sums and first states. No policy/physics replay or full tracking-quality certification.",
+  "original_receipt_ledger_sha256": "0443efa414804e1ca0bd115eca0ec8be5b727e21856f485d971742f8f9409afb"
+}

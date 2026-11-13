@@ -1,5 +1,5 @@
 {
-  "status": "running_first64_size_valid",
+  "status": "completed_all11_valid_original_receipts_recovered",
   "submitted": true,
   "name": "supermimic-official-benchmark-sweep-260010076-1113ab",
   "display_name": "260010076-SuperMimic-benchmark-sweep-1113ab",
@@ -58,5 +58,11 @@
   "command_dom_readback_exact": true,
   "current_task_max_concurrent_gpu_count_with_job": 4,
   "first_valid_size": 64,
-  "whole_sweep_complete": false
+  "whole_sweep_complete": true,
+  "platform_status": "success",
+  "valid_sizes": 11,
+  "failed_sizes": 0,
+  "program_exit_code": 0,
+  "receipt_folder": "C:\\project\\sensecore\\SuperMimic\\official-execution-20261112\\local-benchmark-sweep-1113ab-receipts",
+  "scientific_scope": "Explicit unequal-scope throughput diagnostic; not paper full-control speedup"
 }
