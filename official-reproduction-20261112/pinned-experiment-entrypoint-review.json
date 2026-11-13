@@ -1,0 +1,53 @@
+{
+  "status": "pinned_source_experiment_semantics_reviewed",
+  "source_supermimic_commit": "abc124c1bd5976341034668af3d12c087f2f1f55",
+  "files": {
+    "ppo_runner.py": {
+      "sha256": "04fd4484ca9dd03e86c795d9ffb1e0c584f59754513f39ba824924c5f4e8ab6e",
+      "imagine_lines": [
+        110,
+        123
+      ],
+      "observed_calls": [
+        "self.alg.eval_mode",
+        "self.alg.storage.clear",
+        "self.alg.update",
+        "torch.no_grad",
+        "self.wm_env.reset",
+        "range",
+        "self.alg.compute_returns",
+        "self.alg.act",
+        "self.wm_env.step",
+        "self.alg.process_env_step"
+      ]
+    },
+    "benchmark.py": {
+      "sha256": "83414a6a13c2f5a2ddedd72e295bf5f941187547331201c83af12abd701a542d",
+      "benchmark_lines": [
+        42,
+        210
+      ]
+    }
+  },
+  "train_ppo_uses_world_model_rollouts": true,
+  "train_ppo_is_not_ppo_sim_baseline": true,
+  "benchmark_wandb_access_required_as_released": true,
+  "benchmark_default_use_policy": true,
+  "benchmark_default_inference_mode": false,
+  "benchmark_wm_only_has_explicit10_call_warmup": true,
+  "benchmark_scope_difference": "Simulation timing includes env.step and, by default, actor; WM timing calls dynamics alone on dummy inputs. No direct like-for-like physics-only or whole-pipeline equivalence is asserted.",
+  "runtime_benchmark_or_ppo_new_experiment_executed": false,
+  "paper_results_reproduced": false,
+  "benchmark_default_environment_counts": [
+    64,
+    128,
+    256,
+    512,
+    1024,
+    2048,
+    4096
+  ],
+  "benchmark_default_does_not_cover_paper_large_batches": true,
+  "benchmark_exception_policy": "Per-size exceptions are printed and simulation/WM rates can be0 or an item skipped; normal script return alone does not prove a complete successful measurement",
+  "benchmark_complete_success_requires_per_case_validation": true
+}

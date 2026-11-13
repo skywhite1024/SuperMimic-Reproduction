@@ -1,0 +1,210 @@
+{
+  "status": "scope_audit_incomplete_paper_reproduction",
+  "goal_complete": false,
+  "scope_redefined": false,
+  "as_of": "2026-11-13T08:42:49.702697+08:00",
+  "paper_pdf_sha256": "fe213017ab062f4acc3965da89abd3c29969163e144a2628a662b8ce46691009",
+  "upstream_supermimic_commit": "abc124c1bd5976341034668af3d12c087f2f1f55",
+  "code_and_evidence_commit": "764cbfd8fcb1ee537329189d8ed635e65e208a09",
+  "rows": [
+    {
+      "id": "local_environment",
+      "requirement": "Separate official local Conda, pinned import paths and official tests",
+      "paper_pages": [],
+      "status": "verified",
+      "evidence": [
+        "windows-runtime.json",
+        "windows-tests.xml",
+        "windows-environment.freeze.txt"
+      ],
+      "qualification": "217 local tests passed with existing MSVC activated. Local Torch is CPU; no local CUDA claim."
+    },
+    {
+      "id": "branch_and_push",
+      "requirement": "ljd/official-supermimic on authorized existing public GitHub repository",
+      "paper_pages": [],
+      "status": "verified",
+      "evidence": [
+        "experiment-contract.json"
+      ],
+      "qualification": "Live branch and remote checked separately; user clarified public skywhite1024/SuperMimic-Reproduction."
+    },
+    {
+      "id": "cloud_environment",
+      "requirement": "Official source and independent server runtime with tests and actual CUDA execution",
+      "paper_pages": [],
+      "status": "verified",
+      "evidence": [
+        "linux-tests-validation.json",
+        "gpu-runtime-1112b.json",
+        "checkpoint-series-gpu-validation.json"
+      ],
+      "qualification": "217 Linux tests passed; realG1 GPU execution verified. Eager goal assembly/local adapters are disclosed; no vendor rewrite."
+    },
+    {
+      "id": "paper_corpus",
+      "requirement": "Exact142220->129667 name filter->129514 feasibility benchmark",
+      "paper_pages": [
+        15,
+        17
+      ],
+      "status": "missing_exact_author_membership",
+      "evidence": [
+        "bones-raw-16k-protocol.json"
+      ],
+      "qualification": "Full raw142220 is verified but differs from paper. Exact author keyword additions/survivors unavailable; never tune filters merely to match a target count."
+    },
+    {
+      "id": "single_gpu_long",
+      "requirement": "320000-iteration H100 training and full fixed benchmark scores",
+      "paper_pages": [
+        6,
+        7,
+        16,
+        18
+      ],
+      "status": "running_proxy",
+      "evidence": [
+        "checkpoint-series-gpu-validation.json"
+      ],
+      "qualification": "Existing1113m targets320001 native collections on raw142220; native-paper iteration mapping unconfirmed. Frozen finalevalv1 retained, followed by separatev2."
+    },
+    {
+      "id": "two_gpu",
+      "requirement": "TwoH100 data parallel training, averaged gradients, sqrt2 learning rate",
+      "paper_pages": [
+        16,
+        18
+      ],
+      "status": "not_executed",
+      "evidence": [],
+      "qualification": "Independent singleGPU jobs do not reproduce twoGPU training. DDP, shared normalization/sampling and matched evaluation remain work."
+    },
+    {
+      "id": "sonic_comparison",
+      "requirement": "Released SONIC versus SuperMimic on same129514 motions and compute accounting",
+      "paper_pages": [
+        6,
+        7,
+        18
+      ],
+      "status": "not_executed_on_paper_benchmark",
+      "evidence": [],
+      "qualification": "Raw corpus and historical community models cannot establish25-versus179 failures,0-failure result or claimed GPUhour ratios."
+    },
+    {
+      "id": "lafan_efficiency",
+      "requirement": "Figure4a:40clip checkpoints, PPO-Sim1/4/8GPU18h curves and time to0.82 eval return",
+      "paper_pages": [
+        6,
+        7
+      ],
+      "status": "partial",
+      "evidence": [
+        "manual-reset-v2-lafan40-result.json",
+        "manual-reset-v2-lafan40-accounting.json"
+      ],
+      "qualification": "One16k checkpoint39/40mean0.797132 is not a matched efficiency curve. train_ppo.py updates on WM rollouts, not PPO-Sim."
+    },
+    {
+      "id": "dataset_scaling",
+      "requirement": "Figure3bc duration subsets1,7,40,264hours plus8step model prediction error",
+      "paper_pages": [
+        7,
+        18
+      ],
+      "status": "not_executed",
+      "evidence": [],
+      "qualification": "LAFAN40 versus full rawBONES is not this subset sweep; subset membership and prediction-error normalization/holdout need explicit treatment."
+    },
+    {
+      "id": "rollout_speed",
+      "requirement": "Figure5a H100 batch-size throughput;50Hz=4x5ms physics;statedTF32 WM",
+      "paper_pages": [
+        8
+      ],
+      "status": "source_review_only",
+      "evidence": [
+        "pinned-experiment-entrypoint-review.json"
+      ],
+      "qualification": "Released script needs WandB, defaults sim+actor versus dynamics-only dummy-input WM, and explicitly warms WM only. State scope/precision/warmup/synchronization before using ratios."
+    },
+    {
+      "id": "ppo_world_model",
+      "requirement": "Figure5b first-order versus PPO-WM walk/run/sprint and4 rollout batches",
+      "paper_pages": [
+        8
+      ],
+      "status": "source_review_only",
+      "evidence": [
+        "pinned-experiment-entrypoint-review.json"
+      ],
+      "qualification": "Released PpoRunner.imagine uses wm_env reset/step. Starting point exists; matched architecture/library/schedule and full runs not executed. No64x claim."
+    },
+    {
+      "id": "critic_horizons",
+      "requirement": "Figure4bc H8/16/32/64/128 with/without critic and time to0.82 training return",
+      "paper_pages": [
+        7,
+        8
+      ],
+      "status": "not_executed",
+      "evidence": [],
+      "qualification": "CurrentH32-with-critic alone does not cover10 configurations. Training episode return differs from fixed-start fullclip scores."
+    },
+    {
+      "id": "push_recovery",
+      "requirement": "Matched-return critic/no-critic Tpose response to0.5..4m/s pushes",
+      "paper_pages": [
+        8
+      ],
+      "status": "not_executed",
+      "evidence": [],
+      "qualification": "No push trajectories/settling-time measurement; success counts and NPZ integrity do not establish recovery."
+    },
+    {
+      "id": "velocity_task",
+      "requirement": "AppendixG two100k mixed-interface runs and672x4 five-second tests",
+      "paper_pages": [
+        9,
+        19
+      ],
+      "status": "running_proxy",
+      "evidence": [
+        "velocity-integration-gpu-validation.json",
+        "velocity-step-gpu-validation.json",
+        "velocity-library-local-canonical-1113y-verification.json"
+      ],
+      "qualification": "Existing1113r/s live.21step pipeline5376trials allfell, not final scores. Author library membership,feature extractor,standing/trial details unconfirmed."
+    },
+    {
+      "id": "real_g1",
+      "requirement": "PhysicalG1 tracking, perturbation and velocity deployment",
+      "paper_pages": [
+        8,
+        9
+      ],
+      "status": "not_executed_no_hardware_session",
+      "evidence": [],
+      "qualification": "This task has no physicalG1 session. Simulation and saved-array checks cannot replace deployment evidence."
+    },
+    {
+      "id": "corrected_evaluation",
+      "requirement": "Full raw1k/16k paired v2 evaluation and every saved trajectory audit",
+      "paper_pages": [],
+      "status": "running",
+      "evidence": [
+        "manual-reset-v2-lafan40-trajectory-audit.json",
+        "manual-reset-v2-lafan40-initial-states-audit.json"
+      ],
+      "qualification": "Corrected40 originals and all arrays locally verified;1k119808 clips currently observed complete. Whole142220/16k pair and raw arrays pending."
+    }
+  ],
+  "original_scope_retained": true,
+  "no_new_cloud_jobs_submitted_by_this_audit": true,
+  "next_execution_priority": [
+    "Finish existing4GPU jobs, rawv2 arrays and final-model fixed evaluations",
+    "Prepare faithful local-checkpoint throughput/PPO-WM entry with explicit computation scope; execute after GPU slot frees",
+    "Continue matchedPPO-Sim,duration,horizon,push experiments; retain unresolved exact author inputs and hardware limitation"
+  ]
+}
