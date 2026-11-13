@@ -195,9 +195,10 @@
       "status": "running",
       "evidence": [
         "manual-reset-v2-lafan40-trajectory-audit.json",
-        "manual-reset-v2-lafan40-initial-states-audit.json"
+        "manual-reset-v2-lafan40-initial-states-audit.json",
+        "manual-reset-v2-bones1k-interim.json"
       ],
-      "qualification": "Corrected40 originals and all arrays locally verified;1k119808 clips currently observed complete. Whole142220/16k pair and raw arrays pending."
+      "qualification": "Complete40 original bytes/arrays verified locally; corrected1k all142220 evaluator and accounting gates passed106561success/35659failure, mean0.43635064078565766; original raw JSON/fullNPZ audit and16k comparison pending."
     }
   ],
   "original_scope_retained": true,
@@ -206,5 +207,6 @@
     "Finish existing4GPU jobs, rawv2 arrays and final-model fixed evaluations",
     "Prepare faithful local-checkpoint throughput/PPO-WM entry with explicit computation scope; execute after GPU slot frees",
     "Continue matchedPPO-Sim,duration,horizon,push experiments; retain unresolved exact author inputs and hardware limitation"
-  ]
+  ],
+  "last_status_update": "2026-11-13T08:49:56.865094+08:00"
 }
