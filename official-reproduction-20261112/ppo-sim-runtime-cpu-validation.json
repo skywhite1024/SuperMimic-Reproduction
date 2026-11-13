@@ -1,0 +1,31 @@
+{
+  "status": "simulator_only_PPO_transport_and_native_update_CPU_verified",
+  "passed_tests": 1,
+  "pytest_seconds": 5.539,
+  "source_sha256": {
+    "ppo_sim_runtime.py": "02fa60603d13c5572a2c418f8bf4562dd9506e79eb91fc08446a0464457e9b0f",
+    "test_ppo_sim_runtime.py": "ff1db6be5df0198036f2f29d0c071efb21ef935e0531e564fd379f64e73f958d",
+    "run_ppo_sim_integration.py": "52c518c686d4206a79feeaecf399299742e409e48b7346ea2b01813609ff8f3d",
+    "run_ppo_sim_integration_job.py": "e813587964379b943bd79a64e476bc9310be2cc74ef8903adecb8ec4b4b4090d"
+  },
+  "actual_RSL_PPO_update_calls": 1,
+  "synthetic_env_rows": 8,
+  "rollout_steps": 4,
+  "actor_goal_width": 640,
+  "actor_input_width": 1570,
+  "critic_input_width": 771,
+  "checks": [
+    "Native actor parameters and critic change; finite real RSL losses",
+    "Done rows fill all history positions from the same reset sample",
+    "Ongoing rows shift history by exactly one observation",
+    "Saved simulator rewards remain unchanged except native timeout bootstrap",
+    "Saved binary dones and timeout masks match independent expected rows",
+    "Native ReturnSampler produces two normalized distributions forwarded to simulator",
+    "Actor normalization counts32 real observations after PPO update",
+    "No imagined transitions or world-model update calls"
+  ],
+  "simulator_fixture": "Synthetic CPU transport; no realG1 physics yet",
+  "gpu_or_G1_execution_verified": false,
+  "paper_equivalence_verified": false,
+  "vendor_or_existing_cloud_payloads_modified": false
+}
