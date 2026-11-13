@@ -1,0 +1,61 @@
+{
+  "status": "seven_original_json_receipts_recovered_and_verified",
+  "source_log": "C:\\Users\\260010076\\Downloads\\logs-acp-20261113T100447.txt.gz",
+  "source_log_sha256": "e1ad54f637bf43d68db771e9aa5d4a80287f320b0922d897184aa9d6329366bf",
+  "job_uid": "e0b55c6ef22048c289928b39f23e8d33",
+  "whole_program_exit_code": 0,
+  "completed_at": "2026-11-13T09:53:00+08:00",
+  "receipts": [
+    {
+      "i": 0,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/manual-reset-v2-1113v/lafan40/accounting.json",
+      "bytes": 1378,
+      "sha256": "8cbc17ca850c81e3ef080dfdeabdc1877bb76edec5665d39a5d0665e52b09266",
+      "chunks": 3
+    },
+    {
+      "i": 1,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/manual-reset-v2-1113v/lafan40/protocol.json",
+      "bytes": 7863,
+      "sha256": "68964390d769af2fd193655190cc1464a0cf5cb1e2b9def45b79deb3a749b25b",
+      "chunks": 10
+    },
+    {
+      "i": 2,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/manual-reset-v2-1113v/bones1k/accounting.json",
+      "bytes": 1488,
+      "sha256": "0c093ea71429d543a5d376b34697375411a2ff7b7e38e903c22de58481da2a6e",
+      "chunks": 3
+    },
+    {
+      "i": 3,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/manual-reset-v2-1113v/bones1k/protocol.json",
+      "bytes": 7872,
+      "sha256": "750d793400a463c17888cea327e55dd2e6a1c222be3744e22001af928aa772bc",
+      "chunks": 10
+    },
+    {
+      "i": 4,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/manual-reset-v2-1113v/bones16k/accounting.json",
+      "bytes": 1482,
+      "sha256": "9e2f4bb15c10bdaf49ac55ccc0f6e423b41334c47b1d98881d5bc4c378e95678",
+      "chunks": 3
+    },
+    {
+      "i": 5,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/manual-reset-v2-1113v/bones16k/protocol.json",
+      "bytes": 7867,
+      "sha256": "98963575f5064d1db6ef273b4c5f0e9a5d9d42826bdc007f3d8f9fcd04f5c9ae",
+      "chunks": 10
+    },
+    {
+      "i": 6,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/manual-reset-v2-1113v/pair/summary.json",
+      "bytes": 5136,
+      "sha256": "b9de0554642f731d31e324a134a56ff9a6035dfd3987354a01d451521f780eda",
+      "chunks": 7
+    }
+  ],
+  "canonical_lafan_accounting_and_protocol_byte_identical": true,
+  "arrays_audit_completed": false
+}

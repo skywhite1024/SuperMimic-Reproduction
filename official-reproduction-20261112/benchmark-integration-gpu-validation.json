@@ -1,0 +1,24 @@
+{
+  "status": "actual64world_gpu_integration_verified",
+  "purpose": "integration",
+  "job_uid": "efb6afa38c284981b06c7a38cc9d0cde",
+  "whole_exit_code": 0,
+  "original_result": "benchmark-integration-gpu-result.json",
+  "original_result_sha256": "b19bc1fdd43dbae91dbb10d973ece4ae4f718d0f0a2eca6c9b2f74fcf310230c",
+  "original_bytes": 43121,
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "source_worker_sha256": "c619f74883e6a32d52839d714dafd1e531ded983015d6a12d48f5bd0ab6a083a",
+  "paths": [
+    "native_env_and_actor",
+    "wm_grad_recording_forward",
+    "wm_inference_forward"
+  ],
+  "all_outputs_finite_and_synchronized_positive_intervals_verified": true,
+  "tf32_modern_api_verified": true,
+  "50hz_four_substeps_71state_29action_h10_verified": true,
+  "timing_repeats": 1,
+  "timed_steps_per_path": 2,
+  "scientific_throughput_measurement": false,
+  "paper_speedup_reproduced": false,
+  "full_sweep_started_separately": "b99aca368fbb40009d7c049214452d3b"
+}

@@ -123,12 +123,15 @@
       "paper_pages": [
         8
       ],
-      "status": "local_entry_prepared_no_gpu_result",
+      "status": "gpu_integration_verified_full11size_sweep_running",
       "evidence": [
         "pinned-experiment-entrypoint-review.json",
-        "benchmark-local-validation.json"
+        "benchmark-local-validation.json",
+        "benchmark-integration-gpu-result.json",
+        "benchmark-integration-gpu-validation.json",
+        "benchmark-sweep-run-plan.json"
       ],
-      "qualification": "Local frozen-checkpoint adaptation added with explicit sim+actor versus WM-only scopes, symmetric warmup and synchronization. Two targeted CPU checks and real receipt/config validation passed. NoGPUintegration or speed number yet; paper conditions remain unconfirmed."
+      "qualification": "Actual64worldH1003pathintegrationpassedexit0withoriginalreceipt;full11size3x500sweep1113abrunning,first64sizevalid. Unequalscopesnativeenv+actorversusWMdynamics-onlyforward;nofull-paper/controlchainspeedupclaim."
     },
     {
       "id": "ppo_world_model",
@@ -197,13 +200,17 @@
       "id": "corrected_evaluation",
       "requirement": "Full raw1k/16k paired v2 evaluation and every saved trajectory audit",
       "paper_pages": [],
-      "status": "running",
+      "status": "complete_evaluation_and_pair_receipts_raw_array_audit_running",
       "evidence": [
         "manual-reset-v2-lafan40-trajectory-audit.json",
         "manual-reset-v2-lafan40-initial-states-audit.json",
-        "manual-reset-v2-bones1k-interim.json"
+        "manual-reset-v2-bones1k-interim.json",
+        "manual-reset-v2-completion-verification.json",
+        "manual-reset-v2-bones1k-accounting.json",
+        "manual-reset-v2-bones16k-accounting.json",
+        "manual-reset-v2-pair-summary.json"
       ],
-      "qualification": "Complete40 original bytes/arrays verified locally; corrected1k all142220 evaluator and accounting gates passed106561success/35659failure, mean0.43635064078565766; original raw JSON/fullNPZ audit and16k comparison pending."
+      "qualification": "Completecorrected142220pair:1k106561success/35659failuremean.43635064078565766;16k136562success/5658failuremean.8462458372855294;30179recovered178regressed. SevenoriginalJSONbytes/SHAverified;284480NPZCPUaudit1113wrunning,rawarrayauditsnotcomplete."
     }
   ],
   "original_scope_retained": true,
@@ -213,5 +220,5 @@
     "Prepare faithful local-checkpoint throughput/PPO-WM entry with explicit computation scope; execute after GPU slot frees",
     "Continue matchedPPO-Sim,duration,horizon,push experiments; retain unresolved exact author inputs and hardware limitation"
   ],
-  "last_status_update": "2026-11-13T09:37:25.586985+08:00"
+  "last_status_update": "2026-11-13T10:34:34.368473+08:00"
 }

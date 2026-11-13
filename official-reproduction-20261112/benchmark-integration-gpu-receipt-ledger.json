@@ -1,0 +1,13 @@
+{
+  "status": "original_gpu_integration_receipt_verified",
+  "receipt": {
+    "i": 0,
+    "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/local-benchmark-integration-1113z/result.json",
+    "bytes": 43121,
+    "sha256": "b19bc1fdd43dbae91dbb10d973ece4ae4f718d0f0a2eca6c9b2f74fcf310230c",
+    "chunks": 25
+  },
+  "log_sha256": "197e5840c58a531f00faf7f2cf8538e8b19ebb50fed474662c80a83b9d15ad56",
+  "whole_exit_code": 0,
+  "scientific_throughput_measurement": false
+}

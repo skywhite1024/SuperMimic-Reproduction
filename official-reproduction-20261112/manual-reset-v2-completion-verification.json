@@ -1,0 +1,50 @@
+{
+  "status": "complete_v2_evaluation_and_pair_receipts_verified_arrays_audit_running",
+  "whole_program_exit_code": 0,
+  "completed_at": "2026-11-13T09:53:00+08:00",
+  "original_json_receipts": 7,
+  "metadata_records": 7,
+  "data_chunks": 46,
+  "all_original_byte_counts_and_sha256_verified": true,
+  "published_mapping": [
+    {
+      "source": "lafan40\\accounting.json",
+      "public": "manual-reset-v2-lafan40-accounting.json",
+      "sha256": "8cbc17ca850c81e3ef080dfdeabdc1877bb76edec5665d39a5d0665e52b09266"
+    },
+    {
+      "source": "lafan40\\protocol.json",
+      "public": "manual-reset-v2-lafan40-protocol.json",
+      "sha256": "68964390d769af2fd193655190cc1464a0cf5cb1e2b9def45b79deb3a749b25b"
+    },
+    {
+      "source": "bones1k\\accounting.json",
+      "public": "manual-reset-v2-bones1k-accounting.json",
+      "sha256": "0c093ea71429d543a5d376b34697375411a2ff7b7e38e903c22de58481da2a6e"
+    },
+    {
+      "source": "bones1k\\protocol.json",
+      "public": "manual-reset-v2-bones1k-protocol.json",
+      "sha256": "750d793400a463c17888cea327e55dd2e6a1c222be3744e22001af928aa772bc"
+    },
+    {
+      "source": "bones16k\\accounting.json",
+      "public": "manual-reset-v2-bones16k-accounting.json",
+      "sha256": "9e2f4bb15c10bdaf49ac55ccc0f6e423b41334c47b1d98881d5bc4c378e95678"
+    },
+    {
+      "source": "bones16k\\protocol.json",
+      "public": "manual-reset-v2-bones16k-protocol.json",
+      "sha256": "98963575f5064d1db6ef273b4c5f0e9a5d9d42826bdc007f3d8f9fcd04f5c9ae"
+    }
+  ],
+  "pair_summary": "manual-reset-v2-pair-summary.json",
+  "raw_full_result_json_and_paired_csv_remain_on_afs": true,
+  "raw_npz_full_array_audit_complete": false,
+  "cpu_audit_job": "supermimic-official-v2-audit-260010076-1113w",
+  "cpu_audit_gpu_count": 0,
+  "source_protocol_version": 2,
+  "paper_results_reproduced": false,
+  "legacy_v1_results_preserved": true,
+  "v1_vs_v2_causal_cache_effect_claimed": false
+}
