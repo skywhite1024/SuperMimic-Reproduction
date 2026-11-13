@@ -51,13 +51,15 @@ class SimulatorPolicyInput:
 
 
 class SimulatorPpoLoop:
-    def __init__(self, env, algorithm, policy_input, rollout_steps, logger=None, sampler=None):
+    def __init__(self, env, algorithm, policy_input, rollout_steps, logger=None, sampler=None,
+                 require_parameter_change=True):
         self.env=env
         self.algorithm=algorithm
         self.policy_input=policy_input
         self.rollout_steps=rollout_steps
         self.logger=logger
         self.sampler=sampler
+        self.require_parameter_change=require_parameter_change
         self.motion_cmd=env.unwrapped.command_manager.get_term('motion')
         self.device=algorithm.device
         self.updates=[]
@@ -146,12 +148,17 @@ class SimulatorPpoLoop:
             assert all(torch.isfinite(parameter).all() for parameter in model.parameters())
         actor_after=state_sha256(alg.actor.native_actor)
         critic_after=state_sha256(alg.critic.native_critic)
-        assert actor_before!=actor_after and critic_before!=critic_after
-        assert any(not torch.equal(before,after) for before,after in
+        actor_parameters_changed=any(not torch.equal(before,after) for before,after in
             zip(actor_parameters_before,alg.actor.native_actor.parameters(),strict=True))
+        critic_changed=critic_before!=critic_after
+        if self.require_parameter_change:
+            assert actor_before!=actor_after and actor_parameters_changed and critic_changed
         row.update(actor_before=actor_before,actor_after=actor_after,
             critic_before=critic_before,critic_after=critic_after,
-            native_actor_and_critic_changed_and_finite=True,
+            native_actor_parameters_changed=actor_parameters_changed,
+            native_critic_state_changed=critic_changed,
+            native_actor_and_critic_changed_and_finite=actor_parameters_changed and critic_changed,
+            native_model_parameters_finite=True,
             imagined_transitions=0,world_model_updates=0,
             native_actor_normalization_count=int(alg.actor.native_actor.obs_normalizer.count))
         self.updates.append(row)

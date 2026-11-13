@@ -16,10 +16,26 @@ def write(path,value):
 
 
 def main():
+    program_started=time.monotonic()
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--motions',type=Path,required=True)
     parser.add_argument('--output',type=Path,required=True)
+    parser.add_argument('--updates',type=int,default=3)
+    parser.add_argument('--checkpoint-updates',type=int,nargs='+')
+    parser.add_argument('--trace-updates',type=int,nargs='+')
+    parser.add_argument('--training-purpose',choices=('integration','finite-training'),default='integration')
     args=parser.parse_args()
+    if args.updates<1 or (args.training_purpose=='integration' and args.updates!=3):
+        parser.error('Positive update count; integration retains exactly three updates')
+    checkpoint_updates=args.checkpoint_updates or list(range(1,args.updates+1))
+    trace_updates=args.trace_updates or checkpoint_updates
+    for values in (checkpoint_updates,trace_updates):
+        if values!=sorted(set(values)) or not all(1<=i<=args.updates for i in values):
+            parser.error('Checkpoint/trace schedules must be sorted unique updates within the run')
+    if checkpoint_updates[-1]!=args.updates:
+        parser.error('Final update must have an immutable checkpoint')
+    if args.training_purpose=='finite-training' and args.checkpoint_updates is None:
+        parser.error('Longer training requires an explicit sparse checkpoint schedule')
     output=args.output.resolve();motions=args.motions.resolve()
     output.mkdir(parents=True,exist_ok=False)
     os.chdir(output)
@@ -60,7 +76,9 @@ def main():
     algorithm_kwargs={key:value for key,value in source_algorithm.items() if key in accepted}
     assert source_cfg.num_steps_per_env==24
     config=dict(training_algorithm='PPO-Sim',task=task,seed=42,num_envs=8192,
-        outer_updates=3,rollout_steps=24,real_collections=72,
+        outer_updates=args.updates,rollout_steps=24,real_collections=24*args.updates,
+        training_purpose=args.training_purpose,checkpoint_updates=checkpoint_updates,
+        trace_updates=trace_updates,per_update_reward_done_storage_comparison=True,
         ppo_algorithm=algorithm_kwargs,algorithm_cfg_ignored_fields=sorted(set(source_algorithm)-accepted),
         mjlab_tracking_ppo_source=dataclasses.asdict(source_cfg),
         mjlab_tracking_ppo_source_sha256=hashlib.sha256(Path(inspect.getfile(unitree_g1_tracking_ppo_runner_cfg)).read_bytes()).hexdigest(),
@@ -106,7 +124,8 @@ def main():
         sampler=ReturnSampler(native.runner.return_sampler,motion_cmd.bin_count,
             motion_cmd.motion.time_step_total,8192,max_step_reward,device=device)
         logger=Logger('native-ppo-sim-integration',8192,env.max_episode_length,device)
-        loop=SimulatorPpoLoop(env,algorithm,inputs,24,logger=logger,sampler=sampler)
+        loop=SimulatorPpoLoop(env,algorithm,inputs,24,logger=logger,sampler=sampler,
+            require_parameter_change=args.training_purpose=='integration')
         dimensions=dict(actor_input=template['actor'].shape[-1],actor_goal=actor.mlp.goal_width,
             history=10,proprio=93,critic_input=critic_width,actions=env.num_actions)
         assert dimensions==dict(actor_input=1570,actor_goal=640,history=10,proprio=93,critic_input=771,actions=29)
@@ -116,12 +135,19 @@ def main():
         write(output/'result.json',report)
         manifest=[]
         started=time.monotonic()
-        for update in range(1,4):
-            row=loop.update(output/'trace'/f'update-{update:03d}.npz')
+        for update in range(1,args.updates+1):
+            row=loop.update(output/'trace'/f'update-{update:03d}.npz' if update in trace_updates else None)
+            row['update_complete_seconds_since_program_entry']=time.monotonic()-program_started
+            row['update_complete_seconds_since_training_entry']=time.monotonic()-started
             row['episode_statistics']=dict(recent_completed_episodes=len(logger.rewbuffer),
                 mean_raw_episode_return=float(np.mean(logger.rewbuffer)) if logger.rewbuffer else None,
                 scope='Native logger last100 completed real simulator episodes, not fixed-start full-clip return')
             logger.ep_extras.clear()
+            report['updates']=loop.updates
+            if update not in checkpoint_updates:
+                if update%50==0:
+                    write(output/'result.json',report)
+                continue
             folder=output/'checkpoints'/f'update-{update:03d}';folder.mkdir(parents=True,exist_ok=False)
             models={'actor.pt':native_actor.state_dict(),'critic.pt':critic.native_critic.state_dict(),
                 'ppo.pt':algorithm.save()}
@@ -138,16 +164,21 @@ def main():
                 files.append(dict(file=name,path=str(dest),bytes=dest.stat().st_size,
                     sha256=hashlib.sha256(dest.read_bytes()).hexdigest(),model_state_readback_verified=True))
             manifest.append(dict(ppo_update=update,collection_steps=loop.collections,files=files,
+                retained_snapshot_complete_seconds_since_program_entry=time.monotonic()-program_started,
+                retained_snapshot_complete_seconds_since_training_entry=time.monotonic()-started,
                 native_actor_state_sha256=state_sha256(native_actor),
                 native_critic_state_sha256=state_sha256(critic.native_critic)))
             report['updates']=loop.updates
             report['checkpoint_sets']=manifest
             write(output/'checkpoint-manifest.json',manifest)
             write(output/'result.json',report)
-        assert loop.collections==72 and loop.simulator_steps==589824
-        assert len(manifest)==len(loop.updates)==3 and loop.sampler_updates==3
-        report.update(status='real_G1_simulator_PPO_integration_completed',
-            ppo_update_calls=3,collection_steps=loop.collections,simulator_steps=loop.simulator_steps,
+        assert loop.collections==24*args.updates and loop.simulator_steps==8192*24*args.updates
+        assert len(manifest)==len(checkpoint_updates) and len(loop.updates)==args.updates
+        assert loop.sampler_updates==loop.collections//native.runner.return_sampler.horizon
+        completed_status=('real_G1_simulator_PPO_integration_completed' if args.training_purpose=='integration'
+                          else 'real_G1_simulator_PPO_finite_training_completed')
+        report.update(status=completed_status,
+            ppo_update_calls=args.updates,collection_steps=loop.collections,simulator_steps=loop.simulator_steps,
             elapsed_training_seconds=time.monotonic()-started,
             return_sampler_distribution_updates=loop.sampler_updates,
             final_model_state_hashes=dict(actor=state_sha256(native_actor),critic=state_sha256(critic.native_critic)),
@@ -155,7 +186,7 @@ def main():
             source_config_sha256=hashlib.sha256((output/'resolved-config.json').read_bytes()).hexdigest(),
             checkpoint_manifest_sha256=hashlib.sha256((output/'checkpoint-manifest.json').read_bytes()).hexdigest())
         write(output/'result.json',report)
-        print('PPO_SIM_REAL_G1_INTEGRATION_PASS '+json.dumps(dict(ppo_updates=3,simulator_steps=589824,
+        print('PPO_SIM_REAL_G1_TRAINING_PASS '+json.dumps(dict(ppo_updates=args.updates,simulator_steps=loop.simulator_steps,
             imagined_transitions=0,world_model_updates=0)),flush=True)
     except Exception as error:
         report.update(status='failed',error=f'{type(error).__name__}: {error}')

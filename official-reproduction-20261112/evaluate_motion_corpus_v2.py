@@ -30,6 +30,8 @@ def main():
     parser.add_argument("--order", choices=("index", "length"), default="length")
     parser.add_argument("--checkpoint-collection-step", type=int,
                         help="Select a retained snapshot from a completed parent run; default uses final models")
+    parser.add_argument("--training-algorithm", choices=("first-order", "ppo-sim"), default="first-order")
+    parser.add_argument("--ppo-sim-update", type=int, help="Retained PPO update, with its own parent receipt")
     args = parser.parse_args()
     if args.num_envs < 1 or args.expected_clips < 1:
         parser.error("positive environment and clip counts are required")
@@ -48,19 +50,32 @@ def main():
     from manual_reset_observations import refresh_manual_reset_observations
 
     run, motions, output = args.run.resolve(), args.motions.resolve(), args.output.resolve()
-    from select_completed_checkpoint import select_completed_checkpoint
-    training, checkpoints, checkpoint_selection = select_completed_checkpoint(
-        run, args.checkpoint_collection_step)
-    resolved = json.loads((run / "resolved-config.json").read_text(encoding="utf-8"))
+    if args.training_algorithm == "ppo-sim":
+        if args.checkpoint_collection_step is not None:
+            parser.error("Use --ppo-sim-update for simulator PPO snapshots")
+        from ppo_sim_checkpoint import select_ppo_sim_checkpoint
+        training, resolved, checkpoints, checkpoint_selection = select_ppo_sim_checkpoint(run, args.ppo_sim_update)
+        if resolved["goal_backend"] != "author eager goal math":
+            raise ValueError("Review unknown PPO-Sim goal backend")
+        goal_backend = "eager"
+        runner_payload = resolved["native_network_architecture"]
+    else:
+        if args.ppo_sim_update is not None:
+            parser.error("--ppo-sim-update requires --training-algorithm ppo-sim")
+        from select_completed_checkpoint import select_completed_checkpoint
+        training, checkpoints, checkpoint_selection = select_completed_checkpoint(
+            run, args.checkpoint_collection_step)
+        resolved = json.loads((run / "resolved-config.json").read_text(encoding="utf-8"))
+        goal_backend = resolved.get("goal_assembly_backend", "official")
+        runner_payload = resolved["runner"]
     checkpoint_selection["resolved_config_sha256"] = digest(run / "resolved-config.json")
-    goal_backend = resolved.get("goal_assembly_backend", "official")
     if goal_backend == "eager":
         import supermimic.representations as representations
         representations._compiled_assemble_goal = representations._assemble_goal
     elif goal_backend != "official":
         raise RuntimeError("Unknown goal assembly backend")
     task = resolved["task"]
-    runner_cfg = load_runner_cfg({"runner_cfg": resolved["runner"]})
+    runner_cfg = load_runner_cfg({"runner_cfg": runner_payload})
     check_representation_matches(task, runner_cfg.representation)
     names = json.loads((motions / "motion_names.json").read_text(encoding="utf-8"))
     ends = np.load(motions / "motion_ends.npy")
@@ -119,6 +134,7 @@ def main():
         "initial_reference_state_check": "Full71D matches native clipped reference; atol=1e-5,rtol=1e-5 before first action",
         "training": training, "paper_results_reproduced": False,
         "checkpoint_selection": checkpoint_selection,
+        "training_algorithm": args.training_algorithm,
         "trajectory_state": "pre-action full_state; rewards and terminations are post-step",
         "motion_files": {p.name: digest(p) for p in sorted(motions.iterdir()) if p.is_file()},
     }
@@ -130,11 +146,16 @@ def main():
     env = create_env(cfg, num_envs, device)
     with ExitStack() as evaluation:
         evaluation.callback(env.close)
-        wm = build_world_model(runner_cfg, env, device)
-        wm.load_bundle(torch.load(checkpoints["world_model.pt"], map_location=device, weights_only=True))
-        wm.dynamics.eval()
-        actor = build_actor(runner_cfg, wm, device)
-        actor.load_state_dict(torch.load(checkpoints["actor.pt"], map_location=device, weights_only=True))
+        if args.training_algorithm == "ppo-sim":
+            from ppo_sim_checkpoint import build_ppo_sim_eval_actor
+            actor, rep, sim_context = build_ppo_sim_eval_actor(runner_cfg, env, checkpoints["actor.pt"], device)
+        else:
+            wm = build_world_model(runner_cfg, env, device)
+            wm.load_bundle(torch.load(checkpoints["world_model.pt"], map_location=device, weights_only=True))
+            wm.dynamics.eval()
+            actor = build_actor(runner_cfg, wm, device)
+            actor.load_state_dict(torch.load(checkpoints["actor.pt"], map_location=device, weights_only=True))
+            rep, sim_context = wm.representation, wm.sim_context
         actor.eval()
         actor.set_slot_mix({"motion": 1.0})
         # ContactSensor.update replaces history buffers with torch.roll results.
@@ -146,7 +167,6 @@ def main():
         command = base.command_manager.get_term("motion")
         if not np.array_equal(command.motion.motion_ends.cpu().numpy(), ends):
             raise RuntimeError("Loaded motion boundaries differ from the frozen pack")
-        rep = wm.representation
         robot = base.scene["robot"]
         limits = robot.data.soft_joint_pos_limits
         if not torch.equal(limits, limits[:1].expand_as(limits)):
@@ -182,7 +202,7 @@ def main():
             reset_audit.update(reference_initial_state_verified=True,
                                reference_first_state_max_abs_error=first_error)
             print("CORPUS_MANUAL_RESET_REFRESH " + json.dumps(dict(batch=batch_id, **reset_audit)), flush=True)
-            sim_ctx = wm.sim_context.read(base)
+            sim_ctx = sim_context.read(base)
             active = np.zeros(num_envs, dtype=bool)
             active[:len(indices)] = True
             trajectories = [{"full_state": [], "actions": [], "rewards": []} for _ in indices]

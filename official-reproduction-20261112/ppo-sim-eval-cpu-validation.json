@@ -1,0 +1,47 @@
+{
+  "status": "CPU_targeted_checks_passed_CUDA_evaluator_pending",
+  "tests": 6,
+  "pytest_seconds": 5.8,
+  "pytest_xml_sha256": "88256e23cf7752982a616dd4b5c7a5e41ee1f1718ca68ba1576cbf41c3919194",
+  "scope": [
+    "Actual native actor parameters and normalization buffers restore with identical deterministic mean",
+    "Simulator-only native actor loader never constructs learned dynamics",
+    "Select correct retained PPO update and bind completed parent/config/manifest/file hashes",
+    "Reject running or first-order parents, absent updates and corrupt original bytes",
+    "Existing native RSL simulator transport and first-order snapshot selection still pass"
+  ],
+  "cuda_full40_evaluation_completed": false,
+  "longer_PPO_training_executed": false,
+  "long_run_updates": 2048,
+  "long_run_real_steps": 402653184,
+  "checkpoint_updates": [
+    3,
+    128,
+    256,
+    512,
+    1024,
+    1536,
+    2048
+  ],
+  "evaluated_main_updates": [
+    128,
+    256,
+    512,
+    1024,
+    1536,
+    2048
+  ],
+  "training_timeout_seconds": 5400,
+  "whole_program_seconds": 16200,
+  "trace_scope": "Eight sampled updates; reward/done storage compared every update",
+  "resume_state_complete": false,
+  "paper_results_reproduced": false,
+  "sources": {
+    "ppo_sim_checkpoint.py": "780dcced8d3daae347ab79625b5f1731dc96058cd7774fd09dd21d866255d55b",
+    "test_ppo_sim_checkpoint.py": "84679f51478d90e4e4c4b1f74b9c82f84b577f8572e90d8488fb0bdab62c2935",
+    "evaluate_motion_corpus_v2.py": "67103928d9e3e881d09d62ac575763f7c9e2f9bc32a93cdcf9c90934492932e9",
+    "run_ppo_sim_integration.py": "801ab159339cbb70c75ef9f421ad0ad7215b110773640628aad0159847b3aa7e",
+    "ppo_sim_runtime.py": "dddf32ac3cf70a9b7b884ba4b0303fe147e10d9f47807cf0d4add313856d4269",
+    "run_ppo_sim_learning_curve.py": "4437426ce47edec860835c45efa7442d3c483ff40f75f03c39f43d7ba584fb85"
+  }
+}
