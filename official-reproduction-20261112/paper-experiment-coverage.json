@@ -123,11 +123,12 @@
       "paper_pages": [
         8
       ],
-      "status": "source_review_only",
+      "status": "local_entry_prepared_no_gpu_result",
       "evidence": [
-        "pinned-experiment-entrypoint-review.json"
+        "pinned-experiment-entrypoint-review.json",
+        "benchmark-local-validation.json"
       ],
-      "qualification": "Released script needs WandB, defaults sim+actor versus dynamics-only dummy-input WM, and explicitly warms WM only. State scope/precision/warmup/synchronization before using ratios."
+      "qualification": "Local frozen-checkpoint adaptation added with explicit sim+actor versus WM-only scopes, symmetric warmup and synchronization. Two targeted CPU checks and real receipt/config validation passed. NoGPUintegration or speed number yet; paper conditions remain unconfirmed."
     },
     {
       "id": "ppo_world_model",
@@ -208,5 +209,5 @@
     "Prepare faithful local-checkpoint throughput/PPO-WM entry with explicit computation scope; execute after GPU slot frees",
     "Continue matchedPPO-Sim,duration,horizon,push experiments; retain unresolved exact author inputs and hardware limitation"
   ],
-  "last_status_update": "2026-11-13T08:49:56.865094+08:00"
+  "last_status_update": "2026-11-13T08:59:20.438932+08:00"
 }
