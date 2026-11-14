@@ -1,0 +1,29 @@
+{
+  "status": "actual_two_H100_NCCL_native_gate_originals_verified",
+  "job_uid": "eec0461eab8d486baa0d551fb39aaf54",
+  "original_JSON_receipts": 6,
+  "all_byte_counts_and_SHA256_verified": true,
+  "source_files_bound_to_actual_log": true,
+  "source_commit": "1c8f3abb52802e321a5346ef0fea3c5fc8cea5fe",
+  "H100": 2,
+  "ranks": 2,
+  "local_collection_steps": 21,
+  "global_real_simulator_steps": 172032,
+  "native_learner_outer_updates_per_rank": 6,
+  "optimizer_steps_per_rank": {
+    "world_model_optimizer_steps": 60,
+    "actor_optimizer_steps": 6,
+    "critic_optimizer_steps": 120
+  },
+  "learned_networks_changed_and_identical_across_ranks": true,
+  "independent_real_initial_states": true,
+  "actor_real_observation_count_both_ranks": 172032,
+  "sampler_value_count_effort_hashes_identical": true,
+  "native_weight_files_cloud_hash_and_tensor_readback_verified": 6,
+  "raw_weights_downloaded": false,
+  "learner_CUDA_graphs_disabled": true,
+  "quality_evaluation_completed": false,
+  "full_training_state_resume_available": false,
+  "paper_performance_equivalence": false,
+  "paper_results_reproduced": false
+}

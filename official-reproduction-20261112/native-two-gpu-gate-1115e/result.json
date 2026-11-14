@@ -1,0 +1,17 @@
+{
+  "status": "two_GPU_native_gate_completed",
+  "worker_timeout_seconds": 2400,
+  "whole_program_seconds": 2700,
+  "world_size": 2,
+  "expected_global_real_steps": 172032,
+  "quality_evaluation_completed": false,
+  "paper_results_reproduced": false,
+  "full_training_state_resume_available": false,
+  "worker_returncode": 0,
+  "worker_elapsed_seconds": 229.33726293221116,
+  "global_real_simulator_steps": 172032,
+  "rank_model_identity_and_parameter_changes_verified": true,
+  "original_rank_config_and_results_bound": true,
+  "native_weights_files_verified": 6,
+  "parent_result_sha256": "60169dd9992ec47d730c8d000411d78ae89cd3aafe2e997b8b8dac9cd80f45c3"
+}

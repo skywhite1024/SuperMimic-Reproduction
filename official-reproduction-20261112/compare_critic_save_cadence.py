@@ -55,7 +55,7 @@ def main():
     with (output/'per-clip.csv').open('w',encoding='utf-8',newline='') as stream:
         writer=csv.DictWriter(stream,fieldnames=list(rows[0]),lineterminator='\n')
         writer.writeheader();writer.writerows(sorted(rows,key=lambda row:row['index']))
-    (output/'comparison.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
+    (output/'comparison.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8',newline='\n')
     print(json.dumps({k:v for k,v in result.items() if k not in ('sources','most_negative_deltas')},indent=2))
 
 

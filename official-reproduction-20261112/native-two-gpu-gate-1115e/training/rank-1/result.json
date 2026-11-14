@@ -1,0 +1,124 @@
+{
+  "status": "two_rank_native_participant_completed",
+  "rank": 1,
+  "local_rank": 1,
+  "world_size": 2,
+  "backend": "nccl",
+  "paper_results_reproduced": false,
+  "quality_evaluation_completed": false,
+  "full_training_state_resume_available": false,
+  "initial_model_state_hashes": {
+    "dynamics": "4dd16e891786a7ff85cfcd2708fb1647b4eac5353de09daca383083ae40c7839",
+    "actor": "895482be3e690607469497b652e5a0c9973fce1ff5ffeafa4ca4e61fce11c90c",
+    "critic": "8d58365959cc2e905e8ea08cced33eebdbd982608bf00abba49f85b12198d6d7"
+  },
+  "initial_learned_parameter_hashes": {
+    "dynamics": "e673dea253519600d9e3e26459a1fb6666406f94eb720272ab6ee2780d7a6ff3",
+    "actor": "e78621205e2a40a3cd77988b2a3886b7b866466e05d22e15492ae2ce372ff2bc",
+    "critic": "846d8812ff3c0be0dbf1054736fe84d1364369d9ae02cffb3f3aafb718e65170"
+  },
+  "sim_context_state_sha256": "4804c90a5b5658cfed5ae8e495b9d7e2b153dda7999ea9c43ec6d91a0b72dd8d",
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "device_properties": "_CudaDeviceProperties(name='NVIDIA H100 80GB HBM3', major=9, minor=0, total_memory=81079MB, multi_processor_count=132, uuid=8ac8c527-f5ff-f8d3-cc15-79f992f4b0bd, pci_bus_id=187, pci_device_id=0, pci_domain_id=0, L2_cache_size=50MB)",
+  "initial_real_state_sha256": "33cc3935fdc4123c8bb8412fa519d29f882a30125b418ac247ab6f0d830c0e96",
+  "local_collection_steps": 21,
+  "local_simulator_steps": 86016,
+  "native_learner_outer_updates": 6,
+  "optimizer_steps": {
+    "world_model_optimizer_steps": 60,
+    "actor_optimizer_steps": 6,
+    "critic_optimizer_steps": 120
+  },
+  "sparse_state_observations": [
+    {
+      "collection_steps": 1,
+      "local_simulator_steps": 4096,
+      "native_learner_outer_updates": 0,
+      "learning_rate": 0.00028284272411838174,
+      "optimizer_steps": {
+        "world_model_optimizer_steps": 0,
+        "actor_optimizer_steps": 0,
+        "critic_optimizer_steps": 0
+      },
+      "model_state_hashes": {
+        "dynamics": "f2acda3115aa369093e37051e9a826db5a88552f71229cbab8081cbca15115d1",
+        "actor": "30608e3cdc70e4b8e7d5d0ebc46230ffe941406280cdf03f027ac27920b96650",
+        "critic": "8d58365959cc2e905e8ea08cced33eebdbd982608bf00abba49f85b12198d6d7"
+      }
+    },
+    {
+      "collection_steps": 11,
+      "local_simulator_steps": 45056,
+      "native_learner_outer_updates": 2,
+      "learning_rate": 0.00028284272411838174,
+      "optimizer_steps": {
+        "world_model_optimizer_steps": 20,
+        "actor_optimizer_steps": 2,
+        "critic_optimizer_steps": 40
+      },
+      "model_state_hashes": {
+        "dynamics": "c0400bd67be2963ddb53498d528adb220abceccb1713075ff65b39065fb067c7",
+        "actor": "0de13cd82f821e056d639ae14572e84421ecf15c4f7e3c728a176005ab7d8540",
+        "critic": "1230ee90722f904068261bf20db92e3fbd51e08059966c99ec3127b6bc609ded"
+      }
+    },
+    {
+      "collection_steps": 21,
+      "local_simulator_steps": 86016,
+      "native_learner_outer_updates": 6,
+      "learning_rate": 0.0002828426950145513,
+      "optimizer_steps": {
+        "world_model_optimizer_steps": 60,
+        "actor_optimizer_steps": 6,
+        "critic_optimizer_steps": 120
+      },
+      "model_state_hashes": {
+        "dynamics": "89739b44147a210381031c79305a8cd7c5ab58fbc7010f9c7a1d51e4d54b10fe",
+        "actor": "464ab2e4c92b3e6b8ada83782d082f7955f97be4f95b944dea2ea82c2d43d6a1",
+        "critic": "faabba281bf82e155c76e5a11c629e1684f86a2617f32048e76a99054dfe653b"
+      }
+    }
+  ],
+  "final_model_state_hashes": {
+    "dynamics": "89739b44147a210381031c79305a8cd7c5ab58fbc7010f9c7a1d51e4d54b10fe",
+    "actor": "464ab2e4c92b3e6b8ada83782d082f7955f97be4f95b944dea2ea82c2d43d6a1",
+    "critic": "faabba281bf82e155c76e5a11c629e1684f86a2617f32048e76a99054dfe653b"
+  },
+  "elapsed_training_seconds": 82.99856951832771,
+  "final_learned_parameter_hashes": {
+    "dynamics": "ac3b8a5df5782cf29da1354e1069471300b26a9096ab915a77ad885583188074",
+    "actor": "1cb92a2a3cf8253b3eb2d3ce2bd0a7b8079b8b0de919e0de6bfdec7afbbf5045",
+    "critic": "11ff72a0b43c138cc6b9da302eb0a3760a1cf55d680f1dae528924112aa41cc9"
+  },
+  "all_native_learned_parameters_changed": true,
+  "sampler_real_records": 21,
+  "sampler_distribution_updates": 1,
+  "actor_real_observation_count": 172032,
+  "shared_sampler_value_sha256": "8edc118bc2d0353818cf89b4337636ecea303d1e20574079b452fad2eeb8bc83",
+  "shared_sampler_count_sha256": "693edbc4af011c0d55e2238b616691c39f3ffb87cfbe31c10439b7f54c799d2c",
+  "shared_sampler_effort_sha256": "83c5065622b4a5774c5f2b5527add5770158987e2abad8e9140879addb7c6fd4",
+  "checkpoints": [
+    {
+      "file": "world_model.pt",
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/native-two-gpu-gate-1115e/training/rank-1/world_model.pt",
+      "bytes": 34990357,
+      "sha256": "6feb6a547b9ef61f182db140ab684f8037bb9264939d768b707474103d784271",
+      "native_model_readback_verified": true
+    },
+    {
+      "file": "actor.pt",
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/native-two-gpu-gate-1115e/training/rank-1/actor.pt",
+      "bytes": 46439949,
+      "sha256": "cd50f29cabf08f2a0c0fcb4b11de7d4057fdaadd1418678df2ef69c3df4f441b",
+      "native_model_readback_verified": true
+    },
+    {
+      "file": "critic.pt",
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/native-two-gpu-gate-1115e/training/rank-1/critic.pt",
+      "bytes": 929269,
+      "sha256": "0653cd86e87892e4ae6a0f75da966039141c57ae0c0a3ee98f3c55fec6f48ceb",
+      "native_model_readback_verified": true
+    }
+  ],
+  "resolved_config_sha256": "6b98531d0830405b77b8bac2edb6e1ed8a72567547633b7fe9900186d9757972"
+}

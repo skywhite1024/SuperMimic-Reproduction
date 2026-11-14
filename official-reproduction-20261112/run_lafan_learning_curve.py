@@ -66,7 +66,7 @@ def verify_training(run, steps, interval):
 
 
 def run_case(folder, motions, steps, interval, points, train_timeout, eval_timeout,
-             *, policy_horizon=None, without_critic=False):
+             *, policy_horizon=None, without_critic=False, emit_receipts=True):
     folder.mkdir()
     run = folder / "training"
     report = {"status": "training", "collection_steps": steps, "evaluation_steps": points,
@@ -150,9 +150,10 @@ def run_case(folder, motions, steps, interval, points, train_timeout, eval_timeo
         report.update(status="failed", error=f"{type(error).__name__}: {error}")
     write(folder / "result.json", report)
     receipts.append(folder / "result.json")
-    print("LAFAN_CURVE_RECEIPTS_BEGIN " + folder.name, flush=True)
-    subprocess.run([sys.executable, str(SCRIPTS / "emit_json_receipts.py"), *map(str, receipts)], check=True)
-    print("LAFAN_CURVE_RECEIPTS_END " + folder.name, flush=True)
+    if emit_receipts:
+        print("LAFAN_CURVE_RECEIPTS_BEGIN " + folder.name, flush=True)
+        subprocess.run([sys.executable, str(SCRIPTS / "emit_json_receipts.py"), *map(str, receipts)], check=True)
+        print("LAFAN_CURVE_RECEIPTS_END " + folder.name, flush=True)
     if report["status"] != "complete":
         raise RuntimeError(f"Incomplete curve case: {folder}")
     return report

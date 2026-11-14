@@ -1,0 +1,46 @@
+{
+  "receipts": [
+    {
+      "i": 0,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/native-two-gpu-gate-1115e/training/result.json",
+      "bytes": 12731,
+      "sha256": "60169dd9992ec47d730c8d000411d78ae89cd3aafe2e997b8b8dac9cd80f45c3",
+      "chunks": 10
+    },
+    {
+      "i": 1,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/native-two-gpu-gate-1115e/training/rank-0/resolved-config.json",
+      "bytes": 41917,
+      "sha256": "c09bec070722d63845e0b0aa92499934ee5fbb7d9dab9c0787649ced434476ac",
+      "chunks": 21
+    },
+    {
+      "i": 2,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/native-two-gpu-gate-1115e/training/rank-0/result.json",
+      "bytes": 5594,
+      "sha256": "777f56487192d1260ee3781347011a46e9353011c6a8c3fb9d999f86d96ff5cb",
+      "chunks": 8
+    },
+    {
+      "i": 3,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/native-two-gpu-gate-1115e/training/rank-1/resolved-config.json",
+      "bytes": 41917,
+      "sha256": "6b98531d0830405b77b8bac2edb6e1ed8a72567547633b7fe9900186d9757972",
+      "chunks": 21
+    },
+    {
+      "i": 4,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/native-two-gpu-gate-1115e/training/rank-1/result.json",
+      "bytes": 5596,
+      "sha256": "d5b65543995646597c4174440bcc97811a69e9d7177b2caf786764d83a83935a",
+      "chunks": 8
+    },
+    {
+      "i": 5,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/native-two-gpu-gate-1115e/result.json",
+      "bytes": 660,
+      "sha256": "586ede6cae3448e2e93587a19af4658c5258420b46ea7429fa14d75433088b08",
+      "chunks": 2
+    }
+  ]
+}
