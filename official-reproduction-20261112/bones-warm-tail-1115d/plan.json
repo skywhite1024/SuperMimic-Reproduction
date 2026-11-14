@@ -1,0 +1,85 @@
+{
+  "name": "supermimic-official-bones-warm-tail-260010076-1115d",
+  "source_commit": "4dd096a621858cf8d9c48e86a818d38de5cc78dc",
+  "source_files": {
+    "run_lafan_learning_curve.py": "b3aa3e47776ebf56878311412a2350fddba9b29896b0a2ba07e5831c49449b78",
+    "run_lafan_pilot.py": "163eafddcacc4e389880f3a45baac90c76f244346c5e302afd2d37d1304ce45e",
+    "paper_profile.py": "14594ba9f002122e8fe4d22a1a8a9e982499b08629416f52069bee4ab1deb177",
+    "checkpoint_series.py": "5c159d3647026ba4c4b0b78a8ba7ead8b8e982db7ee9156ef80c9e91d4251080",
+    "select_completed_checkpoint.py": "45f8cd554d82b60ca7d807a3568882646b52a9d0fef135c746c8bab38d1ccf8e",
+    "evaluate_motion_corpus_v2.py": "67103928d9e3e881d09d62ac575763f7c9e2f9bc32a93cdcf9c90934492932e9",
+    "manual_reset_observations.py": "3933258bdcd8c80a30d3fc256bf3d82084ff9661f0d20c620bba07b518dc1f6d",
+    "audit_corpus_result.py": "86ab207b9435b03b6203d13338a441d9951c34307a3a359321cad4ad8c29676d",
+    "audit_saved_trajectories.py": "cf9e186d350f41d4287bfe962674c79f08f5d0874ea13034c02f4b4721d17163",
+    "audit_saved_initial_states_v2.py": "a4e3edc99cfdf09c96028f6fbb76bd8764c1fda6a6c6b5fcb4019ff65e0ef762",
+    "emit_json_receipts.py": "e9ea4f9e3f66edbb8becd3e2a78f73ebf9a79b0fba701dc11f2be3f3f33c34bb",
+    "native_warm_start.py": "594ce83554b485a19cefc8954b91f6aa18fe692b52daaa1d8d73133b22f9bd7a",
+    "run_bones_warm_tail_job.py": "6296468572f0408bf81312130528ff8995cbaccbf60370b7adf24c0529be011f"
+  },
+  "command_sha256": "113bcf2ae3c5087e73b617faa75eb578e851b992fe4693c0ce1588c03d21a7d8",
+  "uid": "bfab3e48759548ef9be134a3fcadde53",
+  "replicas": 1,
+  "max_restarts": 0,
+  "gpu": 1,
+  "vcpu": 4,
+  "ram_gib": 64,
+  "max_program_seconds": 18000,
+  "forced_kill_after_seconds": 30,
+  "source_snapshot": {
+    "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-raw-320k-1113m/checkpoint-series/step-000296001/manifest.json",
+    "bytes": 704,
+    "sha256": "b65c3e6477d0290620d8cf330eff2c023f930f3cb6b6e58339fd0c7553ae3c8d"
+  },
+  "source_originals_bound": [
+    {
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-raw-320k-1113m/checkpoint-series/step-000296001/manifest.json",
+      "bytes": 704,
+      "sha256": "b65c3e6477d0290620d8cf330eff2c023f930f3cb6b6e58339fd0c7553ae3c8d"
+    },
+    {
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-raw-320k-1113m/resolved-config.json",
+      "bytes": 42400,
+      "sha256": "d71e9d8a6051eaf055bce53f84f3c78b37a23a97f3afcc9281a59e4eb9a48441"
+    },
+    {
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-raw-320k-1113m/checkpoint-series/step-000296001/world_model.pt",
+      "bytes": 34990357,
+      "sha256": "fb4b324029dd78297747fd3f9309fca6d5d0352f0b2b676854f673e24501c9eb"
+    },
+    {
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-raw-320k-1113m/checkpoint-series/step-000296001/actor.pt",
+      "bytes": 46439949,
+      "sha256": "45e1656ad717d01578ae74df181f73fc5c77cc9628b898583618a777293c1b8f"
+    },
+    {
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-raw-320k-1113m/checkpoint-series/step-000296001/critic.pt",
+      "bytes": 929269,
+      "sha256": "4281f3e9c856365f9121b6880132bc1fb8cd26f20cb537c5a0b6a66454f53bd1"
+    }
+  ],
+  "inherited_collections": 296001,
+  "new_training_collections": 24000,
+  "combined_collections": 320001,
+  "diagnostic_integration_collections": 21,
+  "exact_training_continuation": false,
+  "optimizer_replay_sampler_simulator_RNG_restored": false,
+  "normalization_buffers_restored": true,
+  "inherited_LR_schedule_offset": 296001,
+  "all_three_learned_networks_must_change": true,
+  "full_raw_evaluation_clips": 142220,
+  "raw_motion_hashes": {
+    "joint_names.json": "30355b480e4f89c97a693c72f8baf23902fd458d25e49b5df4741dd47aefce0d",
+    "joint_pos.npy": "d61e0ed202183fc1189fd28f3b16474d25eee1f8c517de829c92104d407d5ff3",
+    "joint_vel.npy": "2f060e4979122858a1f90387139378c48d9eaef15a460560e966fb517952b44e",
+    "motion_ends.npy": "9a46f7e3c8dcf4a33618f8a6409a1eebf8165aaac3a5619364582b0d4b8f17da",
+    "motion_names.json": "8cfa81c756867f8df643df0b2a3fa592cb1325f2bcd32c2991c63c98f10e3bfa",
+    "root_ang_vel_w.npy": "adb430462fa2fa00be96e6a24d5dee7736f75b1f4e0a4eb876d757edc22a0586",
+    "root_lin_vel_w.npy": "c40d34356104e567a9d655b8ed874454e03e9f5bc6fd1b3b8adbbeea9cc4d935",
+    "root_pos_w.npy": "0c8da96a199cb50a46ccfa5e0cf2f10d4e98958adfa28cec2d0005148226ce7e",
+    "root_quat_w.npy": "211b9c9ac8052a713a7a207125d9146dafb0ba2fca80f1cac64e28eb1d8ef077"
+  },
+  "expected_original_JSON_if_complete": 13,
+  "paper_results_reproduced": false,
+  "output": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-warm-tail-1115d",
+  "plan_role": "Frozen submitted launch inputs, not a live status or a completed result"
+}
