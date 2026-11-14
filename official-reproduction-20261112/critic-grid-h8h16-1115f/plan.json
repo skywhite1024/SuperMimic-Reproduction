@@ -1,0 +1,37 @@
+{
+  "uid": "d3562d77ab654e5397354b8178275b09",
+  "name": "supermimic-official-critic-h8h16-260010076-1115f",
+  "source_commit": "69a96c0eb67e8d09ece973ec542fa4c8b428b334",
+  "source_files": {
+    "run_lafan_learning_curve.py": "3193cc1ae5d419514d5f1b42432db55ed37ded14efb417b84bea1b5b70d5fc95",
+    "run_lafan_pilot.py": "163eafddcacc4e389880f3a45baac90c76f244346c5e302afd2d37d1304ce45e",
+    "paper_profile.py": "14594ba9f002122e8fe4d22a1a8a9e982499b08629416f52069bee4ab1deb177",
+    "checkpoint_series.py": "5c159d3647026ba4c4b0b78a8ba7ead8b8e982db7ee9156ef80c9e91d4251080",
+    "select_completed_checkpoint.py": "45f8cd554d82b60ca7d807a3568882646b52a9d0fef135c746c8bab38d1ccf8e",
+    "evaluate_motion_corpus_v2.py": "67103928d9e3e881d09d62ac575763f7c9e2f9bc32a93cdcf9c90934492932e9",
+    "manual_reset_observations.py": "3933258bdcd8c80a30d3fc256bf3d82084ff9661f0d20c620bba07b518dc1f6d",
+    "audit_corpus_result.py": "86ab207b9435b03b6203d13338a441d9951c34307a3a359321cad4ad8c29676d",
+    "audit_saved_trajectories.py": "cf9e186d350f41d4287bfe962674c79f08f5d0874ea13034c02f4b4721d17163",
+    "audit_saved_initial_states_v2.py": "a4e3edc99cfdf09c96028f6fbb76bd8764c1fda6a6c6b5fcb4019ff65e0ef762",
+    "emit_json_receipts.py": "e9ea4f9e3f66edbb8becd3e2a78f73ebf9a79b0fba701dc11f2be3f3f33c34bb",
+    "run_critic_horizon_grid.py": "526420e8d186b111f1d058b1116e0ff7783ad98df0630677ef92bc94975e2550"
+  },
+  "command_sha256": "593b527903e3ebf71272863a8b87f550aaea6baf203ce5c2c0237fc1a0936144",
+  "output": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h8h16-1115f",
+  "gpu": 1,
+  "replicas": 1,
+  "max_restarts": 0,
+  "max_program_seconds": 32400,
+  "forced_kill_after_seconds": 30,
+  "horizons": [
+    8,
+    16
+  ],
+  "main_collection_steps": 16001,
+  "integration_collection_steps": 21,
+  "num_envs": 4096,
+  "seed": 42,
+  "kind": "frozen_launch_inputs_and_actual_job_uid",
+  "vcpu": 4,
+  "ram_gib": 64
+}

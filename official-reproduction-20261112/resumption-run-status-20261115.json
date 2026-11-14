@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-11-15T03:22:48.787021+08:00",
+  "observed_at": "2026-11-15T03:36:24.198581+08:00",
   "user_resumed": true,
   "max_requested_H100": 4,
   "requested_nonterminal_H100": 4,
@@ -66,7 +66,14 @@
       "created_at": "2026-11-15T03:18:10+08:00",
       "program_started_at": "2026-11-15T03:18:53+08:00",
       "program_deadline": "2026-11-15T12:18:53+08:00",
-      "forced_exit_deadline": "2026-11-15T12:19:23+08:00"
+      "forced_exit_deadline": "2026-11-15T12:19:23+08:00",
+      "first_case_integration_originals_verified": 9,
+      "first_case_integration_full40_successes": 0,
+      "first_case_main_started_at": "2026-11-15T03:25:21.924091+08:00",
+      "first_case_main_deadline": "2026-11-15T05:25:21.924091+08:00",
+      "verified_partial_scope": "h008-critic/integration",
+      "partial_verification": "critic-grid-h8h16-1115f/validation.json",
+      "phase_progress_captured_at": "2026-11-15T03:27:01.370366+08:00"
     },
     "horizon_H64_H128": {
       "name": "supermimic-official-critic-h64h128-260010076-1115g",
@@ -85,7 +92,40 @@
       "created_at": "2026-11-15T03:19:12+08:00",
       "program_started_at": "2026-11-15T03:20:18+08:00",
       "program_deadline": "2026-11-15T12:20:18+08:00",
-      "forced_exit_deadline": "2026-11-15T12:20:48+08:00"
+      "forced_exit_deadline": "2026-11-15T12:20:48+08:00",
+      "first_case_integration_originals_verified": 9,
+      "first_case_integration_full40_successes": 0,
+      "first_case_main_started_at": "2026-11-15T03:26:30.323615+08:00",
+      "first_case_main_deadline": "2026-11-15T05:26:30.323615+08:00",
+      "verified_partial_scope": "h064-critic/integration",
+      "partial_verification": "critic-grid-h64h128-1115g/validation.json",
+      "phase_progress_captured_at": "2026-11-15T03:27:02.284899+08:00"
+    }
+  },
+  "latest_readonly_training_counters": {
+    "PPO_fresh_curve": {
+      "status": "training",
+      "persisted_updates": 1250,
+      "last_update": 1250,
+      "collection_steps": 30000,
+      "real_simulator_steps": 245760000,
+      "actor_normalization_count": 245760000,
+      "native_actor_and_critic_changed_and_finite": true,
+      "evidence_screenshot": "ppo-bones-progress-1115-0332.png",
+      "evidence_captured_at": "2026-11-15T03:30:56.547695+08:00"
+    },
+    "BONES_warm_tail": {
+      "log_iteration": 938,
+      "log_iteration_target": 2400,
+      "real_simulator_steps": 38424576,
+      "new_completed_collections": 9381,
+      "target_new_collections": 24000,
+      "exact_training_continuation": false,
+      "latest_logged_counter_not_live_process_state": true,
+      "evidence_screenshot": "bones-warm-tail-1115d-counter-0333.png",
+      "evidence_captured_at": "2026-11-15T03:31:51.330886+08:00",
+      "native_solver_and_linesearch_iteration_limit_warnings_present": true,
+      "physics_settings_changed": false
     }
   }
 }

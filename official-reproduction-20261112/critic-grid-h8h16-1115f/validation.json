@@ -1,0 +1,46 @@
+{
+  "status": "partial_grid_originals_verified",
+  "job_uid": "d3562d77ab654e5397354b8178275b09",
+  "source_commit": "69a96c0eb67e8d09ece973ec542fa4c8b428b334",
+  "log_original_bytes": 30240,
+  "log_sha256": "315d65ceb9cfbe6b1e4fdda9b6686e7d6cbe5f83bddc5436c33dde66c74a6c2c",
+  "transport": "captured live terminal text",
+  "all_recovered_JSON_original_byte_counts_and_SHA256_verified": true,
+  "original_JSONs": 9,
+  "groups": [
+    {
+      "label": "h008-critic/integration",
+      "original_JSONs": 9,
+      "status": "native_horizon_phase_originals_verified",
+      "horizon": 8,
+      "critic_enabled": true,
+      "phase": "integration",
+      "training_collections": 21,
+      "evaluated_collection": 11,
+      "successes": 0,
+      "failures": 40,
+      "mean_normalized_full_motion_return": 0.0017458611213393917,
+      "retained_model_sets": 3,
+      "model_files_per_set": 3,
+      "fixed40_reference_frames": 441140,
+      "all_cloud_trajectory_arrays_and_initial_states_verified": true,
+      "original_result_sha256": "a4579201175b17a06427aa7dd6304ac81cdebf4c1a5c4c45f8525ab7d83aee74",
+      "raw_weights_or_arrays_downloaded": false,
+      "single_seed": true,
+      "paper_results_reproduced": false
+    }
+  ],
+  "remaining_scopes": [
+    "h008-critic/main",
+    "h008-no-critic/integration",
+    "h008-no-critic/main",
+    "h016-critic/integration",
+    "h016-critic/main",
+    "h016-no-critic/integration",
+    "h016-no-critic/main"
+  ],
+  "source_and_model_hashes_bound": true,
+  "paper_training_episode_curves_completed": false,
+  "multiple_seeds": false,
+  "paper_results_reproduced": false
+}

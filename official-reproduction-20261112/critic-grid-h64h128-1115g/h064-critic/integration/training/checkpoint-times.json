@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "program_entry_utc": "2026-11-14T19:20:51.192623+00:00",
+  "runner_run_entry_utc": "2026-11-14T19:22:56.202421+00:00",
+  "time_definition": "Monotonic elapsed wall time. Program entry includes imports, config and environment/model initialization; runner.run entry excludes that setup. Both include native warmup, graph capture and snapshot overhead. Evaluation runs separately after training.",
+  "asynchronous_callback_caveat": "Callback entry is after native serialization and may be delayed by thread scheduling. Retained-snapshot completion is an observed availability upper bound, not an exact collection/update completion timestamp.",
+  "checkpoints": [
+    {
+      "collection_steps": 1,
+      "callback_entry_after_native_save": {
+        "utc": "2026-11-14T19:23:17.295188+00:00",
+        "seconds_since_program_entry": 146.1025629416108,
+        "seconds_since_runner_run_entry": 21.092782966792583
+      },
+      "retained_snapshot_complete": {
+        "utc": "2026-11-14T19:23:18.957194+00:00",
+        "seconds_since_program_entry": 147.76456182450056,
+        "seconds_since_runner_run_entry": 22.75478184968233
+      },
+      "offline_artifact_logging_returned": {
+        "utc": "2026-11-14T19:23:19.546305+00:00",
+        "seconds_since_program_entry": 148.35368122532964,
+        "seconds_since_runner_run_entry": 23.343901250511408
+      }
+    },
+    {
+      "collection_steps": 11,
+      "callback_entry_after_native_save": {
+        "utc": "2026-11-14T19:24:24.219183+00:00",
+        "seconds_since_program_entry": 213.02655766159296,
+        "seconds_since_runner_run_entry": 88.01677768677473
+      },
+      "retained_snapshot_complete": {
+        "utc": "2026-11-14T19:24:25.426823+00:00",
+        "seconds_since_program_entry": 214.2341992892325,
+        "seconds_since_runner_run_entry": 89.22441931441426
+      },
+      "offline_artifact_logging_returned": {
+        "utc": "2026-11-14T19:24:25.995459+00:00",
+        "seconds_since_program_entry": 214.8028362430632,
+        "seconds_since_runner_run_entry": 89.79305626824498
+      }
+    },
+    {
+      "collection_steps": 21,
+      "callback_entry_after_native_save": {
+        "utc": "2026-11-14T19:24:28.066523+00:00",
+        "seconds_since_program_entry": 216.87389950081706,
+        "seconds_since_runner_run_entry": 91.86411952599883
+      },
+      "retained_snapshot_complete": {
+        "utc": "2026-11-14T19:24:29.178925+00:00",
+        "seconds_since_program_entry": 217.98630145937204,
+        "seconds_since_runner_run_entry": 92.97652148455381
+      },
+      "offline_artifact_logging_returned": {
+        "utc": "2026-11-14T19:24:29.730329+00:00",
+        "seconds_since_program_entry": 218.53770662099123,
+        "seconds_since_runner_run_entry": 93.527926646173
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "uid": "eec0461eab8d486baa0d551fb39aaf54",
+  "name": "supermimic-official-two-gpu-260010076-1115e",
+  "source_commit": "1c8f3abb52802e321a5346ef0fea3c5fc8cea5fe",
+  "source_files": {
+    "run_native_two_gpu_gate_job.py": "01cbfd6523a86a4b508c1b4aa4d2f93bdd117592410d116132e76d6065b4d456",
+    "run_native_two_gpu_gate.py": "2a3dc4a721b698f6094069d8b406b9928fc9177563ace2d8d0cfd72ea046bc25",
+    "native_data_parallel.py": "cc11bb7ee70add54a690586eb445026eae91aa21527580fadb525a4dd47f0590",
+    "paper_profile.py": "14594ba9f002122e8fe4d22a1a8a9e982499b08629416f52069bee4ab1deb177",
+    "emit_json_receipts.py": "e9ea4f9e3f66edbb8becd3e2a78f73ebf9a79b0fba701dc11f2be3f3f33c34bb"
+  },
+  "command_sha256": "09d34e9dcc8faa0ef6ca9f0751709f617325261eac60d477bc1be4ca047af43b",
+  "output": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/native-two-gpu-gate-1115e",
+  "gpu": 2,
+  "replicas": 1,
+  "max_restarts": 0,
+  "max_program_seconds": 2700,
+  "forced_kill_after_seconds": 30,
+  "kind": "frozen_launch_inputs_and_actual_job_uid",
+  "vcpu": 8,
+  "ram_gib": 128
+}
