@@ -2,10 +2,10 @@
   "status": "scope_audit_incomplete_paper_reproduction",
   "goal_complete": false,
   "scope_redefined": false,
-  "as_of": "2026-11-13T15:36:32.821206+08:00",
+  "as_of": "2026-11-15T03:11:29.857671+08:00",
   "paper_pdf_sha256": "fe213017ab062f4acc3965da89abd3c29969163e144a2628a662b8ce46691009",
   "upstream_supermimic_commit": "abc124c1bd5976341034668af3d12c087f2f1f55",
-  "code_and_evidence_commit": "18efd16ad7d161ebb335fd81292f1280fe65c9ce",
+  "code_and_evidence_commit": "8f0e4d8",
   "rows": [
     {
       "id": "local_environment",
@@ -63,11 +63,13 @@
         16,
         18
       ],
-      "status": "user_paused_raw_long_training_incomplete",
+      "status": "original_raw320k_interrupted_explicit296001_weight_warm_tail_running",
       "evidence": [
         "checkpoint-series-gpu-validation.json"
       ],
-      "qualification": "Latest read-only counter295111/320001; parent completion and final corrected full142220 evaluation remain unavailable. Model snapshots are not complete training-state resume checkpoints."
+      "qualification": "Fresh AFS inspection verified75 immutable model sets through296001. Original parent is incomplete. Separate1115d passed21 native CUDA warm-start collections, then started24000 new collections with model/normalization restoration and optimizer/replay/sampler/simulator/RNG reset. Full142220 evaluation remains pending.",
+      "current_attempt": "1115d",
+      "exact_training_continuation": false
     },
     {
       "id": "two_gpu",
@@ -76,13 +78,19 @@
         16,
         18
       ],
-      "status": "actual_two_CPU_Gloo_component_checks_passed_true_NCCL_G1_gate_prepared",
+      "status": "actual_two_H100_NCCL_native_gate_completed_originals_verified",
       "evidence": [
         "native_data_parallel.py",
         "run_native_two_gpu_gate.py",
         "native-data-parallel-cpu/validation.json"
       ],
-      "qualification": "Two actual CPUrank processes verified gradient averaging before clipping,native distributed moments andshared returnsampler against independent controls. True2H100/NCCL,fullnativeintegration,matched evaluation andpaper throughput remainunexecuted. Gate codeprepared, notsubmitted; currentownGPUrequestcap retained."
+      "qualification": "Corrected1115e passed on2H100/NCCL with172032 global real observations; model/normalizer/sampler value-count-effort states matched. Six originals and source hashes independently verified. First failure1115a remains preserved. No paper-quality, throughput or full-resume equivalence claim.",
+      "failure_evidence": "native-two-gpu-gate-1115a/validation.json",
+      "retry": "1115e",
+      "full_gate_passed": true,
+      "new_evidence": [
+        "native-two-gpu-gate-1115e/validation.json"
+      ]
     },
     {
       "id": "sonic_comparison",
@@ -103,7 +111,7 @@
         6,
         7
       ],
-      "status": "user_paused_native_training_complete_six_of_nine_eval_points",
+      "status": "complete_native9point_full40_curve_verified_PPO2048_baseline_running",
       "evidence": [
         "manual-reset-v2-lafan40-result.json",
         "manual-reset-v2-lafan40-accounting.json",
@@ -115,7 +123,7 @@
         "learning-curve-paused-points-1113ag.json",
         "user-pause-20261113.json"
       ],
-      "qualification": "Native64001 training completed; six full40 driver-log points through40001 completed with cloud audits. Step32001 scored40/40 and.842692,step40001 scored39/40 and.840784. Original49 main JSONs and completed9point curve not recovered; no matched PPO/paper/multiseed claim.",
+      "qualification": "All49 originals of the nine-point native64001 full40 curve are verified, including all360 cloud trajectory/initial-state audits. Final40/40 mean0.85498; first sampled mean>=0.82 at24001. One seed. Fresh PPO2048 running; no matched PPO speedup or paper equivalence claim.",
       "PPO_Sim_integration": {
         "status": "actual8192G1_PPO_gate_completed_and_originals_verified",
         "uid": "12b951aa6d3c4027b867c5591b1af8dc",
@@ -128,7 +136,14 @@
         "world_model_updates": 0,
         "limitation": "Three PPO updates, not full18h1/4/8GPU curves or fixed-start policy quality"
       },
-      "PPO_Sim_learning_curve": {
+      "new_evidence": [
+        "lafan-curve-64k-1115b/validation.json",
+        "lafan-curve-64k-1115b/learning-curve-analysis.json"
+      ],
+      "native_final_successes": 40,
+      "native_final_mean": 0.8549796937353648,
+      "matched_PPO_comparison_complete": false,
+      "PPO_Sim_learning_curve_1113ak_interrupted": {
         "status": "user_paused_incomplete",
         "uid": "a30dd1b7e5f2479192d96dc7b80fbc29",
         "source_commit": "18efd16ad7d161ebb335fd81292f1280fe65c9ce",
@@ -153,7 +168,18 @@
           "original_five_JSON_pending": true
         },
         "last_observed_actual_updates": 1800,
-        "last_observed_actual_real_steps": 353894400
+        "last_observed_actual_real_steps": 353894400,
+        "AFS_inventory_actual_updates": 1900
+      },
+      "PPO_Sim_learning_curve": {
+        "status": "fresh2048_training_running",
+        "uid": "bb89a2d9e06042dd9426fc52c0eb8854",
+        "source_commit": "18efd16ad7d161ebb335fd81292f1280fe65c9ce",
+        "persisted_updates_observed": 650,
+        "real_steps_observed": 127795200,
+        "quality_curve_completed": false,
+        "old_run_preserved": true,
+        "evidence": "resumption-run-status-20261115.json"
       }
     },
     {
@@ -214,14 +240,34 @@
         7,
         8
       ],
-      "status": "H32_no_critic16k_full40_endpoint_complete_and_arrays_verified",
+      "status": "H32_critic_and_no_critic_same_save_cadence16k_pair_verified_full_horizon_sweep_missing",
       "evidence": [
         "critic-free-h32-run-plan.json",
         "critic-free-main-1113ah/receipt-ledger.json",
         "critic-free-main-1113ah/validation.json",
         "critic-free-main-1113ah/critic-endpoint-comparison.json"
       ],
-      "qualification": "Single seed42 H32 endpoint: no-critic25/40 mean.63547762 versus previous critic39/40 mean.79713198 on exact same canonical40 hashes. Five two-model snapshots and127MB arrays verified. Not ten-case training-return horizon sweep, matched threshold timing or push recovery; compare timed64k retained16001 when available."
+      "qualification": "Matched4k save cadence at16001: critic35/40 mean0.78586; no-critic25/40 mean0.63548. All40 paired; no-critic higher on22, lower on18. Historical critic39/40 result retained separately. Full10case horizon/critic sweep and multi-seed effect remain missing.",
+      "new_evidence": [
+        "lafan-curve-64k-1115b/matched-critic-h32-16k/comparison.json"
+      ],
+      "remaining_16k_grid": {
+        "status": "submitted_running_or_starting",
+        "jobs": [
+          "d3562d77ab654e5397354b8178275b09",
+          "796b03e53e1e429bbe4f8db7772c83e2"
+        ],
+        "horizons": [
+          8,
+          16,
+          64,
+          128
+        ],
+        "each_with_and_without_critic": true,
+        "whole_limit_each_seconds": 32400,
+        "H32_reused": true,
+        "paper_training_episode_curves_completed": false
+      }
     },
     {
       "id": "push_recovery",
@@ -284,15 +330,15 @@
   ],
   "original_scope_retained": true,
   "no_new_cloud_jobs_submitted_by_this_audit": false,
-  "next_execution_priority": [
-    "Remain paused. No training, evaluation, cloud submission, automatic monitoring, or resume without a new explicit user request."
-  ],
-  "last_status_update": "2026-11-13T15:36:32.821206+08:00",
-  "execution_status": "user_paused",
-  "resume_requires_explicit_user_request": true,
+  "next_execution_priority": "Finish fresh PPO2048 and explicitly segmented raw-BONES tail/evaluation; fill remaining H8/16/64/128 critic/no-critic16k endpoints with at most4 H100. Native2H100 gate and LAFAN9point curve are complete; do not repeat them.",
+  "last_status_update": "2026-11-15T03:21:59.529036+08:00",
+  "execution_status": "explicit_user_resumption_four_H100_finite_jobs",
+  "resume_requires_explicit_user_request": false,
   "execution_priorities_before_user_pause": [
     "Finish frozen raw320k and separately evaluate finalmodel with correctedv2 plus completearrayaudit",
     "Recover timedLAFAN64k complete ninepoint curve and all original receipts after finite livejob ends",
     "Continue realG1 PPO-WM/PPO-Sim, critic horizons, push andmultiGPU matched experiments; retain missingexactauthor inputs andhardware limitation"
-  ]
+  ],
+  "current_user_resumption": "2026-11-15 explicit request; at college; up to4 H100. Historical pause is preserved.",
+  "previous_as_of_before_resumption": "2026-11-13T15:36:32.821206+08:00"
 }

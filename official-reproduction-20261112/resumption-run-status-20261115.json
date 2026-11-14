@@ -1,0 +1,91 @@
+{
+  "observed_at": "2026-11-15T03:22:48.787021+08:00",
+  "user_resumed": true,
+  "max_requested_H100": 4,
+  "requested_nonterminal_H100": 4,
+  "paper_results_reproduced": false,
+  "LIBERO_paused": true,
+  "completed": {
+    "lafan_curve": "lafan-curve-64k-1115b/validation.json",
+    "two_H100_gate": "native-two-gpu-gate-1115e/validation.json"
+  },
+  "retained_failure": "native-two-gpu-gate-1115a/validation.json",
+  "current_jobs": {
+    "PPO_fresh_curve": {
+      "status": "submitted_running",
+      "name": "supermimic-official-ppo-sim-260010076-1115c",
+      "gpu": 1,
+      "max_restarts": 0,
+      "max_program_seconds": 16200,
+      "source_commit": "18efd16ad7d161ebb335fd81292f1280fe65c9ce",
+      "command_sha256": "cfb41bf81411e7eaf4f53bb78c2a5b82cade94450ced4d222ed9900f2f43cf93",
+      "uid": "bb89a2d9e06042dd9426fc52c0eb8854",
+      "main_training_started_at": "2026-11-15T02:44:01.082318+08:00",
+      "main_training_deadline": "2026-11-15T04:14:01.082318+08:00",
+      "created_at": "2026-11-15T02:39:53+08:00",
+      "platform_status": "running",
+      "program_started_at": "2026-11-15T02:40:10+08:00",
+      "program_deadline": "2026-11-15T07:10:10+08:00"
+    },
+    "BONES_warm_tail": {
+      "name": "supermimic-official-bones-warm-tail-260010076-1115d",
+      "source_commit": "4dd096a621858cf8d9c48e86a818d38de5cc78dc",
+      "command_sha256": "113bcf2ae3c5087e73b617faa75eb578e851b992fe4693c0ce1588c03d21a7d8",
+      "status": "running",
+      "uid": "bfab3e48759548ef9be134a3fcadde53",
+      "max_restarts": 0,
+      "gpu": 1,
+      "max_program_seconds": 18000,
+      "inherited_collections": 296001,
+      "new_training_collections": 24000,
+      "combined_collections": 320001,
+      "exact_training_continuation": false,
+      "platform_status": "running",
+      "created_at": "2026-11-15T03:00:41+08:00",
+      "program_started_at": "2026-11-15T03:01:11+08:00",
+      "program_deadline": "2026-11-15T08:01:11+08:00",
+      "forced_exit_deadline": "2026-11-15T08:01:41+08:00",
+      "integration_actual_native_CUDA_passed": true,
+      "main_training_started_at": "2026-11-15T03:07:09.961340+08:00",
+      "main_training_deadline": "2026-11-15T05:37:09.961340+08:00"
+    },
+    "horizon_H8_H16": {
+      "name": "supermimic-official-critic-h8h16-260010076-1115f",
+      "status": "running",
+      "uid": "d3562d77ab654e5397354b8178275b09",
+      "max_restarts": 0,
+      "gpu": 1,
+      "max_program_seconds": 32400,
+      "source_commit": "69a96c0eb67e8d09ece973ec542fa4c8b428b334",
+      "command_sha256": "593b527903e3ebf71272863a8b87f550aaea6baf203ce5c2c0237fc1a0936144",
+      "horizons": [
+        8,
+        16
+      ],
+      "platform_status": "running",
+      "created_at": "2026-11-15T03:18:10+08:00",
+      "program_started_at": "2026-11-15T03:18:53+08:00",
+      "program_deadline": "2026-11-15T12:18:53+08:00",
+      "forced_exit_deadline": "2026-11-15T12:19:23+08:00"
+    },
+    "horizon_H64_H128": {
+      "name": "supermimic-official-critic-h64h128-260010076-1115g",
+      "status": "running",
+      "uid": "796b03e53e1e429bbe4f8db7772c83e2",
+      "max_restarts": 0,
+      "gpu": 1,
+      "max_program_seconds": 32400,
+      "source_commit": "69a96c0eb67e8d09ece973ec542fa4c8b428b334",
+      "command_sha256": "e48f14b01a90c0f056d36ba591c133f4174d36994bb65abc713acd32c033526a",
+      "horizons": [
+        64,
+        128
+      ],
+      "platform_status": "running",
+      "created_at": "2026-11-15T03:19:12+08:00",
+      "program_started_at": "2026-11-15T03:20:18+08:00",
+      "program_deadline": "2026-11-15T12:20:18+08:00",
+      "forced_exit_deadline": "2026-11-15T12:20:48+08:00"
+    }
+  }
+}
