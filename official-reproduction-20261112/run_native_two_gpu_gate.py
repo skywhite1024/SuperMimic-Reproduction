@@ -177,6 +177,7 @@ def main():
             actor_real_observation_count=int(runner.policy_learner.actor.obs_normalizer.count),
             shared_sampler_value_sha256=tensor_hash(runner._sampler.native.value),
             shared_sampler_count_sha256=tensor_hash(runner._sampler.native.count),
+            shared_sampler_effort_sha256=tensor_hash(runner._sampler.native.effort),
             checkpoints=checkpoints,resolved_config_sha256=hashlib.sha256((folder/'resolved-config.json').read_bytes()).hexdigest())
         write(folder/'result.json',report)
         participants=[None,None];dist.all_gather_object(participants,report)
@@ -186,8 +187,8 @@ def main():
         assert participants[0]['initial_real_state_sha256']!=participants[1]['initial_real_state_sha256']
         assert {row['local_rank'] for row in participants}=={0,1}
         for key in ('optimizer_steps','actor_real_observation_count','shared_sampler_value_sha256',
-                    'shared_sampler_count_sha256','sim_context_state_sha256'):
-            assert participants[0][key]==participants[1][key]
+                    'shared_sampler_count_sha256','shared_sampler_effort_sha256','sim_context_state_sha256'):
+            assert participants[0][key]==participants[1][key], 'Rank state mismatch: '+key
         # Native actor normalizer uses one latest real observation per step.
         assert all(row['actor_real_observation_count']==8192*21 for row in participants)
         if rank==0:

@@ -102,6 +102,13 @@ def process_check(rank,store,output):
 
         sampler_cfg=ReturnSamplerCfg(horizon=2)
         shared=SharedReturnSampler(sampler_cfg,4,100,2,.1,'cpu')
+        original_sampler_update=shared.native._update
+        def perturbed_update():
+            original_sampler_update()
+            # Simulate the rank-local floating scatter reduction drift observed
+            # on H100. The shared state and returned distribution must repair it.
+            if rank==1:shared.native.value.add_(1e-4)
+        shared.native._update=perturbed_update
         sampler_reference=ReturnSampler(sampler_cfg,4,100,4,.1,device='cpu')
         for step in range(4):
             frames=torch.tensor([step,step+2,step+50,step+70])

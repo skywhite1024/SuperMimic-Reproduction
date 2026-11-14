@@ -89,6 +89,12 @@ class SharedReturnSampler:
             raise ValueError('Each sampler input must be one real vector per local environment')
         gathered=[gather_equal_rows(value) for value in inputs]
         result=self.native.record(*gathered)
+        if result is not None:
+            # CUDA scatter-add over repeated bins may round differently on
+            # each GPU. Keep rank0's native update as the shared sampler state.
+            for name in ('value','count','effort'):
+                dist.broadcast(getattr(self.native,name),src=0)
+            dist.broadcast(result,src=0)
         self.records+=1
         self.distribution_updates+=int(result is not None)
         return result
