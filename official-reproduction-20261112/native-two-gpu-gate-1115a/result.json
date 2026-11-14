@@ -1,0 +1,13 @@
+{
+  "status": "failed",
+  "worker_timeout_seconds": 2400,
+  "whole_program_seconds": 2700,
+  "world_size": 2,
+  "expected_global_real_steps": 172032,
+  "quality_evaluation_completed": false,
+  "paper_results_reproduced": false,
+  "full_training_state_resume_available": false,
+  "worker_returncode": 1,
+  "worker_elapsed_seconds": 731.3141335155815,
+  "error": "RuntimeError: torchrun exited 1"
+}

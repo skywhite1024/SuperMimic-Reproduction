@@ -1,0 +1,16 @@
+{
+  "status": "complete_saved_initial_state_audit_verified",
+  "protocol_sha256": "b4d7b35c14dcd5d8e071c3763f4a2a449b712b395f37e4ef89ead8862b15b828",
+  "manual_reset_version": 2,
+  "packed_source_hashes_verified": true,
+  "initial_state_tolerance": {
+    "atol": 1e-05,
+    "rtol": 1e-05
+  },
+  "saved_initial_states_verified": 40,
+  "maximum_abs_error": 4.76837158203125e-07,
+  "all_saved_initial_states_verified": true,
+  "expected_clips": 40,
+  "scope": "All saved71D first rows versus native clipped packed reference; no policy replay, termination replay, deterministic-physics or tracking-quality claim",
+  "trajectory_integrity_summary_sha256": "2b904dc3cc5e344846e4658e32502edd64598520fd91b7894e086fa11964014d"
+}

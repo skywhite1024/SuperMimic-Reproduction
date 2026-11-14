@@ -1,0 +1,53 @@
+{
+  "receipts": [
+    {
+      "i": 0,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/native-two-gpu-gate-1115a/training/rank-0/resolved-config.json",
+      "bytes": 41917,
+      "sha256": "8ac2d24d2cfd3455f34b5b7d3f8601093d9b9829242b23e907afd383b9fcf792",
+      "chunks": 21
+    },
+    {
+      "i": 1,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/native-two-gpu-gate-1115a/training/rank-0/result.json",
+      "bytes": 5493,
+      "sha256": "a389c244845e693b8331d78365f25a6cf9ed8f2b9d9a08b995e2086fe94e58ca",
+      "chunks": 8
+    },
+    {
+      "i": 2,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/native-two-gpu-gate-1115a/training/rank-1/resolved-config.json",
+      "bytes": 41917,
+      "sha256": "c2109d8ebd51f8cc88e40a20b6b1fa29588ff3aefc7f0df5acb6bc3cf7239b17",
+      "chunks": 21
+    },
+    {
+      "i": 3,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/native-two-gpu-gate-1115a/training/rank-1/result.json",
+      "bytes": 5494,
+      "sha256": "54ab458aee5d1e55a6c5a1937d7de1f5293353e1af70bc4fff721e0d6edd2404",
+      "chunks": 8
+    },
+    {
+      "i": 4,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/native-two-gpu-gate-1115a/training/failed-rank-0.json",
+      "bytes": 5493,
+      "sha256": "a74fab4561eb50a250ce535418959460eb0e457bb717d4b52612fbb84dcbb6aa",
+      "chunks": 8
+    },
+    {
+      "i": 5,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/native-two-gpu-gate-1115a/training/failed-rank-1.json",
+      "bytes": 5494,
+      "sha256": "3f7d9de54611d9e9ce17cc41103272ccec01b520477039e4b19309ddbfb0f717",
+      "chunks": 8
+    },
+    {
+      "i": 6,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/native-two-gpu-gate-1115a/result.json",
+      "bytes": 397,
+      "sha256": "d5dae5d7c88ee48b05705180c12a3728a1a86006e1dba0592626865024290f6c",
+      "chunks": 1
+    }
+  ]
+}

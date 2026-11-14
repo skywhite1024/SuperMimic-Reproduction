@@ -1,0 +1,33 @@
+{
+  "status": "actual_two_H100_native_updates_verified_but_shared_sampler_gate_failed",
+  "job_uid": "57c620f6e2254714a86c612e88f9f220",
+  "original_JSON_receipts": 7,
+  "byte_counts_and_SHA256_verified": true,
+  "expanded_UI_and_offline_originals_identical": true,
+  "allocated_H100": 2,
+  "backend": "nccl",
+  "ranks": 2,
+  "global_real_simulator_steps": 172032,
+  "native_learner_outer_updates_per_rank": 6,
+  "native_optimizer_steps_per_rank": {
+    "world_model_optimizer_steps": 60,
+    "actor_optimizer_steps": 6,
+    "critic_optimizer_steps": 120
+  },
+  "learned_models_initial_and_final_identical_across_ranks": true,
+  "all_three_learned_networks_changed": true,
+  "independent_real_initial_states_verified": true,
+  "actor_normalization_count_both_ranks": 172032,
+  "native_weight_files_cloud_readback_verified": 6,
+  "sampler_count_hashes_identical": true,
+  "sampler_value_hashes_identical": false,
+  "first_failing_check": "cross-rank shared_sampler_value_sha256 equality",
+  "source_level_hypothesis": "Native CUDA scatter_add over repeated bins can round differently; exact cause not independently isolated",
+  "proposed_fix": "Use rank0 native value/count/effort and returned distribution after every sampler update",
+  "full_multiGPU_gate_passed": false,
+  "quality_evaluation_completed": false,
+  "paper_throughput_equivalence_verified": false,
+  "paper_results_reproduced": false,
+  "platform_terminal_state": "failed",
+  "exit_at": "2026-11-15T02:48:30.679+08:00"
+}

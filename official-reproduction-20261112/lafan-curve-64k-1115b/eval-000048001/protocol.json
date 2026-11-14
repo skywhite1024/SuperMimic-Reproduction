@@ -1,0 +1,683 @@
+{
+  "task": "SuperMimic-GenCoord-G1",
+  "seed": 42,
+  "clips": 40,
+  "num_envs": 40,
+  "batch_order": "index",
+  "all_motions_included": true,
+  "subset_filter_applied": false,
+  "batch_reset": "fresh env reset; exact first frame; history filled with first sensor frame",
+  "inference_scope": "all resets, observations and steps across all batches after model construction",
+  "incomplete_result_policy": "completed batch receipts retained; never label an interrupted evaluation complete",
+  "start": "exact first reference frame via author reset_to_frame",
+  "success": "first termination is native motion_end with no failure term",
+  "termination_terms": {
+    "time_out": {
+      "time_out": true,
+      "params": {}
+    },
+    "motion_end": {
+      "time_out": true,
+      "params": {
+        "command_name": "motion"
+      }
+    },
+    "anchor_pos": {
+      "time_out": false,
+      "params": {
+        "command_name": "motion",
+        "threshold": 0.25
+      }
+    },
+    "anchor_ori": {
+      "time_out": false,
+      "params": {
+        "asset_cfg": "SceneEntityCfg(name='robot', joint_names=None, joint_ids=slice(None, None, None), body_names=None, body_ids=slice(None, None, None), geom_names=None, geom_ids=slice(None, None, None), site_names=None, site_ids=slice(None, None, None), actuator_names=None, actuator_ids=slice(None, None, None), tendon_names=None, tendon_ids=slice(None, None, None), camera_names=None, camera_ids=slice(None, None, None), light_names=None, light_ids=slice(None, None, None), material_names=None, material_ids=slice(None, None, None), texture_names=None, texture_ids=slice(None, None, None), pair_names=None, pair_ids=slice(None, None, None), preserve_order=False)",
+        "command_name": "motion",
+        "threshold": 0.8
+      }
+    }
+  },
+  "domain_randomization": false,
+  "observation_noise": false,
+  "robot_collision_friction": 1.0,
+  "physics": "unchanged author defaults",
+  "repeatability_verified": false,
+  "native_joint_limit_clipping_on_reset": true,
+  "manual_reset_version": 2,
+  "observation_cache_refreshed_after_pose_write": true,
+  "actuator_histories_backfilled_after_pose_write": true,
+  "initial_reference_state_check": "Full71D matches native clipped reference; atol=1e-5,rtol=1e-5 before first action",
+  "training": {
+    "status": "pilot_completed",
+    "collection_steps": 64001,
+    "seed": 42,
+    "num_envs": 4096,
+    "elapsed_training_seconds": 8412.281570322812,
+    "gpu": "NVIDIA H100 80GB HBM3",
+    "checkpoints": [
+      {
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-curve-64k-1113ag/main/training/logs/SuperMimic-GenCoord-G1/2026-11-13_04-29-35/world_model.pt",
+        "bytes": 34990357,
+        "sha256": "46e6e590a83371c9c6f8b3d5fc3f262a17e520e9f831934eaa0c5a16fbda48fd"
+      },
+      {
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-curve-64k-1113ag/main/training/logs/SuperMimic-GenCoord-G1/2026-11-13_04-29-35/actor.pt",
+        "bytes": 46439949,
+        "sha256": "6765a0314b4e5af5481457590368c398499124066add56767b0402ef65180f91"
+      },
+      {
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-curve-64k-1113ag/main/training/logs/SuperMimic-GenCoord-G1/2026-11-13_04-29-35/critic.pt",
+        "bytes": 929269,
+        "sha256": "fcc71f78f460be5c5c69228c18443d7c466855b9b3bafda493ab9af230c0be5e"
+      }
+    ],
+    "full_clip_evaluation_completed": false,
+    "paper_results_reproduced": false,
+    "goal_assembly_backend": "eager",
+    "training_profile": "paper-a5-single-gpu",
+    "corpus": {
+      "name": "lafan40",
+      "clips": 40,
+      "frames": 441140,
+      "paper_name_filter_applied": false,
+      "paper_feasibility_filter_applied": false
+    },
+    "device_memory_after_initialization": {
+      "free_bytes": 78549155840,
+      "total_bytes": 85017624576,
+      "torch_allocated_bytes": 4469662208,
+      "torch_reserved_bytes": 4490002432
+    },
+    "peak_torch_memory_allocated_bytes": 18361843200,
+    "peak_torch_memory_reserved_bytes": 19895681024,
+    "memory_scope": "PyTorch allocator only; excludes Warp and other CUDA allocations",
+    "retained_checkpoint_series": [
+      {
+        "status": "model_snapshot_preserved",
+        "collection_steps": 1,
+        "files": [
+          {
+            "file": "world_model.pt",
+            "bytes": 34990357,
+            "sha256": "dacc1d5fcd3406dcdadb8c593169431cb0bc99ef027dfd1077d51d611b6189ab"
+          },
+          {
+            "file": "actor.pt",
+            "bytes": 46439949,
+            "sha256": "ca81221c15cdf7ec98eb67a7f49638fe6946f8baee899763418a571ed45e2411"
+          },
+          {
+            "file": "critic.pt",
+            "bytes": 929269,
+            "sha256": "0f31839f86cd86787552e41745f07d998f1c5c2a7ab0b4796a0c5f6a7555e24f"
+          }
+        ],
+        "full_training_resume_available": false,
+        "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state"
+      },
+      {
+        "status": "model_snapshot_preserved",
+        "collection_steps": 4001,
+        "files": [
+          {
+            "file": "world_model.pt",
+            "bytes": 34990357,
+            "sha256": "ccb97151bef49fdf7f42afa1969e53d236eff8ce0e4c45a6306e5a5b2a6d4acc"
+          },
+          {
+            "file": "actor.pt",
+            "bytes": 46439949,
+            "sha256": "f3dc11d6ee923ae8e4fe42810d72020593c3393278accb39a19c3ff46e2e09e4"
+          },
+          {
+            "file": "critic.pt",
+            "bytes": 929269,
+            "sha256": "8837bfd7eded508f8fd5d4e54e4cbc4591279d33594d95c52f0e7c3a909eb35b"
+          }
+        ],
+        "full_training_resume_available": false,
+        "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state"
+      },
+      {
+        "status": "model_snapshot_preserved",
+        "collection_steps": 8001,
+        "files": [
+          {
+            "file": "world_model.pt",
+            "bytes": 34990357,
+            "sha256": "7a8030828f4d97faa50423ae8b0bceac78540eef455445946140e1c4bffc3010"
+          },
+          {
+            "file": "actor.pt",
+            "bytes": 46439949,
+            "sha256": "34a962b6a7362cc16b08eabce0ad999ab23fce8615575f72aab892738186388f"
+          },
+          {
+            "file": "critic.pt",
+            "bytes": 929269,
+            "sha256": "e104cff3d9130ea10c67498fa12cbbafefb0fc206f37e36ebe3946efb6062dd5"
+          }
+        ],
+        "full_training_resume_available": false,
+        "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state"
+      },
+      {
+        "status": "model_snapshot_preserved",
+        "collection_steps": 12001,
+        "files": [
+          {
+            "file": "world_model.pt",
+            "bytes": 34990357,
+            "sha256": "b34116137c8ea4f5093a7f945500ae86cb1961fec76a618265ba36558bd50032"
+          },
+          {
+            "file": "actor.pt",
+            "bytes": 46439949,
+            "sha256": "3eef2e3278e2cea7bef16d21cf172603679ff08fb962051eb855bde21580b7d7"
+          },
+          {
+            "file": "critic.pt",
+            "bytes": 929269,
+            "sha256": "ff486c246809c7922a73afa9203893805293873f2ec82d189191676e99a6327e"
+          }
+        ],
+        "full_training_resume_available": false,
+        "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state"
+      },
+      {
+        "status": "model_snapshot_preserved",
+        "collection_steps": 16001,
+        "files": [
+          {
+            "file": "world_model.pt",
+            "bytes": 34990357,
+            "sha256": "ad64f157e2a473bf80c8bd57099a1309bdb2e173b68133d5fef6681f1293bea4"
+          },
+          {
+            "file": "actor.pt",
+            "bytes": 46439949,
+            "sha256": "551940336e547dad3e7435b758fe141a3c330b4852e6f6da5ae7e288fb8d6b4d"
+          },
+          {
+            "file": "critic.pt",
+            "bytes": 929269,
+            "sha256": "062aa6e318ae218c778b2549aedd80c32fc4742f963afb877d4fdc8743a89871"
+          }
+        ],
+        "full_training_resume_available": false,
+        "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state"
+      },
+      {
+        "status": "model_snapshot_preserved",
+        "collection_steps": 20001,
+        "files": [
+          {
+            "file": "world_model.pt",
+            "bytes": 34990357,
+            "sha256": "35bb14446bd2cff229d7388cbfa1da8565b0a308649d51e7be3e03b924c9b622"
+          },
+          {
+            "file": "actor.pt",
+            "bytes": 46439949,
+            "sha256": "a6f4765dd8d0173b62e35688e2032ab8689514be85c25e79224f814f4f7dd5aa"
+          },
+          {
+            "file": "critic.pt",
+            "bytes": 929269,
+            "sha256": "d56db46b1d89a85eef34da90c4b06249ee9a0400cabb9c15a527952d241fdaa5"
+          }
+        ],
+        "full_training_resume_available": false,
+        "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state"
+      },
+      {
+        "status": "model_snapshot_preserved",
+        "collection_steps": 24001,
+        "files": [
+          {
+            "file": "world_model.pt",
+            "bytes": 34990357,
+            "sha256": "4243b8199fed045495bc319d92678d2643598139e30a147b69ee111b646af01f"
+          },
+          {
+            "file": "actor.pt",
+            "bytes": 46439949,
+            "sha256": "4bfc66171230b98be838561cfea3e49e98eebaec260aeec9b0aa39b775ba400e"
+          },
+          {
+            "file": "critic.pt",
+            "bytes": 929269,
+            "sha256": "3d73f7c80fb7158dccadff7b4a333d056fac95b012dcec1acbf8c6c2ba92f620"
+          }
+        ],
+        "full_training_resume_available": false,
+        "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state"
+      },
+      {
+        "status": "model_snapshot_preserved",
+        "collection_steps": 28001,
+        "files": [
+          {
+            "file": "world_model.pt",
+            "bytes": 34990357,
+            "sha256": "1e63a4feac33dae604c91d67859d3b3d487901113a9118faf754eb557b63978a"
+          },
+          {
+            "file": "actor.pt",
+            "bytes": 46439949,
+            "sha256": "81dcd73cae17976df0bd8cf6a29f4d1b2867b5a0df5fb78cedbf8325677b4854"
+          },
+          {
+            "file": "critic.pt",
+            "bytes": 929269,
+            "sha256": "21a8a8652d21cc360baf4659379a26a556da13b017b3c4e83d577800e38f4e1c"
+          }
+        ],
+        "full_training_resume_available": false,
+        "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state"
+      },
+      {
+        "status": "model_snapshot_preserved",
+        "collection_steps": 32001,
+        "files": [
+          {
+            "file": "world_model.pt",
+            "bytes": 34990357,
+            "sha256": "71aa3cc18574a96c1695730d8a40ef43a62871d4fb20e9f73fca826792f458fb"
+          },
+          {
+            "file": "actor.pt",
+            "bytes": 46439949,
+            "sha256": "d2f81a164d43d364df0420844206decacbcc980fcae83c84a81fd67ee867e4db"
+          },
+          {
+            "file": "critic.pt",
+            "bytes": 929269,
+            "sha256": "f62ce326348180d90f24350a446bba508f164cb3eb94a7c21f3dbafcd2d6c227"
+          }
+        ],
+        "full_training_resume_available": false,
+        "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state"
+      },
+      {
+        "status": "model_snapshot_preserved",
+        "collection_steps": 36001,
+        "files": [
+          {
+            "file": "world_model.pt",
+            "bytes": 34990357,
+            "sha256": "d74f21896945bc7b38d88bbd2cce9837b26a4f918bab4618413bfa1ac8abd2d4"
+          },
+          {
+            "file": "actor.pt",
+            "bytes": 46439949,
+            "sha256": "ca0a1747cbe61c730467d800e7c834929176418d2a5ae08d0ce3164b97eaa8be"
+          },
+          {
+            "file": "critic.pt",
+            "bytes": 929269,
+            "sha256": "2d0891bc8ad701ce55672e9c5f3306aad528f780f6c9f6dcfc1fc43771d5e2de"
+          }
+        ],
+        "full_training_resume_available": false,
+        "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state"
+      },
+      {
+        "status": "model_snapshot_preserved",
+        "collection_steps": 40001,
+        "files": [
+          {
+            "file": "world_model.pt",
+            "bytes": 34990357,
+            "sha256": "effdc6a608ccae55d4350a0006943890890cdb7d87d2ac14b477f825a6fe4c13"
+          },
+          {
+            "file": "actor.pt",
+            "bytes": 46439949,
+            "sha256": "c735625c0332b7c87246058ba51932b7a2c5c9933ff535d1eab4304153589344"
+          },
+          {
+            "file": "critic.pt",
+            "bytes": 929269,
+            "sha256": "3e30209adf390d71840308b623b134a902ac4bf4e5ffa8e31cd6a1c49014dd18"
+          }
+        ],
+        "full_training_resume_available": false,
+        "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state"
+      },
+      {
+        "status": "model_snapshot_preserved",
+        "collection_steps": 44001,
+        "files": [
+          {
+            "file": "world_model.pt",
+            "bytes": 34990357,
+            "sha256": "7a23257c8ad5252db82dae58e5601cd0d938330c6bfdd774ceb7bf84031edaed"
+          },
+          {
+            "file": "actor.pt",
+            "bytes": 46439949,
+            "sha256": "4e43a4f90d9a489488406eea9cab3d3e2f3b0de45871bd4a809cd4ac5aa08e91"
+          },
+          {
+            "file": "critic.pt",
+            "bytes": 929269,
+            "sha256": "141190662026aade7449b9dae137f66698757ad5f40ba65c66e656e19bf5e640"
+          }
+        ],
+        "full_training_resume_available": false,
+        "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state"
+      },
+      {
+        "status": "model_snapshot_preserved",
+        "collection_steps": 48001,
+        "files": [
+          {
+            "file": "world_model.pt",
+            "bytes": 34990357,
+            "sha256": "226390168e5ab2f3cb02b4b4201eb1f5108338b1ce0a4bdc2bc6b66b93e9f98d"
+          },
+          {
+            "file": "actor.pt",
+            "bytes": 46439949,
+            "sha256": "470594ce04a0f3e4f089720efa09430010f23a1126fc04146010e4aa14a0c3ff"
+          },
+          {
+            "file": "critic.pt",
+            "bytes": 929269,
+            "sha256": "006a604af60bd77fae70b89a762db21cdc8bcc75e81f9ddd00ed9728a0c13f95"
+          }
+        ],
+        "full_training_resume_available": false,
+        "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state"
+      },
+      {
+        "status": "model_snapshot_preserved",
+        "collection_steps": 52001,
+        "files": [
+          {
+            "file": "world_model.pt",
+            "bytes": 34990357,
+            "sha256": "ce8cd6ccaf57baa4c83a1263ba32607a4c1cf95f19a0f229ec97ae95b51d9b08"
+          },
+          {
+            "file": "actor.pt",
+            "bytes": 46439949,
+            "sha256": "c3027dc402d444f81d5e2b4e0bdb1ef330c8107e0fb21c6d63928130464ea6bc"
+          },
+          {
+            "file": "critic.pt",
+            "bytes": 929269,
+            "sha256": "c1e3fd0711a616012b30a3999c3789d008f5dc6b26f322062d40df8e898543d2"
+          }
+        ],
+        "full_training_resume_available": false,
+        "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state"
+      },
+      {
+        "status": "model_snapshot_preserved",
+        "collection_steps": 56001,
+        "files": [
+          {
+            "file": "world_model.pt",
+            "bytes": 34990357,
+            "sha256": "2f92f67a3d850312fedfa0f48ec65c343390442d1519a8914d077de328950d76"
+          },
+          {
+            "file": "actor.pt",
+            "bytes": 46439949,
+            "sha256": "a5e1c7af6d3a608ad4ae9e18a6dd978684491d27b4de60414f885ac295ad9786"
+          },
+          {
+            "file": "critic.pt",
+            "bytes": 929269,
+            "sha256": "b134d033926dba65f2ff78344be0fa72af3f54bed6fc58b114e1a1ae080ea46e"
+          }
+        ],
+        "full_training_resume_available": false,
+        "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state"
+      },
+      {
+        "status": "model_snapshot_preserved",
+        "collection_steps": 60001,
+        "files": [
+          {
+            "file": "world_model.pt",
+            "bytes": 34990357,
+            "sha256": "d61dcac5942ad9d9259971adcdab802aa030a1a2b24413b1a193aa3ca588aa70"
+          },
+          {
+            "file": "actor.pt",
+            "bytes": 46439949,
+            "sha256": "5dfc0719375d6b91f24a2f188a0f48e30822e668a09333b6c3b0ea3d0f112857"
+          },
+          {
+            "file": "critic.pt",
+            "bytes": 929269,
+            "sha256": "de235cd1958e300265cef28526efc392b5e246bba161c29a7baf6b0e086d92b6"
+          }
+        ],
+        "full_training_resume_available": false,
+        "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state"
+      },
+      {
+        "status": "model_snapshot_preserved",
+        "collection_steps": 64001,
+        "files": [
+          {
+            "file": "world_model.pt",
+            "bytes": 34990357,
+            "sha256": "46e6e590a83371c9c6f8b3d5fc3f262a17e520e9f831934eaa0c5a16fbda48fd"
+          },
+          {
+            "file": "actor.pt",
+            "bytes": 46439949,
+            "sha256": "6765a0314b4e5af5481457590368c398499124066add56767b0402ef65180f91"
+          },
+          {
+            "file": "critic.pt",
+            "bytes": 929269,
+            "sha256": "fcc71f78f460be5c5c69228c18443d7c466855b9b3bafda493ab9af230c0be5e"
+          }
+        ],
+        "full_training_resume_available": false,
+        "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state"
+      }
+    ],
+    "checkpoint_timing_file": "checkpoint-times.json",
+    "runner_returned_observation": {
+      "utc": "2026-11-13T06:49:47.158653+00:00",
+      "seconds_since_program_entry": 8463.307595796883,
+      "seconds_since_runner_run_entry": 8411.703824769706
+    },
+    "full_training_resume_available": false
+  },
+  "paper_results_reproduced": false,
+  "checkpoint_selection": {
+    "parent_result_sha256": "39dbe053a498283bde51f025e485f552945e4a1c83477ff050411dce05129825",
+    "parent_collection_steps": 64001,
+    "evaluated_collection_steps": 48001,
+    "kind": "retained_snapshot",
+    "files": [
+      {
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-curve-64k-1113ag/main/training/checkpoint-series/step-000048001/world_model.pt",
+        "bytes": 34990357,
+        "sha256": "226390168e5ab2f3cb02b4b4201eb1f5108338b1ce0a4bdc2bc6b66b93e9f98d"
+      },
+      {
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-curve-64k-1113ag/main/training/checkpoint-series/step-000048001/actor.pt",
+        "bytes": 46439949,
+        "sha256": "470594ce04a0f3e4f089720efa09430010f23a1126fc04146010e4aa14a0c3ff"
+      },
+      {
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-curve-64k-1113ag/main/training/checkpoint-series/step-000048001/critic.pt",
+        "bytes": 929269,
+        "sha256": "006a604af60bd77fae70b89a762db21cdc8bcc75e81f9ddd00ed9728a0c13f95"
+      }
+    ],
+    "manifest_sha256": "7fd1518c5f632e95392af16af373ef28173266d465d370ef0a41edf5352338af",
+    "resolved_config_sha256": "018a9c2cabede2f00758afc3c56551e4b8051b1350ea0ca1ef0465cda94738b5"
+  },
+  "trajectory_state": "pre-action full_state; rewards and terminations are post-step",
+  "motion_files": {
+    "joint_names.json": "30355b480e4f89c97a693c72f8baf23902fd458d25e49b5df4741dd47aefce0d",
+    "joint_pos.npy": "64f0dff0d2e0d678a1f78213233124588044ba5781aa599c31b08d1348509a9b",
+    "joint_vel.npy": "11efc4b4b37b0818ea25a2dfa8676ed8f564a3443c97bf9c9680a346c06b23e0",
+    "motion_ends.npy": "fa4db64df8fe4d1f9362883b8c7b32d303a3865aeeab1c92fad0e89144cf8be5",
+    "motion_names.json": "b2b46cceb62efa50b159e13928b4c991b80b27a59b381ed603392cfa87e3c8b9",
+    "root_ang_vel_w.npy": "88ff137fd4a6dde1626dceae086c8a810da624d650855d69af1adc052565f9b5",
+    "root_lin_vel_w.npy": "7738f75d8de3b070a1d6407a06e1a971d5723abccc1e46a90a1aa86e93c486a0",
+    "root_pos_w.npy": "a57c5a8efc209c345ea4f7d83ef36936c0edfefb60f137757af69c6f4f7272fe",
+    "root_quat_w.npy": "9934171fce73559ec04d63db2bafee95575cd46196fe39aea425d677eae5303e"
+  },
+  "native_joint_names": [
+    "left_hip_pitch_joint",
+    "left_hip_roll_joint",
+    "left_hip_yaw_joint",
+    "left_knee_joint",
+    "left_ankle_pitch_joint",
+    "left_ankle_roll_joint",
+    "right_hip_pitch_joint",
+    "right_hip_roll_joint",
+    "right_hip_yaw_joint",
+    "right_knee_joint",
+    "right_ankle_pitch_joint",
+    "right_ankle_roll_joint",
+    "waist_yaw_joint",
+    "waist_roll_joint",
+    "waist_pitch_joint",
+    "left_shoulder_pitch_joint",
+    "left_shoulder_roll_joint",
+    "left_shoulder_yaw_joint",
+    "left_elbow_joint",
+    "left_wrist_roll_joint",
+    "left_wrist_pitch_joint",
+    "left_wrist_yaw_joint",
+    "right_shoulder_pitch_joint",
+    "right_shoulder_roll_joint",
+    "right_shoulder_yaw_joint",
+    "right_elbow_joint",
+    "right_wrist_roll_joint",
+    "right_wrist_pitch_joint",
+    "right_wrist_yaw_joint"
+  ],
+  "native_soft_joint_pos_limits": [
+    [
+      -2.2601749897003174,
+      2.6092751026153564
+    ],
+    [
+      -0.34906482696533203,
+      2.792564868927002
+    ],
+    [
+      -2.481839895248413,
+      2.481839895248413
+    ],
+    [
+      0.061086416244506836,
+      2.7314467430114746
+    ],
+    [
+      -0.8028565645217896,
+      0.4537865221500397
+    ],
+    [
+      -0.23561999201774597,
+      0.23561999201774597
+    ],
+    [
+      -2.2601749897003174,
+      2.6092751026153564
+    ],
+    [
+      -2.792564868927002,
+      0.34906482696533203
+    ],
+    [
+      -2.481839895248413,
+      2.481839895248413
+    ],
+    [
+      0.061086416244506836,
+      2.7314467430114746
+    ],
+    [
+      -0.8028565645217896,
+      0.4537865221500397
+    ],
+    [
+      -0.23561999201774597,
+      0.23561999201774597
+    ],
+    [
+      -2.3561999797821045,
+      2.3561999797821045
+    ],
+    [
+      -0.46799996495246887,
+      0.46799996495246887
+    ],
+    [
+      -0.46799996495246887,
+      0.46799996495246887
+    ],
+    [
+      -2.801219940185547,
+      2.3824195861816406
+    ],
+    [
+      -1.3962149620056152,
+      2.0595147609710693
+    ],
+    [
+      -2.3561999797821045,
+      2.3561999797821045
+    ],
+    [
+      -0.8901199102401733,
+      1.9373198747634888
+    ],
+    [
+      -1.7749979496002197,
+      1.7749979496002197
+    ],
+    [
+      -1.4529869556427002,
+      1.4529869556427002
+    ],
+    [
+      -1.4529869556427002,
+      1.4529869556427002
+    ],
+    [
+      -2.801219940185547,
+      2.3824195861816406
+    ],
+    [
+      -2.0595147609710693,
+      1.3962149620056152
+    ],
+    [
+      -2.3561999797821045,
+      2.3561999797821045
+    ],
+    [
+      -0.8901199102401733,
+      1.9373198747634888
+    ],
+    [
+      -1.7749979496002197,
+      1.7749979496002197
+    ],
+    [
+      -1.4529869556427002,
+      1.4529869556427002
+    ],
+    [
+      -1.4529869556427002,
+      1.4529869556427002
+    ]
+  ]
+}

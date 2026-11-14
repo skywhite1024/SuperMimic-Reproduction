@@ -1,0 +1,44 @@
+{
+  "status": "derived_plot_from_verified_originals",
+  "fixed_start_protocol": "manual-reset-v2",
+  "same_canonical_motion_hashes": true,
+  "seed": 42,
+  "critic_points": 9,
+  "no_critic_endpoint": {
+    "collection_steps": 16001,
+    "successes": 25,
+    "mean": 0.6354776196957028
+  },
+  "matched_cadence_16k_critic": {
+    "successes": 35,
+    "mean": 0.7858569384223237
+  },
+  "first_observed_sample_at_or_above_082": {
+    "collection_steps": 24001,
+    "real_simulator_steps": 98308096,
+    "successes": 39,
+    "failures": 1,
+    "mean_normalized_full_motion_return": 0.8290067885958701,
+    "saved_steps": 439711,
+    "seconds_since_program_entry": 3281.823052532971,
+    "seconds_since_runner_run_entry": 3230.2192815057933,
+    "result_sha256": "58975cc919ccb81603962f0848ff5885a0d18ddca29f8f945fbc2e86ba03dc12"
+  },
+  "exact_crossing_time_or_multiseed_effect_claimed": false,
+  "paper_results_reproduced": false,
+  "sources": {
+    "C:\\project\\sensecore\\SuperMimic\\publication\\SuperMimic-Reproduction\\official-reproduction-20261112\\lafan-curve-64k-1115b\\validation.json": "5942083d16b0961611a1d0b7517ef8089b3eacaf59749e0dded84596e37c9bcd",
+    "C:\\project\\sensecore\\SuperMimic\\publication\\SuperMimic-Reproduction\\official-reproduction-20261112\\critic-free-main-1113ah\\eval-000016001\\accounting.json": "4dded7d2b64d49d7bddfae807e95670b82a6e5946803fd901ea07bad7ce71e8e",
+    "C:\\project\\sensecore\\SuperMimic\\publication\\SuperMimic-Reproduction\\official-reproduction-20261112\\critic-free-main-1113ah\\training\\checkpoint-times.json": "55c8d0d9d7eadf5b18979fdf6154aa908335cfcc3a684ce3353fb9330f906683"
+  },
+  "plots": {
+    "png": {
+      "file": "lafan64k-learning-curve.png",
+      "sha256": "096d3c3ca69509f11c08181003b92df1fb1d19063af1270eb42cb34d53e6978f"
+    },
+    "svg": {
+      "file": "lafan64k-learning-curve.svg",
+      "sha256": "2099db04ddb1416c3693561870607dc78c36ccb137669aa3129bebb05338bbfa"
+    }
+  }
+}

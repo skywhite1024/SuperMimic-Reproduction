@@ -1,0 +1,315 @@
+{
+  "schema_version": 1,
+  "program_entry_utc": "2026-11-13T04:28:43.851059+00:00",
+  "runner_run_entry_utc": "2026-11-13T04:29:35.454841+00:00",
+  "time_definition": "Monotonic elapsed wall time. Program entry includes imports, config and environment/model initialization; runner.run entry excludes that setup. Both include native warmup, graph capture and snapshot overhead. Evaluation runs separately after training.",
+  "asynchronous_callback_caveat": "Callback entry is after native serialization and may be delayed by thread scheduling. Retained-snapshot completion is an observed availability upper bound, not an exact collection/update completion timestamp.",
+  "checkpoints": [
+    {
+      "collection_steps": 1,
+      "callback_entry_after_native_save": {
+        "utc": "2026-11-13T04:29:57.252442+00:00",
+        "seconds_since_program_entry": 73.40138119086623,
+        "seconds_since_runner_run_entry": 21.79761016368866
+      },
+      "retained_snapshot_complete": {
+        "utc": "2026-11-13T04:29:58.711872+00:00",
+        "seconds_since_program_entry": 74.8608111217618,
+        "seconds_since_runner_run_entry": 23.257040094584227
+      },
+      "offline_artifact_logging_returned": {
+        "utc": "2026-11-13T04:29:59.255450+00:00",
+        "seconds_since_program_entry": 75.4043911062181,
+        "seconds_since_runner_run_entry": 23.800620079040527
+      }
+    },
+    {
+      "collection_steps": 4001,
+      "callback_entry_after_native_save": {
+        "utc": "2026-11-13T04:39:54.281287+00:00",
+        "seconds_since_program_entry": 670.430227138102,
+        "seconds_since_runner_run_entry": 618.8264561109245
+      },
+      "retained_snapshot_complete": {
+        "utc": "2026-11-13T04:39:55.341900+00:00",
+        "seconds_since_program_entry": 671.4908411838114,
+        "seconds_since_runner_run_entry": 619.8870701566339
+      },
+      "offline_artifact_logging_returned": {
+        "utc": "2026-11-13T04:39:55.867434+00:00",
+        "seconds_since_program_entry": 672.0163749307394,
+        "seconds_since_runner_run_entry": 620.4126039035618
+      }
+    },
+    {
+      "collection_steps": 8001,
+      "callback_entry_after_native_save": {
+        "utc": "2026-11-13T04:48:35.560641+00:00",
+        "seconds_since_program_entry": 1191.7095809206367,
+        "seconds_since_runner_run_entry": 1140.105809893459
+      },
+      "retained_snapshot_complete": {
+        "utc": "2026-11-13T04:48:36.612887+00:00",
+        "seconds_since_program_entry": 1192.7618277408183,
+        "seconds_since_runner_run_entry": 1141.1580567136407
+      },
+      "offline_artifact_logging_returned": {
+        "utc": "2026-11-13T04:48:37.138932+00:00",
+        "seconds_since_program_entry": 1193.2878728993237,
+        "seconds_since_runner_run_entry": 1141.6841018721461
+      }
+    },
+    {
+      "collection_steps": 12001,
+      "callback_entry_after_native_save": {
+        "utc": "2026-11-13T04:57:18.031866+00:00",
+        "seconds_since_program_entry": 1714.180805709213,
+        "seconds_since_runner_run_entry": 1662.5770346820354
+      },
+      "retained_snapshot_complete": {
+        "utc": "2026-11-13T04:57:19.096296+00:00",
+        "seconds_since_program_entry": 1715.2452368587255,
+        "seconds_since_runner_run_entry": 1663.641465831548
+      },
+      "offline_artifact_logging_returned": {
+        "utc": "2026-11-13T04:57:19.649126+00:00",
+        "seconds_since_program_entry": 1715.7980665788054,
+        "seconds_since_runner_run_entry": 1664.1942955516279
+      }
+    },
+    {
+      "collection_steps": 16001,
+      "callback_entry_after_native_save": {
+        "utc": "2026-11-13T05:06:00.343482+00:00",
+        "seconds_since_program_entry": 2236.4924214817584,
+        "seconds_since_runner_run_entry": 2184.888650454581
+      },
+      "retained_snapshot_complete": {
+        "utc": "2026-11-13T05:06:01.423841+00:00",
+        "seconds_since_program_entry": 2237.5727817080915,
+        "seconds_since_runner_run_entry": 2185.969010680914
+      },
+      "offline_artifact_logging_returned": {
+        "utc": "2026-11-13T05:06:01.970692+00:00",
+        "seconds_since_program_entry": 2238.1196332722902,
+        "seconds_since_runner_run_entry": 2186.5158622451127
+      }
+    },
+    {
+      "collection_steps": 20001,
+      "callback_entry_after_native_save": {
+        "utc": "2026-11-13T05:14:42.562790+00:00",
+        "seconds_since_program_entry": 2758.7117297649384,
+        "seconds_since_runner_run_entry": 2707.107958737761
+      },
+      "retained_snapshot_complete": {
+        "utc": "2026-11-13T05:14:43.630467+00:00",
+        "seconds_since_program_entry": 2759.7794084511697,
+        "seconds_since_runner_run_entry": 2708.175637423992
+      },
+      "offline_artifact_logging_returned": {
+        "utc": "2026-11-13T05:14:44.152239+00:00",
+        "seconds_since_program_entry": 2760.301180589944,
+        "seconds_since_runner_run_entry": 2708.6974095627666
+      }
+    },
+    {
+      "collection_steps": 24001,
+      "callback_entry_after_native_save": {
+        "utc": "2026-11-13T05:23:24.608886+00:00",
+        "seconds_since_program_entry": 3280.7578243799508,
+        "seconds_since_runner_run_entry": 3229.154053352773
+      },
+      "retained_snapshot_complete": {
+        "utc": "2026-11-13T05:23:25.674113+00:00",
+        "seconds_since_program_entry": 3281.823052532971,
+        "seconds_since_runner_run_entry": 3230.2192815057933
+      },
+      "offline_artifact_logging_returned": {
+        "utc": "2026-11-13T05:23:26.223004+00:00",
+        "seconds_since_program_entry": 3282.371944837272,
+        "seconds_since_runner_run_entry": 3230.7681738100946
+      }
+    },
+    {
+      "collection_steps": 28001,
+      "callback_entry_after_native_save": {
+        "utc": "2026-11-13T05:32:06.413480+00:00",
+        "seconds_since_program_entry": 3802.5624194703996,
+        "seconds_since_runner_run_entry": 3750.958648443222
+      },
+      "retained_snapshot_complete": {
+        "utc": "2026-11-13T05:32:07.475741+00:00",
+        "seconds_since_program_entry": 3803.624681778252,
+        "seconds_since_runner_run_entry": 3752.0209107510746
+      },
+      "offline_artifact_logging_returned": {
+        "utc": "2026-11-13T05:32:08.002525+00:00",
+        "seconds_since_program_entry": 3804.151466142386,
+        "seconds_since_runner_run_entry": 3752.5476951152086
+      }
+    },
+    {
+      "collection_steps": 32001,
+      "callback_entry_after_native_save": {
+        "utc": "2026-11-13T05:40:47.407387+00:00",
+        "seconds_since_program_entry": 4323.556326255202,
+        "seconds_since_runner_run_entry": 4271.952555228025
+      },
+      "retained_snapshot_complete": {
+        "utc": "2026-11-13T05:40:48.463733+00:00",
+        "seconds_since_program_entry": 4324.612674307078,
+        "seconds_since_runner_run_entry": 4273.008903279901
+      },
+      "offline_artifact_logging_returned": {
+        "utc": "2026-11-13T05:40:48.996416+00:00",
+        "seconds_since_program_entry": 4325.145357403904,
+        "seconds_since_runner_run_entry": 4273.541586376727
+      }
+    },
+    {
+      "collection_steps": 36001,
+      "callback_entry_after_native_save": {
+        "utc": "2026-11-13T05:49:26.378397+00:00",
+        "seconds_since_program_entry": 4842.527336530387,
+        "seconds_since_runner_run_entry": 4790.92356550321
+      },
+      "retained_snapshot_complete": {
+        "utc": "2026-11-13T05:49:27.567096+00:00",
+        "seconds_since_program_entry": 4843.71603641659,
+        "seconds_since_runner_run_entry": 4792.112265389413
+      },
+      "offline_artifact_logging_returned": {
+        "utc": "2026-11-13T05:49:28.090265+00:00",
+        "seconds_since_program_entry": 4844.239206109196,
+        "seconds_since_runner_run_entry": 4792.635435082018
+      }
+    },
+    {
+      "collection_steps": 40001,
+      "callback_entry_after_native_save": {
+        "utc": "2026-11-13T05:58:03.956763+00:00",
+        "seconds_since_program_entry": 5360.105703402311,
+        "seconds_since_runner_run_entry": 5308.501932375133
+      },
+      "retained_snapshot_complete": {
+        "utc": "2026-11-13T05:58:05.060107+00:00",
+        "seconds_since_program_entry": 5361.209048435092,
+        "seconds_since_runner_run_entry": 5309.605277407914
+      },
+      "offline_artifact_logging_returned": {
+        "utc": "2026-11-13T05:58:05.595023+00:00",
+        "seconds_since_program_entry": 5361.7439645938575,
+        "seconds_since_runner_run_entry": 5310.14019356668
+      }
+    },
+    {
+      "collection_steps": 44001,
+      "callback_entry_after_native_save": {
+        "utc": "2026-11-13T06:06:40.936561+00:00",
+        "seconds_since_program_entry": 5877.085499376059,
+        "seconds_since_runner_run_entry": 5825.481728348881
+      },
+      "retained_snapshot_complete": {
+        "utc": "2026-11-13T06:06:42.057426+00:00",
+        "seconds_since_program_entry": 5878.206366188824,
+        "seconds_since_runner_run_entry": 5826.602595161647
+      },
+      "offline_artifact_logging_returned": {
+        "utc": "2026-11-13T06:06:42.601401+00:00",
+        "seconds_since_program_entry": 5878.750342454761,
+        "seconds_since_runner_run_entry": 5827.146571427584
+      }
+    },
+    {
+      "collection_steps": 48001,
+      "callback_entry_after_native_save": {
+        "utc": "2026-11-13T06:15:17.765476+00:00",
+        "seconds_since_program_entry": 6393.914412915707,
+        "seconds_since_runner_run_entry": 6342.310641888529
+      },
+      "retained_snapshot_complete": {
+        "utc": "2026-11-13T06:15:18.841187+00:00",
+        "seconds_since_program_entry": 6394.990128055215,
+        "seconds_since_runner_run_entry": 6343.386357028037
+      },
+      "offline_artifact_logging_returned": {
+        "utc": "2026-11-13T06:15:19.379783+00:00",
+        "seconds_since_program_entry": 6395.528723817319,
+        "seconds_since_runner_run_entry": 6343.924952790141
+      }
+    },
+    {
+      "collection_steps": 52001,
+      "callback_entry_after_native_save": {
+        "utc": "2026-11-13T06:23:54.600372+00:00",
+        "seconds_since_program_entry": 6910.749310731888,
+        "seconds_since_runner_run_entry": 6859.14553970471
+      },
+      "retained_snapshot_complete": {
+        "utc": "2026-11-13T06:23:55.691469+00:00",
+        "seconds_since_program_entry": 6911.840409301221,
+        "seconds_since_runner_run_entry": 6860.236638274044
+      },
+      "offline_artifact_logging_returned": {
+        "utc": "2026-11-13T06:23:56.236814+00:00",
+        "seconds_since_program_entry": 6912.38575540483,
+        "seconds_since_runner_run_entry": 6860.781984377652
+      }
+    },
+    {
+      "collection_steps": 56001,
+      "callback_entry_after_native_save": {
+        "utc": "2026-11-13T06:32:32.083615+00:00",
+        "seconds_since_program_entry": 7428.232552152127,
+        "seconds_since_runner_run_entry": 7376.6287811249495
+      },
+      "retained_snapshot_complete": {
+        "utc": "2026-11-13T06:32:33.139097+00:00",
+        "seconds_since_program_entry": 7429.288038030267,
+        "seconds_since_runner_run_entry": 7377.684267003089
+      },
+      "offline_artifact_logging_returned": {
+        "utc": "2026-11-13T06:32:33.658229+00:00",
+        "seconds_since_program_entry": 7429.807170379907,
+        "seconds_since_runner_run_entry": 7378.203399352729
+      }
+    },
+    {
+      "collection_steps": 60001,
+      "callback_entry_after_native_save": {
+        "utc": "2026-11-13T06:41:08.883105+00:00",
+        "seconds_since_program_entry": 7945.032044790685,
+        "seconds_since_runner_run_entry": 7893.428273763508
+      },
+      "retained_snapshot_complete": {
+        "utc": "2026-11-13T06:41:09.958772+00:00",
+        "seconds_since_program_entry": 7946.107713267207,
+        "seconds_since_runner_run_entry": 7894.50394224003
+      },
+      "offline_artifact_logging_returned": {
+        "utc": "2026-11-13T06:41:10.489106+00:00",
+        "seconds_since_program_entry": 7946.6380472406745,
+        "seconds_since_runner_run_entry": 7895.034276213497
+      }
+    },
+    {
+      "collection_steps": 64001,
+      "callback_entry_after_native_save": {
+        "utc": "2026-11-13T06:49:45.551018+00:00",
+        "seconds_since_program_entry": 8461.699958346784,
+        "seconds_since_runner_run_entry": 8410.096187319607
+      },
+      "retained_snapshot_complete": {
+        "utc": "2026-11-13T06:49:46.605969+00:00",
+        "seconds_since_program_entry": 8462.754909906536,
+        "seconds_since_runner_run_entry": 8411.151138879359
+      },
+      "offline_artifact_logging_returned": {
+        "utc": "2026-11-13T06:49:47.133580+00:00",
+        "seconds_since_program_entry": 8463.2825220339,
+        "seconds_since_runner_run_entry": 8411.678751006722
+      }
+    }
+  ]
+}

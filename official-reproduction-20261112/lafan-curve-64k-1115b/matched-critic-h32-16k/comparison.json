@@ -1,0 +1,85 @@
+{
+  "status": "descriptive_matched_save_cadence_H32_full40_comparison",
+  "training_collection_steps": 16001,
+  "save_interval": 4000,
+  "num_envs": 4096,
+  "seed": 42,
+  "full40_reference_frames": 441140,
+  "critic_successes": 35,
+  "no_critic_successes": 25,
+  "critic_mean": 0.7858569384223237,
+  "no_critic_mean": 0.6354776196957028,
+  "no_critic_minus_critic_mean": -0.15037931872662091,
+  "per_clip_higher_without_critic": 22,
+  "per_clip_lower_without_critic": 18,
+  "success_transitions": {
+    "critic_True_no_critic_True": 23,
+    "critic_True_no_critic_False": 12,
+    "critic_False_no_critic_True": 2,
+    "critic_False_no_critic_False": 3
+  },
+  "most_negative_deltas": [
+    {
+      "index": 8,
+      "name": "fallAndGetUp1_subject1",
+      "reference_frames": 8411,
+      "critic_success": true,
+      "no_critic_success": false,
+      "critic_return": 0.7978023689108673,
+      "no_critic_return": 0.04369450894062278,
+      "no_critic_minus_critic": -0.7541078599702445
+    },
+    {
+      "index": 17,
+      "name": "fightAndSports1_subject1",
+      "reference_frames": 12257,
+      "critic_success": true,
+      "no_critic_success": false,
+      "critic_return": 0.7740305963975241,
+      "no_critic_return": 0.031193150354047343,
+      "no_critic_minus_critic": -0.7428374460434768
+    },
+    {
+      "index": 11,
+      "name": "fallAndGetUp2_subject2",
+      "reference_frames": 8196,
+      "critic_success": true,
+      "no_critic_success": false,
+      "critic_return": 0.7998612950287355,
+      "no_critic_return": 0.08253752970963484,
+      "no_critic_minus_critic": -0.7173237653191007
+    },
+    {
+      "index": 6,
+      "name": "dance2_subject4",
+      "reference_frames": 11284,
+      "critic_success": true,
+      "no_critic_success": false,
+      "critic_return": 0.7671420072850869,
+      "no_critic_return": 0.05334054333258034,
+      "no_critic_minus_critic": -0.7138014639525065
+    },
+    {
+      "index": 36,
+      "name": "walk3_subject3",
+      "reference_frames": 12331,
+      "critic_success": true,
+      "no_critic_success": false,
+      "critic_return": 0.8328407525190876,
+      "no_critic_return": 0.12160862801153857,
+      "no_critic_minus_critic": -0.711232124507549
+    }
+  ],
+  "multiple_seeds": false,
+  "training_episode_return_curve": false,
+  "exact_wall_time_comparison": false,
+  "causal_effect_or_paper_results_established": false,
+  "sources": {
+    "lafan-curve-64k-1115b/eval-000016001/result.json": "28f0cd1c1281e3afc6b7a459f84d0279211a39119ec0ed57a3e861a3753a3070",
+    "critic-free-main-1113ah/eval-000016001/result.json": "51623128ce3726ac892a3b49f29a740908ddeb13541220093bad22088a84590c",
+    "lafan-curve-64k-1115b/eval-000016001/protocol.json": "4c330c9fc8a73b2d528db89b0fe75093369566d7352ebfcbbc79613f23e39205",
+    "critic-free-main-1113ah/eval-000016001/protocol.json": "117355dc69c6c483e67090d51928bf18085c20bb1a2d1f680c97613799cc5db3",
+    "lafan-curve-64k-1115b/training/resolved-config.json": "018a9c2cabede2f00758afc3c56551e4b8051b1350ea0ca1ef0465cda94738b5",
+    "critic-free-main-1113ah/training/resolved-config.json": "c795fc122335ba99be6233873af1e26c02ad77eee09d4cf7108c01f2a0cd6c49"
+  }
+}

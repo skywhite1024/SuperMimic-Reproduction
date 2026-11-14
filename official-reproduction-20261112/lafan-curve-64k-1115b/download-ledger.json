@@ -1,0 +1,11 @@
+{
+  "download_file": "logs-acp-20261115T030444.txt.gz",
+  "lines": 472,
+  "gzip_bytes": 87407,
+  "gzip_sha256": "e10d2141fe4cf3e1d88464eb943ed6b39393f1aa4263541e051d4e21653386f4",
+  "decompressed_bytes": 167779,
+  "decompressed_sha256": "d26c4cf77405a02ef281fbd696a2f745c8edc0a98b946f2f2e18b45563e1958a",
+  "main_messages_sha256": "6edda3e28494d4ace1eb79155a43bd317c58ad52b2fd2884cfd05d1d4aae3db5",
+  "original_timestamped_stdout_preserved": true,
+  "integration_and_main_groups_separated": true
+}

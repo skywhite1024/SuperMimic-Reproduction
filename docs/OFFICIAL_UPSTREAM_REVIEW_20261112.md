@@ -684,3 +684,31 @@ The strongest completed large-corpus evidence remains corrected-v2 evaluation of
 Independent local/cloud runtimes, official code execution, large raw-corpus training, native evaluation and failure preservation are established. Exact author data membership, matched PPO efficiency, true2H100 execution, full horizon/batch/data-duration/push sweeps and hardware deployment remain incomplete. The released compiled-goal path's CUDA failure and the observed PPO-WM fractional-termination truncation are disclosed implementation/runtime issues, not proven causes of every result or author-confirmed fixes.
 
 If the user later resumes, the highest-value work is to inspect and recover the existing models/results, then finish missing fixed evaluations and the PPO comparison before another long training. Native snapshot files omit complete optimizer, replay and RNG state; a saved inference model does not establish an exact training continuation. No experiment was started to carry out this recommendation.
+
+## 53. November15 authorized resumption: completed LAFAN curve and actual two-H100 failure
+
+The user explicitly resumed official-code work from the college with up to four H100s. The November13 pause remains historical; LIBERO remains paused. Fresh AFS inspection found all17 completed LAFAN snapshots,75 complete raw-BONES snapshots ending at296,001, and the interrupted PPO run's1,900 persisted updates with the last complete saved set at1,536. The existing sources and both pinned upstream refs were unchanged.
+
+Job `1115b` reused the six already completed LAFAN points and evaluated only48,001/56,001/64,001, without rerunning training. All49 original JSONs were recovered byte-for-byte from its472-line log and independently checked against parent/configuration/model hashes. Every point covers the same40 motions and441,140 reference frames; all360 saved trajectories and initial states passed the cloud audits. See the [original ledger](../official-reproduction-20261112/lafan-curve-64k-1115b/receipt-ledger.json), [independent verification](../official-reproduction-20261112/lafan-curve-64k-1115b/validation.json), and [plot source](../official-reproduction-20261112/plot_lafan64k_curve.py).
+
+| Completed collections | Successes /40 | Mean normalized full-motion return |
+|---:|---:|---:|
+|1|0|0.00127|
+|8,001|30|0.65715|
+|16,001|35|0.78586|
+|24,001|39|0.82901|
+|32,001|40|0.84269|
+|40,001|39|0.84078|
+|48,001|40|0.85915|
+|56,001|39|0.85639|
+|64,001|40|0.85498|
+
+The first sampled score at or above0.82 is24,001 collections,98,308,096 real simulator transitions and53.84minutes since native runner entry. The final snapshot arrived at140.19minutes. These are original training clocks including compilation and snapshot I/O; the pause and later evaluation time are excluded. They are sampled threshold observations, not an interpolated crossing, a PPO advantage or multi-seed evidence. The curve plateaus with small fluctuations;40/40 endpoint success alone does not establish tracking/contact accuracy or held-out generalization.
+
+![Verified native LAFAN40 curve](../official-reproduction-20261112/lafan-curve-64k-1115b/lafan64k-learning-curve.png)
+
+The recovered16k point also supplies the closer4k-save-cadence critic comparison. With critic:35/40, mean0.78585694; without:25/40, mean0.63547762. Of all40 motions,23 succeed in both,12 only with critic,2 only without, and3 in neither. Without-critic returns are higher on22 clips and lower on18, while its macro mean is lower by0.15037932. This supports a coverage/early-failure benefit in this pair; it is not uniform improvement or a general causal claim. The older39/40 critic endpoint remains separately preserved. See the [complete paired table and analysis](../official-reproduction-20261112/lafan-curve-64k-1115b/matched-critic-h32-16k/comparison.json).
+
+The first actual two-H100 NCCL job `1115a` completed21 collections per rank and172,032 global real simulator transitions. Each rank performed60 world-model,6 actor and120 critic optimizer steps; all three learned networks changed. Initial and final model states matched across ranks, the real initial states differed, all six model files passed cloud readback, and both actor normalizers counted172,032 observations. However, the shared reset sampler's value hashes differed while its count hashes matched. The job correctly failed its cross-rank invariant and exited1. All seven originals, including both failure records, are [retained and independently verified](../official-reproduction-20261112/native-two-gpu-gate-1115a/validation.json). Native CUDA scatter-add rounding is a source-level hypothesis, not an independently isolated cause.
+
+The local adapter now broadcasts rank0's native sampler values/counts/effort and new distribution after each sampler update. A real two-process CPU test with deliberate rank-local sampler perturbation passed; this does not substitute for H100 verification. Retry `1115e` requests2H100 with a45-minute whole-job limit and zero restarts. A separate fresh one-H100 PPO-Sim2048 curve `1115c` runs the unchanged earlier training/evaluation source; the old interrupted run is not relabelled as resumed. One-H100 `1115d` first checks21 native CUDA collections from the exact296,001 snapshot, then attempts24,000 new collections and full raw142,220 evaluation within5hours. It preserves normalization/model weights and the inherited cosine-LR offset, but resets optimizer/replay/sampler/simulator/RNG state. Its combined320,001 collection count is explicitly segmented and cannot certify an uninterrupted paper training run. These running/pending jobs are not completed results.
