@@ -28,6 +28,10 @@ def main():
                         help="Retain finite, hash-identified model snapshots; does not enable training resume")
     parser.add_argument("--record-checkpoint-times", action="store_true",
                         help="Record asynchronous checkpoint availability times separately from model manifests")
+    parser.add_argument("--initial-native-snapshot", type=Path,
+                        help="Explicit model-weight warm start; optimizer/replay/RNG are reset")
+    parser.add_argument("--learning-rate-offset", type=int, default=0,
+                        help="Inherited native collection count for the A5 cosine schedule")
     parser.add_argument("--policy-horizon", type=int, choices=(8, 16, 32, 64, 128),
                         help="Explicit local critic-horizon ablation after applying the A5 profile")
     parser.add_argument("--without-critic", action="store_true",
@@ -39,6 +43,10 @@ def main():
     parser.add_argument("--goal-backend", choices=("official", "eager"), default="official",
                         help="Diagnostic: eager runs the author's same goal math without torch.compile")
     args = parser.parse_args()
+    if (args.initial_native_snapshot is None) != (args.learning_rate_offset == 0):
+        parser.error("Warm start requires both a native snapshot and a positive learning-rate offset")
+    if args.initial_native_snapshot is not None and (args.learning_rate_offset < 1 or args.training_profile != "paper-a5-single-gpu"):
+        parser.error("Warm start requires the explicit A5 profile and positive inherited count")
     if (args.policy_horizon is not None or args.without_critic) and args.training_profile != "paper-a5-single-gpu":
         parser.error("Critic/horizon ablation requires the explicit A5 profile")
     if args.steps < 2:
@@ -146,6 +154,11 @@ def main():
     config.runner.save_interval = save_interval
     config.runner.run_name = f"official-{args.corpus}-pilot-seed{args.seed}"
     config.runner.log_interval = 10
+    initial_payloads, initialization = None, None
+    if args.initial_native_snapshot is not None:
+        from native_warm_start import read_snapshot
+        initial_payloads, initialization = read_snapshot(args.initial_native_snapshot,
+            args.learning_rate_offset, dataclasses.asdict(config.runner), args.corpus)
     resolved = {
         "task": task, "seed": args.seed, "num_envs": args.num_envs,
         "collection_steps": args.steps, "motion_directory": str(motions),
@@ -164,6 +177,7 @@ def main():
         "record_checkpoint_times": args.record_checkpoint_times,
         "full_training_resume_available": False,
         "is_full_paper_reproduction": False,
+        "initialization": initialization,
     }
     (output / "resolved-config.json").write_text(
         json.dumps(resolved, indent=2, default=str) + "\n", encoding="utf-8"
@@ -173,6 +187,14 @@ def main():
     env = create_env(config.env, args.num_envs, device)
     runner = runner_class(env=env, cfg=config.runner, task_id=task,
                              registry_name=None, device=device)
+    if initial_payloads is not None:
+        from native_warm_start import restore_snapshot, learned_parameter_hashes
+        initialization = {**initialization, **restore_snapshot(runner, initial_payloads)}
+        runner._paper_step = args.learning_rate_offset
+        initialization["initial_learned_parameter_hashes"] = learned_parameter_hashes(runner)
+        (output / "initialization-readback.json").write_text(
+            json.dumps(initialization, indent=2) + "\n", encoding="utf-8")
+        del initial_payloads
     free_bytes, total_bytes = torch.cuda.mem_get_info()
     initial_memory = {"free_bytes": free_bytes, "total_bytes": total_bytes,
                       "torch_allocated_bytes": torch.cuda.memory_allocated(),
@@ -181,6 +203,12 @@ def main():
     started = time.monotonic()
     run_entry_utc = datetime.now(timezone.utc).isoformat()
     runner.run()
+    if initialization is not None:
+        initialization["final_learned_parameter_hashes"] = learned_parameter_hashes(runner)
+        if any(initialization["initial_learned_parameter_hashes"][key] == value
+               for key, value in initialization["final_learned_parameter_hashes"].items()):
+            raise RuntimeError("WarmStartDidNotUpdateEveryNativeLearnedNetwork")
+        initialization["all_three_learned_networks_changed"] = True
     runner_returned = clock_observation() if args.record_checkpoint_times else None
     wandb.finish()
     if args.keep_checkpoint_series:
@@ -233,6 +261,9 @@ def main():
         "checkpoint_timing_file": "checkpoint-times.json" if args.record_checkpoint_times else None,
         "runner_returned_observation": runner_returned,
         "full_training_resume_available": False,
+        "initialization": initialization,
+        "inherited_collection_steps": args.learning_rate_offset,
+        "combined_collection_steps_including_warm_start": args.learning_rate_offset + args.steps,
     }
     (output / "result.json").write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
     marker = "OFFICIAL_LAFAN_PILOT_PASS" if args.corpus == "lafan40" else "OFFICIAL_BONES_RAW_PILOT_PASS"
