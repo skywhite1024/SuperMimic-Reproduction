@@ -2,7 +2,7 @@
   "status": "scope_audit_incomplete_paper_reproduction",
   "goal_complete": false,
   "scope_redefined": false,
-  "as_of": "2026-11-16T06:17:48.415410+08:00",
+  "as_of": "2026-11-16T06:51:37.112982+08:00",
   "paper_pdf_sha256": "fe213017ab062f4acc3965da89abd3c29969163e144a2628a662b8ce46691009",
   "upstream_supermimic_commit": "abc124c1bd5976341034668af3d12c087f2f1f55",
   "code_and_evidence_commit": "8f0e4d8",
@@ -104,7 +104,7 @@
         7,
         18
       ],
-      "status": "corrected_CPU_dynamic_sequences_verified_cloud_full40_failed_before_physics_user_paused",
+      "status": "released_SONIC_common_full40_CUDA_physics_complete_originals_verified_exact_author_benchmark_missing",
       "evidence": [
         "sonic-pretrained-g1-cpu-1115/validation.json",
         "sonic-pretrained-g1-cpu-1115/source-files-read.json",
@@ -112,7 +112,7 @@
         "sonic-standing-cpu-1115/result.json",
         "sonic-standing-cpu-1115/independent-audit.json"
       ],
-      "qualification": "Original released SONIC G1 ONNX and derived batched CPU outputs verified. Corrected regular-body gyro scalar standing10s and full walk261.3s/run237.8s completed pilot criteria; independent array and500-state common-adapter checks passed. Cloud1115n failed600s wheel-download timeout;1115q verified mirror wheel hashes/offline installation then failed missing huggingface_hub before weight transfer or CUDA physics. Standard-library downloader repair is committed but unlaunched. No common full40/129514 SONIC comparison or paper benchmark claim.",
+      "qualification": "Released default SONIC G1 models and configurations pinned bySHA256. Original/derived batchedCPU parity passed. Common corrected-v2 LAFAN40 CUDA physics completed27successes/13failures,mean0.6019311578. All9originalJSONs and40native reward/termination records locally verified; all cloud arrays and initial states audited. Same18 posthoc subgroup15/18,mean0.7237865100. OwnSONICactuation retained; ONNXinferenceCPU. Exact129514authorfilteredbenchmark,originalSONICtrainingresetandpretrainingcomputecomparisonremainunconfirmed.",
       "latest_evidence": [
         "sonic-standing-cpu-v2-1115/independent-audit.json",
         "sonic-dynamic-cpu-v2-1115/independent-audit.json"
@@ -124,9 +124,13 @@
       ],
       "current_attempt": {
         "uid": "dd62849204044a6593f468a467977314",
-        "name": "supermimic-official-sonic40-260010076-1116a",
-        "status": "running_full40_evaluation_models_and_CPU_parity_passed"
-      }
+        "status": "complete_nine_original_JSONs_and_all40_native_scores_verified",
+        "validation": "sonic-cloud-full40-1116a/validation.json"
+      },
+      "new_evidence": [
+        "sonic-cloud-full40-1116a/validation.json",
+        "common-lafan40-comparison-1116.json"
+      ]
     },
     {
       "id": "lafan_efficiency",
@@ -251,7 +255,7 @@
       "paper_pages": [
         8
       ],
-      "status": "all_four_finite_full18_PPO_WM_curves_verified_same18_control_user_paused_before_evaluation",
+      "status": "four_PPO_WM_curves_and_six_interrupted_first_order_snapshot_full18_evaluations_verified",
       "evidence": [
         "ppo-wm-native-runtime-cpu-validation.json",
         "ppo-wm-integration-run-plan.json",
@@ -262,7 +266,7 @@
         "figure5-comparison-contract-review.json",
         "ppo-log-interval-local-diagnostic.json"
       ],
-      "qualification": "All four seed42 finite PPO-WM cases completed2048 updates, each83,886,080 real simulator transitions. All104 original JSONs and all18 per-clip sums verified. Returns0.4702769/0.5360035/0.5328681/0.6012685; successes10/10/12/12 outof18. First-order same18 control stopped by user before its deferred evaluation. Released uint8 termination truncation retained; author exact membership/hyperparameters and64x/1.67x speedups unverified.",
+      "qualification": "All104PPO-WMoriginalsplus42read-onlysame18controloriginalsverified. Allsixpre-stopnativecheckpointsrehashedand108full18recordsrecomputed. Native16001collections/65,540,096realtransitions reaches18/18,mean0.8540746311;20001gives17/18,mean0.8395342210. PPO-WMbest16kx32at2048updates/83,886,080realtransitionsgives12/18,mean0.6012684556. Allfailuresretained. Fourcasepose-sampleslocallyaudited10800frames/12decodedwindowvideos. ExactauthorFigure5membership/hypers,matchedclocks/multiseed,andpaper64x/1.67xspeedupsunverified. Original64001controltrainingremainsinterrupted;noexactcontinuationclaim.",
       "current_batch_learning": {
         "frozen_source_commit": "9594228b8411247729aa7d63d13150636d868f9a",
         "batch_shapes": [
@@ -312,7 +316,7 @@
         "clips": 18,
         "mean_normalized_full_motion_return": 0.47027693376345003
       },
-      "same18_first_order_control_status": "stopped_by_user_before_deferred_evaluation",
+      "same18_first_order_control_status": "original_parent_interrupted_six_saved_snapshots_evaluated_readonly",
       "verified_finite_endpoints": [
         {
           "case": "ppo-wm-4k32-1115i",
@@ -351,7 +355,16 @@
           "training_entry_seconds_to2048": 5234.7385608665645
         }
       ],
-      "pose_sample_quality_evidence": "ppo-wm-pose-audit-1116a/audit.json"
+      "pose_sample_quality_evidence": [
+        "ppo-wm-pose-audit-1116a/audit.json",
+        "ppo-wm-pose-audit-1116c/audit.json"
+      ],
+      "finite_same18_comparison_complete": true,
+      "original64001_control_training_complete": false,
+      "new_evidence": [
+        "interrupted-control18-1116b/validation.json",
+        "finite-same18-comparison-1116.json"
+      ]
     },
     {
       "id": "critic_horizons",
@@ -462,9 +475,9 @@
   ],
   "original_scope_retained": true,
   "no_new_cloud_jobs_submitted_by_this_audit": false,
-  "next_execution_priority": "Finish current SONIC full40 evaluation; evaluate six interrupted same18 saved snapshots read-only; retain all unfinished full-paper requirements.",
-  "last_status_update": "2026-11-16T06:17:48.415410+08:00",
-  "execution_status": "active_resumed_20261116",
+  "next_execution_priority": "Remaining original-scope data-duration scaling, matched-return push recovery, exact benchmark/protocol alignment and authorized multidevice work. No full-paper completion claim.",
+  "last_status_update": "2026-11-16T06:51:37.112982+08:00",
+  "execution_status": "active_finite_milestone_complete_full_paper_work_remains",
   "resume_requires_explicit_user_request": false,
   "execution_priorities_before_user_pause": [
     "Finish frozen raw320k and separately evaluate finalmodel with correctedv2 plus completearrayaudit",

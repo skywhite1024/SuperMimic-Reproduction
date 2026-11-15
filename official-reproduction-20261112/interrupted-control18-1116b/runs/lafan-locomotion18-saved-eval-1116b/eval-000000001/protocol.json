@@ -1,0 +1,250 @@
+{
+  "task": "SuperMimic-GenCoord-G1",
+  "seed": 42,
+  "clips": 18,
+  "num_envs": 18,
+  "batch_order": "index",
+  "all_motions_included": true,
+  "subset_filter_applied": false,
+  "batch_reset": "fresh env reset; exact first frame; history filled with first sensor frame",
+  "inference_scope": "all resets, observations and steps across all batches after model construction",
+  "incomplete_result_policy": "completed batch receipts retained; never label an interrupted evaluation complete",
+  "start": "exact first reference frame via author reset_to_frame",
+  "success": "first termination is native motion_end with no failure term",
+  "termination_terms": {
+    "time_out": {
+      "time_out": true,
+      "params": {}
+    },
+    "motion_end": {
+      "time_out": true,
+      "params": {
+        "command_name": "motion"
+      }
+    },
+    "anchor_pos": {
+      "time_out": false,
+      "params": {
+        "command_name": "motion",
+        "threshold": 0.25
+      }
+    },
+    "anchor_ori": {
+      "time_out": false,
+      "params": {
+        "asset_cfg": "SceneEntityCfg(name='robot', joint_names=None, joint_ids=slice(None, None, None), body_names=None, body_ids=slice(None, None, None), geom_names=None, geom_ids=slice(None, None, None), site_names=None, site_ids=slice(None, None, None), actuator_names=None, actuator_ids=slice(None, None, None), tendon_names=None, tendon_ids=slice(None, None, None), camera_names=None, camera_ids=slice(None, None, None), light_names=None, light_ids=slice(None, None, None), material_names=None, material_ids=slice(None, None, None), texture_names=None, texture_ids=slice(None, None, None), pair_names=None, pair_ids=slice(None, None, None), preserve_order=False)",
+        "command_name": "motion",
+        "threshold": 0.8
+      }
+    }
+  },
+  "domain_randomization": false,
+  "observation_noise": false,
+  "robot_collision_friction": 1.0,
+  "physics": "unchanged author defaults",
+  "repeatability_verified": false,
+  "native_joint_limit_clipping_on_reset": true,
+  "manual_reset_version": 2,
+  "observation_cache_refreshed_after_pose_write": true,
+  "actuator_histories_backfilled_after_pose_write": true,
+  "initial_reference_state_check": "Full71D matches native clipped reference; atol=1e-5,rtol=1e-5 before first action",
+  "training": {
+    "status": "interrupted_parent_native_saved_weights_only",
+    "originally_planned_collection_steps": 64001,
+    "last_pre_stop_logged_profile_collection": 22000,
+    "evaluated_collection_steps": 1,
+    "parent_training_complete": false,
+    "full_training_resume_available": false,
+    "paper_results_reproduced": false
+  },
+  "paper_results_reproduced": false,
+  "checkpoint_selection": {
+    "kind": "interrupted_parent_pre_stop_logged_snapshot",
+    "evaluated_collection_steps": 1,
+    "parent_training_complete": false,
+    "parent_stop_evidence_sha256": "8f1eb8b667fad5f7e174aa627bcb81c7553977079df018cd03573d13e8b2bbe6",
+    "parent_training_directory": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1115m/main/training",
+    "manifest_sha256": "beacd775ae7615f18f0dea276e3107532228b9dc52bdd99d0bef1227e18b284b",
+    "files": [
+      {
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1115m/main/training/checkpoint-series/step-000000001/world_model.pt",
+        "bytes": 34990357,
+        "sha256": "e69b399db157346c1625bf517cbb8ee3e5c88f9c6ff4648b2ba5dbc861863b48"
+      },
+      {
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1115m/main/training/checkpoint-series/step-000000001/actor.pt",
+        "bytes": 46439949,
+        "sha256": "6db7caaf5a7e2b3d8bf89e3f050835ad25663f10154a007a0b69777adb849740"
+      },
+      {
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1115m/main/training/checkpoint-series/step-000000001/critic.pt",
+        "bytes": 929269,
+        "sha256": "0f31839f86cd86787552e41745f07d998f1c5c2a7ab0b4796a0c5f6a7555e24f"
+      }
+    ],
+    "full_training_resume_available": false,
+    "resolved_config_sha256": "505ecbedaf34c9b312fe8d095d9fd827783f7d176737028fb09e98ebfcf10c97"
+  },
+  "training_algorithm": "first-order",
+  "trajectory_state": "pre-action full_state; rewards and terminations are post-step",
+  "motion_files": {
+    "joint_names.json": "30355b480e4f89c97a693c72f8baf23902fd458d25e49b5df4741dd47aefce0d",
+    "joint_pos.npy": "51120a4b9840fef0b428190785dfa06e3da7244e574fb810ec5e2726eca6134d",
+    "joint_vel.npy": "841f68f7066274a570243ae12658262735ef3f0d4ed059e9c33028706da147c5",
+    "motion_ends.npy": "02cddd5d35b718aaaeac6bb8def85709fa505c7db090811033a7745885e55cde",
+    "motion_names.json": "dbbd3f64e22d98200651b8db25ba002fe5ae65e64c4f73f292301ce92e958e2d",
+    "root_ang_vel_w.npy": "53739f31ae8633dda9fbc58220d7089a62db9383a3272c8a2a93412d40018fa4",
+    "root_lin_vel_w.npy": "c8d2864d8c76a2f2017fc29fe970000ceecaf16406e6654efdf1007487b4c9c4",
+    "root_pos_w.npy": "9d96c2d489041174a36e0e4eead129e8a1447867e895d049f7012a52cd925db1",
+    "root_quat_w.npy": "4aae8969960a1e413e2aa5a125dbeccc42a84d5cf79444efb6eebc139ed791c9"
+  },
+  "native_joint_names": [
+    "left_hip_pitch_joint",
+    "left_hip_roll_joint",
+    "left_hip_yaw_joint",
+    "left_knee_joint",
+    "left_ankle_pitch_joint",
+    "left_ankle_roll_joint",
+    "right_hip_pitch_joint",
+    "right_hip_roll_joint",
+    "right_hip_yaw_joint",
+    "right_knee_joint",
+    "right_ankle_pitch_joint",
+    "right_ankle_roll_joint",
+    "waist_yaw_joint",
+    "waist_roll_joint",
+    "waist_pitch_joint",
+    "left_shoulder_pitch_joint",
+    "left_shoulder_roll_joint",
+    "left_shoulder_yaw_joint",
+    "left_elbow_joint",
+    "left_wrist_roll_joint",
+    "left_wrist_pitch_joint",
+    "left_wrist_yaw_joint",
+    "right_shoulder_pitch_joint",
+    "right_shoulder_roll_joint",
+    "right_shoulder_yaw_joint",
+    "right_elbow_joint",
+    "right_wrist_roll_joint",
+    "right_wrist_pitch_joint",
+    "right_wrist_yaw_joint"
+  ],
+  "native_soft_joint_pos_limits": [
+    [
+      -2.2601749897003174,
+      2.6092751026153564
+    ],
+    [
+      -0.34906482696533203,
+      2.792564868927002
+    ],
+    [
+      -2.481839895248413,
+      2.481839895248413
+    ],
+    [
+      0.061086416244506836,
+      2.7314467430114746
+    ],
+    [
+      -0.8028565645217896,
+      0.4537865221500397
+    ],
+    [
+      -0.23561999201774597,
+      0.23561999201774597
+    ],
+    [
+      -2.2601749897003174,
+      2.6092751026153564
+    ],
+    [
+      -2.792564868927002,
+      0.34906482696533203
+    ],
+    [
+      -2.481839895248413,
+      2.481839895248413
+    ],
+    [
+      0.061086416244506836,
+      2.7314467430114746
+    ],
+    [
+      -0.8028565645217896,
+      0.4537865221500397
+    ],
+    [
+      -0.23561999201774597,
+      0.23561999201774597
+    ],
+    [
+      -2.3561999797821045,
+      2.3561999797821045
+    ],
+    [
+      -0.46799996495246887,
+      0.46799996495246887
+    ],
+    [
+      -0.46799996495246887,
+      0.46799996495246887
+    ],
+    [
+      -2.801219940185547,
+      2.3824195861816406
+    ],
+    [
+      -1.3962149620056152,
+      2.0595147609710693
+    ],
+    [
+      -2.3561999797821045,
+      2.3561999797821045
+    ],
+    [
+      -0.8901199102401733,
+      1.9373198747634888
+    ],
+    [
+      -1.7749979496002197,
+      1.7749979496002197
+    ],
+    [
+      -1.4529869556427002,
+      1.4529869556427002
+    ],
+    [
+      -1.4529869556427002,
+      1.4529869556427002
+    ],
+    [
+      -2.801219940185547,
+      2.3824195861816406
+    ],
+    [
+      -2.0595147609710693,
+      1.3962149620056152
+    ],
+    [
+      -2.3561999797821045,
+      2.3561999797821045
+    ],
+    [
+      -0.8901199102401733,
+      1.9373198747634888
+    ],
+    [
+      -1.7749979496002197,
+      1.7749979496002197
+    ],
+    [
+      -1.4529869556427002,
+      1.4529869556427002
+    ],
+    [
+      -1.4529869556427002,
+      1.4529869556427002
+    ]
+  ]
+}

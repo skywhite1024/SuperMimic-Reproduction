@@ -1,5 +1,5 @@
 {
-  "status": "running_UID_verified",
+  "status": "complete_nine_original_JSONs_and_all40_native_scores_verified",
   "submitted": true,
   "name": "supermimic-official-sonic40-260010076-1116a",
   "display_name": "260010076-SuperMimic-SONIC-full40-1116a",
@@ -39,13 +39,13 @@
   "author_exact_SONIC_benchmark_protocol_confirmed": false,
   "paper_results_reproduced": false,
   "output": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/sonic-lafan40-1116a",
-  "platform_status": "running",
+  "platform_status": "succeeded",
   "retry_of_failed_job": "31cfa8c56b0e418faa1a653e09bf7600",
   "retry_reason": "Replace unavailable huggingface_hub with SHA256-pinned standard-library HTTPS downloader; cached verified wheels reused.",
   "inference_wheel_manifest": "sonic-linux-inference-wheels.json",
   "global_network_configuration_changed": false,
   "native_controller_and_physics_source_unchanged": true,
-  "CUDA_physics_executed": null,
+  "CUDA_physics_executed": true,
   "HF_SDK_required": false,
   "automatic_retry_after_failure": false,
   "prepared_at": "2026-11-16T06:07:01.299994+08:00",
@@ -65,5 +65,13 @@
   "full40_evaluation_deadline": "2026-11-16T06:31:18.230457+08:00",
   "last_progress_log": "sonic-lafan40-1116a-progress2.txt",
   "last_progress_log_sha256": "0738f08899d5fd246e5832136255e25ac0b1154691e167d927740fa5b6e9bb76",
-  "full40_evaluation_completed": false
+  "full40_evaluation_completed": true,
+  "originals_verified": 9,
+  "ONNX_GPU_provider_used": false,
+  "job_exit_logged_at": "2026-11-16T06:20:11.933+08:00",
+  "successes": 27,
+  "failures": 13,
+  "mean_normalized_full_motion_return": 0.6019311577828799,
+  "local_recovery": "C:\\project\\sensecore\\SuperMimic\\official-execution-20261112\\sonic-lafan40-1116a-recovered",
+  "requested_nonterminal_H100": 0
 }

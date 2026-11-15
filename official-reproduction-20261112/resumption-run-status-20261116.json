@@ -1,10 +1,11 @@
 {
-  "status": "active",
-  "observed_at": "2026-11-16T06:20:04.544129+08:00",
+  "status": "active_three_finite_jobs_complete_all_originals_verified",
+  "observed_at": "2026-11-16T06:51:37.112982+08:00",
   "max_requested_H100": 4,
-  "requested_nonterminal_H100": 2,
+  "requested_nonterminal_H100": 0,
+  "all_submitted_jobs_terminal": true,
   "SONIC_full40": {
-    "status": "running_UID_verified",
+    "status": "complete_nine_original_JSONs_and_all40_native_scores_verified",
     "submitted": true,
     "name": "supermimic-official-sonic40-260010076-1116a",
     "display_name": "260010076-SuperMimic-SONIC-full40-1116a",
@@ -44,13 +45,13 @@
     "author_exact_SONIC_benchmark_protocol_confirmed": false,
     "paper_results_reproduced": false,
     "output": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/sonic-lafan40-1116a",
-    "platform_status": "running",
+    "platform_status": "succeeded",
     "retry_of_failed_job": "31cfa8c56b0e418faa1a653e09bf7600",
     "retry_reason": "Replace unavailable huggingface_hub with SHA256-pinned standard-library HTTPS downloader; cached verified wheels reused.",
     "inference_wheel_manifest": "sonic-linux-inference-wheels.json",
     "global_network_configuration_changed": false,
     "native_controller_and_physics_source_unchanged": true,
-    "CUDA_physics_executed": null,
+    "CUDA_physics_executed": true,
     "HF_SDK_required": false,
     "automatic_retry_after_failure": false,
     "prepared_at": "2026-11-16T06:07:01.299994+08:00",
@@ -70,11 +71,18 @@
     "full40_evaluation_deadline": "2026-11-16T06:31:18.230457+08:00",
     "last_progress_log": "sonic-lafan40-1116a-progress2.txt",
     "last_progress_log_sha256": "0738f08899d5fd246e5832136255e25ac0b1154691e167d927740fa5b6e9bb76",
-    "full40_evaluation_completed": false
+    "full40_evaluation_completed": true,
+    "originals_verified": 9,
+    "ONNX_GPU_provider_used": false,
+    "job_exit_logged_at": "2026-11-16T06:20:11.933+08:00",
+    "successes": 27,
+    "failures": 13,
+    "mean_normalized_full_motion_return": 0.6019311577828799,
+    "local_recovery": "C:\\project\\sensecore\\SuperMimic\\official-execution-20261112\\sonic-lafan40-1116a-recovered",
+    "requested_nonterminal_H100": 0
   },
-  "pose_sample_audit": "ppo-wm-pose-audit-1116a/audit.json",
   "interrupted_same18_evaluation": {
-    "status": "running_first_snapshot_evaluation_all_six_model_sets_rehashed",
+    "status": "complete42_original_JSONs_and_all108_native_records_verified",
     "submitted": true,
     "name": "supermimic-official-control18-readback-260010076-1116b",
     "display_name": "260010076-SuperMimic-control18-saved-eval-1116b",
@@ -127,7 +135,7 @@
     "startup_command_exact_editor_readback": true,
     "creation_toast_observed_at": "2026-11-16T06:19:17.098542+08:00",
     "uid": "c7bd6102b7e740489188ce9990c58f64",
-    "platform_status": "running",
+    "platform_status": "succeeded",
     "created_at": "2026-11-16T06:19:10+08:00",
     "program_started_at": "2026-11-16T06:19:19.338231+08:00",
     "program_deadline": "2026-11-16T08:34:19.338231+08:00",
@@ -136,8 +144,226 @@
     "first_snapshot_evaluation_started_at": "2026-11-16T06:19:22.600998+08:00",
     "first_snapshot_evaluation_deadline": "2026-11-16T06:34:22.600998+08:00",
     "submission_screenshot": "lafan-locomotion18-saved-eval-1116b-created.png",
-    "latest_progress_log": "lafan-locomotion18-saved-eval-1116b-progress1.txt"
+    "latest_progress_log": "lafan-locomotion18-saved-eval-1116b-progress1.txt",
+    "originals_verified": 42,
+    "all_six_full18_evaluations_completed": true,
+    "local_recovery": "C:\\project\\sensecore\\SuperMimic\\official-execution-20261112\\lafan-locomotion18-saved-eval-1116b-recovered",
+    "points": [
+      {
+        "collection_steps": 1,
+        "real_simulator_steps": 4096,
+        "successes": 0,
+        "failures": 18,
+        "mean_normalized_full_motion_return": 0.001163652631404445,
+        "original_training_checkpoint_clock": {
+          "collection_steps": 1,
+          "callback_entry_after_native_save": {
+            "utc": "2026-11-15T08:08:22.874655+00:00",
+            "seconds_since_program_entry": 149.98953314870596,
+            "seconds_since_runner_run_entry": 20.807047851383686
+          },
+          "retained_snapshot_complete": {
+            "utc": "2026-11-15T08:08:24.385373+00:00",
+            "seconds_since_program_entry": 151.50024994835258,
+            "seconds_since_runner_run_entry": 22.317764651030302
+          },
+          "offline_artifact_logging_returned": {
+            "utc": "2026-11-15T08:08:24.979935+00:00",
+            "seconds_since_program_entry": 152.0948154181242,
+            "seconds_since_runner_run_entry": 22.912330120801926
+          }
+        }
+      },
+      {
+        "collection_steps": 4001,
+        "real_simulator_steps": 16388096,
+        "successes": 13,
+        "failures": 5,
+        "mean_normalized_full_motion_return": 0.6809886168644327,
+        "original_training_checkpoint_clock": {
+          "collection_steps": 4001,
+          "callback_entry_after_native_save": {
+            "utc": "2026-11-15T08:19:36.870546+00:00",
+            "seconds_since_program_entry": 823.9854240454733,
+            "seconds_since_runner_run_entry": 694.8029387481511
+          },
+          "retained_snapshot_complete": {
+            "utc": "2026-11-15T08:19:38.011422+00:00",
+            "seconds_since_program_entry": 825.1263021416962,
+            "seconds_since_runner_run_entry": 695.9438168443739
+          },
+          "offline_artifact_logging_returned": {
+            "utc": "2026-11-15T08:19:38.592969+00:00",
+            "seconds_since_program_entry": 825.7078499235213,
+            "seconds_since_runner_run_entry": 696.525364626199
+          }
+        }
+      },
+      {
+        "collection_steps": 8001,
+        "real_simulator_steps": 32772096,
+        "successes": 16,
+        "failures": 2,
+        "mean_normalized_full_motion_return": 0.7353132612120773,
+        "original_training_checkpoint_clock": {
+          "collection_steps": 8001,
+          "callback_entry_after_native_save": {
+            "utc": "2026-11-15T08:27:06.332419+00:00",
+            "seconds_since_program_entry": 1273.4472948163748,
+            "seconds_since_runner_run_entry": 1144.2648095190525
+          },
+          "retained_snapshot_complete": {
+            "utc": "2026-11-15T08:27:07.454613+00:00",
+            "seconds_since_program_entry": 1274.5694931447506,
+            "seconds_since_runner_run_entry": 1145.3870078474283
+          },
+          "offline_artifact_logging_returned": {
+            "utc": "2026-11-15T08:27:08.002905+00:00",
+            "seconds_since_program_entry": 1275.1177865453064,
+            "seconds_since_runner_run_entry": 1145.9353012479842
+          }
+        }
+      },
+      {
+        "collection_steps": 12001,
+        "real_simulator_steps": 49156096,
+        "successes": 16,
+        "failures": 2,
+        "mean_normalized_full_motion_return": 0.8090199929166098,
+        "original_training_checkpoint_clock": {
+          "collection_steps": 12001,
+          "callback_entry_after_native_save": {
+            "utc": "2026-11-15T08:34:35.407769+00:00",
+            "seconds_since_program_entry": 1722.5226442739367,
+            "seconds_since_runner_run_entry": 1593.3401589766145
+          },
+          "retained_snapshot_complete": {
+            "utc": "2026-11-15T08:34:36.525325+00:00",
+            "seconds_since_program_entry": 1723.640205822885,
+            "seconds_since_runner_run_entry": 1594.4577205255628
+          },
+          "offline_artifact_logging_returned": {
+            "utc": "2026-11-15T08:34:37.073129+00:00",
+            "seconds_since_program_entry": 1724.1880096681416,
+            "seconds_since_runner_run_entry": 1595.0055243708193
+          }
+        }
+      },
+      {
+        "collection_steps": 16001,
+        "real_simulator_steps": 65540096,
+        "successes": 18,
+        "failures": 0,
+        "mean_normalized_full_motion_return": 0.8540746310749793,
+        "original_training_checkpoint_clock": {
+          "collection_steps": 16001,
+          "callback_entry_after_native_save": {
+            "utc": "2026-11-15T08:42:04.524850+00:00",
+            "seconds_since_program_entry": 2171.6397244930267,
+            "seconds_since_runner_run_entry": 2042.4572391957045
+          },
+          "retained_snapshot_complete": {
+            "utc": "2026-11-15T08:42:05.631510+00:00",
+            "seconds_since_program_entry": 2172.7463897913694,
+            "seconds_since_runner_run_entry": 2043.5639044940472
+          },
+          "offline_artifact_logging_returned": {
+            "utc": "2026-11-15T08:42:06.201103+00:00",
+            "seconds_since_program_entry": 2173.3159837648273,
+            "seconds_since_runner_run_entry": 2044.133498467505
+          }
+        }
+      },
+      {
+        "collection_steps": 20001,
+        "real_simulator_steps": 81924096,
+        "successes": 17,
+        "failures": 1,
+        "mean_normalized_full_motion_return": 0.8395342209842136,
+        "original_training_checkpoint_clock": {
+          "collection_steps": 20001,
+          "callback_entry_after_native_save": {
+            "utc": "2026-11-15T08:49:32.880856+00:00",
+            "seconds_since_program_entry": 2619.995730970055,
+            "seconds_since_runner_run_entry": 2490.8132456727326
+          },
+          "retained_snapshot_complete": {
+            "utc": "2026-11-15T08:49:33.995509+00:00",
+            "seconds_since_program_entry": 2621.1103890649974,
+            "seconds_since_runner_run_entry": 2491.927903767675
+          },
+          "offline_artifact_logging_returned": {
+            "utc": "2026-11-15T08:49:34.535937+00:00",
+            "seconds_since_program_entry": 2621.6508182622492,
+            "seconds_since_runner_run_entry": 2492.468332964927
+          }
+        }
+      }
+    ],
+    "requested_nonterminal_H100": 0,
+    "job_exit_logged_at": "2026-11-16T06:46:12.315+08:00"
   },
+  "final_case_pose_readback": {
+    "status": "complete_originals_and2700_sampled_frames_verified_three_videos_decoded",
+    "submitted": true,
+    "name": "supermimic-official-quality-260010076-1116c",
+    "display_name": "260010076-SuperMimic-16k32-pose-readback-1116c",
+    "source_commit": "f8b19d4bf140529291e0fee8da91ca8c11fee35c",
+    "source_files": {
+      "export_ppo_wm_quality_samples.py": "32c4ffcb0eed0e22530d6fe49c2d7d62b76acfa816073937a44066b91ef08f34",
+      "emit_json_receipts.py": "218bf4ddfa0946a54b9d2c4f8415e217da1f97b45f5dccb2fad922414646d889"
+    },
+    "command_sha256": "c19be7181e67996ea322e9910e96a159edd8fc94eb36e2d4ba708a5f8c221d22",
+    "bootstrap_characters": 6978,
+    "source_completed_case": "ppo-wm-16k32-1115l",
+    "simulation_reexecuted": false,
+    "training_reexecuted": false,
+    "expected_original_JSONs_if_complete": 2,
+    "per_original_JSON_max_bytes": 4000000,
+    "max_restarts": 0,
+    "max_program_seconds": 900,
+    "forced_kill_after_seconds": 30,
+    "actual_GPU_computation_requested_by_program": false,
+    "resource_selection": "Prefer current computing-cluster CPU-only spec; if absent use one finite worker CPU allocation within four-H100 authorization.",
+    "output": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-quality-1116c",
+    "prepared_at": "2026-11-16T06:23:30.334079+08:00",
+    "platform_status": "succeeded",
+    "created_at": "2026-11-16T06:44:38+08:00",
+    "gpu": 1,
+    "vcpu": 4,
+    "ram_gib": 64,
+    "replicas": 1,
+    "CPU_only_spec_empty_in_selected_computing_cluster": true,
+    "startup_command_exact_editor_readback": true,
+    "resource_fallback": "One finite H100 worker CPU allocation; CPU-only table visibly empty on2026-11-16.",
+    "submission_screenshot": "ppo-wm-quality-1116c-created.png",
+    "uid": "52e3fd5e9fe64f7e8632b1630403e842",
+    "originals_verified": 2,
+    "local_recovery": "C:\\project\\sensecore\\SuperMimic\\official-execution-20261112\\ppo-wm-quality-1116c-recovered",
+    "sampled_arrays_independently_verified_locally": true,
+    "sampled_frames": 2700,
+    "rendered_videos": 3,
+    "requested_nonterminal_H100": 0,
+    "local_pose_audit": "C:\\project\\sensecore\\SuperMimic\\official-execution-20261112\\ppo-wm-pose-audit-1116c\\audit.json",
+    "program_started_at": "2026-11-16T06:44:50.474724+08:00",
+    "program_deadline": "2026-11-16T06:59:50.474724+08:00",
+    "forced_exit_deadline": "2026-11-16T07:00:20.474724+08:00",
+    "all_original_bytes_SHA256_verified": true
+  },
+  "new_original_JSONs_verified": 53,
+  "local_sampled_pose_frames_verified": 10800,
+  "decoded_pose_window_videos": 12,
+  "same18_comparison": "finite-same18-comparison-1116.json",
+  "full40_comparison": "common-lafan40-comparison-1116.json",
+  "prior_pause_record_unchanged": "user-pause-20261115.json",
+  "goal_complete": false,
   "paper_results_reproduced": false,
-  "LIBERO_paused": true
+  "LIBERO_paused": true,
+  "next_actions": [
+    "Retain full original paper scope; do not count these proxy comparisons as complete reproduction.",
+    "Continue remaining data-duration scaling and matched-return push-recovery requirements with preregistered finite protocols.",
+    "Resolve exact author filtered129514 membership and Figure5 training/reset/counter conventions; do not tune arbitrary filters to hit the number.",
+    "Keep requested nonterminal H100 at most4; any8GPU experiment remains outside current authorization.",
+    "Preserve the incomplete original64001 control-training target and all previous failed jobs; no claim of exact training continuation."
+  ]
 }

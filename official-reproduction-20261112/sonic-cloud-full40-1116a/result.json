@@ -1,0 +1,66 @@
+{
+  "status": "complete",
+  "error": null,
+  "elapsed_seconds": 740.2202950473875,
+  "stages": [
+    {
+      "stage": "install-inference-dependencies-offline",
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_seconds": 2.2873586248606443,
+      "log_sha256": "2771f9c32b7c5825f802bef543262920b673bc620528139b940b067faed0694b"
+    },
+    {
+      "stage": "download-public-pinned-models",
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_seconds": 198.20971822552383,
+      "log_sha256": "6f6c59e4b29a74d2bbdff28277684f5c74a8611b639d08479a327f22ac2a7240"
+    },
+    {
+      "stage": "derive-and-check-batched-models",
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_seconds": 5.402259288355708,
+      "log_sha256": "b85db7ced68bdfb71e281ffe4550494687511736fa97a886db2f3b96cc6ea20f"
+    },
+    {
+      "stage": "evaluate-full40",
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_seconds": 493.7116010915488,
+      "log_sha256": "6a96bb78fc5c3985784cf0bc808c46543e0950a4878ae755594b223064ab7f67"
+    },
+    {
+      "stage": "account-full40",
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_seconds": 35.17129994183779,
+      "log_sha256": "878b6ffcd43a3ea1af81282f5d422e28dc5e11be0a7d40c5e68a93a91c214200"
+    },
+    {
+      "stage": "audit-all-arrays-and-initial-states",
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_seconds": 4.012512926012278,
+      "log_sha256": "0c1b05c0c74525d4decbdd6e1b14a0e3a1e3ac86e95edd45a0085f1beca03e33"
+    }
+  ],
+  "originals": {
+    "inference-wheel-verification.json": "73e4bfb3881070d66bab972fb907f7b5dfa7f580cde80dd9315fbaa831cf9adf",
+    "setup.json": "a13a616aa01d13c0abcdd36871b82a7974782e705cdee398e7687a8ecdc01fae",
+    "models-batched/validation.json": "b85db7ced68bdfb71e281ffe4550494687511736fa97a886db2f3b96cc6ea20f",
+    "evaluation/protocol.json": "4d18a098900f0a30cc7e91f9dede70404e048d9299cfd7d2fb2596cde70d6987",
+    "evaluation/result.json": "5e4a1235a2f865e4b06445176db2638a20b3a01df564b5bf96d8f87479636a74",
+    "evaluation/accounting.json": "9e59c33441f269ca8e9e6e99f92f2b4ec8f5fc8bb8fe1166d57c577e9d234af3",
+    "evaluation/audit/summary.json": "ffa9ff1d31e91dabac614be9945f0b06a102ea28996f0bb9af1dc41fda420efe",
+    "evaluation/audit/initial-states.json": "512477a17fc13129dd06a44aee9e4bd1b7e5a403d65832d59784730071ef95ad"
+  },
+  "benchmark": "All40 common canonical LAFAN clips, corrected-v2 native reward/termination; not author filtered129514 benchmark",
+  "full40_completed": true,
+  "all_cloud_arrays_and_initial_states_audited": true,
+  "GPU_physics_executed": true,
+  "ONNX_GPU_provider_used": false,
+  "SONIC_training_reset_confirmed": false,
+  "paper_results_reproduced": false
+}

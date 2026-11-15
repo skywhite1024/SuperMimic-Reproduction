@@ -1,0 +1,252 @@
+{
+  "status": "six_saved_first_order_and_four_PPO_WM_full18_curves_verified",
+  "seed": 42,
+  "clips": 18,
+  "reference_frames": 220352,
+  "first_order": [
+    {
+      "collection_steps": 1,
+      "real_simulator_steps": 4096,
+      "successes": 0,
+      "failures": 18,
+      "mean_normalized_full_motion_return": 0.001163652631404445,
+      "checkpoint_clock_seconds": 22.317764651030302
+    },
+    {
+      "collection_steps": 4001,
+      "real_simulator_steps": 16388096,
+      "successes": 13,
+      "failures": 5,
+      "mean_normalized_full_motion_return": 0.6809886168644327,
+      "checkpoint_clock_seconds": 695.9438168443739
+    },
+    {
+      "collection_steps": 8001,
+      "real_simulator_steps": 32772096,
+      "successes": 16,
+      "failures": 2,
+      "mean_normalized_full_motion_return": 0.7353132612120773,
+      "checkpoint_clock_seconds": 1145.3870078474283
+    },
+    {
+      "collection_steps": 12001,
+      "real_simulator_steps": 49156096,
+      "successes": 16,
+      "failures": 2,
+      "mean_normalized_full_motion_return": 0.8090199929166098,
+      "checkpoint_clock_seconds": 1594.4577205255628
+    },
+    {
+      "collection_steps": 16001,
+      "real_simulator_steps": 65540096,
+      "successes": 18,
+      "failures": 0,
+      "mean_normalized_full_motion_return": 0.8540746310749793,
+      "checkpoint_clock_seconds": 2043.5639044940472
+    },
+    {
+      "collection_steps": 20001,
+      "real_simulator_steps": 81924096,
+      "successes": 17,
+      "failures": 1,
+      "mean_normalized_full_motion_return": 0.8395342209842136,
+      "checkpoint_clock_seconds": 2491.927903767675
+    }
+  ],
+  "PPO_WM": [
+    {
+      "case": "ppo-wm-16k32-1115l",
+      "label": "16k x 32",
+      "points": [
+        {
+          "ppo_update": 64,
+          "successes": 0,
+          "failures": 18,
+          "mean_normalized_full_motion_return": 0.0002653564848806809,
+          "real_simulator_steps": 2621440,
+          "cumulative_imagined_steps": 33554432,
+          "checkpoint_clock_seconds": 195.62109855934978
+        },
+        {
+          "ppo_update": 256,
+          "successes": 0,
+          "failures": 18,
+          "mean_normalized_full_motion_return": 0.0003689904384624454,
+          "real_simulator_steps": 10485760,
+          "cumulative_imagined_steps": 134217728,
+          "checkpoint_clock_seconds": 681.2373248264194
+        },
+        {
+          "ppo_update": 1024,
+          "successes": 5,
+          "failures": 13,
+          "mean_normalized_full_motion_return": 0.3447581084644532,
+          "real_simulator_steps": 41943040,
+          "cumulative_imagined_steps": 536870912,
+          "checkpoint_clock_seconds": 2630.321728911251
+        },
+        {
+          "ppo_update": 2048,
+          "successes": 12,
+          "failures": 6,
+          "mean_normalized_full_motion_return": 0.6012684555518308,
+          "real_simulator_steps": 83886080,
+          "cumulative_imagined_steps": 1073741824,
+          "checkpoint_clock_seconds": 5234.7385608665645
+        }
+      ],
+      "validation_sha256": "35a2df3b76797c7f25fec5d7ffdffc1d7607cf9f8c536b767c8bc2d8ed84153c"
+    },
+    {
+      "case": "ppo-wm-4k32-1115i",
+      "label": "4k x 32",
+      "points": [
+        {
+          "ppo_update": 64,
+          "successes": 0,
+          "failures": 18,
+          "mean_normalized_full_motion_return": 7.184769180279833e-05,
+          "real_simulator_steps": 2621440,
+          "cumulative_imagined_steps": 8388608,
+          "checkpoint_clock_seconds": 147.75933288037777
+        },
+        {
+          "ppo_update": 256,
+          "successes": 0,
+          "failures": 18,
+          "mean_normalized_full_motion_return": 0.0002468653685048744,
+          "real_simulator_steps": 10485760,
+          "cumulative_imagined_steps": 33554432,
+          "checkpoint_clock_seconds": 481.3729745708406
+        },
+        {
+          "ppo_update": 1024,
+          "successes": 0,
+          "failures": 18,
+          "mean_normalized_full_motion_return": 0.004699304754288968,
+          "real_simulator_steps": 41943040,
+          "cumulative_imagined_steps": 134217728,
+          "checkpoint_clock_seconds": 1801.1335757561028
+        },
+        {
+          "ppo_update": 2048,
+          "successes": 10,
+          "failures": 8,
+          "mean_normalized_full_motion_return": 0.47027693376345003,
+          "real_simulator_steps": 83886080,
+          "cumulative_imagined_steps": 268435456,
+          "checkpoint_clock_seconds": 3578.1228841394186
+        }
+      ],
+      "validation_sha256": "96ac4462d5ea0d4a5d14c2508fe6c259647b018483e521e4b3843c47f587d90c"
+    },
+    {
+      "case": "ppo-wm-8k24-1115j",
+      "label": "8k x 24",
+      "points": [
+        {
+          "ppo_update": 64,
+          "successes": 0,
+          "failures": 18,
+          "mean_normalized_full_motion_return": 0.0002557644055454251,
+          "real_simulator_steps": 2621440,
+          "cumulative_imagined_steps": 12582912,
+          "checkpoint_clock_seconds": 138.73545211926103
+        },
+        {
+          "ppo_update": 256,
+          "successes": 0,
+          "failures": 18,
+          "mean_normalized_full_motion_return": 0.00034271311411778306,
+          "real_simulator_steps": 10485760,
+          "cumulative_imagined_steps": 50331648,
+          "checkpoint_clock_seconds": 453.5335137825459
+        },
+        {
+          "ppo_update": 1024,
+          "successes": 5,
+          "failures": 13,
+          "mean_normalized_full_motion_return": 0.2932528360510531,
+          "real_simulator_steps": 41943040,
+          "cumulative_imagined_steps": 201326592,
+          "checkpoint_clock_seconds": 1720.584085199982
+        },
+        {
+          "ppo_update": 2048,
+          "successes": 10,
+          "failures": 8,
+          "mean_normalized_full_motion_return": 0.5360035243449793,
+          "real_simulator_steps": 83886080,
+          "cumulative_imagined_steps": 402653184,
+          "checkpoint_clock_seconds": 3421.5913290679455
+        }
+      ],
+      "validation_sha256": "5b0f98726429a32cfa1beb559ea1333609228a3b483cf63a4f19e949f5d26c22"
+    },
+    {
+      "case": "ppo-wm-8k32-1115k",
+      "label": "8k x 32",
+      "points": [
+        {
+          "ppo_update": 64,
+          "successes": 0,
+          "failures": 18,
+          "mean_normalized_full_motion_return": 0.00023064060741259478,
+          "real_simulator_steps": 2621440,
+          "cumulative_imagined_steps": 16777216,
+          "checkpoint_clock_seconds": 161.7104053760413
+        },
+        {
+          "ppo_update": 256,
+          "successes": 0,
+          "failures": 18,
+          "mean_normalized_full_motion_return": 0.00015850449961586066,
+          "real_simulator_steps": 10485760,
+          "cumulative_imagined_steps": 67108864,
+          "checkpoint_clock_seconds": 545.06019667699
+        },
+        {
+          "ppo_update": 1024,
+          "successes": 0,
+          "failures": 18,
+          "mean_normalized_full_motion_return": 0.007543337293267503,
+          "real_simulator_steps": 41943040,
+          "cumulative_imagined_steps": 268435456,
+          "checkpoint_clock_seconds": 2072.5236216599587
+        },
+        {
+          "ppo_update": 2048,
+          "successes": 12,
+          "failures": 6,
+          "mean_normalized_full_motion_return": 0.5328680727901189,
+          "real_simulator_steps": 83886080,
+          "cumulative_imagined_steps": 536870912,
+          "checkpoint_clock_seconds": 4115.77890341403
+        }
+      ],
+      "validation_sha256": "5bfcab63ba4be29ed7e3f25918d5c051b93e427a7d9769c9c5e483bc5e26f033"
+    }
+  ],
+  "identical_physical_motion_file_hashes": true,
+  "identical_native_termination_rules": true,
+  "all_failures_retained": true,
+  "first_order_parent_training_completed": false,
+  "new_first_order_training_executed": false,
+  "original_first_order_parent_job": "b757b72b9f25497bbabad8c41d2cfa3e",
+  "first_order_complete_verification_sha256": "3d68c31c1142bab89f5cfcc6ac366a8a92fd05a9d443f3bc1ea116437775ce10",
+  "first_sample_with_local_full_motion_return_at_least_082": {
+    "collection_steps": 16001,
+    "real_simulator_steps": 65540096,
+    "successes": 18,
+    "failures": 0,
+    "mean_normalized_full_motion_return": 0.8540746310749793,
+    "checkpoint_clock_seconds": 2043.5639044940472
+  },
+  "threshold_is_fixed_full_motion_evaluation_not_paper_smoothed_training_return": true,
+  "clock_scope": "First-order original runner-entry clock through retained snapshot; PPO-WM own training-entry clock through native checkpoint checks. Offline evaluation excluded. Origins and startup costs differ.",
+  "clock_origins_identical": false,
+  "baseline_reset_sampling_and_WM_fit_cadence_matched": false,
+  "exact_author_Figure5_protocol_confirmed": false,
+  "multiseed_statistical_comparison": false,
+  "paper_speedup_reproduced": false
+}

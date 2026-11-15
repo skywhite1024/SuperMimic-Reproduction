@@ -1,0 +1,32 @@
+{
+  "status": "three_finite_cloud_jobs_completed_and_all_new_original_JSONs_verified",
+  "observed_at": "2026-11-16T06:51:37.112982+08:00",
+  "jobs": [
+    {
+      "name": "supermimic-official-sonic40-260010076-1116a",
+      "uid": "dd62849204044a6593f468a467977314",
+      "originals_verified": 9,
+      "platform_status": "succeeded"
+    },
+    {
+      "name": "supermimic-official-control18-readback-260010076-1116b",
+      "uid": "c7bd6102b7e740489188ce9990c58f64",
+      "originals_verified": 42,
+      "platform_status": "succeeded"
+    },
+    {
+      "name": "supermimic-official-quality-260010076-1116c",
+      "uid": "52e3fd5e9fe64f7e8632b1630403e842",
+      "originals_verified": 2,
+      "platform_status": "succeeded"
+    }
+  ],
+  "original_JSONs": 53,
+  "sampled_pose_frames": 10800,
+  "decoded_pose_videos": 12,
+  "requested_nonterminal_H100": 0,
+  "terminal_console_screenshot_sha256": "a15d97aa4128382feedc340d94b1aba006cb84037ea18e83e5306c49696e7c84",
+  "full_goal_achieved": false,
+  "full_paper_reproduction_complete": false,
+  "goal_remains_active": true
+}

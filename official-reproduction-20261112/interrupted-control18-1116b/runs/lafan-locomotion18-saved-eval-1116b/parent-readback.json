@@ -1,0 +1,20 @@
+{
+  "status": "all_six_logged_saved_model_sets_rehashed",
+  "parent_platform_status": "stopped_by_user",
+  "model_sets": 6,
+  "original_metadata_SHA256": {
+    "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1115m/main/training/resolved-config.json": "505ecbedaf34c9b312fe8d095d9fd827783f7d176737028fb09e98ebfcf10c97",
+    "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1115m/main/training/checkpoint-times.json": "117c1683d3e1d7f8032e813be92a99f7e1ed9b5e65ce221adf8c0b8c8722b228",
+    "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1115m/main/training/learner-counts.json": "098ac4ade39d5cfa85d47c343c90668e767b124b4e0d0ca993162bd454f22332",
+    "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1115m/main/training/checkpoint-series/step-000000001/manifest.json": "beacd775ae7615f18f0dea276e3107532228b9dc52bdd99d0bef1227e18b284b",
+    "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1115m/main/training/checkpoint-series/step-000004001/manifest.json": "ba63fa413eb5077b54d4332cc763598651b79598f1792cda7294dd5c35befdb0",
+    "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1115m/main/training/checkpoint-series/step-000008001/manifest.json": "82b0ecb1a2f0a354768bc5b4b0b8cc05b83ae168e1ed9f2807fc1346341c4da5",
+    "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1115m/main/training/checkpoint-series/step-000012001/manifest.json": "dfd2000fa5b8f5751284191b3ee573f75fd01dc9ff8954aadd7d99c2682a7e8c",
+    "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1115m/main/training/checkpoint-series/step-000016001/manifest.json": "ca6e1355cdd8012b464a8e6be352d116b309080a1070fb9328d5d576c1541a7f",
+    "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1115m/main/training/checkpoint-series/step-000020001/manifest.json": "0ad5710a76265a64f4d0870a0b292b2d999e9842b32d571fe41d9df2a788152b"
+  },
+  "original_stop_evidence_SHA256": "8f1eb8b667fad5f7e174aa627bcb81c7553977079df018cd03573d13e8b2bbe6",
+  "parent_training_complete": false,
+  "training_reexecuted": false,
+  "full_training_resume_available": false
+}

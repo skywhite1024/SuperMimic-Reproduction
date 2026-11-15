@@ -1,0 +1,23 @@
+{
+  "status": "model_snapshot_preserved",
+  "collection_steps": 20001,
+  "files": [
+    {
+      "file": "world_model.pt",
+      "bytes": 34990357,
+      "sha256": "e1a8b784b4e3406a8dde3f79d7d460267c5844cfe167444c3fa29b162c67f651"
+    },
+    {
+      "file": "actor.pt",
+      "bytes": 46439949,
+      "sha256": "a40f10d645367f2a473cf4f97fdb3873eb45f77c0c02b40b510f31eac8477e18"
+    },
+    {
+      "file": "critic.pt",
+      "bytes": 929269,
+      "sha256": "fa3bb8babafb6227f020dab9cc9208c26f9cbaeaa31da3a2214fa218bd73ede4"
+    }
+  ],
+  "full_training_resume_available": false,
+  "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state"
+}

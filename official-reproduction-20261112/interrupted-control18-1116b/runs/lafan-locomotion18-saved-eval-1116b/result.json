@@ -1,0 +1,61 @@
+{
+  "status": "complete",
+  "points": [
+    {
+      "collection_steps": 1,
+      "status": "complete",
+      "successes": 0,
+      "failures": 18,
+      "mean_normalized_full_motion_return": 0.001163652631404445
+    },
+    {
+      "collection_steps": 4001,
+      "status": "complete",
+      "successes": 13,
+      "failures": 5,
+      "mean_normalized_full_motion_return": 0.6809886168644328
+    },
+    {
+      "collection_steps": 8001,
+      "status": "complete",
+      "successes": 16,
+      "failures": 2,
+      "mean_normalized_full_motion_return": 0.7353132612120772
+    },
+    {
+      "collection_steps": 12001,
+      "status": "complete",
+      "successes": 16,
+      "failures": 2,
+      "mean_normalized_full_motion_return": 0.8090199929166098
+    },
+    {
+      "collection_steps": 16001,
+      "status": "complete",
+      "successes": 18,
+      "failures": 0,
+      "mean_normalized_full_motion_return": 0.8540746310749793
+    },
+    {
+      "collection_steps": 20001,
+      "status": "complete",
+      "successes": 17,
+      "failures": 1,
+      "mean_normalized_full_motion_return": 0.8395342209842136
+    }
+  ],
+  "all_planned_points": [
+    1,
+    4001,
+    8001,
+    12001,
+    16001,
+    20001
+  ],
+  "training_reexecuted": false,
+  "parent_training_complete": false,
+  "full_training_resume_available": false,
+  "paper_results_reproduced": false,
+  "original_parent_metadata_unchanged": true,
+  "elapsed_seconds": 1609.0297853723168
+}

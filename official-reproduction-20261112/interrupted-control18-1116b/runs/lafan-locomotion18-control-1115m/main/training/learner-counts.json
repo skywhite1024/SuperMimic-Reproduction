@@ -1,0 +1,53 @@
+{
+  "status": "training",
+  "snapshots": [
+    {
+      "collection_steps": 1,
+      "real_simulator_steps": 4096,
+      "completed_policy_update_calls": 0,
+      "completed_WM_update_calls": 0,
+      "configured_imagined_training_transitions": 0,
+      "counts_exclude_internal_CUDA_graph_warmup_and_capture": true
+    },
+    {
+      "collection_steps": 4001,
+      "real_simulator_steps": 16388096,
+      "completed_policy_update_calls": 1598,
+      "completed_WM_update_calls": 1598,
+      "configured_imagined_training_transitions": 209453056,
+      "counts_exclude_internal_CUDA_graph_warmup_and_capture": true
+    },
+    {
+      "collection_steps": 8001,
+      "real_simulator_steps": 32772096,
+      "completed_policy_update_calls": 3198,
+      "completed_WM_update_calls": 3198,
+      "configured_imagined_training_transitions": 419168256,
+      "counts_exclude_internal_CUDA_graph_warmup_and_capture": true
+    },
+    {
+      "collection_steps": 12001,
+      "real_simulator_steps": 49156096,
+      "completed_policy_update_calls": 4798,
+      "completed_WM_update_calls": 4798,
+      "configured_imagined_training_transitions": 628883456,
+      "counts_exclude_internal_CUDA_graph_warmup_and_capture": true
+    },
+    {
+      "collection_steps": 16001,
+      "real_simulator_steps": 65540096,
+      "completed_policy_update_calls": 6398,
+      "completed_WM_update_calls": 6398,
+      "configured_imagined_training_transitions": 838598656,
+      "counts_exclude_internal_CUDA_graph_warmup_and_capture": true
+    },
+    {
+      "collection_steps": 20001,
+      "real_simulator_steps": 81924096,
+      "completed_policy_update_calls": 7998,
+      "completed_WM_update_calls": 7998,
+      "configured_imagined_training_transitions": 1048313856,
+      "counts_exclude_internal_CUDA_graph_warmup_and_capture": true
+    }
+  ]
+}

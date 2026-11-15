@@ -1,0 +1,67 @@
+{
+  "receipts": [
+    {
+      "i": 0,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/sonic-lafan40-1116a/inference-wheel-verification.json",
+      "bytes": 1269,
+      "sha256": "73e4bfb3881070d66bab972fb907f7b5dfa7f580cde80dd9315fbaa831cf9adf",
+      "chunks": 3
+    },
+    {
+      "i": 1,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/sonic-lafan40-1116a/setup.json",
+      "bytes": 1614,
+      "sha256": "a13a616aa01d13c0abcdd36871b82a7974782e705cdee398e7687a8ecdc01fae",
+      "chunks": 4
+    },
+    {
+      "i": 2,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/sonic-lafan40-1116a/models-batched/validation.json",
+      "bytes": 3656,
+      "sha256": "b85db7ced68bdfb71e281ffe4550494687511736fa97a886db2f3b96cc6ea20f",
+      "chunks": 5
+    },
+    {
+      "i": 3,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/sonic-lafan40-1116a/evaluation/protocol.json",
+      "bytes": 12634,
+      "sha256": "4d18a098900f0a30cc7e91f9dede70404e048d9299cfd7d2fb2596cde70d6987",
+      "chunks": 11
+    },
+    {
+      "i": 4,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/sonic-lafan40-1116a/evaluation/result.json",
+      "bytes": 14635,
+      "sha256": "5e4a1235a2f865e4b06445176db2638a20b3a01df564b5bf96d8f87479636a74",
+      "chunks": 8
+    },
+    {
+      "i": 5,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/sonic-lafan40-1116a/evaluation/accounting.json",
+      "bytes": 1401,
+      "sha256": "9e59c33441f269ca8e9e6e99f92f2b4ec8f5fc8bb8fe1166d57c577e9d234af3",
+      "chunks": 3
+    },
+    {
+      "i": 6,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/sonic-lafan40-1116a/evaluation/audit/summary.json",
+      "bytes": 964,
+      "sha256": "ffa9ff1d31e91dabac614be9945f0b06a102ea28996f0bb9af1dc41fda420efe",
+      "chunks": 3
+    },
+    {
+      "i": 7,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/sonic-lafan40-1116a/evaluation/audit/initial-states.json",
+      "bytes": 720,
+      "sha256": "512477a17fc13129dd06a44aee9e4bd1b7e5a403d65832d59784730071ef95ad",
+      "chunks": 2
+    },
+    {
+      "i": 8,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/sonic-lafan40-1116a/result.json",
+      "bytes": 2737,
+      "sha256": "9e8de249c713c4380c0c22ddcd8a4196f1d9c280e544c601a632ccf2400f8eaa",
+      "chunks": 5
+    }
+  ]
+}

@@ -933,3 +933,79 @@ interrupted throughout evaluation provenance. The read-only evaluation runner
 will assess all six recorded checkpoints1/4001/8001/12001/16001/20001 on the same18
 motions and verify parent metadata remains unchanged. No optimizer/RNG/replay
 continuation or completed64001-collection claim is constructed.
+
+
+## 68. Verified 2026-11-16 results: SONIC full40 and saved first-order full18
+
+All three jobs (1116a, 1116b, 1116c) succeeded and released their resources.
+This phase now requests zero nonterminal H100s. The full goal remains active:
+several original paper requirements are still incomplete. All 53 new original
+JSON files were recovered and verified: nine SONIC files, 42 control evaluation
+and provenance files, and two final-case pose-readback files.
+
+### Common full40 result
+
+Released SONIC completed 27/40 clips with mean normalized full-motion return
+0.6019311578. The previously verified native SuperMimic checkpoint at 64001
+collections completed 40/40 with mean 0.8549796937. Physical motion-file hashes
+and native termination schemas agree; each controller retains its own gains.
+SONIC uses CPU ONNX inference and CUDA MuJoCo Warp physics. Pretraining
+data/compute, the original SONIC training reset, and the exact author benchmark
+of 129514 filtered motions are unconfirmed.
+
+The 18 locomotion members of the full SONIC result give 15/18 and 0.7237865100.
+This is a regrouping of the complete 40-motion records, not another execution
+with 18 environments.
+
+### Same18 native first-order versus finite PPO-WM
+
+| Original native collections | Real simulator transitions | Successful clips | Mean normalized full-motion return |
+| ---: | ---: | ---: | ---: |
+| 1 | 4096 | 0/18 | 0.0011636526 |
+| 4001 | 16388096 | 13/18 | 0.6809886169 |
+| 8001 | 32772096 | 16/18 | 0.7353132612 |
+| 12001 | 49156096 | 16/18 | 0.8090199929 |
+| 16001 | 65540096 | 18/18 | 0.8540746311 |
+| 20001 | 81924096 | 17/18 | 0.8395342210 |
+
+All six saved native model sets match the manifests logged before the user
+stopped training. Original parent metadata remained unchanged. All 108 clip
+records and 42 original JSON files passed verification. The parent remains
+interrupted: its original 64001-collection target was not completed, and these
+weights do not provide a full training-state resume.
+
+Collection 16001 is the first sampled point above the local 0.82 full-motion
+evaluation threshold. Its retained-snapshot clock is 2043.56 seconds from the
+original runner entry. This is not the paper's smoothed training-return metric.
+
+The four PPO-WM curves share the same physical motion hashes and termination
+rules. Their best finite endpoint is 0.6012684556 at 83,886,080 real transitions.
+The native collection-20001 endpoint gives 0.8395342210 at 81,924,096 transitions.
+These one-seed observations support a first-order advantage in this local
+protocol. Reset sampling, world-model fitting cadence, and clock origins are
+not fully matched to author Figure5. No 64x, 1.67x, or statistical speedup is
+claimed. The decline between collections 16001 and 20001 remains in the results.
+
+### Four-case pose audit
+
+The final 16k x 32 readback contains metrics for all 18 cloud trajectories and
+2700 sampled frames. Across all four cases, original JSON/NPZ hashes, canonical
+reference rows, all 72 return entries, and 10800 sampled root/joint errors passed
+the local audit. Twelve six-second pose-window videos were rendered and decoded.
+
+Each video contains first/middle/last two-second windows with explicit time-jump
+labels. Rendering uses forward kinematics without rerunning physics. Large raw
+payloads and videos remain local; small audits and previews are published.
+For successful 16k x 32 clips, cloud full-trajectory mean joint RMS ranges from
+10.40 to 15.58 degrees, and mean absolute world-root distance ranges from 1.69 to
+14.36 metres. These are tracking diagnostics, not contact or physics acceptance.
+
+Evidence: finite-same18-comparison-1116.json/.png/.svg,
+common-lafan40-comparison-1116.json, finite-milestone-1116.json,
+sonic-cloud-full40-1116a/, interrupted-control18-1116b/,
+ppo-wm-pose-audit-1116a/, and ppo-wm-pose-audit-1116c/.
+
+Remaining requirements include exact benchmark/protocol alignment, dataset
+duration scaling, matched-return push recovery, multiple seeds, long runs with
+multiple devices, and hardware tests. Eight-GPU work exceeds the current
+four-H100 authorization. LIBERO remains paused.

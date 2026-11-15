@@ -1,0 +1,26 @@
+{
+  "status": "pinned_original_SONIC_model_SHA256_verified",
+  "original_models": {
+    "model_encoder.onnx": "013ab0287236aa2721e13f1e936d699db982302d0de0bfcdae76d5c3245362d3",
+    "model_decoder.onnx": "c7241a123eaa36b5d64bad19540efde93cac1ad443bd4572fd12ca99898118ed",
+    "observation_config.yaml": "466d05947c78af6c76388adfb86e3a2a77b2a1d921a64883ed3d085ebf58de1b"
+  },
+  "HF_revision": "6733128a3d8a523b1418b06bca3cdf61c8b0987f",
+  "source_commit": "1e1ec4f5f27e6c3e03048f693bd7c60cce04afda",
+  "common_corpus_files": {
+    "joint_names.json": "30355b480e4f89c97a693c72f8baf23902fd458d25e49b5df4741dd47aefce0d",
+    "joint_pos.npy": "64f0dff0d2e0d678a1f78213233124588044ba5781aa599c31b08d1348509a9b",
+    "joint_vel.npy": "11efc4b4b37b0818ea25a2dfa8676ed8f564a3443c97bf9c9680a346c06b23e0",
+    "motion_ends.npy": "fa4db64df8fe4d1f9362883b8c7b32d303a3865aeeab1c92fad0e89144cf8be5",
+    "motion_names.json": "b2b46cceb62efa50b159e13928b4c991b80b27a59b381ed603392cfa87e3c8b9",
+    "root_ang_vel_w.npy": "88ff137fd4a6dde1626dceae086c8a810da624d650855d69af1adc052565f9b5",
+    "root_lin_vel_w.npy": "7738f75d8de3b070a1d6407a06e1a971d5723abccc1e46a90a1aa86e93c486a0",
+    "root_pos_w.npy": "a57c5a8efc209c345ea4f7d83ef36936c0edfefb60f137757af69c6f4f7272fe",
+    "root_quat_w.npy": "9934171fce73559ec04d63db2bafee95575cd46196fe39aea425d677eae5303e"
+  },
+  "control_contract_sha256": "efc2288cc157f9bd9759993a5af7abe3d50042aa21564694abb87ecd170a8cea",
+  "inference_provider": "CPUExecutionProvider",
+  "physics_provider": "CUDA MuJoCo Warp",
+  "model_training_executed": false,
+  "paper_results_reproduced": false
+}

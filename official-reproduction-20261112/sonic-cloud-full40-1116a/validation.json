@@ -1,0 +1,21 @@
+{
+  "status": "pretrained_SONIC_full40_originals_and_native_score_recomputation_verified",
+  "original_JSONs": 9,
+  "paper_results_reproduced": false,
+  "reported_status": "complete",
+  "error": null,
+  "clips": 40,
+  "successes": 27,
+  "failures": 13,
+  "mean_normalized_full_motion_return": 0.6019311577828799,
+  "all_cloud_arrays_and_initial_states_audited": true,
+  "ONNX_GPU_provider_used": false,
+  "author_exact_filtered129514_benchmark": false,
+  "SONIC_training_reset_confirmed": false,
+  "all_native_reward_termination_records_verified": true,
+  "job_uid": "dd62849204044a6593f468a467977314",
+  "source_commit": "3cede50642135f39f330467d16a7021348a46ea9",
+  "log_sha256": "99e0ff6554e561bca2fa3aa515e9f4d94280f2af3ab67761c46b475fc38ab617",
+  "raw_trajectory_arrays_downloaded": false,
+  "original_bytes_verified": true
+}

@@ -1,0 +1,26 @@
+{
+  "status": "official_PyPI_CP313_Linux_and_pure_wheel_hashes_read",
+  "observed_at": "2026-11-15T16:38:02.589349+08:00",
+  "wheels": [
+    {
+      "package": "onnxruntime",
+      "version": "1.32.0",
+      "file": "onnxruntime-1.32.0-cp313-cp313-manylinux_2_28_x86_64.whl",
+      "bytes": 27780404,
+      "sha256": "02ea12a28c069ea8510093d95a7f6ff8126bfd9fc5c0d3381c03b80fb2b424ba",
+      "official_PyPI_URL": "https://files.pythonhosted.org/packages/92/74/1f7c51522822e93aa91f633ebcd75688e2deebeca5901b2e6da8a8c5ad7c/onnxruntime-1.32.0-cp313-cp313-manylinux_2_28_x86_64.whl",
+      "official_metadata_source": "https://pypi.org/pypi/onnxruntime/1.32.0/json"
+    },
+    {
+      "package": "flatbuffers",
+      "version": "25.12.19",
+      "file": "flatbuffers-25.12.19-py2.py3-none-any.whl",
+      "bytes": 26661,
+      "sha256": "7634f50c427838bb021c2d66a3d1168e9d199b0607e6329399f04846d42e20b4",
+      "official_PyPI_URL": "https://files.pythonhosted.org/packages/e8/2d/d2a548598be01649e2d46231d151a6c56d10b964d94043a335ae56ea2d92/flatbuffers-25.12.19-py2.py3-none-any.whl",
+      "official_metadata_source": "https://pypi.org/pypi/flatbuffers/25.12.19/json"
+    }
+  ],
+  "mirror_index": "https://mirrors.aliyun.com/pypi/simple/",
+  "transport_only_mirror": true
+}

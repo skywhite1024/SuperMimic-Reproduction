@@ -1,0 +1,36 @@
+{
+  "status": "complete_corpus_accounting_verified",
+  "result_sha256": "74e51ee2d64b7c855e86f419b887a09f524295a10391970badd51e7f1648984b",
+  "protocol_sha256": "5247f93b51c7e3dff948a52c1abea8f259758d0595efa6fadd63fd7ebdaae472",
+  "task": "SuperMimic-GenCoord-G1",
+  "clips": 18,
+  "reference_frames": 220352,
+  "successes": 16,
+  "failures": 2,
+  "failure_termination_counts": {
+    "anchor_pos": 2
+  },
+  "control_dt": 0.02,
+  "positive_reward_weights": {
+    "motion_global_root_pos": 0.5,
+    "motion_global_root_ori": 0.5,
+    "motion_body_pos": 1.0,
+    "motion_body_ori": 1.0,
+    "motion_body_lin_vel": 1.0,
+    "motion_body_ang_vel": 1.0
+  },
+  "maximum_step_reward": 0.1,
+  "normalization": "native undiscounted reward / full reference frames / maximum step reward; missing tail contributes zero",
+  "mean_normalized_full_motion_return": 0.7353132612120772,
+  "frame_weighted_normalized_full_motion_return": 0.7300210113535359,
+  "median_tracked_seconds": 245.72,
+  "tracked_fraction_frames": 0.9143552134766192,
+  "all_indices_names_lengths_verified": true,
+  "all_trajectory_files_present_nonempty": true,
+  "trajectory_file_bytes": 76223582,
+  "trajectory_array_integrity_audited": false,
+  "paper_aggregation_confirmed": false,
+  "paper_results_reproduced": false,
+  "deterministic_execution_verified": false,
+  "strict_pose_or_contact_quality_verified": false
+}

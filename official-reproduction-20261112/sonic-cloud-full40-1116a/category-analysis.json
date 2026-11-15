@@ -1,0 +1,51 @@
+{
+  "status": "verified_full40_records_regrouped_without_trajectory_rerun",
+  "full40": {
+    "status": "pretrained_SONIC_full40_originals_and_native_score_recomputation_verified",
+    "original_JSONs": 9,
+    "paper_results_reproduced": false,
+    "reported_status": "complete",
+    "error": null,
+    "clips": 40,
+    "successes": 27,
+    "failures": 13,
+    "mean_normalized_full_motion_return": 0.6019311577828799,
+    "all_cloud_arrays_and_initial_states_audited": true,
+    "ONNX_GPU_provider_used": false,
+    "author_exact_filtered129514_benchmark": false,
+    "SONIC_training_reset_confirmed": false,
+    "all_native_reward_termination_records_verified": true,
+    "job_uid": "dd62849204044a6593f468a467977314",
+    "source_commit": "3cede50642135f39f330467d16a7021348a46ea9",
+    "log_sha256": "99e0ff6554e561bca2fa3aa515e9f4d94280f2af3ab67761c46b475fc38ab617",
+    "raw_trajectory_arrays_downloaded": false,
+    "original_bytes_verified": true
+  },
+  "locomotion18": {
+    "clips": 18,
+    "successes": 15,
+    "mean_normalized_full_motion_return": 0.7237865100166384,
+    "groups": {
+      "walk": {
+        "clips": 12,
+        "successes": 11,
+        "mean_normalized_full_motion_return": 0.8010853144449243
+      },
+      "run": {
+        "clips": 4,
+        "successes": 4,
+        "mean_normalized_full_motion_return": 0.7078060528304531
+      },
+      "sprint": {
+        "clips": 2,
+        "successes": 0,
+        "mean_normalized_full_motion_return": 0.29195459781929406
+      }
+    }
+  },
+  "subset_is_posthoc_filter_of_complete40_same_native_starts": true,
+  "separate18_environment_execution_not_performed": true,
+  "benchmark_matches_author129514": false,
+  "pretrained_data_compute_not_matched_to_PPO_WM": true,
+  "source_result_sha256": "5e4a1235a2f865e4b06445176db2638a20b3a01df564b5bf96d8f87479636a74"
+}

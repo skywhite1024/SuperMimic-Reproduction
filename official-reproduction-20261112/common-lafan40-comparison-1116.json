@@ -1,0 +1,41 @@
+{
+  "status": "verified_original_full40_scores_common_data_and_termination_rules",
+  "clips": 40,
+  "SuperMimic": {
+    "collection_steps": 64001,
+    "successes": 40,
+    "failures": 0,
+    "mean_normalized_full_motion_return": 0.8549796937353649,
+    "validation": "lafan-curve-64k-1115b/validation.json",
+    "source_result_SHA256": "7d946d8e0ab1145616f5203edd95d726d28950f90d4a16a1859bf84c6d3619ec",
+    "all40_original_return_entries_recomputed": true
+  },
+  "SONIC": {
+    "status": "pretrained_SONIC_full40_originals_and_native_score_recomputation_verified",
+    "original_JSONs": 9,
+    "paper_results_reproduced": false,
+    "reported_status": "complete",
+    "error": null,
+    "clips": 40,
+    "successes": 27,
+    "failures": 13,
+    "mean_normalized_full_motion_return": 0.6019311577828799,
+    "all_cloud_arrays_and_initial_states_audited": true,
+    "ONNX_GPU_provider_used": false,
+    "author_exact_filtered129514_benchmark": false,
+    "SONIC_training_reset_confirmed": false,
+    "all_native_reward_termination_records_verified": true,
+    "job_uid": "dd62849204044a6593f468a467977314",
+    "source_commit": "3cede50642135f39f330467d16a7021348a46ea9",
+    "log_sha256": "99e0ff6554e561bca2fa3aa515e9f4d94280f2af3ab67761c46b475fc38ab617",
+    "raw_trajectory_arrays_downloaded": false,
+    "original_bytes_verified": true
+  },
+  "identical_physical_motion_pack_SHA256": true,
+  "identical_native_termination_rules": true,
+  "each_policy_retains_own_actuation_gains": true,
+  "pretraining_data_and_compute_not_matched": true,
+  "SONIC_author_training_reset_confirmed": false,
+  "author_filtered129514_comparison": false,
+  "paper_results_reproduced": false
+}
