@@ -1,0 +1,279 @@
+{
+  "status": "original_receipts_byte_counts_and_SHA256_verified",
+  "uid": "bb89a2d9e06042dd9426fc52c0eb8854",
+  "receipts": [
+    {
+      "i": 0,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-2048-1115c/completed-gate-eval/evaluation/result.json",
+      "bytes": 14187,
+      "sha256": "187f8b1f5e3ea32c8bc0498bc9af013646d5a685e4f4ffeffa223645ef22a1d0",
+      "chunks": 7
+    },
+    {
+      "i": 1,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-2048-1115c/completed-gate-eval/evaluation/protocol.json",
+      "bytes": 18829,
+      "sha256": "06b265d6969e5771998cffec2d5d8221e9058c9d988a5177c5ce9e241285b4ba",
+      "chunks": 17
+    },
+    {
+      "i": 2,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-2048-1115c/completed-gate-eval/evaluation/accounting.json",
+      "bytes": 1415,
+      "sha256": "43a70428d5af8b23b4ed3eceeb5937ce326233e64c3e700999ea6eb71ff39ad3",
+      "chunks": 3
+    },
+    {
+      "i": 3,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-2048-1115c/completed-gate-eval/evaluation/audit/summary.json",
+      "bytes": 959,
+      "sha256": "b93e66315e5cf133d2465742577417b1b4f8005dea7dbe58b752ddd2fa7196ef",
+      "chunks": 3
+    },
+    {
+      "i": 4,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-2048-1115c/completed-gate-eval/evaluation/audit/initial-states.json",
+      "bytes": 720,
+      "sha256": "adcf617b4a0ca73c7ff3567a41b2d8e25a6fe0d9fcb76d442169fa91a1ef5825",
+      "chunks": 2
+    },
+    {
+      "i": 5,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-2048-1115c/eval-000128/evaluation/result.json",
+      "bytes": 14139,
+      "sha256": "394278d42207d5cc267fe0ab8afcd752298ebdefd93725d96535814ba2af409e",
+      "chunks": 6
+    },
+    {
+      "i": 6,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-2048-1115c/eval-000128/evaluation/protocol.json",
+      "bytes": 3740830,
+      "sha256": "28f3becc9a7f7c9f5d9323d6a51dfaaa91dc0289857c72a10721b61e9d7b8c08",
+      "chunks": 1745
+    },
+    {
+      "i": 7,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-2048-1115c/eval-000128/evaluation/accounting.json",
+      "bytes": 1382,
+      "sha256": "56e1e3db62c06a353cc2e00330ae4ddd0785762f3d067f8ae2cd079830618204",
+      "chunks": 3
+    },
+    {
+      "i": 8,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-2048-1115c/eval-000128/evaluation/audit/summary.json",
+      "bytes": 958,
+      "sha256": "0606796133cb7dce782bc07fac8b4381e828f37a56daed2331ca0e8c8d2677f8",
+      "chunks": 3
+    },
+    {
+      "i": 9,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-2048-1115c/eval-000128/evaluation/audit/initial-states.json",
+      "bytes": 720,
+      "sha256": "25efb8e13c139d61387a8203ad1121676f1440f924094954a1d2e9f33878e35f",
+      "chunks": 2
+    },
+    {
+      "i": 10,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-2048-1115c/eval-000256/evaluation/result.json",
+      "bytes": 14150,
+      "sha256": "d5b200c91507182f7da890a9b33c6c21875cd61226a53d8f9d7192f041d54777",
+      "chunks": 6
+    },
+    {
+      "i": 11,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-2048-1115c/eval-000256/evaluation/protocol.json",
+      "bytes": 3740830,
+      "sha256": "e3961102f90c1bcc2dcf2482059622b3994cf1d1a9e3fe00c4660c324a9a0d5c",
+      "chunks": 1745
+    },
+    {
+      "i": 12,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-2048-1115c/eval-000256/evaluation/accounting.json",
+      "bytes": 1382,
+      "sha256": "0ad21678e14f26031e3ee9624c41da90d55634be26a81781c95d110c60b24f86",
+      "chunks": 3
+    },
+    {
+      "i": 13,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-2048-1115c/eval-000256/evaluation/audit/summary.json",
+      "bytes": 958,
+      "sha256": "ac6288c68535fc776f77451140f76bc7af41f7aae8b3c266b5c836dbd470c6bb",
+      "chunks": 3
+    },
+    {
+      "i": 14,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-2048-1115c/eval-000256/evaluation/audit/initial-states.json",
+      "bytes": 720,
+      "sha256": "4c63f8d80b5a48f696f95c612487452481ab15fe0e5da848d55d1d3192b84ba6",
+      "chunks": 2
+    },
+    {
+      "i": 15,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-2048-1115c/eval-000512/evaluation/result.json",
+      "bytes": 14212,
+      "sha256": "d5cb9568a0928584e83a492fd94dcb81b70334091a082d6e096462aa482ff617",
+      "chunks": 7
+    },
+    {
+      "i": 16,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-2048-1115c/eval-000512/evaluation/protocol.json",
+      "bytes": 3740831,
+      "sha256": "67f5ca9bcf20bcee2327ecd1aec04aa8cc7cc262d7b35506b11eec0252d98c6e",
+      "chunks": 1745
+    },
+    {
+      "i": 17,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-2048-1115c/eval-000512/evaluation/accounting.json",
+      "bytes": 1381,
+      "sha256": "84b4b9858b1fb6bc72537eb7a096ae4377bee9f2470daabf77df02eb9d3e9947",
+      "chunks": 3
+    },
+    {
+      "i": 18,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-2048-1115c/eval-000512/evaluation/audit/summary.json",
+      "bytes": 961,
+      "sha256": "8407ce0afc662bfd73ef284a701925d4c2420cb95371cca1bcc34588d0d051c0",
+      "chunks": 3
+    },
+    {
+      "i": 19,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-2048-1115c/eval-000512/evaluation/audit/initial-states.json",
+      "bytes": 720,
+      "sha256": "03d9c18e23b1d54b0f065deb2a525ad23a847ba0d5e043a406cd91e2286c7889",
+      "chunks": 2
+    },
+    {
+      "i": 20,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-2048-1115c/eval-001024/evaluation/result.json",
+      "bytes": 14280,
+      "sha256": "a70fe807acc9b74ba00943ff548a750f5574aac7a51d28730608a3b5611f6647",
+      "chunks": 7
+    },
+    {
+      "i": 21,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-2048-1115c/eval-001024/evaluation/protocol.json",
+      "bytes": 3740835,
+      "sha256": "5036a62df96ee14a7d70bf4a1fdfe6da09af64e2e6ba9f4f1a9cc18c9a13f4bd",
+      "chunks": 1745
+    },
+    {
+      "i": 22,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-2048-1115c/eval-001024/evaluation/accounting.json",
+      "bytes": 1413,
+      "sha256": "b54e509d33819c789c7fcf706ae254e74db676378dfb0df21cc68175b6503f08",
+      "chunks": 3
+    },
+    {
+      "i": 23,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-2048-1115c/eval-001024/evaluation/audit/summary.json",
+      "bytes": 963,
+      "sha256": "e8b74757d3d22ce2fd6f75a7bef103b1ef03d5467d86a6c0fe6260c77dda855f",
+      "chunks": 3
+    },
+    {
+      "i": 24,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-2048-1115c/eval-001024/evaluation/audit/initial-states.json",
+      "bytes": 720,
+      "sha256": "5ffb77bf6d8c2be4e9cc37fe3b0de5a8c2e6e5e768ce5371e2128ac81fb130b6",
+      "chunks": 2
+    },
+    {
+      "i": 25,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-2048-1115c/eval-001536/evaluation/result.json",
+      "bytes": 14346,
+      "sha256": "33b469d646c5930ae90a8be55b17f37c34bcddac6d478a8b4fd39854cff00449",
+      "chunks": 8
+    },
+    {
+      "i": 26,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-2048-1115c/eval-001536/evaluation/protocol.json",
+      "bytes": 3740835,
+      "sha256": "d9b12f4ee0c7b6cb7473ea11ae153c5952c2e04307ee853cf8a46098a329ed48",
+      "chunks": 1745
+    },
+    {
+      "i": 27,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-2048-1115c/eval-001536/evaluation/accounting.json",
+      "bytes": 1402,
+      "sha256": "76d4d852502d6b76d118c412ed861911b35a4d13e64e208a42ba3a6d36cad070",
+      "chunks": 3
+    },
+    {
+      "i": 28,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-2048-1115c/eval-001536/evaluation/audit/summary.json",
+      "bytes": 964,
+      "sha256": "f35fabd5c03f17a1be81bf465907e782ecf2e9366afe1445137b2f4381d2a41e",
+      "chunks": 3
+    },
+    {
+      "i": 29,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-2048-1115c/eval-001536/evaluation/audit/initial-states.json",
+      "bytes": 720,
+      "sha256": "eee1acffba746c636aa70e95e6748d288eca4c7d69f124d2689839838a733694",
+      "chunks": 2
+    },
+    {
+      "i": 30,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-2048-1115c/eval-002048/evaluation/result.json",
+      "bytes": 14332,
+      "sha256": "abd02532b1ba39528c0d6c681ac42bce687167fd73e4ffcfe31b5dc95aa653fc",
+      "chunks": 7
+    },
+    {
+      "i": 31,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-2048-1115c/eval-002048/evaluation/protocol.json",
+      "bytes": 3740835,
+      "sha256": "c5620055f2dab43d5aa2675ee2d54a23a31b263db5324f19aadf4370ad4109f8",
+      "chunks": 1745
+    },
+    {
+      "i": 32,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-2048-1115c/eval-002048/evaluation/accounting.json",
+      "bytes": 1414,
+      "sha256": "1bcf4fa072f98fe878e61ad32508fdc642ee423ead6a85f5c48cfdfa75a9e81d",
+      "chunks": 3
+    },
+    {
+      "i": 33,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-2048-1115c/eval-002048/evaluation/audit/summary.json",
+      "bytes": 965,
+      "sha256": "7f86970c9040b24f0bfa047390e362a67923744c3e41e014d73d43db60bf31e8",
+      "chunks": 3
+    },
+    {
+      "i": 34,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-2048-1115c/eval-002048/evaluation/audit/initial-states.json",
+      "bytes": 720,
+      "sha256": "5624ad9262a807ca611d7a653bf01293c9c2c5bd853790f5fcf09fbd3e82f9a9",
+      "chunks": 2
+    },
+    {
+      "i": 35,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-2048-1115c/training/resolved-config.json",
+      "bytes": 44302,
+      "sha256": "9f8fb68093a9ff9cd443135ddb09ba7f2f3aa317e8d6db9a2ae618e663c7a433",
+      "chunks": 23
+    },
+    {
+      "i": 36,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-2048-1115c/training/checkpoint-manifest.json",
+      "bytes": 10188,
+      "sha256": "70f88550bfb0bca8a1b860dc3e33e2679d931e4c33af220be72a3772c7922faa",
+      "chunks": 9
+    },
+    {
+      "i": 37,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-2048-1115c/training/result.json",
+      "bytes": 3572758,
+      "sha256": "7f0dcfb3c9487275794bf216e6d2db3370f20db3eedaa0aaa18461d1f1919aa8",
+      "chunks": 1736
+    },
+    {
+      "i": 38,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-2048-1115c/result.json",
+      "bytes": 22298,
+      "sha256": "c5d363926077671f1a6d7db84a25959829fb0ff84ce2a14da4882b8a96764894",
+      "chunks": 17
+    }
+  ]
+}

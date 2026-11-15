@@ -1,18 +1,21 @@
 {
-  "observed_at": "2026-11-15T03:36:24.198581+08:00",
+  "observed_at": "2026-11-15T14:23:59.631972+08:00",
   "user_resumed": true,
   "max_requested_H100": 4,
-  "requested_nonterminal_H100": 4,
+  "requested_nonterminal_H100": 0,
   "paper_results_reproduced": false,
   "LIBERO_paused": true,
   "completed": {
     "lafan_curve": "lafan-curve-64k-1115b/validation.json",
-    "two_H100_gate": "native-two-gpu-gate-1115e/validation.json"
+    "two_H100_gate": "native-two-gpu-gate-1115e/validation.json",
+    "PPO_fresh2048_and_six_full40_points": "ppo-sim-2048-1115c/validation.json",
+    "BONES_segmented_tail_full_raw": "bones-warm-tail-1115d/local-per-motion-recomputation.json",
+    "all_ten_horizon_endpoints": "finite-comparison-1115/summary.json"
   },
   "retained_failure": "native-two-gpu-gate-1115a/validation.json",
   "current_jobs": {
     "PPO_fresh_curve": {
-      "status": "submitted_running",
+      "status": "terminal",
       "name": "supermimic-official-ppo-sim-260010076-1115c",
       "gpu": 1,
       "max_restarts": 0,
@@ -23,15 +26,20 @@
       "main_training_started_at": "2026-11-15T02:44:01.082318+08:00",
       "main_training_deadline": "2026-11-15T04:14:01.082318+08:00",
       "created_at": "2026-11-15T02:39:53+08:00",
-      "platform_status": "running",
+      "platform_status": "failed",
       "program_started_at": "2026-11-15T02:40:10+08:00",
-      "program_deadline": "2026-11-15T07:10:10+08:00"
+      "program_deadline": "2026-11-15T07:10:10+08:00",
+      "scientific_training_and_evaluation_complete": true,
+      "original_job_exit_code": 1,
+      "receipt_export_2MB_failure_preserved": true,
+      "original_JSONs_verified": 39,
+      "validation": "ppo-sim-2048-1115c/validation.json"
     },
     "BONES_warm_tail": {
       "name": "supermimic-official-bones-warm-tail-260010076-1115d",
       "source_commit": "4dd096a621858cf8d9c48e86a818d38de5cc78dc",
       "command_sha256": "113bcf2ae3c5087e73b617faa75eb578e851b992fe4693c0ce1588c03d21a7d8",
-      "status": "running",
+      "status": "terminal",
       "uid": "bfab3e48759548ef9be134a3fcadde53",
       "max_restarts": 0,
       "gpu": 1,
@@ -40,18 +48,25 @@
       "new_training_collections": 24000,
       "combined_collections": 320001,
       "exact_training_continuation": false,
-      "platform_status": "running",
+      "platform_status": "success",
       "created_at": "2026-11-15T03:00:41+08:00",
       "program_started_at": "2026-11-15T03:01:11+08:00",
       "program_deadline": "2026-11-15T08:01:11+08:00",
       "forced_exit_deadline": "2026-11-15T08:01:41+08:00",
       "integration_actual_native_CUDA_passed": true,
       "main_training_started_at": "2026-11-15T03:07:09.961340+08:00",
-      "main_training_deadline": "2026-11-15T05:37:09.961340+08:00"
+      "main_training_deadline": "2026-11-15T05:37:09.961340+08:00",
+      "full_raw_evaluation_completed": true,
+      "original_JSONs_verified": 13,
+      "all142220_per_motion_rows_recomputed_locally": true,
+      "successes": 138010,
+      "failures": 4210,
+      "mean_normalized_full_motion_return": 0.9017312886731425,
+      "validation": "bones-warm-tail-1115d/validation.json"
     },
     "horizon_H8_H16": {
       "name": "supermimic-official-critic-h8h16-260010076-1115f",
-      "status": "running",
+      "status": "terminal",
       "uid": "d3562d77ab654e5397354b8178275b09",
       "max_restarts": 0,
       "gpu": 1,
@@ -62,7 +77,7 @@
         8,
         16
       ],
-      "platform_status": "running",
+      "platform_status": "success",
       "created_at": "2026-11-15T03:18:10+08:00",
       "program_started_at": "2026-11-15T03:18:53+08:00",
       "program_deadline": "2026-11-15T12:18:53+08:00",
@@ -73,11 +88,13 @@
       "first_case_main_deadline": "2026-11-15T05:25:21.924091+08:00",
       "verified_partial_scope": "h008-critic/integration",
       "partial_verification": "critic-grid-h8h16-1115f/validation.json",
-      "phase_progress_captured_at": "2026-11-15T03:27:01.370366+08:00"
+      "phase_progress_captured_at": "2026-11-15T03:27:01.370366+08:00",
+      "full_four_case_16k_grid_verified": true,
+      "original_JSONs_verified": 73
     },
     "horizon_H64_H128": {
       "name": "supermimic-official-critic-h64h128-260010076-1115g",
-      "status": "running",
+      "status": "terminal",
       "uid": "796b03e53e1e429bbe4f8db7772c83e2",
       "max_restarts": 0,
       "gpu": 1,
@@ -88,7 +105,7 @@
         64,
         128
       ],
-      "platform_status": "running",
+      "platform_status": "success",
       "created_at": "2026-11-15T03:19:12+08:00",
       "program_started_at": "2026-11-15T03:20:18+08:00",
       "program_deadline": "2026-11-15T12:20:18+08:00",
@@ -99,7 +116,22 @@
       "first_case_main_deadline": "2026-11-15T05:26:30.323615+08:00",
       "verified_partial_scope": "h064-critic/integration",
       "partial_verification": "critic-grid-h64h128-1115g/validation.json",
-      "phase_progress_captured_at": "2026-11-15T03:27:02.284899+08:00"
+      "phase_progress_captured_at": "2026-11-15T03:27:02.284899+08:00",
+      "full_four_case_16k_grid_verified": true,
+      "original_JSONs_verified": 73
+    },
+    "completed_result_recovery": {
+      "uid": "5adbfc9ca528477daffe6960f1fad16a",
+      "name": "supermimic-official-result-recovery-260010076-1115h",
+      "gpu": 1,
+      "max_restarts": 0,
+      "max_program_seconds": 900,
+      "status": "terminal",
+      "platform_status": "success",
+      "actual_program_started_at": "2026-11-15T14:17:06.420081+08:00",
+      "exit_logged_at": "2026-11-15T14:17:20.073726587+08:00",
+      "worker_status": "success",
+      "training_or_evaluation_rerun": false
     }
   },
   "latest_readonly_training_counters": {
@@ -127,5 +159,11 @@
       "native_solver_and_linesearch_iteration_limit_warnings_present": true,
       "physics_settings_changed": false
     }
-  }
+  },
+  "qualified_current_results": {
+    "PPO": "ppo-sim-2048-1115c/validation.json",
+    "BONES": "bones-warm-tail-1115d/local-per-motion-recomputation.json",
+    "horizons": "finite-comparison-1115/summary.json"
+  },
+  "historical_readonly_counters_preserved": true
 }

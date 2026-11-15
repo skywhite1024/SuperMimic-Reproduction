@@ -1,0 +1,29 @@
+{
+  "status": "warm_start_tail_and_full_raw_evaluation_completed",
+  "kind": "explicit_weight_warm_start",
+  "source_manifest": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-raw-320k-1113m/checkpoint-series/step-000296001/manifest.json",
+  "source_manifest_sha256": "b65c3e6477d0290620d8cf330eff2c023f930f3cb6b6e58339fd0c7553ae3c8d",
+  "inherited_collection_steps": 296001,
+  "new_training_collections": 24000,
+  "combined_training_collections": 320001,
+  "exact_training_continuation": false,
+  "original_interrupted_parent_rewritten": false,
+  "paper_results_reproduced": false,
+  "full_training_state_resume_available": false,
+  "whole_program_seconds": 18000,
+  "integration_collection_steps": 21,
+  "main_started": true,
+  "full_raw_evaluation_completed": true,
+  "integration_actual_native_CUDA_passed": true,
+  "training_result_sha256": "d5b874a5984097c0633ad4efc5b5f5bf7619db490927317fcc7fa5ad4362eaee",
+  "successes": 138010,
+  "failures": 4210,
+  "mean_normalized_full_motion_return": 0.9017312886731425,
+  "all_saved_arrays_and_initial_states_verified": true,
+  "full_result_original": {
+    "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-warm-tail-1115d/evaluation/result.json",
+    "bytes": 52068537,
+    "sha256": "c9c6cb513153668aa39b78ce08a025e931fe88843038e526399fae252882b7ee"
+  },
+  "large_result_and_trajectories_remain_on_AFS": true
+}

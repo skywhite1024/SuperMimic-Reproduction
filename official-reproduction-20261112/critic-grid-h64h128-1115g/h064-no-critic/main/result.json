@@ -1,0 +1,83 @@
+{
+  "status": "complete",
+  "collection_steps": 16001,
+  "evaluation_steps": [
+    16001
+  ],
+  "points": [
+    {
+      "collection_steps": 16001,
+      "status": "complete",
+      "mean_normalized_full_motion_return": 0.8284301918901429,
+      "successes": 38,
+      "failures": 2,
+      "reference_frames": 441140,
+      "checkpoint_time": {
+        "collection_steps": 16001,
+        "callback_entry_after_native_save": {
+          "utc": "2026-11-14T21:15:29.188353+00:00",
+          "seconds_since_program_entry": 2755.92463587597,
+          "seconds_since_runner_run_entry": 2701.60575549677
+        },
+        "retained_snapshot_complete": {
+          "utc": "2026-11-14T21:15:30.232146+00:00",
+          "seconds_since_program_entry": 2756.9684309586883,
+          "seconds_since_runner_run_entry": 2702.6495505794883
+        },
+        "offline_artifact_logging_returned": {
+          "utc": "2026-11-14T21:15:30.780661+00:00",
+          "seconds_since_program_entry": 2757.5169467814267,
+          "seconds_since_runner_run_entry": 2703.1980664022267
+        }
+      },
+      "result_sha256": "1c7576ef84d0755261e3dced4cd408de0d3f4ec44e0905117e6f673c1d26e589",
+      "protocol_sha256": "384fec7ed633efbc5b0c30a42c0bb7ac18fa2ddf4b1e9ccfb514687913551f59",
+      "accounting_sha256": "b047aad0ba18af72bb10e967c96d7d3340dab8c14708ba2392cc409afcc10983",
+      "trajectory_audit_sha256": "d024aa691e588ae278d7ac71607468002f04c73eae89a50b62cf72a1b0e5d43d",
+      "initial_states_audit_sha256": "7cd7c93d27da0adb161c260f897efecfa5cff247e77fafee002311615283b715"
+    }
+  ],
+  "paper_results_reproduced": false,
+  "seed": 42,
+  "evaluation_protocol": "manual-reset-v2 full canonical LAFAN40",
+  "threshold": 0.82,
+  "threshold_convention": "First observed sampled checkpoint >=0.82; no interpolation or exact crossing-time claim",
+  "initialization_and_snapshot_overhead_reported": true,
+  "evaluation_time_excluded_from_training_time": true,
+  "matched_ppo_sim_comparison_completed": false,
+  "critic_enabled": false,
+  "imagination_horizon": 64,
+  "training_snapshots_and_monotonic_timing_verified": true,
+  "retained_snapshots": 5,
+  "first_observed_sample_at_or_above_threshold": {
+    "collection_steps": 16001,
+    "status": "complete",
+    "mean_normalized_full_motion_return": 0.8284301918901429,
+    "successes": 38,
+    "failures": 2,
+    "reference_frames": 441140,
+    "checkpoint_time": {
+      "collection_steps": 16001,
+      "callback_entry_after_native_save": {
+        "utc": "2026-11-14T21:15:29.188353+00:00",
+        "seconds_since_program_entry": 2755.92463587597,
+        "seconds_since_runner_run_entry": 2701.60575549677
+      },
+      "retained_snapshot_complete": {
+        "utc": "2026-11-14T21:15:30.232146+00:00",
+        "seconds_since_program_entry": 2756.9684309586883,
+        "seconds_since_runner_run_entry": 2702.6495505794883
+      },
+      "offline_artifact_logging_returned": {
+        "utc": "2026-11-14T21:15:30.780661+00:00",
+        "seconds_since_program_entry": 2757.5169467814267,
+        "seconds_since_runner_run_entry": 2703.1980664022267
+      }
+    },
+    "result_sha256": "1c7576ef84d0755261e3dced4cd408de0d3f4ec44e0905117e6f673c1d26e589",
+    "protocol_sha256": "384fec7ed633efbc5b0c30a42c0bb7ac18fa2ddf4b1e9ccfb514687913551f59",
+    "accounting_sha256": "b047aad0ba18af72bb10e967c96d7d3340dab8c14708ba2392cc409afcc10983",
+    "trajectory_audit_sha256": "d024aa691e588ae278d7ac71607468002f04c73eae89a50b62cf72a1b0e5d43d",
+    "initial_states_audit_sha256": "7cd7c93d27da0adb161c260f897efecfa5cff247e77fafee002311615283b715"
+  }
+}

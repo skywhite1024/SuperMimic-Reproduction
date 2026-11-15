@@ -1,0 +1,15 @@
+{
+  "status": "completed_existing_originals_reexported",
+  "original_PPO_job_exit_code": 1,
+  "original_PPO_failure": "Final receipt export exceeded the original 2 MB per-file bound",
+  "PPO_training_rerun": false,
+  "PPO_evaluation_rerun": false,
+  "original_files_modified": false,
+  "PPO_original_JSONs": 39,
+  "PPO_training_result_sha256": "7f0dcfb3c9487275794bf216e6d2db3370f20db3eedaa0aaa18461d1f1919aa8",
+  "BONES_full_result_original": {
+    "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-warm-tail-1115d/evaluation/result.json",
+    "bytes": 52068537,
+    "sha256": "c9c6cb513153668aa39b78ce08a025e931fe88843038e526399fae252882b7ee"
+  }
+}

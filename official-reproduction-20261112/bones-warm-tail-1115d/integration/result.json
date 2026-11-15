@@ -1,0 +1,172 @@
+{
+  "status": "pilot_completed",
+  "collection_steps": 21,
+  "seed": 42,
+  "num_envs": 4096,
+  "elapsed_training_seconds": 75.45167464017868,
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "checkpoints": [
+    {
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-warm-tail-1115d/integration/logs/SuperMimic-GenCoord-G1/2026-11-14_19-05-49/world_model.pt",
+      "bytes": 34990357,
+      "sha256": "7c17d20fc26a4f36d43c9af80fd04107be7f59bf0135998d4132ca14ab2a76e6"
+    },
+    {
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-warm-tail-1115d/integration/logs/SuperMimic-GenCoord-G1/2026-11-14_19-05-49/actor.pt",
+      "bytes": 46439949,
+      "sha256": "aab96c7e2bbf5f3a3e6869576cbb7b94d764f00c133d421ea3f906b72d5b1133"
+    },
+    {
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-warm-tail-1115d/integration/logs/SuperMimic-GenCoord-G1/2026-11-14_19-05-49/critic.pt",
+      "bytes": 929269,
+      "sha256": "92c767e36a05bb6cc69827a239d0a2a87a095d0592f4ded402901823cf6f2280"
+    }
+  ],
+  "full_clip_evaluation_completed": false,
+  "paper_results_reproduced": false,
+  "goal_assembly_backend": "eager",
+  "training_profile": "paper-a5-single-gpu",
+  "critic_enabled": true,
+  "policy_ablation": null,
+  "corpus": {
+    "name": "bones-raw",
+    "clips": 142220,
+    "frames": 51915358,
+    "paper_name_filter_applied": false,
+    "paper_feasibility_filter_applied": false
+  },
+  "device_memory_after_initialization": {
+    "free_bytes": 63770525696,
+    "total_bytes": 85017624576,
+    "torch_allocated_bytes": 19236814336,
+    "torch_reserved_bytes": 19268632576
+  },
+  "peak_torch_memory_allocated_bytes": 33216616960,
+  "peak_torch_memory_reserved_bytes": 34997272576,
+  "memory_scope": "PyTorch allocator only; excludes Warp and other CUDA allocations",
+  "retained_checkpoint_series": [
+    {
+      "status": "model_snapshot_preserved",
+      "collection_steps": 1,
+      "files": [
+        {
+          "file": "world_model.pt",
+          "bytes": 34990357,
+          "sha256": "106639a22016230832ec24f1f39a1feb4a3e0865b4a52f06a6a1996044a7dee2"
+        },
+        {
+          "file": "actor.pt",
+          "bytes": 46439949,
+          "sha256": "e9849d7e0368c4217e6f8f34e8c52c17429518ad3760481600e4c52d1292e23e"
+        },
+        {
+          "file": "critic.pt",
+          "bytes": 929269,
+          "sha256": "4281f3e9c856365f9121b6880132bc1fb8cd26f20cb537c5a0b6a66454f53bd1"
+        }
+      ],
+      "full_training_resume_available": false,
+      "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state"
+    },
+    {
+      "status": "model_snapshot_preserved",
+      "collection_steps": 11,
+      "files": [
+        {
+          "file": "world_model.pt",
+          "bytes": 34990357,
+          "sha256": "3365cc73aea11e641dc10a24371cbdc347ea0fabf3dfe5c5c6a706920659d54b"
+        },
+        {
+          "file": "actor.pt",
+          "bytes": 46439949,
+          "sha256": "6ae68d90e93d51194f47e5c9930655940f7ab1fd7319da31ff3ffce1828608b6"
+        },
+        {
+          "file": "critic.pt",
+          "bytes": 929269,
+          "sha256": "4c2c541fd1853729ddb12e867c9f1282d679089b217056fe551297dee9469bd1"
+        }
+      ],
+      "full_training_resume_available": false,
+      "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state"
+    },
+    {
+      "status": "model_snapshot_preserved",
+      "collection_steps": 21,
+      "files": [
+        {
+          "file": "world_model.pt",
+          "bytes": 34990357,
+          "sha256": "7c17d20fc26a4f36d43c9af80fd04107be7f59bf0135998d4132ca14ab2a76e6"
+        },
+        {
+          "file": "actor.pt",
+          "bytes": 46439949,
+          "sha256": "aab96c7e2bbf5f3a3e6869576cbb7b94d764f00c133d421ea3f906b72d5b1133"
+        },
+        {
+          "file": "critic.pt",
+          "bytes": 929269,
+          "sha256": "92c767e36a05bb6cc69827a239d0a2a87a095d0592f4ded402901823cf6f2280"
+        }
+      ],
+      "full_training_resume_available": false,
+      "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state"
+    }
+  ],
+  "checkpoint_timing_file": "checkpoint-times.json",
+  "runner_returned_observation": {
+    "utc": "2026-11-14T19:07:04.516207+00:00",
+    "seconds_since_program_entry": 255.70253587141633,
+    "seconds_since_runner_run_entry": 74.88359788805246
+  },
+  "full_training_resume_available": false,
+  "initialization": {
+    "kind": "native_model_weight_warm_start",
+    "source_manifest": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-raw-320k-1113m/checkpoint-series/step-000296001/manifest.json",
+    "source_manifest_sha256": "b65c3e6477d0290620d8cf330eff2c023f930f3cb6b6e58339fd0c7553ae3c8d",
+    "source_config_sha256": "d71e9d8a6051eaf055bce53f84f3c78b37a23a97f3afcc9281a59e4eb9a48441",
+    "inherited_collection_steps": 296001,
+    "learning_rate_offset": 296001,
+    "source_files": [
+      {
+        "file": "world_model.pt",
+        "bytes": 34990357,
+        "sha256": "fb4b324029dd78297747fd3f9309fca6d5d0352f0b2b676854f673e24501c9eb"
+      },
+      {
+        "file": "actor.pt",
+        "bytes": 46439949,
+        "sha256": "45e1656ad717d01578ae74df181f73fc5c77cc9628b898583618a777293c1b8f"
+      },
+      {
+        "file": "critic.pt",
+        "bytes": 929269,
+        "sha256": "4281f3e9c856365f9121b6880132bc1fb8cd26f20cb537c5a0b6a66454f53bd1"
+      }
+    ],
+    "optimizer_state_restored": false,
+    "replay_buffer_restored": false,
+    "sampler_state_restored": false,
+    "simulator_state_restored": false,
+    "RNG_state_restored": false,
+    "exact_training_continuation": false,
+    "normalization_buffers_restored": true,
+    "all_four_native_state_dictionaries_equal_source": true,
+    "all_learned_weights_and_normalization_buffers_read_back": true,
+    "initial_learned_parameter_hashes": {
+      "world_model": "5662d67d4befc6bab681d06c10c6a605b9baa40d3bc74226e813c3852f1b3610",
+      "actor": "5f716effd09a7de216d5e2b5bc3b31b1ad4b12b9d96b0ecbb301e4ae30845e67",
+      "critic": "78d77fef256436f0e77a3b1f19662ecb6222919776aa37e69325052e43de0303"
+    },
+    "final_learned_parameter_hashes": {
+      "world_model": "98be5eba508d6314d129357aea855dd512c4c14d0f15edf3533601188f7ee330",
+      "actor": "46372f52a657ced5313bad8ba25997e960090035ba36aa82528ee3e49a0d059a",
+      "critic": "7e5fb8d9767183650726d86ef9b6c4cf40fa118347f042c92246cb604c5a816e"
+    },
+    "all_three_learned_networks_changed": true
+  },
+  "inherited_collection_steps": 296001,
+  "combined_collection_steps_including_warm_start": 296022
+}

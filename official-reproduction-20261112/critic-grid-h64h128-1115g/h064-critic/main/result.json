@@ -1,0 +1,53 @@
+{
+  "status": "complete",
+  "collection_steps": 16001,
+  "evaluation_steps": [
+    16001
+  ],
+  "points": [
+    {
+      "collection_steps": 16001,
+      "status": "complete",
+      "mean_normalized_full_motion_return": 0.799422849859067,
+      "successes": 38,
+      "failures": 2,
+      "reference_frames": 441140,
+      "checkpoint_time": {
+        "collection_steps": 16001,
+        "callback_entry_after_native_save": {
+          "utc": "2026-11-14T20:18:16.604518+00:00",
+          "seconds_since_program_entry": 3106.011475328356,
+          "seconds_since_runner_run_entry": 3047.6654114350677
+        },
+        "retained_snapshot_complete": {
+          "utc": "2026-11-14T20:18:17.703487+00:00",
+          "seconds_since_program_entry": 3107.110452339053,
+          "seconds_since_runner_run_entry": 3048.764388445765
+        },
+        "offline_artifact_logging_returned": {
+          "utc": "2026-11-14T20:18:18.262672+00:00",
+          "seconds_since_program_entry": 3107.669636685401,
+          "seconds_since_runner_run_entry": 3049.323572792113
+        }
+      },
+      "result_sha256": "941383aa8478542f42eeeefd946fc60e7f751c7fd454e42c0d4c0254d9dcefdc",
+      "protocol_sha256": "f7bdbe40fbaeecd5a537f976248f4af4d1f9d9c30a0be32b803dc6fb57405135",
+      "accounting_sha256": "cde98bf8e4932d91fc1b883cb98219e37e8c4d168eca9c24862f197d3c43e80f",
+      "trajectory_audit_sha256": "bc64f925ec3f8c9632470e32428a88bab05cec4156fdb89331ff36cc1ba5868a",
+      "initial_states_audit_sha256": "94e85a95681794e5e79984db63f68d7cc819d95b23390e141c471ecc06ccb3b9"
+    }
+  ],
+  "paper_results_reproduced": false,
+  "seed": 42,
+  "evaluation_protocol": "manual-reset-v2 full canonical LAFAN40",
+  "threshold": 0.82,
+  "threshold_convention": "First observed sampled checkpoint >=0.82; no interpolation or exact crossing-time claim",
+  "initialization_and_snapshot_overhead_reported": true,
+  "evaluation_time_excluded_from_training_time": true,
+  "matched_ppo_sim_comparison_completed": false,
+  "critic_enabled": true,
+  "imagination_horizon": 64,
+  "training_snapshots_and_monotonic_timing_verified": true,
+  "retained_snapshots": 5,
+  "first_observed_sample_at_or_above_threshold": null
+}

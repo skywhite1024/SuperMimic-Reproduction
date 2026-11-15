@@ -1,0 +1,95 @@
+{
+  "receipts": [
+    {
+      "i": 0,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-warm-tail-1115d/integration/result.json",
+      "bytes": 6681,
+      "sha256": "5c56fbeaff40b281d3f491734620c24323b8e0078810a74de2eb3c150ee364a0",
+      "chunks": 9
+    },
+    {
+      "i": 1,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-warm-tail-1115d/integration/resolved-config.json",
+      "bytes": 43718,
+      "sha256": "224ce8b4f4dd3eea73f1e6cb4cbefc4b5893f187a814249c88d1b4323e9170cd",
+      "chunks": 24
+    },
+    {
+      "i": 2,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-warm-tail-1115d/integration/initialization-readback.json",
+      "bytes": 1603,
+      "sha256": "b233926845f623619e8aef06e38e9b031bb10db4e45a3defe5d87e20f83114f4",
+      "chunks": 4
+    },
+    {
+      "i": 3,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-warm-tail-1115d/integration/checkpoint-times.json",
+      "bytes": 2808,
+      "sha256": "ffa4330f328fe0c9efed37ace9105ba444478a36173798ba00c6d32d288f03f6",
+      "chunks": 4
+    },
+    {
+      "i": 4,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-warm-tail-1115d/training/result.json",
+      "bytes": 5886,
+      "sha256": "d5b874a5984097c0633ad4efc5b5f5bf7619db490927317fcc7fa5ad4362eaee",
+      "chunks": 8
+    },
+    {
+      "i": 5,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-warm-tail-1115d/training/resolved-config.json",
+      "bytes": 43727,
+      "sha256": "24a3976a1fd42b1039c55a863b2083fb39016893f9b2e31330934c79bb155821",
+      "chunks": 24
+    },
+    {
+      "i": 6,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-warm-tail-1115d/training/initialization-readback.json",
+      "bytes": 1603,
+      "sha256": "b233926845f623619e8aef06e38e9b031bb10db4e45a3defe5d87e20f83114f4",
+      "chunks": 4
+    },
+    {
+      "i": 7,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-warm-tail-1115d/training/checkpoint-times.json",
+      "bytes": 2105,
+      "sha256": "a51891b3d9b530b8dedea0885003de0e85e0dd698796870874edc10fa5405c18",
+      "chunks": 3
+    },
+    {
+      "i": 8,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-warm-tail-1115d/evaluation/protocol.json",
+      "bytes": 13497,
+      "sha256": "ad89fff25b65176768ca50d0fa2f1356d992b38979db7109bbd35c5d2d5311cc",
+      "chunks": 15
+    },
+    {
+      "i": 9,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-warm-tail-1115d/evaluation/accounting.json",
+      "bytes": 1448,
+      "sha256": "99d07b2043a8d62d4b52f6ac3a9d095fa47a69b45d637306fee8e49968081076",
+      "chunks": 3
+    },
+    {
+      "i": 10,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-warm-tail-1115d/evaluation/audit/summary.json",
+      "bytes": 986,
+      "sha256": "5492785e966b507666dac9e918f235308c4cca2c8b9e9d7945428371eed90293",
+      "chunks": 3
+    },
+    {
+      "i": 11,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-warm-tail-1115d/evaluation/audit/initial-states.json",
+      "bytes": 726,
+      "sha256": "2327916f84e9debacff4af7ff68e93b57bbb32769db3d3c7eeb008b189cda09e",
+      "chunks": 2
+    },
+    {
+      "i": 12,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-warm-tail-1115d/result.json",
+      "bytes": 1391,
+      "sha256": "a915c064652539928884a2bab558702f79d7a808cc2ef79865eed133bddf32e6",
+      "chunks": 3
+    }
+  ]
+}

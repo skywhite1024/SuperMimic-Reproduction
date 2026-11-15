@@ -2,7 +2,7 @@
   "status": "scope_audit_incomplete_paper_reproduction",
   "goal_complete": false,
   "scope_redefined": false,
-  "as_of": "2026-11-15T03:36:24.198581+08:00",
+  "as_of": "2026-11-15T14:23:59.631972+08:00",
   "paper_pdf_sha256": "fe213017ab062f4acc3965da89abd3c29969163e144a2628a662b8ce46691009",
   "upstream_supermimic_commit": "abc124c1bd5976341034668af3d12c087f2f1f55",
   "code_and_evidence_commit": "8f0e4d8",
@@ -63,13 +63,17 @@
         16,
         18
       ],
-      "status": "original_raw320k_interrupted_explicit296001_weight_warm_tail_running",
+      "status": "segmented296001_plus24000_weight_warm_tail_full142220_evaluation_and_local_recomputation_verified",
       "evidence": [
         "checkpoint-series-gpu-validation.json"
       ],
-      "qualification": "Fresh AFS inspection verified75 immutable model sets through296001. Original parent is incomplete. Separate1115d passed21 native CUDA warm-start collections, then started24000 new collections with model/normalization restoration and optimizer/replay/sampler/simulator/RNG reset. Full142220 evaluation remains pending.",
+      "qualification": "Original320001 run interrupted;75 retained native model sets, latest296001. Explicit24000-collection weight warm tail completed with optimizer/replay/sampler/simulator/RNG reset. Combined320001 is segmented, not an exact continuation. Full142220 raw training-corpus evaluation:138010 successes,4210 failures,mean0.9017312887;13 original audit/trainingJSONs and52MB full per-motion result recovered and independently recomputed locally. Exact129514 filtered author benchmark and hardware remain missing.",
       "current_attempt": "1115d",
-      "exact_training_continuation": false
+      "exact_training_continuation": false,
+      "new_evidence": [
+        "bones-warm-tail-1115d/validation.json",
+        "bones-warm-tail-1115d/local-per-motion-recomputation.json"
+      ]
     },
     {
       "id": "two_gpu",
@@ -111,7 +115,7 @@
         6,
         7
       ],
-      "status": "complete_native9point_full40_curve_verified_PPO2048_baseline_running",
+      "status": "native9point_and_fresh_PPO2048_sixpoint_full40_learning_curves_verified",
       "evidence": [
         "manual-reset-v2-lafan40-result.json",
         "manual-reset-v2-lafan40-accounting.json",
@@ -123,7 +127,7 @@
         "learning-curve-paused-points-1113ag.json",
         "user-pause-20261113.json"
       ],
-      "qualification": "All49 originals of the nine-point native64001 full40 curve are verified, including all360 cloud trajectory/initial-state audits. Final40/40 mean0.85498; first sampled mean>=0.82 at24001. One seed. Fresh PPO2048 running; no matched PPO speedup or paper equivalence claim.",
+      "qualification": "NativeH32 single-seed first observed fixed-evaluation mean>=.82 at24001collections/98.308096million real steps/53.84runner minutes; final64001 gives40/40 and.85498. Fresh PPO2048/402.653184million real steps gives19/40 and.41899, with no sampled point>=.82. All39PPO originals verified after re-export; original job exit1 during2MB receipt export is retained. No author-confirmed PPO hyperparameters, equal-quality speedup or18h1/4/8GPU comparison.",
       "PPO_Sim_integration": {
         "status": "actual8192G1_PPO_gate_completed_and_originals_verified",
         "uid": "12b951aa6d3c4027b867c5591b1af8dc",
@@ -137,8 +141,8 @@
         "limitation": "Three PPO updates, not full18h1/4/8GPU curves or fixed-start policy quality"
       },
       "new_evidence": [
-        "lafan-curve-64k-1115b/validation.json",
-        "lafan-curve-64k-1115b/learning-curve-analysis.json"
+        "ppo-sim-2048-1115c/validation.json",
+        "finite-comparison-1115/summary.json"
       ],
       "native_final_successes": 40,
       "native_final_mean": 0.8549796937353648,
@@ -172,14 +176,17 @@
         "AFS_inventory_actual_updates": 1900
       },
       "PPO_Sim_learning_curve": {
-        "status": "fresh2048_training_running",
+        "status": "complete2048_training_and_six_full40_points_originals_verified",
         "uid": "bb89a2d9e06042dd9426fc52c0eb8854",
         "source_commit": "18efd16ad7d161ebb335fd81292f1280fe65c9ce",
-        "persisted_updates_observed": 1250,
-        "real_steps_observed": 245760000,
-        "quality_curve_completed": false,
+        "persisted_updates_observed": 2048,
+        "real_steps_observed": 402653184,
+        "quality_curve_completed": true,
         "old_run_preserved": true,
-        "evidence": "resumption-run-status-20261115.json"
+        "evidence": "resumption-run-status-20261115.json",
+        "original_job_exit_code": 1,
+        "export_failure_retained": true,
+        "recovery_uid": "5adbfc9ca528477daffe6960f1fad16a"
       }
     },
     {
@@ -240,19 +247,21 @@
         7,
         8
       ],
-      "status": "H32_critic_and_no_critic_same_save_cadence16k_pair_verified_full_horizon_sweep_missing",
+      "status": "all_ten_matched16k_horizon_critic_endpoints_originals_verified",
       "evidence": [
         "critic-free-h32-run-plan.json",
         "critic-free-main-1113ah/receipt-ledger.json",
         "critic-free-main-1113ah/validation.json",
         "critic-free-main-1113ah/critic-endpoint-comparison.json"
       ],
-      "qualification": "Matched4k save cadence at16001: critic35/40 mean0.78586; no-critic25/40 mean0.63548. All40 paired; no-critic higher on22, lower on18. Historical critic39/40 result retained separately. Full10case horizon/critic sweep and multi-seed effect remain missing.",
+      "qualification": "H8/16/32/64/128 each with/without critic;seed42,4096env,4k save cadence,16001collections. All400 main motion evaluations and200 paired clips retained;146 new originalJSONs plus earlierH32 pair verified. Critic helps short-horizon endpoints; no-critic higher mean atH64/H128 in this one seed. Full training-episode-return/time-to-threshold curves and multiple seeds remain missing.",
       "new_evidence": [
-        "lafan-curve-64k-1115b/matched-critic-h32-16k/comparison.json"
+        "critic-grid-h8h16-1115f/validation.json",
+        "critic-grid-h64h128-1115g/validation.json",
+        "finite-comparison-1115/summary.json"
       ],
       "remaining_16k_grid": {
-        "status": "submitted_running_or_starting",
+        "status": "complete_originals_verified",
         "jobs": [
           "d3562d77ab654e5397354b8178275b09",
           "796b03e53e1e429bbe4f8db7772c83e2"
@@ -270,11 +279,13 @@
         "initial_H8_and_H64_integrations_originals_verified": true,
         "verified_initial_original_JSONs": 18,
         "initial_quality_successes_each": 0,
-        "main_16k_quality_results_available": false,
+        "main_16k_quality_results_available": true,
         "partial_evidence": [
           "critic-grid-h8h16-1115f/validation.json",
           "critic-grid-h64h128-1115g/validation.json"
-        ]
+        ],
+        "all_eight_new_main_cases_complete": true,
+        "verified_original_JSONs": 146
       }
     },
     {
@@ -338,8 +349,8 @@
   ],
   "original_scope_retained": true,
   "no_new_cloud_jobs_submitted_by_this_audit": false,
-  "next_execution_priority": "Finish fresh PPO2048 and explicitly segmented raw-BONES tail/evaluation; fill remaining H8/16/64/128 critic/no-critic16k endpoints with at most4 H100. Native2H100 gate and LAFAN9point curve are complete; do not repeat them.",
-  "last_status_update": "2026-11-15T03:36:24.198581+08:00",
+  "next_execution_priority": "Review paper alignment of the remaining PPO-WM batch and data-duration studies, then run finite missing experiments with at most4H100. Completed1115c/d/f/g/h stages must not be rerun merely for transport or metadata. Exact author corpus and real hardware remain unverified.",
+  "last_status_update": "2026-11-15T14:23:59.631972+08:00",
   "execution_status": "explicit_user_resumption_four_H100_finite_jobs",
   "resume_requires_explicit_user_request": false,
   "execution_priorities_before_user_pause": [

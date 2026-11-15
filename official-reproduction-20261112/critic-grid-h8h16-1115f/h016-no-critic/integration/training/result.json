@@ -1,0 +1,115 @@
+{
+  "status": "pilot_completed",
+  "collection_steps": 21,
+  "seed": 42,
+  "num_envs": 4096,
+  "elapsed_training_seconds": 90.54034885577857,
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "checkpoints": [
+    {
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h8h16-1115f/h016-no-critic/integration/training/logs/SuperMimic-GenCoord-G1/2026-11-14_21-13-16/world_model.pt",
+      "bytes": 34990357,
+      "sha256": "8dd1a96673e3bacc7075b7e515e402f34ece6c8f1092fd99eefb0e5e4c54167f"
+    },
+    {
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h8h16-1115f/h016-no-critic/integration/training/logs/SuperMimic-GenCoord-G1/2026-11-14_21-13-16/actor.pt",
+      "bytes": 46439949,
+      "sha256": "58b6a432e168989cff413e222547f9bfd0123739bec159bb2aa22849110b7813"
+    }
+  ],
+  "full_clip_evaluation_completed": false,
+  "paper_results_reproduced": false,
+  "goal_assembly_backend": "eager",
+  "training_profile": "paper-a5-single-gpu",
+  "critic_enabled": false,
+  "policy_ablation": {
+    "imagination_horizon": 16,
+    "critic_enabled": false,
+    "gamma": 0.99,
+    "native_learner": "BpttPolicyLearner",
+    "scope": "Local A5 ablation; gamma0.99 and shared hyperparameters retained; no bootstrap or critic fit in native BPTT variant",
+    "paper_equivalence_verified": false
+  },
+  "corpus": {
+    "name": "lafan40",
+    "clips": 40,
+    "frames": 441140,
+    "paper_name_filter_applied": false,
+    "paper_feasibility_filter_applied": false
+  },
+  "device_memory_after_initialization": {
+    "free_bytes": 78549155840,
+    "total_bytes": 85017624576,
+    "torch_allocated_bytes": 4468735488,
+    "torch_reserved_bytes": 4490002432
+  },
+  "peak_torch_memory_allocated_bytes": 11755200000,
+  "peak_torch_memory_reserved_bytes": 12570329088,
+  "memory_scope": "PyTorch allocator only; excludes Warp and other CUDA allocations",
+  "retained_checkpoint_series": [
+    {
+      "status": "model_snapshot_preserved",
+      "collection_steps": 1,
+      "files": [
+        {
+          "file": "world_model.pt",
+          "bytes": 34990357,
+          "sha256": "dacc1d5fcd3406dcdadb8c593169431cb0bc99ef027dfd1077d51d611b6189ab"
+        },
+        {
+          "file": "actor.pt",
+          "bytes": 46439949,
+          "sha256": "ca81221c15cdf7ec98eb67a7f49638fe6946f8baee899763418a571ed45e2411"
+        }
+      ],
+      "full_training_resume_available": false,
+      "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state"
+    },
+    {
+      "status": "model_snapshot_preserved",
+      "collection_steps": 11,
+      "files": [
+        {
+          "file": "world_model.pt",
+          "bytes": 34990357,
+          "sha256": "0737dcbbd9596982e0284d0e06f2d28fcc556649316aeb172bc71d1475229a37"
+        },
+        {
+          "file": "actor.pt",
+          "bytes": 46439949,
+          "sha256": "0a0d1481da1afff06b141de3711a1b9758347a4e2b982f2ae484d5e64e7d4200"
+        }
+      ],
+      "full_training_resume_available": false,
+      "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state"
+    },
+    {
+      "status": "model_snapshot_preserved",
+      "collection_steps": 21,
+      "files": [
+        {
+          "file": "world_model.pt",
+          "bytes": 34990357,
+          "sha256": "8dd1a96673e3bacc7075b7e515e402f34ece6c8f1092fd99eefb0e5e4c54167f"
+        },
+        {
+          "file": "actor.pt",
+          "bytes": 46439949,
+          "sha256": "58b6a432e168989cff413e222547f9bfd0123739bec159bb2aa22849110b7813"
+        }
+      ],
+      "full_training_resume_available": false,
+      "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state"
+    }
+  ],
+  "checkpoint_timing_file": "checkpoint-times.json",
+  "runner_returned_observation": {
+    "utc": "2026-11-14T21:14:46.154776+00:00",
+    "seconds_since_program_entry": 144.27217834629118,
+    "seconds_since_runner_run_entry": 89.98051237873733
+  },
+  "full_training_resume_available": false,
+  "initialization": null,
+  "inherited_collection_steps": 0,
+  "combined_collection_steps_including_warm_start": 21
+}

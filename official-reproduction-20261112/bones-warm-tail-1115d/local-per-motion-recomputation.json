@@ -1,0 +1,29 @@
+{
+  "status": "all142220_original_per_motion_rows_recomputed_locally",
+  "original_result_bytes": 52068537,
+  "original_result_sha256": "c9c6cb513153668aa39b78ce08a025e931fe88843038e526399fae252882b7ee",
+  "recovery_download_gzip_sha256": "21b554e9edf12e3a07f4756ee54655cc69772711c9ed7e00c707877977f6e3a4",
+  "original_JSON_bytes_and_SHA256_verified": true,
+  "all_original_per_motion_rows_loaded_locally": true,
+  "clips": 142220,
+  "reference_frames": 51915358,
+  "tracked_steps": 51204956,
+  "successes": 138010,
+  "failures": 4210,
+  "success_fraction": 0.9703979749683589,
+  "mean_normalized_full_motion_return": 0.9017312886731317,
+  "frame_weighted_normalized_full_motion_return": 0.9042098877887289,
+  "tracked_fraction_frames": 0.9863161494523451,
+  "failure_termination_counts": {
+    "anchor_pos": 4195,
+    "anchor_ori": 13,
+    "anchor_ori+anchor_pos": 2
+  },
+  "all_metrics_match_cloud_accounting": true,
+  "exact_training_continuation": false,
+  "raw_result_kept_out_of_git": true,
+  "raw_NPZ_downloaded": false,
+  "physics_or_policy_replayed": false,
+  "author_exact_filtered_membership_verified": false,
+  "paper_results_reproduced": false
+}

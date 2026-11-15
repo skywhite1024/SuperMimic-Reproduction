@@ -1,0 +1,385 @@
+{
+  "task": "SuperMimic-GenCoord-G1",
+  "seed": 42,
+  "clips": 40,
+  "num_envs": 40,
+  "batch_order": "index",
+  "all_motions_included": true,
+  "subset_filter_applied": false,
+  "batch_reset": "fresh env reset; exact first frame; history filled with first sensor frame",
+  "inference_scope": "all resets, observations and steps across all batches after model construction",
+  "incomplete_result_policy": "completed batch receipts retained; never label an interrupted evaluation complete",
+  "start": "exact first reference frame via author reset_to_frame",
+  "success": "first termination is native motion_end with no failure term",
+  "termination_terms": {
+    "time_out": {
+      "time_out": true,
+      "params": {}
+    },
+    "motion_end": {
+      "time_out": true,
+      "params": {
+        "command_name": "motion"
+      }
+    },
+    "anchor_pos": {
+      "time_out": false,
+      "params": {
+        "command_name": "motion",
+        "threshold": 0.25
+      }
+    },
+    "anchor_ori": {
+      "time_out": false,
+      "params": {
+        "asset_cfg": "SceneEntityCfg(name='robot', joint_names=None, joint_ids=slice(None, None, None), body_names=None, body_ids=slice(None, None, None), geom_names=None, geom_ids=slice(None, None, None), site_names=None, site_ids=slice(None, None, None), actuator_names=None, actuator_ids=slice(None, None, None), tendon_names=None, tendon_ids=slice(None, None, None), camera_names=None, camera_ids=slice(None, None, None), light_names=None, light_ids=slice(None, None, None), material_names=None, material_ids=slice(None, None, None), texture_names=None, texture_ids=slice(None, None, None), pair_names=None, pair_ids=slice(None, None, None), preserve_order=False)",
+        "command_name": "motion",
+        "threshold": 0.8
+      }
+    }
+  },
+  "domain_randomization": false,
+  "observation_noise": false,
+  "robot_collision_friction": 1.0,
+  "physics": "unchanged author defaults",
+  "repeatability_verified": false,
+  "native_joint_limit_clipping_on_reset": true,
+  "manual_reset_version": 2,
+  "observation_cache_refreshed_after_pose_write": true,
+  "actuator_histories_backfilled_after_pose_write": true,
+  "initial_reference_state_check": "Full71D matches native clipped reference; atol=1e-5,rtol=1e-5 before first action",
+  "training": {
+    "status": "pilot_completed",
+    "collection_steps": 16001,
+    "seed": 42,
+    "num_envs": 4096,
+    "elapsed_training_seconds": 1520.407307419926,
+    "gpu": "NVIDIA H100 80GB HBM3",
+    "checkpoints": [
+      {
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h8h16-1115f/h008-no-critic/main/training/logs/SuperMimic-GenCoord-G1/2026-11-14_20-03-37/world_model.pt",
+        "bytes": 34990357,
+        "sha256": "10cb8650ba8f99ad0834ffca3d7e8231620f2dfedeb18a7eaf2b05d7c38d2ac9"
+      },
+      {
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h8h16-1115f/h008-no-critic/main/training/logs/SuperMimic-GenCoord-G1/2026-11-14_20-03-37/actor.pt",
+        "bytes": 46439949,
+        "sha256": "36f06ec32add889b020bbc7c833b5db79f233bea931a4e108bcd91ee183038d1"
+      }
+    ],
+    "full_clip_evaluation_completed": false,
+    "paper_results_reproduced": false,
+    "goal_assembly_backend": "eager",
+    "training_profile": "paper-a5-single-gpu",
+    "critic_enabled": false,
+    "policy_ablation": {
+      "imagination_horizon": 8,
+      "critic_enabled": false,
+      "gamma": 0.99,
+      "native_learner": "BpttPolicyLearner",
+      "scope": "Local A5 ablation; gamma0.99 and shared hyperparameters retained; no bootstrap or critic fit in native BPTT variant",
+      "paper_equivalence_verified": false
+    },
+    "corpus": {
+      "name": "lafan40",
+      "clips": 40,
+      "frames": 441140,
+      "paper_name_filter_applied": false,
+      "paper_feasibility_filter_applied": false
+    },
+    "device_memory_after_initialization": {
+      "free_bytes": 78549155840,
+      "total_bytes": 85017624576,
+      "torch_allocated_bytes": 4468735488,
+      "torch_reserved_bytes": 4490002432
+    },
+    "peak_torch_memory_allocated_bytes": 8457846272,
+    "peak_torch_memory_reserved_bytes": 9185525760,
+    "memory_scope": "PyTorch allocator only; excludes Warp and other CUDA allocations",
+    "retained_checkpoint_series": [
+      {
+        "status": "model_snapshot_preserved",
+        "collection_steps": 1,
+        "files": [
+          {
+            "file": "world_model.pt",
+            "bytes": 34990357,
+            "sha256": "c9ea7d741429d27ff8bb3aef7d4ce5416f3b474334b3caf3a1f0f241cc34952d"
+          },
+          {
+            "file": "actor.pt",
+            "bytes": 46439949,
+            "sha256": "aa786839fb6d434de478e1ad44d2e6a8445223615ff8c40adaa2fe4f150e55d0"
+          }
+        ],
+        "full_training_resume_available": false,
+        "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state"
+      },
+      {
+        "status": "model_snapshot_preserved",
+        "collection_steps": 4001,
+        "files": [
+          {
+            "file": "world_model.pt",
+            "bytes": 34990357,
+            "sha256": "ac67b9f5e61e6d3bf6419eafc3aad75d24a92394647b4136dab90b1c17ea6d35"
+          },
+          {
+            "file": "actor.pt",
+            "bytes": 46439949,
+            "sha256": "af987092f7346796594614f856ff11446c434108e0bf23a9313afbb2f1aa0fb0"
+          }
+        ],
+        "full_training_resume_available": false,
+        "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state"
+      },
+      {
+        "status": "model_snapshot_preserved",
+        "collection_steps": 8001,
+        "files": [
+          {
+            "file": "world_model.pt",
+            "bytes": 34990357,
+            "sha256": "86dc5f6ef099d75e865411f27b4d33982828e96114bc0614ae816edb1ad2cf56"
+          },
+          {
+            "file": "actor.pt",
+            "bytes": 46439949,
+            "sha256": "3fb8701e745efea00c9d7d8992b1bd6c290f3fa9fd9aab9a2b10217d9ce8acfc"
+          }
+        ],
+        "full_training_resume_available": false,
+        "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state"
+      },
+      {
+        "status": "model_snapshot_preserved",
+        "collection_steps": 12001,
+        "files": [
+          {
+            "file": "world_model.pt",
+            "bytes": 34990357,
+            "sha256": "5b6cf8cb45aeef61d7125fb9426edce94670c2f19e062183a8d028365cd41082"
+          },
+          {
+            "file": "actor.pt",
+            "bytes": 46439949,
+            "sha256": "1990bba699dad140284c46822b2a8b8c1ebfad1c4e2a93728666d12ef49c3d55"
+          }
+        ],
+        "full_training_resume_available": false,
+        "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state"
+      },
+      {
+        "status": "model_snapshot_preserved",
+        "collection_steps": 16001,
+        "files": [
+          {
+            "file": "world_model.pt",
+            "bytes": 34990357,
+            "sha256": "10cb8650ba8f99ad0834ffca3d7e8231620f2dfedeb18a7eaf2b05d7c38d2ac9"
+          },
+          {
+            "file": "actor.pt",
+            "bytes": 46439949,
+            "sha256": "36f06ec32add889b020bbc7c833b5db79f233bea931a4e108bcd91ee183038d1"
+          }
+        ],
+        "full_training_resume_available": false,
+        "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state"
+      }
+    ],
+    "checkpoint_timing_file": "checkpoint-times.json",
+    "runner_returned_observation": {
+      "utc": "2026-11-14T20:28:57.034318+00:00",
+      "seconds_since_program_entry": 1572.299361024052,
+      "seconds_since_runner_run_entry": 1519.8374928366393
+    },
+    "full_training_resume_available": false,
+    "initialization": null,
+    "inherited_collection_steps": 0,
+    "combined_collection_steps_including_warm_start": 16001
+  },
+  "paper_results_reproduced": false,
+  "checkpoint_selection": {
+    "parent_result_sha256": "a44c782f5f399d18675570816a4a7267d6e36a9af39a2944099dcfdfcf7e704b",
+    "parent_collection_steps": 16001,
+    "evaluated_collection_steps": 16001,
+    "kind": "retained_snapshot",
+    "files": [
+      {
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h8h16-1115f/h008-no-critic/main/training/checkpoint-series/step-000016001/world_model.pt",
+        "bytes": 34990357,
+        "sha256": "10cb8650ba8f99ad0834ffca3d7e8231620f2dfedeb18a7eaf2b05d7c38d2ac9"
+      },
+      {
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h8h16-1115f/h008-no-critic/main/training/checkpoint-series/step-000016001/actor.pt",
+        "bytes": 46439949,
+        "sha256": "36f06ec32add889b020bbc7c833b5db79f233bea931a4e108bcd91ee183038d1"
+      }
+    ],
+    "manifest_sha256": "f7bbc9ab700e1d7bb9a8624fde33fb1abbaf4f0bef13a16b19e6c6c4a476a2bd",
+    "resolved_config_sha256": "2823e2600c16a7c446d1e299bfc6fb3c2abbd086fa884f9cdf6ec389bc65c255"
+  },
+  "training_algorithm": "first-order",
+  "trajectory_state": "pre-action full_state; rewards and terminations are post-step",
+  "motion_files": {
+    "joint_names.json": "30355b480e4f89c97a693c72f8baf23902fd458d25e49b5df4741dd47aefce0d",
+    "joint_pos.npy": "64f0dff0d2e0d678a1f78213233124588044ba5781aa599c31b08d1348509a9b",
+    "joint_vel.npy": "11efc4b4b37b0818ea25a2dfa8676ed8f564a3443c97bf9c9680a346c06b23e0",
+    "motion_ends.npy": "fa4db64df8fe4d1f9362883b8c7b32d303a3865aeeab1c92fad0e89144cf8be5",
+    "motion_names.json": "b2b46cceb62efa50b159e13928b4c991b80b27a59b381ed603392cfa87e3c8b9",
+    "root_ang_vel_w.npy": "88ff137fd4a6dde1626dceae086c8a810da624d650855d69af1adc052565f9b5",
+    "root_lin_vel_w.npy": "7738f75d8de3b070a1d6407a06e1a971d5723abccc1e46a90a1aa86e93c486a0",
+    "root_pos_w.npy": "a57c5a8efc209c345ea4f7d83ef36936c0edfefb60f137757af69c6f4f7272fe",
+    "root_quat_w.npy": "9934171fce73559ec04d63db2bafee95575cd46196fe39aea425d677eae5303e"
+  },
+  "native_joint_names": [
+    "left_hip_pitch_joint",
+    "left_hip_roll_joint",
+    "left_hip_yaw_joint",
+    "left_knee_joint",
+    "left_ankle_pitch_joint",
+    "left_ankle_roll_joint",
+    "right_hip_pitch_joint",
+    "right_hip_roll_joint",
+    "right_hip_yaw_joint",
+    "right_knee_joint",
+    "right_ankle_pitch_joint",
+    "right_ankle_roll_joint",
+    "waist_yaw_joint",
+    "waist_roll_joint",
+    "waist_pitch_joint",
+    "left_shoulder_pitch_joint",
+    "left_shoulder_roll_joint",
+    "left_shoulder_yaw_joint",
+    "left_elbow_joint",
+    "left_wrist_roll_joint",
+    "left_wrist_pitch_joint",
+    "left_wrist_yaw_joint",
+    "right_shoulder_pitch_joint",
+    "right_shoulder_roll_joint",
+    "right_shoulder_yaw_joint",
+    "right_elbow_joint",
+    "right_wrist_roll_joint",
+    "right_wrist_pitch_joint",
+    "right_wrist_yaw_joint"
+  ],
+  "native_soft_joint_pos_limits": [
+    [
+      -2.2601749897003174,
+      2.6092751026153564
+    ],
+    [
+      -0.34906482696533203,
+      2.792564868927002
+    ],
+    [
+      -2.481839895248413,
+      2.481839895248413
+    ],
+    [
+      0.061086416244506836,
+      2.7314467430114746
+    ],
+    [
+      -0.8028565645217896,
+      0.4537865221500397
+    ],
+    [
+      -0.23561999201774597,
+      0.23561999201774597
+    ],
+    [
+      -2.2601749897003174,
+      2.6092751026153564
+    ],
+    [
+      -2.792564868927002,
+      0.34906482696533203
+    ],
+    [
+      -2.481839895248413,
+      2.481839895248413
+    ],
+    [
+      0.061086416244506836,
+      2.7314467430114746
+    ],
+    [
+      -0.8028565645217896,
+      0.4537865221500397
+    ],
+    [
+      -0.23561999201774597,
+      0.23561999201774597
+    ],
+    [
+      -2.3561999797821045,
+      2.3561999797821045
+    ],
+    [
+      -0.46799996495246887,
+      0.46799996495246887
+    ],
+    [
+      -0.46799996495246887,
+      0.46799996495246887
+    ],
+    [
+      -2.801219940185547,
+      2.3824195861816406
+    ],
+    [
+      -1.3962149620056152,
+      2.0595147609710693
+    ],
+    [
+      -2.3561999797821045,
+      2.3561999797821045
+    ],
+    [
+      -0.8901199102401733,
+      1.9373198747634888
+    ],
+    [
+      -1.7749979496002197,
+      1.7749979496002197
+    ],
+    [
+      -1.4529869556427002,
+      1.4529869556427002
+    ],
+    [
+      -1.4529869556427002,
+      1.4529869556427002
+    ],
+    [
+      -2.801219940185547,
+      2.3824195861816406
+    ],
+    [
+      -2.0595147609710693,
+      1.3962149620056152
+    ],
+    [
+      -2.3561999797821045,
+      2.3561999797821045
+    ],
+    [
+      -0.8901199102401733,
+      1.9373198747634888
+    ],
+    [
+      -1.7749979496002197,
+      1.7749979496002197
+    ],
+    [
+      -1.4529869556427002,
+      1.4529869556427002
+    ],
+    [
+      -1.4529869556427002,
+      1.4529869556427002
+    ]
+  ]
+}

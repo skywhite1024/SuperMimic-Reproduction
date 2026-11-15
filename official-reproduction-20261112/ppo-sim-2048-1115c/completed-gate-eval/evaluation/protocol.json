@@ -1,0 +1,494 @@
+{
+  "task": "SuperMimic-GenCoord-G1",
+  "seed": 42,
+  "clips": 40,
+  "num_envs": 40,
+  "batch_order": "index",
+  "all_motions_included": true,
+  "subset_filter_applied": false,
+  "batch_reset": "fresh env reset; exact first frame; history filled with first sensor frame",
+  "inference_scope": "all resets, observations and steps across all batches after model construction",
+  "incomplete_result_policy": "completed batch receipts retained; never label an interrupted evaluation complete",
+  "start": "exact first reference frame via author reset_to_frame",
+  "success": "first termination is native motion_end with no failure term",
+  "termination_terms": {
+    "time_out": {
+      "time_out": true,
+      "params": {}
+    },
+    "motion_end": {
+      "time_out": true,
+      "params": {
+        "command_name": "motion"
+      }
+    },
+    "anchor_pos": {
+      "time_out": false,
+      "params": {
+        "command_name": "motion",
+        "threshold": 0.25
+      }
+    },
+    "anchor_ori": {
+      "time_out": false,
+      "params": {
+        "asset_cfg": "SceneEntityCfg(name='robot', joint_names=None, joint_ids=slice(None, None, None), body_names=None, body_ids=slice(None, None, None), geom_names=None, geom_ids=slice(None, None, None), site_names=None, site_ids=slice(None, None, None), actuator_names=None, actuator_ids=slice(None, None, None), tendon_names=None, tendon_ids=slice(None, None, None), camera_names=None, camera_ids=slice(None, None, None), light_names=None, light_ids=slice(None, None, None), material_names=None, material_ids=slice(None, None, None), texture_names=None, texture_ids=slice(None, None, None), pair_names=None, pair_ids=slice(None, None, None), preserve_order=False)",
+        "command_name": "motion",
+        "threshold": 0.8
+      }
+    }
+  },
+  "domain_randomization": false,
+  "observation_noise": false,
+  "robot_collision_friction": 1.0,
+  "physics": "unchanged author defaults",
+  "repeatability_verified": false,
+  "native_joint_limit_clipping_on_reset": true,
+  "manual_reset_version": 2,
+  "observation_cache_refreshed_after_pose_write": true,
+  "actuator_histories_backfilled_after_pose_write": true,
+  "initial_reference_state_check": "Full71D matches native clipped reference; atol=1e-5,rtol=1e-5 before first action",
+  "training": {
+    "status": "real_G1_simulator_PPO_integration_completed",
+    "updates": [
+      {
+        "update": 1,
+        "collection_steps": 24,
+        "simulator_steps": 196608,
+        "rollout_steps": 24,
+        "num_envs": 8192,
+        "source": "MuJoCo env.step only",
+        "binary_done_rows": 2459,
+        "timeout_rows": 17,
+        "reward_sum": -17027.35546875,
+        "stored_rewards_match_native_RSL_timeout_bootstrap": true,
+        "stored_dones_match_simulator": true,
+        "collect_seconds": 26.959095027297735,
+        "sampler_distribution_updates": 1,
+        "trace": {
+          "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-integration-1113aj/training/trace/update-001.npz",
+          "bytes": 1395142,
+          "sha256": "d9dd327b12e6e1fe8333449ed5829ca415dedf8ead8218b0d4e1bc296dc1a7c1",
+          "readback_verified": true
+        },
+        "learn_seconds": 1.1595131130889058,
+        "losses": {
+          "value": 0.6866236060857773,
+          "surrogate": 0.3614023533649743,
+          "entropy": 41.098795127868655
+        },
+        "actor_before": "4d839ec9217efcce040cce41a89fe3b5b7af10a274111f412ee2c81b4778ffe6",
+        "actor_after": "82ed2e4a55e794d66edace00740d3949132dd86349222e13818240689d0f03fd",
+        "critic_before": "45a2ed9b8221ac3df3a091fb92ae06ea8f9b5af7f6da222e5deb4d3db141fc96",
+        "critic_after": "608a3278b5feb903a08957543e291d7d493470d8a274b99ff00aa6be71a00438",
+        "native_actor_and_critic_changed_and_finite": true,
+        "imagined_transitions": 0,
+        "world_model_updates": 0,
+        "native_actor_normalization_count": 196608,
+        "episode_statistics": {
+          "recent_completed_episodes": 100,
+          "mean_raw_episode_return": -2.250311198234558,
+          "scope": "Native logger last100 completed real simulator episodes, not fixed-start full-clip return"
+        }
+      },
+      {
+        "update": 2,
+        "collection_steps": 48,
+        "simulator_steps": 393216,
+        "rollout_steps": 24,
+        "num_envs": 8192,
+        "source": "MuJoCo env.step only",
+        "binary_done_rows": 8699,
+        "timeout_rows": 21,
+        "reward_sum": -18963.19921875,
+        "stored_rewards_match_native_RSL_timeout_bootstrap": true,
+        "stored_dones_match_simulator": true,
+        "collect_seconds": 1.3537253309041262,
+        "sampler_distribution_updates": 2,
+        "trace": {
+          "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-integration-1113aj/training/trace/update-002.npz",
+          "bytes": 1402069,
+          "sha256": "b0b49afa1f4b010ec278cdcc11494d3814833716db027fa5734d148d8375b48f",
+          "readback_verified": true
+        },
+        "learn_seconds": 0.6878647869452834,
+        "losses": {
+          "value": 0.2938730701804161,
+          "surrogate": -0.010188134145573713,
+          "entropy": 41.08400821685791
+        },
+        "actor_before": "82ed2e4a55e794d66edace00740d3949132dd86349222e13818240689d0f03fd",
+        "actor_after": "9712c9d7c0ca9c7cc5dc591fcf20a8196c4e798b9437ef48fec6b6adb3e03e4b",
+        "critic_before": "608a3278b5feb903a08957543e291d7d493470d8a274b99ff00aa6be71a00438",
+        "critic_after": "b32ce903c17e3134a0a66ef8b30838e68513583f70174ef4874a6a69529054f2",
+        "native_actor_and_critic_changed_and_finite": true,
+        "imagined_transitions": 0,
+        "world_model_updates": 0,
+        "native_actor_normalization_count": 393216,
+        "episode_statistics": {
+          "recent_completed_episodes": 100,
+          "mean_raw_episode_return": -2.3506931865215304,
+          "scope": "Native logger last100 completed real simulator episodes, not fixed-start full-clip return"
+        }
+      },
+      {
+        "update": 3,
+        "collection_steps": 72,
+        "simulator_steps": 589824,
+        "rollout_steps": 24,
+        "num_envs": 8192,
+        "source": "MuJoCo env.step only",
+        "binary_done_rows": 8716,
+        "timeout_rows": 14,
+        "reward_sum": -18224.166015625,
+        "stored_rewards_match_native_RSL_timeout_bootstrap": true,
+        "stored_dones_match_simulator": true,
+        "collect_seconds": 1.3378808293491602,
+        "sampler_distribution_updates": 3,
+        "trace": {
+          "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-integration-1113aj/training/trace/update-003.npz",
+          "bytes": 1401016,
+          "sha256": "87f8bee40d5955e9585349c02764081810a8af53d1309b3934cb639b662daf19",
+          "readback_verified": true
+        },
+        "learn_seconds": 0.6847875518724322,
+        "losses": {
+          "value": 0.23420810252428054,
+          "surrogate": -0.00903678427766863,
+          "entropy": 41.01478099822998
+        },
+        "actor_before": "9712c9d7c0ca9c7cc5dc591fcf20a8196c4e798b9437ef48fec6b6adb3e03e4b",
+        "actor_after": "8d14ccfbbd0ab7c1e8c4196ac2c3d0fbbc3cd6983c6e3ad53e98edb7209a42d3",
+        "critic_before": "b32ce903c17e3134a0a66ef8b30838e68513583f70174ef4874a6a69529054f2",
+        "critic_after": "fb89ee58b7418b0ae8003d14e99cfd9b7b51feaaea7eac5dd81d46528863934d",
+        "native_actor_and_critic_changed_and_finite": true,
+        "imagined_transitions": 0,
+        "world_model_updates": 0,
+        "native_actor_normalization_count": 589824,
+        "episode_statistics": {
+          "recent_completed_episodes": 100,
+          "mean_raw_episode_return": -2.0432327681779863,
+          "scope": "Native logger last100 completed real simulator episodes, not fixed-start full-clip return"
+        }
+      }
+    ],
+    "paper_results_reproduced": false,
+    "quality_evaluation_completed": false,
+    "world_model_updates": 0,
+    "imagined_transitions": 0,
+    "dimensions": {
+      "actor_input": 1570,
+      "actor_goal": 640,
+      "history": 10,
+      "proprio": 93,
+      "critic_input": 771,
+      "actions": 29
+    },
+    "initial_model_state_hashes": {
+      "actor": "4d839ec9217efcce040cce41a89fe3b5b7af10a274111f412ee2c81b4778ffe6",
+      "critic": "45a2ed9b8221ac3df3a091fb92ae06ea8f9b5af7f6da222e5deb4d3db141fc96"
+    },
+    "gpu": "NVIDIA H100 80GB HBM3",
+    "max_step_reward": 0.1,
+    "checkpoint_sets": [
+      {
+        "ppo_update": 1,
+        "collection_steps": 24,
+        "files": [
+          {
+            "file": "actor.pt",
+            "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-integration-1113aj/training/checkpoints/update-001/actor.pt",
+            "bytes": 46439949,
+            "sha256": "403d5faebf5ee7f4fcf8a2176ff9df443ded7cb35f5a45ae891fbbbc464991a3",
+            "model_state_readback_verified": true
+          },
+          {
+            "file": "critic.pt",
+            "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-integration-1113aj/training/checkpoints/update-001/critic.pt",
+            "bytes": 929269,
+            "sha256": "5fa9b3cb864483a8f7d52ab7a64e00a2f2348380806a3ba87a1b16c00abfe284",
+            "model_state_readback_verified": true
+          },
+          {
+            "file": "ppo.pt",
+            "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-integration-1113aj/training/checkpoints/update-001/ppo.pt",
+            "bytes": 119851915,
+            "sha256": "6e938c555e6bcfef604b53954dbde05a1ee7db90bc89d73230c9194bd1fd49aa",
+            "model_state_readback_verified": true
+          }
+        ],
+        "native_actor_state_sha256": "82ed2e4a55e794d66edace00740d3949132dd86349222e13818240689d0f03fd",
+        "native_critic_state_sha256": "608a3278b5feb903a08957543e291d7d493470d8a274b99ff00aa6be71a00438"
+      },
+      {
+        "ppo_update": 2,
+        "collection_steps": 48,
+        "files": [
+          {
+            "file": "actor.pt",
+            "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-integration-1113aj/training/checkpoints/update-002/actor.pt",
+            "bytes": 46439949,
+            "sha256": "f6f9ac800b7d6ce6095b807ad92b80c3153970cf8aaa3e5d96178a4521670bd5",
+            "model_state_readback_verified": true
+          },
+          {
+            "file": "critic.pt",
+            "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-integration-1113aj/training/checkpoints/update-002/critic.pt",
+            "bytes": 929269,
+            "sha256": "3c49e1ca25931dedaaf9c354b71b0d98619b4c3896a3a2bac9dad0da4a06ae4c",
+            "model_state_readback_verified": true
+          },
+          {
+            "file": "ppo.pt",
+            "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-integration-1113aj/training/checkpoints/update-002/ppo.pt",
+            "bytes": 119851915,
+            "sha256": "8a11eb87f4dda3d960698502e10c6a8c4b5c65bf016fceb7d75a36a2b0b7fa00",
+            "model_state_readback_verified": true
+          }
+        ],
+        "native_actor_state_sha256": "9712c9d7c0ca9c7cc5dc591fcf20a8196c4e798b9437ef48fec6b6adb3e03e4b",
+        "native_critic_state_sha256": "b32ce903c17e3134a0a66ef8b30838e68513583f70174ef4874a6a69529054f2"
+      },
+      {
+        "ppo_update": 3,
+        "collection_steps": 72,
+        "files": [
+          {
+            "file": "actor.pt",
+            "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-integration-1113aj/training/checkpoints/update-003/actor.pt",
+            "bytes": 46439949,
+            "sha256": "e2472d1330822e844d41afd5e3e2a292557c35186c41fc8c09c6ff48dabfa4ee",
+            "model_state_readback_verified": true
+          },
+          {
+            "file": "critic.pt",
+            "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-integration-1113aj/training/checkpoints/update-003/critic.pt",
+            "bytes": 929269,
+            "sha256": "ac0f983857a1f81e7b9a3b2e90d8c4e2428235f5c554c5c1d7d38f055e0d0b0f",
+            "model_state_readback_verified": true
+          },
+          {
+            "file": "ppo.pt",
+            "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-integration-1113aj/training/checkpoints/update-003/ppo.pt",
+            "bytes": 119851915,
+            "sha256": "7a2353d9d50594cef2ca166243ecc1782e934d7fce4fd03b3744e3e84a7e6e00",
+            "model_state_readback_verified": true
+          }
+        ],
+        "native_actor_state_sha256": "8d14ccfbbd0ab7c1e8c4196ac2c3d0fbbc3cd6983c6e3ad53e98edb7209a42d3",
+        "native_critic_state_sha256": "fb89ee58b7418b0ae8003d14e99cfd9b7b51feaaea7eac5dd81d46528863934d"
+      }
+    ],
+    "ppo_update_calls": 3,
+    "collection_steps": 72,
+    "simulator_steps": 589824,
+    "elapsed_training_seconds": 38.42618581838906,
+    "return_sampler_distribution_updates": 3,
+    "final_model_state_hashes": {
+      "actor": "8d14ccfbbd0ab7c1e8c4196ac2c3d0fbbc3cd6983c6e3ad53e98edb7209a42d3",
+      "critic": "fb89ee58b7418b0ae8003d14e99cfd9b7b51feaaea7eac5dd81d46528863934d"
+    },
+    "all_model_and_trace_readbacks_verified": true,
+    "source_config_sha256": "1d02e5dccc8d1a7bc4d64912b2a4f916f640e9bfdd9b7b287debdda61b81518f",
+    "checkpoint_manifest_sha256": "80f960e0e42daffbc96d4ef1a207c5df1264ac35d559942db631e72a4b62b57a"
+  },
+  "paper_results_reproduced": false,
+  "checkpoint_selection": {
+    "kind": "PPO-Sim_native_actor_snapshot",
+    "training_algorithm": "PPO-Sim",
+    "parent_result_sha256": "de479ec4722a248a41b742e967e7650d508584564ee53326a9bc3e317584823b",
+    "resolved_config_sha256": "1d02e5dccc8d1a7bc4d64912b2a4f916f640e9bfdd9b7b287debdda61b81518f",
+    "manifest_sha256": "80f960e0e42daffbc96d4ef1a207c5df1264ac35d559942db631e72a4b62b57a",
+    "parent_ppo_updates": 3,
+    "evaluated_ppo_update": 3,
+    "parent_collection_steps": 72,
+    "evaluated_collection_steps": 72,
+    "files": [
+      {
+        "file": "actor.pt",
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-integration-1113aj/training/checkpoints/update-003/actor.pt",
+        "bytes": 46439949,
+        "sha256": "e2472d1330822e844d41afd5e3e2a292557c35186c41fc8c09c6ff48dabfa4ee",
+        "model_state_readback_verified": true
+      },
+      {
+        "file": "critic.pt",
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-integration-1113aj/training/checkpoints/update-003/critic.pt",
+        "bytes": 929269,
+        "sha256": "ac0f983857a1f81e7b9a3b2e90d8c4e2428235f5c554c5c1d7d38f055e0d0b0f",
+        "model_state_readback_verified": true
+      },
+      {
+        "file": "ppo.pt",
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-integration-1113aj/training/checkpoints/update-003/ppo.pt",
+        "bytes": 119851915,
+        "sha256": "7a2353d9d50594cef2ca166243ecc1782e934d7fce4fd03b3744e3e84a7e6e00",
+        "model_state_readback_verified": true
+      }
+    ],
+    "no_world_model_loaded": true,
+    "deterministic_native_actor_mean": true
+  },
+  "training_algorithm": "ppo-sim",
+  "trajectory_state": "pre-action full_state; rewards and terminations are post-step",
+  "motion_files": {
+    "joint_names.json": "30355b480e4f89c97a693c72f8baf23902fd458d25e49b5df4741dd47aefce0d",
+    "joint_pos.npy": "64f0dff0d2e0d678a1f78213233124588044ba5781aa599c31b08d1348509a9b",
+    "joint_vel.npy": "11efc4b4b37b0818ea25a2dfa8676ed8f564a3443c97bf9c9680a346c06b23e0",
+    "motion_ends.npy": "fa4db64df8fe4d1f9362883b8c7b32d303a3865aeeab1c92fad0e89144cf8be5",
+    "motion_names.json": "b2b46cceb62efa50b159e13928b4c991b80b27a59b381ed603392cfa87e3c8b9",
+    "root_ang_vel_w.npy": "88ff137fd4a6dde1626dceae086c8a810da624d650855d69af1adc052565f9b5",
+    "root_lin_vel_w.npy": "7738f75d8de3b070a1d6407a06e1a971d5723abccc1e46a90a1aa86e93c486a0",
+    "root_pos_w.npy": "a57c5a8efc209c345ea4f7d83ef36936c0edfefb60f137757af69c6f4f7272fe",
+    "root_quat_w.npy": "9934171fce73559ec04d63db2bafee95575cd46196fe39aea425d677eae5303e"
+  },
+  "native_joint_names": [
+    "left_hip_pitch_joint",
+    "left_hip_roll_joint",
+    "left_hip_yaw_joint",
+    "left_knee_joint",
+    "left_ankle_pitch_joint",
+    "left_ankle_roll_joint",
+    "right_hip_pitch_joint",
+    "right_hip_roll_joint",
+    "right_hip_yaw_joint",
+    "right_knee_joint",
+    "right_ankle_pitch_joint",
+    "right_ankle_roll_joint",
+    "waist_yaw_joint",
+    "waist_roll_joint",
+    "waist_pitch_joint",
+    "left_shoulder_pitch_joint",
+    "left_shoulder_roll_joint",
+    "left_shoulder_yaw_joint",
+    "left_elbow_joint",
+    "left_wrist_roll_joint",
+    "left_wrist_pitch_joint",
+    "left_wrist_yaw_joint",
+    "right_shoulder_pitch_joint",
+    "right_shoulder_roll_joint",
+    "right_shoulder_yaw_joint",
+    "right_elbow_joint",
+    "right_wrist_roll_joint",
+    "right_wrist_pitch_joint",
+    "right_wrist_yaw_joint"
+  ],
+  "native_soft_joint_pos_limits": [
+    [
+      -2.2601749897003174,
+      2.6092751026153564
+    ],
+    [
+      -0.34906482696533203,
+      2.792564868927002
+    ],
+    [
+      -2.481839895248413,
+      2.481839895248413
+    ],
+    [
+      0.061086416244506836,
+      2.7314467430114746
+    ],
+    [
+      -0.8028565645217896,
+      0.4537865221500397
+    ],
+    [
+      -0.23561999201774597,
+      0.23561999201774597
+    ],
+    [
+      -2.2601749897003174,
+      2.6092751026153564
+    ],
+    [
+      -2.792564868927002,
+      0.34906482696533203
+    ],
+    [
+      -2.481839895248413,
+      2.481839895248413
+    ],
+    [
+      0.061086416244506836,
+      2.7314467430114746
+    ],
+    [
+      -0.8028565645217896,
+      0.4537865221500397
+    ],
+    [
+      -0.23561999201774597,
+      0.23561999201774597
+    ],
+    [
+      -2.3561999797821045,
+      2.3561999797821045
+    ],
+    [
+      -0.46799996495246887,
+      0.46799996495246887
+    ],
+    [
+      -0.46799996495246887,
+      0.46799996495246887
+    ],
+    [
+      -2.801219940185547,
+      2.3824195861816406
+    ],
+    [
+      -1.3962149620056152,
+      2.0595147609710693
+    ],
+    [
+      -2.3561999797821045,
+      2.3561999797821045
+    ],
+    [
+      -0.8901199102401733,
+      1.9373198747634888
+    ],
+    [
+      -1.7749979496002197,
+      1.7749979496002197
+    ],
+    [
+      -1.4529869556427002,
+      1.4529869556427002
+    ],
+    [
+      -1.4529869556427002,
+      1.4529869556427002
+    ],
+    [
+      -2.801219940185547,
+      2.3824195861816406
+    ],
+    [
+      -2.0595147609710693,
+      1.3962149620056152
+    ],
+    [
+      -2.3561999797821045,
+      2.3561999797821045
+    ],
+    [
+      -0.8901199102401733,
+      1.9373198747634888
+    ],
+    [
+      -1.7749979496002197,
+      1.7749979496002197
+    ],
+    [
+      -1.4529869556427002,
+      1.4529869556427002
+    ],
+    [
+      -1.4529869556427002,
+      1.4529869556427002
+    ]
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "receipts": [
+    {
+      "i": 0,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/completed-result-recovery-1115h/result.json",
+      "bytes": 669,
+      "sha256": "7311a25276541e4472edde9ec0074e80b8f4e0e06be5a8dcb5d4bcc83c0845c7",
+      "chunks": 2
+    }
+  ],
+  "source_full_gzip_sha256": "21b554e9edf12e3a07f4756ee54655cc69772711c9ed7e00c707877977f6e3a4",
+  "selected_messages_sha256": "dce25025b82fd7c16ac6b0416f898f330252a75589bc91bfef0bb08219968831",
+  "whole_job_stdout_published": false
+}

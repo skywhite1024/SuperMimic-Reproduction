@@ -1,0 +1,39 @@
+{
+  "name": "supermimic-official-result-recovery-260010076-1115h",
+  "display_name": "260010076-SuperMimic-result-recovery-1115h",
+  "source_commit": "3d0e9ea756f068dabfe985f3cc31b4722fa6e428",
+  "source_files": {
+    "emit_json_receipts.py": "218bf4ddfa0946a54b9d2c4f8415e217da1f97b45f5dccb2fad922414646d889",
+    "export_completed_1115_results.py": "d5917875b164a7ad38b02e05c6f64588c3e981c63dfc1e500e38a30a2914ecca"
+  },
+  "command_sha256": "0424d14c233d482bc25dfd62a45dffca0b99b7494eb5725e2d7861b5a11e39a8",
+  "bootstrap_characters": 6787,
+  "max_program_seconds": 900,
+  "forced_kill_after_seconds": 30,
+  "replicas": 1,
+  "max_restarts": 0,
+  "gpu": 1,
+  "vcpu": 4,
+  "ram_gib": 64,
+  "CPU_spec_unavailable_on_current_ACP_cluster": true,
+  "original_PPO_job_uid": "bb89a2d9e06042dd9426fc52c0eb8854",
+  "original_PPO_job_exit_code": 1,
+  "training_or_evaluation_rerun": false,
+  "original_files_modified": false,
+  "PPO_original_JSONs": 39,
+  "BONES_full_result": {
+    "bytes": 52068537,
+    "sha256": "c9c6cb513153668aa39b78ce08a025e931fe88843038e526399fae252882b7ee"
+  },
+  "output": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/completed-result-recovery-1115h",
+  "status": "completed_existing_originals_reexported",
+  "uid": "5adbfc9ca528477daffe6960f1fad16a",
+  "submitted": true,
+  "platform_status": "success",
+  "created_at": "2026-11-15T14:16:56+08:00",
+  "startup_command_exact_editor_readback": true,
+  "program_started_at": "2026-11-15T14:17:06.420081+08:00",
+  "exit_logged_at": "2026-11-15T14:17:20.073726587+08:00",
+  "worker_status": "success",
+  "full_raw_payload_not_published_in_git": true
+}

@@ -1,0 +1,333 @@
+{
+  "status": "complete",
+  "horizons": [
+    64,
+    128
+  ],
+  "main_collection_steps": 16001,
+  "num_envs": 4096,
+  "seed": 42,
+  "save_interval": 4000,
+  "fixed_start_protocol": "manual-reset-v2 full canonical40",
+  "evaluation_clips_per_point": 40,
+  "reference_frames_per_point": 441140,
+  "H32_previously_completed_and_not_repeated": true,
+  "whole_program_seconds": 32400,
+  "full_training_episode_return_curves_completed": false,
+  "multiple_seeds": false,
+  "paper_results_reproduced": false,
+  "cases": [
+    {
+      "case": "h064-critic",
+      "horizon": 64,
+      "critic_enabled": true,
+      "status": "complete",
+      "phases": [
+        {
+          "phase": "integration",
+          "status": "complete",
+          "point": {
+            "collection_steps": 11,
+            "status": "complete",
+            "mean_normalized_full_motion_return": 0.0006797596656314273,
+            "successes": 0,
+            "failures": 40,
+            "reference_frames": 441140,
+            "checkpoint_time": {
+              "collection_steps": 11,
+              "callback_entry_after_native_save": {
+                "utc": "2026-11-14T19:24:24.219183+00:00",
+                "seconds_since_program_entry": 213.02655766159296,
+                "seconds_since_runner_run_entry": 88.01677768677473
+              },
+              "retained_snapshot_complete": {
+                "utc": "2026-11-14T19:24:25.426823+00:00",
+                "seconds_since_program_entry": 214.2341992892325,
+                "seconds_since_runner_run_entry": 89.22441931441426
+              },
+              "offline_artifact_logging_returned": {
+                "utc": "2026-11-14T19:24:25.995459+00:00",
+                "seconds_since_program_entry": 214.8028362430632,
+                "seconds_since_runner_run_entry": 89.79305626824498
+              }
+            },
+            "result_sha256": "4228c7b7e187c788894752c5988180ef2858d2950658ba43988fc3d9b493ba50",
+            "protocol_sha256": "d36c03d84b6a21be9d944857045e257e47e401cba0069cab10f3868a432b98a6",
+            "accounting_sha256": "2c1d992589fa8754fb3e7b9444ab6f564132a4eee35b7f31e6fe19466a28cfc9",
+            "trajectory_audit_sha256": "670cfa1485497030138a2352cce29a7e4644b52780d7f2230b96b8615c6f35b5",
+            "initial_states_audit_sha256": "ef4ae635b1d3b777cbe46ab83eb537186ec3fd5a39113772b3af41598a8823f4"
+          }
+        },
+        {
+          "phase": "main",
+          "status": "complete",
+          "point": {
+            "collection_steps": 16001,
+            "status": "complete",
+            "mean_normalized_full_motion_return": 0.799422849859067,
+            "successes": 38,
+            "failures": 2,
+            "reference_frames": 441140,
+            "checkpoint_time": {
+              "collection_steps": 16001,
+              "callback_entry_after_native_save": {
+                "utc": "2026-11-14T20:18:16.604518+00:00",
+                "seconds_since_program_entry": 3106.011475328356,
+                "seconds_since_runner_run_entry": 3047.6654114350677
+              },
+              "retained_snapshot_complete": {
+                "utc": "2026-11-14T20:18:17.703487+00:00",
+                "seconds_since_program_entry": 3107.110452339053,
+                "seconds_since_runner_run_entry": 3048.764388445765
+              },
+              "offline_artifact_logging_returned": {
+                "utc": "2026-11-14T20:18:18.262672+00:00",
+                "seconds_since_program_entry": 3107.669636685401,
+                "seconds_since_runner_run_entry": 3049.323572792113
+              }
+            },
+            "result_sha256": "941383aa8478542f42eeeefd946fc60e7f751c7fd454e42c0d4c0254d9dcefdc",
+            "protocol_sha256": "f7bdbe40fbaeecd5a537f976248f4af4d1f9d9c30a0be32b803dc6fb57405135",
+            "accounting_sha256": "cde98bf8e4932d91fc1b883cb98219e37e8c4d168eca9c24862f197d3c43e80f",
+            "trajectory_audit_sha256": "bc64f925ec3f8c9632470e32428a88bab05cec4156fdb89331ff36cc1ba5868a",
+            "initial_states_audit_sha256": "94e85a95681794e5e79984db63f68d7cc819d95b23390e141c471ecc06ccb3b9"
+          }
+        }
+      ]
+    },
+    {
+      "case": "h064-no-critic",
+      "horizon": 64,
+      "critic_enabled": false,
+      "status": "complete",
+      "phases": [
+        {
+          "phase": "integration",
+          "status": "complete",
+          "point": {
+            "collection_steps": 11,
+            "status": "complete",
+            "mean_normalized_full_motion_return": 0.0006601227889721248,
+            "successes": 0,
+            "failures": 40,
+            "reference_frames": 441140,
+            "checkpoint_time": {
+              "collection_steps": 11,
+              "callback_entry_after_native_save": {
+                "utc": "2026-11-14T20:27:29.055895+00:00",
+                "seconds_since_program_entry": 149.15928172320127,
+                "seconds_since_runner_run_entry": 96.8340665474534
+              },
+              "retained_snapshot_complete": {
+                "utc": "2026-11-14T20:27:30.141772+00:00",
+                "seconds_since_program_entry": 150.24515826627612,
+                "seconds_since_runner_run_entry": 97.91994309052825
+              },
+              "offline_artifact_logging_returned": {
+                "utc": "2026-11-14T20:27:30.704731+00:00",
+                "seconds_since_program_entry": 150.808118250221,
+                "seconds_since_runner_run_entry": 98.48290307447314
+              }
+            },
+            "result_sha256": "ee4496496974cb447155254bc74dd9ac0d8c49390a9161e9049a8a48ccabe8ea",
+            "protocol_sha256": "8dcbc0c57df9bbb1cba2680f95ffcd14af6b5ac920d7ffe7a4ada2e044867eb2",
+            "accounting_sha256": "0237b8946a6e682b175032c95633ab6812a58baf3d840ebb8b176a260c62788e",
+            "trajectory_audit_sha256": "f5acf9cac58041975bbeb0e5697a1b9f5104743853b1cdcaa529802fe9455005",
+            "initial_states_audit_sha256": "c58153cc868197076295c97f380e25d5521c55981650568fc160d3d7920b04af"
+          }
+        },
+        {
+          "phase": "main",
+          "status": "complete",
+          "point": {
+            "collection_steps": 16001,
+            "status": "complete",
+            "mean_normalized_full_motion_return": 0.8284301918901429,
+            "successes": 38,
+            "failures": 2,
+            "reference_frames": 441140,
+            "checkpoint_time": {
+              "collection_steps": 16001,
+              "callback_entry_after_native_save": {
+                "utc": "2026-11-14T21:15:29.188353+00:00",
+                "seconds_since_program_entry": 2755.92463587597,
+                "seconds_since_runner_run_entry": 2701.60575549677
+              },
+              "retained_snapshot_complete": {
+                "utc": "2026-11-14T21:15:30.232146+00:00",
+                "seconds_since_program_entry": 2756.9684309586883,
+                "seconds_since_runner_run_entry": 2702.6495505794883
+              },
+              "offline_artifact_logging_returned": {
+                "utc": "2026-11-14T21:15:30.780661+00:00",
+                "seconds_since_program_entry": 2757.5169467814267,
+                "seconds_since_runner_run_entry": 2703.1980664022267
+              }
+            },
+            "result_sha256": "1c7576ef84d0755261e3dced4cd408de0d3f4ec44e0905117e6f673c1d26e589",
+            "protocol_sha256": "384fec7ed633efbc5b0c30a42c0bb7ac18fa2ddf4b1e9ccfb514687913551f59",
+            "accounting_sha256": "b047aad0ba18af72bb10e967c96d7d3340dab8c14708ba2392cc409afcc10983",
+            "trajectory_audit_sha256": "d024aa691e588ae278d7ac71607468002f04c73eae89a50b62cf72a1b0e5d43d",
+            "initial_states_audit_sha256": "7cd7c93d27da0adb161c260f897efecfa5cff247e77fafee002311615283b715"
+          }
+        }
+      ]
+    },
+    {
+      "case": "h128-critic",
+      "horizon": 128,
+      "critic_enabled": true,
+      "status": "complete",
+      "phases": [
+        {
+          "phase": "integration",
+          "status": "complete",
+          "point": {
+            "collection_steps": 11,
+            "status": "complete",
+            "mean_normalized_full_motion_return": 0.000848108672092104,
+            "successes": 0,
+            "failures": 40,
+            "reference_frames": 441140,
+            "checkpoint_time": {
+              "collection_steps": 11,
+              "callback_entry_after_native_save": {
+                "utc": "2026-11-14T21:24:33.090983+00:00",
+                "seconds_since_program_entry": 136.78712345659733,
+                "seconds_since_runner_run_entry": 84.6885354295373
+              },
+              "retained_snapshot_complete": {
+                "utc": "2026-11-14T21:24:34.273444+00:00",
+                "seconds_since_program_entry": 137.96957996860147,
+                "seconds_since_runner_run_entry": 85.87099194154143
+              },
+              "offline_artifact_logging_returned": {
+                "utc": "2026-11-14T21:24:34.814161+00:00",
+                "seconds_since_program_entry": 138.51030257716775,
+                "seconds_since_runner_run_entry": 86.41171455010772
+              }
+            },
+            "result_sha256": "716935a185aba4c7ccc4f59459de87411493b32de19c0f81c1796c829e33e648",
+            "protocol_sha256": "42c960b33cf6904b0651cd5fcb7bfcdead38c8b19c008fce1c71a7aa9ee3db61",
+            "accounting_sha256": "8bf6bba2fc2f4d56aac5bb520c6daa632891cbb8add3efd0b6855d9bfbd73a45",
+            "trajectory_audit_sha256": "c12d50353c7ef69f3e74a900d81b7eb28c95c2c14a23eacdcddbae168b4e27df",
+            "initial_states_audit_sha256": "911bf53e78a932b44d0f373987fc2e630b2cb7448b3da0ccddc2bf1186948fe9"
+          }
+        },
+        {
+          "phase": "main",
+          "status": "complete",
+          "point": {
+            "collection_steps": 16001,
+            "status": "complete",
+            "mean_normalized_full_motion_return": 0.7036922655003579,
+            "successes": 34,
+            "failures": 6,
+            "reference_frames": 441140,
+            "checkpoint_time": {
+              "collection_steps": 16001,
+              "callback_entry_after_native_save": {
+                "utc": "2026-11-14T22:44:06.806246+00:00",
+                "seconds_since_program_entry": 4648.910878609866,
+                "seconds_since_runner_run_entry": 4593.5731921345
+              },
+              "retained_snapshot_complete": {
+                "utc": "2026-11-14T22:44:07.887087+00:00",
+                "seconds_since_program_entry": 4649.9917210787535,
+                "seconds_since_runner_run_entry": 4594.654034603387
+              },
+              "offline_artifact_logging_returned": {
+                "utc": "2026-11-14T22:44:08.419209+00:00",
+                "seconds_since_program_entry": 4650.523843690753,
+                "seconds_since_runner_run_entry": 4595.186157215387
+              }
+            },
+            "result_sha256": "1bb3e1c48dcb782add027fa02b3995fe6ff68aee9eec0e1a6c55d858dcac51d9",
+            "protocol_sha256": "84a5c021282f6f31c722a16f697f22a84fe25a0abef39dd63c05bee0e3d9ac0a",
+            "accounting_sha256": "c54d8951a0b3c84c41b2d1f8c4e8c671750b1c757c4676199a3ba36a31dea441",
+            "trajectory_audit_sha256": "48649e4eace86934ea9bccc1521854e43806bfac89e280c2439776e2b13704cc",
+            "initial_states_audit_sha256": "6ebbfc58dba260e474998eebe3bb84b1590c27350dc95c4a8ec697de90d03da8"
+          }
+        }
+      ]
+    },
+    {
+      "case": "h128-no-critic",
+      "horizon": 128,
+      "critic_enabled": false,
+      "status": "complete",
+      "phases": [
+        {
+          "phase": "integration",
+          "status": "complete",
+          "point": {
+            "collection_steps": 11,
+            "status": "complete",
+            "mean_normalized_full_motion_return": 0.0009045000505902207,
+            "successes": 0,
+            "failures": 40,
+            "reference_frames": 441140,
+            "checkpoint_time": {
+              "collection_steps": 11,
+              "callback_entry_after_native_save": {
+                "utc": "2026-11-14T22:53:17.323847+00:00",
+                "seconds_since_program_entry": 141.0614051632583,
+                "seconds_since_runner_run_entry": 88.37610146403313
+              },
+              "retained_snapshot_complete": {
+                "utc": "2026-11-14T22:53:18.390707+00:00",
+                "seconds_since_program_entry": 142.12826445698738,
+                "seconds_since_runner_run_entry": 89.4429607577622
+              },
+              "offline_artifact_logging_returned": {
+                "utc": "2026-11-14T22:53:18.909551+00:00",
+                "seconds_since_program_entry": 142.6471106596291,
+                "seconds_since_runner_run_entry": 89.96180696040392
+              }
+            },
+            "result_sha256": "20140e8e665ced276ecd9dbf14e1d28518d5b326a6d77bae8e283ba60ab84bc9",
+            "protocol_sha256": "387a915b9701004662b93241dface47e4ae7d6cb96d5292b4bd10c177836a665",
+            "accounting_sha256": "ba9c443231be6b30be248767c90962b2a0b2077b5baf594ce3b94a5452960875",
+            "trajectory_audit_sha256": "40eda9d20dcc6d18343d25d4bda0c5e3dee787e9d908d1883a1dbf8449bd168d",
+            "initial_states_audit_sha256": "e122b1fc3ca1154ef58efd16f85150b3153a33f1db8ee2b6136da7890f05da0a"
+          }
+        },
+        {
+          "phase": "main",
+          "status": "complete",
+          "point": {
+            "collection_steps": 16001,
+            "status": "complete",
+            "mean_normalized_full_motion_return": 0.798689332332816,
+            "successes": 37,
+            "failures": 3,
+            "reference_frames": 441140,
+            "checkpoint_time": {
+              "collection_steps": 16001,
+              "callback_entry_after_native_save": {
+                "utc": "2026-11-15T00:04:33.095569+00:00",
+                "seconds_since_program_entry": 4159.274207253009,
+                "seconds_since_runner_run_entry": 4108.216783788055
+              },
+              "retained_snapshot_complete": {
+                "utc": "2026-11-15T00:04:34.127092+00:00",
+                "seconds_since_program_entry": 4160.3057313635945,
+                "seconds_since_runner_run_entry": 4109.248307898641
+              },
+              "offline_artifact_logging_returned": {
+                "utc": "2026-11-15T00:04:34.644389+00:00",
+                "seconds_since_program_entry": 4160.823026433587,
+                "seconds_since_runner_run_entry": 4109.765602968633
+              }
+            },
+            "result_sha256": "2f54f36880636c950cce431d319740e90cf5e54460e914e4b652d1beb734c420",
+            "protocol_sha256": "21cf462b7b9550e24e12200b12848d2a3bbc20c9f7c7dffdd7d05ac25bb2cc29",
+            "accounting_sha256": "bae889d72f61df3be80967b0947aa11861488344b997a7daedc5d63c3afbdd64",
+            "trajectory_audit_sha256": "6d203fdf1a3de31e696b7feecc9aeb15945b8c65006054e88b7bbcd65058a38f",
+            "initial_states_audit_sha256": "876a911b82e91c46f4dab90383655c8e8ff89b88f9e8e0dd3a900e634cb28f73"
+          }
+        }
+      ]
+    }
+  ]
+}

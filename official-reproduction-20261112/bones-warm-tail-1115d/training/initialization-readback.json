@@ -1,0 +1,39 @@
+{
+  "kind": "native_model_weight_warm_start",
+  "source_manifest": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-raw-320k-1113m/checkpoint-series/step-000296001/manifest.json",
+  "source_manifest_sha256": "b65c3e6477d0290620d8cf330eff2c023f930f3cb6b6e58339fd0c7553ae3c8d",
+  "source_config_sha256": "d71e9d8a6051eaf055bce53f84f3c78b37a23a97f3afcc9281a59e4eb9a48441",
+  "inherited_collection_steps": 296001,
+  "learning_rate_offset": 296001,
+  "source_files": [
+    {
+      "file": "world_model.pt",
+      "bytes": 34990357,
+      "sha256": "fb4b324029dd78297747fd3f9309fca6d5d0352f0b2b676854f673e24501c9eb"
+    },
+    {
+      "file": "actor.pt",
+      "bytes": 46439949,
+      "sha256": "45e1656ad717d01578ae74df181f73fc5c77cc9628b898583618a777293c1b8f"
+    },
+    {
+      "file": "critic.pt",
+      "bytes": 929269,
+      "sha256": "4281f3e9c856365f9121b6880132bc1fb8cd26f20cb537c5a0b6a66454f53bd1"
+    }
+  ],
+  "optimizer_state_restored": false,
+  "replay_buffer_restored": false,
+  "sampler_state_restored": false,
+  "simulator_state_restored": false,
+  "RNG_state_restored": false,
+  "exact_training_continuation": false,
+  "normalization_buffers_restored": true,
+  "all_four_native_state_dictionaries_equal_source": true,
+  "all_learned_weights_and_normalization_buffers_read_back": true,
+  "initial_learned_parameter_hashes": {
+    "world_model": "5662d67d4befc6bab681d06c10c6a605b9baa40d3bc74226e813c3852f1b3610",
+    "actor": "5f716effd09a7de216d5e2b5bc3b31b1ad4b12b9d96b0ecbb301e4ae30845e67",
+    "critic": "78d77fef256436f0e77a3b1f19662ecb6222919776aa37e69325052e43de0303"
+  }
+}

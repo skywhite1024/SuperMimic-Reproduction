@@ -1,0 +1,54 @@
+{
+  "status": "complete",
+  "collection_steps": 21,
+  "evaluation_steps": [
+    11
+  ],
+  "points": [
+    {
+      "collection_steps": 11,
+      "status": "complete",
+      "mean_normalized_full_motion_return": 0.0009045000505902207,
+      "successes": 0,
+      "failures": 40,
+      "reference_frames": 441140,
+      "checkpoint_time": {
+        "collection_steps": 11,
+        "callback_entry_after_native_save": {
+          "utc": "2026-11-14T22:53:17.323847+00:00",
+          "seconds_since_program_entry": 141.0614051632583,
+          "seconds_since_runner_run_entry": 88.37610146403313
+        },
+        "retained_snapshot_complete": {
+          "utc": "2026-11-14T22:53:18.390707+00:00",
+          "seconds_since_program_entry": 142.12826445698738,
+          "seconds_since_runner_run_entry": 89.4429607577622
+        },
+        "offline_artifact_logging_returned": {
+          "utc": "2026-11-14T22:53:18.909551+00:00",
+          "seconds_since_program_entry": 142.6471106596291,
+          "seconds_since_runner_run_entry": 89.96180696040392
+        }
+      },
+      "result_sha256": "20140e8e665ced276ecd9dbf14e1d28518d5b326a6d77bae8e283ba60ab84bc9",
+      "protocol_sha256": "387a915b9701004662b93241dface47e4ae7d6cb96d5292b4bd10c177836a665",
+      "accounting_sha256": "ba9c443231be6b30be248767c90962b2a0b2077b5baf594ce3b94a5452960875",
+      "trajectory_audit_sha256": "40eda9d20dcc6d18343d25d4bda0c5e3dee787e9d908d1883a1dbf8449bd168d",
+      "initial_states_audit_sha256": "e122b1fc3ca1154ef58efd16f85150b3153a33f1db8ee2b6136da7890f05da0a"
+    }
+  ],
+  "paper_results_reproduced": false,
+  "seed": 42,
+  "evaluation_protocol": "manual-reset-v2 full canonical LAFAN40",
+  "threshold": 0.82,
+  "threshold_convention": "First observed sampled checkpoint >=0.82; no interpolation or exact crossing-time claim",
+  "initialization_and_snapshot_overhead_reported": true,
+  "evaluation_time_excluded_from_training_time": true,
+  "matched_ppo_sim_comparison_completed": false,
+  "critic_enabled": false,
+  "imagination_horizon": 128,
+  "training_snapshots_and_monotonic_timing_verified": true,
+  "retained_snapshots": 3,
+  "three_distinct_world_model_snapshots": true,
+  "first_observed_sample_at_or_above_threshold": null
+}

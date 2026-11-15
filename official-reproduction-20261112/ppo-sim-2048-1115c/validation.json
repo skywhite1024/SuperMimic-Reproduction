@@ -1,0 +1,122 @@
+{
+  "status": "finite2048_PPO_Sim_training_and_six_full40_points_originals_verified",
+  "original_JSON": 39,
+  "original_byte_counts_and_SHA256_verified": true,
+  "original_job_uid": "bb89a2d9e06042dd9426fc52c0eb8854",
+  "original_job_exit_code": 1,
+  "original_receipt_export_failed": true,
+  "recovery_job_uid": "5adbfc9ca528477daffe6960f1fad16a",
+  "original_and_recovery_source_hashes_bound": true,
+  "scientific_training_and_evaluation_complete": true,
+  "PPO_update_calls": 2048,
+  "real_simulator_steps": 402653184,
+  "imagined_transitions": 0,
+  "world_model_updates": 0,
+  "native_actor_and_critic_hash_chain_verified": true,
+  "all_real_reward_done_storage_checks_verified": true,
+  "all_normalization_counts_are_real_observations": true,
+  "retained_model_sets": 7,
+  "saved_trace_updates": 8,
+  "gate_existing_three_update_model": {
+    "ppo_update": 3,
+    "collection_steps": 72,
+    "real_simulator_steps": 589824,
+    "successes": 0,
+    "failures": 40,
+    "mean_normalized_full_motion_return": 0.0006668843236514687,
+    "saved_steps": 1258,
+    "result_sha256": "187f8b1f5e3ea32c8bc0498bc9af013646d5a685e4f4ffeffa223645ef22a1d0"
+  },
+  "main_points": [
+    {
+      "ppo_update": 128,
+      "collection_steps": 3072,
+      "real_simulator_steps": 25165824,
+      "successes": 0,
+      "failures": 40,
+      "mean_normalized_full_motion_return": 0.00039014407624010574,
+      "saved_steps": 406,
+      "result_sha256": "394278d42207d5cc267fe0ab8afcd752298ebdefd93725d96535814ba2af409e",
+      "checkpoint_timing": {
+        "retained_snapshot_complete_seconds_since_program_entry": 345.9427953287959,
+        "retained_snapshot_complete_seconds_since_training_entry": 285.253988109529
+      }
+    },
+    {
+      "ppo_update": 256,
+      "collection_steps": 6144,
+      "real_simulator_steps": 50331648,
+      "successes": 0,
+      "failures": 40,
+      "mean_normalized_full_motion_return": 0.0006145799357126863,
+      "saved_steps": 547,
+      "result_sha256": "d5b200c91507182f7da890a9b33c6c21875cd61226a53d8f9d7192f041d54777",
+      "checkpoint_timing": {
+        "retained_snapshot_complete_seconds_since_program_entry": 609.919955380261,
+        "retained_snapshot_complete_seconds_since_training_entry": 549.2311474047601
+      }
+    },
+    {
+      "ppo_update": 512,
+      "collection_steps": 12288,
+      "real_simulator_steps": 100663296,
+      "successes": 0,
+      "failures": 40,
+      "mean_normalized_full_motion_return": 0.005588887010413964,
+      "saved_steps": 3182,
+      "result_sha256": "d5cb9568a0928584e83a492fd94dcb81b70334091a082d6e096462aa482ff617",
+      "checkpoint_timing": {
+        "retained_snapshot_complete_seconds_since_program_entry": 1150.469666466117,
+        "retained_snapshot_complete_seconds_since_training_entry": 1089.7808583900332
+      }
+    },
+    {
+      "ppo_update": 1024,
+      "collection_steps": 24576,
+      "real_simulator_steps": 201326592,
+      "successes": 4,
+      "failures": 36,
+      "mean_normalized_full_motion_return": 0.19448456185412727,
+      "saved_steps": 148470,
+      "result_sha256": "a70fe807acc9b74ba00943ff548a750f5574aac7a51d28730608a3b5611f6647",
+      "checkpoint_timing": {
+        "retained_snapshot_complete_seconds_since_program_entry": 2243.662171859294,
+        "retained_snapshot_complete_seconds_since_training_entry": 2182.9733641445637
+      }
+    },
+    {
+      "ppo_update": 1536,
+      "collection_steps": 36864,
+      "real_simulator_steps": 301989888,
+      "successes": 16,
+      "failures": 24,
+      "mean_normalized_full_motion_return": 0.40942522309231827,
+      "saved_steps": 317525,
+      "result_sha256": "33b469d646c5930ae90a8be55b17f37c34bcddac6d478a8b4fd39854cff00449",
+      "checkpoint_timing": {
+        "retained_snapshot_complete_seconds_since_program_entry": 3410.1648059152067,
+        "retained_snapshot_complete_seconds_since_training_entry": 3349.4759976044297
+      }
+    },
+    {
+      "ppo_update": 2048,
+      "collection_steps": 49152,
+      "real_simulator_steps": 402653184,
+      "successes": 19,
+      "failures": 21,
+      "mean_normalized_full_motion_return": 0.4189927235299614,
+      "saved_steps": 309912,
+      "result_sha256": "abd02532b1ba39528c0d6c681ac42bce687167fd73e4ffcfe31b5dc95aa653fc",
+      "checkpoint_timing": {
+        "retained_snapshot_complete_seconds_since_program_entry": 4575.508980050683,
+        "retained_snapshot_complete_seconds_since_training_entry": 4514.820172287524
+      }
+    }
+  ],
+  "gate_original_files_and_all_six_main_full40_points_verified": true,
+  "all_saved_arrays_and_initial_states_audited_on_cloud": true,
+  "raw_NPZ_or_weights_downloaded": false,
+  "paper_PPO_hyperparameters_confirmed": false,
+  "full18h_or_multiGPU_comparison_complete": false,
+  "paper_results_reproduced": false
+}

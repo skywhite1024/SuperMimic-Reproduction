@@ -1,0 +1,57 @@
+{
+  "status": "warm_tail_training_and_full_raw_cloud_audit_originals_verified",
+  "original_JSONs": 13,
+  "reported_status": "warm_start_tail_and_full_raw_evaluation_completed",
+  "error": null,
+  "training": {
+    "integration": {
+      "collections": 21,
+      "combined_collections": 296022,
+      "real_simulator_steps": 86016,
+      "retained_model_sets": 3,
+      "initial_learned_parameter_hashes": {
+        "world_model": "5662d67d4befc6bab681d06c10c6a605b9baa40d3bc74226e813c3852f1b3610",
+        "actor": "5f716effd09a7de216d5e2b5bc3b31b1ad4b12b9d96b0ecbb301e4ae30845e67",
+        "critic": "78d77fef256436f0e77a3b1f19662ecb6222919776aa37e69325052e43de0303"
+      },
+      "all_three_learned_networks_changed": true,
+      "source_manifest_sha256": "b65c3e6477d0290620d8cf330eff2c023f930f3cb6b6e58339fd0c7553ae3c8d",
+      "exact_training_continuation": false
+    },
+    "training": {
+      "collections": 24000,
+      "combined_collections": 320001,
+      "real_simulator_steps": 98304000,
+      "retained_model_sets": 2,
+      "initial_learned_parameter_hashes": {
+        "world_model": "5662d67d4befc6bab681d06c10c6a605b9baa40d3bc74226e813c3852f1b3610",
+        "actor": "5f716effd09a7de216d5e2b5bc3b31b1ad4b12b9d96b0ecbb301e4ae30845e67",
+        "critic": "78d77fef256436f0e77a3b1f19662ecb6222919776aa37e69325052e43de0303"
+      },
+      "all_three_learned_networks_changed": true,
+      "source_manifest_sha256": "b65c3e6477d0290620d8cf330eff2c023f930f3cb6b6e58339fd0c7553ae3c8d",
+      "exact_training_continuation": false
+    }
+  },
+  "successes": 138010,
+  "failures": 4210,
+  "mean_normalized_full_motion_return": 0.9017312886731425,
+  "full_result_original": {
+    "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-warm-tail-1115d/evaluation/result.json",
+    "bytes": 52068537,
+    "sha256": "c9c6cb513153668aa39b78ce08a025e931fe88843038e526399fae252882b7ee"
+  },
+  "cloud_verified_trajectory_bytes": 19428537246,
+  "cloud_verified_steps": 51204956,
+  "job_uid": "bfab3e48759548ef9be134a3fcadde53",
+  "source_commit": "4dd096a621858cf8d9c48e86a818d38de5cc78dc",
+  "source_files_bound_to_captured_log": true,
+  "log_sha256": "b1ed95009241525d45213a97f3819b3a136257aa6de33ba20d11da867e76dc4e",
+  "transport": "downloaded offline gzip",
+  "all_recovered_original_bytes_and_SHA256_verified": true,
+  "large_per_motion_result_downloaded": false,
+  "aggregate_recomputed_from_local_per_motion_result": false,
+  "trajectory_arrays_or_weights_downloaded": false,
+  "exact_training_continuation": false,
+  "paper_results_reproduced": false
+}

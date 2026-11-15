@@ -1,0 +1,9 @@
+{
+  "source_full_download_gzip_sha256": "21b554e9edf12e3a07f4756ee54655cc69772711c9ed7e00c707877977f6e3a4",
+  "source_full_timestamped_stdout_sha256": "89eb3076c9d1f9acda99d7f5bd4df98b50eb4c7edac1f52b8f41cfbb57a7247f",
+  "selected_timestamped_messages_sha256": "e603d99f3f1fe33ed25b1b2e19a7fbb158907683e291f3b92dd54577bd2ad585",
+  "source_lines": 27648,
+  "selected_lines": 12427,
+  "scope": "PPO receipt group, bootstrap/source provenance and terminal markers; BONES full result payload excluded",
+  "complete_job_stdout_published": false
+}

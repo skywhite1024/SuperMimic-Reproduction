@@ -1,0 +1,19 @@
+{
+  "status": "native_horizon_phase_originals_verified",
+  "horizon": 64,
+  "critic_enabled": false,
+  "phase": "main",
+  "training_collections": 16001,
+  "evaluated_collection": 16001,
+  "successes": 38,
+  "failures": 2,
+  "mean_normalized_full_motion_return": 0.8284301918901429,
+  "retained_model_sets": 5,
+  "model_files_per_set": 2,
+  "fixed40_reference_frames": 441140,
+  "all_cloud_trajectory_arrays_and_initial_states_verified": true,
+  "original_result_sha256": "1c7576ef84d0755261e3dced4cd408de0d3f4ec44e0905117e6f673c1d26e589",
+  "raw_weights_or_arrays_downloaded": false,
+  "single_seed": true,
+  "paper_results_reproduced": false
+}

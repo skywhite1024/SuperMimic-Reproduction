@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "program_entry_utc": "2026-11-14T19:07:10.286011+00:00",
+  "runner_run_entry_utc": "2026-11-14T19:09:03.519384+00:00",
+  "time_definition": "Monotonic elapsed wall time. Program entry includes imports, config and environment/model initialization; runner.run entry excludes that setup. Both include native warmup, graph capture and snapshot overhead. Evaluation runs separately after training.",
+  "asynchronous_callback_caveat": "Callback entry is after native serialization and may be delayed by thread scheduling. Retained-snapshot completion is an observed availability upper bound, not an exact collection/update completion timestamp.",
+  "checkpoints": [
+    {
+      "collection_steps": 1,
+      "callback_entry_after_native_save": {
+        "utc": "2026-11-14T19:09:24.167395+00:00",
+        "seconds_since_program_entry": 133.8813819848001,
+        "seconds_since_runner_run_entry": 20.648021031171083
+      },
+      "retained_snapshot_complete": {
+        "utc": "2026-11-14T19:09:25.247095+00:00",
+        "seconds_since_program_entry": 134.96108338609338,
+        "seconds_since_runner_run_entry": 21.72772243246436
+      },
+      "offline_artifact_logging_returned": {
+        "utc": "2026-11-14T19:09:26.182033+00:00",
+        "seconds_since_program_entry": 135.89602133259177,
+        "seconds_since_runner_run_entry": 22.662660378962755
+      }
+    },
+    {
+      "collection_steps": 24000,
+      "callback_entry_after_native_save": {
+        "utc": "2026-11-14T20:04:12.384554+00:00",
+        "seconds_since_program_entry": 3422.098542008549,
+        "seconds_since_runner_run_entry": 3308.86518105492
+      },
+      "retained_snapshot_complete": {
+        "utc": "2026-11-14T20:04:13.423451+00:00",
+        "seconds_since_program_entry": 3423.1374397464097,
+        "seconds_since_runner_run_entry": 3309.9040787927806
+      },
+      "offline_artifact_logging_returned": {
+        "utc": "2026-11-14T20:04:13.941743+00:00",
+        "seconds_since_program_entry": 3423.655732497573,
+        "seconds_since_runner_run_entry": 3310.422371543944
+      }
+    }
+  ]
+}

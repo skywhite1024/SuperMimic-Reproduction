@@ -62,6 +62,454 @@
       "bytes": 2228,
       "sha256": "59a95e8b953f6059cf51bd52efdb4c3190e82a5d72e8301fd3da7a299106fd92",
       "chunks": 4
+    },
+    {
+      "i": 0,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h064-critic/main/training/result.json",
+      "bytes": 6596,
+      "sha256": "5ab6e843e9663579f17bcf1007416856f9993b608f1d3625f1ad7d9991c2bdee",
+      "chunks": 8
+    },
+    {
+      "i": 1,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h064-critic/main/training/resolved-config.json",
+      "bytes": 42793,
+      "sha256": "d4aec72ee9c62fc2890284cd4cfaed2676b410ad23f518bf7096c50b0797491d",
+      "chunks": 23
+    },
+    {
+      "i": 2,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h064-critic/main/training/checkpoint-times.json",
+      "bytes": 4224,
+      "sha256": "15343db2aed65091fea6e74efcdf8ecaa351d6eba49f8ad52c05f576aa0035a5",
+      "chunks": 4
+    },
+    {
+      "i": 3,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h064-critic/main/eval-000016001/result.json",
+      "bytes": 14342,
+      "sha256": "941383aa8478542f42eeeefd946fc60e7f751c7fd454e42c0d4c0254d9dcefdc",
+      "chunks": 7
+    },
+    {
+      "i": 4,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h064-critic/main/eval-000016001/protocol.json",
+      "bytes": 14378,
+      "sha256": "f7bdbe40fbaeecd5a537f976248f4af4d1f9d9c30a0be32b803dc6fb57405135",
+      "chunks": 15
+    },
+    {
+      "i": 5,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h064-critic/main/eval-000016001/accounting.json",
+      "bytes": 1397,
+      "sha256": "cde98bf8e4932d91fc1b883cb98219e37e8c4d168eca9c24862f197d3c43e80f",
+      "chunks": 3
+    },
+    {
+      "i": 6,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h064-critic/main/eval-000016001/audit/summary.json",
+      "bytes": 963,
+      "sha256": "bc64f925ec3f8c9632470e32428a88bab05cec4156fdb89331ff36cc1ba5868a",
+      "chunks": 3
+    },
+    {
+      "i": 7,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h064-critic/main/eval-000016001/audit/initial-states.json",
+      "bytes": 720,
+      "sha256": "94e85a95681794e5e79984db63f68d7cc819d95b23390e141c471ecc06ccb3b9",
+      "chunks": 2
+    },
+    {
+      "i": 8,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h064-critic/main/result.json",
+      "bytes": 2188,
+      "sha256": "fb173735ce08bcfd6758c46ff3107269a7e5963ecf289bbf7f9a505b125259fc",
+      "chunks": 4
+    },
+    {
+      "i": 0,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h064-no-critic/integration/training/result.json",
+      "bytes": 4213,
+      "sha256": "7baf7d15a2e08b7ad2202be903298778593fa2b6004149bdb364e5122d704dcc",
+      "chunks": 6
+    },
+    {
+      "i": 1,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h064-no-critic/integration/training/resolved-config.json",
+      "bytes": 42760,
+      "sha256": "13ebee5f852b9886cf7fd01ec54528763e6c0bd72b1642e2b274849ed642cd2f",
+      "chunks": 22
+    },
+    {
+      "i": 2,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h064-no-critic/integration/training/checkpoint-times.json",
+      "bytes": 2809,
+      "sha256": "df906c847ff85f38c34994a2a9995d27ddb870d4184de9ab4c9f373faedfe07b",
+      "chunks": 4
+    },
+    {
+      "i": 3,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h064-no-critic/integration/eval-000000011/result.json",
+      "bytes": 14163,
+      "sha256": "ee4496496974cb447155254bc74dd9ac0d8c49390a9161e9049a8a48ccabe8ea",
+      "chunks": 6
+    },
+    {
+      "i": 4,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h064-no-critic/integration/eval-000000011/protocol.json",
+      "bytes": 11583,
+      "sha256": "8dcbc0c57df9bbb1cba2680f95ffcd14af6b5ac920d7ffe7a4ada2e044867eb2",
+      "chunks": 13
+    },
+    {
+      "i": 5,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h064-no-critic/integration/eval-000000011/accounting.json",
+      "bytes": 1382,
+      "sha256": "0237b8946a6e682b175032c95633ab6812a58baf3d840ebb8b176a260c62788e",
+      "chunks": 3
+    },
+    {
+      "i": 6,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h064-no-critic/integration/eval-000000011/audit/summary.json",
+      "bytes": 959,
+      "sha256": "f5acf9cac58041975bbeb0e5697a1b9f5104743853b1cdcaa529802fe9455005",
+      "chunks": 3
+    },
+    {
+      "i": 7,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h064-no-critic/integration/eval-000000011/audit/initial-states.json",
+      "bytes": 720,
+      "sha256": "c58153cc868197076295c97f380e25d5521c55981650568fc160d3d7920b04af",
+      "chunks": 2
+    },
+    {
+      "i": 8,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h064-no-critic/integration/result.json",
+      "bytes": 2228,
+      "sha256": "b68b5b938c5890b562b5e5d0598facaa917885b82fb03c2d7be9b4fd41910f63",
+      "chunks": 4
+    },
+    {
+      "i": 0,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h064-no-critic/main/training/result.json",
+      "bytes": 5467,
+      "sha256": "193b1785e386ee104619d2b65238bbb38e6191086946472d8b20150f0c313c3f",
+      "chunks": 7
+    },
+    {
+      "i": 1,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h064-no-critic/main/training/resolved-config.json",
+      "bytes": 42768,
+      "sha256": "2275577334a81d10bb101f3fab174589a6254e84f344c1555ef2a11f310228be",
+      "chunks": 22
+    },
+    {
+      "i": 2,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h064-no-critic/main/training/checkpoint-times.json",
+      "bytes": 4229,
+      "sha256": "e6b6ce8a01b2c77be6c16e59b43b65b21f2b041e5fe3ac4ba39f261940d3fa35",
+      "chunks": 4
+    },
+    {
+      "i": 3,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h064-no-critic/main/eval-000016001/result.json",
+      "bytes": 14347,
+      "sha256": "1c7576ef84d0755261e3dced4cd408de0d3f4ec44e0905117e6f673c1d26e589",
+      "chunks": 7
+    },
+    {
+      "i": 4,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h064-no-critic/main/eval-000016001/protocol.json",
+      "bytes": 12901,
+      "sha256": "384fec7ed633efbc5b0c30a42c0bb7ac18fa2ddf4b1e9ccfb514687913551f59",
+      "chunks": 14
+    },
+    {
+      "i": 5,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h064-no-critic/main/eval-000016001/accounting.json",
+      "bytes": 1390,
+      "sha256": "b047aad0ba18af72bb10e967c96d7d3340dab8c14708ba2392cc409afcc10983",
+      "chunks": 3
+    },
+    {
+      "i": 6,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h064-no-critic/main/eval-000016001/audit/summary.json",
+      "bytes": 964,
+      "sha256": "d024aa691e588ae278d7ac71607468002f04c73eae89a50b62cf72a1b0e5d43d",
+      "chunks": 3
+    },
+    {
+      "i": 7,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h064-no-critic/main/eval-000016001/audit/initial-states.json",
+      "bytes": 720,
+      "sha256": "7cd7c93d27da0adb161c260f897efecfa5cff247e77fafee002311615283b715",
+      "chunks": 2
+    },
+    {
+      "i": 8,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h064-no-critic/main/result.json",
+      "bytes": 3584,
+      "sha256": "e7f351086afdf61e5cb953506fe5eb5fc1a8b62b6065dfaa952f69d32ca57531",
+      "chunks": 4
+    },
+    {
+      "i": 0,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h128-critic/integration/training/result.json",
+      "bytes": 5015,
+      "sha256": "43ca96dc2825b43d06f33fbd6b0cc93ff7622b8b32d1733f374bcd8d466da062",
+      "chunks": 6
+    },
+    {
+      "i": 1,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h128-critic/integration/training/resolved-config.json",
+      "bytes": 42787,
+      "sha256": "ef112a3e1a6eabbb4ba965e2e16f1bed7aeb42c0759c8f05c6aa4584dbf5b361",
+      "chunks": 23
+    },
+    {
+      "i": 2,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h128-critic/integration/training/checkpoint-times.json",
+      "bytes": 2806,
+      "sha256": "04a7fefcebce4f49e2281e08d27880ceaeebb3a181634e3fb0c67c6445f0298a",
+      "chunks": 4
+    },
+    {
+      "i": 3,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h128-critic/integration/eval-000000011/result.json",
+      "bytes": 14249,
+      "sha256": "716935a185aba4c7ccc4f59459de87411493b32de19c0f81c1796c829e33e648",
+      "chunks": 6
+    },
+    {
+      "i": 4,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h128-critic/integration/eval-000000011/protocol.json",
+      "bytes": 12720,
+      "sha256": "42c960b33cf6904b0651cd5fcb7bfcdead38c8b19c008fce1c71a7aa9ee3db61",
+      "chunks": 14
+    },
+    {
+      "i": 5,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h128-critic/integration/eval-000000011/accounting.json",
+      "bytes": 1382,
+      "sha256": "8bf6bba2fc2f4d56aac5bb520c6daa632891cbb8add3efd0b6855d9bfbd73a45",
+      "chunks": 3
+    },
+    {
+      "i": 6,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h128-critic/integration/eval-000000011/audit/summary.json",
+      "bytes": 960,
+      "sha256": "c12d50353c7ef69f3e74a900d81b7eb28c95c2c14a23eacdcddbae168b4e27df",
+      "chunks": 3
+    },
+    {
+      "i": 7,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h128-critic/integration/eval-000000011/audit/initial-states.json",
+      "bytes": 720,
+      "sha256": "911bf53e78a932b44d0f373987fc2e630b2cb7448b3da0ccddc2bf1186948fe9",
+      "chunks": 2
+    },
+    {
+      "i": 8,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h128-critic/integration/result.json",
+      "bytes": 2229,
+      "sha256": "691be5863dc97aa46432c40a80799e023cbc1b6975ab4ec058a7686562397f1a",
+      "chunks": 4
+    },
+    {
+      "i": 0,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h128-critic/main/training/result.json",
+      "bytes": 6594,
+      "sha256": "f78ba272b2a6ed23e83e480dc316293236d4e1603d886a6209c519b72a31f429",
+      "chunks": 8
+    },
+    {
+      "i": 1,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h128-critic/main/training/resolved-config.json",
+      "bytes": 42795,
+      "sha256": "514f27c2439c794b215c4c32121068f4ecf7da79e5225ab73e88368ec6f7eaaa",
+      "chunks": 23
+    },
+    {
+      "i": 2,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h128-critic/main/training/checkpoint-times.json",
+      "bytes": 4225,
+      "sha256": "30aa07bc9e6ec97d10b805d8804c91912e98d45a2cef4c0faa0f9128697dacb5",
+      "chunks": 4
+    },
+    {
+      "i": 3,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h128-critic/main/eval-000016001/result.json",
+      "bytes": 14348,
+      "sha256": "1bb3e1c48dcb782add027fa02b3995fe6ff68aee9eec0e1a6c55d858dcac51d9",
+      "chunks": 7
+    },
+    {
+      "i": 4,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h128-critic/main/eval-000016001/protocol.json",
+      "bytes": 14376,
+      "sha256": "84a5c021282f6f31c722a16f697f22a84fe25a0abef39dd63c05bee0e3d9ac0a",
+      "chunks": 15
+    },
+    {
+      "i": 5,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h128-critic/main/eval-000016001/accounting.json",
+      "bytes": 1377,
+      "sha256": "c54d8951a0b3c84c41b2d1f8c4e8c671750b1c757c4676199a3ba36a31dea441",
+      "chunks": 3
+    },
+    {
+      "i": 6,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h128-critic/main/eval-000016001/audit/summary.json",
+      "bytes": 964,
+      "sha256": "48649e4eace86934ea9bccc1521854e43806bfac89e280c2439776e2b13704cc",
+      "chunks": 3
+    },
+    {
+      "i": 7,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h128-critic/main/eval-000016001/audit/initial-states.json",
+      "bytes": 720,
+      "sha256": "6ebbfc58dba260e474998eebe3bb84b1590c27350dc95c4a8ec697de90d03da8",
+      "chunks": 2
+    },
+    {
+      "i": 8,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h128-critic/main/result.json",
+      "bytes": 2188,
+      "sha256": "202e1a073f30b7bf799ae1f4716515f3ee6c406d2f206761296f3f187247877f",
+      "chunks": 4
+    },
+    {
+      "i": 0,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h128-no-critic/integration/training/result.json",
+      "bytes": 4211,
+      "sha256": "f8ee483ddd7c7b0b5cb53feb6881a09a07af46a07a73c0e3596b5505c596adc2",
+      "chunks": 6
+    },
+    {
+      "i": 1,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h128-no-critic/integration/training/resolved-config.json",
+      "bytes": 42762,
+      "sha256": "d710b83bb50b2d66216a1c855d4cfbb1638543dc760b10053b1609170a788b87",
+      "chunks": 22
+    },
+    {
+      "i": 2,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h128-no-critic/integration/training/checkpoint-times.json",
+      "bytes": 2802,
+      "sha256": "2afeab65eb7b7c9961fcc3ad78839f9b9c8d1cfe41c4aa259a0e83b9e18c8a46",
+      "chunks": 4
+    },
+    {
+      "i": 3,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h128-no-critic/integration/eval-000000011/result.json",
+      "bytes": 14226,
+      "sha256": "20140e8e665ced276ecd9dbf14e1d28518d5b326a6d77bae8e283ba60ab84bc9",
+      "chunks": 6
+    },
+    {
+      "i": 4,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h128-no-critic/integration/eval-000000011/protocol.json",
+      "bytes": 11581,
+      "sha256": "387a915b9701004662b93241dface47e4ae7d6cb96d5292b4bd10c177836a665",
+      "chunks": 13
+    },
+    {
+      "i": 5,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h128-no-critic/integration/eval-000000011/accounting.json",
+      "bytes": 1383,
+      "sha256": "ba9c443231be6b30be248767c90962b2a0b2077b5baf594ce3b94a5452960875",
+      "chunks": 3
+    },
+    {
+      "i": 6,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h128-no-critic/integration/eval-000000011/audit/summary.json",
+      "bytes": 960,
+      "sha256": "40eda9d20dcc6d18343d25d4bda0c5e3dee787e9d908d1883a1dbf8449bd168d",
+      "chunks": 3
+    },
+    {
+      "i": 7,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h128-no-critic/integration/eval-000000011/audit/initial-states.json",
+      "bytes": 720,
+      "sha256": "e122b1fc3ca1154ef58efd16f85150b3153a33f1db8ee2b6136da7890f05da0a",
+      "chunks": 2
+    },
+    {
+      "i": 8,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h128-no-critic/integration/result.json",
+      "bytes": 2229,
+      "sha256": "221af34d42559df4525725b34b11132c880ce9002bbee915493dc94a1b0fd614",
+      "chunks": 4
+    },
+    {
+      "i": 0,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h128-no-critic/main/training/result.json",
+      "bytes": 5467,
+      "sha256": "877546098d3a3b7c775a3cfbb0caa1a40784a045c03bc65d073beba1e7db3ec0",
+      "chunks": 7
+    },
+    {
+      "i": 1,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h128-no-critic/main/training/resolved-config.json",
+      "bytes": 42770,
+      "sha256": "e5621c92fbe2d579f94a33b9fa898d8688f90a22b7a06950299b52c3c8b1f76b",
+      "chunks": 22
+    },
+    {
+      "i": 2,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h128-no-critic/main/training/checkpoint-times.json",
+      "bytes": 4233,
+      "sha256": "90c860b70d575a856db35beacdf5d993873bd7d6c2c65bcd0a7281b108bff38c",
+      "chunks": 4
+    },
+    {
+      "i": 3,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h128-no-critic/main/eval-000016001/result.json",
+      "bytes": 14349,
+      "sha256": "2f54f36880636c950cce431d319740e90cf5e54460e914e4b652d1beb734c420",
+      "chunks": 7
+    },
+    {
+      "i": 4,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h128-no-critic/main/eval-000016001/protocol.json",
+      "bytes": 12901,
+      "sha256": "21cf462b7b9550e24e12200b12848d2a3bbc20c9f7c7dffdd7d05ac25bb2cc29",
+      "chunks": 14
+    },
+    {
+      "i": 5,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h128-no-critic/main/eval-000016001/accounting.json",
+      "bytes": 1374,
+      "sha256": "bae889d72f61df3be80967b0947aa11861488344b997a7daedc5d63c3afbdd64",
+      "chunks": 3
+    },
+    {
+      "i": 6,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h128-no-critic/main/eval-000016001/audit/summary.json",
+      "bytes": 962,
+      "sha256": "6d203fdf1a3de31e696b7feecc9aeb15945b8c65006054e88b7bbcd65058a38f",
+      "chunks": 3
+    },
+    {
+      "i": 7,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h128-no-critic/main/eval-000016001/audit/initial-states.json",
+      "bytes": 720,
+      "sha256": "876a911b82e91c46f4dab90383655c8e8ff89b88f9e8e0dd3a900e634cb28f73",
+      "chunks": 2
+    },
+    {
+      "i": 8,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h128-no-critic/main/result.json",
+      "bytes": 2190,
+      "sha256": "e29ff0dbab96bac6670099d650237b7dfd516bf692e72305b03761d259cd92a1",
+      "chunks": 4
+    },
+    {
+      "i": 0,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/result.json",
+      "bytes": 15014,
+      "sha256": "f25d811a19df931817d44e8db6968ca6ccb79ab1ae132636628a33378f7cdbeb",
+      "chunks": 13
     }
   ]
 }

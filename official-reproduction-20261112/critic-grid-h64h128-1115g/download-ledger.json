@@ -1,0 +1,7 @@
+{
+  "original_download": "logs-acp-20261115T141100.txt.gz",
+  "gzip_sha256": "58e090e1a8c080c20208718d3c23caea169b51d846fa0a9a391f8475999265f8",
+  "timestamped_stdout_sha256": "db0bdeb06fdb2d54fe5a1b12a1bebe289ca5d9e92e3e9e95d5cdd5714977fc3d",
+  "lines": 738,
+  "original_timestamped_stdout_preserved": true
+}

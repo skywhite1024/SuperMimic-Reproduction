@@ -1,0 +1,11 @@
+{
+  "download_file": "offline-log.txt.gz",
+  "lines": 12427,
+  "gzip_bytes": 3521774,
+  "gzip_sha256": "d153ce7cc3171007d112d1e91d6aa859ed41c31daace68c2c393d51fc2e7dbb1",
+  "decompressed_bytes": 5130502,
+  "decompressed_sha256": "e603d99f3f1fe33ed25b1b2e19a7fbb158907683e291f3b92dd54577bd2ad585",
+  "original_timestamped_messages_preserved": true,
+  "whole_job_stdout": false,
+  "transport_scope": "selected original messages"
+}
