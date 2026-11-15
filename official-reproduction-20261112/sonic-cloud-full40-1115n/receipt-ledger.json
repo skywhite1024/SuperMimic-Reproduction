@@ -1,0 +1,11 @@
+{
+  "receipts": [
+    {
+      "i": 0,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/sonic-lafan40-1115n/result.json",
+      "bytes": 946,
+      "sha256": "8362aa5cbe3141a8037e79ea4ec4ed6b24f6f1d98cee08a4b51478a48a794693",
+      "chunks": 3
+    }
+  ]
+}

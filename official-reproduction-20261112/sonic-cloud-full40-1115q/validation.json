@@ -1,0 +1,12 @@
+{
+  "status": "failed_or_incomplete_originals_retained",
+  "original_JSONs": 2,
+  "paper_results_reproduced": false,
+  "reported_status": "failed_or_incomplete",
+  "error": "RuntimeError: download-public-pinned-models failed with exit 1",
+  "job_uid": "31cfa8c56b0e418faa1a653e09bf7600",
+  "source_commit": "877aac3b5659da8a11c267067543df9db83793a5",
+  "log_sha256": "7122d163594e1c3591d5e545e8d50548b4b9499eec33a836fbd912e5c618c54b",
+  "raw_trajectory_arrays_downloaded": false,
+  "original_bytes_verified": true
+}

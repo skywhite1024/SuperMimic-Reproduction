@@ -12,7 +12,7 @@
         "run": {
           "clips": 4,
           "successes": 3,
-          "mean_normalized_full_motion_return": 0.3356939080970406
+          "mean_normalized_full_motion_return": 0.33569390809704064
         },
         "sprint": {
           "clips": 2,
@@ -28,7 +28,7 @@
         "walk": {
           "clips": 12,
           "successes": 5,
-          "mean_normalized_full_motion_return": 0.5428112456168034
+          "mean_normalized_full_motion_return": 0.5428112456168035
         },
         "run": {
           "clips": 4,
@@ -63,9 +63,31 @@
         }
       },
       "endpoint_original_SHA256": "3e82671834c408a31ff23b278fc7fab371ea8fce2383d26f6a3ea079120f5a51"
+    },
+    {
+      "case": "ppo-wm-16k32-1115l",
+      "groups": {
+        "walk": {
+          "clips": 12,
+          "successes": 8,
+          "mean_normalized_full_motion_return": 0.6449855279965795
+        },
+        "run": {
+          "clips": 4,
+          "successes": 3,
+          "mean_normalized_full_motion_return": 0.5125622128762358
+        },
+        "sprint": {
+          "clips": 2,
+          "successes": 1,
+          "mean_normalized_full_motion_return": 0.5163785062345279
+        }
+      },
+      "endpoint_original_SHA256": "3e1f81de5e6f44cbb14aaa15e46915b45ea77d416057cafc5a8b2f3eec26e24c"
     }
   ],
   "all_motion_file_SHA256s_identical": true,
   "scope": "Single seed; preselected18LAFAN proxy, not confirmed author Figure5 set",
-  "paper_results_reproduced": false
+  "paper_results_reproduced": false,
+  "normalization": "reward_sum / reference_frames / maximum_step_reward; maximum_step_reward=0.1"
 }

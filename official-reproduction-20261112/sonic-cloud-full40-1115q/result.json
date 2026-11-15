@@ -1,0 +1,38 @@
+{
+  "status": "failed_or_incomplete",
+  "error": "RuntimeError: download-public-pinned-models failed with exit 1",
+  "elapsed_seconds": 37.87262426316738,
+  "stages": [
+    {
+      "stage": "download-pinned-inference-wheels",
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_seconds": 6.74160723015666,
+      "log_sha256": "e7284b4b6ad05d31cc975e6a5cc571be373f30fb0b12b499a49e903794aa8983"
+    },
+    {
+      "stage": "install-inference-dependencies-offline",
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_seconds": 30.530125189572573,
+      "log_sha256": "5b242d6bab8c1055b6555855a49a1c9aeb8b9ca98f9f89712483d904ecccb027"
+    },
+    {
+      "stage": "download-public-pinned-models",
+      "returncode": 1,
+      "timed_out": false,
+      "elapsed_seconds": 0.4392930120229721,
+      "log_sha256": "0e5a50b6b01af2ef052973c2451aed5e08dafdba606f1c4823dc0becda0536eb"
+    }
+  ],
+  "originals": {
+    "inference-wheel-verification.json": "73e4bfb3881070d66bab972fb907f7b5dfa7f580cde80dd9315fbaa831cf9adf"
+  },
+  "benchmark": "All40 common canonical LAFAN clips, corrected-v2 native reward/termination; not author filtered129514 benchmark",
+  "full40_completed": false,
+  "all_cloud_arrays_and_initial_states_audited": false,
+  "GPU_physics_executed": false,
+  "ONNX_GPU_provider_used": false,
+  "SONIC_training_reset_confirmed": false,
+  "paper_results_reproduced": false
+}

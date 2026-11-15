@@ -1,0 +1,12 @@
+{
+  "status": "failed_or_incomplete_originals_retained",
+  "original_JSONs": 1,
+  "paper_results_reproduced": false,
+  "reported_status": "failed_or_incomplete",
+  "error": "TimeoutExpired: Command '['/mnt/afs/260010076/SuperMimic/official-20261112/conda/sonic-inference-cpu/bin/python', '-m', 'pip', 'install', '--disable-pip-version-check', 'onnxruntime==1.32.0', 'flatbuffers==25.12.19']' timed out after 600 seconds",
+  "job_uid": "e64c5833111a427787973d29771673b5",
+  "source_commit": "f5b6e19603a8cd8961839653edac09d6042adfd6",
+  "log_sha256": "b10ce2184aefe12b9c86323b623412e5a720039569cde84fbae25ce06cb86a1e",
+  "raw_trajectory_arrays_downloaded": false,
+  "original_bytes_verified": true
+}

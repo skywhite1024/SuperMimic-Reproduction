@@ -2,6 +2,44 @@
   "status": "only_recovered_verified_cases_plotted",
   "cases": [
     {
+      "label": "16k \u00d7 32",
+      "points": [
+        {
+          "ppo_update": 64,
+          "successes": 0,
+          "failures": 18,
+          "mean_normalized_full_motion_return": 0.0002653564848806809,
+          "real_simulator_steps": 2621440,
+          "cumulative_imagined_steps": 33554432
+        },
+        {
+          "ppo_update": 256,
+          "successes": 0,
+          "failures": 18,
+          "mean_normalized_full_motion_return": 0.0003689904384624454,
+          "real_simulator_steps": 10485760,
+          "cumulative_imagined_steps": 134217728
+        },
+        {
+          "ppo_update": 1024,
+          "successes": 5,
+          "failures": 13,
+          "mean_normalized_full_motion_return": 0.3447581084644532,
+          "real_simulator_steps": 41943040,
+          "cumulative_imagined_steps": 536870912
+        },
+        {
+          "ppo_update": 2048,
+          "successes": 12,
+          "failures": 6,
+          "mean_normalized_full_motion_return": 0.6012684555518308,
+          "real_simulator_steps": 83886080,
+          "cumulative_imagined_steps": 1073741824
+        }
+      ],
+      "training_entry_seconds_to2048": 5234.7385608665645
+    },
+    {
       "label": "4k \u00d7 32",
       "points": [
         {

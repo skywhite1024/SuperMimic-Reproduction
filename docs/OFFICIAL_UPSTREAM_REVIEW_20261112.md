@@ -840,3 +840,59 @@ The finite cloud entry point downloads public original weights at the frozen HF 
 The 8k24 case finished at 16:07:55+08 and the 8k32 case at 16:16:13+08. Each yielded all 26 original JSONs and passed the same complete-path verifier. Their final mean normalized full-motion returns are 0.53600352 (10/18 native successes) and 0.53286807 (12/18). All three completed cases share exactly the same physical motion-file SHA256s. The 16k32 case remains unfinished; its last observed update is 1936.
 
 Regrouping every final record, without dropping failures, gives walk/run/sprint native success counts of 6/12,3/4,1/2 for4k32; 5/12,3/4,2/2 for8k24; and6/12,4/4,2/2 for8k32. Success count and normalized return rankings differ. These are native termination semantics, not a strict pose/contact-quality assessment. The public category JSON retains all three groups and source-result hashes. The finite-curves plot uses actual unique imagined transitions and independently counted real transitions; its cases are a single seed, with batch and horizon changing together. No statistical or pure-gradient-method superiority claim follows.
+
+
+## 66. User pause on 2026-11-15: four finite PPO-WM curves complete
+
+The user requested interruption and a phase summary. The only remaining live job,
+same18 first-order control 1115m (b757b72b9f25497bbabad8c41d2cfa3e), was stopped
+through the console and visibly reached **已停止**. All other jobs from this phase
+were already terminal. This reproduction phase now requests **zero nonterminal
+H100s**. No replacement SONIC job was submitted after the pause.
+
+All four PPO-WM cases completed 2048 updates from scratch on the same 18 canonical
+walk/run/sprint clips, seed42, with 83,886,080 real simulator transitions each.
+All 104 original scientific JSON receipts were recovered and verified.
+
+| WM batch / horizon | Unique imagined transitions | Native successful clips | Mean normalized full-motion return | Training-entry to update2048 |
+| --- | ---: | ---: | ---: | ---: |
+| 4096 / 32 | 268435456 | 10/18 | 0.4702769338 | 3578.12s |
+| 8192 / 24 | 402653184 | 10/18 | 0.5360035243 | 3421.59s |
+| 8192 / 32 | 536870912 | 12/18 | 0.5328680728 | 4115.78s |
+| 16384 / 32 | 1073741824 | 12/18 | 0.6012684556 | 5234.74s |
+
+These are four finite single-seed results, with full-motion evaluation rather
+than the paper's smoothed training-return curves. Larger imagined batches do not
+increase actual simulator samples here; the highest-return case also generates
+the most imagined transitions. The 8k24 and 8k32 return ordering differs from
+their success-count ordering, so a native termination success alone is not a
+tracking-quality certificate. Exact author Figure5 membership/hyperparameters,
+matched-quality first-order comparison, and 64x/1.67x claims remain unverified.
+The released uint8 termination-storage behavior is retained and disclosed.
+
+Before the stop, the control log reached profile collection22000 and announced
+a complete three-model snapshot at collection20001, with sizes and SHA256s.
+These are native weights/buffers only, excluding optimizer, replay, sampler,
+simulator and RNG state. Post-stop AFS readback has not been performed. Its
+deferred all18 evaluations never ran, so no same18 first-order quality curve
+or speedup is claimed.
+
+Corrected SONIC CPU feedback is verified: 10s standing plus full scalar walk
+261.3s and run237.8s, with independent array and 500-state common-adapter checks.
+This is a pilot, not the common full40 or author129514 benchmark. Cloud 1115n
+failed during wheel download. 1115q verified both downloaded wheel hashes and
+offline installation, then failed because the official runtime lacks
+huggingface_hub, before model transfer or CUDA physics. A standard-library
+HTTPS downloader repair is committed at 81ca9fb but remains **unlaunched**.
+
+Trajectory readback 1115p recovered four original JSONs with verified bytes and
+SHA256s, including sampled pose windows for three completed PPO-WM cases.
+Their local independent sample-array audit and rendering remain pending; no
+video or visual-quality approval is claimed. Large motion payloads and model
+weights are retained outside Git.
+
+Evidence: official-reproduction-20261112/user-pause-20261115.json,
+ppo-wm-batch-learning-1115/finite-curves-data.json, all four recovered
+validation.json files, and retained SONIC failure receipts. Full-paper
+reproduction remains incomplete. Resume only on a new explicit user request;
+LIBERO remains paused.

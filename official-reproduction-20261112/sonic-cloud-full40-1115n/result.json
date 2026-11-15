@@ -1,0 +1,21 @@
+{
+  "status": "failed_or_incomplete",
+  "error": "TimeoutExpired: Command '['/mnt/afs/260010076/SuperMimic/official-20261112/conda/sonic-inference-cpu/bin/python', '-m', 'pip', 'install', '--disable-pip-version-check', 'onnxruntime==1.32.0', 'flatbuffers==25.12.19']' timed out after 600 seconds",
+  "elapsed_seconds": 650.9579143188894,
+  "stages": [
+    {
+      "stage": "create-inference-venv",
+      "returncode": 0,
+      "elapsed_seconds": 50.92247651517391,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "originals": {},
+  "benchmark": "All40 common canonical LAFAN clips, corrected-v2 native reward/termination; not author filtered129514 benchmark",
+  "full40_completed": false,
+  "all_cloud_arrays_and_initial_states_audited": false,
+  "GPU_physics_executed": false,
+  "ONNX_GPU_provider_used": false,
+  "SONIC_training_reset_confirmed": false,
+  "paper_results_reproduced": false
+}

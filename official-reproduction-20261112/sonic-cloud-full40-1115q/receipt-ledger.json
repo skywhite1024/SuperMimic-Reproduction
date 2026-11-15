@@ -1,0 +1,18 @@
+{
+  "receipts": [
+    {
+      "i": 0,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/sonic-lafan40-1115q/inference-wheel-verification.json",
+      "bytes": 1269,
+      "sha256": "73e4bfb3881070d66bab972fb907f7b5dfa7f580cde80dd9315fbaa831cf9adf",
+      "chunks": 3
+    },
+    {
+      "i": 1,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/sonic-lafan40-1115q/result.json",
+      "bytes": 1403,
+      "sha256": "60baec409b2457db144237c1a59153d26c69236b5f921482f85aeb38f282d1c1",
+      "chunks": 3
+    }
+  ]
+}

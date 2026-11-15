@@ -1,0 +1,105 @@
+{
+  "status": "paused_by_user_console_stop_terminal_verified",
+  "observed_at": "2026-11-15T16:55:45.760709+08:00",
+  "user_instruction": "好的 请你中断一下 然后进行阶段性总结吧",
+  "resume_requires_explicit_user_request": true,
+  "automatic_resume_or_monitoring": false,
+  "new_cloud_jobs_submitted_after_pause": 0,
+  "completed_PPO_WM_original_JSONs": 104,
+  "completed_PPO_WM_endpoints": [
+    {
+      "case": "ppo-wm-4k32-1115i",
+      "successes": 10,
+      "clips": 18,
+      "mean_normalized_full_motion_return": 0.47027693376345003,
+      "real_simulator_steps": 83886080,
+      "imagined_steps": 268435456,
+      "training_entry_seconds_to2048": 3578.1228841394186
+    },
+    {
+      "case": "ppo-wm-8k24-1115j",
+      "successes": 10,
+      "clips": 18,
+      "mean_normalized_full_motion_return": 0.5360035243449793,
+      "real_simulator_steps": 83886080,
+      "imagined_steps": 402653184,
+      "training_entry_seconds_to2048": 3421.5913290679455
+    },
+    {
+      "case": "ppo-wm-8k32-1115k",
+      "successes": 12,
+      "clips": 18,
+      "mean_normalized_full_motion_return": 0.5328680727901189,
+      "real_simulator_steps": 83886080,
+      "imagined_steps": 536870912,
+      "training_entry_seconds_to2048": 4115.77890341403
+    },
+    {
+      "case": "ppo-wm-16k32-1115l",
+      "successes": 12,
+      "clips": 18,
+      "mean_normalized_full_motion_return": 0.6012684555518308,
+      "real_simulator_steps": 83886080,
+      "imagined_steps": 1073741824,
+      "training_entry_seconds_to2048": 5234.7385608665645
+    }
+  ],
+  "same18_control": {
+    "name": "supermimic-official-locomotion18-260010076-1115m",
+    "uid": "b757b72b9f25497bbabad8c41d2cfa3e",
+    "platform_status": "stopped",
+    "stop_requested_via_console": true,
+    "latest_logged_profile_collection": 22000,
+    "last_snapshot_announced": {
+      "status": "model_snapshot_preserved",
+      "collection_steps": 20001,
+      "files": [
+        {
+          "file": "world_model.pt",
+          "bytes": 34990357,
+          "sha256": "e1a8b784b4e3406a8dde3f79d7d460267c5844cfe167444c3fa29b162c67f651"
+        },
+        {
+          "file": "actor.pt",
+          "bytes": 46439949,
+          "sha256": "a40f10d645367f2a473cf4f97fdb3873eb45f77c0c02b40b510f31eac8477e18"
+        },
+        {
+          "file": "critic.pt",
+          "bytes": 929269,
+          "sha256": "fa3bb8babafb6227f020dab9cc9208c26f9cbaeaa31da3a2214fa218bd73ede4"
+        }
+      ],
+      "full_training_resume_available": false,
+      "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state"
+    },
+    "full_training_resume_available": false,
+    "snapshot_evidence_scope": "Saved native weights announced with byte and SHA256 receipts in pre-stop log; AFS post-stop readback not performed.",
+    "completed_full18_evaluation": false,
+    "progress_log": "lafan-locomotion18-control-1115m-pause-progress.txt",
+    "status": "stopped_by_user_before_deferred_evaluation",
+    "terminal_verified_in_console": true
+  },
+  "SONIC": {
+    "latest_failed_uid": "31cfa8c56b0e418faa1a653e09bf7600",
+    "latest_failure": "missing huggingface_hub before any model transfer or CUDA physics",
+    "wheel_download_and_offline_install_passed": true,
+    "corrected_body_frame_CPU_standing_and_walk_run_pilots_verified": true,
+    "cloud_full40_complete": false,
+    "repaired_source_commit": "81ca9fbfd832972f0a78e739d2a72ed4ce331c4d",
+    "repair_submitted": false
+  },
+  "trajectory_readback": {
+    "original_JSONs_verified": 4,
+    "sampled_arrays_independently_audited_locally": false,
+    "rendered_video_exists": false
+  },
+  "full_paper_reproduction_complete": false,
+  "LIBERO_paused": true,
+  "terminal_stop_observed_at": "2026-11-15T16:57:12.240031+08:00",
+  "requested_nonterminal_H100": 0,
+  "resource_scope": "This reproduction run; not a claim about other projects or the entire account.",
+  "console_stop_screenshot": "user-pause-20261115-stopped.png",
+  "console_stop_screenshot_sha256": "78c98e8efcb1e8c8784d06f6c7fee13da91407e0d62497bf9ece81e098dcbcd7",
+  "console_rows_file": "user-pause-20261115-console-rows.txt"
+}

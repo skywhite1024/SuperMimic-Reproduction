@@ -1,0 +1,32 @@
+{
+  "receipts": [
+    {
+      "i": 0,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-quality-1115p/sonic-install-diagnostic.json",
+      "bytes": 1155,
+      "sha256": "24bc59f95fb28ea0620ee0f4c0972368e200561b186b75473908eb31c260656e",
+      "chunks": 2
+    },
+    {
+      "i": 0,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-quality-1115p/ppo-wm-4k32-1115i.json",
+      "bytes": 2364326,
+      "sha256": "9fd59aba0aa43f8b83d1371914102ea847e945358d84a360dccb6ebfbec22e48",
+      "chunks": 6608
+    },
+    {
+      "i": 1,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-quality-1115p/ppo-wm-8k24-1115j.json",
+      "bytes": 2365917,
+      "sha256": "10739c419a22a3219cc2861cd6f9d3e0da07b96944e6d7312e1ecebdc4d6de2c",
+      "chunks": 6614
+    },
+    {
+      "i": 2,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-quality-1115p/ppo-wm-8k32-1115k.json",
+      "bytes": 2363629,
+      "sha256": "3f222d7d77c27946b7da969fbee95e976e3ab7db04dcdf69e6d9734472ee3de1",
+      "chunks": 6607
+    }
+  ]
+}

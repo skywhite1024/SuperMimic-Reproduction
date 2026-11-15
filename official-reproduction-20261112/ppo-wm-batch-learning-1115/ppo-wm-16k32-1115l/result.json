@@ -1,0 +1,80 @@
+{
+  "status": "complete",
+  "batch_size": 16384,
+  "rollout_steps": 32,
+  "target_updates": 2048,
+  "termination_mode": "released_uint8",
+  "training_from_scratch": true,
+  "author_exact_Figure5_membership_confirmed": false,
+  "PPO_hyperparameters_author_confirmed": false,
+  "native_full_first_order_comparison_completed": false,
+  "matched_return_or64x_claimed": false,
+  "paper_results_reproduced": false,
+  "points": [
+    {
+      "ppo_update": 64,
+      "status": "complete",
+      "successes": 0,
+      "failures": 18,
+      "mean_normalized_full_motion_return": 0.0002653564848806809,
+      "cumulative_imagined_steps": 33554432,
+      "real_simulator_steps": 2621440,
+      "receipts": {
+        "result.json": "394ff5375b8899c0f1ae09bab7990bbff117c8a919aeb56f13b48c5532ec2335",
+        "protocol.json": "812156829ae41529548f20328a8461a98675984d13ada49135d50ed1b452fad8",
+        "accounting.json": "9c035f01e457d4344c737ddb86f0f49089d8d3218d7f856c84cfdf04ce4e7857",
+        "audit/summary.json": "79dbf03bf52e37a0fef1c491944768360e391ba29281c1e9f87f48a092e55d57",
+        "audit/initial-states.json": "fc5b7be226055f34020fd6ac87d7830551b928968d769f3c5809612cdc8b2342"
+      }
+    },
+    {
+      "ppo_update": 256,
+      "status": "complete",
+      "successes": 0,
+      "failures": 18,
+      "mean_normalized_full_motion_return": 0.00036899043846244547,
+      "cumulative_imagined_steps": 134217728,
+      "real_simulator_steps": 10485760,
+      "receipts": {
+        "result.json": "27bc898a3f6687b5896c13f10412491f592b47f11e323696463010af0909be79",
+        "protocol.json": "81d79aa542bd2b50981395f1073c1b950d6c4b427eeb2b5b6d6282de29cfed1a",
+        "accounting.json": "411d0ca657a9be44cac64c088b5f240e143d3815d72c971709929622684d8137",
+        "audit/summary.json": "0ff56d2ea0f2a6d1ba144cfc3377c477e24e1a36c93d82a2b265a2f8250933f2",
+        "audit/initial-states.json": "a8dc0f71bfb45d919b62603309bd5f8d67ad91207b73954d3d1db57f5417a32e"
+      }
+    },
+    {
+      "ppo_update": 1024,
+      "status": "complete",
+      "successes": 5,
+      "failures": 13,
+      "mean_normalized_full_motion_return": 0.3447581084644532,
+      "cumulative_imagined_steps": 536870912,
+      "real_simulator_steps": 41943040,
+      "receipts": {
+        "result.json": "852cf19065950abe946b1dbbf95e977d7e87fc7aacc0b886eba3dc08e2fbec2c",
+        "protocol.json": "293aec1715b0674259f7bb254a08703172a271928e6aedf532f45d6e08f9fe70",
+        "accounting.json": "fd7439f0cf1d9ff6050b43e20c034695307ded17d65544b456af9624d164f508",
+        "audit/summary.json": "9c2496c856be84be8a96d0ce271c3283d623e35e963463795d62e166891842ec",
+        "audit/initial-states.json": "12e4082e08bdd7d173ac1f35763e9632e63058a0fe628f1b40a1bd40845e0baa"
+      }
+    },
+    {
+      "ppo_update": 2048,
+      "status": "complete",
+      "successes": 12,
+      "failures": 6,
+      "mean_normalized_full_motion_return": 0.6012684555518307,
+      "cumulative_imagined_steps": 1073741824,
+      "real_simulator_steps": 83886080,
+      "receipts": {
+        "result.json": "3e1f81de5e6f44cbb14aaa15e46915b45ea77d416057cafc5a8b2f3eec26e24c",
+        "protocol.json": "ca9631188b8a985cf78968533b88f83b4ddd2a3306d252ca6b7d02224764d6c3",
+        "accounting.json": "86652d485a15be015b89f26c3765c973f5464d649268b20789eed4257755d2f6",
+        "audit/summary.json": "5eb17291a5f27ab4b2168d096b161c5fd5eb877882e38775d1bc624e017b3744",
+        "audit/initial-states.json": "57ad0a36ffb5b0333be55f60690978461f7a936cadb160e51cbdb0d972ad814f"
+      }
+    }
+  ],
+  "training_result_sha256": "7e84df75cb359c4578a7485ce2e5066cd7645ae74cc4a13e9e31f7f11db737d0"
+}

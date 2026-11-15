@@ -1,0 +1,43 @@
+{
+  "status": "failed_before_result_recovery",
+  "submitted": true,
+  "name": "supermimic-official-quality-260010076-1115o",
+  "display_name": "260010076-SuperMimic-trajectory-readback-1115o",
+  "source_commit": "9c822e785553c89e430689fee0aeb1b372dbaaa9",
+  "source_files": {
+    "export_ppo_wm_quality_samples.py": "11f1b620b92e495a9a0de21678ff6858a311821399fdb44701765bb186811145",
+    "emit_json_receipts.py": "218bf4ddfa0946a54b9d2c4f8415e217da1f97b45f5dccb2fad922414646d889"
+  },
+  "command_sha256": "5576d0c083341ed9431c33be79cf72c45d873817021749b6dd15d12d9fd25c04",
+  "bootstrap_characters": 6754,
+  "gpu": 1,
+  "vcpu": 4,
+  "ram_gib": 64,
+  "replicas": 1,
+  "max_restarts": 0,
+  "max_program_seconds": 900,
+  "forced_kill_after_seconds": 30,
+  "source_completed_cases": [
+    "ppo-wm-4k32-1115i",
+    "ppo-wm-8k24-1115j",
+    "ppo-wm-8k32-1115k"
+  ],
+  "simulation_reexecuted": false,
+  "training_reexecuted": false,
+  "expected_original_JSONs_if_complete": 4,
+  "output": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-quality-1115o",
+  "purpose": "Readall18savedtrajectories per completed case and recover explicit best/worst native-success and first-failure pose windows",
+  "additional_readonly_source": "runs/sonic-lafan40-1115n/install-inference-dependencies.log",
+  "preparation_revised_before_first_submission": true,
+  "CPU_only_spec_unavailable_in_selected_computing_cluster": true,
+  "actual_GPU_computation_requested_by_program": false,
+  "resource_fallback": "Single H100 worker CPU resources for15minute finite immutable-artifact and setup-log readback",
+  "platform_status": "failed",
+  "uid": "d533f8ca00b549b094bfae9ff710c652",
+  "created_at": "2026-11-15T16:28:53+08:00",
+  "startup_command_exact_editor_readback": true,
+  "terminal_observed_at": "2026-11-15T16:30:05.041894+08:00",
+  "submission_screenshot": "ppo-wm-quality-1115o-created.png",
+  "failure": "Serialized first-case sample2,364,326bytes exceeds2,000,000byte guard; no training/simulation rerun",
+  "recovery_retry_prepared": "ppo-wm-quality-1115p-plan.json"
+}

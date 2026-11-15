@@ -1,5 +1,5 @@
 {
-  "status": "running_setup",
+  "status": "failed_dependency_install_600s_timeout",
   "submitted": true,
   "name": "supermimic-official-sonic40-260010076-1115n",
   "display_name": "260010076-SuperMimic-SONIC-full40-1115n",
@@ -38,7 +38,7 @@
   "author_exact_SONIC_benchmark_protocol_confirmed": false,
   "paper_results_reproduced": false,
   "output": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/sonic-lafan40-1115n",
-  "platform_status": "running",
+  "platform_status": "failed",
   "uid": "e64c5833111a427787973d29771673b5",
   "created_at": "2026-11-15T16:12:48+08:00",
   "program_started_at": "2026-11-15T16:13:03.799668+08:00",
@@ -46,5 +46,9 @@
   "forced_exit_deadline": "2026-11-15T17:28:33.799668+08:00",
   "startup_command_exact_editor_readback": true,
   "source_hash_preflight_passed": true,
-  "submission_screenshot": "sonic-lafan40-1115n-created.png"
+  "submission_screenshot": "sonic-lafan40-1115n-created.png",
+  "original_JSONs_verified": 1,
+  "scientific_evaluation_executed": false,
+  "terminal_observed_at": "2026-11-15T16:29:12.959477+08:00",
+  "failure": "onnxruntime/flatbuffers pip install timed out after600s; setup logfile pending readback"
 }

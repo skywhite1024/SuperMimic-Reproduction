@@ -1,5 +1,5 @@
 {
-  "status": "submitted_running",
+  "status": "completed_and26_originals_verified",
   "name": "supermimic-official-ppo-wm-8k24-260010076-1115j",
   "display_name": "260010076-SuperMimic-PPO-WM-8k24-1115j",
   "source_commit": "9594228b8411247729aa7d63d13150636d868f9a",
@@ -177,7 +177,7 @@
   "full_training_resume_available": false,
   "output": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-8k24-1115j",
   "submitted": true,
-  "platform_status": "running",
+  "platform_status": "succeeded",
   "uid": "a8a3401120d4437694d78cc5d87322bb",
   "created_at": "2026-11-15T14:54:12+08:00",
   "program_started_at": "2026-11-15T14:54:32.539411+08:00",
@@ -188,12 +188,125 @@
   "source_and_vendor_hash_preflight_passed": true,
   "all18_physical_source_slices_verified": true,
   "startup_command_exact_editor_readback": true,
-  "last_observed_native_update": 176,
+  "last_observed_native_update": 2048,
   "last_observed_retained_checkpoint": {
     "ppo_update": 64,
     "real_simulator_steps": 2621440,
     "imagined_steps": 12582912,
     "seconds_since_training_entry": 138.73545211926103
   },
-  "evidence_captured_at": "2026-11-15T15:03:50.526999+08:00"
+  "evidence_captured_at": "2026-11-15T15:03:50.526999+08:00",
+  "last_progress_log": "C:\\project\\sensecore\\SuperMimic\\official-execution-20261112\\ppo-wm-8k24-1115j-progress4.txt",
+  "last_progress_validation": "C:\\project\\sensecore\\SuperMimic\\official-execution-20261112\\ppo-wm-8k24-1115j-progress-validation-4\\validation.json",
+  "last_observed_at": "2026-11-15T15:50:47.997367+08:00",
+  "native_checkpoints_observed_after_cloud_readback": [
+    64,
+    256,
+    512,
+    1024,
+    2048
+  ],
+  "program_finished_at": "2026-11-15T16:07:55.830+08:00",
+  "originals_verified": 26,
+  "scientific_result": {
+    "status": "finite_PPO_WM_batch_training_and_all18_evaluation_originals_verified",
+    "original_JSONs": 26,
+    "reported_status": "complete",
+    "error": null,
+    "outer_updates": 2048,
+    "real_simulator_steps": 83886080,
+    "imagined_steps": 402653184,
+    "retained_native_model_sets": 5,
+    "all_cloud_arrays_and_initial_states_verified": true,
+    "released_uint8_fractional_positions_truncated": 341510503,
+    "points": [
+      {
+        "ppo_update": 64,
+        "successes": 0,
+        "failures": 18,
+        "mean_normalized_full_motion_return": 0.0002557644055454251,
+        "real_simulator_steps": 2621440,
+        "cumulative_imagined_steps": 12582912
+      },
+      {
+        "ppo_update": 256,
+        "successes": 0,
+        "failures": 18,
+        "mean_normalized_full_motion_return": 0.00034271311411778306,
+        "real_simulator_steps": 10485760,
+        "cumulative_imagined_steps": 50331648
+      },
+      {
+        "ppo_update": 1024,
+        "successes": 5,
+        "failures": 13,
+        "mean_normalized_full_motion_return": 0.2932528360510531,
+        "real_simulator_steps": 41943040,
+        "cumulative_imagined_steps": 201326592
+      },
+      {
+        "ppo_update": 2048,
+        "successes": 10,
+        "failures": 8,
+        "mean_normalized_full_motion_return": 0.5360035243449793,
+        "real_simulator_steps": 83886080,
+        "cumulative_imagined_steps": 402653184
+      }
+    ],
+    "author_exact_motion_membership_confirmed": false,
+    "PPO_hyperparameters_author_confirmed": false,
+    "first_order_same_subset_comparison_complete": false,
+    "paper_results_reproduced": false,
+    "last_logged_native_update": 2048,
+    "logged_checkpoints_after_cloud_tensor_and_byte_readback_checks": [
+      {
+        "ppo_update": 64,
+        "real_simulator_steps": 2621440,
+        "imagined_steps": 12582912,
+        "seconds_since_training_entry": 138.73545211926103
+      },
+      {
+        "ppo_update": 256,
+        "real_simulator_steps": 10485760,
+        "imagined_steps": 50331648,
+        "seconds_since_training_entry": 453.5335137825459
+      },
+      {
+        "ppo_update": 512,
+        "real_simulator_steps": 20971520,
+        "imagined_steps": 100663296,
+        "seconds_since_training_entry": 876.6579694021493
+      },
+      {
+        "ppo_update": 1024,
+        "real_simulator_steps": 41943040,
+        "imagined_steps": 201326592,
+        "seconds_since_training_entry": 1720.584085199982
+      },
+      {
+        "ppo_update": 2048,
+        "real_simulator_steps": 83886080,
+        "imagined_steps": 402653184,
+        "seconds_since_training_entry": 3421.5913290679455
+      }
+    ],
+    "progress_tags_are_not_independent_model_or_quality_verification": true,
+    "job_uid": "a8a3401120d4437694d78cc5d87322bb",
+    "source_commit": "9594228b8411247729aa7d63d13150636d868f9a",
+    "log_sha256": "854845b4a8b1869a0b7fedf9ebac171615748b2af94b5abc1051e2d9d40b8deb",
+    "all_recovered_original_bytes_and_SHA256_verified": true,
+    "raw_models_and_NPZ_downloaded": false
+  },
+  "local_recovered": "C:\\project\\sensecore\\SuperMimic\\official-execution-20261112\\ppo-wm-8k24-1115j-recovered",
+  "verified_final_point": {
+    "ppo_update": 2048,
+    "successes": 10,
+    "failures": 8,
+    "mean_normalized_full_motion_return": 0.5360035243449793,
+    "real_simulator_steps": 83886080,
+    "cumulative_imagined_steps": 402653184
+  },
+  "local_recovery": "C:\\project\\sensecore\\SuperMimic\\official-execution-20261112\\ppo-wm-8k24-1115j-recovered",
+  "latest_complete_validation": "C:\\project\\sensecore\\SuperMimic\\official-execution-20261112\\ppo-wm-8k24-1115j-recovered\\validation.json",
+  "completion_verified_at": "2026-11-15T16:55:45.760709+08:00"
 }

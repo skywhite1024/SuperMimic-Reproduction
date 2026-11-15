@@ -1,0 +1,186 @@
+{
+  "receipts": [
+    {
+      "i": 0,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-16k32-1115l/motion-subset.json",
+      "bytes": 3657,
+      "sha256": "465bf36f3ec13d6262354870cbd61f8d6618da83135ed4f9a392fc1740444601",
+      "chunks": 5
+    },
+    {
+      "i": 1,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-16k32-1115l/training/resolved-config.json",
+      "bytes": 43536,
+      "sha256": "5a5a6517cf01f4b59e8cc4693e9f16ab8c2168bf1154f27bc1523527891fdb64",
+      "chunks": 23
+    },
+    {
+      "i": 2,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-16k32-1115l/training/initial-model-state.json",
+      "bytes": 423,
+      "sha256": "3bd3d4e50e808722888433151c14ac78d9a58b35dac1f875ada3c8cabfaed30d",
+      "chunks": 1
+    },
+    {
+      "i": 3,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-16k32-1115l/training/native-checkpoint-manifest.json",
+      "bytes": 11422,
+      "sha256": "8d160dbbdfc5f64442c9e1cadec4f9b2bb90eb3f18995fa56b44331fc880a11c",
+      "chunks": 6
+    },
+    {
+      "i": 4,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-16k32-1115l/training/result.json",
+      "bytes": 2060423,
+      "sha256": "7e84df75cb359c4578a7485ce2e5066cd7645ae74cc4a13e9e31f7f11db737d0",
+      "chunks": 1508
+    },
+    {
+      "i": 5,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-16k32-1115l/eval-000064/result.json",
+      "bytes": 6571,
+      "sha256": "394ff5375b8899c0f1ae09bab7990bbff117c8a919aeb56f13b48c5532ec2335",
+      "chunks": 4
+    },
+    {
+      "i": 6,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-16k32-1115l/eval-000064/protocol.json",
+      "bytes": 2163620,
+      "sha256": "812156829ae41529548f20328a8461a98675984d13ada49135d50ed1b452fad8",
+      "chunks": 1516
+    },
+    {
+      "i": 7,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-16k32-1115l/eval-000064/accounting.json",
+      "bytes": 1384,
+      "sha256": "9c035f01e457d4344c737ddb86f0f49089d8d3218d7f856c84cfdf04ce4e7857",
+      "chunks": 3
+    },
+    {
+      "i": 8,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-16k32-1115l/eval-000064/audit/summary.json",
+      "bytes": 959,
+      "sha256": "79dbf03bf52e37a0fef1c491944768360e391ba29281c1e9f87f48a092e55d57",
+      "chunks": 3
+    },
+    {
+      "i": 9,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-16k32-1115l/eval-000064/audit/initial-states.json",
+      "bytes": 720,
+      "sha256": "fc5b7be226055f34020fd6ac87d7830551b928968d769f3c5809612cdc8b2342",
+      "chunks": 2
+    },
+    {
+      "i": 10,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-16k32-1115l/eval-000256/result.json",
+      "bytes": 6574,
+      "sha256": "27bc898a3f6687b5896c13f10412491f592b47f11e323696463010af0909be79",
+      "chunks": 4
+    },
+    {
+      "i": 11,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-16k32-1115l/eval-000256/protocol.json",
+      "bytes": 2163623,
+      "sha256": "81d79aa542bd2b50981395f1073c1b950d6c4b427eeb2b5b6d6282de29cfed1a",
+      "chunks": 1516
+    },
+    {
+      "i": 12,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-16k32-1115l/eval-000256/accounting.json",
+      "bytes": 1384,
+      "sha256": "411d0ca657a9be44cac64c088b5f240e143d3815d72c971709929622684d8137",
+      "chunks": 3
+    },
+    {
+      "i": 13,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-16k32-1115l/eval-000256/audit/summary.json",
+      "bytes": 958,
+      "sha256": "0ff56d2ea0f2a6d1ba144cfc3377c477e24e1a36c93d82a2b265a2f8250933f2",
+      "chunks": 3
+    },
+    {
+      "i": 14,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-16k32-1115l/eval-000256/audit/initial-states.json",
+      "bytes": 720,
+      "sha256": "a8dc0f71bfb45d919b62603309bd5f8d67ad91207b73954d3d1db57f5417a32e",
+      "chunks": 2
+    },
+    {
+      "i": 15,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-16k32-1115l/eval-001024/result.json",
+      "bytes": 6694,
+      "sha256": "852cf19065950abe946b1dbbf95e977d7e87fc7aacc0b886eba3dc08e2fbec2c",
+      "chunks": 5
+    },
+    {
+      "i": 16,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-16k32-1115l/eval-001024/protocol.json",
+      "bytes": 2163625,
+      "sha256": "293aec1715b0674259f7bb254a08703172a271928e6aedf532f45d6e08f9fe70",
+      "chunks": 1516
+    },
+    {
+      "i": 17,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-16k32-1115l/eval-001024/accounting.json",
+      "bytes": 1390,
+      "sha256": "fd7439f0cf1d9ff6050b43e20c034695307ded17d65544b456af9624d164f508",
+      "chunks": 3
+    },
+    {
+      "i": 18,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-16k32-1115l/eval-001024/audit/summary.json",
+      "bytes": 963,
+      "sha256": "9c2496c856be84be8a96d0ce271c3283d623e35e963463795d62e166891842ec",
+      "chunks": 3
+    },
+    {
+      "i": 19,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-16k32-1115l/eval-001024/audit/initial-states.json",
+      "bytes": 720,
+      "sha256": "12e4082e08bdd7d173ac1f35763e9632e63058a0fe628f1b40a1bd40845e0baa",
+      "chunks": 2
+    },
+    {
+      "i": 20,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-16k32-1115l/eval-002048/result.json",
+      "bytes": 6635,
+      "sha256": "3e1f81de5e6f44cbb14aaa15e46915b45ea77d416057cafc5a8b2f3eec26e24c",
+      "chunks": 4
+    },
+    {
+      "i": 21,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-16k32-1115l/eval-002048/protocol.json",
+      "bytes": 2163626,
+      "sha256": "ca9631188b8a985cf78968533b88f83b4ddd2a3306d252ca6b7d02224764d6c3",
+      "chunks": 1516
+    },
+    {
+      "i": 22,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-16k32-1115l/eval-002048/accounting.json",
+      "bytes": 1376,
+      "sha256": "86652d485a15be015b89f26c3765c973f5464d649268b20789eed4257755d2f6",
+      "chunks": 3
+    },
+    {
+      "i": 23,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-16k32-1115l/eval-002048/audit/summary.json",
+      "bytes": 963,
+      "sha256": "5eb17291a5f27ab4b2168d096b161c5fd5eb877882e38775d1bc624e017b3744",
+      "chunks": 3
+    },
+    {
+      "i": 24,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-16k32-1115l/eval-002048/audit/initial-states.json",
+      "bytes": 720,
+      "sha256": "57ad0a36ffb5b0333be55f60690978461f7a936cadb160e51cbdb0d972ad814f",
+      "chunks": 2
+    },
+    {
+      "i": 25,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-16k32-1115l/result.json",
+      "bytes": 3607,
+      "sha256": "80031a8135866b8ab846ea2e71da654ae139ccbefa59d6870451b722673e5ffe",
+      "chunks": 6
+    }
+  ]
+}
