@@ -2,7 +2,7 @@
   "status": "scope_audit_incomplete_paper_reproduction",
   "goal_complete": false,
   "scope_redefined": false,
-  "as_of": "2026-11-15T14:56:39.843154+08:00",
+  "as_of": "2026-11-15T15:03:50.526999+08:00",
   "paper_pdf_sha256": "fe213017ab062f4acc3965da89abd3c29969163e144a2628a662b8ce46691009",
   "upstream_supermimic_commit": "abc124c1bd5976341034668af3d12c087f2f1f55",
   "code_and_evidence_commit": "8f0e4d8",
@@ -267,7 +267,15 @@
         "reference_frames": 220352,
         "first_case_observed_update": 112,
         "first_case_checkpoint64_readback_verified": true,
-        "completed_quality_points": 0
+        "completed_quality_points": 0,
+        "all_four_actual_native_updates_observed": true,
+        "all_four_checkpoint64_cloud_tensor_and_byte_readback_markers": true,
+        "latest_logged_updates": {
+          "ppo-wm-4k32-1115i": 352,
+          "ppo-wm-8k24-1115j": 176,
+          "ppo-wm-8k32-1115k": 144,
+          "ppo-wm-16k32-1115l": 112
+        }
       }
     },
     {
@@ -380,7 +388,7 @@
   "original_scope_retained": true,
   "no_new_cloud_jobs_submitted_by_this_audit": false,
   "next_execution_priority": "Finish existing1115i/j/k/l finite PPO-WM runs and recover all original quality points; then use a freed slot for a fresh same18-motion first-order curve. Do not rerun completed prior calculations. Retain data-duration, matched-return push, exact author benchmark, multi-seed/GPU and physical hardware scope.",
-  "last_status_update": "2026-11-15T14:56:39.843154+08:00",
+  "last_status_update": "2026-11-15T15:03:50.526999+08:00",
   "execution_status": "explicit_user_resumption_four_H100_finite_jobs",
   "resume_requires_explicit_user_request": false,
   "execution_priorities_before_user_pause": [

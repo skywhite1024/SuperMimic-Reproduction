@@ -173,7 +173,7 @@
   "main_first_order_comparison_complete": false,
   "paper_results_reproduced": false,
   "local_original_RSL_boundary_test_passed": true,
-  "actual_new_CUDA_learning_verified": false,
+  "actual_new_CUDA_learning_verified": true,
   "full_training_resume_available": false,
   "output": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-8k32-1115k",
   "submitted": true,
@@ -188,7 +188,12 @@
   "source_and_vendor_hash_preflight_passed": true,
   "all18_physical_source_slices_verified": true,
   "startup_command_exact_editor_readback": true,
-  "last_observed_native_update": null,
-  "last_observed_retained_checkpoint": null,
-  "evidence_captured_at": "2026-11-15T14:56:39.843154+08:00"
+  "last_observed_native_update": 144,
+  "last_observed_retained_checkpoint": {
+    "ppo_update": 64,
+    "real_simulator_steps": 2621440,
+    "imagined_steps": 16777216,
+    "seconds_since_training_entry": 161.7104053760413
+  },
+  "evidence_captured_at": "2026-11-15T15:03:50.526999+08:00"
 }

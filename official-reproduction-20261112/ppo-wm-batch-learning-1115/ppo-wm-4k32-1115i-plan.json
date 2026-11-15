@@ -188,12 +188,12 @@
   "main_training_started_at": "2026-11-15T14:47:26.904350+08:00",
   "main_training_deadline": "2026-11-15T16:47:26.904350+08:00",
   "startup_command_exact_editor_readback": true,
-  "last_observed_native_update": 112,
+  "last_observed_native_update": 352,
   "last_observed_retained_checkpoint": {
-    "ppo_update": 64,
-    "real_simulator_steps": 2621440,
-    "imagined_steps": 8388608,
-    "seconds_since_training_entry": 147.75933288037777
+    "ppo_update": 256,
+    "real_simulator_steps": 10485760,
+    "imagined_steps": 33554432,
+    "seconds_since_training_entry": 481.3729745708406
   },
-  "evidence_captured_at": "2026-11-15T14:56:39.843154+08:00"
+  "evidence_captured_at": "2026-11-15T15:03:50.526999+08:00"
 }

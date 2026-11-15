@@ -136,6 +136,17 @@ def main():
         if report['status']=='complete':
             validation.update(verify_complete(output,plan,names))
             assert 'PPO_WM_BATCH_PIPELINE_COMPLETED' in clean and 'PPO_WM_BATCH_JOB_EXIT=0' in clean
+    updates=[json.loads(x) for x in re.findall(r'^PPO_WM_NATIVE_UPDATE (.+)$',clean,re.M)]
+    checkpoints=[json.loads(x) for x in re.findall(r'^PPO_WM_NATIVE_CHECKPOINT (.+)$',clean,re.M)]
+    batch_steps=plan['imagined_batch_size']*plan['steps_per_rollout']
+    assert [r['update'] for r in updates]==sorted({r['update'] for r in updates})
+    assert all(r['imagined_steps']==batch_steps and all(math.isfinite(v) for v in r['losses'].values()) for r in updates)
+    for row in checkpoints:
+        assert row['real_simulator_steps']==row['ppo_update']*40960
+        assert row['imagined_steps']==row['ppo_update']*batch_steps
+    validation.update(last_logged_native_update=updates[-1]['update'] if updates else None,
+        logged_checkpoints_after_cloud_tensor_and_byte_readback_checks=checkpoints,
+        progress_tags_are_not_independent_model_or_quality_verification=True)
     validation.update(job_uid=plan['uid'],source_commit=plan['source_commit'],log_sha256=sha(raw),
         all_recovered_original_bytes_and_SHA256_verified=bool(ledger),raw_models_and_NPZ_downloaded=False)
     for name,value in [('validation.json',validation),('receipt-ledger.json',dict(receipts=ledger))]:

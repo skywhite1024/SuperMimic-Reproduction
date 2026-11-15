@@ -21,3 +21,12 @@ PPO_WM_BATCH_STAGE_START {"script": "prepare_lafan_locomotion18.py", "log": "/mn
 LAFAN_LOCOMOTION18_PACKED {"status": "all18_original_motion_slices_preserved", "clips": 18, "reference_frames": 220352}
 PPO_WM_BATCH_STAGE_EXIT {"script": "prepare_lafan_locomotion18.py", "returncode": 0, "elapsed_seconds": 2.1982255317270756}
 PPO_WM_BATCH_STAGE_START {"script": "run_ppo_wm_integration.py", "log": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-16k32-1115l/training.log", "utc": "2026-11-15T06:55:14.694307+00:00", "limit_seconds": 7200}
+PPO_WM_NATIVE_UPDATE {"update": 1, "imagined_steps": 524288, "fractional_positions_truncated_to_zero": 366736, "losses": {"value": 12.379893922805786, "surrogate": 0.3153113454405684, "entropy": 41.18203201293945}}
+PPO_WM_NATIVE_UPDATE {"update": 16, "imagined_steps": 524288, "fractional_positions_truncated_to_zero": 368528, "losses": {"value": 0.16708004847168922, "surrogate": -0.027090674603823573, "entropy": 40.45025787353516}}
+PPO_WM_NATIVE_UPDATE {"update": 32, "imagined_steps": 524288, "fractional_positions_truncated_to_zero": 328390, "losses": {"value": 0.09254437536001206, "surrogate": -0.028047471921308898, "entropy": 39.628030395507814}}
+PPO_WM_NATIVE_UPDATE {"update": 48, "imagined_steps": 524288, "fractional_positions_truncated_to_zero": 354349, "losses": {"value": 0.061987341940402986, "surrogate": -0.02859561676159501, "entropy": 38.95096969604492}}
+PPO_WM_NATIVE_UPDATE {"update": 64, "imagined_steps": 524288, "fractional_positions_truncated_to_zero": 337603, "losses": {"value": 0.0533548628911376, "surrogate": -0.02700524013489485, "entropy": 38.36109504699707}}
+PPO_WM_NATIVE_CHECKPOINT {"ppo_update": 64, "real_simulator_steps": 2621440, "imagined_steps": 33554432, "seconds_since_training_entry": 195.62109855934978}
+PPO_WM_NATIVE_UPDATE {"update": 80, "imagined_steps": 524288, "fractional_positions_truncated_to_zero": 256516, "losses": {"value": 0.049288575910031794, "surrogate": -0.030032322817714886, "entropy": 37.73291091918945}}
+PPO_WM_NATIVE_UPDATE {"update": 96, "imagined_steps": 524288, "fractional_positions_truncated_to_zero": 262083, "losses": {"value": 0.02371987821534276, "surrogate": -0.027368034061510116, "entropy": 37.161079025268556}}
+PPO_WM_NATIVE_UPDATE {"update": 112, "imagined_steps": 524288, "fractional_positions_truncated_to_zero": 262778, "losses": {"value": 0.018940885085612535, "surrogate": -0.02576294195605442, "entropy": 36.53757801055908}}

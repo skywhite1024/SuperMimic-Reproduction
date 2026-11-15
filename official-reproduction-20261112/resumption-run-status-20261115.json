@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-11-15T14:56:39.843154+08:00",
+  "observed_at": "2026-11-15T15:03:50.526999+08:00",
   "user_resumed": true,
   "max_requested_H100": 4,
   "requested_nonterminal_H100": 4,
@@ -147,7 +147,7 @@
           "program_started_at": "2026-11-15T14:47:23.956042+08:00",
           "program_deadline": "2026-11-15T18:47:23.956042+08:00",
           "main_training_deadline": "2026-11-15T16:47:26.904350+08:00",
-          "last_observed_native_update": 112
+          "last_observed_native_update": 352
         },
         "ppo-wm-8k24-1115j": {
           "uid": "a8a3401120d4437694d78cc5d87322bb",
@@ -159,7 +159,7 @@
           "program_started_at": "2026-11-15T14:54:32.539411+08:00",
           "program_deadline": "2026-11-15T18:54:32.539411+08:00",
           "main_training_deadline": "2026-11-15T16:54:35.310491+08:00",
-          "last_observed_native_update": null
+          "last_observed_native_update": 176
         },
         "ppo-wm-8k32-1115k": {
           "uid": "bae3e0aa1bc44bf78d1f73b91cd947b7",
@@ -171,7 +171,7 @@
           "program_started_at": "2026-11-15T14:55:02.227209+08:00",
           "program_deadline": "2026-11-15T18:55:02.227209+08:00",
           "main_training_deadline": "2026-11-15T16:55:06.311866+08:00",
-          "last_observed_native_update": null
+          "last_observed_native_update": 144
         },
         "ppo-wm-16k32-1115l": {
           "uid": "2a81044e0a004302a97f007d71e3a6b1",
@@ -183,11 +183,13 @@
           "program_started_at": "2026-11-15T14:55:12.093421+08:00",
           "program_deadline": "2026-11-15T18:55:12.093421+08:00",
           "main_training_deadline": "2026-11-15T16:55:14.694307+08:00",
-          "last_observed_native_update": null
+          "last_observed_native_update": 112
         }
       },
       "evidence": "ppo-wm-batch-learning-1115/",
-      "paper_results_reproduced": false
+      "paper_results_reproduced": false,
+      "all_four_native_updates_and_checkpoint64_readback_markers_observed": true,
+      "same18_control_prepared_not_submitted": true
     }
   },
   "latest_readonly_training_counters": {

@@ -21,3 +21,16 @@ PPO_WM_BATCH_STAGE_START {"script": "prepare_lafan_locomotion18.py", "log": "/mn
 LAFAN_LOCOMOTION18_PACKED {"status": "all18_original_motion_slices_preserved", "clips": 18, "reference_frames": 220352}
 PPO_WM_BATCH_STAGE_EXIT {"script": "prepare_lafan_locomotion18.py", "returncode": 0, "elapsed_seconds": 2.3367762845009565}
 PPO_WM_BATCH_STAGE_START {"script": "run_ppo_wm_integration.py", "log": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-8k24-1115j/training.log", "utc": "2026-11-15T06:54:35.310491+00:00", "limit_seconds": 7200}
+PPO_WM_NATIVE_UPDATE {"update": 1, "imagined_steps": 196608, "fractional_positions_truncated_to_zero": 157072, "losses": {"value": 6.280151987075806, "surrogate": 0.315993160859216, "entropy": 41.15049571990967}}
+PPO_WM_NATIVE_UPDATE {"update": 16, "imagined_steps": 196608, "fractional_positions_truncated_to_zero": 153942, "losses": {"value": 0.08147547170519828, "surrogate": -0.044671047863084824, "entropy": 40.362670707702634}}
+PPO_WM_NATIVE_UPDATE {"update": 32, "imagined_steps": 196608, "fractional_positions_truncated_to_zero": 150377, "losses": {"value": 0.050000676140189174, "surrogate": -0.04594721350003965, "entropy": 39.511141777038574}}
+PPO_WM_NATIVE_UPDATE {"update": 48, "imagined_steps": 196608, "fractional_positions_truncated_to_zero": 126547, "losses": {"value": 0.03293249858543277, "surrogate": -0.04195957303018076, "entropy": 38.85623779296875}}
+PPO_WM_NATIVE_UPDATE {"update": 64, "imagined_steps": 196608, "fractional_positions_truncated_to_zero": 124112, "losses": {"value": 0.03441147040575743, "surrogate": -0.039910067096934655, "entropy": 38.33240089416504}}
+PPO_WM_NATIVE_CHECKPOINT {"ppo_update": 64, "real_simulator_steps": 2621440, "imagined_steps": 12582912, "seconds_since_training_entry": 138.73545211926103}
+PPO_WM_NATIVE_UPDATE {"update": 80, "imagined_steps": 196608, "fractional_positions_truncated_to_zero": 107495, "losses": {"value": 0.01634258860722184, "surrogate": -0.044504422054160386, "entropy": 37.78114204406738}}
+PPO_WM_NATIVE_UPDATE {"update": 96, "imagined_steps": 196608, "fractional_positions_truncated_to_zero": 103119, "losses": {"value": 0.013311709370464086, "surrogate": -0.0371299683349207, "entropy": 37.25011692047119}}
+PPO_WM_NATIVE_UPDATE {"update": 112, "imagined_steps": 196608, "fractional_positions_truncated_to_zero": 96238, "losses": {"value": 0.010135032841935754, "surrogate": -0.03597646486014128, "entropy": 36.74226741790771}}
+PPO_WM_NATIVE_UPDATE {"update": 128, "imagined_steps": 196608, "fractional_positions_truncated_to_zero": 98685, "losses": {"value": 0.009374920930713414, "surrogate": -0.031973860115977006, "entropy": 36.25565605163574}}
+PPO_WM_NATIVE_UPDATE {"update": 144, "imagined_steps": 196608, "fractional_positions_truncated_to_zero": 95688, "losses": {"value": 0.010088562546297909, "surrogate": -0.026983773743268102, "entropy": 35.73102493286133}}
+PPO_WM_NATIVE_UPDATE {"update": 160, "imagined_steps": 196608, "fractional_positions_truncated_to_zero": 93926, "losses": {"value": 0.00786606320179999, "surrogate": -0.02758582197420765, "entropy": 35.216363716125485}}
+PPO_WM_NATIVE_UPDATE {"update": 176, "imagined_steps": 196608, "fractional_positions_truncated_to_zero": 86631, "losses": {"value": 0.00593119787517935, "surrogate": -0.02544353373814374, "entropy": 34.756056022644046}}
