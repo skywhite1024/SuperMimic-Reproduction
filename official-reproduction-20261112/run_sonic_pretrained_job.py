@@ -35,22 +35,46 @@ def main():
         log=output/(name+".log")
         print("SONIC_STAGE_START "+json.dumps(dict(stage=name,utc=datetime.now(timezone.utc).isoformat(),limit_seconds=limit)),flush=True)
         beginning=time.monotonic()
+        timed_out=False
         with log.open("w",encoding="utf-8") as stream:
-            process=subprocess.run(command,stdout=stream,stderr=subprocess.STDOUT,timeout=limit)
-        row=dict(stage=name,returncode=process.returncode,elapsed_seconds=time.monotonic()-beginning,log_sha256=digest(log))
+            try:
+                process=subprocess.run(command,stdout=stream,stderr=subprocess.STDOUT,timeout=limit)
+                returncode=process.returncode
+            except subprocess.TimeoutExpired:
+                timed_out=True;returncode=124
+        row=dict(stage=name,returncode=returncode,timed_out=timed_out,
+                 elapsed_seconds=time.monotonic()-beginning,log_sha256=digest(log))
         stages.append(row)
         for line in log.read_text(encoding="utf-8",errors="replace").splitlines():
             if any(tag in line for tag in ["SONIC_","CORPUS_CLIP_RESULT","CORPUS_PROGRESS","OFFICIAL_CORPUS_EVAL_PASS","CORPUS_ACCOUNTING","AUDIT_"]):
                 print(line,flush=True)
         print("SONIC_STAGE_EXIT "+json.dumps(row),flush=True)
-        if process.returncode:
+        if returncode:
             print(log.read_text(encoding="utf-8",errors="replace")[-14000:],flush=True)
-            raise RuntimeError(name+" failed with exit "+str(process.returncode))
+            raise RuntimeError(name+" failed with exit "+str(returncode))
     try:
         if not executable.exists():
             stage("create-inference-venv",[sys.executable,"-m","venv","--system-site-packages",str(inference)],180)
-        stage("install-inference-dependencies",[str(executable),"-m","pip","install",
-            "--disable-pip-version-check","onnxruntime==1.32.0","flatbuffers==25.12.19"],600)
+        assert sys.version_info[:2]==(3,13),"Pinned Linux wheel manifest targets the established CPython3.13 runtime"
+        wheel_manifest=json.loads((source/"sonic-linux-inference-wheels.json").read_bytes())
+        requirements=output/"inference-requirements.txt"
+        requirements.write_text("\n".join(row["package"]+"=="+row["version"]+
+            " --hash=sha256:"+row["sha256"] for row in wheel_manifest["wheels"])+"\n",encoding="utf-8")
+        wheel_cache=root/"data/sonic-inference-wheels";wheel_cache.mkdir(parents=True,exist_ok=True)
+        cached=all((wheel_cache/row["file"]).is_file() and digest(wheel_cache/row["file"])==row["sha256"]
+                   for row in wheel_manifest["wheels"])
+        if not cached:
+            stage("download-pinned-inference-wheels",[str(executable),"-m","pip","download",
+                "--disable-pip-version-check","--no-deps","--only-binary=:all:","--require-hashes",
+                "--timeout","30","--retries","1","--index-url",wheel_manifest["mirror_index"],
+                "--dest",str(wheel_cache),"-r",str(requirements)],300)
+        for row in wheel_manifest["wheels"]:
+            path=wheel_cache/row["file"]
+            assert path.stat().st_size==row["bytes"] and digest(path)==row["sha256"]
+        write(output/"inference-wheel-verification.json",wheel_manifest)
+        stage("install-inference-dependencies-offline",[str(executable),"-m","pip","install",
+            "--disable-pip-version-check","--no-index","--no-deps","--require-hashes",
+            "--find-links",str(wheel_cache),"-r",str(requirements)],300)
         download_code = (
             "from huggingface_hub import hf_hub_download\n"
             "from pathlib import Path\n"
@@ -90,7 +114,7 @@ def main():
     except Exception as exception:
         error=type(exception).__name__+": "+str(exception)
         print("SONIC_FINITE_JOB_ERROR "+error,flush=True)
-    files=["setup.json","models-batched/validation.json","evaluation/protocol.json",
+    files=["inference-wheel-verification.json","setup.json","models-batched/validation.json","evaluation/protocol.json",
         "evaluation/result.json","evaluation/accounting.json","evaluation/audit/summary.json",
         "evaluation/audit/initial-states.json"]
     complete=not error and all((output/name).is_file() for name in files)

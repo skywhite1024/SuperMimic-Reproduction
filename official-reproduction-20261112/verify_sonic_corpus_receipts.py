@@ -11,7 +11,7 @@ import numpy as np
 from verify_horizon_grid_receipts import decode_group,sha
 
 
-FILES=["setup.json","models-batched/validation.json","evaluation/protocol.json",
+FILES=["inference-wheel-verification.json","setup.json","models-batched/validation.json","evaluation/protocol.json",
        "evaluation/result.json","evaluation/accounting.json","evaluation/audit/summary.json",
        "evaluation/audit/initial-states.json","result.json"]
 
@@ -42,6 +42,9 @@ def main():
             assert names==FILES and "SONIC_FINITE_JOB_COMPLETED" in clean and "SONIC_JOB_EXIT=0" in clean
             assert all(report["originals"][name]==digest(name) for name in FILES[:-1])
             setup=read("setup.json");protocol=read("evaluation/protocol.json")
+            wheels=read("inference-wheel-verification.json")
+            assert digest("inference-wheel-verification.json")==plan["source_files"]["sonic-linux-inference-wheels.json"]
+            assert len(wheels["wheels"])==2 and all(len(row["sha256"])==64 for row in wheels["wheels"])
             result=read("evaluation/result.json");account=read("evaluation/accounting.json")
             arrays=read("evaluation/audit/summary.json");states=read("evaluation/audit/initial-states.json")
             local_files={p.name:sha(p.read_bytes()) for p in args.motions.iterdir() if p.is_file()}
