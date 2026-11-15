@@ -2,7 +2,7 @@
   "status": "scope_audit_incomplete_paper_reproduction",
   "goal_complete": false,
   "scope_redefined": false,
-  "as_of": "2026-11-15T16:57:12.240031+08:00",
+  "as_of": "2026-11-16T06:17:48.415410+08:00",
   "paper_pdf_sha256": "fe213017ab062f4acc3965da89abd3c29969163e144a2628a662b8ce46691009",
   "upstream_supermimic_commit": "abc124c1bd5976341034668af3d12c087f2f1f55",
   "code_and_evidence_commit": "8f0e4d8",
@@ -121,7 +121,12 @@
       "failure_evidence": [
         "sonic-cloud-full40-1115n/validation.json",
         "sonic-cloud-full40-1115q/validation.json"
-      ]
+      ],
+      "current_attempt": {
+        "uid": "dd62849204044a6593f468a467977314",
+        "name": "supermimic-official-sonic40-260010076-1116a",
+        "status": "running_full40_evaluation_models_and_CPU_parity_passed"
+      }
     },
     {
       "id": "lafan_efficiency",
@@ -345,7 +350,8 @@
           "imagined_steps": 1073741824,
           "training_entry_seconds_to2048": 5234.7385608665645
         }
-      ]
+      ],
+      "pose_sample_quality_evidence": "ppo-wm-pose-audit-1116a/audit.json"
     },
     {
       "id": "critic_horizons",
@@ -456,18 +462,20 @@
   ],
   "original_scope_retained": true,
   "no_new_cloud_jobs_submitted_by_this_audit": false,
-  "next_execution_priority": "No experiment execution while user-paused.",
-  "last_status_update": "2026-11-15T16:57:12.240031+08:00",
-  "execution_status": "paused_by_user",
-  "resume_requires_explicit_user_request": true,
+  "next_execution_priority": "Finish current SONIC full40 evaluation; evaluate six interrupted same18 saved snapshots read-only; retain all unfinished full-paper requirements.",
+  "last_status_update": "2026-11-16T06:17:48.415410+08:00",
+  "execution_status": "active_resumed_20261116",
+  "resume_requires_explicit_user_request": false,
   "execution_priorities_before_user_pause": [
     "Finish frozen raw320k and separately evaluate finalmodel with correctedv2 plus completearrayaudit",
     "Recover timedLAFAN64k complete ninepoint curve and all original receipts after finite livejob ends",
     "Continue realG1 PPO-WM/PPO-Sim, critic horizons, push andmultiGPU matched experiments; retain missingexactauthor inputs andhardware limitation"
   ],
   "current_user_resumption": {
-    "status": "paused_by_user",
-    "pause_record": "user-pause-20261115.json"
+    "status": "active",
+    "date": "2026-11-16",
+    "max_H100": 4,
+    "previous_pause_record_preserved": "user-pause-20261115.json"
   },
   "previous_as_of_before_resumption": "2026-11-13T15:36:32.821206+08:00",
   "requested_nonterminal_H100": 0

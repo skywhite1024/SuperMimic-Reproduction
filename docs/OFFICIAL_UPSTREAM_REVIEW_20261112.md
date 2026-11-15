@@ -896,3 +896,40 @@ ppo-wm-batch-learning-1115/finite-curves-data.json, all four recovered
 validation.json files, and retained SONIC failure receipts. Full-paper
 reproduction remains incomplete. Resume only on a new explicit user request;
 LIBERO remains paused.
+
+
+## 67. 2026-11-16 continuation: sampled pose audit and original SONIC transfer
+
+The active goal was reactivated for unfinished official experiments under the
+four-H100 ceiling. The prior stop record is retained unchanged. No previous
+PPO-WM learning run is repeated. New SONIC full40 job 1116a has actual UID
+dd62849204044a6593f468a467977314, one worker, zero retries, 4500s total runtime.
+Its original encoder, decoder and configuration transfers passed pinned SHA256
+verification via the existing mirror after official-endpoint transport failures.
+Original/derived batched CPU inference parity passed. Full40 evaluation started;
+no score or successful CUDA evaluation is asserted before result readback.
+
+Three recovered PPO-WM pose payloads were independently decoded and byte-checked.
+All 8100 sampled reference states are bitwise equal to the canonical source
+motion slices. All sampled root/joint errors and54 full-clip return entries agree
+with their original endpoint receipts. This does not locally re-audit complete
+cloud trajectories. Nine explicit6s pose-window videos were rendered and decoded
+at150frames/25fps, including each case's lowest-return success, highest-return
+success and first indexed failure. First/middle/last2s windows have explicit
+time-jump labels. Cameras follow each pelvis independently; displayed world-root
+errors retain the original absolute coordinates. Forward kinematics only, no
+physics rerun, no contact or overall quality pass.
+
+The cloud full-trajectory readback metrics show mean joint RMS ranges among
+native-success clips of13.86..23.23deg (4k32),12.16..18.11deg (8k24), and
+11.41..16.34deg (8k32). Mean absolute world-root distances can be large; these are
+diagnostic values, not replacements for native root-aligned rewards. A native
+motion-end success cannot certify accurate whole-body tracking.
+
+The new explicit interrupted-snapshot selector preserves the completed-parent
+selector's existing contract. It accepts only the six manifests captured in the
+pre-stop log, checks every saved model size/SHA256, and identifies the parent as
+interrupted throughout evaluation provenance. The read-only evaluation runner
+will assess all six recorded checkpoints1/4001/8001/12001/16001/20001 on the same18
+motions and verify parent metadata remains unchanged. No optimizer/RNG/replay
+continuation or completed64001-collection claim is constructed.

@@ -30,10 +30,15 @@ def main():
     parser.add_argument("--order", choices=("index", "length"), default="length")
     parser.add_argument("--checkpoint-collection-step", type=int,
                         help="Select a retained snapshot from a completed parent run; default uses final models")
+    parser.add_argument("--interrupted-run-evidence", type=Path,
+                        help="Explicit pre-stop snapshot evidence; does not declare parent training complete")
     parser.add_argument("--training-algorithm", choices=("first-order", "ppo-sim", "ppo-wm"), default="first-order")
     parser.add_argument("--ppo-sim-update", type=int, help="Retained PPO update, with its own parent receipt")
     parser.add_argument("--ppo-wm-update", type=int, help="Retained PPO-WM native inference snapshot")
     args = parser.parse_args()
+    if args.interrupted_run_evidence is not None and (
+            args.training_algorithm != "first-order" or args.checkpoint_collection_step is None):
+        parser.error("Interrupted saved weights require first-order and an explicit collection step")
     if args.num_envs < 1 or args.expected_clips < 1:
         parser.error("positive environment and clip counts are required")
     os.environ["MUJOCO_GL"] = "disable"
@@ -73,9 +78,14 @@ def main():
         if args.ppo_wm_update is not None:parser.error("--ppo-wm-update requires --training-algorithm ppo-wm")
         if args.ppo_sim_update is not None:
             parser.error("--ppo-sim-update requires --training-algorithm ppo-sim")
-        from select_completed_checkpoint import select_completed_checkpoint
-        training, checkpoints, checkpoint_selection = select_completed_checkpoint(
-            run, args.checkpoint_collection_step)
+        if args.interrupted_run_evidence is not None:
+            from select_interrupted_snapshot import select_interrupted_snapshot
+            training, checkpoints, checkpoint_selection = select_interrupted_snapshot(
+                run, args.checkpoint_collection_step, args.interrupted_run_evidence)
+        else:
+            from select_completed_checkpoint import select_completed_checkpoint
+            training, checkpoints, checkpoint_selection = select_completed_checkpoint(
+                run, args.checkpoint_collection_step)
         resolved = json.loads((run / "resolved-config.json").read_text(encoding="utf-8"))
         goal_backend = resolved.get("goal_assembly_backend", "official")
         runner_payload = resolved["runner"]

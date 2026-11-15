@@ -1,0 +1,151 @@
+{
+  "status": "six_native_model_manifests_captured_before_confirmed_user_stop",
+  "parent_platform_status": "stopped_by_user",
+  "parent_job_uid": "b757b72b9f25497bbabad8c41d2cfa3e",
+  "original_training_directory": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1115m/main/training",
+  "logged_snapshots": [
+    {
+      "status": "model_snapshot_preserved",
+      "collection_steps": 1,
+      "files": [
+        {
+          "file": "world_model.pt",
+          "bytes": 34990357,
+          "sha256": "e69b399db157346c1625bf517cbb8ee3e5c88f9c6ff4648b2ba5dbc861863b48"
+        },
+        {
+          "file": "actor.pt",
+          "bytes": 46439949,
+          "sha256": "6db7caaf5a7e2b3d8bf89e3f050835ad25663f10154a007a0b69777adb849740"
+        },
+        {
+          "file": "critic.pt",
+          "bytes": 929269,
+          "sha256": "0f31839f86cd86787552e41745f07d998f1c5c2a7ab0b4796a0c5f6a7555e24f"
+        }
+      ],
+      "full_training_resume_available": false,
+      "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state"
+    },
+    {
+      "status": "model_snapshot_preserved",
+      "collection_steps": 4001,
+      "files": [
+        {
+          "file": "world_model.pt",
+          "bytes": 34990357,
+          "sha256": "eb3f199869b77ee1a6400c0d3eb6576ea4acbab43c16b544f7bdc81bd019aa8f"
+        },
+        {
+          "file": "actor.pt",
+          "bytes": 46439949,
+          "sha256": "5b9c9d2fe0e5728e3bce4ff1ccf9f86439b5b471d68383cba476c51939ea38bc"
+        },
+        {
+          "file": "critic.pt",
+          "bytes": 929269,
+          "sha256": "55fcdf4e66567a071a34cacd8001fa638627b3d0563e10e5ae2d34e092ea038b"
+        }
+      ],
+      "full_training_resume_available": false,
+      "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state"
+    },
+    {
+      "status": "model_snapshot_preserved",
+      "collection_steps": 8001,
+      "files": [
+        {
+          "file": "world_model.pt",
+          "bytes": 34990357,
+          "sha256": "80de24b8ac27cd608cc3b22186823f755665da1f543cf7a88df6335daa12610d"
+        },
+        {
+          "file": "actor.pt",
+          "bytes": 46439949,
+          "sha256": "2698396c0e9311d77bb84e26dc792b5c6ac83af39880441752fc5a40de382371"
+        },
+        {
+          "file": "critic.pt",
+          "bytes": 929269,
+          "sha256": "79f462abd84423fca757c18bd539bd078a882e682dcb4e3a3548f80e1bbd7855"
+        }
+      ],
+      "full_training_resume_available": false,
+      "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state"
+    },
+    {
+      "status": "model_snapshot_preserved",
+      "collection_steps": 12001,
+      "files": [
+        {
+          "file": "world_model.pt",
+          "bytes": 34990357,
+          "sha256": "f7f5d5d67046af63065f443eaa44bfad01fe5b522b7d0c0067e47cd72d293405"
+        },
+        {
+          "file": "actor.pt",
+          "bytes": 46439949,
+          "sha256": "2bb5f79922a1337d2d2552421f1baf9520376017f0ff1c953ecdc7e6ff3fcad3"
+        },
+        {
+          "file": "critic.pt",
+          "bytes": 929269,
+          "sha256": "bbc156f22ffbbb49aa1b896b9831683d6ca25c73189d99287b2e22b5706c1e8f"
+        }
+      ],
+      "full_training_resume_available": false,
+      "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state"
+    },
+    {
+      "status": "model_snapshot_preserved",
+      "collection_steps": 16001,
+      "files": [
+        {
+          "file": "world_model.pt",
+          "bytes": 34990357,
+          "sha256": "0e2845a127bdab524d2fcd87b5463776b17b29c37ace98b1b39ff8be0990b707"
+        },
+        {
+          "file": "actor.pt",
+          "bytes": 46439949,
+          "sha256": "39878e64a4c452eccae1f533774dcfbdf8e16f5b5868be65b2d234256f4d7bc2"
+        },
+        {
+          "file": "critic.pt",
+          "bytes": 929269,
+          "sha256": "ac665ffd384b7af373a089cf891cff0439d3b7ec7051af50608a18ef0a84527b"
+        }
+      ],
+      "full_training_resume_available": false,
+      "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state"
+    },
+    {
+      "status": "model_snapshot_preserved",
+      "collection_steps": 20001,
+      "files": [
+        {
+          "file": "world_model.pt",
+          "bytes": 34990357,
+          "sha256": "e1a8b784b4e3406a8dde3f79d7d460267c5844cfe167444c3fa29b162c67f651"
+        },
+        {
+          "file": "actor.pt",
+          "bytes": 46439949,
+          "sha256": "a40f10d645367f2a473cf4f97fdb3873eb45f77c0c02b40b510f31eac8477e18"
+        },
+        {
+          "file": "critic.pt",
+          "bytes": 929269,
+          "sha256": "fa3bb8babafb6227f020dab9cc9208c26f9cbaeaa31da3a2214fa218bd73ede4"
+        }
+      ],
+      "full_training_resume_available": false,
+      "scope": "Native model weights and registered buffers only; excludes optimizer, replay, sampler, simulator and RNG state"
+    }
+  ],
+  "last_logged_profile_collection": 22000,
+  "original_pre_stop_log_sha256": "56f8c98b273e50c88d2465f85b8ded247aa69b1d4695415656c50299b59d0e78",
+  "original_pause_record_sha256": "04cf21bc11c531e73cd2c7359ff74c00327f222e832e212001d1c87fe4b7f134",
+  "full_training_resume_available": false,
+  "training_completed": false
+}
