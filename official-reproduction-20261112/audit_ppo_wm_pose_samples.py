@@ -118,7 +118,8 @@ def main():
                           all18_metrics=payload['all18_metrics'], sampled_windows=windows))
     report = dict(status='recovered_sample_arrays_independently_verified_against_canonical_reference',
         cases=cases, sampled_frames=total_frames, local_full_trajectory_arrays_verified=False,
-        cloud_full_trajectory_metrics_recomputed_locally=False, all54_endpoint_returns_recomputed=True,
+        cloud_full_trajectory_metrics_recomputed_locally=False, all_endpoint_return_entries_recomputed=True,
+        endpoint_return_entries_recomputed=18*len(cases),
         all_sampled_reference_values_bitwise_equal_to_canonical_pack=True,
         sample_windows_are_not_continuous_across_gaps=True, simulation_reexecuted=False,
         native_success_is_not_tracking_quality_certification=True, paper_results_reproduced=False)
@@ -148,7 +149,7 @@ def render(output, joints, samples):
     font = ImageFont.truetype('C:/Windows/Fonts/arial.ttf', 17)
     small = ImageFont.truetype('C:/Windows/Fonts/arial.ttf', 14)
     videos = []
-    sheet = Image.new('RGB', (1664, 1720), '#101820')
+    sheet = Image.new('RGB', (1664, 40+336*((len(samples)+1)//2)), '#101820')
     ImageDraw.Draw(sheet).text((12, 8), 'Saved PPO-WM poses: policy LEFT / reference RIGHT; independent pelvis-following cameras', font=font, fill='white')
     with mujoco.Renderer(model, height=240, width=416) as renderer:
         for ordinal, (case, row, sample, metric) in enumerate(samples):
@@ -195,8 +196,8 @@ def render(output, joints, samples):
             print('POSE_SAMPLE_RENDERED ' + json.dumps(dict(file=video.name, frames=count)), flush=True)
     sheet.save(output/'sample-overview.png')
     assets = [G1_XML, *sorted((G1_XML.parent/'assets').iterdir())]
-    write(output/'rendering.json', dict(status='nine_sample_window_videos_rendered_and_decoded',
-        videos=videos, joint_qpos_addresses=addresses.tolist(), physics_reexecuted=False,
+    write(output/'rendering.json', dict(status='sample_window_videos_rendered_and_decoded',
+        rendered_videos=len(videos),videos=videos, joint_qpos_addresses=addresses.tolist(), physics_reexecuted=False,
         sample_window_concatenation_has_explicit_time_jump_labels=True,
         world_XY_drift_not_removed_from_numeric_errors=True,
         camera='Each panel follows its own pelvis; same distance/azimuth/elevation.',

@@ -21,6 +21,8 @@ def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument("--root",type=Path,required=True)
     p.add_argument("--output",type=Path,required=True)
+    p.add_argument("--case",action="append",choices=["ppo-wm-4k32-1115i","ppo-wm-8k24-1115j",
+        "ppo-wm-8k32-1115k","ppo-wm-16k32-1115l"],help="Explicit completed cases; default retains the original three-case readback")
     args=p.parse_args()
     assert not args.output.exists()
     args.output.mkdir(parents=True)
@@ -38,7 +40,9 @@ def main():
         print("SONIC_SETUP_DIAGNOSTIC_BEGIN",flush=True)
         subprocess.run([sys.executable,str(Path(__file__).with_name("emit_json_receipts.py")),str(path)],check=True,timeout=120)
         print("SONIC_SETUP_DIAGNOSTIC_END",flush=True)
-    for case in ["ppo-wm-4k32-1115i","ppo-wm-8k24-1115j","ppo-wm-8k32-1115k"]:
+    cases=args.case or ["ppo-wm-4k32-1115i","ppo-wm-8k24-1115j","ppo-wm-8k32-1115k"]
+    assert len(cases)==len(set(cases))
+    for case in cases:
         parent=args.root/"runs"/case;folder=parent/"eval-002048";motions=parent/"motions"
         report=json.loads((parent/"result.json").read_bytes())
         assert report["status"]=="complete"
