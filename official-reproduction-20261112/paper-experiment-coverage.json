@@ -2,7 +2,7 @@
   "status": "scope_audit_incomplete_paper_reproduction",
   "goal_complete": false,
   "scope_redefined": false,
-  "as_of": "2026-11-15T15:51:45.541258+08:00",
+  "as_of": "2026-11-15T16:09:19.220504+08:00",
   "paper_pdf_sha256": "fe213017ab062f4acc3965da89abd3c29969163e144a2628a662b8ce46691009",
   "upstream_supermimic_commit": "abc124c1bd5976341034668af3d12c087f2f1f55",
   "code_and_evidence_commit": "8f0e4d8",
@@ -104,7 +104,7 @@
         7,
         18
       ],
-      "status": "released_default_G1_CPU_inference_and_scalar_standing_pilot_verified_benchmark_pending",
+      "status": "released_G1_CPU_dynamic_sequences_and_common_adapter_verified_CUDA_benchmark_pending",
       "evidence": [
         "sonic-pretrained-g1-cpu-1115/validation.json",
         "sonic-pretrained-g1-cpu-1115/source-files-read.json",
@@ -112,7 +112,11 @@
         "sonic-standing-cpu-1115/result.json",
         "sonic-standing-cpu-1115/independent-audit.json"
       ],
-      "qualification": "Default official ONNX pair verified against upstream LFS SHA256; G1 batches1/2/18/64 preserve parameters and match originalCPU inference. All29 gain/order/default/scale expressions compared. Original-policy500step10second scalarMuJoCo standing feedback completed, minimum pelvis0.752341m,max tilt0.823696degrees, no clipping or height/tilt termination; full trace independently recomputed. Dynamic tracking, Warp/IsaacLab equivalence, GPU execution, v1.1 and exact129514 shared benchmark remain missing. No paper-level baseline score."
+      "qualification": "Corrected pelvis-body gyro via mjOBJ_XBODY; early inertial-axis pilots and two adapter failures retained. Standing500steps and two complete reference sequences (13065/11890steps) ran;500real-state adapter parity passed. Long sequences show1.15m/1.28m mean world root drift. No common native reward/termination or filtered129514 SONIC benchmark result yet.",
+      "latest_evidence": [
+        "sonic-standing-cpu-v2-1115/independent-audit.json",
+        "sonic-dynamic-cpu-v2-1115/independent-audit.json"
+      ]
     },
     {
       "id": "lafan_efficiency",
@@ -237,7 +241,7 @@
       "paper_pages": [
         8
       ],
-      "status": "four_finite_native_PPO_WM_batch_learning_jobs_running",
+      "status": "first_finite_full18_PPO_WM_curve_verified_other_three_running_same18_control_running",
       "evidence": [
         "ppo-wm-native-runtime-cpu-validation.json",
         "ppo-wm-integration-run-plan.json",
@@ -289,7 +293,15 @@
         "native_log_interval16_console_counter_underreporting_reproduced": true,
         "unique_generated_rollout_steps_used_for_local_accounting": true,
         "baseline_reset_sampling_and_WM_fit_cadence_not_matched": true
-      }
+      },
+      "first_finite_full18_curve_verified": "ppo-wm-batch-learning-1115/ppo-wm-4k32-1115i/validation.json",
+      "first_finite_endpoint": {
+        "PPO_updates": 2048,
+        "successes": 10,
+        "clips": 18,
+        "mean_normalized_full_motion_return": 0.47027693376345003
+      },
+      "same18_first_order_control_status": "running_actual_UID_b757b72b9f25497bbabad8c41d2cfa3e"
     },
     {
       "id": "critic_horizons",
@@ -401,7 +413,7 @@
   "original_scope_retained": true,
   "no_new_cloud_jobs_submitted_by_this_audit": false,
   "next_execution_priority": "Finish existing1115i/j/k/l finite PPO-WM runs and recover all original quality points; then use a freed slot for a fresh same18-motion first-order curve. Do not rerun completed prior calculations. Retain data-duration, matched-return push, exact author benchmark, multi-seed/GPU and physical hardware scope.",
-  "last_status_update": "2026-11-15T15:51:45.541258+08:00",
+  "last_status_update": "2026-11-15T16:09:19.220504+08:00",
   "execution_status": "explicit_user_resumption_four_H100_finite_jobs",
   "resume_requires_explicit_user_request": false,
   "execution_priorities_before_user_pause": [

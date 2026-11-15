@@ -1,0 +1,24 @@
+{
+  "status": "all_saved_scalar_standing_arrays_and_independent_height_tilt_recomputation_passed",
+  "result_sha256": "ff408e07f38f9c58577a38292a0ffea6ed4d8a3b68282fb01081605554b8aff1",
+  "trace_sha256": "5cda2ace64de232bb047cfa60eab79dba84e66ad28f2c8cb7ef40ec0ce788757",
+  "control_steps": 500,
+  "independently_recomputed_minimum_height": 0.7523413321484405,
+  "independently_recomputed_maximum_tilt": 0.00010333166448106746,
+  "maximum_root_tilt_degrees": 0.8236791686906412,
+  "figure_files": [
+    {
+      "file": "standing-pilot.png",
+      "sha256": "c410fa57808b98471ab501545c72e5d7c64d47d51c849d9e9248f7ac0d75fe5e"
+    },
+    {
+      "file": "standing-pilot.svg",
+      "sha256": "076c136a88c69cb0b59aff278ac28ded81775900592d348b793e5e1b507d3ee7"
+    }
+  ],
+  "final_pose_rendered": true,
+  "final_pose_render_error": null,
+  "simulation_backend": "scalar MuJoCo CPU",
+  "full_motion_tracking_evaluated": false,
+  "paper_results_reproduced": false
+}

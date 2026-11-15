@@ -1,0 +1,41 @@
+{
+  "traces": [
+    {
+      "path": "C:\\project\\sensecore\\SuperMimic\\official-execution-20261112\\sonic-dynamic-cpu-1115\\full-run1_subject2\\trace.npz",
+      "bytes": 43860597,
+      "sha256": "de1c1431f1612ce416ad8dd256144098eb0f8359f176011914c987e9b2be3ec1",
+      "included_in_Git": false
+    },
+    {
+      "path": "C:\\project\\sensecore\\SuperMimic\\official-execution-20261112\\sonic-dynamic-cpu-1115\\full-walk1_subject1\\trace.npz",
+      "bytes": 47827557,
+      "sha256": "9be53a8fde67880038aaa8b3b96b4851adc8459b3a70740030931155c4f1eeed",
+      "included_in_Git": false
+    },
+    {
+      "path": "C:\\project\\sensecore\\SuperMimic\\official-execution-20261112\\sonic-dynamic-cpu-1115\\walk1_subject1\\trace.npz",
+      "bytes": 1835510,
+      "sha256": "5fd1415c6b4f6dd440577d41b2c044400f3b3881c86b5903ac11453167146190",
+      "included_in_Git": false
+    },
+    {
+      "path": "C:\\project\\sensecore\\SuperMimic\\official-execution-20261112\\sonic-dynamic-cpu-v2-1115\\full-run1_subject2\\trace.npz",
+      "bytes": 43860536,
+      "sha256": "41e696b7dd60bb07d25ebc3207fce6b1de968aaf03dd75501271f53b891560ca",
+      "included_in_Git": false
+    },
+    {
+      "path": "C:\\project\\sensecore\\SuperMimic\\official-execution-20261112\\sonic-dynamic-cpu-v2-1115\\full-walk1_subject1\\trace.npz",
+      "bytes": 47827597,
+      "sha256": "cc5eb294b5765c985bc4aa31294102d2f2b27a0c39ca593dcf09e5d8f2fed2f4",
+      "included_in_Git": false
+    },
+    {
+      "path": "C:\\project\\sensecore\\SuperMimic\\official-execution-20261112\\sonic-dynamic-cpu-v2-1115\\walk1_subject1\\trace.npz",
+      "bytes": 1835485,
+      "sha256": "875f7788b5e788500b82451fd390d96c36a07a21454195739a0c801f397b3021",
+      "included_in_Git": false
+    }
+  ],
+  "scope": "Full original encoder/decoder/state/action traces retained locally; small audit and result JSONs are published"
+}

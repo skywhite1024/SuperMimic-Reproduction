@@ -1,0 +1,295 @@
+{
+  "status": "all_saved_dynamic_pilot_arrays_recomputed_and_common_runtime500state_parity_passed",
+  "pilots": [
+    {
+      "folder": "walk1_subject1",
+      "result_sha256": "5d665aaac16e229b067d78a7301a7b87477cb3a97c2f69b91bf2ff9a4ea541ad",
+      "protocol_sha256": "0ea096f84df5542a3d83fc359498d18f4a28b062c1eed59b954f7a58c6c3f28f",
+      "trace_sha256": "875f7788b5e788500b82451fd390d96c36a07a21454195739a0c801f397b3021",
+      "steps": 500,
+      "physical_seconds": 10.0,
+      "all_arrays_read_and_finite": true,
+      "mean_root_distance": 0.05656442053719795,
+      "final_root_distance": 0.12091388573989478,
+      "mean_joint_rms_radians": 0.08747324309937632,
+      "mean_joint_rms_degrees": 5.011847649916115,
+      "maximum_tilt_degrees": 6.1609369703299075,
+      "pilot_stopping_condition_triggered": false,
+      "complete_native_reward_termination_evaluator_used": false
+    },
+    {
+      "folder": "full-walk1_subject1",
+      "result_sha256": "ebefff91e3cc540229d6dffe579ed0b69221093515a46f721f285bea1161a9b3",
+      "protocol_sha256": "1becd064631b2baa89010f92962db5d5d11f3d26fdb4184470122e9e6ff76c70",
+      "trace_sha256": "cc5eb294b5765c985bc4aa31294102d2f2b27a0c39ca593dcf09e5d8f2fed2f4",
+      "steps": 13065,
+      "physical_seconds": 261.3,
+      "all_arrays_read_and_finite": true,
+      "mean_root_distance": 1.1506242506575983,
+      "final_root_distance": 1.4260250623894604,
+      "mean_joint_rms_radians": 0.11385543683471636,
+      "mean_joint_rms_degrees": 6.5234360052475795,
+      "maximum_tilt_degrees": 29.604150103334117,
+      "pilot_stopping_condition_triggered": false,
+      "complete_native_reward_termination_evaluator_used": false
+    },
+    {
+      "folder": "full-run1_subject2",
+      "result_sha256": "b04a1778dc77e1565c85a8d533be0efbfba634954e4ecfeae7b3dafc16aa1c77",
+      "protocol_sha256": "3c8bf276548648d34732277a1dc0ee79a1a349a235bc3a6a808adb57a9699b4e",
+      "trace_sha256": "41e696b7dd60bb07d25ebc3207fce6b1de968aaf03dd75501271f53b891560ca",
+      "steps": 11890,
+      "physical_seconds": 237.8,
+      "all_arrays_read_and_finite": true,
+      "mean_root_distance": 1.2792630895292239,
+      "final_root_distance": 3.0094929672444897,
+      "mean_joint_rms_radians": 0.12772722191992336,
+      "mean_joint_rms_degrees": 7.318230744942464,
+      "maximum_tilt_degrees": 42.020283434281595,
+      "pilot_stopping_condition_triggered": false,
+      "complete_native_reward_termination_evaluator_used": false
+    }
+  ],
+  "runtime_parity": {
+    "states": 500,
+    "maximum_encoder_input_difference": 9.8882361564671e-18,
+    "maximum_decoder_input_difference": 5.245208740234375e-06,
+    "maximum_native_action_difference": 5.245208740234375e-06
+  },
+  "compiled29joint_control": [
+    {
+      "name": "left_hip_pitch_joint",
+      "actuator": 0,
+      "Kp": 99.09842777666113,
+      "Kd": 6.3088018534966395,
+      "effort": 139.0,
+      "common_armature": 0.01017752004132231
+    },
+    {
+      "name": "right_hip_pitch_joint",
+      "actuator": 1,
+      "Kp": 99.09842777666113,
+      "Kd": 6.3088018534966395,
+      "effort": 139.0,
+      "common_armature": 0.01017752004132231
+    },
+    {
+      "name": "waist_yaw_joint",
+      "actuator": 2,
+      "Kp": 40.17923847137318,
+      "Kd": 2.5578897650279457,
+      "effort": 88.0,
+      "common_armature": 0.01017752004132231
+    },
+    {
+      "name": "left_hip_roll_joint",
+      "actuator": 3,
+      "Kp": 99.09842777666113,
+      "Kd": 6.3088018534966395,
+      "effort": 139.0,
+      "common_armature": 0.025101924999999997
+    },
+    {
+      "name": "right_hip_roll_joint",
+      "actuator": 4,
+      "Kp": 99.09842777666113,
+      "Kd": 6.3088018534966395,
+      "effort": 139.0,
+      "common_armature": 0.025101924999999997
+    },
+    {
+      "name": "waist_roll_joint",
+      "actuator": 5,
+      "Kp": 28.50124619574858,
+      "Kd": 1.814445686584846,
+      "effort": 50.0,
+      "common_armature": 0.00721945
+    },
+    {
+      "name": "left_hip_yaw_joint",
+      "actuator": 6,
+      "Kp": 40.17923847137318,
+      "Kd": 2.5578897650279457,
+      "effort": 88.0,
+      "common_armature": 0.01017752004132231
+    },
+    {
+      "name": "right_hip_yaw_joint",
+      "actuator": 7,
+      "Kp": 40.17923847137318,
+      "Kd": 2.5578897650279457,
+      "effort": 88.0,
+      "common_armature": 0.01017752004132231
+    },
+    {
+      "name": "waist_pitch_joint",
+      "actuator": 8,
+      "Kp": 28.50124619574858,
+      "Kd": 1.814445686584846,
+      "effort": 50.0,
+      "common_armature": 0.00721945
+    },
+    {
+      "name": "left_knee_joint",
+      "actuator": 9,
+      "Kp": 99.09842777666113,
+      "Kd": 6.3088018534966395,
+      "effort": 139.0,
+      "common_armature": 0.025101924999999997
+    },
+    {
+      "name": "right_knee_joint",
+      "actuator": 10,
+      "Kp": 99.09842777666113,
+      "Kd": 6.3088018534966395,
+      "effort": 139.0,
+      "common_armature": 0.025101924999999997
+    },
+    {
+      "name": "left_shoulder_pitch_joint",
+      "actuator": 11,
+      "Kp": 14.25062309787429,
+      "Kd": 0.907222843292423,
+      "effort": 25.0,
+      "common_armature": 0.003609725
+    },
+    {
+      "name": "right_shoulder_pitch_joint",
+      "actuator": 12,
+      "Kp": 14.25062309787429,
+      "Kd": 0.907222843292423,
+      "effort": 25.0,
+      "common_armature": 0.003609725
+    },
+    {
+      "name": "left_ankle_pitch_joint",
+      "actuator": 13,
+      "Kp": 28.50124619574858,
+      "Kd": 1.814445686584846,
+      "effort": 50.0,
+      "common_armature": 0.00721945
+    },
+    {
+      "name": "right_ankle_pitch_joint",
+      "actuator": 14,
+      "Kp": 28.50124619574858,
+      "Kd": 1.814445686584846,
+      "effort": 50.0,
+      "common_armature": 0.00721945
+    },
+    {
+      "name": "left_shoulder_roll_joint",
+      "actuator": 15,
+      "Kp": 14.25062309787429,
+      "Kd": 0.907222843292423,
+      "effort": 25.0,
+      "common_armature": 0.003609725
+    },
+    {
+      "name": "right_shoulder_roll_joint",
+      "actuator": 16,
+      "Kp": 14.25062309787429,
+      "Kd": 0.907222843292423,
+      "effort": 25.0,
+      "common_armature": 0.003609725
+    },
+    {
+      "name": "left_ankle_roll_joint",
+      "actuator": 17,
+      "Kp": 28.50124619574858,
+      "Kd": 1.814445686584846,
+      "effort": 50.0,
+      "common_armature": 0.00721945
+    },
+    {
+      "name": "right_ankle_roll_joint",
+      "actuator": 18,
+      "Kp": 28.50124619574858,
+      "Kd": 1.814445686584846,
+      "effort": 50.0,
+      "common_armature": 0.00721945
+    },
+    {
+      "name": "left_shoulder_yaw_joint",
+      "actuator": 19,
+      "Kp": 14.25062309787429,
+      "Kd": 0.907222843292423,
+      "effort": 25.0,
+      "common_armature": 0.003609725
+    },
+    {
+      "name": "right_shoulder_yaw_joint",
+      "actuator": 20,
+      "Kp": 14.25062309787429,
+      "Kd": 0.907222843292423,
+      "effort": 25.0,
+      "common_armature": 0.003609725
+    },
+    {
+      "name": "left_elbow_joint",
+      "actuator": 21,
+      "Kp": 14.25062309787429,
+      "Kd": 0.907222843292423,
+      "effort": 25.0,
+      "common_armature": 0.003609725
+    },
+    {
+      "name": "right_elbow_joint",
+      "actuator": 22,
+      "Kp": 14.25062309787429,
+      "Kd": 0.907222843292423,
+      "effort": 25.0,
+      "common_armature": 0.003609725
+    },
+    {
+      "name": "left_wrist_roll_joint",
+      "actuator": 23,
+      "Kp": 14.25062309787429,
+      "Kd": 0.907222843292423,
+      "effort": 25.0,
+      "common_armature": 0.003609725
+    },
+    {
+      "name": "right_wrist_roll_joint",
+      "actuator": 24,
+      "Kp": 14.25062309787429,
+      "Kd": 0.907222843292423,
+      "effort": 25.0,
+      "common_armature": 0.003609725
+    },
+    {
+      "name": "left_wrist_pitch_joint",
+      "actuator": 25,
+      "Kp": 16.77832748089279,
+      "Kd": 1.06814150219,
+      "effort": 5.0,
+      "common_armature": 0.00425
+    },
+    {
+      "name": "right_wrist_pitch_joint",
+      "actuator": 26,
+      "Kp": 16.77832748089279,
+      "Kd": 1.06814150219,
+      "effort": 5.0,
+      "common_armature": 0.00425
+    },
+    {
+      "name": "left_wrist_yaw_joint",
+      "actuator": 27,
+      "Kp": 16.77832748089279,
+      "Kd": 1.06814150219,
+      "effort": 5.0,
+      "common_armature": 0.00425
+    },
+    {
+      "name": "right_wrist_yaw_joint",
+      "actuator": 28,
+      "Kp": 16.77832748089279,
+      "Kd": 1.06814150219,
+      "effort": 5.0,
+      "common_armature": 0.00425
+    }
+  ],
+  "GPU_execution_verified": false,
+  "paper_results_reproduced": false
+}

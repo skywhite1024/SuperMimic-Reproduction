@@ -803,3 +803,33 @@ The public PPO recovery can be replayed from the repository's `official-reproduc
 python verify_ppo_sim_learning_curve_receipts.py --download ppo-sim-2048-1115c/offline-log.txt.gz --output ppo-sim-2048-1115c --plan ppo-sim-2048-1115c/plan.json --recovery-plan completed-result-recovery-1115h/plan.json --original-failure-log ppo-sim-2048-1115c/original-failed-job-log.txt.gz --selected-messages
 python summarize_1115_results.py
 ```
+
+
+### 62. SONIC gyro frame correction and retained preliminary results
+
+The first scalar pilots used mj_objectVelocity with mjOBJ_BODY and local-frame mode. An actual saved-state comparison exposed a7.8673e-5rad/s initial difference: that body object uses the inertial principal-axis frame, whereas the common full-state adapter uses the regular pelvis body frame. The pelvis inertial quaternion is slightly rotated. Using mjOBJ_XBODY fixes this distinction. See [MuJoCo object types](https://mujoco.readthedocs.io/en/stable/APIreference/APItypes.html).
+
+The old standing result remains unchanged. Preliminary dynamic protocols/results and both failed adapter checks are retained under sonic-dynamic-cpu-v2-1115/retained-preliminary/; they must not be represented as corrected body-frame results. Fresh corrected standing and dynamic simulations were executed in separate directories. Corrected standing completed500steps, minimum height0.7523413m and maximum tilt0.823679degrees. The common adapter matched all500saved dynamic states: maximum encoder input difference9.89e-18, decoder input/action difference5.25e-6. All29compiled actuator gains/effort bounds and retained common armatures were checked.
+
+Corrected full-reference-sequence scalar pilots completed13,065walk steps and11,890run steps, respectively261.3s and237.8s. Mean joint RMS errors were6.5234 and7.3182degrees; mean world root position distances were1.1506 and1.2793m, with final distances1.4260 and3.0095m. These expose drift and are not native full-motion success/return results. Their protocol deliberately uses simpler height/tilt pilot stopping conditions. The independent audit re-read every saved array and recomputed distances and tilts. Full input/action/state traces remain local with a public hash/size ledger; the approximately92MB of corrected long traces are not Git assets.
+
+### 63. First finite PPO-WM batch curve recovered; same18 control submitted
+
+The 4k32-1115i job finished successfully at15:59:56+08. Its complete offline log yielded all26original JSONs, independently decoded and SHA256 checked. The complete-path verifier passed all18memberships, per-point reward sums, native termination counts, saved trajectory and initial-state audit chains, and five retained native model sets.
+
+| PPO updates | Unique imagined transitions | Full18 successes | Mean normalized full-motion return |
+|---:|---:|---:|---:|
+|64|8,388,608|0/18|0.00007185|
+|256|33,554,432|0/18|0.00024687|
+|1024|134,217,728|0/18|0.00469930|
+|2048|268,435,456|10/18|0.47027693|
+
+This finite run learned substantially between the last two points, so sparse early failures do not establish impossibility. Its released uint8 termination behavior truncated202,261,136fractional positions; there is no paired float-mode causal result. The other three batch cases still require their own originals. All Figure5 membership, counter, reset and metric qualifications in section59 remain.
+
+After the first worker reached a terminal state and released its H100, the frozen c7e5af135dc6e297fe4db0c1ebc563fb7cdef834 same18 first-order control was submitted as1115m, UID b757b72b9f25497bbabad8c41d2cfa3e. Its program started at16:05:49+08 and training at16:05:52, with one H100, zero restarts,4h training and8h whole-program limits. Startup source hashes and the initial native checkpoint were observed. This is running computation, not a completed comparison.
+
+### 64. Common SONIC CUDA evaluator prepared
+
+The new evaluate_sonic_corpus_v2.py and sonic_g1_runtime.py reuse the corrected-v2 first-reference reset and native common rewards/terminations. SONIC supplies its own published gains/defaults/scales/effort limits while common G1 armatures are retained. Initial history repeats the first reference sensor to match this common evaluation protocol; author SONIC training reset equivalence remains unconfirmed. Future G1 references use current plus nine five-frame offsets at50Hz, clamped to each individual motion; orientation uses full current-base inverse times reference rotation, first two columns flattened row-wise.
+
+The finite cloud entry point downloads public original weights at the frozen HF revision, verifies original model/config hashes, derives and checks G1-only batched graphs, runs all40canonical clips and audits all saved arrays/initial states. ONNX inference uses CPUExecutionProvider; CUDA is used for MuJoCo Warp physics. Prepared code and local parity do not yet establish actual CUDA execution or a full corpus result. The exact author filtered129514manifest and original SONIC benchmark protocol remain missing.

@@ -1,0 +1,19 @@
+{
+  "status": "runtime_parity_failed_at_initial_sensor_tolerance",
+  "maximum_difference": 7.867300882935524e-05,
+  "indices": [
+    88,
+    91,
+    66,
+    69,
+    72,
+    75,
+    78,
+    81,
+    84,
+    87,
+    90,
+    93
+  ],
+  "scope": "Original common adapter new runtime versus saved scalar sensor inputs; no GPU job launched"
+}

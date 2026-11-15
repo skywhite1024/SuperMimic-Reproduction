@@ -92,7 +92,7 @@ def main():
     output.mkdir(parents=True,exist_ok=False)
     protocol=dict(task='static SONIC default knees-bent standing pose, desired root orientation identity',
         source_commit=contract['source_commit'],HF_revision=batch_validation['HF_revision'],
-        backend='Scalar MuJoCo on local CPU; not MuJoCo Warp or IsaacLab',mujoco_version=mujoco.__version__,
+        backend='Scalar MuJoCo on local CPU; not MuJoCo Warp or IsaacLab',gyro_frame='Regular pelvis body frame via mjOBJ_XBODY; not inertial principal axes',mujoco_version=mujoco.__version__,
         control_seconds=.02,physics_substeps=4,target_steps=500,target_seconds=10,
         mujoco_options=dataclasses.asdict(cfg.sim.mujoco),seed=42,
         control_contract_sha256=digest(args.contract),policy_order=names,
@@ -112,7 +112,7 @@ def main():
         for step in range(500):
             rotation=np.empty(9);mujoco.mju_quat2Mat(rotation,data.xquat[body_id]);rotation=rotation.reshape(3,3)
             gravity=rotation.T@np.array([0.,0.,-1.])
-            velocity=np.empty(6);mujoco.mj_objectVelocity(model,data,mujoco.mjtObj.mjOBJ_BODY,body_id,velocity,1)
+            velocity=np.empty(6);mujoco.mj_objectVelocity(model,data,mujoco.mjtObj.mjOBJ_XBODY,body_id,velocity,1)
             sensor=np.concatenate((velocity[:3],data.qpos[q_indices]-default,
                                    data.qvel[v_indices],last_action,gravity)).astype(np.float32)
             assert sensor.shape==(93,) and np.isfinite(sensor).all()

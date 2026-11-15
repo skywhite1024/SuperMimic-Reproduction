@@ -31,3 +31,5 @@ acro-library-20261027-b/ground-calibration-v1/data/
 **/*.generated
 # Report result JSONs under runs/ and other evidence folders are intentional public artifacts.
 !docs/site/**
+
+!official-reproduction-20261112/sonic-standing-cpu-v2-1115/trace.npz

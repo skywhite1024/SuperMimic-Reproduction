@@ -1,0 +1,8 @@
+{
+  "status": "local_dynamic_runtime_adapter_failed_before_CUDA_submission",
+  "at": "2026-11-15T16:00:22.377478+08:00",
+  "source_sha256": "2fe177c526334fdb7075a1940b1c84dff3414f2a7c92279cff6fd8a63f4de8d2",
+  "error": "Derived quantized G1 encoder output has shape N,1,64; adapter initially expected N,64.",
+  "resolution": "Explicitly flatten only the singleton token axis to N,64; retain outputs and rerun actual500state parity.",
+  "cloud_job_submitted": false
+}

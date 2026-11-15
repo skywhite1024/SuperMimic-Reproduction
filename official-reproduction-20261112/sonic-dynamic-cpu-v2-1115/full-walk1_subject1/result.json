@@ -1,0 +1,29 @@
+{
+  "status": "finite_scalar_MuJoCo_SONIC_dynamic_prefix_completed",
+  "motion_name": "walk1_subject1",
+  "control_steps": 13065,
+  "simulated_seconds": 261.3,
+  "error": null,
+  "mean_root_distance": 1.1506242506575983,
+  "mean_joint_rms": 0.11385543683471636,
+  "minimum_root_height": 0.6548061214998434,
+  "maximum_tilt": 0.13054085045082608,
+  "clipped_action_components": 0,
+  "wall_loop_seconds": 137.47121919994242,
+  "real_released_model_inference": true,
+  "all_observed_G1_batch1_latents_and_actions_compared_to_original": true,
+  "max_token_difference": 0.0,
+  "max_action_difference": 3.814697265625e-06,
+  "protocol_sha256": "1becd064631b2baa89010f92962db5d5d11f3d26fdb4184470122e9e6ff76c70",
+  "trace": {
+    "file": "trace.npz",
+    "bytes": 47827597,
+    "sha256": "cc5eb294b5765c985bc4aa31294102d2f2b27a0c39ca593dcf09e5d8f2fed2f4",
+    "readback_verified": true
+  },
+  "original_models_unchanged": true,
+  "full_motion_tracking_evaluated": false,
+  "Warp_or_IsaacLab_equivalence_verified": false,
+  "GPU_execution_verified": false,
+  "paper_results_reproduced": false
+}

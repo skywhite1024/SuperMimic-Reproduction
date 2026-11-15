@@ -1,0 +1,31 @@
+{
+  "status": "actual_scalar_MuJoCo_local_gyro_frame_difference_confirmed",
+  "mujoco_version": "3.16.0",
+  "body_name": "robot/pelvis",
+  "body_inertial_quat": [
+    0.9999999203404465,
+    0.0,
+    -0.00039914796820404854,
+    0.0
+  ],
+  "MJOBJ_BODY_angular": [
+    -0.09855229029008032,
+    0.19560780140690026,
+    -0.002755377547251618
+  ],
+  "MJOBJ_XBODY_angular": [
+    -0.09855005928103185,
+    0.19560780140690032,
+    -0.0028340505558782296
+  ],
+  "free_joint_body_angular": [
+    -0.09855005928103185,
+    0.19560780140690034,
+    -0.00283405055587823
+  ],
+  "max_initial_angular_frame_difference": 7.86730086266116e-05,
+  "consequence": "Earlier scalar standing and dynamic pilots used inertial-frame gyro. Retain originals as preliminary; corrected body-frame experiments must use fresh directories.",
+  "correction": "Use mjOBJ_XBODY for body-local gyro, matching the full_state world-angular -> body rotation in common evaluator.",
+  "GPU_runtime_wrong_frame_change_made": false,
+  "source": "https://mujoco.readthedocs.io/en/stable/APIreference/APItypes.html"
+}

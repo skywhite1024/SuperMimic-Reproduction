@@ -1,5 +1,5 @@
 {
-  "status": "prepared_not_submitted_waiting_for_one_of_four_slots",
+  "status": "running",
   "name": "supermimic-official-locomotion18-260010076-1115m",
   "display_name": "260010076-SuperMimic-locomotion18-control-1115m",
   "source_commit": "c7e5af135dc6e297fe4db0c1ebc563fb7cdef834",
@@ -56,5 +56,18 @@
   "observed_learner_calls_recorded": true,
   "internal_CUDA_graph_warmup_excluded_from_imagined_counter": true,
   "baseline_new_CUDA_execution_verified": false,
-  "paper_results_reproduced": false
+  "paper_results_reproduced": false,
+  "submitted": true,
+  "platform_status": "running",
+  "uid": "b757b72b9f25497bbabad8c41d2cfa3e",
+  "created_at": "2026-11-15T16:05:25+08:00",
+  "startup_command_exact_editor_readback": true,
+  "submission_screenshot": "lafan-locomotion18-control-1115m-created.png",
+  "program_started_at": "2026-11-15T16:05:49.061075+08:00",
+  "program_deadline": "2026-11-16T00:05:49.061075+08:00",
+  "forced_exit_deadline": "2026-11-16T00:06:19.061075+08:00",
+  "main_training_started_at": "2026-11-15T16:05:52.543515+08:00",
+  "main_training_deadline": "2026-11-15T20:05:52.543515+08:00",
+  "source_hash_preflight_passed": true,
+  "first_native_checkpoint_collection1_observed": true
 }
