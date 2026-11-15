@@ -21,7 +21,7 @@ def write(path, value):
                     encoding="utf-8", newline="\n")
 
 
-def execute(script, arguments, log, timeout_seconds):
+def execute(script, arguments, log, timeout_seconds, *, stream_progress=False):
     command = [sys.executable, str(SCRIPTS / script), *map(str, arguments)]
     print("CURVE_STAGE_START " + json.dumps({"script": script, "log": str(log),
           "timeout_seconds": timeout_seconds,
@@ -29,9 +29,17 @@ def execute(script, arguments, log, timeout_seconds):
     started = time.monotonic()
     # GNU timeout terminates the worker process group, including compile workers.
     with log.open("w", encoding="utf-8") as stream:
-        completed = subprocess.run(["timeout", "--signal=TERM", "--kill-after=30s",
-                                    str(timeout_seconds) + "s", *command],
-                                   stdout=stream, stderr=subprocess.STDOUT)
+        bounded = ["timeout", "--signal=TERM", "--kill-after=30s", str(timeout_seconds) + "s", *command]
+        if stream_progress:
+            completed = subprocess.Popen(bounded, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+                                         text=True, encoding="utf-8", errors="replace")
+            for line in completed.stdout:
+                stream.write(line)
+                if line.startswith(("PAPER_PROFILE collection_step=", "MODEL_SNAPSHOT_PRESERVED ", "CHECKPOINT_TIME_OBSERVED ")):
+                    stream.flush();print(line.rstrip(), flush=True)
+            completed.wait()
+        else:
+            completed = subprocess.run(bounded, stdout=stream, stderr=subprocess.STDOUT)
     print("CURVE_STAGE_EXIT " + json.dumps({"script": script,
           "returncode": completed.returncode, "elapsed_seconds": time.monotonic() - started}), flush=True)
     if completed.returncode:
@@ -66,12 +74,14 @@ def verify_training(run, steps, interval):
 
 
 def run_case(folder, motions, steps, interval, points, train_timeout, eval_timeout,
-             *, policy_horizon=None, without_critic=False, emit_receipts=True):
+             *, policy_horizon=None, without_critic=False, emit_receipts=True,
+             corpus="lafan40", record_learner_counts=False):
+    expected_clips = {"lafan40": 40, "lafan-locomotion18": 18}[corpus]
     folder.mkdir()
     run = folder / "training"
     report = {"status": "training", "collection_steps": steps, "evaluation_steps": points,
               "points": [], "paper_results_reproduced": False,
-              "seed": 42, "evaluation_protocol": "manual-reset-v2 full canonical LAFAN40",
+              "seed": 42, "evaluation_protocol": "manual-reset-v2 full " + corpus,
               "threshold": 0.82, "threshold_convention": "First observed sampled checkpoint >=0.82; no interpolation or exact crossing-time claim",
               "initialization_and_snapshot_overhead_reported": True,
               "evaluation_time_excluded_from_training_time": True,
@@ -82,11 +92,13 @@ def run_case(folder, motions, steps, interval, points, train_timeout, eval_timeo
         extra = (["--policy-horizon", policy_horizon] if policy_horizon is not None else [])
         if without_critic:
             extra += ["--without-critic"]
+        if record_learner_counts:
+            extra += ["--record-learner-counts"]
         execute("run_lafan_pilot.py", ["--motions", motions, "--output", run,
             "--steps", steps, "--checkpoint-interval", interval, "--keep-checkpoint-series",
-            "--record-checkpoint-times", "--corpus", "lafan40", "--num-envs", 4096,
+            "--record-checkpoint-times", "--corpus", corpus, "--num-envs", 4096,
             "--seed", 42, "--training-profile", "paper-a5-single-gpu", "--goal-backend", "eager", *extra],
-            folder / "training.log", train_timeout)
+            folder / "training.log", train_timeout, stream_progress=record_learner_counts)
         training = json.loads((run / "result.json").read_bytes())
         if without_critic and (training["critic_enabled"] is not False or
                 {Path(r["path"]).name for r in training["checkpoints"]} != {"world_model.pt", "actor.pt"}):
@@ -96,6 +108,11 @@ def run_case(folder, motions, steps, interval, points, train_timeout, eval_timeo
         report["training_snapshots_and_monotonic_timing_verified"] = True
         report["retained_snapshots"] = len(timing["checkpoints"])
         receipts += [run / n for n in ("result.json", "resolved-config.json", "checkpoint-times.json")]
+        if record_learner_counts:
+            counts = json.loads((run / "learner-counts.json").read_bytes())
+            assert counts["status"] == "completed_native_calls_counted"
+            assert training["learner_counts_sha256"] == digest(run / "learner-counts.json")
+            receipts.append(run / "learner-counts.json")
         if steps == 21:
             hashes = [select_completed_checkpoint(run, s)[2]["files"][0]["sha256"] for s in (1, 11, 21)]
             if len(set(hashes)) != 3:
@@ -109,14 +126,14 @@ def run_case(folder, motions, steps, interval, points, train_timeout, eval_timeo
             try:
                 execute("evaluate_motion_corpus_v2.py", ["--run", run,
                     "--checkpoint-collection-step", step, "--motions", motions,
-                    "--output", evaluation, "--expected-clips", 40, "--num-envs", 40,
+                    "--output", evaluation, "--expected-clips", expected_clips, "--num-envs", expected_clips,
                     "--order", "index", "--seed", 42], folder / f"eval-{step:09d}.log", eval_timeout)
                 execute("audit_corpus_result.py", ["--result", evaluation / "result.json",
                     "--protocol", evaluation / "protocol.json", "--motions", motions,
-                    "--expected-clips", 40, "--require-trajectories",
+                    "--expected-clips", expected_clips, "--require-trajectories",
                     "--output", evaluation / "accounting.json"], folder / f"accounting-{step:09d}.log", 180)
                 execute("audit_saved_initial_states_v2.py", ["--evaluation", evaluation,
-                    "--motions", motions, "--expected-clips", 40, "--output", evaluation / "audit"],
+                    "--motions", motions, "--expected-clips", expected_clips, "--output", evaluation / "audit"],
                     folder / f"audit-{step:09d}.log", 180)
                 accounting = json.loads((evaluation / "accounting.json").read_bytes())
                 protocol = json.loads((evaluation / "protocol.json").read_bytes())
@@ -135,6 +152,8 @@ def run_case(folder, motions, steps, interval, points, train_timeout, eval_timeo
                     accounting_sha256=digest(evaluation / "accounting.json"),
                     trajectory_audit_sha256=digest(evaluation / "audit/summary.json"),
                     initial_states_audit_sha256=digest(evaluation / "audit/initial-states.json"))
+                if record_learner_counts:
+                    row["learner_counts"] = next(r for r in counts["snapshots"] if r["collection_steps"] == step)
                 receipts += [evaluation / n for n in ("result.json", "protocol.json", "accounting.json",
                                                        "audit/summary.json", "audit/initial-states.json")]
             except Exception as error:

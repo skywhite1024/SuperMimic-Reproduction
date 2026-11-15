@@ -1,4 +1,4 @@
-"""Finite CUDA training on raw LAFAN40 or the verified unfiltered BONES pack.
+"""Finite CUDA training on explicit LAFAN corpora or the unfiltered BONES pack.
 
 This verifies execution and checkpoint creation, not the paper's full benchmark.
 """
@@ -28,6 +28,8 @@ def main():
                         help="Retain finite, hash-identified model snapshots; does not enable training resume")
     parser.add_argument("--record-checkpoint-times", action="store_true",
                         help="Record asynchronous checkpoint availability times separately from model manifests")
+    parser.add_argument("--record-learner-counts", action="store_true",
+                        help="Count completed native learner calls at each retained model set")
     parser.add_argument("--initial-native-snapshot", type=Path,
                         help="Explicit model-weight warm start; optimizer/replay/RNG are reset")
     parser.add_argument("--learning-rate-offset", type=int, default=0,
@@ -36,7 +38,7 @@ def main():
                         help="Explicit local critic-horizon ablation after applying the A5 profile")
     parser.add_argument("--without-critic", action="store_true",
                         help="Use the author's native BPTT learner; save exactly world_model and actor")
-    parser.add_argument("--corpus", choices=("lafan40", "bones-raw"), default="lafan40",
+    parser.add_argument("--corpus", choices=("lafan40", "lafan-locomotion18", "bones-raw"), default="lafan40",
                         help="bones-raw is a capacity/training probe, not the filtered paper benchmark")
     parser.add_argument("--training-profile", choices=("public-default", "paper-a5-single-gpu"),
                         default="public-default")
@@ -53,6 +55,8 @@ def main():
         parser.error("At least two simulator collection steps are required")
     if args.record_checkpoint_times and not args.keep_checkpoint_series:
         parser.error("record-checkpoint-times requires keep-checkpoint-series")
+    if args.record_learner_counts and not args.keep_checkpoint_series:
+        parser.error("record-learner-counts requires keep-checkpoint-series")
     save_interval = args.steps - 1 if args.checkpoint_interval is None else args.checkpoint_interval
     if save_interval < 1 or (args.steps - 1) % save_interval:
         parser.error("checkpoint-interval must be positive and divide steps-1 so the final step is saved")
@@ -82,6 +86,20 @@ def main():
     # even in offline mode. Keep its local artifact logging, with no API call.
     checkpoint_receipts = []
     checkpoint_times = []
+    learner_events = [(0, 0, 0)]
+    learner_snapshots = []
+
+    def learner_observation(completed_steps):
+        from bisect import bisect_right
+        # A delayed asynchronous upload may observe later iterations. Select
+        # only completed update calls at or before the saved collection step.
+        index = bisect_right(learner_events, (completed_steps, float("inf"), float("inf"))) - 1
+        _, policy_calls, wm_calls = learner_events[index]
+        cfg = runner.policy_learner.cfg
+        return {"collection_steps": completed_steps, "real_simulator_steps": completed_steps * args.num_envs,
+                "completed_policy_update_calls": policy_calls, "completed_WM_update_calls": wm_calls,
+                "configured_imagined_training_transitions": policy_calls * cfg.num_batches * cfg.batch_size * cfg.horizon,
+                "counts_exclude_internal_CUDA_graph_warmup_and_capture": True}
 
     def clock_observation():
         now = time.monotonic()
@@ -100,6 +118,11 @@ def main():
             receipt = preserve_checkpoint(files, output / "checkpoint-series", completed_steps,
                                           without_critic=args.without_critic)
             checkpoint_receipts.append(receipt)
+            if args.record_learner_counts:
+                learner_snapshots.append(learner_observation(completed_steps))
+                (output / "learner-counts.json").write_text(
+                    json.dumps({"status": "training", "snapshots": learner_snapshots}, indent=2) + "\n",
+                    encoding="utf-8", newline="\n")
             preserved = clock_observation() if args.record_checkpoint_times else None
             print("MODEL_SNAPSHOT_PRESERVED " + json.dumps(receipt), flush=True)
         artifact = wandb.Artifact(f"model-{wandb.run.id}", type="model")
@@ -125,11 +148,23 @@ def main():
     if not torch.cuda.is_available() or torch.cuda.device_count() != 1:
         raise RuntimeError("Pilot requires exactly one allocated CUDA GPU")
     ends = np.load(motions / "motion_ends.npy")
-    expected_clips = {"lafan40": 40, "bones-raw": 142220}[args.corpus]
+    expected_clips = {"lafan40": 40, "lafan-locomotion18": 18, "bones-raw": 142220}[args.corpus]
     if ends.ndim != 1 or len(ends) != expected_clips or not np.all(np.diff(ends, prepend=0) > 0):
         raise RuntimeError(f"Expected {expected_clips} nonempty clips for {args.corpus}")
     corpus = {"name": args.corpus, "clips": len(ends), "frames": int(ends[-1]),
               "paper_name_filter_applied": False, "paper_feasibility_filter_applied": False}
+    if args.corpus == "lafan-locomotion18":
+        subset_path = motions.parent / "motion-subset.json"
+        subset = json.loads(subset_path.read_bytes())
+        if (subset["status"] != "all18_original_motion_slices_preserved"
+                or subset["clips"] != 18 or subset["reference_frames"] != int(ends[-1])):
+            raise ValueError("Verified local locomotion18 pack is required")
+        actual = {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(motions.iterdir()) if p.is_file()}
+        if actual != subset["packed_motion_files"]:
+            raise ValueError("Locomotion18 data changed after verified packing")
+        corpus.update(local_name_subset_filter_applied=True,
+                      author_exact_Figure5_membership_confirmed=False,
+                      source_subset_receipt_sha256=hashlib.sha256(subset_path.read_bytes()).hexdigest())
     print("TRAINING_CORPUS " + json.dumps(corpus), flush=True)
     task = "SuperMimic-GenCoord-G1"
     config = TrainConfig.from_task(task)
@@ -175,6 +210,7 @@ def main():
         "io_adapter": "offline checkpoint artifact logging; online pruning disabled",
         "keep_checkpoint_series": args.keep_checkpoint_series,
         "record_checkpoint_times": args.record_checkpoint_times,
+        "record_learner_counts": args.record_learner_counts,
         "full_training_resume_available": False,
         "is_full_paper_reproduction": False,
         "initialization": initialization,
@@ -183,10 +219,41 @@ def main():
         json.dumps(resolved, indent=2, default=str) + "\n", encoding="utf-8"
     )
     device = setup_device("cuda:0")
+    if args.corpus == "lafan-locomotion18":
+        resolved["torch_backends"] = {"matmul_allow_tf32": torch.backends.cuda.matmul.allow_tf32,
+            "float32_matmul_precision": torch.get_float32_matmul_precision(),
+            "CUDA_launch_blocking": os.environ.get("CUDA_LAUNCH_BLOCKING", "unset")}
+        (output / "resolved-config.json").write_text(
+            json.dumps(resolved, indent=2, default=str) + "\n", encoding="utf-8", newline="\n")
     torch.cuda.reset_peak_memory_stats()
     env = create_env(config.env, args.num_envs, device)
     runner = runner_class(env=env, cfg=config.runner, task_id=task,
                              registry_name=None, device=device)
+    if args.record_learner_counts:
+        counters = {"collections": 0, "policy": 0, "wm": 0}
+        native_step = runner.step
+        native_policy_update = runner.policy_learner.update
+        native_wm_update = runner.world_model_learner.update
+
+        def counted_step():
+            result = native_step()
+            counters["collections"] += 1
+            return result
+
+        def counted_wm_update(*arguments, **keywords):
+            result = native_wm_update(*arguments, **keywords)
+            counters["wm"] += 1
+            return result
+
+        def counted_policy_update():
+            result = native_policy_update()
+            counters["policy"] += 1
+            learner_events.append((counters["collections"], counters["policy"], counters["wm"]))
+            return result
+
+        runner.step = counted_step
+        runner.world_model_learner.update = counted_wm_update
+        runner.policy_learner.update = counted_policy_update
     if initial_payloads is not None:
         from native_warm_start import restore_snapshot, learned_parameter_hashes
         initialization = {**initialization, **restore_snapshot(runner, initial_payloads)}
@@ -203,6 +270,12 @@ def main():
     started = time.monotonic()
     run_entry_utc = datetime.now(timezone.utc).isoformat()
     runner.run()
+    if args.record_learner_counts:
+        assert counters["collections"] == args.steps and counters["wm"] == counters["policy"]
+        assert [row["collection_steps"] for row in learner_snapshots] == list(range(1, args.steps + 1, save_interval))
+        (output / "learner-counts.json").write_text(
+            json.dumps({"status": "completed_native_calls_counted", "final": learner_observation(args.steps),
+                        "snapshots": learner_snapshots}, indent=2) + "\n", encoding="utf-8", newline="\n")
     if initialization is not None:
         initialization["final_learned_parameter_hashes"] = learned_parameter_hashes(runner)
         if any(initialization["initial_learned_parameter_hashes"][key] == value
@@ -266,7 +339,10 @@ def main():
         "combined_collection_steps_including_warm_start": args.learning_rate_offset + args.steps,
     }
     (output / "result.json").write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
-    marker = "OFFICIAL_LAFAN_PILOT_PASS" if args.corpus == "lafan40" else "OFFICIAL_BONES_RAW_PILOT_PASS"
+    if args.record_learner_counts:
+        result["learner_counts_sha256"] = hashlib.sha256((output / "learner-counts.json").read_bytes()).hexdigest()
+        (output / "result.json").write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
+    marker = "OFFICIAL_BONES_RAW_PILOT_PASS" if args.corpus == "bones-raw" else "OFFICIAL_LAFAN_PILOT_PASS"
     print(marker + " " + json.dumps(result), flush=True)
 
 
