@@ -1,0 +1,89 @@
+{
+  "status": "finite_PPO_WM_batch_training_and_all18_evaluation_originals_verified",
+  "original_JSONs": 26,
+  "reported_status": "complete",
+  "error": null,
+  "outer_updates": 2048,
+  "real_simulator_steps": 83886080,
+  "imagined_steps": 536870912,
+  "retained_native_model_sets": 5,
+  "all_cloud_arrays_and_initial_states_verified": true,
+  "released_uint8_fractional_positions_truncated": 405290308,
+  "points": [
+    {
+      "ppo_update": 64,
+      "successes": 0,
+      "failures": 18,
+      "mean_normalized_full_motion_return": 0.00023064060741259478,
+      "real_simulator_steps": 2621440,
+      "cumulative_imagined_steps": 16777216
+    },
+    {
+      "ppo_update": 256,
+      "successes": 0,
+      "failures": 18,
+      "mean_normalized_full_motion_return": 0.00015850449961586066,
+      "real_simulator_steps": 10485760,
+      "cumulative_imagined_steps": 67108864
+    },
+    {
+      "ppo_update": 1024,
+      "successes": 0,
+      "failures": 18,
+      "mean_normalized_full_motion_return": 0.007543337293267503,
+      "real_simulator_steps": 41943040,
+      "cumulative_imagined_steps": 268435456
+    },
+    {
+      "ppo_update": 2048,
+      "successes": 12,
+      "failures": 6,
+      "mean_normalized_full_motion_return": 0.5328680727901189,
+      "real_simulator_steps": 83886080,
+      "cumulative_imagined_steps": 536870912
+    }
+  ],
+  "author_exact_motion_membership_confirmed": false,
+  "PPO_hyperparameters_author_confirmed": false,
+  "first_order_same_subset_comparison_complete": false,
+  "paper_results_reproduced": false,
+  "last_logged_native_update": 2048,
+  "logged_checkpoints_after_cloud_tensor_and_byte_readback_checks": [
+    {
+      "ppo_update": 64,
+      "real_simulator_steps": 2621440,
+      "imagined_steps": 16777216,
+      "seconds_since_training_entry": 161.7104053760413
+    },
+    {
+      "ppo_update": 256,
+      "real_simulator_steps": 10485760,
+      "imagined_steps": 67108864,
+      "seconds_since_training_entry": 545.06019667699
+    },
+    {
+      "ppo_update": 512,
+      "real_simulator_steps": 20971520,
+      "imagined_steps": 134217728,
+      "seconds_since_training_entry": 1053.5319237560034
+    },
+    {
+      "ppo_update": 1024,
+      "real_simulator_steps": 41943040,
+      "imagined_steps": 268435456,
+      "seconds_since_training_entry": 2072.5236216599587
+    },
+    {
+      "ppo_update": 2048,
+      "real_simulator_steps": 83886080,
+      "imagined_steps": 536870912,
+      "seconds_since_training_entry": 4115.77890341403
+    }
+  ],
+  "progress_tags_are_not_independent_model_or_quality_verification": true,
+  "job_uid": "bae3e0aa1bc44bf78d1f73b91cd947b7",
+  "source_commit": "9594228b8411247729aa7d63d13150636d868f9a",
+  "log_sha256": "bded17c12c9d0f53c309ed9de9b1591562b7a09b5a52030eccabdc99d162dc1a",
+  "all_recovered_original_bytes_and_SHA256_verified": true,
+  "raw_models_and_NPZ_downloaded": false
+}

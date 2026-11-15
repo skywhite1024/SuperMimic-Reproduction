@@ -1,0 +1,71 @@
+{
+  "status": "all_completed_final18records_regrouped_without_filtering_or_dropped_failures",
+  "cases": [
+    {
+      "case": "ppo-wm-4k32-1115i",
+      "groups": {
+        "walk": {
+          "clips": 12,
+          "successes": 6,
+          "mean_normalized_full_motion_return": 0.529236400079706
+        },
+        "run": {
+          "clips": 4,
+          "successes": 3,
+          "mean_normalized_full_motion_return": 0.3356939080970406
+        },
+        "sprint": {
+          "clips": 2,
+          "successes": 1,
+          "mean_normalized_full_motion_return": 0.3856861871987331
+        }
+      },
+      "endpoint_original_SHA256": "f77efacced19d5f678c31f317e5b13f32d0fc20950fc7d0f29a22449dc6afadc"
+    },
+    {
+      "case": "ppo-wm-8k24-1115j",
+      "groups": {
+        "walk": {
+          "clips": 12,
+          "successes": 5,
+          "mean_normalized_full_motion_return": 0.5428112456168034
+        },
+        "run": {
+          "clips": 4,
+          "successes": 3,
+          "mean_normalized_full_motion_return": 0.4760875757449262
+        },
+        "sprint": {
+          "clips": 2,
+          "successes": 2,
+          "mean_normalized_full_motion_return": 0.614989093914141
+        }
+      },
+      "endpoint_original_SHA256": "daae9a7db07507c2c8d01fd52cf6dfbebcb4600ce2d529094b651676551b9bd0"
+    },
+    {
+      "case": "ppo-wm-8k32-1115k",
+      "groups": {
+        "walk": {
+          "clips": 12,
+          "successes": 6,
+          "mean_normalized_full_motion_return": 0.5484248195806932
+        },
+        "run": {
+          "clips": 4,
+          "successes": 4,
+          "mean_normalized_full_motion_return": 0.4494082315418618
+        },
+        "sprint": {
+          "clips": 2,
+          "successes": 2,
+          "mean_normalized_full_motion_return": 0.6064472745431868
+        }
+      },
+      "endpoint_original_SHA256": "3e82671834c408a31ff23b278fc7fab371ea8fce2383d26f6a3ea079120f5a51"
+    }
+  ],
+  "all_motion_file_SHA256s_identical": true,
+  "scope": "Single seed; preselected18LAFAN proxy, not confirmed author Figure5 set",
+  "paper_results_reproduced": false
+}

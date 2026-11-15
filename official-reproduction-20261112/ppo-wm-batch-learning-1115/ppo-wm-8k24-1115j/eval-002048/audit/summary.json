@@ -1,0 +1,25 @@
+{
+  "status": "complete_trajectory_integrity_verified",
+  "expected_clips": 18,
+  "result_sha256": "daae9a7db07507c2c8d01fd52cf6dfbebcb4600ce2d529094b651676551b9bd0",
+  "accounting_sha256": "e5c7a1e560dc1c0be9e8cd90a3eae5847d4f218b1b6fd97cd5cd66b826474363",
+  "verified_clips": 18,
+  "verified_successes": 10,
+  "verified_failures": 8,
+  "verified_steps": 189120,
+  "verified_bytes": 71553737,
+  "maximum_reward_sum_difference": 0.0,
+  "reward_sum_absolute_tolerance": 1e-09,
+  "array_widths": {
+    "full_state": 71,
+    "actions": 29
+  },
+  "all_trajectory_arrays_verified": true,
+  "scope": "Read all NPZ arrays with ZIP CRC checks, float32 dtype, finite values, common state/action widths, step counts and float64 reward-sum agreement; no replay or physics quality claim",
+  "ledger": {
+    "file": "files.csv",
+    "sha256": "6a8251a317ff0fb1b95fc1cac98a2e8ec0778d44158f7d087ec5ff8446ec9fab",
+    "bytes": 1953
+  },
+  "elapsed_seconds": 1.0526745989918709
+}

@@ -1,8 +1,8 @@
 {
-  "observed_at": "2026-11-15T16:09:19.220504+08:00",
+  "observed_at": "2026-11-15T16:20:12.601281+08:00",
   "user_resumed": true,
   "max_requested_H100": 4,
-  "requested_nonterminal_H100": 4,
+  "requested_nonterminal_H100": 3,
   "paper_results_reproduced": false,
   "LIBERO_paused": true,
   "completed": {
@@ -13,7 +13,9 @@
     "all_ten_horizon_endpoints": "finite-comparison-1115/summary.json",
     "SONIC_original_CPU_inference_and_scalar_standing_pilot": "sonic-standing-cpu-v2-1115/independent-audit.json",
     "PPO_WM_4k32_finite_curve": "ppo-wm-batch-learning-1115/ppo-wm-4k32-1115i/validation.json",
-    "SONIC_dynamic_CPU_sequences_and_adapter_parity": "sonic-dynamic-cpu-v2-1115/independent-audit.json"
+    "SONIC_dynamic_CPU_sequences_and_adapter_parity": "sonic-dynamic-cpu-v2-1115/independent-audit.json",
+    "PPO_WM_8k24_finite_curve": "ppo-wm-batch-learning-1115/ppo-wm-8k24-1115j/validation.json",
+    "PPO_WM_8k32_finite_curve": "ppo-wm-batch-learning-1115/ppo-wm-8k32-1115k/validation.json"
   },
   "retained_failure": "native-two-gpu-gate-1115a/validation.json",
   "current_jobs": {
@@ -137,7 +139,7 @@
       "training_or_evaluation_rerun": false
     },
     "PPO_WM_Figure5_batch_learning": {
-      "status": "first_case_complete_other_three_running_same18_control_submitted",
+      "status": "first_three_cases_complete_16k32_training_same18_control_running",
       "source_commit": "9594228b8411247729aa7d63d13150636d868f9a",
       "jobs": {
         "ppo-wm-4k32-1115i": {
@@ -168,13 +170,13 @@
           "uid": "a8a3401120d4437694d78cc5d87322bb",
           "name": "supermimic-official-ppo-wm-8k24-260010076-1115j",
           "gpu": 1,
-          "status": "submitted_running",
-          "platform_status": "running",
+          "status": "completed_and26_originals_verified",
+          "platform_status": "succeeded",
           "max_restarts": 0,
           "program_started_at": "2026-11-15T14:54:32.539411+08:00",
           "program_deadline": "2026-11-15T18:54:32.539411+08:00",
           "main_training_deadline": "2026-11-15T16:54:35.310491+08:00",
-          "last_observed_native_update": 1936,
+          "last_observed_native_update": 2048,
           "last_observed_at": "2026-11-15T15:50:47.997367+08:00",
           "native_checkpoints_observed_after_cloud_readback": [
             64,
@@ -182,19 +184,22 @@
             512,
             1024
           ],
-          "all_evaluation_originals_verified": false
+          "all_evaluation_originals_verified": true,
+          "original_JSONs": 26,
+          "final_successes": 10,
+          "final_mean_normalized_full_motion_return": 0.5360035243449793
         },
         "ppo-wm-8k32-1115k": {
           "uid": "bae3e0aa1bc44bf78d1f73b91cd947b7",
           "name": "supermimic-official-ppo-wm-8k32-260010076-1115k",
           "gpu": 1,
-          "status": "submitted_running",
-          "platform_status": "running",
+          "status": "completed_and26_originals_verified",
+          "platform_status": "succeeded",
           "max_restarts": 0,
           "program_started_at": "2026-11-15T14:55:02.227209+08:00",
           "program_deadline": "2026-11-15T18:55:02.227209+08:00",
           "main_training_deadline": "2026-11-15T16:55:06.311866+08:00",
-          "last_observed_native_update": 1600,
+          "last_observed_native_update": 2048,
           "last_observed_at": "2026-11-15T15:51:05.915930+08:00",
           "native_checkpoints_observed_after_cloud_readback": [
             64,
@@ -202,7 +207,10 @@
             512,
             1024
           ],
-          "all_evaluation_originals_verified": false
+          "all_evaluation_originals_verified": true,
+          "original_JSONs": 26,
+          "final_successes": 12,
+          "final_mean_normalized_full_motion_return": 0.5328680727901189
         },
         "ppo-wm-16k32-1115l": {
           "uid": "2a81044e0a004302a97f007d71e3a6b1",
@@ -214,7 +222,7 @@
           "program_started_at": "2026-11-15T14:55:12.093421+08:00",
           "program_deadline": "2026-11-15T18:55:12.093421+08:00",
           "main_training_deadline": "2026-11-15T16:55:14.694307+08:00",
-          "last_observed_native_update": 1264,
+          "last_observed_native_update": 1936,
           "last_observed_at": "2026-11-15T15:51:20.268374+08:00",
           "native_checkpoints_observed_after_cloud_readback": [
             64,
@@ -246,6 +254,18 @@
       "forced_exit_deadline": "2026-11-16T00:06:19.061075+08:00",
       "main_training_started_at": "2026-11-15T16:05:52.543515+08:00",
       "main_training_deadline": "2026-11-15T20:05:52.543515+08:00"
+    },
+    "SONIC_pretrained_full40": {
+      "name": "supermimic-official-sonic40-260010076-1115n",
+      "uid": "e64c5833111a427787973d29771673b5",
+      "status": "running_setup",
+      "platform_status": "running",
+      "gpu": 1,
+      "max_restarts": 0,
+      "program_started_at": "2026-11-15T16:13:03.799668+08:00",
+      "program_deadline": "2026-11-15T17:28:03.799668+08:00",
+      "forced_exit_deadline": "2026-11-15T17:28:33.799668+08:00",
+      "source_commit": "f5b6e19603a8cd8961839653edac09d6042adfd6"
     }
   },
   "latest_readonly_training_counters": {

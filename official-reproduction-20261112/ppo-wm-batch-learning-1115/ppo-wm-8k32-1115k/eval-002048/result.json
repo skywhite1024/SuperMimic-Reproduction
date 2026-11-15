@@ -1,0 +1,286 @@
+{
+  "status": "full_corpus_evaluation_completed",
+  "clips": 18,
+  "manual_reset_version": 2,
+  "initial_reference_state_verified_for_all_clips": true,
+  "first_reference_state_max_abs_error": 4.76837158203125e-07,
+  "num_envs": 18,
+  "batch_order": "index",
+  "successes": 12,
+  "failures": 6,
+  "elapsed_seconds": 226.55271925404668,
+  "records": [
+    {
+      "index": 0,
+      "name": "run1_subject2",
+      "success": true,
+      "reference_frames": 11891,
+      "steps": 11891,
+      "seconds": 237.82,
+      "termination_terms": [
+        "motion_end"
+      ],
+      "reward_sum": 592.2549668066204,
+      "trajectory": "trajectory-000000.npz",
+      "batch": 0,
+      "slot": 0
+    },
+    {
+      "index": 1,
+      "name": "run1_subject5",
+      "success": true,
+      "reference_frames": 11891,
+      "steps": 11891,
+      "seconds": 237.82,
+      "termination_terms": [
+        "motion_end"
+      ],
+      "reward_sum": 513.1896754773334,
+      "trajectory": "trajectory-000001.npz",
+      "batch": 0,
+      "slot": 1
+    },
+    {
+      "index": 2,
+      "name": "run2_subject1",
+      "success": true,
+      "reference_frames": 12241,
+      "steps": 12241,
+      "seconds": 244.82,
+      "termination_terms": [
+        "motion_end"
+      ],
+      "reward_sum": 518.6781818210147,
+      "trajectory": "trajectory-000002.npz",
+      "batch": 0,
+      "slot": 2
+    },
+    {
+      "index": 3,
+      "name": "run2_subject4",
+      "success": true,
+      "reference_frames": 12241,
+      "steps": 12241,
+      "seconds": 244.82,
+      "termination_terms": [
+        "motion_end"
+      ],
+      "reward_sum": 543.8219547683839,
+      "trajectory": "trajectory-000003.npz",
+      "batch": 0,
+      "slot": 3
+    },
+    {
+      "index": 4,
+      "name": "sprint1_subject2",
+      "success": true,
+      "reference_frames": 13656,
+      "steps": 13656,
+      "seconds": 273.12,
+      "termination_terms": [
+        "motion_end"
+      ],
+      "reward_sum": 837.2456383474637,
+      "trajectory": "trajectory-000004.npz",
+      "batch": 0,
+      "slot": 4
+    },
+    {
+      "index": 5,
+      "name": "sprint1_subject4",
+      "success": true,
+      "reference_frames": 13656,
+      "steps": 13656,
+      "seconds": 273.12,
+      "termination_terms": [
+        "motion_end"
+      ],
+      "reward_sum": 819.0831578848884,
+      "trajectory": "trajectory-000005.npz",
+      "batch": 0,
+      "slot": 5
+    },
+    {
+      "index": 6,
+      "name": "walk1_subject1",
+      "success": false,
+      "reference_frames": 13066,
+      "steps": 10222,
+      "seconds": 204.44,
+      "termination_terms": [
+        "anchor_ori"
+      ],
+      "reward_sum": 743.3827318912954,
+      "trajectory": "trajectory-000006.npz",
+      "batch": 0,
+      "slot": 6
+    },
+    {
+      "index": 7,
+      "name": "walk1_subject2",
+      "success": true,
+      "reference_frames": 13066,
+      "steps": 13066,
+      "seconds": 261.32,
+      "termination_terms": [
+        "motion_end"
+      ],
+      "reward_sum": 825.8236258828547,
+      "trajectory": "trajectory-000007.npz",
+      "batch": 0,
+      "slot": 7
+    },
+    {
+      "index": 8,
+      "name": "walk1_subject5",
+      "success": true,
+      "reference_frames": 13066,
+      "steps": 13066,
+      "seconds": 261.32,
+      "termination_terms": [
+        "motion_end"
+      ],
+      "reward_sum": 767.6739426697604,
+      "trajectory": "trajectory-000008.npz",
+      "batch": 0,
+      "slot": 8
+    },
+    {
+      "index": 9,
+      "name": "walk2_subject1",
+      "success": false,
+      "reference_frames": 11909,
+      "steps": 8938,
+      "seconds": 178.76,
+      "termination_terms": [
+        "anchor_pos"
+      ],
+      "reward_sum": 521.4474107110873,
+      "trajectory": "trajectory-000009.npz",
+      "batch": 0,
+      "slot": 9
+    },
+    {
+      "index": 10,
+      "name": "walk2_subject3",
+      "success": false,
+      "reference_frames": 11909,
+      "steps": 8877,
+      "seconds": 177.54,
+      "termination_terms": [
+        "anchor_pos"
+      ],
+      "reward_sum": 592.175395168364,
+      "trajectory": "trajectory-000010.npz",
+      "batch": 0,
+      "slot": 10
+    },
+    {
+      "index": 11,
+      "name": "walk2_subject4",
+      "success": true,
+      "reference_frames": 11909,
+      "steps": 11909,
+      "seconds": 238.18,
+      "termination_terms": [
+        "motion_end"
+      ],
+      "reward_sum": 801.5463125314564,
+      "trajectory": "trajectory-000011.npz",
+      "batch": 0,
+      "slot": 11
+    },
+    {
+      "index": 12,
+      "name": "walk3_subject1",
+      "success": false,
+      "reference_frames": 12331,
+      "steps": 2515,
+      "seconds": 50.300000000000004,
+      "termination_terms": [
+        "anchor_ori"
+      ],
+      "reward_sum": 187.2111927017104,
+      "trajectory": "trajectory-000012.npz",
+      "batch": 0,
+      "slot": 12
+    },
+    {
+      "index": 13,
+      "name": "walk3_subject2",
+      "success": true,
+      "reference_frames": 12331,
+      "steps": 12331,
+      "seconds": 246.62,
+      "termination_terms": [
+        "motion_end"
+      ],
+      "reward_sum": 825.3617517799139,
+      "trajectory": "trajectory-000013.npz",
+      "batch": 0,
+      "slot": 13
+    },
+    {
+      "index": 14,
+      "name": "walk3_subject3",
+      "success": false,
+      "reference_frames": 12331,
+      "steps": 8632,
+      "seconds": 172.64000000000001,
+      "termination_terms": [
+        "anchor_pos"
+      ],
+      "reward_sum": 630.6066185534,
+      "trajectory": "trajectory-000014.npz",
+      "batch": 0,
+      "slot": 14
+    },
+    {
+      "index": 15,
+      "name": "walk3_subject4",
+      "success": false,
+      "reference_frames": 12331,
+      "steps": 9490,
+      "seconds": 189.8,
+      "termination_terms": [
+        "anchor_ori"
+      ],
+      "reward_sum": 646.9734664447606,
+      "trajectory": "trajectory-000015.npz",
+      "batch": 0,
+      "slot": 15
+    },
+    {
+      "index": 16,
+      "name": "walk3_subject5",
+      "success": true,
+      "reference_frames": 12331,
+      "steps": 12331,
+      "seconds": 246.62,
+      "termination_terms": [
+        "motion_end"
+      ],
+      "reward_sum": 728.4992041755468,
+      "trajectory": "trajectory-000016.npz",
+      "batch": 0,
+      "slot": 16
+    },
+    {
+      "index": 17,
+      "name": "walk4_subject1",
+      "success": true,
+      "reference_frames": 8196,
+      "steps": 8196,
+      "seconds": 163.92000000000002,
+      "termination_terms": [
+        "motion_end"
+      ],
+      "reward_sum": 603.544610960409,
+      "trajectory": "trajectory-000017.npz",
+      "batch": 0,
+      "slot": 17
+    }
+  ],
+  "paper_results_reproduced": false,
+  "goal_assembly_backend": "eager"
+}

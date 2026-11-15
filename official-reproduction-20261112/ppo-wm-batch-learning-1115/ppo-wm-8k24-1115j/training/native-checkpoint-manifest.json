@@ -1,0 +1,252 @@
+[
+  {
+    "ppo_update": 64,
+    "real_collection_steps": 640,
+    "real_simulator_steps": 2621440,
+    "imagined_steps": 12582912,
+    "files": [
+      {
+        "file": "actor.pt",
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-8k24-1115j/training/native-checkpoints/update-000064/actor.pt",
+        "bytes": 46439949,
+        "sha256": "06192e73fdbb458bc18fbabff7b4d73ebee19c4e1cd8777b250fed3e8bb18174",
+        "native_model_readback_verified": true
+      },
+      {
+        "file": "critic.pt",
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-8k24-1115j/training/native-checkpoints/update-000064/critic.pt",
+        "bytes": 929269,
+        "sha256": "4e82478656ea5ca8baa5883279233d6795d20b106a9e6821353c8875b616ac23",
+        "native_model_readback_verified": true
+      },
+      {
+        "file": "released-actor-critic.pt",
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-8k24-1115j/training/native-checkpoints/update-000064/released-actor-critic.pt",
+        "bytes": 47370006,
+        "sha256": "492cebc00636b8f8bc67c881ad8c5aa7f967bff8a922daa12d850c82433ef40e",
+        "native_model_readback_verified": true
+      },
+      {
+        "file": "world_model.pt",
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-8k24-1115j/training/native-checkpoints/update-000064/world_model.pt",
+        "bytes": 34990357,
+        "sha256": "b15ffccdcb986638a006eddb5f15d43f7b6469613722901bc755bd8c31a477f3",
+        "native_model_readback_verified": true
+      }
+    ],
+    "source_released_checkpoints": [
+      {
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-8k24-1115j/training/released-checkpoints/outer-000064/world_model.pt",
+        "bytes": 34990357,
+        "sha256": "b15ffccdcb986638a006eddb5f15d43f7b6469613722901bc755bd8c31a477f3"
+      },
+      {
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-8k24-1115j/training/released-checkpoints/outer-000064/actor.pt",
+        "bytes": 47370006,
+        "sha256": "492cebc00636b8f8bc67c881ad8c5aa7f967bff8a922daa12d850c82433ef40e"
+      }
+    ],
+    "seconds_since_training_entry": 138.73545211926103,
+    "full_training_resume_available": false
+  },
+  {
+    "ppo_update": 256,
+    "real_collection_steps": 2560,
+    "real_simulator_steps": 10485760,
+    "imagined_steps": 50331648,
+    "files": [
+      {
+        "file": "actor.pt",
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-8k24-1115j/training/native-checkpoints/update-000256/actor.pt",
+        "bytes": 46439949,
+        "sha256": "de06640b2228f7db5d8e3b70e6881cb104d62be18edd93771b12fbf9b7d33a19",
+        "native_model_readback_verified": true
+      },
+      {
+        "file": "critic.pt",
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-8k24-1115j/training/native-checkpoints/update-000256/critic.pt",
+        "bytes": 929269,
+        "sha256": "6210ee420a8db3ccc0362a93b3f4b774f4410c2eaa3b75b1ab750d4f74a16a6b",
+        "native_model_readback_verified": true
+      },
+      {
+        "file": "released-actor-critic.pt",
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-8k24-1115j/training/native-checkpoints/update-000256/released-actor-critic.pt",
+        "bytes": 47370006,
+        "sha256": "2ae0253b846f5ddef7b711d5b20a05e950287f2324a174e66166b0542f635386",
+        "native_model_readback_verified": true
+      },
+      {
+        "file": "world_model.pt",
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-8k24-1115j/training/native-checkpoints/update-000256/world_model.pt",
+        "bytes": 34990357,
+        "sha256": "d03f479f23168a82464b8d675be974dce16ba88bb7e7621f86e15a89e67da7e5",
+        "native_model_readback_verified": true
+      }
+    ],
+    "source_released_checkpoints": [
+      {
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-8k24-1115j/training/released-checkpoints/outer-000256/world_model.pt",
+        "bytes": 34990357,
+        "sha256": "d03f479f23168a82464b8d675be974dce16ba88bb7e7621f86e15a89e67da7e5"
+      },
+      {
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-8k24-1115j/training/released-checkpoints/outer-000256/actor.pt",
+        "bytes": 47370006,
+        "sha256": "2ae0253b846f5ddef7b711d5b20a05e950287f2324a174e66166b0542f635386"
+      }
+    ],
+    "seconds_since_training_entry": 453.5335137825459,
+    "full_training_resume_available": false
+  },
+  {
+    "ppo_update": 512,
+    "real_collection_steps": 5120,
+    "real_simulator_steps": 20971520,
+    "imagined_steps": 100663296,
+    "files": [
+      {
+        "file": "actor.pt",
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-8k24-1115j/training/native-checkpoints/update-000512/actor.pt",
+        "bytes": 46439949,
+        "sha256": "fbaec69858c2d9500aa6f7cd44ebd3650dcd9ee2dbf4c65062b42dc40a8a7057",
+        "native_model_readback_verified": true
+      },
+      {
+        "file": "critic.pt",
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-8k24-1115j/training/native-checkpoints/update-000512/critic.pt",
+        "bytes": 929269,
+        "sha256": "ef988e72a1c2b728ff31afffca0db20e857d31784eb349cde58fe438bbd8dde9",
+        "native_model_readback_verified": true
+      },
+      {
+        "file": "released-actor-critic.pt",
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-8k24-1115j/training/native-checkpoints/update-000512/released-actor-critic.pt",
+        "bytes": 47370006,
+        "sha256": "c64585937e994bd5812ed87dfb2d32535165caad18f9b91aaec3cfbccf4ceebf",
+        "native_model_readback_verified": true
+      },
+      {
+        "file": "world_model.pt",
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-8k24-1115j/training/native-checkpoints/update-000512/world_model.pt",
+        "bytes": 34990357,
+        "sha256": "3d12278d10304069d2855cd41f96f4639afebc8257a3308a89a848a89210d695",
+        "native_model_readback_verified": true
+      }
+    ],
+    "source_released_checkpoints": [
+      {
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-8k24-1115j/training/released-checkpoints/outer-000512/world_model.pt",
+        "bytes": 34990357,
+        "sha256": "3d12278d10304069d2855cd41f96f4639afebc8257a3308a89a848a89210d695"
+      },
+      {
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-8k24-1115j/training/released-checkpoints/outer-000512/actor.pt",
+        "bytes": 47370006,
+        "sha256": "c64585937e994bd5812ed87dfb2d32535165caad18f9b91aaec3cfbccf4ceebf"
+      }
+    ],
+    "seconds_since_training_entry": 876.6579694021493,
+    "full_training_resume_available": false
+  },
+  {
+    "ppo_update": 1024,
+    "real_collection_steps": 10240,
+    "real_simulator_steps": 41943040,
+    "imagined_steps": 201326592,
+    "files": [
+      {
+        "file": "actor.pt",
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-8k24-1115j/training/native-checkpoints/update-001024/actor.pt",
+        "bytes": 46439949,
+        "sha256": "ef7e030ba63ab167922bc0b68164ce711eb3ba68c40a81f8ec38c27b6e7fff52",
+        "native_model_readback_verified": true
+      },
+      {
+        "file": "critic.pt",
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-8k24-1115j/training/native-checkpoints/update-001024/critic.pt",
+        "bytes": 929269,
+        "sha256": "8f1819534d5cb443d74cef71f589b39a0b05b69187e66704865e7c8ed1b0b0f6",
+        "native_model_readback_verified": true
+      },
+      {
+        "file": "released-actor-critic.pt",
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-8k24-1115j/training/native-checkpoints/update-001024/released-actor-critic.pt",
+        "bytes": 47370006,
+        "sha256": "792bb8911299fa8a065ff601a9baf6f01f4f611c64e3cb83ce825579161a4ff7",
+        "native_model_readback_verified": true
+      },
+      {
+        "file": "world_model.pt",
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-8k24-1115j/training/native-checkpoints/update-001024/world_model.pt",
+        "bytes": 34990357,
+        "sha256": "c398efd44356fe6ee7f66d82519320bddf4826ffab17de4db9a9321954f8fe41",
+        "native_model_readback_verified": true
+      }
+    ],
+    "source_released_checkpoints": [
+      {
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-8k24-1115j/training/released-checkpoints/outer-001024/world_model.pt",
+        "bytes": 34990357,
+        "sha256": "c398efd44356fe6ee7f66d82519320bddf4826ffab17de4db9a9321954f8fe41"
+      },
+      {
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-8k24-1115j/training/released-checkpoints/outer-001024/actor.pt",
+        "bytes": 47370006,
+        "sha256": "792bb8911299fa8a065ff601a9baf6f01f4f611c64e3cb83ce825579161a4ff7"
+      }
+    ],
+    "seconds_since_training_entry": 1720.584085199982,
+    "full_training_resume_available": false
+  },
+  {
+    "ppo_update": 2048,
+    "real_collection_steps": 20480,
+    "real_simulator_steps": 83886080,
+    "imagined_steps": 402653184,
+    "files": [
+      {
+        "file": "actor.pt",
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-8k24-1115j/training/native-checkpoints/update-002048/actor.pt",
+        "bytes": 46439949,
+        "sha256": "a50987cc94a5dfad15d8ba4448a0b610841a27d745403496a829f09d087f3a67",
+        "native_model_readback_verified": true
+      },
+      {
+        "file": "critic.pt",
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-8k24-1115j/training/native-checkpoints/update-002048/critic.pt",
+        "bytes": 929269,
+        "sha256": "e153aa2efacc4fc478096768c2c5fdd3f93b81d1c447f97a95395f289bf9bdbc",
+        "native_model_readback_verified": true
+      },
+      {
+        "file": "released-actor-critic.pt",
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-8k24-1115j/training/native-checkpoints/update-002048/released-actor-critic.pt",
+        "bytes": 47370006,
+        "sha256": "356bc956b3e7a49a3460c0242ffd9a590e11d71c956f81b993510994ff7d1976",
+        "native_model_readback_verified": true
+      },
+      {
+        "file": "world_model.pt",
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-8k24-1115j/training/native-checkpoints/update-002048/world_model.pt",
+        "bytes": 34990357,
+        "sha256": "2b6064e7d62533f4a4ebdfe4dbc47e0e85de0aed317e377d82acd45856f55dca",
+        "native_model_readback_verified": true
+      }
+    ],
+    "source_released_checkpoints": [
+      {
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-8k24-1115j/training/released-checkpoints/outer-002048/world_model.pt",
+        "bytes": 34990357,
+        "sha256": "2b6064e7d62533f4a4ebdfe4dbc47e0e85de0aed317e377d82acd45856f55dca"
+      },
+      {
+        "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-8k24-1115j/training/released-checkpoints/outer-002048/actor.pt",
+        "bytes": 47370006,
+        "sha256": "356bc956b3e7a49a3460c0242ffd9a590e11d71c956f81b993510994ff7d1976"
+      }
+    ],
+    "seconds_since_training_entry": 3421.5913290679455,
+    "full_training_resume_available": false
+  }
+]
