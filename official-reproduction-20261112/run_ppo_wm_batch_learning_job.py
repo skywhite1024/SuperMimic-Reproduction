@@ -21,11 +21,16 @@ def execute(script,args,log,limit):
     print('PPO_WM_BATCH_STAGE_START '+json.dumps(dict(script=script,log=str(log),utc=datetime.now(timezone.utc).isoformat(),limit_seconds=limit)),flush=True)
     started=time.monotonic()
     with log.open('w',encoding='utf-8') as stream:
-        r=subprocess.run(['timeout','--signal=TERM','--kill-after=30s',str(limit)+'s',sys.executable,str(SCRIPTS/script),*map(str,args)],stdout=stream,stderr=subprocess.STDOUT)
-    print('PPO_WM_BATCH_STAGE_EXIT '+json.dumps(dict(script=script,returncode=r.returncode,elapsed_seconds=time.monotonic()-started)),flush=True)
-    if r.returncode:
+        process=subprocess.Popen(['timeout','--signal=TERM','--kill-after=30s',str(limit)+'s',sys.executable,str(SCRIPTS/script),*map(str,args)],stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True,encoding='utf-8',errors='replace')
+        for line in process.stdout:
+            stream.write(line)
+            if line.startswith(('LAFAN_LOCOMOTION18_PACKED ','PPO_WM_NATIVE_UPDATE ','PPO_WM_NATIVE_CHECKPOINT ','PPO_WM_REAL_G1_FINITE_TRAINING_PASS ')):
+                stream.flush();print(line.rstrip(),flush=True)
+        returncode=process.wait()
+    print('PPO_WM_BATCH_STAGE_EXIT '+json.dumps(dict(script=script,returncode=returncode,elapsed_seconds=time.monotonic()-started)),flush=True)
+    if returncode:
         print(log.read_text(encoding='utf-8',errors='replace')[-12000:],flush=True)
-        raise RuntimeError(script+' exited '+str(r.returncode))
+        raise RuntimeError(script+' exited '+str(returncode))
 
 
 def main():
