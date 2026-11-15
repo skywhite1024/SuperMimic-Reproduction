@@ -25,6 +25,19 @@ def main():
     assert not args.output.exists()
     args.output.mkdir(parents=True)
     results=[]
+    setup_log=args.root/"runs/sonic-lafan40-1115n/install-inference-dependencies.log"
+    if setup_log.is_file():
+        text=setup_log.read_text(encoding="utf-8",errors="replace")
+        text=re.sub(r"(https?://)[^/\s@]+@",r"\1[redacted]@",text)
+        text=re.sub(r"(?i)((?:token|password|api_key)=)[^\s&]+",r"\1[redacted]",text)
+        diagnostic=dict(status="retained_SONIC_install_log_tail_readonly",source_sha256=digest(setup_log),
+            source_bytes=setup_log.stat().st_size,tail="\n".join(text.splitlines()[-100:]),
+            URL_userinfo_and_credential_query_values_redacted=True,environment_variables_not_read=True)
+        path=args.output/"sonic-install-diagnostic.json"
+        path.write_text(json.dumps(diagnostic,indent=2)+"\n",encoding="utf-8",newline="\n")
+        print("SONIC_SETUP_DIAGNOSTIC_BEGIN",flush=True)
+        subprocess.run([sys.executable,str(Path(__file__).with_name("emit_json_receipts.py")),str(path)],check=True,timeout=120)
+        print("SONIC_SETUP_DIAGNOSTIC_END",flush=True)
     for case in ["ppo-wm-4k32-1115i","ppo-wm-8k24-1115j","ppo-wm-8k32-1115k"]:
         parent=args.root/"runs"/case;folder=parent/"eval-002048";motions=parent/"motions"
         report=json.loads((parent/"result.json").read_bytes())
@@ -87,22 +100,12 @@ def main():
             simulation_reexecuted=False,paper_results_reproduced=False)
         target=args.output/(case+".json")
         data=(json.dumps(exported,separators=(",",":"))+"\n").encode()
-        assert len(data)<2_000_000,(case,len(data))
+        assert len(data)<4_000_000,(case,len(data))
         target.write_bytes(data);results.append(target)
         print("PPO_WM_QUALITY_READBACK "+json.dumps(dict(case=case,all_clips=18,selected=selected,npz_bytes=len(payload))),flush=True)
-    setup_log=args.root/"runs/sonic-lafan40-1115n/install-inference-dependencies.log"
-    if setup_log.is_file():
-        text=setup_log.read_text(encoding="utf-8",errors="replace")
-        text=re.sub(r"(https?://)[^/\s@]+@",r"\1[redacted]@",text)
-        text=re.sub(r"(?i)((?:token|password|api_key)=)[^\s&]+",r"\1[redacted]",text)
-        diagnostic=dict(status="retained_SONIC_install_log_tail_readonly",source_sha256=digest(setup_log),
-            source_bytes=setup_log.stat().st_size,tail="\n".join(text.splitlines()[-100:]),
-            URL_userinfo_and_credential_query_values_redacted=True,environment_variables_not_read=True)
-        path=args.output/"sonic-install-diagnostic.json"
-        path.write_text(json.dumps(diagnostic,indent=2)+"\n",encoding="utf-8",newline="\n")
-        results.append(path)
     print("PPO_WM_QUALITY_ORIGINALS_BEGIN",flush=True)
-    subprocess.run([sys.executable,str(Path(__file__).with_name("emit_json_receipts.py")),*[str(p) for p in results]],check=True,timeout=120)
+    subprocess.run([sys.executable,str(Path(__file__).with_name("emit_json_receipts.py")),
+                    "--max-bytes","4000000",*[str(p) for p in results]],check=True,timeout=120)
     print("PPO_WM_QUALITY_ORIGINALS_END",flush=True)
 
 
