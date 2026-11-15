@@ -1,19 +1,37 @@
 {
   "status": "final_originals_not_yet_emitted",
   "original_JSONs": 0,
-  "last_logged_native_update": 176,
+  "last_logged_native_update": 1936,
   "logged_checkpoints_after_cloud_tensor_and_byte_readback_checks": [
     {
       "ppo_update": 64,
       "real_simulator_steps": 2621440,
       "imagined_steps": 12582912,
       "seconds_since_training_entry": 138.73545211926103
+    },
+    {
+      "ppo_update": 256,
+      "real_simulator_steps": 10485760,
+      "imagined_steps": 50331648,
+      "seconds_since_training_entry": 453.5335137825459
+    },
+    {
+      "ppo_update": 512,
+      "real_simulator_steps": 20971520,
+      "imagined_steps": 100663296,
+      "seconds_since_training_entry": 876.6579694021493
+    },
+    {
+      "ppo_update": 1024,
+      "real_simulator_steps": 41943040,
+      "imagined_steps": 201326592,
+      "seconds_since_training_entry": 1720.584085199982
     }
   ],
   "progress_tags_are_not_independent_model_or_quality_verification": true,
   "job_uid": "a8a3401120d4437694d78cc5d87322bb",
   "source_commit": "9594228b8411247729aa7d63d13150636d868f9a",
-  "log_sha256": "18162f28638e3036b7539d42d95195dbf219e8207ccb28873056e9ea45d036f8",
+  "log_sha256": "579df3d2ec9b8433f1827461b5c842877ad557fd1dc98acaa8ed60af2a312a5e",
   "all_recovered_original_bytes_and_SHA256_verified": false,
   "raw_models_and_NPZ_downloaded": false
 }

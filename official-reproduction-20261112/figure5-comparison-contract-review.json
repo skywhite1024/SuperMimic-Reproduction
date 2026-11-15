@@ -1,0 +1,92 @@
+{
+  "status": "source_and_paper_scope_review_before_quality_results",
+  "observed_at": "2026-11-15T15:13:23.188803+08:00",
+  "paper_pdf_sha256": "fe213017ab062f4acc3965da89abd3c29969163e144a2628a662b8ce46691009",
+  "paper_Figure5_page": 8,
+  "source_files": {
+    "upstream/supermimic/src/supermimic/runners/ppo_runner.py": "04fd4484ca9dd03e86c795d9ffb1e0c584f59754513f39ba824924c5f4e8ab6e",
+    "upstream/supermimic/src/supermimic/runners/supermimic_runner.py": "c19751a691cabfe579da973d9c384b7355c545292bdb7748155978a9d9d78d59",
+    "upstream/supermimic/src/supermimic/utils/logger.py": "26005f29b785995dd7cdaea9e94c5c239139ba3ef336b10dacb76800bb0848c6",
+    "official-reproduction-20261112/run_ppo_wm_integration.py": "630ca8e3671569aa509d224dfa9e722b1431444adf1d7d5cb24ec523da40f4ad",
+    "official-reproduction-20261112/paper_profile.py": "14594ba9f002122e8fe4d22a1a8a9e982499b08629416f52069bee4ab1deb177"
+  },
+  "current_job_targets": [
+    {
+      "case": "ppo-wm-4k32-1115i",
+      "outer_updates": 2048,
+      "unique_generated_imagined_transitions": 268435456,
+      "real_simulator_transitions": 83886080,
+      "nominal_PPO_reuse_epochs": 5,
+      "nominal_epoch_sample_exposures": 1342177280,
+      "completed_quality_points": 0
+    },
+    {
+      "case": "ppo-wm-8k24-1115j",
+      "outer_updates": 2048,
+      "unique_generated_imagined_transitions": 402653184,
+      "real_simulator_transitions": 83886080,
+      "nominal_PPO_reuse_epochs": 5,
+      "nominal_epoch_sample_exposures": 2013265920,
+      "completed_quality_points": 0
+    },
+    {
+      "case": "ppo-wm-8k32-1115k",
+      "outer_updates": 2048,
+      "unique_generated_imagined_transitions": 536870912,
+      "real_simulator_transitions": 83886080,
+      "nominal_PPO_reuse_epochs": 5,
+      "nominal_epoch_sample_exposures": 2684354560,
+      "completed_quality_points": 0
+    },
+    {
+      "case": "ppo-wm-16k32-1115l",
+      "outer_updates": 2048,
+      "unique_generated_imagined_transitions": 1073741824,
+      "real_simulator_transitions": 83886080,
+      "nominal_PPO_reuse_epochs": 5,
+      "nominal_epoch_sample_exposures": 5368709120,
+      "completed_quality_points": 0
+    }
+  ],
+  "counting": {
+    "local_convention": "Count each generated WM-env step once. PPO sample reuse across optimization epochs is excluded.",
+    "paper_exact_imagined_step_counting_convention_confirmed": false,
+    "paper_curve_visually_extends_to_tens_of_billions_of_imagined_steps": true,
+    "visual_axis_is_not_an_author_training_command": true,
+    "finite2048_is_not_full_Figure5_training_length": true,
+    "author_exact_outer_iterations_unavailable": true
+  },
+  "configured_training_differences": {
+    "first_order_reset_sampling": "native return sampler",
+    "PPO_WM_reset_sampling": "uniform",
+    "first_order_fixed_real_action_noise_std": 0.1,
+    "PPO_initial_learned_real_action_noise_std": 1.0,
+    "first_order_world_model_update_calls_per_collection_after_warmup": 0.4,
+    "PPO_world_model_update_calls_per_collection": 0.1,
+    "WM_fit_batches_per_call_both": 10,
+    "WM_batch_size_both": 2048,
+    "WM_window_state_slots_both": 8,
+    "first_order_policy_update_calls_per_collection_after_warmup": 0.4,
+    "PPO_policy_update_calls_per_collection": 0.1,
+    "actual_first_order_counts": "Must read observed learner-counts.json; do not infer warmup counts from the asymptotic ratio.",
+    "all_other_training_hyperparameters_matched": false
+  },
+  "evaluation": {
+    "local_protocol": "Fixed manual-reset-v2 full18-clip simulator evaluation, failures retained, equal clip weights",
+    "paper_quantity": "Training return with centered moving average over +/-0.05 decade of imagined steps",
+    "fixed_full_clip_evaluation_is_the_same_quantity_as_the_paper_training_curve": false,
+    "curve_smoothing_applied": false,
+    "paper_exact_motion_membership_confirmed": false,
+    "first_order_same18_cuda_run_started": false
+  },
+  "native_log_counter_diagnostic": "ppo-log-interval-local-diagnostic.json",
+  "decisions": [
+    "Do not use native PPO console cumulative Total steps/Time elapsed at log_interval16 for efficiency.",
+    "Use independent generated-transition counters and monotonic whole-training time.",
+    "Finish the existing finite four-arm learning and quality evaluations before choosing a long training budget or float-termination diagnosis.",
+    "After a real slot release, run the prepared native same18 first-order control. Its task matches; sampling, update cadence, exploration and return-estimator differences remain disclosed.",
+    "A64x claim requires a matched return with author-aligned step counting, corpus and training protocol; four finite endpoints alone cannot establish it."
+  ],
+  "current_frozen_payloads_changed": false,
+  "paper_results_reproduced": false
+}

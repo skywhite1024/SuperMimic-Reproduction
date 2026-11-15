@@ -13,6 +13,9 @@
 **/policy/
 **/*.pt
 **/*.npz
+# Small generated inference/pilot evidence; contains no downloaded motion data.
+!official-reproduction-20261112/sonic-pretrained-g1-cpu-1115/synthetic-inference-comparison.npz
+!official-reproduction-20261112/sonic-standing-cpu-1115/trace.npz
 **/*.tar.gz
 **/.env
 **/.env.*

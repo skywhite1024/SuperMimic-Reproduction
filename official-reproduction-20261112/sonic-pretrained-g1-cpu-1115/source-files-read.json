@@ -1,0 +1,89 @@
+{
+  "commit": "1e1ec4f5f27e6c3e03048f693bd7c60cce04afda",
+  "files": [
+    {
+      "file": "gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/include/control_policy.hpp",
+      "bytes": 15019,
+      "git_blob": "040dcf5fc552c7e5978ffd7b592f65afe2b2311b",
+      "sha256": "b172519645540766b26903c75202ce074fdab3ec93e006b682ff1605508d5cfa"
+    },
+    {
+      "file": "gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/include/encoder.hpp",
+      "bytes": 14510,
+      "git_blob": "7d912b5f0b9c3618b644c175e3fcf8a81a9664e5",
+      "sha256": "0a541398b0e0e91e69f95de85fd8a141c3a7c46be8de8331440849bc85066f3b"
+    },
+    {
+      "file": "gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/include/observation_config.hpp",
+      "bytes": 21830,
+      "git_blob": "4b355ee1d9a5954ef5b3937a460d8f1ee04aeb8b",
+      "sha256": "8085f7dcdd0f265001ab18663ace0353e7f07bfa2fa5f6c005b9c0c8e9c5c9d6"
+    },
+    {
+      "file": "gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/include/policy_parameters.hpp",
+      "bytes": 11868,
+      "git_blob": "d0d9f45dd472f8b63969d097a2f8248a6f906197",
+      "sha256": "b9332adf07c2c9b75c9b1e0756e57c7a1c2a890d8bb0aa53c3f1905fb739b791"
+    },
+    {
+      "file": "gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/include/robot_parameters.hpp",
+      "bytes": 4695,
+      "git_blob": "4d6a6f4896ccbcad668944b6a9fec0d873fbd759",
+      "sha256": "073f8d04f292473851b6f0b923e6af7b2dc0686658eba19a8deab08c839e4fb1"
+    },
+    {
+      "file": "gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/include/motion_data_reader.hpp",
+      "bytes": 42901,
+      "git_blob": "3bc8e6981e567aae0620d711d1657a52b2638f25",
+      "sha256": "0fa19bc0fff66087e0eb47e41a8f0dbd0913fbb76e9409d4d57e84a04a7572b3"
+    },
+    {
+      "file": "gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/include/math_utils.hpp",
+      "bytes": 18938,
+      "git_blob": "2a4fd3eab2313e76f5b56a5dd784fc081a472184",
+      "sha256": "7146af16966f64ec242b91398b1b12ad8d2e798d7d110872fe799dc397a5317c"
+    },
+    {
+      "file": "gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/include/fk.hpp",
+      "bytes": 1709,
+      "git_blob": "eb38a117d2eae7ac72c1c51675ac1301874120af",
+      "sha256": "ec500585ccfb84ec588191c1b6a975b5c3bade2afd85c095b25091ba073eeb36"
+    },
+    {
+      "file": "gear_sonic/utils/mujoco_sim/configs.py",
+      "bytes": 10714,
+      "git_blob": "5ec03facf8a5853ad6da1e2fa37bc999d51483b1",
+      "sha256": "06945b00653e7a8b8f3a4adfda64ad03b925be59ceb5c1482b4cf94ca273bff8"
+    },
+    {
+      "file": "gear_sonic/utils/mujoco_sim/robot.py",
+      "bytes": 1276,
+      "git_blob": "1e93258a98621afe93dedcf5c68be722d4ae4dc0",
+      "sha256": "9edd458c8c9397b57166f9f00ce951171b951d19144a47c2f1ef411e1ee224aa"
+    },
+    {
+      "file": "gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/src/g1_deploy_onnx_ref.cpp",
+      "bytes": 230613,
+      "git_blob": "c83a586b1d03b2cd55755d9c23d36cc085847935",
+      "sha256": "ee8acf7e06881b95523c521da7f8683e55cbf28fb1bb656ca24fcd0ecebec649"
+    },
+    {
+      "file": "gear_sonic/envs/manager_env/robots/g1.py",
+      "bytes": 9830,
+      "git_blob": "5066546859b11f49faeae77efa6a6e617641ef03",
+      "sha256": "42f9b4394eb21512735da4b1ca78c2d0546c4221c7bdaf8b3a186d8dc5588ba9"
+    },
+    {
+      "file": "gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/include/state_logger.hpp",
+      "bytes": 11969,
+      "git_blob": "87bcc17782cecce5e9c01fa2ef7c3aedd5cefa7a",
+      "sha256": "d09a94c935a5deeede9f02d8569eb6c067ed29e02a5eba5e7432fc5040e11f99"
+    },
+    {
+      "file": "gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/src/state_logger.cpp",
+      "bytes": 22571,
+      "git_blob": "d9cf854f49d0941dde5fd6ca6888d268a938ceac",
+      "sha256": "21532714aed16d7aa0faa5b4e27b5665a5022defe24daeb795b594e92c659dc0"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "file": "config.json",
+    "bytes": 2428,
+    "sha256": "326dcc509ad93509cf262871256a74f508f43a8430f61ec6abe8034e985ce948"
+  },
+  {
+    "file": "observation_config.yaml",
+    "bytes": 2336,
+    "sha256": "466d05947c78af6c76388adfb86e3a2a77b2a1d921a64883ed3d085ebf58de1b"
+  },
+  {
+    "file": "sonic_release/config.yaml",
+    "bytes": 28331,
+    "sha256": "f08187795fa16a839a28bc1c18e0555d38d9420e03733744341cdcb56ab629c7"
+  },
+  {
+    "file": "sonic_v1_1/observation_config.yaml",
+    "bytes": 2475,
+    "sha256": "4a67713b310932e50aca81f19188c8d76013148e98b15c8b5bbea995f12e59f0"
+  },
+  {
+    "file": "sonic_v1_1/model_config.yaml",
+    "bytes": 8882,
+    "sha256": "63fd03c6519e11305114c7869a91cab690ed6729d76d97f8c4bc1dfa04ce4e21"
+  }
+]

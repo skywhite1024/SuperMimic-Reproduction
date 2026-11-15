@@ -1,0 +1,26 @@
+{
+  "status": "ten_second_scalar_MuJoCo_SONIC_standing_completed",
+  "control_steps": 500,
+  "simulated_seconds": 10.0,
+  "error": null,
+  "minimum_root_height": 0.752341285040922,
+  "maximum_tilt": 0.00010333596159750602,
+  "clipped_action_components": 0,
+  "wall_loop_seconds": 3.780349800013937,
+  "real_released_model_inference": true,
+  "all_observed_G1_batch1_latents_and_actions_compared_to_original": true,
+  "max_token_difference": 0.0,
+  "max_action_difference": 1.0728836059570312e-06,
+  "protocol_sha256": "d6bb0551369a5c84ccc4907907215b8dac94cd090ef0fd2e54d3d7b36f971a44",
+  "trace": {
+    "file": "trace.npz",
+    "bytes": 553607,
+    "sha256": "2be846c6ec99a6c9e7426c94bb86d4d7eccb94cfec279eff87543a2272b3a087",
+    "readback_verified": true
+  },
+  "original_models_unchanged": true,
+  "full_motion_tracking_evaluated": false,
+  "Warp_or_IsaacLab_equivalence_verified": false,
+  "GPU_execution_verified": false,
+  "paper_results_reproduced": false
+}

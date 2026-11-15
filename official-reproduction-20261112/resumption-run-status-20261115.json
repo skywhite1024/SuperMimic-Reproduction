@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-11-15T15:03:50.526999+08:00",
+  "observed_at": "2026-11-15T15:51:45.541258+08:00",
   "user_resumed": true,
   "max_requested_H100": 4,
   "requested_nonterminal_H100": 4,
@@ -10,7 +10,8 @@
     "two_H100_gate": "native-two-gpu-gate-1115e/validation.json",
     "PPO_fresh2048_and_six_full40_points": "ppo-sim-2048-1115c/validation.json",
     "BONES_segmented_tail_full_raw": "bones-warm-tail-1115d/local-per-motion-recomputation.json",
-    "all_ten_horizon_endpoints": "finite-comparison-1115/summary.json"
+    "all_ten_horizon_endpoints": "finite-comparison-1115/summary.json",
+    "SONIC_original_CPU_inference_and_scalar_standing_pilot": "sonic-standing-cpu-1115/independent-audit.json"
   },
   "retained_failure": "native-two-gpu-gate-1115a/validation.json",
   "current_jobs": {
@@ -141,13 +142,22 @@
           "uid": "81df9d8591e84493b86e27d5f505cb3f",
           "name": "supermimic-official-ppo-wm-4k32-260010076-1115i",
           "gpu": 1,
-          "status": "submitted_running",
+          "status": "training_complete_evaluation_running",
           "platform_status": "running",
           "max_restarts": 0,
           "program_started_at": "2026-11-15T14:47:23.956042+08:00",
           "program_deadline": "2026-11-15T18:47:23.956042+08:00",
           "main_training_deadline": "2026-11-15T16:47:26.904350+08:00",
-          "last_observed_native_update": 352
+          "last_observed_native_update": 2048,
+          "last_observed_at": "2026-11-15T15:50:14.473393+08:00",
+          "native_checkpoints_observed_after_cloud_readback": [
+            64,
+            256,
+            512,
+            1024,
+            2048
+          ],
+          "all_evaluation_originals_verified": false
         },
         "ppo-wm-8k24-1115j": {
           "uid": "a8a3401120d4437694d78cc5d87322bb",
@@ -159,7 +169,15 @@
           "program_started_at": "2026-11-15T14:54:32.539411+08:00",
           "program_deadline": "2026-11-15T18:54:32.539411+08:00",
           "main_training_deadline": "2026-11-15T16:54:35.310491+08:00",
-          "last_observed_native_update": 176
+          "last_observed_native_update": 1936,
+          "last_observed_at": "2026-11-15T15:50:47.997367+08:00",
+          "native_checkpoints_observed_after_cloud_readback": [
+            64,
+            256,
+            512,
+            1024
+          ],
+          "all_evaluation_originals_verified": false
         },
         "ppo-wm-8k32-1115k": {
           "uid": "bae3e0aa1bc44bf78d1f73b91cd947b7",
@@ -171,7 +189,15 @@
           "program_started_at": "2026-11-15T14:55:02.227209+08:00",
           "program_deadline": "2026-11-15T18:55:02.227209+08:00",
           "main_training_deadline": "2026-11-15T16:55:06.311866+08:00",
-          "last_observed_native_update": 144
+          "last_observed_native_update": 1600,
+          "last_observed_at": "2026-11-15T15:51:05.915930+08:00",
+          "native_checkpoints_observed_after_cloud_readback": [
+            64,
+            256,
+            512,
+            1024
+          ],
+          "all_evaluation_originals_verified": false
         },
         "ppo-wm-16k32-1115l": {
           "uid": "2a81044e0a004302a97f007d71e3a6b1",
@@ -183,7 +209,15 @@
           "program_started_at": "2026-11-15T14:55:12.093421+08:00",
           "program_deadline": "2026-11-15T18:55:12.093421+08:00",
           "main_training_deadline": "2026-11-15T16:55:14.694307+08:00",
-          "last_observed_native_update": 112
+          "last_observed_native_update": 1264,
+          "last_observed_at": "2026-11-15T15:51:20.268374+08:00",
+          "native_checkpoints_observed_after_cloud_readback": [
+            64,
+            256,
+            512,
+            1024
+          ],
+          "all_evaluation_originals_verified": false
         }
       },
       "evidence": "ppo-wm-batch-learning-1115/",
@@ -221,7 +255,15 @@
   "qualified_current_results": {
     "PPO": "ppo-sim-2048-1115c/validation.json",
     "BONES": "bones-warm-tail-1115d/local-per-motion-recomputation.json",
-    "horizons": "finite-comparison-1115/summary.json"
+    "horizons": "finite-comparison-1115/summary.json",
+    "SONIC_standing_pilot": {
+      "steps": 500,
+      "physical_seconds": 10,
+      "minimum_root_height": 0.752341285040922,
+      "maximum_root_tilt_degrees": 0.823696295432372,
+      "full_motion_tracking_evaluated": false,
+      "paper_results_reproduced": false
+    }
   },
   "historical_readonly_counters_preserved": true
 }

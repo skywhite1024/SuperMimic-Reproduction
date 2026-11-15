@@ -1,0 +1,11 @@
+{
+  "python_version": "3.13.18",
+  "scope": "Separate SONIC inference venv with base official site packages; core official Conda not modified",
+  "onnxruntime": "1.32.0",
+  "onnx": "1.23.2",
+  "providers": [
+    "CPUExecutionProvider"
+  ],
+  "cloud_GPU_runtime_configured": false,
+  "observed_at": "2026-11-15T15:29:17.469446+08:00"
+}

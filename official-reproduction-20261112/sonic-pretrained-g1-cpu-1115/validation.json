@@ -1,0 +1,155 @@
+{
+  "status": "released_SONIC_G1_batched_ONNX_outputs_match_original_CPU_inference",
+  "HF_repository": "nvidia/GEAR-SONIC",
+  "HF_revision": "6733128a3d8a523b1418b06bca3cdf61c8b0987f",
+  "source_commit": "1e1ec4f5f27e6c3e03048f693bd7c60cce04afda",
+  "original_files": {
+    "model_encoder.onnx": "013ab0287236aa2721e13f1e936d699db982302d0de0bfcdae76d5c3245362d3",
+    "model_decoder.onnx": "c7241a123eaa36b5d64bad19540efde93cac1ad443bd4572fd12ca99898118ed",
+    "observation_config.yaml": "466d05947c78af6c76388adfb86e3a2a77b2a1d921a64883ed3d085ebf58de1b"
+  },
+  "original_files_unchanged": true,
+  "derived_graph_scope": "Mode0 G1 quantized branch only; input/output batch dimensions and integer reshape shape constants",
+  "encoder_reshape_changes": [
+    {
+      "node": "/Reshape_1",
+      "old_shape": [
+        1,
+        1,
+        10,
+        58
+      ],
+      "new_shape": [
+        0,
+        1,
+        10,
+        58
+      ]
+    },
+    {
+      "node": "/Reshape_3",
+      "old_shape": [
+        1,
+        1,
+        10,
+        6
+      ],
+      "new_shape": [
+        0,
+        1,
+        10,
+        6
+      ]
+    },
+    {
+      "node": "/g1/Reshape",
+      "old_shape": [
+        1,
+        640
+      ],
+      "new_shape": [
+        0,
+        640
+      ]
+    },
+    {
+      "node": "/g1/Reshape_1",
+      "old_shape": [
+        1,
+        2,
+        32
+      ],
+      "new_shape": [
+        0,
+        2,
+        32
+      ]
+    },
+    {
+      "node": "/quantizer/Reshape",
+      "old_shape": [
+        1,
+        2,
+        1,
+        32
+      ],
+      "new_shape": [
+        0,
+        2,
+        1,
+        32
+      ]
+    },
+    {
+      "node": "/quantizer/Reshape_1",
+      "old_shape": [
+        1,
+        2,
+        32
+      ],
+      "new_shape": [
+        0,
+        2,
+        32
+      ]
+    }
+  ],
+  "decoder_reshape_changes": [],
+  "every_retained_parameter_byte_unchanged": true,
+  "execution_provider": "CPUExecutionProvider",
+  "onnxruntime_version": "1.32.0",
+  "onnx_version": "1.23.2",
+  "encoder_input_dimensions": 1762,
+  "latent_dimensions": 64,
+  "decoder_input_dimensions": 994,
+  "action_dimensions": 29,
+  "encoder_mode": "scalar0 followed by three zeros; other-mode feature groups zeroed",
+  "comparisons": [
+    {
+      "batch": 1,
+      "token_max_absolute_difference": 0.0,
+      "action_max_absolute_difference": 5.960464477539062e-07
+    },
+    {
+      "batch": 2,
+      "token_max_absolute_difference": 0.0,
+      "action_max_absolute_difference": 7.152557373046875e-07
+    },
+    {
+      "batch": 18,
+      "token_max_absolute_difference": 0.0,
+      "action_max_absolute_difference": 9.5367431640625e-07
+    },
+    {
+      "batch": 64,
+      "token_max_absolute_difference": 0.0,
+      "action_max_absolute_difference": 1.9073486328125e-06
+    }
+  ],
+  "derived_files": [
+    {
+      "file": "g1-encoder-batched.onnx",
+      "bytes": 17112930,
+      "sha256": "6ef990f5f922333923ad564bbb8fda7eb30c52d5128e0e18e96d7ae29ec0ecbb"
+    },
+    {
+      "file": "decoder-batched.onnx",
+      "bytes": 40900698,
+      "sha256": "bc30e85862f3ae26e6dc8747c0ef33d0b9babe08d80a33eb44869b9f2ca91013"
+    }
+  ],
+  "trace": {
+    "file": "synthetic-inference-comparison.npz",
+    "bytes": 393582,
+    "sha256": "c3fe714fadc913ade8aa20211b8243b696d0683fa1e8b862423558eae648b35a",
+    "readback_verified": true
+  },
+  "elapsed_seconds": 1.3274134000530466,
+  "sensor_port_verified": false,
+  "training_environment_equivalence_verified": false,
+  "simulation_executed": false,
+  "GPU_execution_verified": false,
+  "policy_quality_evaluated": false,
+  "physical_robot_deployment": false,
+  "paper_results_reproduced": false
+}

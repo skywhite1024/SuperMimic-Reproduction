@@ -1,0 +1,75 @@
+{
+  "repository": "nvidia/GEAR-SONIC",
+  "revision": "6733128a3d8a523b1418b06bca3cdf61c8b0987f",
+  "source_commit": "1e1ec4f5f27e6c3e03048f693bd7c60cce04afda",
+  "files": [
+    {
+      "file": "config.json",
+      "bytes": 2428,
+      "blob_id": "4d934d70ccaa3760ecf41957dd913e29add21f45",
+      "lfs_sha256": null
+    },
+    {
+      "file": "model_decoder.onnx",
+      "bytes": 40900688,
+      "blob_id": "ea080152fe952d184c0ab62753fe6c73ef14b346",
+      "lfs_sha256": "c7241a123eaa36b5d64bad19540efde93cac1ad443bd4572fd12ca99898118ed"
+    },
+    {
+      "file": "model_encoder.onnx",
+      "bytes": 50100513,
+      "blob_id": "d022f1d08d11ae48d3423bf44125e2ffaa6610b4",
+      "lfs_sha256": "013ab0287236aa2721e13f1e936d699db982302d0de0bfcdae76d5c3245362d3"
+    },
+    {
+      "file": "observation_config.yaml",
+      "bytes": 2336,
+      "blob_id": "893b960b226ea329a2936040502ce3bfd365360b",
+      "lfs_sha256": null
+    },
+    {
+      "file": "sonic_release/config.yaml",
+      "bytes": 28331,
+      "blob_id": "72603a9e055479a2a4bb0efca9a5deff20e1315d",
+      "lfs_sha256": null
+    },
+    {
+      "file": "sonic_release/last.pt",
+      "bytes": 469418283,
+      "blob_id": "7e71f35feb2fa45e5d101dbff4a096c835476bf9",
+      "lfs_sha256": "e6bdab3f64a39336b3d41877d4f497d05f58af275f288ec0e6746c283ded8909"
+    },
+    {
+      "file": "sonic_v1_1/config.yaml",
+      "bytes": 29395,
+      "blob_id": "09fd13aeb57fc75603184b76adb9bd441ae7428c",
+      "lfs_sha256": null
+    },
+    {
+      "file": "sonic_v1_1/model_config.yaml",
+      "bytes": 8882,
+      "blob_id": "9ce6e30d1d3a4ec57b0e6aa63e470e47dd5bb709",
+      "lfs_sha256": null
+    },
+    {
+      "file": "sonic_v1_1/model_decoder.onnx",
+      "bytes": 149778638,
+      "blob_id": "1830b06b5d6f0b554726d9d30c8b43a76630c59f",
+      "lfs_sha256": "34bae8570d4a4421a5391a5c2befd745d4a02d182ec539e5f9da44c091c67509"
+    },
+    {
+      "file": "sonic_v1_1/model_encoder.onnx",
+      "bytes": 50117796,
+      "blob_id": "cd9105d672909ac459546d4866aa8193cb694aa4",
+      "lfs_sha256": "fb97de22819b2057b41459802128d91723d91a25f0ad73e7bfc41a9cf8365bae"
+    },
+    {
+      "file": "sonic_v1_1/observation_config.yaml",
+      "bytes": 2475,
+      "blob_id": "986bc2af0f6e7835d1453ae3902da388759e328b",
+      "lfs_sha256": null
+    }
+  ],
+  "gated": false,
+  "private": false
+}

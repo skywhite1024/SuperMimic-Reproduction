@@ -1,0 +1,46 @@
+{
+  "status": "pinned_PpoRunner_and_Logger_synthetic_counter_mismatch_reproduced",
+  "workload": "CPU-only synthetic collection/learners/clock; unchanged real native outer loop and logger",
+  "real_simulator_steps_executed": 0,
+  "training_executed": false,
+  "online_WandB_calls": false,
+  "vendor_files_modified": false,
+  "source_files": {
+    "ppo_runner.py": "04fd4484ca9dd03e86c795d9ffb1e0c584f59754513f39ba824924c5f4e8ab6e",
+    "logger.py": "26005f29b785995dd7cdaea9e94c5c239139ba3ef336b10dacb76800bb0848c6"
+  },
+  "runs": [
+    {
+      "log_interval": 1,
+      "actual_native_outer_calls": {
+        "collect": 2048,
+        "WM": 2048,
+        "PPO": 2048,
+        "logs": 2048
+      },
+      "synthetic_collection_steps": 83886080,
+      "native_console_total_steps": 83886080,
+      "counter_ratio": 1.0,
+      "synthetic_phase_seconds_all_iterations": 6144,
+      "native_console_time_seconds": 6144.0
+    },
+    {
+      "log_interval": 16,
+      "actual_native_outer_calls": {
+        "collect": 2048,
+        "WM": 2048,
+        "PPO": 2048,
+        "logs": 128
+      },
+      "synthetic_collection_steps": 83886080,
+      "native_console_total_steps": 5242880,
+      "counter_ratio": 16.0,
+      "synthetic_phase_seconds_all_iterations": 6144,
+      "native_console_time_seconds": 384.0
+    }
+  ],
+  "implication": "At log_interval16, do not use native console Total steps or Time elapsed as cumulative whole-training measurements.",
+  "finite_job_counters": "Use completed native update count times10times4096 for real steps; sum each generated imagined rollout once; use monotonic whole-run elapsed time.",
+  "current_four_running_payloads_modified": false,
+  "paper_results_reproduced": false
+}
