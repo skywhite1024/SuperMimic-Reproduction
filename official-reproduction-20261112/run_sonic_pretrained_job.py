@@ -75,16 +75,40 @@ def main():
         stage("install-inference-dependencies-offline",[str(executable),"-m","pip","install",
             "--disable-pip-version-check","--no-index","--no-deps","--require-hashes",
             "--find-links",str(wheel_cache),"-r",str(requirements)],300)
+        expected_files=dict(MODEL_HASHES)
+        expected_files.update({"observation_config.yaml":"466d05947c78af6c76388adfb86e3a2a77b2a1d921a64883ed3d085ebf58de1b",
+            "sonic_release/config.yaml":"f08187795fa16a839a28bc1c18e0555d38d9420e03733744341cdcb56ab629c7"})
         download_code = (
-            "from huggingface_hub import hf_hub_download\n"
+            "import hashlib,json,sys,urllib.request,urllib.error,uuid\n"
             "from pathlib import Path\n"
-            "import sys,shutil\n"
-            "root=Path(sys.argv[1]);root.mkdir(parents=True,exist_ok=True)\n"
-            "for name in ['model_encoder.onnx','model_decoder.onnx','observation_config.yaml','sonic_release/config.yaml']:\n"
-            " path=hf_hub_download('nvidia/GEAR-SONIC',name,revision='6733128a3d8a523b1418b06bca3cdf61c8b0987f',token=False)\n"
+            "root=Path(sys.argv[1]);expected=json.loads(sys.argv[2]);root.mkdir(parents=True,exist_ok=True)\n"
+            "def digest(p):\n"
+            " with p.open('rb') as stream:return hashlib.file_digest(stream,'sha256').hexdigest()\n"
+            "for name,sha in expected.items():\n"
             " target=root/name;target.parent.mkdir(parents=True,exist_ok=True)\n"
-            " if not target.exists():shutil.copyfile(path,target)\n")
-        stage("download-public-pinned-models",[str(executable),"-c",download_code,str(models)],900)
+            " if target.exists():\n"
+            "  assert digest(target)==sha,('Existing model cache checksum mismatch',name)\n"
+            "  print('SONIC_MODEL_TRANSFER '+json.dumps(dict(file=name,status='verified_cache')),flush=True);continue\n"
+            " completed=False\n"
+            " for endpoint in ['https://huggingface.co','https://hf-mirror.com']:\n"
+            "  temporary=target.with_name(target.name+'.'+uuid.uuid4().hex+'.part')\n"
+            "  url=endpoint+'/nvidia/GEAR-SONIC/resolve/6733128a3d8a523b1418b06bca3cdf61c8b0987f/'+name\n"
+            "  print('SONIC_MODEL_TRANSFER '+json.dumps(dict(file=name,endpoint=endpoint,status='starting')),flush=True)\n"
+            "  try:\n"
+            "   request=urllib.request.Request(url,headers={'User-Agent':'SuperMimic-Reproduction/1.0'})\n"
+            "   with urllib.request.urlopen(request,timeout=60) as response,temporary.open('xb') as stream:\n"
+            "    count=0\n"
+            "    while chunk:=response.read(1024*1024):\n"
+            "     stream.write(chunk);count+=len(chunk)\n"
+            "     assert count<=80000000,('Unexpected model-file size',name,count)\n"
+            "   assert digest(temporary)==sha,('Downloaded model checksum mismatch',name)\n"
+            "   temporary.replace(target);completed=True\n"
+            "   print('SONIC_MODEL_TRANSFER '+json.dumps(dict(file=name,endpoint=endpoint,status='SHA256_verified',bytes=count)),flush=True);break\n"
+            "  except (urllib.error.URLError,TimeoutError) as error:\n"
+            "   print('SONIC_MODEL_TRANSFER '+json.dumps(dict(file=name,endpoint=endpoint,status='transport_failed',error_type=type(error).__name__)),flush=True)\n"
+            "   if isinstance(error,urllib.error.HTTPError) and error.code in [401,403]:raise\n"
+            " if not completed:raise RuntimeError('Public pinned model transfer failed: '+name)\n")
+        stage("download-public-pinned-models",[str(executable),"-c",download_code,str(models),json.dumps(expected_files)],900)
         assert all(digest(models/name)==value for name,value in MODEL_HASHES.items())
         assert digest(models/"observation_config.yaml")=="466d05947c78af6c76388adfb86e3a2a77b2a1d921a64883ed3d085ebf58de1b"
         assert digest(models/"sonic_release/config.yaml")=="f08187795fa16a839a28bc1c18e0555d38d9420e03733744341cdcb56ab629c7"
