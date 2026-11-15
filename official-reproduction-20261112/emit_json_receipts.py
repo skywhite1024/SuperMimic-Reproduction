@@ -16,10 +16,14 @@ from pathlib import Path
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("paths", nargs="+", type=Path)
+    parser.add_argument("--max-bytes", type=int, default=2_000_000,
+                        help="Explicit per-file bound for large original receipts (default 2000000, maximum 64000000)")
     args = parser.parse_args()
+    if not 0 < args.max_bytes <= 64_000_000:
+        parser.error("max-bytes must be between 1 and 64000000")
     for index, path in enumerate(args.paths):
-        if path.suffix != ".json" or path.stat().st_size > 2_000_000:
-            raise ValueError("Only explicitly named JSON receipts up to 2 MB are accepted")
+        if path.suffix != ".json" or path.stat().st_size > args.max_bytes:
+            raise ValueError(f"Only explicitly named JSON receipts up to {args.max_bytes} bytes are accepted")
         data = path.read_bytes()
         json.loads(data)
         encoded = base64.b64encode(zlib.compress(data, level=9)).decode("ascii")
