@@ -1,0 +1,112 @@
+{
+  "kind": "all_local_LAFAN40_walk_run_sprint_names",
+  "canonical_clips": 40,
+  "canonical_reference_frames": 441140,
+  "source_motion_files": {
+    "joint_names.json": "30355b480e4f89c97a693c72f8baf23902fd458d25e49b5df4741dd47aefce0d",
+    "joint_pos.npy": "64f0dff0d2e0d678a1f78213233124588044ba5781aa599c31b08d1348509a9b",
+    "joint_vel.npy": "11efc4b4b37b0818ea25a2dfa8676ed8f564a3443c97bf9c9680a346c06b23e0",
+    "motion_ends.npy": "fa4db64df8fe4d1f9362883b8c7b32d303a3865aeeab1c92fad0e89144cf8be5",
+    "motion_names.json": "b2b46cceb62efa50b159e13928b4c991b80b27a59b381ed603392cfa87e3c8b9",
+    "root_ang_vel_w.npy": "88ff137fd4a6dde1626dceae086c8a810da624d650855d69af1adc052565f9b5",
+    "root_lin_vel_w.npy": "7738f75d8de3b070a1d6407a06e1a971d5723abccc1e46a90a1aa86e93c486a0",
+    "root_pos_w.npy": "a57c5a8efc209c345ea4f7d83ef36936c0edfefb60f137757af69c6f4f7272fe",
+    "root_quat_w.npy": "9934171fce73559ec04d63db2bafee95575cd46196fe39aea425d677eae5303e"
+  },
+  "selected": [
+    {
+      "index": 22,
+      "name": "run1_subject2",
+      "reference_frames": 11891
+    },
+    {
+      "index": 23,
+      "name": "run1_subject5",
+      "reference_frames": 11891
+    },
+    {
+      "index": 24,
+      "name": "run2_subject1",
+      "reference_frames": 12241
+    },
+    {
+      "index": 25,
+      "name": "run2_subject4",
+      "reference_frames": 12241
+    },
+    {
+      "index": 26,
+      "name": "sprint1_subject2",
+      "reference_frames": 13656
+    },
+    {
+      "index": 27,
+      "name": "sprint1_subject4",
+      "reference_frames": 13656
+    },
+    {
+      "index": 28,
+      "name": "walk1_subject1",
+      "reference_frames": 13066
+    },
+    {
+      "index": 29,
+      "name": "walk1_subject2",
+      "reference_frames": 13066
+    },
+    {
+      "index": 30,
+      "name": "walk1_subject5",
+      "reference_frames": 13066
+    },
+    {
+      "index": 31,
+      "name": "walk2_subject1",
+      "reference_frames": 11909
+    },
+    {
+      "index": 32,
+      "name": "walk2_subject3",
+      "reference_frames": 11909
+    },
+    {
+      "index": 33,
+      "name": "walk2_subject4",
+      "reference_frames": 11909
+    },
+    {
+      "index": 34,
+      "name": "walk3_subject1",
+      "reference_frames": 12331
+    },
+    {
+      "index": 35,
+      "name": "walk3_subject2",
+      "reference_frames": 12331
+    },
+    {
+      "index": 36,
+      "name": "walk3_subject3",
+      "reference_frames": 12331
+    },
+    {
+      "index": 37,
+      "name": "walk3_subject4",
+      "reference_frames": 12331
+    },
+    {
+      "index": 38,
+      "name": "walk3_subject5",
+      "reference_frames": 12331
+    },
+    {
+      "index": 39,
+      "name": "walk4_subject1",
+      "reference_frames": 8196
+    }
+  ],
+  "clips": 18,
+  "reference_frames": 220352,
+  "author_exact_Figure5_membership_confirmed": false,
+  "paper_results_reproduced": false
+}

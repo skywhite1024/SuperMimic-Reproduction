@@ -42,13 +42,16 @@ class TerminationTrace:
         return result
 
 
-def make_native_ppo_runner(native_cfg, termination_mode, trace_folder):
+def make_native_ppo_runner(native_cfg, termination_mode, trace_folder, *, trace_updates=None, log_every=1):
     from supermimic.models import build_mlp
     from supermimic.runners.ppo_runner import PpoRunner
     from supermimic.runners.supermimic_runner import build_actor
     if termination_mode not in ('released_uint8', 'diagnostic_float'):
         raise ValueError('Explicit termination mode required')
     trace_folder = Path(trace_folder)
+    trace_updates = None if trace_updates is None else frozenset(trace_updates)
+    if log_every < 1:
+        raise ValueError('Positive logging interval required')
 
     class NativeNetworkPpoRunner(PpoRunner):
         def _build_mlp(self, name, input_dim, output_dim, hidden_dims, **kwargs):
@@ -89,13 +92,18 @@ def make_native_ppo_runner(native_cfg, termination_mode, trace_folder):
             critic_after = state_sha256(self.alg.critic.native_critic)
             if actor_after == actor_before or critic_after == critic_before:
                 raise ValueError('Native actor and critic must both change in each PPO update')
-            trace_folder.mkdir(parents=True,exist_ok=True)
-            trace = trace_folder / f'update-{len(self.integration_updates)+1:03d}.npz'
-            np.savez_compressed(trace, probabilities=probabilities.cpu().numpy(),
-                stored_termination=stored.cpu().numpy())
-            with np.load(trace, allow_pickle=False) as saved:
-                assert np.array_equal(saved['probabilities'], probabilities.cpu().numpy())
-                assert np.array_equal(saved['stored_termination'], stored.cpu().numpy())
+            update = len(self.integration_updates)+1
+            trace_receipt = None
+            if trace_updates is None or update in trace_updates:
+                trace_folder.mkdir(parents=True,exist_ok=True)
+                trace = trace_folder / f'update-{update:06d}.npz'
+                np.savez_compressed(trace, probabilities=probabilities.cpu().numpy(),
+                    stored_termination=stored.cpu().numpy())
+                with np.load(trace, allow_pickle=False) as saved:
+                    assert np.array_equal(saved['probabilities'], probabilities.cpu().numpy())
+                    assert np.array_equal(saved['stored_termination'], stored.cpu().numpy())
+                trace_receipt = dict(path=str(trace), bytes=trace.stat().st_size,
+                    sha256=hashlib.sha256(trace.read_bytes()).hexdigest(), readback_verified=True)
             fractional = (probabilities > 0) & (probabilities < 1)
             row = dict(update=len(self.integration_updates)+1, termination_mode=termination_mode,
                 storage_dtype=str(stored.dtype), imagined_steps=int(probabilities.numel()),
@@ -108,10 +116,11 @@ def make_native_ppo_runner(native_cfg, termination_mode, trace_folder):
                 critic_before=critic_before, critic_after=critic_after,
                 actor_and_critic_changed=True,
                 losses={k:float(v) for k,v in losses.items()},
-                trace=dict(path=str(trace), bytes=trace.stat().st_size,
-                    sha256=hashlib.sha256(trace.read_bytes()).hexdigest(), readback_verified=True))
+                trace=trace_receipt)
             self.integration_updates.append(row)
-            print('PPO_WM_NATIVE_UPDATE ' + json.dumps(row),flush=True)
+            if update == 1 or update % log_every == 0:
+                print('PPO_WM_NATIVE_UPDATE ' + json.dumps({key:row[key] for key in
+                    ('update','imagined_steps','fractional_positions_truncated_to_zero','losses')}),flush=True)
             return losses
 
     return NativeNetworkPpoRunner

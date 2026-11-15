@@ -30,8 +30,9 @@ def main():
     parser.add_argument("--order", choices=("index", "length"), default="length")
     parser.add_argument("--checkpoint-collection-step", type=int,
                         help="Select a retained snapshot from a completed parent run; default uses final models")
-    parser.add_argument("--training-algorithm", choices=("first-order", "ppo-sim"), default="first-order")
+    parser.add_argument("--training-algorithm", choices=("first-order", "ppo-sim", "ppo-wm"), default="first-order")
     parser.add_argument("--ppo-sim-update", type=int, help="Retained PPO update, with its own parent receipt")
+    parser.add_argument("--ppo-wm-update", type=int, help="Retained PPO-WM native inference snapshot")
     args = parser.parse_args()
     if args.num_envs < 1 or args.expected_clips < 1:
         parser.error("positive environment and clip counts are required")
@@ -51,6 +52,7 @@ def main():
 
     run, motions, output = args.run.resolve(), args.motions.resolve(), args.output.resolve()
     if args.training_algorithm == "ppo-sim":
+        if args.ppo_wm_update is not None:parser.error("PPO-Sim does not accept a PPO-WM update")
         if args.checkpoint_collection_step is not None:
             parser.error("Use --ppo-sim-update for simulator PPO snapshots")
         from ppo_sim_checkpoint import select_ppo_sim_checkpoint
@@ -59,7 +61,16 @@ def main():
             raise ValueError("Review unknown PPO-Sim goal backend")
         goal_backend = "eager"
         runner_payload = resolved["native_network_architecture"]
+    elif args.training_algorithm == "ppo-wm":
+        if args.ppo_sim_update is not None or args.checkpoint_collection_step is not None:
+            parser.error("Use only --ppo-wm-update for a PPO-WM snapshot")
+        from ppo_wm_checkpoint import select_ppo_wm_checkpoint
+        training,resolved,checkpoints,checkpoint_selection=select_ppo_wm_checkpoint(run,args.ppo_wm_update)
+        if resolved["goal_backend"]!="author eager goal math":raise ValueError("Unknown PPO-WM goal backend")
+        goal_backend="eager"
+        runner_payload=resolved["native_network_architecture"]
     else:
+        if args.ppo_wm_update is not None:parser.error("--ppo-wm-update requires --training-algorithm ppo-wm")
         if args.ppo_sim_update is not None:
             parser.error("--ppo-sim-update requires --training-algorithm ppo-sim")
         from select_completed_checkpoint import select_completed_checkpoint
