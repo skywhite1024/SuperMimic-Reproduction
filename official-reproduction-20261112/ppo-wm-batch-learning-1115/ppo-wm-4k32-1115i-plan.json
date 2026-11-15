@@ -1,0 +1,199 @@
+{
+  "status": "submitted_running",
+  "name": "supermimic-official-ppo-wm-4k32-260010076-1115i",
+  "display_name": "260010076-SuperMimic-PPO-WM-4k32-1115i",
+  "source_commit": "9594228b8411247729aa7d63d13150636d868f9a",
+  "source_files": {
+    "run_ppo_wm_batch_learning_job.py": "ca7253377ba3f05063b3b4a6fbfe5524e7a733d7d972a80dab78b780952b2469",
+    "run_ppo_wm_integration.py": "630ca8e3671569aa509d224dfa9e722b1431444adf1d7d5cb24ec523da40f4ad",
+    "ppo_wm_native_runtime.py": "1dd47eacd163e00c741740225a2619f201192038a0b5ecf1381beaaf712c88a8",
+    "paper_ppo_models.py": "08463f540b76a6dfe7086e7fbcaab447453078c6b42ac307a8f181dfa062f570",
+    "paper_profile.py": "14594ba9f002122e8fe4d22a1a8a9e982499b08629416f52069bee4ab1deb177",
+    "ppo_wm_checkpoint.py": "167a598c819b4181f074791fcc9453cef80c6e2a57b708e9cbd9c7d36bbc963a",
+    "evaluate_motion_corpus_v2.py": "61a65e25c589dc01bc19f7c4704895725742525e9d339a201a8dbff6262dbfa7",
+    "manual_reset_observations.py": "3933258bdcd8c80a30d3fc256bf3d82084ff9661f0d20c620bba07b518dc1f6d",
+    "audit_corpus_result.py": "86ab207b9435b03b6203d13338a441d9951c34307a3a359321cad4ad8c29676d",
+    "audit_saved_trajectories.py": "cf9e186d350f41d4287bfe962674c79f08f5d0874ea13034c02f4b4721d17163",
+    "audit_saved_initial_states_v2.py": "a4e3edc99cfdf09c96028f6fbb76bd8764c1fda6a6c6b5fcb4019ff65e0ef762",
+    "emit_json_receipts.py": "218bf4ddfa0946a54b9d2c4f8415e217da1f97b45f5dccb2fad922414646d889",
+    "prepare_lafan_locomotion18.py": "93d72d9a6cc12faed252505e95e23f54514671711166693f26b5dede0defbbaa",
+    "lafan-locomotion18-spec.json": "c7742d8ba8e19dbc8c42628fa4fc72183a6b77d5186b5b6c6ab38e1b40c8ca48"
+  },
+  "command_sha256": "4e9708fe6a5dc276412bb7a3a34027ef0f96413940418aaaac9de6755b180bfe",
+  "bootstrap_characters": 44384,
+  "gpu": 1,
+  "vcpu": 4,
+  "ram_gib": 64,
+  "replicas": 1,
+  "max_restarts": 0,
+  "max_program_seconds": 14400,
+  "forced_kill_after_seconds": 30,
+  "per_training_seconds": 7200,
+  "per_evaluation_seconds": 900,
+  "per_audit_seconds": 180,
+  "seed": 42,
+  "num_real_envs": 4096,
+  "outer_updates": 2048,
+  "real_collections_per_update": 10,
+  "planned_real_simulator_steps": 83886080,
+  "imagined_batch_size": 4096,
+  "steps_per_rollout": 32,
+  "planned_imagined_steps": 268435456,
+  "termination_mode": "released_uint8",
+  "native_weight_warm_start": false,
+  "training_from_scratch": true,
+  "evaluation_PPO_updates": [
+    64,
+    256,
+    1024,
+    2048
+  ],
+  "retained_PPO_updates": [
+    64,
+    256,
+    512,
+    1024,
+    2048
+  ],
+  "expected_original_JSONs_if_complete": 26,
+  "motion_subset": {
+    "kind": "all_local_LAFAN40_walk_run_sprint_names",
+    "canonical_clips": 40,
+    "canonical_reference_frames": 441140,
+    "source_motion_files": {
+      "joint_names.json": "30355b480e4f89c97a693c72f8baf23902fd458d25e49b5df4741dd47aefce0d",
+      "joint_pos.npy": "64f0dff0d2e0d678a1f78213233124588044ba5781aa599c31b08d1348509a9b",
+      "joint_vel.npy": "11efc4b4b37b0818ea25a2dfa8676ed8f564a3443c97bf9c9680a346c06b23e0",
+      "motion_ends.npy": "fa4db64df8fe4d1f9362883b8c7b32d303a3865aeeab1c92fad0e89144cf8be5",
+      "motion_names.json": "b2b46cceb62efa50b159e13928b4c991b80b27a59b381ed603392cfa87e3c8b9",
+      "root_ang_vel_w.npy": "88ff137fd4a6dde1626dceae086c8a810da624d650855d69af1adc052565f9b5",
+      "root_lin_vel_w.npy": "7738f75d8de3b070a1d6407a06e1a971d5723abccc1e46a90a1aa86e93c486a0",
+      "root_pos_w.npy": "a57c5a8efc209c345ea4f7d83ef36936c0edfefb60f137757af69c6f4f7272fe",
+      "root_quat_w.npy": "9934171fce73559ec04d63db2bafee95575cd46196fe39aea425d677eae5303e"
+    },
+    "selected": [
+      {
+        "index": 22,
+        "name": "run1_subject2",
+        "reference_frames": 11891
+      },
+      {
+        "index": 23,
+        "name": "run1_subject5",
+        "reference_frames": 11891
+      },
+      {
+        "index": 24,
+        "name": "run2_subject1",
+        "reference_frames": 12241
+      },
+      {
+        "index": 25,
+        "name": "run2_subject4",
+        "reference_frames": 12241
+      },
+      {
+        "index": 26,
+        "name": "sprint1_subject2",
+        "reference_frames": 13656
+      },
+      {
+        "index": 27,
+        "name": "sprint1_subject4",
+        "reference_frames": 13656
+      },
+      {
+        "index": 28,
+        "name": "walk1_subject1",
+        "reference_frames": 13066
+      },
+      {
+        "index": 29,
+        "name": "walk1_subject2",
+        "reference_frames": 13066
+      },
+      {
+        "index": 30,
+        "name": "walk1_subject5",
+        "reference_frames": 13066
+      },
+      {
+        "index": 31,
+        "name": "walk2_subject1",
+        "reference_frames": 11909
+      },
+      {
+        "index": 32,
+        "name": "walk2_subject3",
+        "reference_frames": 11909
+      },
+      {
+        "index": 33,
+        "name": "walk2_subject4",
+        "reference_frames": 11909
+      },
+      {
+        "index": 34,
+        "name": "walk3_subject1",
+        "reference_frames": 12331
+      },
+      {
+        "index": 35,
+        "name": "walk3_subject2",
+        "reference_frames": 12331
+      },
+      {
+        "index": 36,
+        "name": "walk3_subject3",
+        "reference_frames": 12331
+      },
+      {
+        "index": 37,
+        "name": "walk3_subject4",
+        "reference_frames": 12331
+      },
+      {
+        "index": 38,
+        "name": "walk3_subject5",
+        "reference_frames": 12331
+      },
+      {
+        "index": 39,
+        "name": "walk4_subject1",
+        "reference_frames": 8196
+      }
+    ],
+    "clips": 18,
+    "reference_frames": 220352,
+    "author_exact_Figure5_membership_confirmed": false,
+    "paper_results_reproduced": false
+  },
+  "author_exact_motion_membership_confirmed": false,
+  "PPO_hyperparameters_author_confirmed": false,
+  "main_first_order_comparison_complete": false,
+  "paper_results_reproduced": false,
+  "local_original_RSL_boundary_test_passed": true,
+  "actual_new_CUDA_learning_verified": true,
+  "full_training_resume_available": false,
+  "output": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-4k32-1115i",
+  "submitted": true,
+  "platform_status": "running",
+  "uid": "81df9d8591e84493b86e27d5f505cb3f",
+  "created_at": "2026-11-15T14:47:13+08:00",
+  "program_started_at": "2026-11-15T14:47:23.956042+08:00",
+  "program_deadline": "2026-11-15T18:47:23.956042+08:00",
+  "forced_exit_deadline": "2026-11-15T18:47:53.956042+08:00",
+  "source_and_vendor_hash_preflight_passed": true,
+  "all18_physical_source_slices_verified": true,
+  "main_training_started_at": "2026-11-15T14:47:26.904350+08:00",
+  "main_training_deadline": "2026-11-15T16:47:26.904350+08:00",
+  "startup_command_exact_editor_readback": true,
+  "last_observed_native_update": 112,
+  "last_observed_retained_checkpoint": {
+    "ppo_update": 64,
+    "real_simulator_steps": 2621440,
+    "imagined_steps": 8388608,
+    "seconds_since_training_entry": 147.75933288037777
+  },
+  "evidence_captured_at": "2026-11-15T14:56:39.843154+08:00"
+}

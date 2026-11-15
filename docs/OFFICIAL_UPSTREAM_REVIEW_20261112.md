@@ -759,6 +759,14 @@ The [comparison source](../official-reproduction-20261112/summarize_1115_results
 
 The complete goal remains open. Exact author corpus membership/SONIC benchmark, remaining PPO-WM rollout-batch and data-duration studies, matched-return push recovery, full training-return/multi-seed and18h1/4/8GPU comparisons, and physicalG1 deployment remain missing or qualified. The current four-H100 authorization cannot supply an eight-GPU experiment. Completed1115c/d/f/g/h computation is reused; no retraining is required to repair its metadata transport.
 
+## 58. Four Figure5-sized PPO-WM learning runs started on the locomotion subset
+
+At2026-11-15 14:56+08, four independent one-H100 jobs were running:4096x32 (`1115i`),8192x24 (`1115j`),8192x32 (`1115k`) and16384x32 (`1115l`). All use frozen source9594228, seed42,4096 real environments and2048 native PPO-WM updates from scratch. Each has a two-hour training limit, four-hour whole-program limit and zero automatic restarts. See [actual handles, deadlines and source hashes](../official-reproduction-20261112/ppo-wm-batch-learning-1115/) and [current resource status](../official-reproduction-20261112/resumption-run-status-20261115.json).
+
+The paper's Figure5 description specifies walk/run/sprint. The local subset therefore contains every18 canonical LAFAN40 clip whose name begins with those terms,220352 reference frames. All nine source-file hashes, original indices, physical array slices and readbacks passed on each actual worker. Exact author Figure5 membership remains unconfirmed. The first run reached112 native updates; its update64 inference checkpoint passed model-tensor and file-byte readbacks. This verifies active learning and saving, not policy quality. The other three had entered the main training stage at the observation time.
+
+The runs preserve released uint8 termination storage and record its fractional-probability truncation explicitly; they do not silently substitute the earlier float diagnostic. Native goal math executes eagerly, the world-model optimizer is Adam, and PPO hyperparameters remain released defaults whose paper alignment is unconfirmed. Each planned completed run contains four full18-clip simulator evaluations at updates64,256,1024,2048, every failure, saved-trajectory/initial-state audits and26 original JSON receipts. These evaluations had not yet completed at this snapshot. The prior40-motion first-order model is not an equal-task control; a fresh same18-motion control and a matched-return comparison remain necessary. No64-fold advantage or full Figure5 reproduction is claimed.
+
 The public PPO recovery can be replayed from the repository's `official-reproduction-20261112` directory:
 
 ```text

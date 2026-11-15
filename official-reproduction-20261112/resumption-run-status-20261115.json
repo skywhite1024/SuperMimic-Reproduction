@@ -1,8 +1,8 @@
 {
-  "observed_at": "2026-11-15T14:23:59.631972+08:00",
+  "observed_at": "2026-11-15T14:56:39.843154+08:00",
   "user_resumed": true,
   "max_requested_H100": 4,
-  "requested_nonterminal_H100": 0,
+  "requested_nonterminal_H100": 4,
   "paper_results_reproduced": false,
   "LIBERO_paused": true,
   "completed": {
@@ -132,6 +132,62 @@
       "exit_logged_at": "2026-11-15T14:17:20.073726587+08:00",
       "worker_status": "success",
       "training_or_evaluation_rerun": false
+    },
+    "PPO_WM_Figure5_batch_learning": {
+      "status": "four_single_H100_jobs_running",
+      "source_commit": "9594228b8411247729aa7d63d13150636d868f9a",
+      "jobs": {
+        "ppo-wm-4k32-1115i": {
+          "uid": "81df9d8591e84493b86e27d5f505cb3f",
+          "name": "supermimic-official-ppo-wm-4k32-260010076-1115i",
+          "gpu": 1,
+          "status": "submitted_running",
+          "platform_status": "running",
+          "max_restarts": 0,
+          "program_started_at": "2026-11-15T14:47:23.956042+08:00",
+          "program_deadline": "2026-11-15T18:47:23.956042+08:00",
+          "main_training_deadline": "2026-11-15T16:47:26.904350+08:00",
+          "last_observed_native_update": 112
+        },
+        "ppo-wm-8k24-1115j": {
+          "uid": "a8a3401120d4437694d78cc5d87322bb",
+          "name": "supermimic-official-ppo-wm-8k24-260010076-1115j",
+          "gpu": 1,
+          "status": "submitted_running",
+          "platform_status": "running",
+          "max_restarts": 0,
+          "program_started_at": "2026-11-15T14:54:32.539411+08:00",
+          "program_deadline": "2026-11-15T18:54:32.539411+08:00",
+          "main_training_deadline": "2026-11-15T16:54:35.310491+08:00",
+          "last_observed_native_update": null
+        },
+        "ppo-wm-8k32-1115k": {
+          "uid": "bae3e0aa1bc44bf78d1f73b91cd947b7",
+          "name": "supermimic-official-ppo-wm-8k32-260010076-1115k",
+          "gpu": 1,
+          "status": "submitted_running",
+          "platform_status": "running",
+          "max_restarts": 0,
+          "program_started_at": "2026-11-15T14:55:02.227209+08:00",
+          "program_deadline": "2026-11-15T18:55:02.227209+08:00",
+          "main_training_deadline": "2026-11-15T16:55:06.311866+08:00",
+          "last_observed_native_update": null
+        },
+        "ppo-wm-16k32-1115l": {
+          "uid": "2a81044e0a004302a97f007d71e3a6b1",
+          "name": "supermimic-official-ppo-wm-16k32-260010076-1115l",
+          "gpu": 1,
+          "status": "submitted_running",
+          "platform_status": "running",
+          "max_restarts": 0,
+          "program_started_at": "2026-11-15T14:55:12.093421+08:00",
+          "program_deadline": "2026-11-15T18:55:12.093421+08:00",
+          "main_training_deadline": "2026-11-15T16:55:14.694307+08:00",
+          "last_observed_native_update": null
+        }
+      },
+      "evidence": "ppo-wm-batch-learning-1115/",
+      "paper_results_reproduced": false
     }
   },
   "latest_readonly_training_counters": {

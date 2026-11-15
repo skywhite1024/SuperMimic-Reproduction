@@ -1,0 +1,32 @@
+PPO_WM_BATCH_BOOTSTRAP_SHA256 4e9708fe6a5dc276412bb7a3a34027ef0f96413940418aaaac9de6755b180bfe
+PPO_WM_BATCH_JOB_START 2026-11-15T06:47:23.956042+00:00
+PPO_WM_BATCH_VENDOR_SHA256 supermimic_runner.py c19751a691cabfe579da973d9c384b7355c545292bdb7748155978a9d9d78d59
+PPO_WM_BATCH_VENDOR_SHA256 ppo_runner.py 04fd4484ca9dd03e86c795d9ffb1e0c584f59754513f39ba824924c5f4e8ab6e
+PPO_WM_BATCH_SOURCE_SHA256 run_ppo_wm_batch_learning_job.py ca7253377ba3f05063b3b4a6fbfe5524e7a733d7d972a80dab78b780952b2469
+PPO_WM_BATCH_SOURCE_SHA256 run_ppo_wm_integration.py 630ca8e3671569aa509d224dfa9e722b1431444adf1d7d5cb24ec523da40f4ad
+PPO_WM_BATCH_SOURCE_SHA256 ppo_wm_native_runtime.py 1dd47eacd163e00c741740225a2619f201192038a0b5ecf1381beaaf712c88a8
+PPO_WM_BATCH_SOURCE_SHA256 paper_ppo_models.py 08463f540b76a6dfe7086e7fbcaab447453078c6b42ac307a8f181dfa062f570
+PPO_WM_BATCH_SOURCE_SHA256 paper_profile.py 14594ba9f002122e8fe4d22a1a8a9e982499b08629416f52069bee4ab1deb177
+PPO_WM_BATCH_SOURCE_SHA256 ppo_wm_checkpoint.py 167a598c819b4181f074791fcc9453cef80c6e2a57b708e9cbd9c7d36bbc963a
+PPO_WM_BATCH_SOURCE_SHA256 evaluate_motion_corpus_v2.py 61a65e25c589dc01bc19f7c4704895725742525e9d339a201a8dbff6262dbfa7
+PPO_WM_BATCH_SOURCE_SHA256 manual_reset_observations.py 3933258bdcd8c80a30d3fc256bf3d82084ff9661f0d20c620bba07b518dc1f6d
+PPO_WM_BATCH_SOURCE_SHA256 audit_corpus_result.py 86ab207b9435b03b6203d13338a441d9951c34307a3a359321cad4ad8c29676d
+PPO_WM_BATCH_SOURCE_SHA256 audit_saved_trajectories.py cf9e186d350f41d4287bfe962674c79f08f5d0874ea13034c02f4b4721d17163
+PPO_WM_BATCH_SOURCE_SHA256 audit_saved_initial_states_v2.py a4e3edc99cfdf09c96028f6fbb76bd8764c1fda6a6c6b5fcb4019ff65e0ef762
+PPO_WM_BATCH_SOURCE_SHA256 emit_json_receipts.py 218bf4ddfa0946a54b9d2c4f8415e217da1f97b45f5dccb2fad922414646d889
+PPO_WM_BATCH_SOURCE_SHA256 prepare_lafan_locomotion18.py 93d72d9a6cc12faed252505e95e23f54514671711166693f26b5dede0defbbaa
+PPO_WM_BATCH_SOURCE_SHA256 lafan-locomotion18-spec.json c7742d8ba8e19dbc8c42628fa4fc72183a6b77d5186b5b6c6ab38e1b40c8ca48
+PPO_WM_BATCH_INPUTS_VERIFIED
+PPO_WM_BATCH_STAGE_START {"script": "prepare_lafan_locomotion18.py", "log": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-4k32-1115i/prepare.log", "utc": "2026-11-15T06:47:24.410700+00:00", "limit_seconds": 180}
+LAFAN_LOCOMOTION18_PACKED {"status": "all18_original_motion_slices_preserved", "clips": 18, "reference_frames": 220352}
+PPO_WM_BATCH_STAGE_EXIT {"script": "prepare_lafan_locomotion18.py", "returncode": 0, "elapsed_seconds": 2.4933504723012447}
+PPO_WM_BATCH_STAGE_START {"script": "run_ppo_wm_integration.py", "log": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-wm-4k32-1115i/training.log", "utc": "2026-11-15T06:47:26.904350+00:00", "limit_seconds": 7200}
+PPO_WM_NATIVE_UPDATE {"update": 1, "imagined_steps": 131072, "fractional_positions_truncated_to_zero": 91808, "losses": {"value": 12.369695806503296, "surrogate": 0.29366058817831797, "entropy": 41.171206665039065}}
+PPO_WM_NATIVE_UPDATE {"update": 16, "imagined_steps": 131072, "fractional_positions_truncated_to_zero": 99912, "losses": {"value": 0.1572331704199314, "surrogate": -0.044181708962423724, "entropy": 40.69251689910889}}
+PPO_WM_NATIVE_UPDATE {"update": 32, "imagined_steps": 131072, "fractional_positions_truncated_to_zero": 98870, "losses": {"value": 0.1254509400576353, "surrogate": -0.04747679930878803, "entropy": 40.229173469543454}}
+PPO_WM_NATIVE_UPDATE {"update": 48, "imagined_steps": 131072, "fractional_positions_truncated_to_zero": 79231, "losses": {"value": 0.07431863211095333, "surrogate": -0.0498997374845203, "entropy": 39.87948703765869}}
+PPO_WM_NATIVE_UPDATE {"update": 64, "imagined_steps": 131072, "fractional_positions_truncated_to_zero": 78505, "losses": {"value": 0.07429385781288148, "surrogate": -0.039312574383802715, "entropy": 39.48174228668213}}
+PPO_WM_NATIVE_CHECKPOINT {"ppo_update": 64, "real_simulator_steps": 2621440, "imagined_steps": 8388608, "seconds_since_training_entry": 147.75933288037777}
+PPO_WM_NATIVE_UPDATE {"update": 80, "imagined_steps": 131072, "fractional_positions_truncated_to_zero": 76338, "losses": {"value": 0.041838545724749564, "surrogate": -0.04744728981750086, "entropy": 39.05801658630371}}
+PPO_WM_NATIVE_UPDATE {"update": 96, "imagined_steps": 131072, "fractional_positions_truncated_to_zero": 71213, "losses": {"value": 0.030805543158203365, "surrogate": -0.046991764596896246, "entropy": 38.67491550445557}}
+PPO_WM_NATIVE_UPDATE {"update": 112, "imagined_steps": 131072, "fractional_positions_truncated_to_zero": 67896, "losses": {"value": 0.03793303072452545, "surrogate": -0.04756490743020549, "entropy": 38.26156520843506}}
