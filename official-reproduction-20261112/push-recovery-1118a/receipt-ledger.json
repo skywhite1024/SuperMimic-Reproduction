@@ -1,0 +1,65 @@
+[
+  {
+    "i": 0,
+    "path": "/mnt/afs/260010076/SuperMimic/official-20261112/launch/85024e87167f48fd6a82cc78ec975e21647557fb-push-recovery-1118a/scientific-plan.json",
+    "bytes": 4540,
+    "sha256": "5da8558fe20f1d5ce8b7b3fc1e01776e426b3c598f907970f4ec45c7811cc594",
+    "chunks": 7
+  },
+  {
+    "i": 1,
+    "path": "/mnt/afs/260010076/SuperMimic/official-20261112/launch/85024e87167f48fd6a82cc78ec975e21647557fb-push-recovery-1118a/reference.json",
+    "bytes": 2915,
+    "sha256": "ca82a0df3fdb2be7eb093b66825e34be3d3d9992efe1fd0638aefda8d38da731",
+    "chunks": 4
+  },
+  {
+    "i": 2,
+    "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/push-recovery-1118a/critic_h32/protocol.json",
+    "bytes": 2757,
+    "sha256": "eb1995ed51e31a238a4e082be907afc34011b76526ae3fac4c8e52a31a064fc8",
+    "chunks": 5
+  },
+  {
+    "i": 3,
+    "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/push-recovery-1118a/critic_h32/t_pose.json",
+    "bytes": 14878,
+    "sha256": "da3b37c49f59082bb862fcc9f3254ede6278dedc1900d1312b383c52888c0b52",
+    "chunks": 6
+  },
+  {
+    "i": 4,
+    "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/push-recovery-1118a/critic_h32/home_stance.json",
+    "bytes": 14853,
+    "sha256": "16bff0d8f8e4a6140154d3311586eb64b07f832c2cefaa70bb4f9ab6264807bf",
+    "chunks": 6
+  },
+  {
+    "i": 5,
+    "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/push-recovery-1118a/no_critic_h64/protocol.json",
+    "bytes": 2526,
+    "sha256": "a8b24f26e70cca458ca68cb5cfcbefdb695e7d2784999af20a2100550e4b8e59",
+    "chunks": 5
+  },
+  {
+    "i": 6,
+    "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/push-recovery-1118a/no_critic_h64/t_pose.json",
+    "bytes": 14886,
+    "sha256": "41e8d43882612f14529ec98e3e24ecc121667ecbafde45ef4dc5b08cb3d0da36",
+    "chunks": 6
+  },
+  {
+    "i": 7,
+    "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/push-recovery-1118a/no_critic_h64/home_stance.json",
+    "bytes": 14828,
+    "sha256": "1534363e2cd99de4d872bb4a716f6802fce1db0276f3343f2d36783eace0ba83",
+    "chunks": 6
+  },
+  {
+    "i": 8,
+    "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/push-recovery-1118a/driver-result.json",
+    "bytes": 1257,
+    "sha256": "d088f801a2dbf2181be0d56ee88eeae7b140575d135ccc5afaddfdb4681bc9e0",
+    "chunks": 3
+  }
+]

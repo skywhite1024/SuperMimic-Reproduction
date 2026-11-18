@@ -1,0 +1,591 @@
+{
+  "cases": 33,
+  "impulses": 32,
+  "prepush_failures": 0,
+  "falls_after_push": 3,
+  "pushed_survived": 29,
+  "pushed_settled": 9,
+  "zero_push_eligible": true,
+  "max_root_qvel_jump_error": 2.384185791015625e-07,
+  "records": [
+    {
+      "case": "zero",
+      "delta_velocity_m_s": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": false,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": true,
+      "final_1s_stable": true,
+      "recovery_seconds": 0.02,
+      "final_travel_m": 0.004786796867847443
+    },
+    {
+      "case": "+x:0.5",
+      "delta_velocity_m_s": [
+        0.5,
+        0.0,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": true,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 0.19829171895980835
+    },
+    {
+      "case": "+x:1.0",
+      "delta_velocity_m_s": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": true,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 0.5709794163703918
+    },
+    {
+      "case": "+x:1.5",
+      "delta_velocity_m_s": [
+        1.5,
+        0.0,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": true,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 1.1320966482162476
+    },
+    {
+      "case": "+x:2.0",
+      "delta_velocity_m_s": [
+        2.0,
+        0.0,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": true,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 1.6083070039749146
+    },
+    {
+      "case": "+x:2.5",
+      "delta_velocity_m_s": [
+        2.5,
+        0.0,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": true,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 2.237576961517334
+    },
+    {
+      "case": "+x:3.0",
+      "delta_velocity_m_s": [
+        3.0,
+        0.0,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": true,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 2.783205270767212
+    },
+    {
+      "case": "+x:3.5",
+      "delta_velocity_m_s": [
+        3.5,
+        0.0,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": true,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 4.045251846313477
+    },
+    {
+      "case": "+x:4.0",
+      "delta_velocity_m_s": [
+        4.0,
+        0.0,
+        0.0
+      ],
+      "observed_steps": 153,
+      "impulse_applied": true,
+      "fell": true,
+      "fall_time_from_start_s": 3.06,
+      "fall_time_relative_to_push_s": 1.06,
+      "prepush_stable_final_1s": true,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 3.8282859325408936
+    },
+    {
+      "case": "-x:0.5",
+      "delta_velocity_m_s": [
+        -0.5,
+        0.0,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": true,
+      "final_1s_stable": true,
+      "recovery_seconds": 1.64,
+      "final_travel_m": 0.23627646267414093
+    },
+    {
+      "case": "-x:1.0",
+      "delta_velocity_m_s": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": true,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 0.5503528714179993
+    },
+    {
+      "case": "-x:1.5",
+      "delta_velocity_m_s": [
+        -1.5,
+        0.0,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": true,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 1.018186330795288
+    },
+    {
+      "case": "-x:2.0",
+      "delta_velocity_m_s": [
+        -2.0,
+        0.0,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": true,
+      "final_1s_stable": true,
+      "recovery_seconds": 3.4,
+      "final_travel_m": 1.5347787141799927
+    },
+    {
+      "case": "-x:2.5",
+      "delta_velocity_m_s": [
+        -2.5,
+        0.0,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": true,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 2.6099393367767334
+    },
+    {
+      "case": "-x:3.0",
+      "delta_velocity_m_s": [
+        -3.0,
+        0.0,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": true,
+      "final_1s_stable": true,
+      "recovery_seconds": 4.28,
+      "final_travel_m": 3.927264451980591
+    },
+    {
+      "case": "-x:3.5",
+      "delta_velocity_m_s": [
+        -3.5,
+        0.0,
+        0.0
+      ],
+      "observed_steps": 149,
+      "impulse_applied": true,
+      "fell": true,
+      "fall_time_from_start_s": 2.98,
+      "fall_time_relative_to_push_s": 0.98,
+      "prepush_stable_final_1s": true,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 3.358988046646118
+    },
+    {
+      "case": "-x:4.0",
+      "delta_velocity_m_s": [
+        -4.0,
+        0.0,
+        0.0
+      ],
+      "observed_steps": 127,
+      "impulse_applied": true,
+      "fell": true,
+      "fall_time_from_start_s": 2.54,
+      "fall_time_relative_to_push_s": 0.54,
+      "prepush_stable_final_1s": true,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 2.0093631744384766
+    },
+    {
+      "case": "+y:0.5",
+      "delta_velocity_m_s": [
+        0.0,
+        0.5,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": true,
+      "final_1s_stable": true,
+      "recovery_seconds": 1.24,
+      "final_travel_m": 0.04268922656774521
+    },
+    {
+      "case": "+y:1.0",
+      "delta_velocity_m_s": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": true,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 0.24678975343704224
+    },
+    {
+      "case": "+y:1.5",
+      "delta_velocity_m_s": [
+        0.0,
+        1.5,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": true,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 0.5384009480476379
+    },
+    {
+      "case": "+y:2.0",
+      "delta_velocity_m_s": [
+        0.0,
+        2.0,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": true,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 0.9126256108283997
+    },
+    {
+      "case": "+y:2.5",
+      "delta_velocity_m_s": [
+        0.0,
+        2.5,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": true,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 1.5183225870132446
+    },
+    {
+      "case": "+y:3.0",
+      "delta_velocity_m_s": [
+        0.0,
+        3.0,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": true,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 2.313070297241211
+    },
+    {
+      "case": "+y:3.5",
+      "delta_velocity_m_s": [
+        0.0,
+        3.5,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": true,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 3.2409353256225586
+    },
+    {
+      "case": "+y:4.0",
+      "delta_velocity_m_s": [
+        0.0,
+        4.0,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": true,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 3.732717275619507
+    },
+    {
+      "case": "-y:0.5",
+      "delta_velocity_m_s": [
+        0.0,
+        -0.5,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": true,
+      "final_1s_stable": true,
+      "recovery_seconds": 2.88,
+      "final_travel_m": 0.14186599850654602
+    },
+    {
+      "case": "-y:1.0",
+      "delta_velocity_m_s": [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": true,
+      "final_1s_stable": true,
+      "recovery_seconds": 1.2,
+      "final_travel_m": 0.44054996967315674
+    },
+    {
+      "case": "-y:1.5",
+      "delta_velocity_m_s": [
+        0.0,
+        -1.5,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": true,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 0.7224047780036926
+    },
+    {
+      "case": "-y:2.0",
+      "delta_velocity_m_s": [
+        0.0,
+        -2.0,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": true,
+      "final_1s_stable": true,
+      "recovery_seconds": 1.48,
+      "final_travel_m": 1.3219573497772217
+    },
+    {
+      "case": "-y:2.5",
+      "delta_velocity_m_s": [
+        0.0,
+        -2.5,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": true,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 1.8403205871582031
+    },
+    {
+      "case": "-y:3.0",
+      "delta_velocity_m_s": [
+        0.0,
+        -3.0,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": true,
+      "final_1s_stable": true,
+      "recovery_seconds": 3.16,
+      "final_travel_m": 3.9714977741241455
+    },
+    {
+      "case": "-y:3.5",
+      "delta_velocity_m_s": [
+        0.0,
+        -3.5,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": true,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 3.6282474994659424
+    },
+    {
+      "case": "-y:4.0",
+      "delta_velocity_m_s": [
+        0.0,
+        -4.0,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": true,
+      "final_1s_stable": true,
+      "recovery_seconds": 2.76,
+      "final_travel_m": 4.212081432342529
+    }
+  ],
+  "trace": {
+    "path": "home_stance.npz",
+    "bytes": 4652855,
+    "sha256": "986148925da35b5fc5bc2341b60741ca14bd9252b9db7c9a4ec196f6b682bdf8",
+    "readback_recomputed": true
+  },
+  "status": "pose_sweep_completed",
+  "policy": "critic_h32",
+  "pose": "home_stance",
+  "reset": {
+    "current_physical_state_verified": true,
+    "observation_cache_reset_and_recomputed": true,
+    "actuator_histories_backfilled": true,
+    "cached_vs_fresh_state_max_abs_difference": 1.3707963228225708,
+    "first_state_max_abs_error": 0.0
+  },
+  "elapsed_s": 125.21500187180936,
+  "protocol_sha256": "eb1995ed51e31a238a4e082be907afc34011b76526ae3fac4c8e52a31a064fc8"
+}

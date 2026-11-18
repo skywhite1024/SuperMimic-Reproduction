@@ -1,0 +1,15 @@
+{
+  "status": "filtered_membership_reduction_from_existing_verified_full_raw_native_trajectories",
+  "filter_result_sha256": "4bd19b4dcfac2eba1d3b476c0c59c3fc0b1089006d417c7918976ad35e0c3423",
+  "existing_corrected_v2_full_result_sha256": "c9c6cb513153668aa39b78ce08a025e931fe88843038e526399fae252882b7ee",
+  "reexecuted_physics": false,
+  "source_policy_trained_on_raw_corpus": true,
+  "paper_exact_membership": false,
+  "clips": 129543,
+  "successes": 129524,
+  "failures": 19,
+  "successful_fraction": 0.9998533305543333,
+  "reference_frames": 47374271,
+  "mean_normalized_full_motion_return": 0.9252378030229262,
+  "frame_weighted_normalized_return": 0.9210589168827199
+}

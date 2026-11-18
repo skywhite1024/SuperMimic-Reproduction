@@ -1009,3 +1009,75 @@ Remaining requirements include exact benchmark/protocol alignment, dataset
 duration scaling, matched-return push recovery, multiple seeds, long runs with
 multiple devices, and hardware tests. Eight-GPU work exceeds the current
 four-H100 authorization. LIBERO remains paused.
+
+## 69. November 18–19 resumption and measured push responses
+
+The native checkpoints scored **0.82901** (critic, H=32, collection 24,001)
+and **0.82843** (no critic, H=64, collection 16,001) on the same LAFAN40
+evaluation. The full40 checkpoint returns provided the matching criterion.
+The released paper does not identify its exact checkpoint pair or publish its
+settling thresholds. These two checkpoints also differ in imagination horizon
+and training length.
+
+The single H100 job applied one horizontal pelvis velocity increment after
+two seconds of unforced motion, with six seconds of follow-up. It ran both the
+constructed T-pose and the official G1 HOME joint posture with the same
+foot-clearance convention. Each pose and policy combination includes a
+zero-push control and 32 pushes spanning four directions and 0.5–4.0 m/s.
+The CUDA worker checked initial states and raw velocity increments. It reopened
+the saved arrays to recompute first falls and recovery. Nine original JSON
+files were retrieved and all 132 trial records were reconciled locally.
+
+| Reference pose | Policy | Zero-push stability | Falls / pushes | Settled / pushes |
+| --- | --- | --- | ---: | ---: |
+| Constructed T-pose | Critic H32 | Failed | 6 / 32 | 0 / 32 |
+| Constructed T-pose | No critic H64 | Failed | 6 / 32 | 0 / 32 |
+| G1 HOME | Critic H32 | Passed | 3 / 32 | 9 / 32 |
+| G1 HOME | No critic H64 | Passed | 6 / 32 | 26 / 32 |
+
+Both unforced T-pose controls stayed upright for eight seconds while missing
+the declared static stability criteria. In HOME, the critic checkpoint fell
+fewer times at the high speeds and settled less often across the sweep.
+Under these settings the paper's T-pose difference remains unconfirmed.
+The original plot, protocols and per-direction records are in
+[push-recovery-1118a](../official-reproduction-20261112/push-recovery-1118a/validation.json).
+
+## 70. BONES feasibility and a fixed-budget duration study
+
+An independently documented adaptation of the Appendix E filter was applied
+to the verified local packed BONES release. The name stage keeps 129,679
+motion clips. The geometry stage uses G1 forward kinematics and MuJoCo's
+foot-capsule distance to a plane. With the published community choices for
+uprightness, standing height and low speed it excludes another 136 clips.
+The resulting 129,543 clips span 47,374,271 frames at 50 Hz, or 263.19 hours.
+This matches the independent project's reported count and exceeds the paper's
+count by 29 clips. Exact membership equivalence is unresolved.
+[Filter settings and hashes](../official-reproduction-20261112/bones-proxy-feasibility-1118/filter-result.json)
+and the [community implementation](https://github.com/Camtrixxx/SuperMimic/tree/a6ae3e2fb5231b0f1b99eb8d70c4cb1e2b8ba6c5/src/supermimic/data)
+identify the two sources.
+
+The existing raw-trained warm-tail checkpoint has **129,524 successes, 19
+failures and 0.92524 mean normalized return** on this selected membership.
+Filtering removes 4,191 of the 4,210 original failures. Those counts are a
+reduction of the already validated 142,220 native records after checking
+every original index, name and clip length. The change measures benchmark
+sensitivity to exclusions. The policy, trajectories and earlier result
+files used for the reduction are the same.
+[Existing-policy reduction](../official-reproduction-20261112/bones-proxy-feasibility-1118/existing-policy-reduction.json).
+
+The duration comparison uses nested sets of 508, 3,402, 19,569 and 129,543
+clips. Each case starts fresh with 4,096 environments, seed 42 and a fixed
+budget of 16,001 collections. Return is measured at 4,001, 8,001 and 16,001
+on the same 64 training clips. The endpoint evaluator also scores state
+prediction eight actual transitions ahead on the newly collected deterministic
+policy trajectories. Forecast errors are reported both at transition eight
+and averaged over all eight transitions, with locally defined nominal
+scales. The shared probe, fixed budget and aggregation are local protocol
+choices. The official paper's subset membership and error aggregation are
+still missing.
+
+The official remote main moved to
+[`deaf7594`](https://github.com/HybridRobotics/supermimic/commit/deaf759456890d320ef9dcfa9bb73c3a39edc738).
+Upstream removed its PPO world-model runner and collection action noise.
+The November experiments run the earlier pinned official code used by the
+retained checkpoints and the matched baselines.

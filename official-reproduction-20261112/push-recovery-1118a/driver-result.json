@@ -1,0 +1,18 @@
+{
+  "status": "completed",
+  "policy_return_codes": {
+    "critic_h32": 0,
+    "no_critic_h64": 0
+  },
+  "files": {
+    "launch/85024e87167f48fd6a82cc78ec975e21647557fb-push-recovery-1118a/scientific-plan.json": "5da8558fe20f1d5ce8b7b3fc1e01776e426b3c598f907970f4ec45c7811cc594",
+    "launch/85024e87167f48fd6a82cc78ec975e21647557fb-push-recovery-1118a/reference.json": "ca82a0df3fdb2be7eb093b66825e34be3d3d9992efe1fd0638aefda8d38da731",
+    "runs/push-recovery-1118a/critic_h32/protocol.json": "eb1995ed51e31a238a4e082be907afc34011b76526ae3fac4c8e52a31a064fc8",
+    "runs/push-recovery-1118a/critic_h32/t_pose.json": "da3b37c49f59082bb862fcc9f3254ede6278dedc1900d1312b383c52888c0b52",
+    "runs/push-recovery-1118a/critic_h32/home_stance.json": "16bff0d8f8e4a6140154d3311586eb64b07f832c2cefaa70bb4f9ab6264807bf",
+    "runs/push-recovery-1118a/no_critic_h64/protocol.json": "a8b24f26e70cca458ca68cb5cfcbefdb695e7d2784999af20a2100550e4b8e59",
+    "runs/push-recovery-1118a/no_critic_h64/t_pose.json": "41e8d43882612f14529ec98e3e24ecc121667ecbafde45ef4dc5b08cb3d0da36",
+    "runs/push-recovery-1118a/no_critic_h64/home_stance.json": "1534363e2cd99de4d872bb4a716f6802fce1db0276f3343f2d36783eace0ba83"
+  },
+  "finished_at": "2026-11-18T15:00:40.579850+00:00"
+}

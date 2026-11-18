@@ -1,0 +1,92 @@
+{
+  "status": "frozen_before_outcomes",
+  "source_commit": "85024e87167f48fd6a82cc78ec975e21647557fb",
+  "job_name": "supermimic-official-push-260010076-1118a",
+  "display_name": "260010076-SuperMimic-push-recovery-1118a",
+  "stem": "push-recovery-1118a",
+  "gpu_count": 1,
+  "max_job_seconds": 1800,
+  "max_restarts": 0,
+  "policy_timeout_s": 700,
+  "paper_reference": "arXiv:2610.28480, section 4.3",
+  "paper_matching_details_available": false,
+  "predeclared_pose_names": [
+    "t_pose",
+    "home_stance"
+  ],
+  "cases_per_policy_per_pose": 33,
+  "policy_selection": "Smallest full40 return difference available among recorded critic and critic-free candidates before perturbation.",
+  "interpretation": "Different imagination horizons and checkpoints. Attribution to critic alone is unavailable.",
+  "policies": {
+    "critic_h32": {
+      "label": "critic_h32",
+      "parent": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-curve-64k-1113ag/main/training",
+      "collection": 24001,
+      "horizon": 32,
+      "critic_enabled": true,
+      "full40_successes": 39,
+      "full40_normalized_return": 0.8290067885958701,
+      "selection": {
+        "parent_result_sha256": "39dbe053a498283bde51f025e485f552945e4a1c83477ff050411dce05129825",
+        "parent_collection_steps": 64001,
+        "evaluated_collection_steps": 24001,
+        "kind": "retained_snapshot",
+        "files": [
+          {
+            "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-curve-64k-1113ag/main/training/checkpoint-series/step-000024001/world_model.pt",
+            "bytes": 34990357,
+            "sha256": "4243b8199fed045495bc319d92678d2643598139e30a147b69ee111b646af01f"
+          },
+          {
+            "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-curve-64k-1113ag/main/training/checkpoint-series/step-000024001/actor.pt",
+            "bytes": 46439949,
+            "sha256": "4bfc66171230b98be838561cfea3e49e98eebaec260aeec9b0aa39b775ba400e"
+          },
+          {
+            "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-curve-64k-1113ag/main/training/checkpoint-series/step-000024001/critic.pt",
+            "bytes": 929269,
+            "sha256": "3d73f7c80fb7158dccadff7b4a333d056fac95b012dcec1acbf8c6c2ba92f620"
+          }
+        ],
+        "manifest_sha256": "33b1dd7575136aa16db81bea63d8412d41ca5ec0a77ac050bd1295aaadb00bc3",
+        "resolved_config_sha256": "018a9c2cabede2f00758afc3c56551e4b8051b1350ea0ca1ef0465cda94738b5"
+      }
+    },
+    "no_critic_h64": {
+      "label": "no_critic_h64",
+      "parent": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h064-no-critic/main/training",
+      "collection": 16001,
+      "horizon": 64,
+      "critic_enabled": false,
+      "full40_successes": 38,
+      "full40_normalized_return": 0.8284301918901429,
+      "selection": {
+        "parent_result_sha256": "193b1785e386ee104619d2b65238bbb38e6191086946472d8b20150f0c313c3f",
+        "parent_collection_steps": 16001,
+        "evaluated_collection_steps": 16001,
+        "kind": "retained_snapshot",
+        "files": [
+          {
+            "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h064-no-critic/main/training/checkpoint-series/step-000016001/world_model.pt",
+            "bytes": 34990357,
+            "sha256": "9592acce1d3dd60803bb27c12357f6301103ff86330bfb0a93e61a04995dde1d"
+          },
+          {
+            "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h064-no-critic/main/training/checkpoint-series/step-000016001/actor.pt",
+            "bytes": 46439949,
+            "sha256": "0f59cf31a0045317a5b585220323e727e258d3ac3f628b76b18342bad20cb9e2"
+          }
+        ],
+        "manifest_sha256": "9bb8dbd175df777eab0e1e5c9325f85590a333999303f49bc94744b4a61ed4ff",
+        "resolved_config_sha256": "2275577334a81d10bb101f3fab174589a6254e84f344c1555ef2a11f310228be"
+      }
+    }
+  },
+  "source_files": {
+    "evaluate_push_recovery.py": "0f3f7ec13069f9a8f76e61f37e00b754b58dca0cfd0b6994144624c131421512",
+    "push_recovery_contract.py": "5e9644ff70307686c3a2ce32e5f6daffa29d2cc9a5cd15fecc11216becd611ab",
+    "select_completed_checkpoint.py": "45f8cd554d82b60ca7d807a3568882646b52a9d0fef135c746c8bab38d1ccf8e",
+    "manual_reset_observations.py": "3933258bdcd8c80a30d3fc256bf3d82084ff9661f0d20c620bba07b518dc1f6d",
+    "emit_json_receipts.py": "218bf4ddfa0946a54b9d2c4f8415e217da1f97b45f5dccb2fad922414646d889"
+  }
+}

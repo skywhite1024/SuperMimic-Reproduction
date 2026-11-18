@@ -1,0 +1,63 @@
+{
+  "task": "SuperMimic-GenCoord-G1",
+  "policy": {
+    "label": "no_critic_h64",
+    "parent": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h064-no-critic/main/training",
+    "collection": 16001,
+    "horizon": 64,
+    "critic_enabled": false,
+    "full40_successes": 38,
+    "full40_normalized_return": 0.8284301918901429,
+    "selection": {
+      "parent_result_sha256": "193b1785e386ee104619d2b65238bbb38e6191086946472d8b20150f0c313c3f",
+      "parent_collection_steps": 16001,
+      "evaluated_collection_steps": 16001,
+      "kind": "retained_snapshot",
+      "files": [
+        {
+          "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h064-no-critic/main/training/checkpoint-series/step-000016001/world_model.pt",
+          "bytes": 34990357,
+          "sha256": "9592acce1d3dd60803bb27c12357f6301103ff86330bfb0a93e61a04995dde1d"
+        },
+        {
+          "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h064-no-critic/main/training/checkpoint-series/step-000016001/actor.pt",
+          "bytes": 46439949,
+          "sha256": "0f59cf31a0045317a5b585220323e727e258d3ac3f628b76b18342bad20cb9e2"
+        }
+      ],
+      "manifest_sha256": "9bb8dbd175df777eab0e1e5c9325f85590a333999303f49bc94744b4a61ed4ff",
+      "resolved_config_sha256": "2275577334a81d10bb101f3fab174589a6254e84f344c1555ef2a11f310228be"
+    }
+  },
+  "seed": 42,
+  "dt_s": 0.02,
+  "cases_per_pose": 33,
+  "elapsed_steps": 400,
+  "impulse_at_step": 100,
+  "reference_poses": [
+    "t_pose",
+    "home_stance"
+  ],
+  "physics": "native defaults; fixed friction coefficient 1, no noise or randomization",
+  "fall": "first fresh state with absolute pelvis height error > .25 m or projected gravity z error > .8",
+  "input": "one additive horizontal world root velocity jump after computing the action at t=2 s",
+  "recovery": "first post-impulse time within thresholds for the rest of the six-second response, at least 0.5 seconds",
+  "zero_push_criterion": "survival and all four thresholds for the last second before nominal push and at the end",
+  "thresholds": {
+    "planar_speed_m_s": 0.1,
+    "angular_speed_rad_s": 0.2,
+    "pelvis_tilt_deg": 10.0,
+    "joint_rms_deg": 10.0
+  },
+  "state_metric_order": [
+    "planar_speed_m_s",
+    "angular_speed_rad_s",
+    "pelvis_tilt_deg",
+    "joint_rms_deg",
+    "pelvis_z_m",
+    "travel_from_push_m"
+  ],
+  "goal_backend": "eager",
+  "auto_reset": false,
+  "weights_frozen": true
+}

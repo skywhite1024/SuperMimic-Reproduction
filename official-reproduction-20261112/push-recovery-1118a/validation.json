@@ -1,0 +1,143 @@
+{
+  "status": "complete_all_originals_and_132_trials_verified",
+  "original_JSONs": 9,
+  "job_uid": "1225ad3ddc1148dc9a890b86a03e33de",
+  "software_commit": "85024e87167f48fd6a82cc78ec975e21647557fb",
+  "bootstrap_sha256": "5c7187550072295c150c3f462615b64547996b837ff70c32adb7d6ce73239479",
+  "offline_log_sha256": "f47f087313bb68c03b79a04d2176cc900cfb26a0a0bed30902e9f1096bc19e93",
+  "individual_trials": 132,
+  "summaries": [
+    {
+      "policy": "critic_h32",
+      "pose": "t_pose",
+      "impulses": 32,
+      "prepush_failures": 0,
+      "falls_after_push": 6,
+      "pushed_survived": 26,
+      "pushed_settled": 0,
+      "zero_push": {
+        "case": "zero",
+        "delta_velocity_m_s": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "observed_steps": 400,
+        "impulse_applied": false,
+        "fell": false,
+        "fall_time_from_start_s": null,
+        "fall_time_relative_to_push_s": null,
+        "prepush_stable_final_1s": false,
+        "final_1s_stable": false,
+        "recovery_seconds": null,
+        "final_travel_m": 0.00207780790515244
+      },
+      "zero_push_eligible": false,
+      "max_jump_error_m_s": 2.9802322387695312e-08,
+      "source": "critic_h32/t_pose.json",
+      "recovery_range_s": null
+    },
+    {
+      "policy": "critic_h32",
+      "pose": "home_stance",
+      "impulses": 32,
+      "prepush_failures": 0,
+      "falls_after_push": 3,
+      "pushed_survived": 29,
+      "pushed_settled": 9,
+      "zero_push": {
+        "case": "zero",
+        "delta_velocity_m_s": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "observed_steps": 400,
+        "impulse_applied": false,
+        "fell": false,
+        "fall_time_from_start_s": null,
+        "fall_time_relative_to_push_s": null,
+        "prepush_stable_final_1s": true,
+        "final_1s_stable": true,
+        "recovery_seconds": 0.02,
+        "final_travel_m": 0.004786796867847443
+      },
+      "zero_push_eligible": true,
+      "max_jump_error_m_s": 2.384185791015625e-07,
+      "source": "critic_h32/home_stance.json",
+      "recovery_range_s": [
+        1.2,
+        4.28
+      ]
+    },
+    {
+      "policy": "no_critic_h64",
+      "pose": "t_pose",
+      "impulses": 32,
+      "prepush_failures": 0,
+      "falls_after_push": 6,
+      "pushed_survived": 26,
+      "pushed_settled": 0,
+      "zero_push": {
+        "case": "zero",
+        "delta_velocity_m_s": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "observed_steps": 400,
+        "impulse_applied": false,
+        "fell": false,
+        "fall_time_from_start_s": null,
+        "fall_time_relative_to_push_s": null,
+        "prepush_stable_final_1s": false,
+        "final_1s_stable": false,
+        "recovery_seconds": null,
+        "final_travel_m": 0.001390575198456645
+      },
+      "zero_push_eligible": false,
+      "max_jump_error_m_s": 2.384185791015625e-07,
+      "source": "no_critic_h64/t_pose.json",
+      "recovery_range_s": null
+    },
+    {
+      "policy": "no_critic_h64",
+      "pose": "home_stance",
+      "impulses": 32,
+      "prepush_failures": 0,
+      "falls_after_push": 6,
+      "pushed_survived": 26,
+      "pushed_settled": 26,
+      "zero_push": {
+        "case": "zero",
+        "delta_velocity_m_s": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "observed_steps": 400,
+        "impulse_applied": false,
+        "fell": false,
+        "fall_time_from_start_s": null,
+        "fall_time_relative_to_push_s": null,
+        "prepush_stable_final_1s": true,
+        "final_1s_stable": true,
+        "recovery_seconds": 0.02,
+        "final_travel_m": 0.0005330693675205112
+      },
+      "zero_push_eligible": true,
+      "max_jump_error_m_s": 2.384185791015625e-07,
+      "source": "no_critic_h64/home_stance.json",
+      "recovery_range_s": [
+        0.68,
+        4.34
+      ]
+    }
+  ],
+  "t_pose_pair_passes_unperturbed_gate": false,
+  "home_pair_passes_unperturbed_gate": true,
+  "reported_metrics_verified_from_raw_arrays_in_cloud": true,
+  "local_raw_state_arrays_available": false,
+  "paper_protocol_equivalence": false,
+  "all_original_SHA256_verified": true
+}
