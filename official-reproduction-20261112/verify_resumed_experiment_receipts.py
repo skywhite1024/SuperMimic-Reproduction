@@ -30,7 +30,7 @@ def plain_log(path):
                      for line in raw.decode("utf-8-sig").splitlines())
 
 
-def score_evaluation(folder, identities, physical_hashes):
+def score_evaluation(folder, identities, physical_hashes, *, num_envs=None, batch_order="index"):
     result, protocol, accounting, arrays, states = [
         read(folder / name) for name in EVALUATION_FILES
     ]
@@ -39,7 +39,8 @@ def score_evaluation(folder, identities, physical_hashes):
     assert result["status"] == "full_corpus_evaluation_completed"
     assert result["clips"] == protocol["clips"] == accounting["clips"] == len(rows) == n
     assert result["manual_reset_version"] == protocol["manual_reset_version"] == 2
-    assert protocol["num_envs"] == n and protocol["batch_order"] == "index"
+    assert protocol["num_envs"] == (n if num_envs is None else num_envs)
+    assert protocol["batch_order"] == batch_order
     assert not protocol["domain_randomization"] and not protocol["observation_noise"]
     assert protocol["motion_files"] == physical_hashes
     assert accounting["maximum_step_reward"] == .1
@@ -73,7 +74,7 @@ def score_evaluation(folder, identities, physical_hashes):
             "reference_frames": denom}
 
 
-def native_point(folder, train, step, identities, physical_hashes):
+def native_point(folder, train, step, identities, physical_hashes, *, num_envs=None, batch_order="index"):
     selected = read(folder / "protocol.json")["checkpoint_selection"]
     assert selected["evaluated_collection_steps"] == step
     assert selected["parent_result_sha256"] == sha256(train / "result.json")
@@ -85,7 +86,8 @@ def native_point(folder, train, step, identities, physical_hashes):
     assert {Path(r["path"]).name: r["sha256"] for r in selected["files"]} == {
         r["file"]: r["sha256"] for r in snapshot["files"]
     }
-    return {"collection_steps": step, **score_evaluation(folder, identities, physical_hashes),
+    return {"collection_steps": step, **score_evaluation(folder, identities, physical_hashes,
+            num_envs=num_envs, batch_order=batch_order),
             "real_transitions": step * 4096}
 
 

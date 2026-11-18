@@ -4,6 +4,7 @@ import dataclasses
 import hashlib
 import inspect
 import json
+import math
 import os
 from pathlib import Path
 import random
@@ -22,19 +23,25 @@ def main():
     parser.add_argument('--output',type=Path,required=True)
     parser.add_argument('--updates',type=int,default=3)
     parser.add_argument('--checkpoint-updates',type=int,nargs='+')
+    parser.add_argument('--checkpoint-seconds', type=float, nargs='+',
+                        help='Retain the first completed update at or after each training clock target')
     parser.add_argument('--trace-updates',type=int,nargs='+')
     parser.add_argument('--training-purpose',choices=('integration','finite-training'),default='integration')
     args=parser.parse_args()
     if args.updates<1 or (args.training_purpose=='integration' and args.updates!=3):
         parser.error('Positive update count; integration retains exactly three updates')
-    checkpoint_updates=args.checkpoint_updates or list(range(1,args.updates+1))
-    trace_updates=args.trace_updates or checkpoint_updates
+    targets = args.checkpoint_seconds or []
+    if targets and (args.training_purpose != 'finite-training' or args.checkpoint_updates
+                    or targets != sorted(set(targets)) or not all(math.isfinite(t) and t > 0 for t in targets)):
+        parser.error('Timed checkpoints require sorted positive seconds and finite training')
+    checkpoint_updates = [] if targets else args.checkpoint_updates or list(range(1,args.updates+1))
+    trace_updates = args.trace_updates or ([1] if targets else checkpoint_updates)
     for values in (checkpoint_updates,trace_updates):
         if values!=sorted(set(values)) or not all(1<=i<=args.updates for i in values):
             parser.error('Checkpoint/trace schedules must be sorted unique updates within the run')
-    if checkpoint_updates[-1]!=args.updates:
+    if checkpoint_updates and checkpoint_updates[-1]!=args.updates:
         parser.error('Final update must have an immutable checkpoint')
-    if args.training_purpose=='finite-training' and args.checkpoint_updates is None:
+    if args.training_purpose=='finite-training' and args.checkpoint_updates is None and not targets:
         parser.error('Longer training requires an explicit sparse checkpoint schedule')
     output=args.output.resolve();motions=args.motions.resolve()
     output.mkdir(parents=True,exist_ok=False)
@@ -93,6 +100,9 @@ def main():
         paper_hyperparameter_and_sampler_equivalence_confirmed=False,
         full_18h_1_4_8_GPU_comparison_completed=False,
         full_training_state_resume_available=False,vendor_files_modified=False)
+    if targets:
+        config.update(maximum_updates=args.updates, checkpoint_seconds=targets,
+                      duration_seconds=targets[-1], training_clock='monotonic from first update, including snapshot I/O')
     write(output/'resolved-config.json',config)
     report=dict(status='starting',updates=[],paper_results_reproduced=False,
         quality_evaluation_completed=False,world_model_updates=0,imagined_transitions=0)
@@ -135,6 +145,7 @@ def main():
         write(output/'result.json',report)
         manifest=[]
         started=time.monotonic()
+        target_count = 0
         for update in range(1,args.updates+1):
             row=loop.update(output/'trace'/f'update-{update:03d}.npz' if update in trace_updates else None)
             row['update_complete_seconds_since_program_entry']=time.monotonic()-program_started
@@ -144,8 +155,12 @@ def main():
                 scope='Native logger last100 completed real simulator episodes, not fixed-start full-clip return')
             logger.ep_extras.clear()
             report['updates']=loop.updates
-            if update not in checkpoint_updates:
-                if update%50==0:
+            passed = []
+            while target_count < len(targets) and row['update_complete_seconds_since_training_entry'] >= targets[target_count]:
+                passed.append(targets[target_count])
+                target_count += 1
+            if update not in checkpoint_updates and not passed:
+                if update % (250 if targets else 50)==0:
                     write(output/'result.json',report)
                 continue
             folder=output/'checkpoints'/f'update-{update:03d}';folder.mkdir(parents=True,exist_ok=False)
@@ -168,17 +183,31 @@ def main():
                 retained_snapshot_complete_seconds_since_training_entry=time.monotonic()-started,
                 native_actor_state_sha256=state_sha256(native_actor),
                 native_critic_state_sha256=state_sha256(critic.native_critic)))
+            if passed:
+                manifest[-1]['crossed_training_clock_seconds'] = passed
+                print('PPO_SIM_TIMED_SNAPSHOT ' + json.dumps(dict(update=update, targets=passed,
+                    seconds=manifest[-1]['retained_snapshot_complete_seconds_since_training_entry'])), flush=True)
             report['updates']=loop.updates
             report['checkpoint_sets']=manifest
             write(output/'checkpoint-manifest.json',manifest)
             write(output/'result.json',report)
-        assert loop.collections==24*args.updates and loop.simulator_steps==8192*24*args.updates
-        assert len(manifest)==len(checkpoint_updates) and len(loop.updates)==args.updates
+            if targets and target_count == len(targets):
+                break
+        actual_updates = len(loop.updates)
+        if targets:
+            if target_count != len(targets):
+                raise RuntimeError('The update limit was reached before the training clock target')
+            config.update(outer_updates=actual_updates, real_collections=24 * actual_updates,
+                          checkpoint_updates=[snapshot['ppo_update'] for snapshot in manifest])
+            write(output/'resolved-config.json',config)
+        else:
+            assert actual_updates == args.updates and len(manifest) == len(checkpoint_updates)
+        assert loop.collections==24*actual_updates and loop.simulator_steps==8192*24*actual_updates
         assert loop.sampler_updates==loop.collections//native.runner.return_sampler.horizon
         completed_status=('real_G1_simulator_PPO_integration_completed' if args.training_purpose=='integration'
                           else 'real_G1_simulator_PPO_finite_training_completed')
         report.update(status=completed_status,
-            ppo_update_calls=args.updates,collection_steps=loop.collections,simulator_steps=loop.simulator_steps,
+            ppo_update_calls=actual_updates,collection_steps=loop.collections,simulator_steps=loop.simulator_steps,
             elapsed_training_seconds=time.monotonic()-started,
             return_sampler_distribution_updates=loop.sampler_updates,
             final_model_state_hashes=dict(actor=state_sha256(native_actor),critic=state_sha256(critic.native_critic)),
@@ -186,7 +215,7 @@ def main():
             source_config_sha256=hashlib.sha256((output/'resolved-config.json').read_bytes()).hexdigest(),
             checkpoint_manifest_sha256=hashlib.sha256((output/'checkpoint-manifest.json').read_bytes()).hexdigest())
         write(output/'result.json',report)
-        print('PPO_SIM_REAL_G1_TRAINING_PASS '+json.dumps(dict(ppo_updates=args.updates,simulator_steps=loop.simulator_steps,
+        print('PPO_SIM_REAL_G1_TRAINING_PASS '+json.dumps(dict(ppo_updates=actual_updates,simulator_steps=loop.simulator_steps,
             imagined_transitions=0,world_model_updates=0)),flush=True)
     except Exception as error:
         report.update(status='failed',error=f'{type(error).__name__}: {error}')
