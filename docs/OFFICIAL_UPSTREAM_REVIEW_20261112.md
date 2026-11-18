@@ -1355,8 +1355,9 @@ reference and impulse grid.
 The four policies each ran 32 impulses and one unforced control on the
 first frame of `walk1_subject1`. All controls met the absolute posture
 criterion, and the absolute and pre-push-relative recovery counts agreed
-for every policy. We recovered 11 original JSONs and checked the fixed
-trial grid, all summaries and the hashes of the saved trajectory arrays.
+for every policy. The cloud worker read back its saved trajectory arrays
+before scoring. We recovered 11 original JSONs and recomputed the
+summaries from the fixed trial grid in those receipts.
 
 | Pair | Policy | Mean LAFAN40 return | Falls after impulse | Recovered |
 |---|---|---:|---:|---:|
@@ -1372,3 +1373,30 @@ declined for the equal-budget pair. In the equal-budget critic arm,
 the response. These outcomes apply to the fixed pose, checkpoint pairs
 and seed used here.
 [Verified trial accounting](../official-reproduction-20261112/push-h32-matched-1119x/validation.json).
+
+## 82. Full BONES proxy comparison of both SONIC releases
+
+The v1.1 checkpoint completed 127 batches on one H100, and the full
+reward, trajectory array and initial-state audits passed. A read-only
+job recovered the 47,390,749-byte per-motion original. The local verifier
+matched all 129,543 ordered motion identities and 47,374,271 reference
+frames to the default-release evaluation.
+
+| Released checkpoint | Mean return per clip | Frame-weighted return | Failures |
+|---|---:|---:|---:|
+| Default | 0.89753 | 0.90188 | 192 |
+| v1.1 | 0.87669 | 0.88137 | 472 |
+
+Both checkpoints completed 129,033 clips. The default completed 318 that
+v1.1 failed, and v1.1 completed 38 that the default failed. They both
+failed 154. Orientation-only failures increased from 29 to 255. On the
+shared completed clips, v1.1's mean return was lower by 0.01957.
+[Full v1.1 verification](../official-reproduction-20261112/sonic-v11-bones-full-1119t/full-validation.json),
+[paired analysis](../official-reproduction-20261112/sonic-v11-bones-full-1119t/paired-default-vs-v1_1.json).
+
+Appendix F reports 179 default and 239 v1.1 failures on the authors'
+129,514-motion set. Both evaluations show more failures for v1.1. The
+difference in the amount of degradation warrants matching the full
+reference membership and the evaluation details before attributing the
+gap to a particular part of the port.
+[Paper and Appendix F](https://arxiv.org/abs/2610.28480).

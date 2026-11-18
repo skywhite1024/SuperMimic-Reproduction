@@ -1,0 +1,44 @@
+{
+  "baseline_label": "Released SONIC default",
+  "candidate_label": "Released SONIC v1.1",
+  "clips": 129543,
+  "reference_frames": 47374271,
+  "exact_ordered_identities_match": true,
+  "baseline": {
+    "successes": 129351,
+    "failures": 192,
+    "success_fraction": 0.9985178666543155,
+    "mean_normalized_full_motion_return": 0.8975313273596952,
+    "frame_weighted_normalized_return": 0.9018768976089345,
+    "failure_terms": {
+      "anchor_ori": 29,
+      "anchor_ori+anchor_pos": 3,
+      "anchor_pos": 160
+    },
+    "original_sha256": "81b4b0b9825aa195d3c9834069541689ca098656a969df3ed0222dd7953ae071"
+  },
+  "candidate": {
+    "successes": 129071,
+    "failures": 472,
+    "success_fraction": 0.996356422191859,
+    "mean_normalized_full_motion_return": 0.8766943228567432,
+    "frame_weighted_normalized_return": 0.8813674629776723,
+    "failure_terms": {
+      "anchor_ori": 255,
+      "anchor_ori+anchor_pos": 5,
+      "anchor_pos": 212
+    },
+    "original_sha256": "d91d3e4a9c18d17133e2d04db67d478958263dd55a8a2db428d7f8af7b2b41b4"
+  },
+  "paired_completion": {
+    "both": 129033,
+    "candidate_only": 38,
+    "baseline_only": 318,
+    "neither": 154
+  },
+  "paired_return": {
+    "mean_candidate_minus_baseline": -0.020837004502952016,
+    "median_candidate_minus_baseline": -0.00901173929430843,
+    "mean_candidate_minus_baseline_on_shared_completed_clips": -0.01956839263571447
+  }
+}

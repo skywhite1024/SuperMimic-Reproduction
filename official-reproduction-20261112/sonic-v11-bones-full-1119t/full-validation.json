@@ -1,0 +1,21 @@
+{
+  "status": "all_proxy_per_motion_records_and_original_audits_verified",
+  "kind": "sonic",
+  "original_bounded_JSONs": 6,
+  "original_large_per_motion_JSONs": 1,
+  "main_log_sha256": "3ce9a3384b6684370ea3b2f19c70dae080949a81d236be556917465a00e3fa3e",
+  "source_commit": "39ecbd75f0b72d0401a1998e85117633581040cc",
+  "membership_sha256": "52f5cc304479a7799222c2026656630bba671c7db437b2bc7d678477c927a739",
+  "exact_author_membership": false,
+  "scores": [
+    {
+      "clips": 129543,
+      "successes": 129071,
+      "mean_normalized_full_motion_return": 0.8766943228567432,
+      "reference_frames": 47374271,
+      "per_motion_original_sha256": "d91d3e4a9c18d17133e2d04db67d478958263dd55a8a2db428d7f8af7b2b41b4"
+    }
+  ],
+  "original_variant_gate_JSONs": 7,
+  "SONIC_variant": "v1.1"
+}
