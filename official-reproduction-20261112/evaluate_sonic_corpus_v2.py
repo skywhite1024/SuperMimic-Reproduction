@@ -31,6 +31,7 @@ def main():
     parser.add_argument("--expected-clips", type=int, required=True)
     parser.add_argument("--num-envs", type=int, default=1024)
     parser.add_argument("--order", choices=("index", "length"), default="length")
+    parser.add_argument("--onnx-provider", choices=("cpu", "cuda"), default="cpu")
     args = parser.parse_args()
     if args.num_envs < 1 or args.expected_clips < 1:
         parser.error("positive environment and clip counts are required")
@@ -89,6 +90,7 @@ def main():
     robot = cfg.scene.entities["robot"]
     robot.collisions = tuple(dataclasses.replace(c, friction=(1.0,)) for c in robot.collisions)
     preserved_armatures=configure_control(cfg,contract)
+    provider = {"cpu": "CPUExecutionProvider", "cuda": "CUDAExecutionProvider"}[args.onnx_provider]
     protocol = {
         "task": task, "seed": args.seed, "clips": count,
         "num_envs": num_envs, "batch_order": args.order,
@@ -112,7 +114,7 @@ def main():
         "paper_results_reproduced": False,"training_algorithm": "pretrained-SONIC",
         "SONIC_source_commit": contract["source_commit"],
         "SONIC_control_contract_sha256": digest(args.contract),
-        "SONIC_ONNX_provider": "CPUExecutionProvider",
+        "SONIC_ONNX_provider": provider,
         "physics_provider": "CUDA MuJoCo Warp, pinned native common G1 scene",
         "SONIC_control": "Own29joint gains/defaults/scales/effort bounds; common armatures retained",
         "history_initialization": "First reference sensor repeated, matching corrected-v2; SONIC training reset unconfirmed",
@@ -139,7 +141,8 @@ def main():
         if not np.array_equal(command.motion.motion_ends.cpu().numpy(), ends):
             raise RuntimeError("Loaded motion boundaries differ from the frozen pack")
         robot = base.scene["robot"]
-        controller=SonicG1Controller(models,batched,args.contract,motions,list(robot.joint_names))
+        controller=SonicG1Controller(models,batched,args.contract,motions,list(robot.joint_names),
+            provider=provider, profile_dir=output / "onnx-profiles")
         protocol["compiled_SONIC_control_readback"]=verify_compiled_control(base.sim.mj_model,contract,preserved_armatures)
         action_term=base.action_manager.get_term(base.action_manager.active_terms[0])
         assert list(action_term.target_names)==list(robot.joint_names)
@@ -260,7 +263,8 @@ def main():
             "elapsed_seconds": time.monotonic() - started, "records": records,
             "paper_results_reproduced": False,
             "goal_assembly_backend": goal_backend,
-            "SONIC_calls": controller.calls,"ONNX_provider": "CPUExecutionProvider",
+            "SONIC_calls": controller.calls, "ONNX_provider": provider,
+            "ONNX_runtime_compute_profiles": controller.profile_records,
             "original_batch1_vs_batched_observed_state_comparisons": controller.original_comparisons,
             "maximum_original_token_difference": controller.maximum_token_difference,
             "maximum_original_action_difference": controller.maximum_action_difference,

@@ -1,6 +1,7 @@
 """Released G1-mode SONIC controller for the corrected-v2 common simulator.
 
-Physics can run on CUDA. ONNX inference here deliberately uses the CPU provider.
+CPU is the reference inference provider. CUDA inference is checked against the
+original CPU model on identical inputs and profiled for actual CUDA execution.
 SONIC's own gains/defaults/scales replace control parameters; common G1 armatures
 and all reward/termination definitions remain unchanged. No training is involved.
 """
@@ -68,7 +69,8 @@ def verify_compiled_control(model, contract, preserved):
 
 
 class SonicG1Controller:
-    def __init__(self, models, batched, contract_path, motions, native_names):
+    def __init__(self, models, batched, contract_path, motions, native_names, *,
+                 provider="CPUExecutionProvider", profile_dir=None):
         import onnxruntime as ort
         self.contract = json.loads(contract_path.read_bytes())
         self.rows = self.contract["joints_in_policy_order"]
@@ -77,26 +79,65 @@ class SonicG1Controller:
         self.native_to_policy = np.argsort(self.policy_to_native)
         self.defaults = np.asarray([r["default_joint_position"] for r in self.rows])
         source_names = json.loads((motions/"joint_names.json").read_bytes())
-        reorder = [source_names.index(n) for n in names]
-        self.reference_q = np.load(motions/"joint_pos.npy", mmap_mode="r")[:,reorder]
-        self.reference_qd = np.load(motions/"joint_vel.npy", mmap_mode="r")[:,reorder]
+        self.reference_order = [source_names.index(n) for n in names]
+        self.reference_q = np.load(motions/"joint_pos.npy", mmap_mode="r")
+        self.reference_qd = np.load(motions/"joint_vel.npy", mmap_mode="r")
         self.reference_quat = np.load(motions/"root_quat_w.npy", mmap_mode="r")
         self.ends = np.load(motions/"motion_ends.npy")
         assert all(digest(models/name) == expected for name,expected in MODEL_HASHES.items())
         validation = json.loads((batched/"validation.json").read_bytes())
         for record in validation["derived_files"]:
             assert digest(batched/record["file"]) == record["sha256"]
-        options = ort.SessionOptions()
-        options.intra_op_num_threads = options.inter_op_num_threads = 1
-        session = lambda path: ort.InferenceSession(str(path), sess_options=options,
-                                                   providers=["CPUExecutionProvider"])
-        self.encoder = session(batched/"g1-encoder-batched.onnx")
-        self.decoder = session(batched/"decoder-batched.onnx")
+        self.provider = provider
+        self.profile_records = {}
+        cuda = provider == "CUDAExecutionProvider"
+        if provider not in {"CUDAExecutionProvider", "CPUExecutionProvider"}:
+            raise ValueError(f"Unsupported ONNX provider: {provider}")
+        if cuda:
+            if provider not in ort.get_available_providers() or profile_dir is None:
+                raise RuntimeError("CUDA inference requires the GPU wheel and an execution profile path")
+            profile_dir.mkdir(exist_ok=False)
+
+        def session(path, *, role=None):
+            options = ort.SessionOptions()
+            options.intra_op_num_threads = options.inter_op_num_threads = 1
+            providers = ["CPUExecutionProvider"]
+            if cuda and role:
+                options.enable_profiling = True
+                options.profile_file_prefix = str(profile_dir / role)
+                providers = [("CUDAExecutionProvider", {"device_id": "0", "use_tf32": "0"}),
+                             "CPUExecutionProvider"]
+            instance = ort.InferenceSession(str(path), sess_options=options, providers=providers)
+            if cuda and role and instance.get_providers()[0] != provider:
+                raise RuntimeError(f"The {role} fell back to CPU during session initialization")
+            instance.disable_fallback()
+            return instance
+
+        self.encoder = session(batched/"g1-encoder-batched.onnx", role="encoder")
+        self.decoder = session(batched/"decoder-batched.onnx", role="decoder")
         self.original_encoder = session(models/"model_encoder.onnx")
         self.original_decoder = session(models/"model_decoder.onnx")
         self.history = self.last_action = None
         self.calls = self.original_comparisons = 0
         self.maximum_token_difference = self.maximum_action_difference = 0.
+        self.token_atol = 3e-5 if cuda else 1e-6
+        self.action_atol = 2e-4 if cuda else 1e-4
+
+    def verify_cuda_execution(self):
+        from collections import Counter
+
+        for label, session in (("encoder", self.encoder), ("decoder", self.decoder)):
+            profile = Path(session.end_profiling())
+            events = json.loads(profile.read_bytes())
+            nodes = [e.get("args", {}) for e in events if e.get("cat") == "Node"]
+            counts = Counter(node.get("provider") for node in nodes if node.get("provider"))
+            math = Counter(node.get("op_name") for node in nodes
+                           if node.get("provider") == "CUDAExecutionProvider"
+                           and node.get("op_name") in {"MatMul", "Gemm", "FusedMatMul", "Attention", "Conv"})
+            if not math:
+                raise RuntimeError(f"{label} GPU profile contains no CUDA compute node")
+            self.profile_records[label] = {"providers": dict(counts), "cuda_compute_ops": dict(math),
+                                           "profile_sha256": digest(profile)}
 
     def reset(self):
         self.history = self.last_action = None
@@ -119,8 +160,8 @@ class SonicG1Controller:
         assert np.all(motion_indices < len(self.ends))
         future = np.minimum(times[:,None]+np.arange(10)[None]*5,self.ends[motion_indices,None]-1)
         features = np.zeros((n,1762),dtype=np.float32)
-        features[:,4:294] = self.reference_q[future].reshape(n,290)
-        features[:,294:584] = self.reference_qd[future].reshape(n,290)
+        features[:,4:294] = self.reference_q[future][..., self.reference_order].reshape(n,290)
+        features[:,294:584] = self.reference_qd[future][..., self.reference_order].reshape(n,290)
         relative = np.einsum("nji,nkjl->nkil",rotation,rotations(self.reference_quat[future]))
         features[:,601:661] = relative[...,:2].reshape(n,60)
         tokens = self.encoder.run(None,{"obs_dict":features})[0].reshape(n,64)
@@ -132,6 +173,8 @@ class SonicG1Controller:
         self.last_decoder_input = decoder_input
         raw = self.decoder.run(None,{"obs_dict":decoder_input})[0]
         assert raw.shape == (n,29) and np.isfinite(raw).all()
+        if self.calls == 0 and self.provider == "CUDAExecutionProvider":
+            self.verify_cuda_execution()
         if self.calls % 1000 == 0:
             for i in sorted({0,n-1}):
                 original_token = self.original_encoder.run(None,{"obs_dict":features[i:i+1]})[0].reshape(1,64)
@@ -142,8 +185,8 @@ class SonicG1Controller:
                     float(np.max(np.abs(tokens[i:i+1]-original_token))))
                 self.maximum_action_difference = max(self.maximum_action_difference,
                     float(np.max(np.abs(raw[i:i+1]-original_action))))
-                assert np.allclose(tokens[i:i+1],original_token,atol=1e-6,rtol=1e-6)
-                assert np.allclose(raw[i:i+1],original_action,atol=1e-4,rtol=1e-4)
+                assert np.allclose(tokens[i:i+1],original_token,atol=self.token_atol,rtol=self.token_atol)
+                assert np.allclose(raw[i:i+1],original_action,atol=self.action_atol,rtol=1e-4)
                 self.original_comparisons += 1
         self.calls += 1
         self.last_action = raw.copy()
