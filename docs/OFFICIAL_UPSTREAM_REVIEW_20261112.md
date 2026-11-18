@@ -1113,3 +1113,29 @@ condition, and the paper's exact intervention and study pair remain unknown.
 The new results contain 66 trial records and eight original JSONs. All four
 older raw arrays were re-read after verifying their original hashes.
 [Follow-up verification](../official-reproduction-20261112/push-lafan-frame-1119e/validation.json).
+
+## 72. Numerical reference from the authors' project page
+
+The authors publish the plotted data for Figure 3 and the imagination
+comparison in the project page's
+[chart source](https://supermimic.github.io/assets/js/site.js).
+Figure 3(b–c) uses the following values.
+
+| Dataset hours | Author GPU hours to target | Author eight-step prediction error |
+| ---: | ---: | ---: |
+| 1 | 0.539 | 0.00679 |
+| 7 | 1.350 | 0.00738 |
+| 40 | 1.908 | 0.01096 |
+| 264 | 1.892 | 0.00993 |
+
+The chart arrays give the plotted coordinates. The specific duration-sweep
+target, membership and precise prediction-error reduction remain unspecified
+there. The local 0.90 common64 threshold is a local choice.
+
+The authors' Figure 5 bracket is at a smoothed training episode return of
+0.841. It spans 0.9317 billion to 59.56 billion imagined transitions, a
+ratio of 63.93. The largest finite local PPO-WM case recorded 1.074 billion
+imagined transitions and used evaluated full motions for its primary
+metric. Both the budget and return definitions matter when interpreting the
+local comparison.
+[Source receipt](../official-reproduction-20261112/author-project-figure-data-20261119.json).
