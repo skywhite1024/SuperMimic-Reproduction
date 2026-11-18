@@ -1,0 +1,53 @@
+{
+  "receipts": [
+    {
+      "i": 0,
+      "path": "driver.json",
+      "bytes": 1438,
+      "sha256": "ca2883ee7244a8a7a0e79095984757df14dc47dc8ee504478a27e21417d8c7d4",
+      "chunks": 4
+    },
+    {
+      "i": 1,
+      "path": "models-batched/validation.json",
+      "bytes": 3677,
+      "sha256": "31d550c8fab3d1e1a55d550571f470ce0e74ca9cd6926129d8ab51a7b4c68f84",
+      "chunks": 5
+    },
+    {
+      "i": 2,
+      "path": "evaluation/result.json",
+      "bytes": 24343,
+      "sha256": "124710b5e507f371b8ffe4fb0cfa04fee30d9641d80c7d0c301f0a8f290dbeed",
+      "chunks": 15
+    },
+    {
+      "i": 3,
+      "path": "evaluation/protocol.json",
+      "bytes": 12695,
+      "sha256": "2fa9b3e08f48f3a3764100db96bcb9c199ed4081923f54b057254d2ef063dba4",
+      "chunks": 11
+    },
+    {
+      "i": 4,
+      "path": "evaluation/accounting.json",
+      "bytes": 1347,
+      "sha256": "7a83eabbaa214b542760792cfbb526f474e363cfbf31f27b13c16dc9abb9c10b",
+      "chunks": 3
+    },
+    {
+      "i": 5,
+      "path": "evaluation/audit/summary.json",
+      "bytes": 960,
+      "sha256": "60df2cac5fd2129c56ac44a6652f1f4e33fbf403dbff5c23a235981342444a9a",
+      "chunks": 3
+    },
+    {
+      "i": 6,
+      "path": "evaluation/audit/initial-states.json",
+      "bytes": 721,
+      "sha256": "a9f45c6286b5ec7d7caa6b7baf5ddc7a9b32ef1e2e1854b1af61a6186c8a8ab9",
+      "chunks": 2
+    }
+  ]
+}

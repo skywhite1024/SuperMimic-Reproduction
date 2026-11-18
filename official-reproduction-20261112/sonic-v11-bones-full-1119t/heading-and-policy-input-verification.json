@@ -1,0 +1,15 @@
+{
+  "status": "v1.1_heading_port_and_CPU_inference_verified",
+  "motions": 40,
+  "actual_reference_frames": 80,
+  "tested_reference_offsets": [
+    0,
+    37
+  ],
+  "deliberate_robot_heading_and_tilt_perturbations": true,
+  "default_behavior_bitwise_equal_to": "f60e0be76bf49c7d5f3772710a6eb0271195514e",
+  "independent_scipy_heading_matrix_max_abs_diff": 2.9798624123777984e-08,
+  "original_vs_batched_max_token_abs_diff": 0.0,
+  "original_vs_batched_max_action_abs_diff": 1.6689300537109375e-06,
+  "control_contract_sha256": "efc2288cc157f9bd9759993a5af7abe3d50042aa21564694abb87ecd170a8cea"
+}

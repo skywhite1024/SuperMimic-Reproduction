@@ -1,0 +1,40 @@
+{
+  "status": "same_64_BONES_motion_identities_CUDA_and_scores_verified",
+  "original_JSONs": 7,
+  "gate_driver_sha256": "ca2883ee7244a8a7a0e79095984757df14dc47dc8ee504478a27e21417d8c7d4",
+  "gate_result_sha256": "124710b5e507f371b8ffe4fb0cfa04fee30d9641d80c7d0c301f0a8f290dbeed",
+  "v1_1": {
+    "clips": 64,
+    "successes": 64,
+    "mean_normalized_full_motion_return": 0.8778506148277477,
+    "reference_frames": 20397
+  },
+  "released_default": {
+    "clips": 64,
+    "successes": 64,
+    "mean_normalized_full_motion_return": 0.8996743919532247,
+    "reference_frames": 20397
+  },
+  "gpu_profiles": {
+    "encoder": {
+      "providers": {
+        "CUDAExecutionProvider": 29
+      },
+      "cuda_compute_ops": {
+        "Gemm": 5
+      },
+      "profile_sha256": "1360d4a68f80ebad9353b4f0dfc98a8cc56b213371843028ab5bb9624c28c830"
+    },
+    "decoder": {
+      "providers": {
+        "CUDAExecutionProvider": 32
+      },
+      "cuda_compute_ops": {
+        "MatMul": 9
+      },
+      "profile_sha256": "c9a34c62d2a4762379054776bb41edc6b199a0794eb19f79332828b215afdf77"
+    }
+  },
+  "observed_state_original_vs_batched_token_difference": 0.0,
+  "observed_state_original_vs_batched_action_difference": 9.5367431640625e-07
+}

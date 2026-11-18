@@ -1301,3 +1301,26 @@ to this same local membership. The score gap is 0.02771 and the failure
 count gap is 173. The checkpoint histories and training budgets differ.
 [Full SONIC originals validation](../official-reproduction-20261112/sonic-bones-cuda-full-1119m/validation.json),
 [matched membership comparison](../official-reproduction-20261112/sonic-bones-cuda-full-1119m/comparison.json).
+
+## 79. SONIC v1.1 passes the shared BONES CUDA probe
+
+The released v1.1 encoder takes 1,751 inputs and uses robot yaw and
+clip-start heading alignment for the future reference orientations.
+The local port matches an independent SciPy calculation to 3.0 × 10⁻⁸
+on 80 reference states from LAFAN40 with deliberate heading and tilt
+perturbations. The comparison verified bitwise equality of the default
+release's observations and actions before and after the port.
+[Pinned NVIDIA release](https://huggingface.co/nvidia/GEAR-SONIC/tree/6733128a3d8a523b1418b06bca3cdf61c8b0987f/sonic_v1_1),
+[deployment implementation](https://github.com/NVlabs/GR00T-WholeBodyControl/blob/1e1ec4f5f27e6c3e03048f693bd7c60cce04afda/gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/src/g1_deploy_onnx_ref.cpp),
+[local verification](../official-reproduction-20261112/sonic-v11-bones-full-1119t/heading-and-policy-input-verification.json).
+
+The cloud job verified the three pinned release files, the retained
+ONNX parameters, the CUDA compute profiles and seven original JSONs.
+Across the same 64 clips and 20,397 reference frames, both releases
+completed every clip. Mean normalized full-motion return was **0.87785**
+for v1.1 and **0.89967** for the default checkpoint. On observed simulator
+inputs, the v1.1 CUDA batch and original CPU graph agreed to a maximum
+absolute action difference of 9.54 × 10⁻⁷. The full 129,543-clip
+v1.1 evaluation started after that probe passed.
+[CUDA probe results](../official-reproduction-20261112/sonic-v11-bones-full-1119t/common64-validation.json),
+[receipt hashes](../official-reproduction-20261112/sonic-v11-bones-full-1119t/common64-receipt-ledger.json).
