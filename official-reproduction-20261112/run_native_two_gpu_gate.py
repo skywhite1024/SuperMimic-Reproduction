@@ -1,8 +1,8 @@
-"""Finite actual two-H100 native first-order gate; launch with torchrun two ranks.
+"""Finite two-H100 native first-order gate and throughput probe.
 
 Uses native real collection, replay, world-model and actor/critic losses. Python
-gradient collectives require eager learner updates, so this gate does not
-measure paper throughput. No cloud job is created by this script.
+gradient collectives require eager learner updates, so the measured throughput
+applies to this adapter.
 """
 import argparse
 import dataclasses
@@ -15,6 +15,9 @@ import os
 from pathlib import Path
 import random
 import time
+
+
+STEADY_WINDOW = (201, 1001)
 
 
 def write(path,value):
@@ -45,7 +48,11 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--motions',type=Path,required=True)
     parser.add_argument('--output',type=Path,required=True)
+    parser.add_argument('--steps', type=int, choices=(21, 1001), default=21)
+    parser.add_argument('--expected-clips', type=int, choices=(40, 129543), default=40)
     args=parser.parse_args()
+    if (args.steps, args.expected_clips) not in {(21, 40), (1001, 129543)}:
+        parser.error('Use the 21-step LAFAN gate or the 1001-step filtered BONES probe')
     os.environ.update(MUJOCO_GL='disable',WANDB_MODE='offline')
     import numpy as np
     import torch
@@ -79,13 +86,13 @@ def main():
         os.chdir(folder)
         device=setup_device(f'cuda:{local_rank}')
         cfg=TrainConfig.from_task('SuperMimic-GenCoord-G1');configure_runner(cfg.runner)
-        cfg.runner.max_iterations=21
+        cfg.runner.max_iterations=args.steps
         base_lrs=dict(world_model=cfg.runner.wm.lr,policy=cfg.runner.policy.lr)
         cfg.runner.wm.lr*=math.sqrt(2);cfg.runner.policy.lr*=math.sqrt(2)
         cfg.env.seed=42+rank;cfg.env.scene.num_envs=4096
         cfg.env.commands['motion'].motion_file=str(motions)
         cfg.env.commands['motion'].sampling_mode='external'
-        assert np.load(motions/'motion_ends.npy').shape==(40,)
+        assert np.load(motions/'motion_ends.npy').shape==(args.expected_clips,)
         representations._compiled_assemble_goal=representations._assemble_goal
         policy_module.build_optimizers=build_adam_optimizers
         wm_module.build_optimizers=build_adam_optimizers
@@ -102,7 +109,7 @@ def main():
         config=dict(task='SuperMimic-GenCoord-G1',algorithm='native_first_order_two_rank',
             rank=rank,local_rank=local_rank,world_size=2,base_seed=42,environment_seed=42+rank,
             shared_initial_model_seed=42,local_num_envs=4096,global_num_envs=8192,
-            collection_steps=21,runner=dataclasses.asdict(cfg.runner),environment=dataclasses.asdict(cfg.env),
+            collection_steps=args.steps,runner=dataclasses.asdict(cfg.runner),environment=dataclasses.asdict(cfg.env),
             base_learning_rates=base_lrs,learning_rate_multiplier=math.sqrt(2),
             synchronization=sync,goal_backend='author eager goal math',
             optimizer='Adam for all three native networks, existing explicit A5 adaptation',
@@ -125,7 +132,10 @@ def main():
         should_train=Ratio(env.num_envs/cfg.runner.wm.num_batches/cfg.runner.wm.batch_size/
             cfg.runner.wm.horizon*cfg.runner.replay_ratio)
         started=time.monotonic();outer_updates=0;local_sim_steps=0;observations=[]
-        for step in range(21):
+        observed_steps = (1, 11, 21) if args.steps == 21 else (1, *STEADY_WINDOW)
+        steady_started = None
+        steady_elapsed = None
+        for step in range(args.steps):
             set_learning_rate_in_place(optimizers,math.sqrt(2)*cosine_lr(step))
             local_sim_steps+=runner.step()
             for _ in range(should_train(step)):
@@ -136,18 +146,29 @@ def main():
                 policy_logs=runner.policy_learner.update()
                 assert all(torch.isfinite(value).all() for value in [*wm_logs.values(),*policy_logs.values()])
                 outer_updates+=1
-            row=dict(collection_steps=step+1,local_simulator_steps=local_sim_steps,
-                native_learner_outer_updates=outer_updates,
-                learning_rate=float(optimizers[0].param_groups[0]['lr']),
-                optimizer_steps=dict(runner._native_dp_optimizer_counts))
-            assert math.isclose(row['learning_rate'],math.sqrt(2)*cosine_lr(step),rel_tol=1e-6)
-            if (step+1) in (1,11,21):
-                row['model_state_hashes']={name:model_hash(module) for name,module in modules.items()}
-                observations.append(row)
-            print('NATIVE_TWO_GPU_RANK_UPDATE '+json.dumps(dict(rank=rank,**row)),flush=True)
-        assert outer_updates>0 and local_sim_steps==4096*21
+            collections = step + 1
+            if collections == STEADY_WINDOW[1]:
+                torch.cuda.synchronize(device)
+                steady_elapsed = time.monotonic() - steady_started
+            if collections in observed_steps or args.steps == 21:
+                row=dict(collection_steps=collections,local_simulator_steps=local_sim_steps,
+                    native_learner_outer_updates=outer_updates,
+                    learning_rate=float(optimizers[0].param_groups[0]['lr']),
+                    optimizer_steps=dict(runner._native_dp_optimizer_counts))
+                assert math.isclose(row['learning_rate'],math.sqrt(2)*cosine_lr(step),rel_tol=1e-6)
+                if collections in observed_steps:
+                    row['model_state_hashes']={name:model_hash(module) for name,module in modules.items()}
+                    observations.append(row)
+                print('NATIVE_TWO_GPU_RANK_UPDATE '+json.dumps(dict(rank=rank,**row)),flush=True)
+            if collections == STEADY_WINDOW[0]:
+                torch.cuda.synchronize(device)
+                dist.barrier(device_ids=[local_rank])
+                steady_started = time.monotonic()
+        assert outer_updates>0 and local_sim_steps==4096*args.steps
         assert all(value>0 for value in runner._native_dp_optimizer_counts.values())
-        assert runner._sampler.records==21 and runner._sampler.distribution_updates==1
+        assert runner._sampler.records==args.steps and runner._sampler.distribution_updates>=1
+        if args.steps == 21:
+            assert runner._sampler.distribution_updates == 1
         assert all(torch.isfinite(value).all() for module in modules.values() for value in module.state_dict().values())
         final={name:model_hash(module) for name,module in modules.items()}
         final_parameters={name:parameter_hash(module) for name,module in modules.items()}
@@ -168,10 +189,12 @@ def main():
                 assert all(torch.equal(loaded[key],value) for key,value in module.state_dict().items())
             checkpoints.append(dict(file=name,path=str(path),bytes=path.stat().st_size,
                 sha256=hashlib.sha256(path.read_bytes()).hexdigest(),native_model_readback_verified=True))
-        report.update(status='two_rank_native_participant_completed',local_collection_steps=21,
+        report.update(status='two_rank_native_participant_completed',local_collection_steps=args.steps,
             local_simulator_steps=local_sim_steps,native_learner_outer_updates=outer_updates,
             optimizer_steps=dict(runner._native_dp_optimizer_counts),sparse_state_observations=observations,
             final_model_state_hashes=final,elapsed_training_seconds=time.monotonic()-started,
+            steady_last_800_collections_seconds=steady_elapsed,
+            clips=args.expected_clips,
             final_learned_parameter_hashes=final_parameters,all_native_learned_parameters_changed=True,
             sampler_real_records=runner._sampler.records,sampler_distribution_updates=runner._sampler.distribution_updates,
             actor_real_observation_count=int(runner.policy_learner.actor.obs_normalizer.count),
@@ -184,16 +207,18 @@ def main():
         assert all(row['status']=='two_rank_native_participant_completed' for row in participants)
         assert participants[0]['initial_model_state_hashes']==participants[1]['initial_model_state_hashes']
         assert participants[0]['final_model_state_hashes']==participants[1]['final_model_state_hashes']
+        if args.steps == 1001:
+            assert participants[0]['sparse_state_observations'] == participants[1]['sparse_state_observations']
         assert participants[0]['initial_real_state_sha256']!=participants[1]['initial_real_state_sha256']
         assert {row['local_rank'] for row in participants}=={0,1}
         for key in ('optimizer_steps','actor_real_observation_count','shared_sampler_value_sha256',
                     'shared_sampler_count_sha256','shared_sampler_effort_sha256','sim_context_state_sha256'):
             assert participants[0][key]==participants[1][key], 'Rank state mismatch: '+key
         # Native actor normalizer uses one latest real observation per step.
-        assert all(row['actor_real_observation_count']==8192*21 for row in participants)
+        assert all(row['actor_real_observation_count']==8192*args.steps for row in participants)
         if rank==0:
             write(output/'result.json',dict(status='two_rank_native_training_completed',
-                world_size=2,backend='nccl',local_collection_steps=21,global_simulator_steps=8192*21,
+                world_size=2,backend='nccl',local_collection_steps=args.steps,global_simulator_steps=8192*args.steps,
                 initial_and_final_learned_models_identical_across_ranks=True,
                 independent_real_simulator_streams_verified=True,normalizer_counts_and_sampler_states_shared=True,
                 participants=participants,quality_evaluation_completed=False,

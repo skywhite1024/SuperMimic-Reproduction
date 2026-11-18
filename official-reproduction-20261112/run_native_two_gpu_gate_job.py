@@ -17,11 +17,14 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--motions',type=Path,required=True)
     parser.add_argument('--output',type=Path,required=True)
+    parser.add_argument('--bones-throughput', action='store_true')
     args=parser.parse_args()
+    steps, clips = (1001, 129543) if args.bones_throughput else (21, 40)
+    real_steps = 8192 * steps
     output=args.output.resolve();output.mkdir(parents=True,exist_ok=False)
     training=output/'training';scripts=Path(__file__).resolve().parent
     report=dict(status='starting',worker_timeout_seconds=2400,whole_program_seconds=2700,
-        world_size=2,expected_global_real_steps=172032,quality_evaluation_completed=False,
+        world_size=2,expected_global_real_steps=real_steps,quality_evaluation_completed=False,
         paper_results_reproduced=False,full_training_state_resume_available=False)
     (output/'result.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8',newline='\n')
     print('NATIVE_TWO_GPU_STAGE_START '+json.dumps(dict(utc=datetime.now(timezone.utc).isoformat(),
@@ -31,7 +34,8 @@ def main():
         process=subprocess.run(['timeout','--signal=TERM','--kill-after=30s','2400s',
             sys.executable,'-m','torch.distributed.run','--standalone','--nnodes=1',
             '--nproc-per-node=2','--max-restarts=0',str(scripts/'run_native_two_gpu_gate.py'),
-            '--motions',str(args.motions.resolve()),'--output',str(training)],
+            '--motions',str(args.motions.resolve()),'--output',str(training),
+            '--steps',str(steps),'--expected-clips',str(clips)],
             stdout=stream,stderr=subprocess.STDOUT)
     report.update(status='failed',worker_returncode=process.returncode,
                   worker_elapsed_seconds=time.monotonic()-started)
@@ -43,7 +47,7 @@ def main():
         parent=json.loads(paths[0].read_bytes())
         assert parent['status']=='two_rank_native_training_completed'
         assert parent['world_size']==2 and parent['backend']=='nccl'
-        assert parent['global_simulator_steps']==172032
+        assert parent['global_simulator_steps']==real_steps
         participants=parent['participants']
         assert [row['rank'] for row in participants]==[0,1]
         assert participants[0]['final_model_state_hashes']==participants[1]['final_model_state_hashes']
@@ -51,8 +55,9 @@ def main():
             folder=training/f'rank-{rank}'
             original=json.loads((folder/'result.json').read_bytes())
             assert original==row and row['status']=='two_rank_native_participant_completed'
-            assert row['local_simulator_steps']==86016 and row['local_collection_steps']==21
-            assert row['actor_real_observation_count']==172032 and row['all_native_learned_parameters_changed']
+            assert row['local_simulator_steps']==real_steps // 2 and row['local_collection_steps']==steps
+            assert row['actor_real_observation_count']==real_steps and row['all_native_learned_parameters_changed']
+            assert row['clips'] == clips
             assert all(count>0 for count in row['optimizer_steps'].values())
             assert row['resolved_config_sha256']==digest(folder/'resolved-config.json')
             assert len(row['checkpoints'])==3
@@ -61,7 +66,13 @@ def main():
                 assert path.parent==folder and path.name==record['file']
                 assert record['native_model_readback_verified']
                 assert path.stat().st_size==record['bytes'] and digest(path)==record['sha256']
-        report.update(status='two_GPU_native_gate_completed',global_real_simulator_steps=172032,
+        if args.bones_throughput:
+            elapsed = max(row['steady_last_800_collections_seconds'] for row in participants)
+            assert 0 < elapsed < report['worker_elapsed_seconds']
+            report['steady_window'] = dict(first_excluded_collection=201, last_included_collection=1001,
+                seconds_slowest_rank=elapsed, global_simulator_transitions=800*8192,
+                global_transitions_per_second=800*8192/elapsed)
+        report.update(status='two_GPU_native_gate_completed',global_real_simulator_steps=real_steps,
             rank_model_identity_and_parameter_changes_verified=True,
             original_rank_config_and_results_bound=True,
             native_weights_files_verified=6,parent_result_sha256=digest(paths[0]))

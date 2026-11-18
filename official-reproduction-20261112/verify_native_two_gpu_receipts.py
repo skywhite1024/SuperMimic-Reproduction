@@ -19,6 +19,9 @@ def main():
     parser.add_argument('--output',type=Path,required=True)
     args=parser.parse_args()
     plan=json.loads(args.plan.read_bytes());raw=gzip.decompress(args.download.read_bytes())
+    collections = plan.get('collection_steps', 21)
+    assert collections in {21, 1001}
+    transitions = collections * 8192
     clean='\n'.join(re.sub(r'^\[[0-9TZ: .+-]+\] ','',line) for line in raw.decode().splitlines())
     assert 'NATIVE_TWO_GPU_BOOTSTRAP_SHA256 '+plan['command_sha256'] in clean
     assert 'NATIVE_TWO_GPU_GATE_PIPELINE_COMPLETED' in clean and 'NATIVE_TWO_GPU_JOB_EXIT=0' in clean
@@ -48,7 +51,7 @@ def main():
     assert parent['status']=='two_GPU_native_gate_completed' and parent['worker_returncode']==0
     assert parent['parent_result_sha256']==digest((output/'training/result.json').read_bytes())
     assert parent['native_weights_files_verified']==6 and parent['original_rank_config_and_results_bound']
-    assert training['global_simulator_steps']==parent['global_real_simulator_steps']==172032
+    assert training['global_simulator_steps']==parent['global_real_simulator_steps']==transitions
     ranks=training['participants'];assert [r['rank'] for r in ranks]==[0,1]
     assert {r['local_rank'] for r in ranks}=={0,1}
     assert ranks[0]['initial_real_state_sha256']!=ranks[1]['initial_real_state_sha256']
@@ -62,25 +65,43 @@ def main():
         cfg=read(f'training/rank-{rank}/resolved-config.json')
         assert digest((output/f'training/rank-{rank}/resolved-config.json').read_bytes())==row['resolved_config_sha256']
         assert row['status']=='two_rank_native_participant_completed' and row['backend']=='nccl'
-        assert row['local_collection_steps']==21 and row['local_simulator_steps']==86016
-        assert row['actor_real_observation_count']==172032 and row['all_native_learned_parameters_changed']
+        assert row['local_collection_steps']==collections and row['local_simulator_steps']==transitions // 2
+        assert row['actor_real_observation_count']==transitions and row['all_native_learned_parameters_changed']
         assert all(value!=row['initial_learned_parameter_hashes'][name] for name,value in row['final_learned_parameter_hashes'].items())
-        assert row['native_learner_outer_updates']==6
-        assert row['optimizer_steps']==dict(world_model_optimizer_steps=60,actor_optimizer_steps=6,critic_optimizer_steps=120)
-        assert row['sampler_real_records']==21 and row['sampler_distribution_updates']==1
+        updates = row['native_learner_outer_updates']
+        assert updates > 0 and (collections != 21 or updates == 6)
+        assert row['optimizer_steps']==dict(world_model_optimizer_steps=10*updates,
+                                            actor_optimizer_steps=updates,critic_optimizer_steps=20*updates)
+        assert row['sampler_real_records']==collections
+        assert row['sampler_distribution_updates'] >= 1
+        if collections == 21:
+            assert row['sampler_distribution_updates'] == 1
+        else:
+            assert row['clips'] == 129543
+            assert [item['collection_steps'] for item in row['sparse_state_observations']] == [1, 201, 1001]
         assert cfg['environment_seed']==42+rank and cfg['local_num_envs']==4096 and cfg['global_num_envs']==8192
         assert cfg['learner_CUDA_graphs_disabled'] and cfg['runner']['policy']['horizon']==32
         assert {r['file'] for r in row['checkpoints']}=={'world_model.pt','actor.pt','critic.pt'}
         assert all(r['native_model_readback_verified'] and r['bytes']>0 and len(r['sha256'])==64 for r in row['checkpoints'])
     validation=dict(status='actual_two_H100_NCCL_native_gate_originals_verified',job_uid=plan['uid'],
         original_JSON_receipts=6,all_byte_counts_and_SHA256_verified=True,source_files_bound_to_actual_log=True,
-        source_commit=plan['source_commit'],H100=2,ranks=2,local_collection_steps=21,global_real_simulator_steps=172032,
-        native_learner_outer_updates_per_rank=6,optimizer_steps_per_rank=ranks[0]['optimizer_steps'],
+        source_commit=plan['source_commit'],H100=2,ranks=2,local_collection_steps=collections,global_real_simulator_steps=transitions,
+        native_learner_outer_updates_per_rank=ranks[0]['native_learner_outer_updates'],optimizer_steps_per_rank=ranks[0]['optimizer_steps'],
         learned_networks_changed_and_identical_across_ranks=True,independent_real_initial_states=True,
-        actor_real_observation_count_both_ranks=172032,sampler_value_count_effort_hashes_identical=True,
+        actor_real_observation_count_both_ranks=transitions,sampler_value_count_effort_hashes_identical=True,
         native_weight_files_cloud_hash_and_tensor_readback_verified=6,raw_weights_downloaded=False,
         learner_CUDA_graphs_disabled=True,quality_evaluation_completed=False,
         full_training_state_resume_available=False,paper_performance_equivalence=False,paper_results_reproduced=False)
+    if collections == 1001:
+        assert ranks[0]['sparse_state_observations'] == ranks[1]['sparse_state_observations']
+        window = parent['steady_window']
+        assert (window['first_excluded_collection'], window['last_included_collection']) == (201, 1001)
+        assert window['global_simulator_transitions'] == 800 * 8192
+        seconds = max(rank['steady_last_800_collections_seconds'] for rank in ranks)
+        assert 0 < seconds < parent['worker_elapsed_seconds']
+        assert window['seconds_slowest_rank'] == seconds
+        assert window['global_transitions_per_second'] == 800 * 8192 / seconds
+        validation['steady_window'] = window
     for name,value in [('validation.json',validation),('receipt-ledger.json',dict(receipts=list(metadata.values()))),
                        ('download-ledger.json',dict(lines=len(raw.splitlines()),gzip_sha256=digest(args.download.read_bytes()),
                            timestamped_stdout_sha256=digest(raw),original_timestamped_stdout_preserved=True))]:
