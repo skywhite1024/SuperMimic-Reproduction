@@ -7,6 +7,7 @@ and all reward/termination definitions remain unchanged. No training is involved
 """
 import dataclasses
 import json
+from pathlib import Path
 import re
 
 import numpy as np
