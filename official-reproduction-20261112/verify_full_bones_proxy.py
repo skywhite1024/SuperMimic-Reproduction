@@ -50,20 +50,23 @@ def verify_variant_gate(source, plan, output):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--kind", choices=("continuous", "sonic"), required=True)
+    parser.add_argument("--kind", choices=("continuous", "sonic", "two-rank"), required=True)
     for arg in ("plan", "log", "raw-bones", "filter-report", "feasible-mask", "output"):
         parser.add_argument("--" + arg, type=Path, required=True)
     parser.add_argument("--per-motion", nargs="+", type=Path, required=True,
                         help="Hash-bound original files in checkpoint order")
+    parser.add_argument("--two-rank-training-receipts", type=Path)
     args = parser.parse_args()
     plan = read(args.plan)
     source = plain_log(args.log)
     continuous = args.kind == "continuous"
-    marker = "BONES_CONTINUOUS" if continuous else "SONIC_BONES_FULL"
+    sonic = args.kind == "sonic"
+    marker = {"continuous": "BONES_CONTINUOUS", "sonic": "SONIC_BONES_FULL",
+              "two-rank": "BONES_NATIVE_2GPU_EVAL"}[args.kind]
     assert marker + "_BOOTSTRAP_SHA256 " + plan["bootstrap_sha256"] in source
     assert marker + "_BOOTSTRAP_EXIT_CODE 0" in source
     assert "NVIDIA H100 80GB HBM3" in source
-    run = plan["output" if continuous else "clouds_output"].removeprefix(ROOT + "/")
+    run = plan["clouds_output" if sonic else "output"].removeprefix(ROOT + "/")
     driver = f"{run}/result.json"
     if continuous:
         steps = plan["full_evaluation_collections"]
@@ -72,9 +75,9 @@ def main():
     else:
         steps, evaluations, training = [None], [f"{run}/evaluation"], set()
     gate_receipts = []
-    if not continuous and "variant_gate_output" in plan:
+    if sonic and "variant_gate_output" in plan:
         source, gate_receipts, gate_driver_digest, gate_result_digest = verify_variant_gate(source, plan, args.output)
-    elif not continuous:
+    elif sonic:
         gate_driver_digest, gate_result_digest = plan["cuda_gate_driver_sha256"], plan["cuda_gate_result_sha256"]
     assert len(args.per_motion) == len(evaluations)
     allowed = {PACK, driver, *training,
@@ -95,11 +98,25 @@ def main():
         assert len(steps) == 2 and steps == [80001, 320001]
         assert parent["pack"] == pack
         assert [row["collection_steps"] for row in parent["evaluations"]] == steps
-    else:
+    elif sonic:
         assert pack["membership_sha256"] == plan["membership_sha256"]
         assert parent["gate_driver_sha256"] == gate_driver_digest
         assert parent["gate_result_sha256"] == gate_result_digest
         assert parent.get("SONIC_variant", "default") == plan.get("SONIC_variant", "default")
+    else:
+        originals = args.two_rank_training_receipts
+        if originals is None:
+            parser.error("two-rank evaluation requires its verified training receipts")
+        rank0_path = originals / "training/rank-0/result.json"
+        group_path = originals / "training/result.json"
+        validation = read(originals / "validation.json")
+        assert validation["status"] == "actual_two_H100_NCCL_native_BONES_training_originals_verified"
+        assert parent["training_driver_sha256"] == sha256(originals / "result.json") == plan["training_driver_sha256"]
+        assert parent["training_rank0_result_sha256"] == sha256(rank0_path)
+        assert parent["training_group_sha256"] == sha256(group_path)
+        assert parent["global_real_transitions"] == validation["global_real_simulator_steps"] == 40001 * 8192
+        assert parent["training_collections_per_rank"] == 40001 and parent["training_ranks"] == 2
+        assert pack["membership_sha256"] == plan["membership_sha256"]
 
     scored = []
     for index, (base, step, original) in enumerate(zip(evaluations, steps, args.per_motion, strict=True)):
@@ -123,11 +140,22 @@ def main():
         else:
             score = score_evaluation(folder, identities, pack["files"], num_envs=1024, batch_order="length")
             driver_row = parent
-            result = read(target)
-            assert result["ONNX_provider"] == "CUDAExecutionProvider"
-            assert result.get("SONIC_variant", "default") == parent.get("SONIC_variant", "default")
-            assert result["ONNX_runtime_compute_profiles"] == parent["profiles"]
-            assert all(profile["cuda_compute_ops"] for profile in parent["profiles"].values())
+            if sonic:
+                result = read(target)
+                assert result["ONNX_provider"] == "CUDAExecutionProvider"
+                assert result.get("SONIC_variant", "default") == parent.get("SONIC_variant", "default")
+                assert result["ONNX_runtime_compute_profiles"] == parent["profiles"]
+                assert all(profile["cuda_compute_ops"] for profile in parent["profiles"].values())
+            else:
+                protocol = read(folder / "protocol.json")
+                selected = protocol["checkpoint_selection"]
+                assert selected["kind"] == "two_rank_final_models"
+                assert selected["parent_result_sha256"] == parent["training_rank0_result_sha256"]
+                assert selected["verified_driver_sha256"] == parent["training_driver_sha256"]
+                assert selected["group_result_sha256"] == parent["training_group_sha256"]
+                assert selected["evaluated_collection_steps"] == 40001
+                assert selected["global_real_simulator_steps"] == parent["global_real_transitions"]
+                assert protocol["training_algorithm"] == "first-order-two-rank"
         assert math.isclose(score["mean_normalized_full_motion_return"],
                             driver_row["mean_normalized_return"], rel_tol=1e-13)
         assert score["successes"] == driver_row["successes"]
