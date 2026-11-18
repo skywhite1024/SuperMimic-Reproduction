@@ -1,0 +1,146 @@
+{
+  "status": "all_originals_and_native_scores_verified",
+  "kind": "duration",
+  "original_JSONs": 87,
+  "log_sha256": "5293e54b4ec0e84a763eecdc1bffd23a05ba2a44edaf68413ff662f704440972",
+  "source_commit": "e55b3b870245b80823b1e7bd4096d982df7c4f75",
+  "cases": {
+    "1h": {
+      "points": [
+        {
+          "collection_steps": 4001,
+          "clips": 64,
+          "successes": 63,
+          "mean_normalized_full_motion_return": 0.7675702786975476,
+          "real_transitions": 16388096,
+          "reference_frames": 20397
+        },
+        {
+          "collection_steps": 8001,
+          "clips": 64,
+          "successes": 63,
+          "mean_normalized_full_motion_return": 0.8656157426570337,
+          "real_transitions": 32772096,
+          "reference_frames": 20397
+        },
+        {
+          "collection_steps": 16001,
+          "clips": 64,
+          "successes": 63,
+          "mean_normalized_full_motion_return": 0.9157950748386106,
+          "real_transitions": 65540096,
+          "reference_frames": 20397
+        }
+      ],
+      "forecast": {
+        "forecast_windows": 19812,
+        "eighth_transition_normalized_state_mse": 0.02153881153268879,
+        "mean_normalized_state_mse_over_horizons": 0.009039577210597947
+      },
+      "data_hours": 1.0020333333333333
+    },
+    "7h": {
+      "points": [
+        {
+          "collection_steps": 4001,
+          "clips": 64,
+          "successes": 63,
+          "mean_normalized_full_motion_return": 0.7324018436493898,
+          "real_transitions": 16388096,
+          "reference_frames": 20397
+        },
+        {
+          "collection_steps": 8001,
+          "clips": 64,
+          "successes": 63,
+          "mean_normalized_full_motion_return": 0.8447718065607722,
+          "real_transitions": 32772096,
+          "reference_frames": 20397
+        },
+        {
+          "collection_steps": 16001,
+          "clips": 64,
+          "successes": 63,
+          "mean_normalized_full_motion_return": 0.8841363692065505,
+          "real_transitions": 65540096,
+          "reference_frames": 20397
+        }
+      ],
+      "forecast": {
+        "forecast_windows": 19801,
+        "eighth_transition_normalized_state_mse": 0.019123621707467092,
+        "mean_normalized_state_mse_over_horizons": 0.008380972058024719
+      },
+      "data_hours": 7.001594444444445
+    },
+    "40h": {
+      "points": [
+        {
+          "collection_steps": 4001,
+          "clips": 64,
+          "successes": 63,
+          "mean_normalized_full_motion_return": 0.791641532250685,
+          "real_transitions": 16388096,
+          "reference_frames": 20397
+        },
+        {
+          "collection_steps": 8001,
+          "clips": 64,
+          "successes": 63,
+          "mean_normalized_full_motion_return": 0.837670215750365,
+          "real_transitions": 32772096,
+          "reference_frames": 20397
+        },
+        {
+          "collection_steps": 16001,
+          "clips": 64,
+          "successes": 64,
+          "mean_normalized_full_motion_return": 0.8949014258098897,
+          "real_transitions": 65540096,
+          "reference_frames": 20397
+        }
+      ],
+      "forecast": {
+        "forecast_windows": 19885,
+        "eighth_transition_normalized_state_mse": 0.01778672475129199,
+        "mean_normalized_state_mse_over_horizons": 0.00816952637044872
+      },
+      "data_hours": 40.00158888888889
+    },
+    "full": {
+      "points": [
+        {
+          "collection_steps": 4001,
+          "clips": 64,
+          "successes": 63,
+          "mean_normalized_full_motion_return": 0.803252338599463,
+          "real_transitions": 16388096,
+          "reference_frames": 20397
+        },
+        {
+          "collection_steps": 8001,
+          "clips": 64,
+          "successes": 63,
+          "mean_normalized_full_motion_return": 0.8538012297688066,
+          "real_transitions": 32772096,
+          "reference_frames": 20397
+        },
+        {
+          "collection_steps": 16001,
+          "clips": 64,
+          "successes": 64,
+          "mean_normalized_full_motion_return": 0.892270751841624,
+          "real_transitions": 65540096,
+          "reference_frames": 20397
+        }
+      ],
+      "forecast": {
+        "forecast_windows": 19885,
+        "eighth_transition_normalized_state_mse": 0.022361645571624105,
+        "mean_normalized_state_mse_over_horizons": 0.010043868665045995
+      },
+      "data_hours": 263.19039444444445
+    }
+  },
+  "paper_exact_membership": false
+}

@@ -1,0 +1,9 @@
+{
+  "status": "all_geometry_exclusions_and_192_feasible_controls_recomputed",
+  "checked_exclusions": 136,
+  "checked_feasible_controls": 192,
+  "checked_frames": 304308,
+  "method": "Native per-frame G1 MuJoCo FK; explicit all 14 inter-geometry distances in candidate standing frames; independent consecutive-run extraction",
+  "source_filter_result_sha256": "4bd19b4dcfac2eba1d3b476c0c59c3fc0b1089006d417c7918976ad35e0c3423",
+  "elapsed_s": 1.9397497000172734
+}

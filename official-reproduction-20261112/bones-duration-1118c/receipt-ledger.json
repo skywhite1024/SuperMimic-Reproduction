@@ -1,0 +1,613 @@
+{
+  "receipts": [
+    {
+      "i": 0,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/launch/e55b3b870245b80823b1e7bd4096d982df7c4f75-bones-duration-1118c/filter-result.json",
+      "bytes": 2565,
+      "sha256": "4bd19b4dcfac2eba1d3b476c0c59c3fc0b1089006d417c7918976ad35e0c3423",
+      "chunks": 5
+    },
+    {
+      "i": 1,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/launch/e55b3b870245b80823b1e7bd4096d982df7c4f75-bones-duration-1118c/raw-manifest.json",
+      "bytes": 843,
+      "sha256": "44980c5d89b4637328b332b1d43cd49fe30505dbc694ba09ac6c9d33083a0264",
+      "chunks": 2
+    },
+    {
+      "i": 2,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/study.json",
+      "bytes": 7791,
+      "sha256": "2a5095fb7b2955945ee2d8aa2257e99632c30e13cddc2c3544a442e7cc76634e",
+      "chunks": 10
+    },
+    {
+      "i": 3,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/1h/case-result.json",
+      "bytes": 4361,
+      "sha256": "1293f35d7f3a21d8d35b0b50db90cc3cae96b3549a6d3d5e67dd18ab1d044e6a",
+      "chunks": 6
+    },
+    {
+      "i": 4,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/1h/training/result.json",
+      "bytes": 6554,
+      "sha256": "047617a60032d8578966e14229a462ee4ffd9cf08602ed926d474823867d304b",
+      "chunks": 8
+    },
+    {
+      "i": 5,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/1h/training/resolved-config.json",
+      "bytes": 42758,
+      "sha256": "6402de9d18ef6bb5caa74b7a02a0773e4644a8fd772469b7290b3fb9ddb136f5",
+      "chunks": 23
+    },
+    {
+      "i": 6,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/1h/training/checkpoint-times.json",
+      "bytes": 4236,
+      "sha256": "52efd6e0a96dd2b8bb7dc58df88617d6fabb599e6800814ff22e9589e4bbca4a",
+      "chunks": 4
+    },
+    {
+      "i": 7,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/1h/training/learner-counts.json",
+      "bytes": 1845,
+      "sha256": "abf2728fdff6e2c0e6210f03fdd65f6a3c0f8d929f0b8a098bf5cc9534b5c54c",
+      "chunks": 2
+    },
+    {
+      "i": 8,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/1h/eval-000004001/result.json",
+      "bytes": 23478,
+      "sha256": "d95a31d3272ebd81f4bad42e941dd2c39a4a66bae7d012743bbff1d59f335f04",
+      "chunks": 13
+    },
+    {
+      "i": 9,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/1h/eval-000004001/protocol.json",
+      "bytes": 14290,
+      "sha256": "56ba594f6443cd1b30b52bae63be57330ab6bfbd0c3f84904e4f3881bca940b4",
+      "chunks": 15
+    },
+    {
+      "i": 10,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/1h/eval-000004001/accounting.json",
+      "bytes": 1385,
+      "sha256": "ce54a015d4780a72ac84288c3a307fa9828c3325a60061cb9e3ebb7d60413656",
+      "chunks": 3
+    },
+    {
+      "i": 11,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/1h/eval-000004001/audit/summary.json",
+      "bytes": 961,
+      "sha256": "fd26b7574aafe00af1d8279ee9fd90a16f2cc7471023f540e15b2c43582a2033",
+      "chunks": 3
+    },
+    {
+      "i": 12,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/1h/eval-000004001/audit/initial-states.json",
+      "bytes": 721,
+      "sha256": "d7ee89711ddfdfdd6290e0d07150e40afe1e42db09303dbf3bea779d7590b2cc",
+      "chunks": 2
+    },
+    {
+      "i": 13,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/1h/eval-000008001/result.json",
+      "bytes": 23491,
+      "sha256": "8815506817e043287ca0f7619dfe5253738ccaf2b2c1639922f3684df43b8b5c",
+      "chunks": 13
+    },
+    {
+      "i": 14,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/1h/eval-000008001/protocol.json",
+      "bytes": 14290,
+      "sha256": "2c92d6347f1d647a4375d840e626904d616886bc5a3b8267561307b9dc2def40",
+      "chunks": 15
+    },
+    {
+      "i": 15,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/1h/eval-000008001/accounting.json",
+      "bytes": 1386,
+      "sha256": "db4ec6801eb85bf1963f733ae8914a08fb6147f26a9218dbfff91e769c4220f4",
+      "chunks": 3
+    },
+    {
+      "i": 16,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/1h/eval-000008001/audit/summary.json",
+      "bytes": 962,
+      "sha256": "7994482b075f1e79684719ec395ead9b0947decc8727c90fecdcf2c7bb6a11af",
+      "chunks": 3
+    },
+    {
+      "i": 17,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/1h/eval-000008001/audit/initial-states.json",
+      "bytes": 721,
+      "sha256": "3cc23e96b624dde70acaecd824ce0d1bbc0b70b59be980bbaf3187e272252ac2",
+      "chunks": 2
+    },
+    {
+      "i": 18,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/1h/eval-000016001/result.json",
+      "bytes": 23483,
+      "sha256": "e8dc692732e8c3a2f7413066c99537886336ece7a22b9f68d711a5814c986098",
+      "chunks": 13
+    },
+    {
+      "i": 19,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/1h/eval-000016001/protocol.json",
+      "bytes": 14291,
+      "sha256": "7fd116944d7e9f6f728ad41547708d033be6a6eb0931038408d4a5cb1c3672a9",
+      "chunks": 15
+    },
+    {
+      "i": 20,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/1h/eval-000016001/accounting.json",
+      "bytes": 1385,
+      "sha256": "10b907dfc6f4ef0a67323e3a0f5d67c0c0ae36c062972fe2435df041d6540cd7",
+      "chunks": 3
+    },
+    {
+      "i": 21,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/1h/eval-000016001/audit/summary.json",
+      "bytes": 962,
+      "sha256": "3c32c922fb853422a8463b8298b6d14aed8456b629c16909c8a6c07f1de2c7ac",
+      "chunks": 3
+    },
+    {
+      "i": 22,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/1h/eval-000016001/audit/initial-states.json",
+      "bytes": 721,
+      "sha256": "91222ccf73788cbae53b0ee6d249c24e0e62efcb2c5b01a17e553aa051850d12",
+      "chunks": 2
+    },
+    {
+      "i": 23,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/1h/eval-000016001/state-forecast.json",
+      "bytes": 8372,
+      "sha256": "864fb858da5a2060a01ec974d97cefb9f4e545373afc576a67382d9f570ce335",
+      "chunks": 8
+    },
+    {
+      "i": 24,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/7h/case-result.json",
+      "bytes": 3938,
+      "sha256": "07807b07943ee014b1b439d06fa9eda281d0da0ecdbffdbdce963f689503975e",
+      "chunks": 6
+    },
+    {
+      "i": 25,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/7h/training/result.json",
+      "bytes": 6557,
+      "sha256": "a2cbb5066f47b4598709cdc267843e7ea02aa35c8aefb89a8666de3f3f657a02",
+      "chunks": 8
+    },
+    {
+      "i": 26,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/7h/training/resolved-config.json",
+      "bytes": 42759,
+      "sha256": "f437985829c21d3fdec4a95f33a50a6a0f713a390c2687b375904384b43069ab",
+      "chunks": 23
+    },
+    {
+      "i": 27,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/7h/training/checkpoint-times.json",
+      "bytes": 4230,
+      "sha256": "3f2d595b8c9bb7ea08f7b7cb2f77dc6df73caffc8db6bd1b6cd210705ee849b4",
+      "chunks": 4
+    },
+    {
+      "i": 28,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/7h/training/learner-counts.json",
+      "bytes": 1845,
+      "sha256": "abf2728fdff6e2c0e6210f03fdd65f6a3c0f8d929f0b8a098bf5cc9534b5c54c",
+      "chunks": 2
+    },
+    {
+      "i": 29,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/7h/eval-000004001/result.json",
+      "bytes": 23475,
+      "sha256": "3490cc215531e2bfc45ef1300d959823f3690115fcf4a3548649c61a20cb51ab",
+      "chunks": 13
+    },
+    {
+      "i": 30,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/7h/eval-000004001/protocol.json",
+      "bytes": 14293,
+      "sha256": "a39fb8a1eb9e3d45432cbf6a77222d69e0238fda81098bcd2e24350f4d266533",
+      "chunks": 15
+    },
+    {
+      "i": 31,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/7h/eval-000004001/accounting.json",
+      "bytes": 1385,
+      "sha256": "8794b50018cb793741882b57b8dfb37be24679072332f9e08f159760c1ed70b3",
+      "chunks": 3
+    },
+    {
+      "i": 32,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/7h/eval-000004001/audit/summary.json",
+      "bytes": 961,
+      "sha256": "afd6fff945c06efcb1b18e6a22a637958d9c793fd7468909040305720706732b",
+      "chunks": 3
+    },
+    {
+      "i": 33,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/7h/eval-000004001/audit/initial-states.json",
+      "bytes": 721,
+      "sha256": "0d74003d92ad71138462de77ecc5c7c538f6048166f389e6fa322ab127c72e49",
+      "chunks": 2
+    },
+    {
+      "i": 34,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/7h/eval-000008001/result.json",
+      "bytes": 23497,
+      "sha256": "8ee41a48d760fdcd82f32801cb5d62eaedc87266ca753fd3106ebc9317eecec8",
+      "chunks": 13
+    },
+    {
+      "i": 35,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/7h/eval-000008001/protocol.json",
+      "bytes": 14293,
+      "sha256": "ebb5d0c04f536c0573deab761d780815d829be24ec04222ed364690fa4133f0b",
+      "chunks": 15
+    },
+    {
+      "i": 36,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/7h/eval-000008001/accounting.json",
+      "bytes": 1386,
+      "sha256": "a9b9938fd3881465e89db91cd00fe3dd764615de21e94ed67b8f48cdd906a44f",
+      "chunks": 3
+    },
+    {
+      "i": 37,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/7h/eval-000008001/audit/summary.json",
+      "bytes": 962,
+      "sha256": "14dfff65c708c5316ce0b747bffee33f16c9e93d5c7f1522b4cf96996f4848b3",
+      "chunks": 3
+    },
+    {
+      "i": 38,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/7h/eval-000008001/audit/initial-states.json",
+      "bytes": 721,
+      "sha256": "a36bea67cab1e61d748bc2d63d604f71db7183d54508db259a56fa655225156e",
+      "chunks": 2
+    },
+    {
+      "i": 39,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/7h/eval-000016001/result.json",
+      "bytes": 23483,
+      "sha256": "807134e5388606741bda1f6763e09ff57218bb4655ad932153dd1ae9aad6f36f",
+      "chunks": 13
+    },
+    {
+      "i": 40,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/7h/eval-000016001/protocol.json",
+      "bytes": 14294,
+      "sha256": "268a90c7936346adfda8cb7749c4dd0cdf14621f6626afdedd17c15f32b21fa4",
+      "chunks": 15
+    },
+    {
+      "i": 41,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/7h/eval-000016001/accounting.json",
+      "bytes": 1386,
+      "sha256": "ce6aca60af3a220f6284ef56c81c525505fddc5f21ca8e78097420c42ce6b0e5",
+      "chunks": 3
+    },
+    {
+      "i": 42,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/7h/eval-000016001/audit/summary.json",
+      "bytes": 961,
+      "sha256": "615ed60bb2128501a73f8adf1c5ec462a9c7ad880a50cce47bec57b6b035d4c4",
+      "chunks": 3
+    },
+    {
+      "i": 43,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/7h/eval-000016001/audit/initial-states.json",
+      "bytes": 721,
+      "sha256": "67e73fd678e3c003bc7ed9fd6d63d2ff9d6cebddb375ec89717a20cde1cf337b",
+      "chunks": 2
+    },
+    {
+      "i": 44,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/7h/eval-000016001/state-forecast.json",
+      "bytes": 8372,
+      "sha256": "61ac94286e8969381d5ea257550dfa9f0ff9f49d4eab30b1e9e758b7db7c920d",
+      "chunks": 8
+    },
+    {
+      "i": 45,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/40h/case-result.json",
+      "bytes": 3937,
+      "sha256": "60d1b70dda9ff48dc197777065d4e382327605e52cf4016ea8f81146a4e6c842",
+      "chunks": 6
+    },
+    {
+      "i": 46,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/40h/training/result.json",
+      "bytes": 6560,
+      "sha256": "90c1e4265a0a7782fc8baae0c315478df18dfdccec375513a44ec9ee69217a13",
+      "chunks": 8
+    },
+    {
+      "i": 47,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/40h/training/resolved-config.json",
+      "bytes": 42762,
+      "sha256": "9458a53f45f6067e99c011df2d771197e9447b1dcdb238e344abe22cbcec142c",
+      "chunks": 23
+    },
+    {
+      "i": 48,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/40h/training/checkpoint-times.json",
+      "bytes": 4229,
+      "sha256": "f1af9775fa6091c22308dced34d091cb2103221a5db0024a9304f8ca259dc5c0",
+      "chunks": 4
+    },
+    {
+      "i": 49,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/40h/training/learner-counts.json",
+      "bytes": 1845,
+      "sha256": "abf2728fdff6e2c0e6210f03fdd65f6a3c0f8d929f0b8a098bf5cc9534b5c54c",
+      "chunks": 2
+    },
+    {
+      "i": 50,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/40h/eval-000004001/result.json",
+      "bytes": 23479,
+      "sha256": "fb253b9bb730c54658bd8c0b383df0e926091b037a8988983bae22b0b17d9750",
+      "chunks": 13
+    },
+    {
+      "i": 51,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/40h/eval-000004001/protocol.json",
+      "bytes": 14299,
+      "sha256": "aed35ed9d8f1b422422aff945d93a7679efc42b16d764ea8e726941c5c137b20",
+      "chunks": 15
+    },
+    {
+      "i": 52,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/40h/eval-000004001/accounting.json",
+      "bytes": 1385,
+      "sha256": "9170555f933af9ac4258b26b8925e2a9a3d84dd456beb4abf5244b42839382a7",
+      "chunks": 3
+    },
+    {
+      "i": 53,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/40h/eval-000004001/audit/summary.json",
+      "bytes": 961,
+      "sha256": "8984fd56b066990f610d6e292d40751fbd653907afb0eba47cd8c2377dfda8da",
+      "chunks": 3
+    },
+    {
+      "i": 54,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/40h/eval-000004001/audit/initial-states.json",
+      "bytes": 721,
+      "sha256": "1e310d2bce60e416bd3b3c0789cfae50602cca82d5e91f731d8510741d397232",
+      "chunks": 2
+    },
+    {
+      "i": 55,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/40h/eval-000008001/result.json",
+      "bytes": 23476,
+      "sha256": "61441a1844f7595e65d9515fc55cd0b14606b364cf9b4659555f0fbc6ea597f3",
+      "chunks": 13
+    },
+    {
+      "i": 56,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/40h/eval-000008001/protocol.json",
+      "bytes": 14299,
+      "sha256": "b43567fbb04373b124a0fbfa846eb3572a1a630993adbe3214663a80d56d715e",
+      "chunks": 15
+    },
+    {
+      "i": 57,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/40h/eval-000008001/accounting.json",
+      "bytes": 1385,
+      "sha256": "607bbef88bc45a17c6d7e47427a0062fe7f23d739683383f94c5c4555e4bf04c",
+      "chunks": 3
+    },
+    {
+      "i": 58,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/40h/eval-000008001/audit/summary.json",
+      "bytes": 961,
+      "sha256": "da2cad168f49b86cf98cd3870f6ec70da6286d48e7cc64d20b287df2a8ecf864",
+      "chunks": 3
+    },
+    {
+      "i": 59,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/40h/eval-000008001/audit/initial-states.json",
+      "bytes": 721,
+      "sha256": "4ad480b81c72c35cdbf5554091347b89f073cc78d67d75b485e7d919ca9be960",
+      "chunks": 2
+    },
+    {
+      "i": 60,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/40h/eval-000016001/result.json",
+      "bytes": 23484,
+      "sha256": "519e1f87246db23d840c44d0428d6888313a0e3db6b94bea69669b0b17b62ca8",
+      "chunks": 13
+    },
+    {
+      "i": 61,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/40h/eval-000016001/protocol.json",
+      "bytes": 14300,
+      "sha256": "6e634c281de4580488061b3d1ee9c522fed895ab28aa920e031294930a35e13d",
+      "chunks": 15
+    },
+    {
+      "i": 62,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/40h/eval-000016001/accounting.json",
+      "bytes": 1348,
+      "sha256": "1f26d334dab03d064b643d61faa0ee36b54c8640fccb96faaa660e6ecd1670e9",
+      "chunks": 3
+    },
+    {
+      "i": 63,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/40h/eval-000016001/audit/summary.json",
+      "bytes": 961,
+      "sha256": "8a30c277cb396400483583a48dae3263d6f2aba5b98ba34472a43cfd6b3fa0ac",
+      "chunks": 3
+    },
+    {
+      "i": 64,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/40h/eval-000016001/audit/initial-states.json",
+      "bytes": 721,
+      "sha256": "4e8876dbf917d9ba4f917a0e71cbf9972c78c2b374ec6cd5ebcec57b37705dcf",
+      "chunks": 2
+    },
+    {
+      "i": 65,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/40h/eval-000016001/state-forecast.json",
+      "bytes": 8369,
+      "sha256": "bc8e5cc36cecb6272a1e089eecaa622988e5b7206448ac9b1386722dd229dd4b",
+      "chunks": 8
+    },
+    {
+      "i": 66,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/full/case-result.json",
+      "bytes": 3944,
+      "sha256": "595c7e2f944d8cd5083d06d6e64ab45904637a0e6e1606eb8a026cb28797b457",
+      "chunks": 6
+    },
+    {
+      "i": 67,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/full/training/result.json",
+      "bytes": 6569,
+      "sha256": "f76372fe6e65bfc113fd4f069394c38ace73ad842edf4a1d1872f0b8ba4cd2b6",
+      "chunks": 8
+    },
+    {
+      "i": 68,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/full/training/resolved-config.json",
+      "bytes": 42767,
+      "sha256": "3608bf22294ca6148b7a2bb461a60a5a340444de3cd4cc252ec1efc25c6a21f8",
+      "chunks": 23
+    },
+    {
+      "i": 69,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/full/training/checkpoint-times.json",
+      "bytes": 4234,
+      "sha256": "8604172c7d63639e83ff3c0c310d1275f31e67c9353886eaa23bc1a99835acc3",
+      "chunks": 4
+    },
+    {
+      "i": 70,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/full/training/learner-counts.json",
+      "bytes": 1845,
+      "sha256": "abf2728fdff6e2c0e6210f03fdd65f6a3c0f8d929f0b8a098bf5cc9534b5c54c",
+      "chunks": 2
+    },
+    {
+      "i": 71,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/full/eval-000004001/result.json",
+      "bytes": 23476,
+      "sha256": "f5de0f465dcf91780dbbcde726a657b70f7f3bfa8e72dca5e181c2014b1eb136",
+      "chunks": 13
+    },
+    {
+      "i": 72,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/full/eval-000004001/protocol.json",
+      "bytes": 14311,
+      "sha256": "cf8efaa9d02b41783a89fdf36a2579fc6c3f18e5de426f830988242f8d1ae9f4",
+      "chunks": 15
+    },
+    {
+      "i": 73,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/full/eval-000004001/accounting.json",
+      "bytes": 1385,
+      "sha256": "cdd2698066c78a6b7146bdaa915f726935a956f436a95f027db586ad02a552b1",
+      "chunks": 3
+    },
+    {
+      "i": 74,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/full/eval-000004001/audit/summary.json",
+      "bytes": 961,
+      "sha256": "d0cb24a2bf0c06df851f5266f5b282aa92096ac08912bbae3e63b4c85ce39c79",
+      "chunks": 3
+    },
+    {
+      "i": 75,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/full/eval-000004001/audit/initial-states.json",
+      "bytes": 721,
+      "sha256": "856a63b0dff264a99e116289f4b83e179c6e308c3d778a98dac06aaa664a2f60",
+      "chunks": 2
+    },
+    {
+      "i": 76,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/full/eval-000008001/result.json",
+      "bytes": 23480,
+      "sha256": "90334cb9f13a4f009b805559ed0588267547e0e9bca68e97550d5a2bf41b3642",
+      "chunks": 13
+    },
+    {
+      "i": 77,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/full/eval-000008001/protocol.json",
+      "bytes": 14311,
+      "sha256": "3f6f3b9d24702549db50bcbb74dc35371776266e348287bf4208392307b4a51b",
+      "chunks": 15
+    },
+    {
+      "i": 78,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/full/eval-000008001/accounting.json",
+      "bytes": 1386,
+      "sha256": "0f20873eba0fedd9f07e3f6fbcf8466626faa5fec8e294d29b142b0ba3f8ce86",
+      "chunks": 3
+    },
+    {
+      "i": 79,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/full/eval-000008001/audit/summary.json",
+      "bytes": 962,
+      "sha256": "65fcb3e4ecf70dc6c67d641c7ffb01b9daaf63edd8fcfe06d4a9354095574886",
+      "chunks": 3
+    },
+    {
+      "i": 80,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/full/eval-000008001/audit/initial-states.json",
+      "bytes": 721,
+      "sha256": "1278ba65f85e1f22c15cd50f2c59e776f4922dce5a75e0158a56180ddd83c003",
+      "chunks": 2
+    },
+    {
+      "i": 81,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/full/eval-000016001/result.json",
+      "bytes": 23483,
+      "sha256": "5d16e2046c248c5d64661bd43af296c89072ac98854fa1b546cfa73dde8d0c20",
+      "chunks": 13
+    },
+    {
+      "i": 82,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/full/eval-000016001/protocol.json",
+      "bytes": 14312,
+      "sha256": "201457dbdd2845beba38e3014b9b499141b506aef27ca3d6512bbd17b2eafb73",
+      "chunks": 15
+    },
+    {
+      "i": 83,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/full/eval-000016001/accounting.json",
+      "bytes": 1347,
+      "sha256": "b54264d1bdb9e39bddfaec6ce696cbadf6a2628832159e8f4bc8db1ff01bdc3c",
+      "chunks": 3
+    },
+    {
+      "i": 84,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/full/eval-000016001/audit/summary.json",
+      "bytes": 961,
+      "sha256": "149222ff2f31113c4b7b82fed9b78eb38d86dc326145f13fe0a0a97d679d723a",
+      "chunks": 3
+    },
+    {
+      "i": 85,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/full/eval-000016001/audit/initial-states.json",
+      "bytes": 721,
+      "sha256": "b439befc676d21b9a3a1d07041ea9eee18b9f30c8a6cf786162adee428c6d370",
+      "chunks": 2
+    },
+    {
+      "i": 86,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/cases/full/eval-000016001/state-forecast.json",
+      "bytes": 8373,
+      "sha256": "110e8050ace5351d936d2d9c1339268c0127517748714bde6bb724f41855464b",
+      "chunks": 8
+    }
+  ]
+}

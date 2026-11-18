@@ -1139,3 +1139,42 @@ imagined transitions and used evaluated full motions for its primary
 metric. Both the budget and return definitions matter when interpreting the
 local comparison.
 [Source receipt](../official-reproduction-20261112/author-project-figure-data-20261119.json).
+
+## 73. BONES duration study completed on the shared training probe
+
+All four cases completed 16,001 native collections and three evaluations
+per case. The two H100s ran two cases at a time. The cloud driver exited
+successfully on November 19 at 01:26:25 China Standard Time. We retrieved
+87 original JSON files, matched their byte counts and SHA-256 digests,
+recomputed every clip's return from its recorded episode, and checked each
+saved-state and trajectory audit. The final forecast aggregates were
+recomputed from per-group errors.
+
+| Training data | Clips | Return at 4,001 | Return at 8,001 | Return at 16,001 | Successes at 16,001 | Step-8 state MSE |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| 1.002 h | 508 | 0.76757 | 0.86562 | 0.91580 | 63 / 64 | 0.02154 |
+| 7.002 h | 3,402 | 0.73240 | 0.84477 | 0.88414 | 63 / 64 | 0.01912 |
+| 40.002 h | 19,569 | 0.79164 | 0.83767 | 0.89490 | 64 / 64 | 0.01779 |
+| 263.190 h | 129,543 | 0.80325 | 0.85380 | 0.89227 | 64 / 64 | 0.02236 |
+
+The 1-hour case was the only case with a measured checkpoint at or above
+the local 0.90 threshold. Its step-16,001 snapshot was retained 2,066 s
+after runner entry, or 0.574 H100-hours. The three other cases remained below
+the threshold through the fixed budget, giving no measured crossing time.
+Across the four cases, the final step-8 MSE ranged from 0.01779 to 0.02236.
+Every case trained on the 64 evaluation motions. Each prediction aggregate
+uses the windows that its own deterministic policy completed. These choices
+and the single seed limit conclusions about generalization and exact
+agreement with the authors' Figure 3(b–c).
+
+An independent MuJoCo pass reproduced the geometry filter's decisions on
+all 136 clips excluded by geometry and 192 sampled retained clips, covering
+304,308 frames.
+[Geometry audit](../official-reproduction-20261112/bones-proxy-feasibility-1118/geometry-direct-verification.json).
+
+[Validation](../official-reproduction-20261112/bones-duration-1118c/validation.json),
+[original-file ledger](../official-reproduction-20261112/bones-duration-1118c/receipt-ledger.json),
+[run manifest](../official-reproduction-20261112/bones-duration-1118c/study.json),
+and [plot source](../official-reproduction-20261112/plot_bones_duration_study.py).
+
+![Verified BONES duration comparison](../official-reproduction-20261112/bones-duration-1118c/duration-comparison.png)

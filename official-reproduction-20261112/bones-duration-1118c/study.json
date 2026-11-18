@@ -1,0 +1,148 @@
+{
+  "status": "complete",
+  "collection_budget_each": 16001,
+  "evaluation_collections": [
+    4001,
+    8001,
+    16001
+  ],
+  "available_reference_hours": 263.19039444444445,
+  "paper_exact_duration_sweep": false,
+  "paper_exact_membership": false,
+  "filter_sha256": "4bd19b4dcfac2eba1d3b476c0c59c3fc0b1089006d417c7918976ad35e0c3423",
+  "raw_manifest_sha256": "44980c5d89b4637328b332b1d43cd49fe30505dbc694ba09ac6c9d33083a0264",
+  "requested_gpus": 2,
+  "packs": {
+    "1h": {
+      "status": "bones_proxy_duration_pack_verified",
+      "case": "1h",
+      "clips": 508,
+      "frames": 180366,
+      "hours_at_50hz": 1.0020333333333333,
+      "paper_exact_membership": false,
+      "filter_report_sha256": "4bd19b4dcfac2eba1d3b476c0c59c3fc0b1089006d417c7918976ad35e0c3423",
+      "membership_sha256": "ab3e335efae270f1eab156ae0ca46e893280ab17225efb190f1a44d3fcf8aa3d",
+      "nested_seed": 42,
+      "probe_seed": 20261118,
+      "sampling": "nested whole-clip subsets",
+      "common_probe_seen_in_training": true,
+      "files": {
+        "joint_names.json": "30355b480e4f89c97a693c72f8baf23902fd458d25e49b5df4741dd47aefce0d",
+        "joint_pos.npy": "cdf4554e6a62631f80a848137307f125fdfdf4bd7e6c22217e9cb8fe0b62247e",
+        "joint_vel.npy": "292148b18146427d2fe417b8994665223616c1e264660d6b516b54682949db89",
+        "motion_ends.npy": "ffabfaca15e9e1871c82718bbbb0dce2e6385ca925688afcc97defbd82aebcd6",
+        "motion_names.json": "53aa8255f6f5dae6938fc86768c549ce0f352cc74cd6a264f8b082a14fe81604",
+        "root_ang_vel_w.npy": "731c64d3b87622fa150b677c1fea75c74fe30f31d74bf3888af81496881dd8a5",
+        "root_lin_vel_w.npy": "892845f191ddc55a6030c7f6ddb5b25f7f11d1cba1d739489974e670f34f3fd5",
+        "root_pos_w.npy": "dd98d7f94bb5aed82ccfb7d40f81af0b3280453251f05b4376bfbf212403195d",
+        "root_quat_w.npy": "260bffeb7ec07394815de1cecd8c58bfa78bd1da2b250ab9837b3d0a5b619e95"
+      }
+    },
+    "7h": {
+      "status": "bones_proxy_duration_pack_verified",
+      "case": "7h",
+      "clips": 3402,
+      "frames": 1260287,
+      "hours_at_50hz": 7.001594444444445,
+      "paper_exact_membership": false,
+      "filter_report_sha256": "4bd19b4dcfac2eba1d3b476c0c59c3fc0b1089006d417c7918976ad35e0c3423",
+      "membership_sha256": "8f3c264b5e8fc77e039f6eeab92ab337e158d979af967d9a83917208bb56e713",
+      "nested_seed": 42,
+      "probe_seed": 20261118,
+      "sampling": "nested whole-clip subsets",
+      "common_probe_seen_in_training": true,
+      "files": {
+        "joint_names.json": "30355b480e4f89c97a693c72f8baf23902fd458d25e49b5df4741dd47aefce0d",
+        "joint_pos.npy": "f174f8e7b866d85305d5799ef13903d681e66e895406f195669b223d295c6b5c",
+        "joint_vel.npy": "b40eb295723b2d6bf40533018d6f7d2833a19482fb5ae8be0d6870c9adf5c0b5",
+        "motion_ends.npy": "858854ab247b0f3507d7c0ac90281f67a97e66dcaa41b6d032455429c3de622c",
+        "motion_names.json": "9925bd7d7e570f2b0b02976e63dff527b2badf5d0b945fd842dc2b04447cadbe",
+        "root_ang_vel_w.npy": "62ae845a0a285ff53012a2490f17e84d6c0fdec7d08ee8d3e5bdad1728c5f958",
+        "root_lin_vel_w.npy": "28b0f96cc488cabfbc5de5c6894dc7413b8a312776f837a61de7ef26c421293b",
+        "root_pos_w.npy": "55acf3735ab021aae4f2e5aa11d60e4e855f80ec16d06b1bbcdb5b6154ba4e8f",
+        "root_quat_w.npy": "889b984a7bec2bce0aa9042ba135759a381860d4b78ec48f85ebf630e8813084"
+      }
+    },
+    "40h": {
+      "status": "bones_proxy_duration_pack_verified",
+      "case": "40h",
+      "clips": 19569,
+      "frames": 7200286,
+      "hours_at_50hz": 40.00158888888889,
+      "paper_exact_membership": false,
+      "filter_report_sha256": "4bd19b4dcfac2eba1d3b476c0c59c3fc0b1089006d417c7918976ad35e0c3423",
+      "membership_sha256": "16112b2af78d3a81fe33b3d98e5ff40415de3782724a14ca495ccbe14700e2b4",
+      "nested_seed": 42,
+      "probe_seed": 20261118,
+      "sampling": "nested whole-clip subsets",
+      "common_probe_seen_in_training": true,
+      "files": {
+        "joint_names.json": "30355b480e4f89c97a693c72f8baf23902fd458d25e49b5df4741dd47aefce0d",
+        "joint_pos.npy": "670f8154c7537a98ca2173f78a84127303bfe5cd1bca87195749bc6a3930df1b",
+        "joint_vel.npy": "6070156d2f1e191f4f4da6378f96e2943310d6e8d8621fc99971274d7a9f322b",
+        "motion_ends.npy": "03baf5f7192c37d549244c602fbe901823a1ad6c366fe2a6341c013aacb988b9",
+        "motion_names.json": "3f0e08bc4ed0fa19a32570f0a378babbb8af0ae1a85483ea215860180dd7b20b",
+        "root_ang_vel_w.npy": "59dc8233bff54cd978c558b7dbeb2dbbb8f46b32eaefbb42df08a42bd889a1b1",
+        "root_lin_vel_w.npy": "c85323cf758a11faf6090d7c954c2a103cff6374f266006f4a4fc96758ceeff9",
+        "root_pos_w.npy": "834dfe322af11ce512d47aeebd25961065b10f6bf2805931106fcb003295f059",
+        "root_quat_w.npy": "2b69598d2a2eca17267568fcd917eb78f381a05f6d6ef724d668ce738327dd35"
+      }
+    },
+    "full": {
+      "status": "bones_proxy_duration_pack_verified",
+      "case": "full",
+      "clips": 129543,
+      "frames": 47374271,
+      "hours_at_50hz": 263.19039444444445,
+      "paper_exact_membership": false,
+      "filter_report_sha256": "4bd19b4dcfac2eba1d3b476c0c59c3fc0b1089006d417c7918976ad35e0c3423",
+      "membership_sha256": "52f5cc304479a7799222c2026656630bba671c7db437b2bc7d678477c927a739",
+      "nested_seed": 42,
+      "probe_seed": 20261118,
+      "sampling": "nested whole-clip subsets",
+      "common_probe_seen_in_training": true,
+      "files": {
+        "joint_names.json": "30355b480e4f89c97a693c72f8baf23902fd458d25e49b5df4741dd47aefce0d",
+        "joint_pos.npy": "8ffa7fc797b43b05af4fe1c162dfc5c71353934cd6928d0441a71331143a5d2a",
+        "joint_vel.npy": "1d80816d48b6bde45825f3bf427df4f1d03cee66acc80752ca1274fa3274df3c",
+        "motion_ends.npy": "68b5fc6e3b66d1db9f1f17d981def1aec8dbf7bf0a0299ea4582884088c1a5df",
+        "motion_names.json": "1406e7687e5d51eb393359d2f46ac461a84bd99424aeffd3fb412c93a229658f",
+        "root_ang_vel_w.npy": "6af05269fc8bc91b334399b58966d5bf5563927113cefa68f05adf21d35bee56",
+        "root_lin_vel_w.npy": "6bb57ae661f26a36716143f69d9a776342a609852823b4caa5e5520d331d9558",
+        "root_pos_w.npy": "bc1c05b120a41ffd7fb8e70f28c3f21d920ea74b381a2c9bda7f60511108b240",
+        "root_quat_w.npy": "cdb2c2cf37f026f89c62615a0c313d27907c9df04f26f9bcea860a9daee30752"
+      }
+    },
+    "common64": {
+      "status": "bones_proxy_duration_pack_verified",
+      "case": "common64",
+      "clips": 64,
+      "frames": 20397,
+      "hours_at_50hz": 0.11331666666666666,
+      "paper_exact_membership": false,
+      "filter_report_sha256": "4bd19b4dcfac2eba1d3b476c0c59c3fc0b1089006d417c7918976ad35e0c3423",
+      "membership_sha256": "16832d75b45c020338848d4412e0efcb00e49ecb06d56adf28abcbf96253d714",
+      "nested_seed": 42,
+      "probe_seed": 20261118,
+      "sampling": "nested whole-clip subsets",
+      "common_probe_seen_in_training": true,
+      "files": {
+        "joint_names.json": "30355b480e4f89c97a693c72f8baf23902fd458d25e49b5df4741dd47aefce0d",
+        "joint_pos.npy": "5c9ab3235a030a81e8ea58bd63458b854b304fdf7b71459558d1901065bc7a9d",
+        "joint_vel.npy": "eed1559192d58105f6f6462e8bc1339d7fbc0e1a2604c13c07029d202d45e5fe",
+        "motion_ends.npy": "7bedabe59f0df9ad823c53b136d08e086268b26f6bc46ca97d63fa0612867354",
+        "motion_names.json": "e936cb587f5f46550dee1735c41ca8ef79f416c60bd47a69987a04172d69862c",
+        "root_ang_vel_w.npy": "38d211866d902c05e476ab16d38fa2c09c421428347f033654b93b836ae25280",
+        "root_lin_vel_w.npy": "6c50f3388a79db62c5c04175e7727f76378a7bb2b35167f995d445286714d186",
+        "root_pos_w.npy": "2185d114427d56870390eae843e9f4c26ad160fa5f08b7f6c37f4b45fc8fc705",
+        "root_quat_w.npy": "913c3fd1d39a6948636695f5540631c2a3a4b14da24b3b495ba882bbed9d15c3"
+      }
+    }
+  },
+  "case_return_codes": {
+    "1h": 0,
+    "7h": 0,
+    "40h": 0,
+    "full": 0
+  }
+}
