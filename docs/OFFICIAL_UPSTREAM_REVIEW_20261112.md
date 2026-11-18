@@ -1324,3 +1324,28 @@ absolute action difference of 9.54 × 10⁻⁷. The full 129,543-clip
 v1.1 evaluation started after that probe passed.
 [CUDA probe results](../official-reproduction-20261112/sonic-v11-bones-full-1119t/common64-validation.json),
 [receipt hashes](../official-reproduction-20261112/sonic-v11-bones-full-1119t/common64-receipt-ledger.json).
+
+## 80. Equal-horizon LAFAN40 curves with and without the critic
+
+Both H32 arms trained from scratch with the same seed, 4,096 real
+environments and the same 40-motion pack. The new critic-free run reached
+64,001 collections in one process. We recovered all 59 original JSONs
+from its integration and main run, verified checkpoint selection against
+the retained weights, and recomputed both arms' nine fixed-start scores.
+
+The first sampled checkpoint above 0.82 was 24,001 collections with the
+critic and 56,001 without it, at 0.897 and 1.827 hours since each runner's
+entry. At 64,001 collections the two mean returns were 0.85498 and 0.85230,
+and full-clip completion was 40/40 and 37/40. This is one seed with
+checkpoint evaluation from the first reference frame. Figure 4(b,c)
+reports training-episode return from return-based reset sampling.
+[Curve data and receipt hash](../official-reproduction-20261112/lafan-h32-nocritic-64k-1119j/curve-comparison.json),
+[paper protocol](https://arxiv.org/abs/2610.28480).
+
+![LAFAN40 fixed-start performance with and without the H32 critic](../official-reproduction-20261112/lafan-h32-nocritic-64k-1119j/h32-critic-control.png)
+
+The nearest eligible checkpoints had returns of 0.84078 and 0.83862 at
+40,001 and 56,001 collections. The equal-budget endpoints had a return
+gap of 0.00268 and matched the same 0.005 tolerance. The follow-up push
+job freezes both pairs and evaluates each policy on the same static
+reference and impulse grid.

@@ -67,8 +67,16 @@ def main():
     integration = check_control(args.output / "integration", 21, [11], motions, identities)
     no_critic = check_control(args.output / "main", 64001, plan["main"]["evaluation_steps"], motions, identities)
     critic_train = base / "training"
-    assert read(critic_train / "result.json")["critic_enabled"]
-    assert read(critic_train / "resolved-config.json")["runner"]["policy"]["horizon"] == 32
+    critic_training = read(critic_train / "result.json")
+    critic_config = read(critic_train / "resolved-config.json")
+    # Older receipts predate critic_enabled. The resolved policy and retained
+    # critic file verify the training arm independently of that flag.
+    assert critic_training.get("critic_enabled", True)
+    assert critic_training["collection_steps"] == 64001
+    assert critic_config["seed"] == 42 and critic_config["num_envs"] == 4096
+    assert critic_config["runner"]["policy"]["horizon"] == 32 and critic_config["runner"]["policy"]["lam"] == .95
+    assert all({item["file"] for item in snapshot["files"]} == {"actor.pt", "critic.pt", "world_model.pt"}
+               for snapshot in critic_training["retained_checkpoint_series"])
     critic = []
     for step in plan["main"]["evaluation_steps"]:
         source_dir = base / f"eval-{step:09d}"
