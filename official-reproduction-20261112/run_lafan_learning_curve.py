@@ -31,11 +31,13 @@ def execute(script, arguments, log, timeout_seconds, *, stream_progress=False):
     with log.open("w", encoding="utf-8") as stream:
         bounded = ["timeout", "--signal=TERM", "--kill-after=30s", str(timeout_seconds) + "s", *command]
         if stream_progress:
+            prefixes = (("PAPER_PROFILE collection_step=", "MODEL_SNAPSHOT_PRESERVED ", "CHECKPOINT_TIME_OBSERVED ")
+                        if stream_progress is True else stream_progress)
             completed = subprocess.Popen(bounded, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
                                          text=True, encoding="utf-8", errors="replace")
             for line in completed.stdout:
                 stream.write(line)
-                if line.startswith(("PAPER_PROFILE collection_step=", "MODEL_SNAPSHOT_PRESERVED ", "CHECKPOINT_TIME_OBSERVED ")):
+                if line.startswith(prefixes):
                     stream.flush();print(line.rstrip(), flush=True)
             completed.wait()
         else:
@@ -183,14 +185,17 @@ def main():
     parser.add_argument("--motions", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--run-main-after-integration", action="store_true")
+    parser.add_argument("--without-critic", action="store_true")
     args = parser.parse_args()
     output = args.output.resolve()
     output.mkdir(parents=True, exist_ok=False)
     motions = args.motions.resolve()
-    run_case(output / "integration", motions, 21, 10, [11], 900, 600)
+    run_case(output / "integration", motions, 21, 10, [11], 900, 600,
+             without_critic=args.without_critic)
     print("LAFAN_CURVE_CUDA_INTEGRATION_PASSED", flush=True)
     if args.run_main_after_integration:
-        run_case(output / "main", motions, 64001, 4000, POINTS, 14400, 900)
+        run_case(output / "main", motions, 64001, 4000, POINTS, 14400, 900,
+                 without_critic=args.without_critic, record_learner_counts=args.without_critic)
     print("LAFAN_CURVE_PIPELINE_COMPLETED", flush=True)
 
 
