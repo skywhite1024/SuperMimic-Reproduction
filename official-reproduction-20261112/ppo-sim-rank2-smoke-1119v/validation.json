@@ -1,0 +1,47 @@
+{
+  "status": "timed_ppo_sim_training_and_native_eval_verified",
+  "timing_smoke": true,
+  "original_JSONs": 11,
+  "log_sha256": "72966b35bbe2a86fe52f8148b06192740baa06d0027e0479a25573ec7267d45e",
+  "source_commit": "7f394693eba91056120be3fcfe7605dbabd6c9f1",
+  "checkpoints": [
+    20,
+    60
+  ],
+  "updates": 10,
+  "real_simulator_steps": 3932160,
+  "clock_seconds": 62.400694224983454,
+  "scores": [
+    {
+      "clips": 40,
+      "successes": 0,
+      "mean_normalized_full_motion_return": 0.0007405294062433884,
+      "reference_frames": 441140,
+      "ppo_update": 10,
+      "crossed_training_clock_seconds": [
+        60.0
+      ]
+    }
+  ],
+  "paper_exact_sampler_confirmed": false,
+  "world_size": 2,
+  "rank_receipts": [
+    {
+      "rank": 0,
+      "local_device": "cuda:0",
+      "local_real_transitions": 1966080,
+      "initial_observation_sha256": "e158a8b11683b01d95aeb5bf6f72411e6ca0d302be3c85f42101b7ca9a4ade1f",
+      "result_sha256": "e4f22a20964ec386bac8c476d5dac12878c201e90ce18043eb0fb0564d534109",
+      "config_sha256": "af0dd9de90986235ac826a291b9fad21599749b9731e417dd5d6034d5b618709"
+    },
+    {
+      "rank": 1,
+      "local_device": "cuda:1",
+      "local_real_transitions": 1966080,
+      "initial_observation_sha256": "f277e272eaf4893cd9ae8a365637b5b48677ecea48549f6276a5a9c712cba5b3",
+      "result_sha256": "234114c6877c0094ace9659c253775da469404910ce879a3b978f65d0e7bf9fd",
+      "config_sha256": "f2d68d3e7e31aa531f76b525df1fedc1c17f3bcdadf23607aac51f1d267a0a28"
+    }
+  ],
+  "global_actor_observation_count": 3932160
+}

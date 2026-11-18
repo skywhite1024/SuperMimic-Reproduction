@@ -1400,3 +1400,19 @@ difference in the amount of degradation warrants matching the full
 reference membership and the evaluation details before attributing the
 gap to a particular part of the port.
 [Paper and Appendix F](https://arxiv.org/abs/2610.28480).
+
+## 83. PPO-Sim synchronizes on two H100s
+
+Two real MuJoCo Warp processes each used 8,192 environments and 24
+simulator steps per PPO update. The smoke run completed ten updates at
+62.40 training seconds. The two process receipts record distinct initial
+observations, 3,932,160 total simulator transitions, and identical
+actor, critic, normalization and return-sampler state at both retained
+checkpoints. The final weights also passed fixed-start execution and
+artifact checks on all 40 LAFAN clips.
+
+The run uses native RSL NCCL gradient and KL reductions, RSL's
+per-rank advantage normalization, and the shared native return sampler.
+The 60-second endpoint verifies the distributed training and evaluation
+path ahead of a four-H100 timing run.
+[Verified rank and evaluation receipts](../official-reproduction-20261112/ppo-sim-rank2-smoke-1119v/validation.json).
