@@ -1245,6 +1245,12 @@ Across collections 202–1,001, the slower rank measured 326.99 s for
 6,553,600 global transitions, or **20,042 transitions/s**. The adapter
 runs learner updates eagerly to dispatch Python collectives. The measured
 window covers this two-rank implementation on the complete proxy bank.
-A timed single-device run of the same eager update path and an endpoint
-tracking evaluation would be needed to estimate scaling and quality.
 [Throughput validation](../official-reproduction-20261112/native-bones-two-gpu-throughput-1119h/validation.json).
+
+The corresponding single-H100 eager control used the same proxy pack,
+4,096 environments per device, 398 native learner updates and the same
+timing window. It sustained **13,678 transitions/s**. The observed ratio
+was **1.465×**, corresponding to **73.3%** parallel efficiency relative to
+ideal doubling. Each setting ran once. The evidence covers eager-learner
+throughput. Tracking quality at these checkpoints remains open.
+[Paired timing receipt](../official-reproduction-20261112/native-bones-one-gpu-eager-1119n/comparison.json).

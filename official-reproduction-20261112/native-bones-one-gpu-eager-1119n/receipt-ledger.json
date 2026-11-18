@@ -1,0 +1,11 @@
+{
+  "receipts": [
+    {
+      "i": 0,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/native-bones-one-gpu-eager-1119n/result.json",
+      "bytes": 705,
+      "sha256": "806a5786abba043fcfcf81ed01d8c34b1b9a5fb4dc06e49262cd1f518782d04a",
+      "chunks": 2
+    }
+  ]
+}

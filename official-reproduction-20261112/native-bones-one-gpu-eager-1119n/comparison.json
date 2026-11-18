@@ -1,0 +1,17 @@
+{
+  "status": "under_same_eager_per_device_workload_measured_and_verified",
+  "stride_collections": 800,
+  "envs_per_gpu": 4096,
+  "one_H100_global_real_transitions_per_second": 13677.567817002653,
+  "two_H100_global_real_transitions_per_second": 20042.38661805231,
+  "two_to_one_throughput_ratio": 1.4653472668684209,
+  "parallel_efficiency_relative_to_ideal": 0.7326736334342104,
+  "same_feasible_motion_membership_sha256": "52f5cc304479a7799222c2026656630bba671c7db437b2bc7d678477c927a739",
+  "one_H100_original_sha256": "806a5786abba043fcfcf81ed01d8c34b1b9a5fb4dc06e49262cd1f518782d04a",
+  "two_H100_validation_sha256": "5ff45f814663110b8a34775375c790bdc181e3256189864497487704dec7f2a3",
+  "one_H100_original_log_sha256": "7e8d1a5456ac5d8429dede209dab20003eca4f1e52b74439fe92f3cb879acd9e",
+  "two_H100_actual_job_uid": "2652a4735bb946b2b0639db42ca09d73",
+  "same_eager_learner_and_batch_per_device": true,
+  "quality_evaluated": false,
+  "exact_paper_efficiency_equivalence": false
+}

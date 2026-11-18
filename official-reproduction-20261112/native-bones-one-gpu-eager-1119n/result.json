@@ -1,0 +1,20 @@
+{
+  "status": "native_single_H100_eager_control_completed",
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "seed": 42,
+  "num_envs": 4096,
+  "local_collections": 1001,
+  "real_transitions": 4100096,
+  "outer_learner_updates": 398,
+  "learner_CUDA_graphs_disabled": true,
+  "learning_rate_multiplier": 1.4142135623730951,
+  "membership_sha256": "52f5cc304479a7799222c2026656630bba671c7db437b2bc7d678477c927a739",
+  "native_models_changed": true,
+  "first_excluded_collection": 201,
+  "last_included_collection": 1001,
+  "seconds": 239.57475801557302,
+  "steady_real_transitions": 3276800,
+  "steady_transitions_per_second": 13677.567817002653,
+  "quality_evaluated": false,
+  "paper_performance_equivalence": false
+}
