@@ -1349,3 +1349,26 @@ The nearest eligible checkpoints had returns of 0.84078 and 0.83862 at
 gap of 0.00268 and matched the same 0.005 tolerance. The follow-up push
 job freezes both pairs and evaluates each policy on the same static
 reference and impulse grid.
+
+## 81. Matched-return push trials at H32
+
+The four policies each ran 32 impulses and one unforced control on the
+first frame of `walk1_subject1`. All controls met the absolute posture
+criterion, and the absolute and pre-push-relative recovery counts agreed
+for every policy. We recovered 11 original JSONs and checked the fixed
+trial grid, all summaries and the hashes of the saved trajectory arrays.
+
+| Pair | Policy | Mean LAFAN40 return | Falls after impulse | Recovered |
+|---|---|---:|---:|---:|
+| Nearest return | Critic at 40,001 | 0.84078 | 5/32 | 27/32 |
+| Nearest return | No critic at 56,001 | 0.83862 | 9/32 | 23/32 |
+| Equal training budget | Critic at 64,001 | 0.85498 | 3/32 | 15/32 |
+| Equal training budget | No critic at 64,001 | 0.85230 | 11/32 | 21/32 |
+
+The critic policies fell less often in both pairs. Recovery within the
+six-second observation window improved for the nearest-return pair and
+declined for the equal-budget pair. In the equal-budget critic arm,
+14 of the 29 trials that stayed upright had not settled by the end of
+the response. These outcomes apply to the fixed pose, checkpoint pairs
+and seed used here.
+[Verified trial accounting](../official-reproduction-20261112/push-h32-matched-1119x/validation.json).

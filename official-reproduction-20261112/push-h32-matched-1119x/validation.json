@@ -1,0 +1,82 @@
+{
+  "status": "all_same_H32_push_originals_and_trial_scores_verified",
+  "original_JSONs": 11,
+  "log_sha256": "d48bd7c70849e2006b1ad8cdc46dc417e62b0c59631785c9d0fdc6223bc92153",
+  "horizon": 32,
+  "pose": "lafan_walk1_first_frame",
+  "total_trials": 132,
+  "comparisons": {
+    "nearest_return": {
+      "policies": [
+        "critic_h32",
+        "no_critic_h32"
+      ],
+      "return_gap": 0.0021691868448169283
+    },
+    "equal_training_budget": {
+      "policies": [
+        "critic_h32_at_64k",
+        "no_critic_h32_at_64k"
+      ],
+      "return_gap": 0.0026805424607839745
+    }
+  },
+  "policies": {
+    "critic_h32": {
+      "trial_count": 33,
+      "applied_impulses": 32,
+      "falls_after_impulse": 5,
+      "prepush_failures": 0,
+      "zero_impulse_eligible_absolute": true,
+      "absolute_recoveries": 27,
+      "zero_impulse_eligible_relative_to_prepush": true,
+      "prepush_relative_recoveries": 27,
+      "prepush_relative_median_seconds_among_recoveries": 2.34,
+      "trace_sha256": "f4b4915c09bb8db0b46567d1676093ba5eec0003128c9fc66ff607ca9f8e8956",
+      "collection_steps": 40001,
+      "full40_normalized_return": 0.8407842547342783
+    },
+    "no_critic_h32": {
+      "trial_count": 33,
+      "applied_impulses": 32,
+      "falls_after_impulse": 9,
+      "prepush_failures": 0,
+      "zero_impulse_eligible_absolute": true,
+      "absolute_recoveries": 23,
+      "zero_impulse_eligible_relative_to_prepush": true,
+      "prepush_relative_recoveries": 23,
+      "prepush_relative_median_seconds_among_recoveries": 2.1,
+      "trace_sha256": "9659fb82121f92439a6303a56abc2379f6f61b7ff543f45afbfffe6e6a56ec41",
+      "collection_steps": 56001,
+      "full40_normalized_return": 0.8386150678894614
+    },
+    "critic_h32_at_64k": {
+      "trial_count": 33,
+      "applied_impulses": 32,
+      "falls_after_impulse": 3,
+      "prepush_failures": 0,
+      "zero_impulse_eligible_absolute": true,
+      "absolute_recoveries": 15,
+      "zero_impulse_eligible_relative_to_prepush": true,
+      "prepush_relative_recoveries": 15,
+      "prepush_relative_median_seconds_among_recoveries": 2.32,
+      "trace_sha256": "6043ba9ff4e4fb3cebcb3df73a2c21aa487e98313a641af468397ec88d6b23d7",
+      "collection_steps": 64001,
+      "full40_normalized_return": 0.8549796937353648
+    },
+    "no_critic_h32_at_64k": {
+      "trial_count": 33,
+      "applied_impulses": 32,
+      "falls_after_impulse": 11,
+      "prepush_failures": 0,
+      "zero_impulse_eligible_absolute": true,
+      "absolute_recoveries": 21,
+      "zero_impulse_eligible_relative_to_prepush": true,
+      "prepush_relative_recoveries": 21,
+      "prepush_relative_median_seconds_among_recoveries": 2.06,
+      "trace_sha256": "7a513c92032cec54d1e0c831bb786fda637df9a7d82c09fe893e9d845eb5aa67",
+      "collection_steps": 64001,
+      "full40_normalized_return": 0.8522991512745808
+    }
+  }
+}
