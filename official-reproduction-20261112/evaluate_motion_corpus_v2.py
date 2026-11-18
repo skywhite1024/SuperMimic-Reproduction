@@ -35,12 +35,16 @@ def main():
     parser.add_argument("--training-algorithm", choices=("first-order", "ppo-sim", "ppo-wm"), default="first-order")
     parser.add_argument("--ppo-sim-update", type=int, help="Retained PPO update, with its own parent receipt")
     parser.add_argument("--ppo-wm-update", type=int, help="Retained PPO-WM native inference snapshot")
+    parser.add_argument("--score-state-forecasts", action="store_true",
+                        help="Score the native world model on complete windows from this evaluation")
     args = parser.parse_args()
     if args.interrupted_run_evidence is not None and (
             args.training_algorithm != "first-order" or args.checkpoint_collection_step is None):
         parser.error("Interrupted saved weights require first-order and an explicit collection step")
     if args.num_envs < 1 or args.expected_clips < 1:
         parser.error("positive environment and clip counts are required")
+    if args.score_state_forecasts and args.training_algorithm != "first-order":
+        parser.error("Forecast scoring requires a native first-order world model")
     os.environ["MUJOCO_GL"] = "disable"
     os.environ["WANDB_MODE"] = "offline"
 
@@ -307,6 +311,14 @@ def main():
         (output / "result.json").write_text(json.dumps(result, indent=2) + "\n")
         print("OFFICIAL_CORPUS_EVAL_PASS " + json.dumps(
             {key: value for key, value in result.items() if key != "records"}), flush=True)
+        if args.score_state_forecasts:
+            from duration_forecast_metrics import score_forecasts
+            forecast = score_forecasts(output, records, wm, sim_ctx, runner_cfg)
+            print("DURATION_FORECAST_PASSED " + json.dumps({
+                "windows": forecast["windows"],
+                "eighth_transition_mse": forecast["eighth_transition_normalized_state_mse"],
+                "mean_mse": forecast["mean_normalized_state_mse_over_horizons"],
+            }), flush=True)
 
 
 if __name__ == "__main__":

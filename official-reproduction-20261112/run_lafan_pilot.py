@@ -1,4 +1,4 @@
-"""Finite CUDA training on explicit LAFAN corpora or the unfiltered BONES pack.
+"""Finite CUDA training on explicit LAFAN and BONES motion packs.
 
 This verifies execution and checkpoint creation, not the paper's full benchmark.
 """
@@ -38,8 +38,8 @@ def main():
                         help="Explicit local critic-horizon ablation after applying the A5 profile")
     parser.add_argument("--without-critic", action="store_true",
                         help="Use the author's native BPTT learner; save exactly world_model and actor")
-    parser.add_argument("--corpus", choices=("lafan40", "lafan-locomotion18", "bones-raw"), default="lafan40",
-                        help="bones-raw is a capacity/training probe, not the filtered paper benchmark")
+    parser.add_argument("--corpus", choices=("lafan40", "lafan-locomotion18", "bones-raw", "bones-duration-proxy"),
+                        default="lafan40")
     parser.add_argument("--training-profile", choices=("public-default", "paper-a5-single-gpu"),
                         default="public-default")
     parser.add_argument("--goal-backend", choices=("official", "eager"), default="official",
@@ -148,11 +148,26 @@ def main():
     if not torch.cuda.is_available() or torch.cuda.device_count() != 1:
         raise RuntimeError("Pilot requires exactly one allocated CUDA GPU")
     ends = np.load(motions / "motion_ends.npy")
-    expected_clips = {"lafan40": 40, "lafan-locomotion18": 18, "bones-raw": 142220}[args.corpus]
+    duration_receipt = None
+    if args.corpus == "bones-duration-proxy":
+        receipt_path = motions.with_name(motions.name + "-duration-pack.json")
+        duration_receipt = json.loads(receipt_path.read_bytes())
+        if (duration_receipt["status"] != "bones_proxy_duration_pack_verified"
+                or duration_receipt["case"] not in {"1h", "7h", "40h", "full"}
+                or duration_receipt["frames"] != int(ends[-1])
+                or duration_receipt["paper_exact_membership"]):
+            raise ValueError("A verified BONES duration pack is required")
+        expected_clips = duration_receipt["clips"]
+    else:
+        expected_clips = {"lafan40": 40, "lafan-locomotion18": 18, "bones-raw": 142220}[args.corpus]
     if ends.ndim != 1 or len(ends) != expected_clips or not np.all(np.diff(ends, prepend=0) > 0):
         raise RuntimeError(f"Expected {expected_clips} nonempty clips for {args.corpus}")
     corpus = {"name": args.corpus, "clips": len(ends), "frames": int(ends[-1]),
               "paper_name_filter_applied": False, "paper_feasibility_filter_applied": False}
+    if duration_receipt is not None:
+        corpus.update(proxy_name_and_feasibility_filter_applied=True,
+                      duration_pack_sha256=hashlib.sha256(receipt_path.read_bytes()).hexdigest(),
+                      hours_at_50hz=duration_receipt["hours_at_50hz"])
     if args.corpus == "lafan-locomotion18":
         subset_path = motions.parent / "motion-subset.json"
         subset = json.loads(subset_path.read_bytes())
