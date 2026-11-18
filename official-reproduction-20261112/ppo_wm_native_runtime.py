@@ -14,9 +14,11 @@ import torch
 from paper_ppo_models import NativeMotionPpoActor, NativePpoCritic
 
 
-def state_sha256(module):
+def state_sha256(module_or_state):
+    """Hash a module state or an explicit mapping of named tensors."""
     digest = hashlib.sha256()
-    for name, tensor in sorted(module.state_dict().items()):
+    state = module_or_state.state_dict() if hasattr(module_or_state, "state_dict") else module_or_state
+    for name, tensor in sorted(state.items()):
         if not isinstance(tensor, torch.Tensor):
             raise TypeError(f'Non-tensor state: {name}')
         digest.update(f'{name}|{tensor.dtype}|{tuple(tensor.shape)}'.encode())

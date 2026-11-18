@@ -8,6 +8,7 @@ import re
 import shutil
 
 from push_recovery_contract import sha256, write_json
+from run_ppo_sim_timed_job import verify_distributed_ranks
 from verify_horizon_grid_receipts import decode_group
 from verify_resumed_experiment_receipts import EVALUATION_FILES, plain_log, score_evaluation
 
@@ -25,6 +26,10 @@ def main():
     plan = read(args.plan)
     targets = plan["expected_timed_checkpoints_seconds"]
     smoke = targets == [20, 60]
+    world_size = plan.get("world_size", 1)
+    assert world_size in {1, 2, 4}
+    distributed = world_size > 1
+    training = "training/rank-0" if distributed else "training"
     source = plain_log(args.log)
     assert "PPO_SIM_TIMED_BOOTSTRAP_SHA256 " + plan["bootstrap_sha256"] in source
     assert "PPO_SIM_TIMED_JOB_EXIT=0" in source and "PPO_SIM_TIMED_PIPELINE_COMPLETED " in source
@@ -32,16 +37,19 @@ def main():
     assert all(f"PPO_SIM_TIMED_SOURCE_SHA256 {file} {digest}" in source
                for file, digest in plan["source_files"].items())
     observed_evals = re.findall(r'"log": "[^"]+/eval-(\d+)/evaluation.log"', source)
-    expected = {"result.json", "training/resolved-config.json", "training/checkpoint-manifest.json",
+    expected = {"result.json", f"{training}/resolved-config.json", f"{training}/checkpoint-manifest.json",
                 *(f"eval-{index}/evaluation/{name}" for index in observed_evals for name in EVALUATION_FILES)}
     if smoke:
-        expected.add("training/result.json")
+        expected.add(f"{training}/result.json")
+    if distributed:
+        expected.update(f"training/rank-{rank}/{name}" for rank in range(1, world_size)
+                        for name in ("result.json", "resolved-config.json"))
     names, ledger = decode_group(source, plan["output"], args.output, expected)
     write_json(args.output / "receipt-ledger.json", {"receipts": ledger})
     assert set(names) == expected
     root = args.output
     parent = read(root / "result.json")
-    cfg_file, series_file, training_file = [root / "training" / name for name in (
+    cfg_file, series_file, training_file = [root / training / name for name in (
         "resolved-config.json", "checkpoint-manifest.json", "result.json")]
     assert parent["status"] == "complete" and parent["timing_smoke"] == smoke
     assert parent["checkpoint_training_seconds"] == targets and parent["timed_snapshots_verified"]
@@ -61,7 +69,12 @@ def main():
     assert cfg["checkpoint_seconds"] == targets and cfg["seed"] == 42 and cfg["rollout_steps"] == 24
     assert cfg["no_world_model_constructed"] and cfg["num_envs"] == 8192
     assert parent["imagined_transitions"] == training["imagined_transitions"] == training["world_model_updates"] == 0
-    assert training["simulator_steps"] == parent["real_simulator_steps"] == len(updates) * 8192 * 24
+    assert training["simulator_steps"] == len(updates) * 8192 * 24
+    assert parent["real_simulator_steps"] == training["simulator_steps"] * world_size
+    if distributed:
+        assert parent["world_size"] == world_size and parent["backend"] == "nccl"
+        rank_statuses = verify_distributed_ranks(root / "training", training, world_size)
+        assert rank_statuses == parent["rank_receipts"]
     assert training["elapsed_training_seconds"] >= targets[-1]
     assert [second for snap in series for second in snap["crossed_training_clock_seconds"]] == targets
     for snap in series:
@@ -90,8 +103,11 @@ def main():
     proof = {"status": "timed_ppo_sim_training_and_native_eval_verified", "timing_smoke": smoke,
              "original_JSONs": len(names), "log_sha256": sha256(args.log),
              "source_commit": plan["source_commit"], "checkpoints": targets, "updates": len(updates),
-             "real_simulator_steps": training["simulator_steps"], "clock_seconds": training["elapsed_training_seconds"],
+             "real_simulator_steps": parent["real_simulator_steps"], "clock_seconds": training["elapsed_training_seconds"],
              "scores": scores, "paper_exact_sampler_confirmed": False}
+    if distributed:
+        proof.update(world_size=world_size, rank_receipts=rank_statuses,
+                     global_actor_observation_count=training["shared_snapshots"][-1]["normalizer_observations"])
     write_json(root / "validation.json", proof)
     print(json.dumps(proof, indent=2))
 

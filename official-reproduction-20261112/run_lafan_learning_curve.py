@@ -21,8 +21,9 @@ def write(path, value):
                     encoding="utf-8", newline="\n")
 
 
-def execute(script, arguments, log, timeout_seconds, *, stream_progress=False, python=sys.executable):
-    command = [str(python), str(SCRIPTS / script), *map(str, arguments)]
+def execute(script, arguments, log, timeout_seconds, *, stream_progress=False, python=sys.executable,
+            python_options=()):
+    command = [str(python), *python_options, str(SCRIPTS / script), *map(str, arguments)]
     print("CURVE_STAGE_START " + json.dumps({"script": script, "log": str(log),
           "timeout_seconds": timeout_seconds,
           "utc": datetime.now(timezone.utc).isoformat()}), flush=True)

@@ -1,6 +1,7 @@
-"""Finite true-simulator PPO gate on the canonical40 motions and8192 G1s."""
+"""Finite simulator PPO on canonical LAFAN40 with 8,192 G1s per rank."""
 import argparse
 import dataclasses
+from datetime import timedelta
 import hashlib
 import inspect
 import json
@@ -16,6 +17,37 @@ def write(path,value):
     path.write_text(json.dumps(value,indent=2,default=str,allow_nan=False)+'\n',encoding='utf-8',newline='\n')
 
 
+def configure_ranks(torch, expected):
+    if not torch.cuda.is_available() or torch.cuda.device_count() != expected:
+        raise RuntimeError("Requires exactly the requested number of visible CUDA devices on one node")
+    if expected == 1:
+        return 0, "cuda:0"
+    rank = int(os.environ.get("RANK", "0"))
+    local_rank = int(os.environ.get("LOCAL_RANK", "0"))
+    world = int(os.environ.get("WORLD_SIZE", "1"))
+    local_world = int(os.environ.get("LOCAL_WORLD_SIZE", "1"))
+    if world != expected or local_world != world or rank != local_rank or not 0 <= rank < world:
+        raise RuntimeError("Launch one rank per visible CUDA device on a single node with torchrun")
+    device = f"cuda:{local_rank}"
+    torch.cuda.set_device(local_rank)
+    torch.distributed.init_process_group("nccl", timeout=timedelta(minutes=10))
+    return rank, device
+
+
+def leader_clock(torch, seconds, rank, device):
+    elapsed = torch.tensor(seconds if rank == 0 else 0., dtype=torch.float64, device=device)
+    torch.distributed.broadcast(elapsed, src=0)
+    return elapsed.item()
+
+
+def matched_rank_state(torch, record, world_size):
+    states = [None] * world_size
+    torch.distributed.all_gather_object(states, record)
+    if any(state != states[0] for state in states):
+        raise RuntimeError("RSL PPO rank models or shared state diverged")
+    return record
+
+
 def main():
     program_started=time.monotonic()
     parser=argparse.ArgumentParser(description=__doc__)
@@ -27,6 +59,7 @@ def main():
                         help='Retain the first completed update at or after each training clock target')
     parser.add_argument('--trace-updates',type=int,nargs='+')
     parser.add_argument('--training-purpose',choices=('integration','finite-training'),default='integration')
+    parser.add_argument('--world-size',type=int,choices=(1,2,4),default=1)
     args=parser.parse_args()
     if args.updates<1 or (args.training_purpose=='integration' and args.updates!=3):
         parser.error('Positive update count; integration retains exactly three updates')
@@ -44,8 +77,6 @@ def main():
     if args.training_purpose=='finite-training' and args.checkpoint_updates is None and not targets:
         parser.error('Longer training requires an explicit sparse checkpoint schedule')
     output=args.output.resolve();motions=args.motions.resolve()
-    output.mkdir(parents=True,exist_ok=False)
-    os.chdir(output)
     os.environ.update(MUJOCO_GL='disable',WANDB_MODE='offline')
     import numpy as np
     import torch
@@ -66,15 +97,22 @@ def main():
     from paper_ppo_models import NativeMotionPpoActor,NativePpoCritic
     from ppo_sim_runtime import SimulatorPolicyInput,SimulatorPpoLoop
     from ppo_wm_native_runtime import state_sha256
-    if not torch.cuda.is_available() or torch.cuda.device_count()!=1:
-        raise RuntimeError('Exactly one allocated CUDA GPU required')
+    world_size = args.world_size
+    distributed = world_size > 1
+    rank, device_name = configure_ranks(torch, world_size)
+    leader = rank == 0
+    if distributed:
+        output = output / f"rank-{rank}"
+    output.mkdir(parents=True,exist_ok=False)
+    os.chdir(output)
     ends=np.load(motions/'motion_ends.npy')
     assert ends.shape==(40,) and int(ends[-1])==441140
-    torch.manual_seed(42);np.random.seed(42);random.seed(42)
+    rank_seed = 42 + rank
+    torch.manual_seed(rank_seed);np.random.seed(rank_seed);random.seed(rank_seed)
     representations._compiled_assemble_goal=representations._assemble_goal
     task='SuperMimic-GenCoord-G1'
     native=TrainConfig.from_task(task);configure_runner(native.runner)
-    native.env.seed=42;native.env.scene.num_envs=8192
+    native.env.seed=rank_seed;native.env.scene.num_envs=8192
     native.env.commands['motion'].motion_file=str(motions)
     native.env.commands['motion'].sampling_mode='external'
     source_cfg=unitree_g1_tracking_ppo_runner_cfg()
@@ -100,6 +138,11 @@ def main():
         paper_hyperparameter_and_sampler_equivalence_confirmed=False,
         full_18h_1_4_8_GPU_comparison_completed=False,
         full_training_state_resume_available=False,vendor_files_modified=False)
+    if distributed:
+        config.update(world_size=world_size, rank=rank, rank_seed=rank_seed, local_cuda_device=device_name,
+                      global_num_envs=world_size * 8192, gradient_sync="RSL native NCCL gradient and KL reduction",
+                      advantage_normalization_scope="RSL native per-rank normalization",
+                      reset_sampling="one native ReturnSampler over all ranks' real simulator rollouts")
     if targets:
         config.update(maximum_updates=args.updates, checkpoint_seconds=targets,
                       duration_seconds=targets[-1], training_clock='monotonic from first update, including snapshot I/O')
@@ -109,7 +152,7 @@ def main():
     write(output/'result.json',report)
     env=None
     try:
-        device=setup_device('cuda:0')
+        device=setup_device(device_name)
         env=create_env(native.env,8192,device)
         obs,_=env.reset()
         full_width,goal_width=unpack_obs_dims(obs)
@@ -128,10 +171,19 @@ def main():
         critic=NativePpoCritic(build_mlp(critic_width,native.runner.critic_hidden_dims,1).to(device),
             input_dim=critic_width,device=device)
         storage=RolloutStorage('rl',8192,24,template,[env.num_actions],device=device)
+        if distributed:
+            algorithm_kwargs["multi_gpu_cfg"] = {"global_rank": rank, "local_rank": rank, "world_size": world_size}
         algorithm=PPO(actor,critic,storage,device=device,**algorithm_kwargs)
         motion_cmd=env.unwrapped.command_manager.get_term('motion')
         max_step_reward=env.unwrapped.step_dt*sum(term.weight for term in native.env.rewards.values() if term.weight>0)
-        sampler=ReturnSampler(native.runner.return_sampler,motion_cmd.bin_count,
+        if distributed:
+            from native_data_parallel import SharedReturnSampler
+            algorithm.broadcast_parameters()
+            sampler_class = SharedReturnSampler
+            initial_observation_sha256 = state_sha256(dict(template.items()))
+        else:
+            sampler_class = ReturnSampler
+        sampler=sampler_class(native.runner.return_sampler,motion_cmd.bin_count,
             motion_cmd.motion.time_step_total,8192,max_step_reward,device=device)
         logger=Logger('native-ppo-sim-integration',8192,env.max_episode_length,device)
         loop=SimulatorPpoLoop(env,algorithm,inputs,24,logger=logger,sampler=sampler,
@@ -141,15 +193,25 @@ def main():
         assert dimensions==dict(actor_input=1570,actor_goal=640,history=10,proprio=93,critic_input=771,actions=29)
         initial=dict(actor=state_sha256(native_actor),critic=state_sha256(critic.native_critic))
         report.update(status='training',dimensions=dimensions,initial_model_state_hashes=initial,
-            gpu=torch.cuda.get_device_name(),max_step_reward=max_step_reward)
+            gpu=torch.cuda.get_device_name(device),max_step_reward=max_step_reward)
+        if distributed:
+            matched_rank_state(torch, initial, world_size)
+            report.update(world_size=world_size, rank=rank, rank_seed=rank_seed,
+                          initial_real_observation_sha256=initial_observation_sha256,
+                          local_cuda_device=device_name, backend="nccl")
         write(output/'result.json',report)
         manifest=[]
+        shared_snapshots=[]
+        if distributed:
+            torch.distributed.barrier()
         started=time.monotonic()
         target_count = 0
         for update in range(1,args.updates+1):
-            row=loop.update(output/'trace'/f'update-{update:03d}.npz' if update in trace_updates else None)
+            row=loop.update(output/'trace'/f'update-{update:03d}.npz' if leader and update in trace_updates else None)
             row['update_complete_seconds_since_program_entry']=time.monotonic()-program_started
-            row['update_complete_seconds_since_training_entry']=time.monotonic()-started
+            elapsed = time.monotonic()-started
+            row['update_complete_seconds_since_training_entry'] = (
+                leader_clock(torch, elapsed, rank, device) if distributed and targets else elapsed)
             row['episode_statistics']=dict(recent_completed_episodes=len(logger.rewbuffer),
                 mean_raw_episode_return=float(np.mean(logger.rewbuffer)) if logger.rewbuffer else None,
                 scope='Native logger last100 completed real simulator episodes, not fixed-start full-clip return')
@@ -160,8 +222,21 @@ def main():
                 passed.append(targets[target_count])
                 target_count += 1
             if update not in checkpoint_updates and not passed:
-                if update % (250 if targets else 50)==0:
+                if leader and update % (250 if targets else 50)==0:
                     write(output/'result.json',report)
+                continue
+            if distributed:
+                shared_snapshots.append(matched_rank_state(torch, {
+                    "update": update,
+                    "actor": state_sha256(actor),
+                    "critic": state_sha256(critic),
+                    "sampler": state_sha256({name: getattr(sampler.native, name)
+                                             for name in ("value", "count", "effort")}),
+                    "normalizer_observations": int(native_actor.obs_normalizer.count),
+                }, world_size))
+            if not leader:
+                if targets and target_count == len(targets):
+                    break
                 continue
             folder=output/'checkpoints'/f'update-{update:03d}';folder.mkdir(parents=True,exist_ok=False)
             models={'actor.pt':native_actor.state_dict(),'critic.pt':critic.native_critic.state_dict(),
@@ -197,11 +272,12 @@ def main():
         if targets:
             if target_count != len(targets):
                 raise RuntimeError('The update limit was reached before the training clock target')
+            snapshots = manifest if leader else shared_snapshots
             config.update(outer_updates=actual_updates, real_collections=24 * actual_updates,
-                          checkpoint_updates=[snapshot['ppo_update'] for snapshot in manifest])
+                          checkpoint_updates=[snapshot['ppo_update' if leader else 'update'] for snapshot in snapshots])
             write(output/'resolved-config.json',config)
         else:
-            assert actual_updates == args.updates and len(manifest) == len(checkpoint_updates)
+            assert actual_updates == args.updates and (not leader or len(manifest) == len(checkpoint_updates))
         assert loop.collections==24*actual_updates and loop.simulator_steps==8192*24*actual_updates
         assert loop.sampler_updates==loop.collections//native.runner.return_sampler.horizon
         completed_status=('real_G1_simulator_PPO_integration_completed' if args.training_purpose=='integration'
@@ -211,9 +287,14 @@ def main():
             elapsed_training_seconds=time.monotonic()-started,
             return_sampler_distribution_updates=loop.sampler_updates,
             final_model_state_hashes=dict(actor=state_sha256(native_actor),critic=state_sha256(critic.native_critic)),
-            all_model_and_trace_readbacks_verified=True,
-            source_config_sha256=hashlib.sha256((output/'resolved-config.json').read_bytes()).hexdigest(),
-            checkpoint_manifest_sha256=hashlib.sha256((output/'checkpoint-manifest.json').read_bytes()).hexdigest())
+            all_model_and_trace_readbacks_verified=leader,
+            source_config_sha256=hashlib.sha256((output/'resolved-config.json').read_bytes()).hexdigest())
+        if leader:
+            report['checkpoint_manifest_sha256']=hashlib.sha256((output/'checkpoint-manifest.json').read_bytes()).hexdigest()
+        if distributed:
+            report.update(shared_snapshots=shared_snapshots, initial_model_state_hashes=initial)
+            if not leader:
+                report.pop("updates", None)
         write(output/'result.json',report)
         print('PPO_SIM_REAL_G1_TRAINING_PASS '+json.dumps(dict(ppo_updates=actual_updates,simulator_steps=loop.simulator_steps,
             imagined_transitions=0,world_model_updates=0)),flush=True)
@@ -223,6 +304,8 @@ def main():
         raise
     finally:
         if env is not None:env.close()
+        if distributed and torch.distributed.is_initialized():
+            torch.distributed.destroy_process_group()
 
 
 if __name__=='__main__':
