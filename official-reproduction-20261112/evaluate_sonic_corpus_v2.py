@@ -32,6 +32,7 @@ def main():
     parser.add_argument("--num-envs", type=int, default=1024)
     parser.add_argument("--order", choices=("index", "length"), default="length")
     parser.add_argument("--onnx-provider", choices=("cpu", "cuda"), default="cpu")
+    parser.add_argument("--sonic-variant", choices=("default", "v1.1"), default="default")
     args = parser.parse_args()
     if args.num_envs < 1 or args.expected_clips < 1:
         parser.error("positive environment and clip counts are required")
@@ -115,10 +116,13 @@ def main():
         "SONIC_source_commit": contract["source_commit"],
         "SONIC_control_contract_sha256": digest(args.contract),
         "SONIC_ONNX_provider": provider,
+        "SONIC_variant": args.sonic_variant,
         "physics_provider": "CUDA MuJoCo Warp, pinned native common G1 scene",
         "SONIC_control": "Own29joint gains/defaults/scales/effort bounds; common armatures retained",
         "history_initialization": "First reference sensor repeated, matching corrected-v2; SONIC training reset unconfirmed",
-        "reference_window": "G1 mode0;10 current/future frames spaced5 at50Hz, clamp to each clip end; full base-relative orientation",
+        "reference_window": ("G1 mode0;10 current/future frames spaced5 at50Hz; clamp to each clip end; " +
+            ("robot yaw-relative orientation with clip-start heading alignment" if args.sonic_variant == "v1.1"
+             else "full base-relative orientation")),
         "author_exact_SONIC_benchmark_protocol_confirmed": False,
         "trajectory_state": "pre-action full_state; rewards and terminations are post-step",
         "motion_files": {p.name: digest(p) for p in sorted(motions.iterdir()) if p.is_file()},
@@ -142,7 +146,7 @@ def main():
             raise RuntimeError("Loaded motion boundaries differ from the frozen pack")
         robot = base.scene["robot"]
         controller=SonicG1Controller(models,batched,args.contract,motions,list(robot.joint_names),
-            provider=provider, profile_dir=output / "onnx-profiles")
+            provider=provider, profile_dir=output / "onnx-profiles", variant=args.sonic_variant)
         protocol["compiled_SONIC_control_readback"]=verify_compiled_control(base.sim.mj_model,contract,preserved_armatures)
         action_term=base.action_manager.get_term(base.action_manager.active_terms[0])
         assert list(action_term.target_names)==list(robot.joint_names)
@@ -264,6 +268,7 @@ def main():
             "paper_results_reproduced": False,
             "goal_assembly_backend": goal_backend,
             "SONIC_calls": controller.calls, "ONNX_provider": provider,
+            "SONIC_variant": args.sonic_variant,
             "ONNX_runtime_compute_profiles": controller.profile_records,
             "original_batch1_vs_batched_observed_state_comparisons": controller.original_comparisons,
             "maximum_original_token_difference": controller.maximum_token_difference,

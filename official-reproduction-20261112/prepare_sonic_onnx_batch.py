@@ -18,6 +18,15 @@ MODEL_HASHES={
     'model_decoder.onnx':'c7241a123eaa36b5d64bad19540efde93cac1ad443bd4572fd12ca99898118ed',
     'observation_config.yaml':'466d05947c78af6c76388adfb86e3a2a77b2a1d921a64883ed3d085ebf58de1b',
 }
+VARIANT_HASHES = {
+    "default": MODEL_HASHES,
+    "v1.1": {
+        "model_encoder.onnx": "fb97de22819b2057b41459802128d91723d91a25f0ad73e7bfc41a9cf8365bae",
+        "model_decoder.onnx": "34bae8570d4a4421a5391a5c2befd745d4a02d182ec539e5f9da44c091c67509",
+        "observation_config.yaml": "4a67713b310932e50aca81f19188c8d76013148e98b15c8b5bbea995f12e59f0",
+    },
+}
+G1_ENCODER_LAYOUTS = {"default": (1762, 601), "v1.1": (1751, 584)}
 
 
 def digest(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
@@ -48,10 +57,11 @@ def dynamic_batch(model):
     return model,changes
 
 
-def synthetic_g1_inputs(count):
+def synthetic_g1_inputs(count, variant="default"):
     """Valid-range synthetic tensors; no claim of an observed robot trajectory."""
     rng=np.random.default_rng(211115)
-    encoder=np.zeros((count,1762),dtype=np.float32)
+    width, orientation_start = G1_ENCODER_LAYOUTS[variant]
+    encoder=np.zeros((count,width),dtype=np.float32)
     phases=rng.uniform(-np.pi,np.pi,(count,1,29))
     frames=np.arange(10,dtype=np.float32)[None,:,None]*.1
     encoder[:,4:294]=(.2*np.sin(phases+frames)).reshape(count,290)
@@ -62,7 +72,7 @@ def synthetic_g1_inputs(count):
     orientation=np.zeros((count,10,3,2),dtype=np.float32)
     orientation[:,:,0,0]=np.cos(angles);orientation[:,:,0,1]=-np.sin(angles)
     orientation[:,:,1,0]=np.sin(angles);orientation[:,:,1,1]=np.cos(angles)
-    encoder[:,601:661]=orientation.reshape(count,60)
+    encoder[:,orientation_start:orientation_start+60]=orientation.reshape(count,60)
     proprio=rng.normal(0,.04,(count,930)).astype(np.float32)
     gravity=proprio[:,-30:].reshape(count,10,3)
     gravity[:,:,2]=-1
@@ -74,16 +84,20 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--models',type=Path,required=True)
     parser.add_argument('--output',type=Path,required=True)
+    parser.add_argument('--variant', choices=VARIANT_HASHES, default='default')
     args=parser.parse_args()
     import onnx
     from onnx import utils
     import onnxruntime as ort
     models=args.models.resolve();output=args.output.resolve()
-    assert all(digest(models/name)==value for name,value in MODEL_HASHES.items())
+    expected = VARIANT_HASHES[args.variant]
+    encoder_width = G1_ENCODER_LAYOUTS[args.variant][0]
+    assert all(digest(models/name)==value for name,value in expected.items())
     output.mkdir(parents=True,exist_ok=False)
     started=time.monotonic()
     full_encoder=onnx.load(models/'model_encoder.onnx')
     full_decoder=onnx.load(models/'model_decoder.onnx')
+    assert full_encoder.graph.input[0].type.tensor_type.shape.dim[1].dim_value == encoder_width
     # The pinned mode0 selector returns this quantized G1 branch unchanged.
     # Mode routing, teleoperation and SMPL branches are deliberately not exported.
     intermediate=output/'g1-encoder-original-static.onnx'
@@ -107,7 +121,7 @@ def main():
     original_encoder=session(models/'model_encoder.onnx')
     original_decoder=session(models/'model_decoder.onnx')
     derived_encoder=session(encoder_path);derived_decoder=session(decoder_path)
-    features,proprio=synthetic_g1_inputs(64)
+    features,proprio=synthetic_g1_inputs(64, args.variant)
     original_tokens=np.concatenate([original_encoder.run(None,{'obs_dict':x[None]})[0] for x in features])
     original_inputs=np.concatenate((original_tokens,proprio),axis=1)
     original_actions=np.concatenate([original_decoder.run(None,{'obs_dict':x[None]})[0] for x in original_inputs])
@@ -132,16 +146,16 @@ def main():
     with np.load(trace,allow_pickle=False) as saved:
         assert set(saved.files)==set(arrays)
         assert all(np.array_equal(saved[name],value) for name,value in arrays.items())
-    assert all(digest(models/name)==value for name,value in MODEL_HASHES.items())
+    assert all(digest(models/name)==value for name,value in expected.items())
     report=dict(status='released_SONIC_G1_batched_ONNX_outputs_match_original_CPU_inference',
         HF_repository='nvidia/GEAR-SONIC',HF_revision='6733128a3d8a523b1418b06bca3cdf61c8b0987f',
         source_commit='1e1ec4f5f27e6c3e03048f693bd7c60cce04afda',
-        original_files=MODEL_HASHES,original_files_unchanged=True,
+        variant=args.variant, original_files=expected,original_files_unchanged=True,
         derived_graph_scope='Mode0 G1 quantized branch only; input/output batch dimensions and integer reshape shape constants',
         encoder_reshape_changes=encoder_changes,decoder_reshape_changes=decoder_changes,
         every_retained_parameter_byte_unchanged=True,
         execution_provider='CPUExecutionProvider',onnxruntime_version=ort.__version__,onnx_version=onnx.__version__,
-        encoder_input_dimensions=1762,latent_dimensions=64,decoder_input_dimensions=994,action_dimensions=29,
+        encoder_input_dimensions=encoder_width,latent_dimensions=64,decoder_input_dimensions=994,action_dimensions=29,
         encoder_mode='scalar0 followed by three zeros; other-mode feature groups zeroed',
         comparisons=comparisons,derived_files=[dict(file=p.name,bytes=p.stat().st_size,sha256=digest(p)) for p in (encoder_path,decoder_path)],
         trace=dict(file=trace.name,bytes=trace.stat().st_size,sha256=digest(trace),readback_verified=True),

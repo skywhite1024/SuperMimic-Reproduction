@@ -8,7 +8,7 @@ import sys
 
 from push_recovery_contract import sha256, write_json
 from run_lafan_learning_curve import execute
-from run_sonic_bones_cuda_gate import ORT_VERSION, WHEEL_HASH
+from run_sonic_bones_cuda_gate import ORT_VERSION, VARIANT_RELEASE_PATHS, WHEEL_HASH
 
 
 CLIPS = 129543
@@ -32,9 +32,11 @@ def main():
     gate_result = gate / "evaluation/result.json"
     gate_driver = read(driver_file)
     gate_eval = read(gate_result)
+    variant = gate_driver.get("SONIC_variant", "default")
     if (gate_driver["status"] != "completed" or gate_driver["ONNX_runtime_version"] != ORT_VERSION
             or gate_driver["wheel_sha256"] != WHEEL_HASH or gate_driver["result_sha256"] != sha256(gate_result)
             or not gate_driver["original_comparison_and_cuda_kernels_verified"]
+            or variant not in VARIANT_RELEASE_PATHS or gate_eval.get("SONIC_variant", "default") != variant
             or gate_eval["ONNX_provider"] != "CUDAExecutionProvider"):
         raise ValueError("A completed and verified SONIC CUDA gate is required")
     import onnxruntime as ort
@@ -60,12 +62,13 @@ def main():
     report = {"status": "evaluating", "clips": CLIPS, "reference_frames": FRAMES,
               "num_envs": 1024, "membership_sha256": args.membership_sha256,
               "gate_driver_sha256": sha256(driver_file), "gate_result_sha256": sha256(gate_result),
-              "original_SONIC_revision": gate_driver["original_SONIC_revision"],
+              "original_SONIC_revision": gate_driver["original_SONIC_revision"], "SONIC_variant": variant,
               "author_exact_membership": False}
     write_json(report_file, report)
     try:
-        execute("evaluate_sonic_corpus_v2.py", ["--models", root / "data/sonic-default-6733128",
-            "--batched", root / "runs/sonic-lafan40-1116a/models-batched",
+        batched = gate / "models-batched" if variant == "v1.1" else root / "runs/sonic-lafan40-1116a/models-batched"
+        execute("evaluate_sonic_corpus_v2.py", ["--models", root / "data" / VARIANT_RELEASE_PATHS[variant],
+            "--batched", batched, "--sonic-variant", variant,
             "--contract", SCRIPTS / "sonic-g1-control-contract.json", "--motions", motions,
             "--output", evaluation, "--expected-clips", CLIPS, "--num-envs", 1024,
             "--onnx-provider", "cuda", "--order", "length", "--seed", 42],
@@ -80,6 +83,7 @@ def main():
         if (protocol["motion_files"] != pack["files"] or counts["clips"] != CLIPS
                 or counts["reference_frames"] != FRAMES or not states["all_saved_initial_states_verified"]
                 or counts["result_sha256"] != sha256(result_file)
+                or result["SONIC_variant"] != variant or protocol["SONIC_variant"] != variant
                 or result["ONNX_provider"] != "CUDAExecutionProvider"):
             raise RuntimeError("The full evaluation failed its membership or artifact checks")
         report.update(status="complete", successes=counts["successes"], failures=counts["failures"],

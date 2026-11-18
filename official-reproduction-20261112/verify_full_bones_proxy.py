@@ -8,6 +8,7 @@ from pathlib import Path
 import shutil
 
 from prepare_bones_duration import read_identity
+from prepare_sonic_onnx_batch import VARIANT_HASHES
 from push_recovery_contract import sha256, write_json
 from verify_horizon_grid_receipts import decode_group
 from verify_resumed_experiment_receipts import EVALUATION_FILES, TRAINING_FILES, ROOT, native_point, plain_log, score_evaluation
@@ -17,6 +18,34 @@ PACK = "runs/bones-duration-1118c/motions/full-duration-pack.json"
 
 def read(path):
     return json.loads(path.read_bytes())
+
+
+def verify_variant_gate(source, plan, output):
+    gate = plan["variant_gate_output"].removeprefix(ROOT + "/")
+    gate_source, separator, full_source = source.partition("SONIC_BONES_VARIANT_GATE_COMPLETE")
+    assert separator and "SONIC_BONES_VARIANT_GATE_COMPLETE" not in full_source
+    required = {f"{gate}/driver.json", f"{gate}/models-batched/validation.json",
+                *(f"{gate}/evaluation/{name}" for name in EVALUATION_FILES)}
+    names, receipts = decode_group(gate_source, ROOT, output, required)
+    assert set(names) == required
+    gate_dir = output / gate
+    driver_file = gate_dir / "driver.json"
+    result_file = gate_dir / "evaluation/result.json"
+    driver, result = read(driver_file), read(result_file)
+    variant = plan["SONIC_variant"]
+    derived = read(gate_dir / "models-batched/validation.json")
+    assert driver["status"] == "completed" and driver["result_sha256"] == sha256(result_file)
+    assert result["SONIC_variant"] == driver["SONIC_variant"] == derived["variant"] == variant
+    assert derived["original_files"] == VARIANT_HASHES[variant] and derived["every_retained_parameter_byte_unchanged"]
+    assert driver["original_comparison_and_cuda_kernels_verified"]
+    assert result["ONNX_provider"] == "CUDAExecutionProvider"
+    assert result["original_batch1_vs_batched_observed_state_comparisons"] > 0
+    assert all(row["cuda_compute_ops"] for row in result["ONNX_runtime_compute_profiles"].values())
+    accounting = read(gate_dir / "evaluation/accounting.json")
+    states = read(gate_dir / "evaluation/audit/initial-states.json")
+    assert accounting["clips"] == 64 and accounting["reference_frames"] == 20397
+    assert accounting["result_sha256"] == sha256(result_file) and states["all_saved_initial_states_verified"]
+    return full_source, receipts, sha256(driver_file), sha256(result_file)
 
 
 def main():
@@ -42,11 +71,16 @@ def main():
         training = {f"{run}/training/{name}" for name in TRAINING_FILES}
     else:
         steps, evaluations, training = [None], [f"{run}/evaluation"], set()
+    gate_receipts = []
+    if not continuous and "variant_gate_output" in plan:
+        source, gate_receipts, gate_driver_digest, gate_result_digest = verify_variant_gate(source, plan, args.output)
+    elif not continuous:
+        gate_driver_digest, gate_result_digest = plan["cuda_gate_driver_sha256"], plan["cuda_gate_result_sha256"]
     assert len(args.per_motion) == len(evaluations)
     allowed = {PACK, driver, *training,
                *(f"{base}/{name}" for base in evaluations for name in EVALUATION_FILES[1:])}
     names, ledger = decode_group(source, ROOT, args.output, allowed)
-    write_json(args.output / "receipt-ledger.json", {"receipts": ledger})
+    write_json(args.output / "receipt-ledger.json", {"receipts": gate_receipts + ledger})
     assert set(names) == allowed
     pack = read(args.output / PACK)
     parent = read(args.output / driver)
@@ -63,8 +97,9 @@ def main():
         assert [row["collection_steps"] for row in parent["evaluations"]] == steps
     else:
         assert pack["membership_sha256"] == plan["membership_sha256"]
-        assert parent["gate_driver_sha256"] == plan["cuda_gate_driver_sha256"]
-        assert parent["gate_result_sha256"] == plan["cuda_gate_result_sha256"]
+        assert parent["gate_driver_sha256"] == gate_driver_digest
+        assert parent["gate_result_sha256"] == gate_result_digest
+        assert parent.get("SONIC_variant", "default") == plan.get("SONIC_variant", "default")
 
     scored = []
     for index, (base, step, original) in enumerate(zip(evaluations, steps, args.per_motion, strict=True)):
@@ -90,6 +125,7 @@ def main():
             driver_row = parent
             result = read(target)
             assert result["ONNX_provider"] == "CUDAExecutionProvider"
+            assert result.get("SONIC_variant", "default") == parent.get("SONIC_variant", "default")
             assert result["ONNX_runtime_compute_profiles"] == parent["profiles"]
             assert all(profile["cuda_compute_ops"] for profile in parent["profiles"].values())
         assert math.isclose(score["mean_normalized_full_motion_return"],
@@ -101,6 +137,9 @@ def main():
                   "main_log_sha256": sha256(args.log), "source_commit": plan["source_commit"],
                   "membership_sha256": pack["membership_sha256"], "exact_author_membership": False,
                   "scores": scored}
+    if gate_receipts:
+        validation["original_variant_gate_JSONs"] = len(gate_receipts)
+        validation["SONIC_variant"] = plan["SONIC_variant"]
     write_json(args.output / "validation.json", validation)
     print(json.dumps(validation, indent=2))
 

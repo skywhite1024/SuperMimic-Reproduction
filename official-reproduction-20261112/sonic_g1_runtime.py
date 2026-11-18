@@ -12,7 +12,7 @@ import re
 
 import numpy as np
 
-from prepare_sonic_onnx_batch import MODEL_HASHES, digest
+from prepare_sonic_onnx_batch import G1_ENCODER_LAYOUTS, VARIANT_HASHES, digest
 
 
 def configure_control(cfg, contract):
@@ -51,6 +51,16 @@ def rotations(quaternions):
                      2*(x*z-w*y), 2*(y*z+w*x), 1-2*(x*x+y*y)), axis=-1).reshape(q.shape[:-1]+(3,3))
 
 
+def heading_rotation(rotation):
+    yaw = np.arctan2(rotation[..., 1, 0], rotation[..., 0, 0])
+    cosine, sine = np.cos(yaw), np.sin(yaw)
+    heading = np.zeros_like(rotation)
+    heading[..., 0, 0] = heading[..., 1, 1] = cosine
+    heading[..., 0, 1], heading[..., 1, 0] = -sine, sine
+    heading[..., 2, 2] = 1
+    return heading
+
+
 def verify_compiled_control(model, contract, preserved):
     import mujoco
     records = []
@@ -71,7 +81,7 @@ def verify_compiled_control(model, contract, preserved):
 
 class SonicG1Controller:
     def __init__(self, models, batched, contract_path, motions, native_names, *,
-                 provider="CPUExecutionProvider", profile_dir=None):
+                 provider="CPUExecutionProvider", profile_dir=None, variant="default"):
         import onnxruntime as ort
         self.contract = json.loads(contract_path.read_bytes())
         self.rows = self.contract["joints_in_policy_order"]
@@ -85,8 +95,13 @@ class SonicG1Controller:
         self.reference_qd = np.load(motions/"joint_vel.npy", mmap_mode="r")
         self.reference_quat = np.load(motions/"root_quat_w.npy", mmap_mode="r")
         self.ends = np.load(motions/"motion_ends.npy")
-        assert all(digest(models/name) == expected for name,expected in MODEL_HASHES.items())
+        self.starts = np.r_[0, self.ends[:-1]]
+        self.variant = variant
+        self.encoder_width, self.orientation_start = G1_ENCODER_LAYOUTS[variant]
+        expected_models = VARIANT_HASHES[variant]
+        assert all(digest(models/name) == expected for name,expected in expected_models.items())
         validation = json.loads((batched/"validation.json").read_bytes())
+        assert validation.get("variant", "default") == variant and validation["original_files"] == expected_models
         for record in validation["derived_files"]:
             assert digest(batched/record["file"]) == record["sha256"]
         self.provider = provider
@@ -119,6 +134,7 @@ class SonicG1Controller:
         self.original_encoder = session(models/"model_encoder.onnx")
         self.original_decoder = session(models/"model_decoder.onnx")
         self.history = self.last_action = None
+        self.heading_alignment = None
         self.calls = self.original_comparisons = 0
         self.maximum_token_difference = self.maximum_action_difference = 0.
         self.token_atol = 3e-5 if cuda else 1e-6
@@ -142,6 +158,7 @@ class SonicG1Controller:
 
     def reset(self):
         self.history = self.last_action = None
+        self.heading_alignment = None
 
     def __call__(self, states, times):
         states = np.asarray(states)
@@ -160,11 +177,22 @@ class SonicG1Controller:
         motion_indices = np.searchsorted(self.ends, times, side="right")
         assert np.all(motion_indices < len(self.ends))
         future = np.minimum(times[:,None]+np.arange(10)[None]*5,self.ends[motion_indices,None]-1)
-        features = np.zeros((n,1762),dtype=np.float32)
+        features = np.zeros((n,self.encoder_width),dtype=np.float32)
         features[:,4:294] = self.reference_q[future][..., self.reference_order].reshape(n,290)
         features[:,294:584] = self.reference_qd[future][..., self.reference_order].reshape(n,290)
-        relative = np.einsum("nji,nkjl->nkil",rotation,rotations(self.reference_quat[future]))
-        features[:,601:661] = relative[...,:2].reshape(n,60)
+        targets = rotations(self.reference_quat[future])
+        if self.variant == "v1.1":
+            robot_heading = heading_rotation(rotation)
+            if self.heading_alignment is None:
+                reference_start = self.reference_quat[self.starts[motion_indices]]
+                reference_heading = heading_rotation(rotations(reference_start))
+                self.heading_alignment = robot_heading @ np.swapaxes(reference_heading, -1, -2)
+            aligned_targets = self.heading_alignment[:, None] @ targets
+            relative = np.einsum("nji,nkjl->nkil", robot_heading, aligned_targets)
+        else:
+            relative = np.einsum("nji,nkjl->nkil", rotation, targets)
+        start = self.orientation_start
+        features[:,start:start+60] = relative[...,:2].reshape(n,60)
         tokens = self.encoder.run(None,{"obs_dict":features})[0].reshape(n,64)
         h = self.history
         decoder_input = np.concatenate((tokens,h[:,:,:3].reshape(n,-1),h[:,:,3:32].reshape(n,-1),

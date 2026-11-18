@@ -11,6 +11,7 @@ import tempfile
 import time
 import urllib.request
 
+from prepare_sonic_onnx_batch import VARIANT_HASHES
 from push_recovery_contract import sha256, write_json
 from run_lafan_learning_curve import execute
 
@@ -25,6 +26,50 @@ WHEEL_HASH = "cfda2fad535595bfc3e570eb588092717711dcb2957656d814695e0c9ceb1508"
 WHEEL_BYTES = 276974871
 FLAT = "flatbuffers-25.12.19-py2.py3-none-any.whl"
 FLAT_HASH = "7634f50c427838bb021c2d66a3d1168e9d199b0607e6329399f04846d42e20b4"
+SONIC_REVISION = "6733128a3d8a523b1418b06bca3cdf61c8b0987f"
+VARIANT_RELEASE_PATHS = {"default": "sonic-default-6733128", "v1.1": "sonic-v1_1-6733128"}
+V11_SIZES = {"model_encoder.onnx": 50117796, "model_decoder.onnx": 149778638,
+             "observation_config.yaml": 2475}
+
+
+def fetch_v11_release(directory):
+    directory.mkdir(parents=True, exist_ok=True)
+    for name, expected_hash in VARIANT_HASHES["v1.1"].items():
+        path, expected_size = directory / name, V11_SIZES[name]
+        if path.is_file():
+            if path.stat().st_size != expected_size or sha256(path) != expected_hash:
+                raise ValueError(f"Cached SONIC v1.1 artifact differs from the pinned release: {name}")
+            print(f"SONIC_V11_MODEL_CACHE_VERIFIED name={name} bytes={expected_size}", flush=True)
+            continue
+        for endpoint in ("https://huggingface.co", "https://hf-mirror.com"):
+            url = f"{endpoint}/nvidia/GEAR-SONIC/resolve/{SONIC_REVISION}/sonic_v1_1/{name}"
+            part = None
+            started = time.monotonic()
+            print(f"SONIC_V11_TRANSFER_START name={name} source={endpoint}", flush=True)
+            try:
+                with tempfile.NamedTemporaryFile(dir=directory, prefix=".sonic-v11-", delete=False) as target:
+                    part = Path(target.name)
+                    request = urllib.request.Request(url, headers={"User-Agent": "SuperMimic-Reproduction/1.0"})
+                    with urllib.request.urlopen(request, timeout=35) as remote:
+                        size = 0
+                        while chunk := remote.read(1 << 20):
+                            size += len(chunk)
+                            if size > expected_size or time.monotonic() - started > 420:
+                                raise ValueError("SONIC v1.1 transfer exceeded pinned size or time limit")
+                            target.write(chunk)
+                if size != expected_size or sha256(part) != expected_hash:
+                    raise ValueError("SONIC v1.1 transfer differs from the pinned upstream bytes")
+                part.replace(path)
+                print(f"SONIC_V11_TRANSFER_VERIFIED name={name} source={endpoint} bytes={size}", flush=True)
+                break
+            except (OSError, ValueError, http.client.HTTPException) as error:
+                print(f"SONIC_V11_TRANSFER_FAILED name={name} source={endpoint} error={type(error).__name__}",
+                      flush=True)
+            finally:
+                if part is not None:
+                    part.unlink(missing_ok=True)
+        else:
+            raise RuntimeError(f"Public SONIC v1.1 transfer failed: {name}")
 
 
 def fetch_wheel(wheel):
@@ -83,24 +128,33 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--variant", choices=VARIANT_HASHES, default="default")
     args = parser.parse_args()
     root, output = args.root.resolve(), args.output.resolve()
     output.mkdir(parents=True, exist_ok=False)
     source = Path(__file__).resolve().parent
     motions = root / "runs/bones-duration-1118c/motions/common64"
-    original = root / "data/sonic-default-6733128"
-    batched = root / "runs/sonic-lafan40-1116a/models-batched"
+    original = root / "data" / VARIANT_RELEASE_PATHS[args.variant]
+    batched = (output / "models-batched" if args.variant == "v1.1"
+               else root / "runs/sonic-lafan40-1116a/models-batched")
     manifest = json.loads((motions.with_name(motions.name + "-duration-pack.json")).read_bytes())
     files = {p.name: sha256(p) for p in sorted(motions.iterdir()) if p.is_file()}
     if manifest["case"] != "common64" or manifest["files"] != files or manifest["frames"] != 20397:
         raise RuntimeError("Unexpected common64 membership")
     report = {"status": "started", "wheel": WHEEL, "wheel_sha256": WHEEL_HASH,
-              "ONNX_runtime_version": ORT_VERSION, "original_SONIC_revision": "6733128a3d8a523b1418b06bca3cdf61c8b0987f",
+              "ONNX_runtime_version": ORT_VERSION, "original_SONIC_revision": SONIC_REVISION,
+              "SONIC_variant": args.variant,
               "script_commit_scope": "CUDA inference gate on common64", "paper_benchmark_equivalence": False,
               "motion_files": files}
     write_json(output / "driver.json", report)
     ev = output / "evaluation"
     try:
+        if args.variant == "v1.1":
+            fetch_v11_release(original)
+            execute("prepare_sonic_onnx_batch.py",
+                    ["--models", original, "--output", batched, "--variant", args.variant],
+                    output / "batch-derivation.log", 600,
+                    python=root / "conda/sonic-inference-cpu/bin/python")
         python = install(root, output)
         # Keep this environment scoped to the gate. Use the same compiled model
         # and native audited evaluation code with the CUDA inference option.
@@ -118,7 +172,8 @@ def main():
                     "--models", str(original), "--batched", str(batched),
                     "--contract", str(source / "sonic-g1-control-contract.json"),
                     "--motions", str(motions), "--output", str(ev), "--expected-clips", "64",
-                    "--num-envs", "64", "--onnx-provider", "cuda", "--order", "index"]
+                    "--num-envs", "64", "--onnx-provider", "cuda", "--order", "index",
+                    "--sonic-variant", args.variant]
         with (output / "evaluation.log").open("w", encoding="utf-8") as log:
             result = subprocess.run(["timeout", "--signal=TERM", "--kill-after=30s", "1100s", *evaluate],
                                     stdout=log, stderr=subprocess.STDOUT)
@@ -128,6 +183,7 @@ def main():
             raise RuntimeError("SONIC CUDA evaluation failed")
         result = json.loads((ev / "result.json").read_bytes())
         assert result["ONNX_provider"] == "CUDAExecutionProvider"
+        assert result["SONIC_variant"] == args.variant
         for graph in ("encoder", "decoder"):
             assert result["ONNX_runtime_compute_profiles"][graph]["cuda_compute_ops"]
         execute("audit_corpus_result.py", ["--result", ev / "result.json", "--protocol", ev / "protocol.json",
@@ -143,6 +199,8 @@ def main():
     finally:
         write_json(output / "driver.json", report)
         names = [output / "driver.json"]
+        if args.variant == "v1.1":
+            names.append(batched / "validation.json")
         names.extend(ev / name for name in ("result.json", "protocol.json", "accounting.json",
                      "audit/summary.json", "audit/initial-states.json"))
         subprocess.run([sys.executable, str(source / "emit_json_receipts.py"),
