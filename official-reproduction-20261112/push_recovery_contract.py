@@ -152,7 +152,7 @@ def derive_metrics(states, reference):
     return series.astype(np.float32)
 
 
-def score_trials(labels, vectors, metrics, steps, applied):
+def score_trials(labels, vectors, metrics, steps, applied, reference_tilt_cos=1.0):
     usable = (metrics[..., :len(THRESHOLDS)] <= list(THRESHOLDS.values())).all(axis=-1)
     records = []
     for i, label in enumerate(labels):
@@ -160,7 +160,8 @@ def score_trials(labels, vectors, metrics, steps, applied):
         # The last sample can already be fallen even at the complete horizon.
         row = metrics[i, last]
         height_error = abs(float(row[4]) - float(metrics[i, 0, 4]))
-        fallen = bool(height_error > .25 or row[2] > np.rad2deg(np.arccos(.20)))
+        tilt_cos = np.cos(np.deg2rad(float(row[2])))
+        fallen = bool(height_error > .25 or abs(tilt_cos - reference_tilt_cos) > .8)
         if last < STEPS and not fallen:
             raise RuntimeError("Short trial is missing its terminal fall state")
         settled = None
@@ -181,3 +182,25 @@ def score_trials(labels, vectors, metrics, steps, applied):
             "final_travel_m": float(row[5]) if last >= PUSH_STEP else None,
         })
     return records
+
+
+def score_from_pre_push_pose(arrays, metrics):
+    """Measure return to the realized 0.5-second pre-push joint posture."""
+    states = arrays["states"]
+    before = states[:, PUSH_STEP-24:PUSH_STEP+1, 7:36].astype(np.float64)
+    baseline = before.mean(axis=1)
+    delta = states[..., 7:36].astype(np.float64) - baseline[:, None, :]
+    adjusted = metrics.copy()
+    adjusted[..., 3] = np.rad2deg(np.sqrt(np.square(delta).mean(axis=-1)))
+    labels, vectors = pulse_grid()
+    reference = arrays["reference"]
+    cos_tilt = 1 - 2 * np.square(reference[4:6].astype(np.float64)).sum()
+    rows = score_trials(labels, vectors, adjusted, arrays["observed_steps"], arrays["applied"], cos_tilt)
+    return {
+        "baseline_samples": 25,
+        "criterion": "Same fall and stabilization thresholds, joint RMS measured from each pre-push mean posture",
+        "zero_push_eligible": (not rows[0]["fell"] and rows[0]["prepush_stable_final_1s"]
+                               and rows[0]["final_1s_stable"]),
+        "pushed_settled": sum(r["impulse_applied"] and r["recovery_seconds"] is not None for r in rows),
+        "recovery_seconds_in_grid_order": [r["recovery_seconds"] for r in rows],
+    }

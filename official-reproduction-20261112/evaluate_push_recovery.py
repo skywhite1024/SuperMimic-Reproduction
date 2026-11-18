@@ -11,12 +11,13 @@ import numpy as np
 
 from push_recovery_contract import (
     CLIP_FRAMES, DT, METRICS, POSES, PUSH_STEP, STEPS, THRESHOLDS,
-    derive_metrics, prepare_reference, pulse_grid, score_trials, sha256, write_json,
+    derive_metrics, prepare_reference, pulse_grid, score_from_pre_push_pose, score_trials,
+    sha256, write_json,
 )
 from select_completed_checkpoint import select_completed_checkpoint
 
 
-def evaluate_pose(env, actor, model, command, pose, seed):
+def evaluate_pose(env, actor, model, command, pose, frame, seed):
     import torch
     from mjlab.utils.lab_api.math import quat_apply
     from supermimic.representations import extract_actor_goal
@@ -29,7 +30,6 @@ def evaluate_pose(env, actor, model, command, pose, seed):
     rep = model.representation
     labels, vectors = pulse_grid()
     n = len(labels)
-    frame = POSES.index(pose) * CLIP_FRAMES
     env.seed(seed)
     env.reset()
     ids = torch.arange(n, device=env.device)
@@ -41,6 +41,7 @@ def evaluate_pose(env, actor, model, command, pose, seed):
     reference = torch.cat((xyz, command.motion.root_quat_w[frame], q,
                            torch.zeros_like(full_state[0, 36:])))
     initial = full_state.clone()
+    reference_xy_square = reference[4:6].square().sum()
     # GenCoord subtracts the environment origin from the root position.
     expected = reference.expand(n, -1).clone()
     if not torch.allclose(initial, expected, rtol=1e-5, atol=1e-5):
@@ -98,7 +99,7 @@ def evaluate_pose(env, actor, model, command, pose, seed):
         observed += alive
         # In GenCoord the anchor is the pelvis. Use the fresh post-physics state.
         bad_z = (next_state[:, 2] - initial[:, 2]).abs() > .25
-        bad_tilt = (2.0 * next_state[:, 4:6].square().sum(-1)) > .8
+        bad_tilt = (2.0 * (next_state[:, 4:6].square().sum(-1) - reference_xy_square).abs()) > .8
         alive &= ~(bad_z | bad_tilt)
         if step in (49, PUSH_STEP, 199, 299, STEPS - 1) or not alive.any():
             print(f"PUSH_PROGRESS pose={pose} step={step + 1} survivors={int(alive.sum())}"
@@ -139,18 +140,24 @@ def audit_pose(path):
         metrics = derive_metrics(states, data["reference"])
         # Recompute first fall, including at the final sample and after the impulse.
         z_error = np.abs(states[..., 2].astype(np.float64) - states[:, :1, 2])
-        gravity_z_error = 2.0 * np.square(states[..., 4:6].astype(np.float64)).sum(-1)
+        ref_squared = np.square(data["reference"][4:6].astype(np.float64)).sum()
+        gravity_z_error = 2.0 * np.abs(np.square(states[..., 4:6].astype(np.float64)).sum(-1) - ref_squared)
         failures = (z_error > .25) | (gravity_z_error > .8)
         fall = failures.any(axis=1)
         if not (np.array_equal(fall, data["fallen"])
                 and np.array_equal(np.where(fall, failures.argmax(1), STEPS), steps)):
             raise RuntimeError("Stored traces do not reproduce first-fall times")
-        records = score_trials(labels, vectors, metrics, steps, applied)
+        records = score_trials(labels, vectors, metrics, steps, applied, 1 - 2 * ref_squared)
         if [r["fell"] for r in records] != fall.tolist():
             raise RuntimeError("Metric-based final fall disagrees with the state traces")
         control = records[0]
         eligible = (not control["fell"] and control["prepush_stable_final_1s"]
                     and control["final_1s_stable"])
+        control_metrics = {}
+        if not control["fell"]:
+            for label, region in (("prepush_last_second_max", metrics[0, PUSH_STEP-50:PUSH_STEP+1]),
+                                  ("last_second_max", metrics[0, STEPS-50:])):
+                control_metrics[label] = dict(zip(METRICS, region.max(0).tolist(), strict=True))
         return {
             "cases": len(records), "impulses": int(applied.sum()),
             "prepush_failures": int((fall & (steps <= PUSH_STEP)).sum()),
@@ -159,6 +166,8 @@ def audit_pose(path):
             "pushed_settled": sum(row["impulse_applied"] and row["recovery_seconds"] is not None
                                   for row in records),
             "zero_push_eligible": eligible,
+            "control_metrics": control_metrics,
+            "relative_to_prepush_posture": score_from_pre_push_pose(data, metrics),
             "max_root_qvel_jump_error": float(error),
             "records": records,
             "trace": {"path": path.name, "bytes": path.stat().st_size, "sha256": sha256(path),
@@ -235,9 +244,15 @@ def run_evaluation(plan, packed, output):
     motion.velocity_range = {}
     motion.joint_position_range = (0., 0.)
     motion.resampling_time_range = (1e9, 1e9)
+    pose_names = tuple(json.loads((packed / "motion_names.json").read_bytes()))
+    if pose_names != tuple(plan.get("poses", POSES)):
+        raise RuntimeError("The planned static-pose names and packed clips differ")
+    if np.load(packed / "motion_ends.npy", allow_pickle=False).tolist() != [
+            CLIP_FRAMES * i for i in range(1, len(pose_names) + 1)]:
+        raise RuntimeError("Unexpected static-pose clip boundaries")
     protocol = {
         "task": task, "policy": plan, "seed": seed, "dt_s": DT, "cases_per_pose": len(labels),
-        "elapsed_steps": STEPS, "impulse_at_step": PUSH_STEP, "reference_poses": POSES,
+        "elapsed_steps": STEPS, "impulse_at_step": PUSH_STEP, "reference_poses": pose_names,
         "physics": "native defaults; fixed friction coefficient 1, no noise or randomization",
         "fall": "first fresh state with absolute pelvis height error > .25 m or projected gravity z error > .8",
         "input": "one additive horizontal world root velocity jump after computing the action at t=2 s",
@@ -259,9 +274,9 @@ def run_evaluation(plan, packed, output):
         actor.eval()
         actor.set_slot_mix({"motion": 1.0})
         command = env.unwrapped.command_manager.get_term("motion")
-        for pose in POSES:
+        for i, pose in enumerate(pose_names):
             with torch.inference_mode():
-                arrays, reset_audit = evaluate_pose(env, actor, model, command, pose, seed)
+                arrays, reset_audit = evaluate_pose(env, actor, model, command, pose, i * CLIP_FRAMES, seed)
             trace = output / f"{pose}.npz"
             np.savez_compressed(trace, **arrays)
             result = audit_pose(trace)
