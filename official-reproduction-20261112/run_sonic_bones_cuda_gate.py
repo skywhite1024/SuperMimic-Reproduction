@@ -12,11 +12,14 @@ import urllib.request
 from push_recovery_contract import sha256, write_json
 from run_lafan_learning_curve import execute
 
-WHEEL = "onnxruntime_gpu-1.32.0-cp313-cp313-manylinux_2_28_x86_64.whl"
-WHEEL_URL = ("https://files.pythonhosted.org/packages/a9/b6/"
-             "759cc7838e5640d30e365e3b8466987172526faabf1779f0bf776f566b1e/" + WHEEL)
-WHEEL_HASH = "d3cec70e7a7dcfb085e0e6458210211541a33ffbf89c6a6e4e3d6adf7262cd6d"
-WHEEL_BYTES = 251389345
+ORT_VERSION = "1.26.0"
+# PyPI's 1.26 release targets CUDA 12.8 and cuDNN 9. The SenseCore worker
+# image provides CUDA 12.9, and the pinned torch build is from CUDA 12.x.
+WHEEL = f"onnxruntime_gpu-{ORT_VERSION}-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl"
+WHEEL_URL = ("https://files.pythonhosted.org/packages/dd/97/"
+             "fe8979f44b9275654b42f7bb556e30789b71a1b22998c83b540df2b1b774/" + WHEEL)
+WHEEL_HASH = "cfda2fad535595bfc3e570eb588092717711dcb2957656d814695e0c9ceb1508"
+WHEEL_BYTES = 276974871
 FLAT = "flatbuffers-25.12.19-py2.py3-none-any.whl"
 FLAT_HASH = "7634f50c427838bb021c2d66a3d1168e9d199b0607e6329399f04846d42e20b4"
 
@@ -66,7 +69,7 @@ def main():
     if manifest["case"] != "common64" or manifest["files"] != files or manifest["frames"] != 20397:
         raise RuntimeError("Unexpected common64 membership")
     report = {"status": "started", "wheel": WHEEL, "wheel_sha256": WHEEL_HASH,
-              "ONNX_runtime_version": "1.32.0", "original_SONIC_revision": "6733128a3d8a523b1418b06bca3cdf61c8b0987f",
+              "ONNX_runtime_version": ORT_VERSION, "original_SONIC_revision": "6733128a3d8a523b1418b06bca3cdf61c8b0987f",
               "script_commit_scope": "CUDA inference gate on common64", "paper_benchmark_equivalence": False,
               "motion_files": files}
     write_json(output / "driver.json", report)
