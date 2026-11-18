@@ -1,0 +1,239 @@
+{
+  "status": "complete_continuous_and_finite_same18_curves_compared",
+  "motions": 18,
+  "reference_frames": 220352,
+  "first_order_run_sha256": "a0950adbf99e9770e382e4efff38ec33268bc2206647484a04deb82ae514113e",
+  "previous_comparison_sha256": "c9a58776ff23f37cecb9576c3c86c8485964b46d081ee49515443cc297b0ba53",
+  "first_sample_at_local_return_082": {
+    "collection_steps": 16001,
+    "clips": 18,
+    "successes": 17,
+    "mean_normalized_full_motion_return": 0.8322494629754024,
+    "reference_frames": 220352,
+    "real_transitions": 65540096,
+    "completed_policy_update_calls": 6398,
+    "configured_imagined_training_transitions": 838598656,
+    "checkpoint_seconds_since_runner_entry": 1907.9632860012352
+  },
+  "points_at_matching_first_order_collection_counts": [
+    {
+      "collection_steps": 1,
+      "continuous_score": 0.0011637444435407855,
+      "prior_interrupted_parent_score": 0.001163652631404445
+    },
+    {
+      "collection_steps": 8001,
+      "continuous_score": 0.8192779044747304,
+      "prior_interrupted_parent_score": 0.7353132612120773
+    },
+    {
+      "collection_steps": 16001,
+      "continuous_score": 0.8322494629754024,
+      "prior_interrupted_parent_score": 0.8540746310749793
+    }
+  ],
+  "identical_packed_motion_and_termination_rules": true,
+  "curves": [
+    {
+      "label": "First-order, continuous",
+      "points": [
+        {
+          "real_steps": 4096,
+          "imagined_steps": 0,
+          "score": 0.0011637444435407855,
+          "successes": 0,
+          "collection_steps": 1
+        },
+        {
+          "real_steps": 32772096,
+          "imagined_steps": 419168256,
+          "score": 0.8192779044747304,
+          "successes": 18,
+          "collection_steps": 8001
+        },
+        {
+          "real_steps": 65540096,
+          "imagined_steps": 838598656,
+          "score": 0.8322494629754024,
+          "successes": 17,
+          "collection_steps": 16001
+        },
+        {
+          "real_steps": 98308096,
+          "imagined_steps": 1258029056,
+          "score": 0.8576524294895563,
+          "successes": 17,
+          "collection_steps": 24001
+        },
+        {
+          "real_steps": 131076096,
+          "imagined_steps": 1677459456,
+          "score": 0.8635937302400286,
+          "successes": 17,
+          "collection_steps": 32001
+        },
+        {
+          "real_steps": 163844096,
+          "imagined_steps": 2096889856,
+          "score": 0.8721730713350827,
+          "successes": 18,
+          "collection_steps": 40001
+        },
+        {
+          "real_steps": 196612096,
+          "imagined_steps": 2516320256,
+          "score": 0.8674587727850894,
+          "successes": 18,
+          "collection_steps": 48001
+        },
+        {
+          "real_steps": 229380096,
+          "imagined_steps": 2935750656,
+          "score": 0.878258722906711,
+          "successes": 18,
+          "collection_steps": 56001
+        },
+        {
+          "real_steps": 262148096,
+          "imagined_steps": 3355181056,
+          "score": 0.8807049889464006,
+          "successes": 18,
+          "collection_steps": 64001
+        }
+      ]
+    },
+    {
+      "label": "PPO-WM 16k x 32",
+      "points": [
+        {
+          "real_steps": 2621440,
+          "imagined_steps": 33554432,
+          "score": 0.0002653564848806809,
+          "successes": 0,
+          "ppo_update": 64
+        },
+        {
+          "real_steps": 10485760,
+          "imagined_steps": 134217728,
+          "score": 0.0003689904384624454,
+          "successes": 0,
+          "ppo_update": 256
+        },
+        {
+          "real_steps": 41943040,
+          "imagined_steps": 536870912,
+          "score": 0.3447581084644532,
+          "successes": 5,
+          "ppo_update": 1024
+        },
+        {
+          "real_steps": 83886080,
+          "imagined_steps": 1073741824,
+          "score": 0.6012684555518308,
+          "successes": 12,
+          "ppo_update": 2048
+        }
+      ]
+    },
+    {
+      "label": "PPO-WM 4k x 32",
+      "points": [
+        {
+          "real_steps": 2621440,
+          "imagined_steps": 8388608,
+          "score": 7.184769180279833e-05,
+          "successes": 0,
+          "ppo_update": 64
+        },
+        {
+          "real_steps": 10485760,
+          "imagined_steps": 33554432,
+          "score": 0.0002468653685048744,
+          "successes": 0,
+          "ppo_update": 256
+        },
+        {
+          "real_steps": 41943040,
+          "imagined_steps": 134217728,
+          "score": 0.004699304754288968,
+          "successes": 0,
+          "ppo_update": 1024
+        },
+        {
+          "real_steps": 83886080,
+          "imagined_steps": 268435456,
+          "score": 0.47027693376345003,
+          "successes": 10,
+          "ppo_update": 2048
+        }
+      ]
+    },
+    {
+      "label": "PPO-WM 8k x 24",
+      "points": [
+        {
+          "real_steps": 2621440,
+          "imagined_steps": 12582912,
+          "score": 0.0002557644055454251,
+          "successes": 0,
+          "ppo_update": 64
+        },
+        {
+          "real_steps": 10485760,
+          "imagined_steps": 50331648,
+          "score": 0.00034271311411778306,
+          "successes": 0,
+          "ppo_update": 256
+        },
+        {
+          "real_steps": 41943040,
+          "imagined_steps": 201326592,
+          "score": 0.2932528360510531,
+          "successes": 5,
+          "ppo_update": 1024
+        },
+        {
+          "real_steps": 83886080,
+          "imagined_steps": 402653184,
+          "score": 0.5360035243449793,
+          "successes": 10,
+          "ppo_update": 2048
+        }
+      ]
+    },
+    {
+      "label": "PPO-WM 8k x 32",
+      "points": [
+        {
+          "real_steps": 2621440,
+          "imagined_steps": 16777216,
+          "score": 0.00023064060741259478,
+          "successes": 0,
+          "ppo_update": 64
+        },
+        {
+          "real_steps": 10485760,
+          "imagined_steps": 67108864,
+          "score": 0.00015850449961586066,
+          "successes": 0,
+          "ppo_update": 256
+        },
+        {
+          "real_steps": 41943040,
+          "imagined_steps": 268435456,
+          "score": 0.007543337293267503,
+          "successes": 0,
+          "ppo_update": 1024
+        },
+        {
+          "real_steps": 83886080,
+          "imagined_steps": 536870912,
+          "score": 0.5328680727901189,
+          "successes": 12,
+          "ppo_update": 2048
+        }
+      ]
+    }
+  ],
+  "paper_training_return_or_budget_matched": false
+}

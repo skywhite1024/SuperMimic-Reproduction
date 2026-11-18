@@ -1178,3 +1178,73 @@ all 136 clips excluded by geometry and 192 sampled retained clips, covering
 and [plot source](../official-reproduction-20261112/plot_bones_duration_study.py).
 
 ![Verified BONES duration comparison](../official-reproduction-20261112/bones-duration-1118c/duration-comparison.png)
+
+## 74. Released SONIC completes CUDA inference on the BONES probe
+
+The first attempt installed ONNX Runtime GPU 1.26.0 with the pinned wheel
+digest. It reached the first policy step and exited during profile readback
+because `Path` was missing from the runtime imports. The original job log
+and two emitted JSONs are retained locally. The retry fixed the import,
+reused the verified package cache, and returned all six original JSONs.
+
+Both ONNX graphs executed mathematical operators on the H100. The encoder
+trace includes five CUDA `Gemm` calls and the decoder trace includes seven
+CUDA `MatMul` calls. Four comparisons with the original CPU model on the
+same observed inputs had a maximum token difference of zero and a maximum
+action difference of 1.79e-6. The released policy completed all 64 motions,
+with a mean normalized return of **0.89967**. The 64 motions and 20,397
+reference frames match the duration study. This is a single corrected-v2
+probe with the released checkpoint and common simulator rules.
+[SONIC validation and profile hashes](../official-reproduction-20261112/sonic-bones-cuda-gate-1119i/validation.json).
+
+## 75. Continuous first-order control completes all nine LAFAN18 evaluations
+
+The first-order job trained from scratch for 64,001 collections, keeping
+one learner process. It completed all nine evaluations before exiting on
+an integer argument passed to the receipt-export subprocess. The readback
+job verified and emitted the 51 existing originals. Local verification
+recomputed each motion's normalized return and checked the nine scores
+against the execution log. Both jobs and their distinct exit codes are
+preserved.
+
+| Collection | Real transitions | Configured imagined transitions | Mean return | Successes |
+| ---: | ---: | ---: | ---: | ---: |
+| 1 | 4,096 | 0 | 0.00116 | 0 / 18 |
+| 8,001 | 32,772,096 | 419,168,256 | 0.81928 | 18 / 18 |
+| 16,001 | 65,540,096 | 838,598,656 | 0.83225 | 17 / 18 |
+| 24,001 | 98,308,096 | 1,258,029,056 | 0.85765 | 17 / 18 |
+| 32,001 | 131,076,096 | 1,677,459,456 | 0.86359 | 17 / 18 |
+| 40,001 | 163,844,096 | 2,096,889,856 | 0.87217 | 18 / 18 |
+| 48,001 | 196,612,096 | 2,516,320,256 | 0.86746 | 18 / 18 |
+| 56,001 | 229,380,096 | 2,935,750,656 | 0.87826 | 18 / 18 |
+| 64,001 | 262,148,096 | 3,355,181,056 | 0.88070 | 18 / 18 |
+
+The first sampled checkpoint above the local full-motion threshold of 0.82
+was retained 1,908 s after runner entry. The best finite PPO-WM result on
+the identical packed motions and termination rules was 0.60127 after
+83,886,080 real and 1,073,741,824 imagined transitions. The earlier stopped
+first-order run differs at the overlapping 8,001 and 16,001 checkpoints
+despite the same seed. The protocol therefore supports a finite local
+comparison. The paper's ratio uses its own training-episode return and
+larger PPO-WM budget.
+[Validation](../official-reproduction-20261112/lafan-locomotion18-control-1118b/validation.json),
+[all comparison points](../official-reproduction-20261112/lafan-locomotion18-control-1118b/comparison.json).
+
+![Continuous first-order and finite PPO-WM comparison](../official-reproduction-20261112/lafan-locomotion18-control-1118b/same18-comparison.png)
+
+## 76. Two-H100 NCCL training and measured BONES throughput
+
+The bounded synchronized job trained on all 129,543 feasible proxy clips
+with 4,096 real environments on each H100. The result covers 1,001
+collections and 8,200,192 real simulator transitions. Both ranks completed
+398 learner updates. Distinct initial simulator observations, identical
+learned parameters, shared sampler state and all six native weight files
+were checked. Six original JSONs matched the cloud digests.
+
+Across collections 202–1,001, the slower rank measured 326.99 s for
+6,553,600 global transitions, or **20,042 transitions/s**. The adapter
+runs learner updates eagerly to dispatch Python collectives. The measured
+window covers this two-rank implementation on the complete proxy bank.
+A timed single-device run of the same eager update path and an endpoint
+tracking evaluation would be needed to estimate scaling and quality.
+[Throughput validation](../official-reproduction-20261112/native-bones-two-gpu-throughput-1119h/validation.json).

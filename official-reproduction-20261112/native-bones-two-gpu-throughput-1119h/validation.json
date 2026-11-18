@@ -1,0 +1,36 @@
+{
+  "status": "actual_two_H100_NCCL_native_gate_originals_verified",
+  "job_uid": "2652a4735bb946b2b0639db42ca09d73",
+  "original_JSON_receipts": 6,
+  "all_byte_counts_and_SHA256_verified": true,
+  "source_files_bound_to_actual_log": true,
+  "source_commit": "3d17832dfdd0f3d4fe10a0720fa2d54a6fa05271",
+  "H100": 2,
+  "ranks": 2,
+  "local_collection_steps": 1001,
+  "global_real_simulator_steps": 8200192,
+  "native_learner_outer_updates_per_rank": 398,
+  "optimizer_steps_per_rank": {
+    "world_model_optimizer_steps": 3980,
+    "actor_optimizer_steps": 398,
+    "critic_optimizer_steps": 7960
+  },
+  "learned_networks_changed_and_identical_across_ranks": true,
+  "independent_real_initial_states": true,
+  "actor_real_observation_count_both_ranks": 8200192,
+  "sampler_value_count_effort_hashes_identical": true,
+  "native_weight_files_cloud_hash_and_tensor_readback_verified": 6,
+  "raw_weights_downloaded": false,
+  "learner_CUDA_graphs_disabled": true,
+  "quality_evaluation_completed": false,
+  "full_training_state_resume_available": false,
+  "paper_performance_equivalence": false,
+  "paper_results_reproduced": false,
+  "steady_window": {
+    "first_excluded_collection": 201,
+    "last_included_collection": 1001,
+    "seconds_slowest_rank": 326.9870063327253,
+    "global_simulator_transitions": 6553600,
+    "global_transitions_per_second": 20042.38661805231
+  }
+}

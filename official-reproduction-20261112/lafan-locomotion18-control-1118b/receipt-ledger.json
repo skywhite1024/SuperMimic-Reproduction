@@ -1,0 +1,361 @@
+{
+  "receipts": [
+    {
+      "i": 0,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1118b/motion-subset.json",
+      "bytes": 3657,
+      "sha256": "465bf36f3ec13d6262354870cbd61f8d6618da83135ed4f9a392fc1740444601",
+      "chunks": 5
+    },
+    {
+      "i": 1,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1118b/main/result.json",
+      "bytes": 18696,
+      "sha256": "a156b876fe34a658f7584a4824da21283451dda14b83e210d8f3a3daf878f927",
+      "chunks": 16
+    },
+    {
+      "i": 2,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1118b/main/training/result.json",
+      "bytes": 16142,
+      "sha256": "f003508f944b3fc8c72efde99d35cfcb692537c5a3d1df3c2654ab3d98d087b3",
+      "chunks": 14
+    },
+    {
+      "i": 3,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1118b/main/training/resolved-config.json",
+      "bytes": 42919,
+      "sha256": "8f47972168dac3d9fa0055585f4c03775d8ee2dec4609daf19bc0e5246780ea0",
+      "chunks": 23
+    },
+    {
+      "i": 4,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1118b/main/training/checkpoint-times.json",
+      "bytes": 12717,
+      "sha256": "8da056f5a6612989ba6e8b27426b2fdadb6eb68b55ade584826efff7066a85fa",
+      "chunks": 9
+    },
+    {
+      "i": 5,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1118b/main/training/learner-counts.json",
+      "bytes": 5503,
+      "sha256": "1f6ab9565c5156aea1ff9ba54cb7c4e07fe14246699a9689cf2847f85e073619",
+      "chunks": 3
+    },
+    {
+      "i": 6,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1118b/main/eval-000000001/result.json",
+      "bytes": 6582,
+      "sha256": "2258a103422a8e1f36213e6025e54c2fc32cc4edf3e896034d7eb48a55a2e253",
+      "chunks": 4
+    },
+    {
+      "i": 7,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1118b/main/eval-000000001/protocol.json",
+      "bytes": 24451,
+      "sha256": "e8c5c9ef7c43823588c2c21a292c550fb069eb296ee0c8667df136dc4451c151",
+      "chunks": 21
+    },
+    {
+      "i": 8,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1118b/main/eval-000000001/accounting.json",
+      "bytes": 1380,
+      "sha256": "e0a7b15fc00060a5b464432e6281dbc2bdef20972ab4c5ccc4b39219f71321b7",
+      "chunks": 3
+    },
+    {
+      "i": 9,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1118b/main/eval-000000001/audit/summary.json",
+      "bytes": 958,
+      "sha256": "fb794e8b03b475d07f1e0fb68040be8934a7d14e6dc92cc782e101e6147a36b1",
+      "chunks": 3
+    },
+    {
+      "i": 10,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1118b/main/eval-000000001/audit/initial-states.json",
+      "bytes": 720,
+      "sha256": "1b9af86357954723867873837ee04abc15c46f3682a00913fc820780e3c02e90",
+      "chunks": 2
+    },
+    {
+      "i": 11,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1118b/main/eval-000008001/result.json",
+      "bytes": 6632,
+      "sha256": "924dd5cff28ce41762bd1255ba771bce80cb9d497ee3f7c5edef10535f900d66",
+      "chunks": 4
+    },
+    {
+      "i": 12,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1118b/main/eval-000008001/protocol.json",
+      "bytes": 24454,
+      "sha256": "2cb7365b386896975a043897b83b3ba93ef71b80bc9604a8ee013277325c58a1",
+      "chunks": 21
+    },
+    {
+      "i": 13,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1118b/main/eval-000008001/accounting.json",
+      "bytes": 1339,
+      "sha256": "825f0af7db40760bd63af271d1874c6db8df445bd46d7c7d790915a8ebafd8f9",
+      "chunks": 3
+    },
+    {
+      "i": 14,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1118b/main/eval-000008001/audit/summary.json",
+      "bytes": 963,
+      "sha256": "ebd69b8d06e8a201256fde3152cd1317df1515e17f135b3f7bd69054f66b5eda",
+      "chunks": 3
+    },
+    {
+      "i": 15,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1118b/main/eval-000008001/audit/initial-states.json",
+      "bytes": 720,
+      "sha256": "17effca84782bc7e5a6b24e9922bfce9dc0e62e87844e625a3164f5a08d1b359",
+      "chunks": 2
+    },
+    {
+      "i": 16,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1118b/main/eval-000016001/result.json",
+      "bytes": 6640,
+      "sha256": "f5ecbfcf7de55626e448bd4f8cfa326ebdceef6975c205bc2a5da30c53678c04",
+      "chunks": 4
+    },
+    {
+      "i": 17,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1118b/main/eval-000016001/protocol.json",
+      "bytes": 24455,
+      "sha256": "d875ad2bf1bbadaab622d5299707f14844b2784f1f425f258452f147f789e9d4",
+      "chunks": 21
+    },
+    {
+      "i": 18,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1118b/main/eval-000016001/accounting.json",
+      "bytes": 1377,
+      "sha256": "46807bcd68ee8242f5b57e1036d90a74849fc8a70402415eb70a1f85d3faf18c",
+      "chunks": 3
+    },
+    {
+      "i": 19,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1118b/main/eval-000016001/audit/summary.json",
+      "bytes": 963,
+      "sha256": "2aafdd1af000cb9710552c9d3112b31a9ee39832ebf13bd393b69f3676cf767d",
+      "chunks": 3
+    },
+    {
+      "i": 20,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1118b/main/eval-000016001/audit/initial-states.json",
+      "bytes": 720,
+      "sha256": "b00b2bc5485725dd734dfc803c65875be6568550834869b7137c9a16d7bededa",
+      "chunks": 2
+    },
+    {
+      "i": 21,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1118b/main/eval-000024001/result.json",
+      "bytes": 6644,
+      "sha256": "47fd21e0d31dae41ec30287cffa2b6ac4bd1db9397c5c898a4513b3c43a59c6b",
+      "chunks": 4
+    },
+    {
+      "i": 22,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1118b/main/eval-000024001/protocol.json",
+      "bytes": 24455,
+      "sha256": "92b1808335af32c054249c8cc96c769b3ef91c2b7b86cf96aada4b58e3e2b991",
+      "chunks": 21
+    },
+    {
+      "i": 23,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1118b/main/eval-000024001/accounting.json",
+      "bytes": 1377,
+      "sha256": "75d1b7af7df0d6eceb5cbea7dad63b8341ded6b2ffa00a549bfe0bb53476b10d",
+      "chunks": 3
+    },
+    {
+      "i": 24,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1118b/main/eval-000024001/audit/summary.json",
+      "bytes": 963,
+      "sha256": "8835326c498534d8dc710f389faafee28ea77dfbafb48aae6522b95b0843f1d3",
+      "chunks": 3
+    },
+    {
+      "i": 25,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1118b/main/eval-000024001/audit/initial-states.json",
+      "bytes": 720,
+      "sha256": "a6a1549fb852aa84347d8ffbc0e18193724acf73bfe833e8daf57b1445a9b1fe",
+      "chunks": 2
+    },
+    {
+      "i": 26,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1118b/main/eval-000032001/result.json",
+      "bytes": 6639,
+      "sha256": "51083e3d772de1b7a78ae19aeeaff66eac09d543fd211325a4b82d6eabf0419b",
+      "chunks": 4
+    },
+    {
+      "i": 27,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1118b/main/eval-000032001/protocol.json",
+      "bytes": 24455,
+      "sha256": "620890e7324950867856a0a9badcfc137abbbb3dde5507d6f789be1e16e2195f",
+      "chunks": 21
+    },
+    {
+      "i": 28,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1118b/main/eval-000032001/accounting.json",
+      "bytes": 1377,
+      "sha256": "f8e08beb9b66d5da7f90748310f2b7fff9ac10297ee7ec69e6c014ac6bebec28",
+      "chunks": 3
+    },
+    {
+      "i": 29,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1118b/main/eval-000032001/audit/summary.json",
+      "bytes": 963,
+      "sha256": "603dcec8cf674193e78a5e3a836f2fb5a104e29830d05758694587be0e0f1f10",
+      "chunks": 3
+    },
+    {
+      "i": 30,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1118b/main/eval-000032001/audit/initial-states.json",
+      "bytes": 720,
+      "sha256": "275c6eeffff20e4a426226785704d66a05a9ee8d9bac7c6b5d2397bf1cb3bc13",
+      "chunks": 2
+    },
+    {
+      "i": 31,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1118b/main/eval-000040001/result.json",
+      "bytes": 6643,
+      "sha256": "a2df0f83e392590b21b04e9223b4304e7c5713a1daf292ecfe958d1189970569",
+      "chunks": 4
+    },
+    {
+      "i": 32,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1118b/main/eval-000040001/protocol.json",
+      "bytes": 24455,
+      "sha256": "9d6163cee54249616aa1ec892b9752ce253172693955d2d1ffe47d3802f4f41e",
+      "chunks": 21
+    },
+    {
+      "i": 33,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1118b/main/eval-000040001/accounting.json",
+      "bytes": 1339,
+      "sha256": "e2252fb25f0c4cfe49359ee7882f53a8acec294e770860bcefe4121705cdebe2",
+      "chunks": 3
+    },
+    {
+      "i": 34,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1118b/main/eval-000040001/audit/summary.json",
+      "bytes": 963,
+      "sha256": "bf37bc477de41ea18b87afe04c802d7e9b416d6ab6b416b10d99ffd0a7178eaa",
+      "chunks": 3
+    },
+    {
+      "i": 35,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1118b/main/eval-000040001/audit/initial-states.json",
+      "bytes": 720,
+      "sha256": "baf0864b5a808488710638b5264bbe209af0fc26527b81ebd000d2b3ccb5356b",
+      "chunks": 2
+    },
+    {
+      "i": 36,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1118b/main/eval-000048001/result.json",
+      "bytes": 6638,
+      "sha256": "80b05a2643b973f9977d41b06f9d572cdd0e439b091fe11904432f6a3f5b0fd6",
+      "chunks": 4
+    },
+    {
+      "i": 37,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1118b/main/eval-000048001/protocol.json",
+      "bytes": 24455,
+      "sha256": "17678da7ba1a96bfbe204fa8ebf68f723d3fd1ff07984bee86967aad6fb0e47e",
+      "chunks": 21
+    },
+    {
+      "i": 38,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1118b/main/eval-000048001/accounting.json",
+      "bytes": 1339,
+      "sha256": "b0c9a804119c68ea35a60f04b6c4b9adda00650e524b7ec6f8312a388baacc80",
+      "chunks": 3
+    },
+    {
+      "i": 39,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1118b/main/eval-000048001/audit/summary.json",
+      "bytes": 963,
+      "sha256": "858b9a4f0218c8fec6056d1d371c78d55badf178cd1fe71acaf34db548f23552",
+      "chunks": 3
+    },
+    {
+      "i": 40,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1118b/main/eval-000048001/audit/initial-states.json",
+      "bytes": 720,
+      "sha256": "b3e1568ca163d5d5c658964d9028fd7c806497d5a70ee058b8766ffcefab79ff",
+      "chunks": 2
+    },
+    {
+      "i": 41,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1118b/main/eval-000056001/result.json",
+      "bytes": 6639,
+      "sha256": "7db0cdd73f88799af60462c4885195a7f3babf8a9c6f26bd24c57b92c4268fd3",
+      "chunks": 4
+    },
+    {
+      "i": 42,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1118b/main/eval-000056001/protocol.json",
+      "bytes": 24455,
+      "sha256": "8a6466be5ac56cafcec5cb08a137e485bf6988651e4bd5b0f8829585cd589ea8",
+      "chunks": 21
+    },
+    {
+      "i": 43,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1118b/main/eval-000056001/accounting.json",
+      "bytes": 1338,
+      "sha256": "1b11d82496bca6b041630bc57b7a0bd6c9e1436d7fc214a2a48f70613b49a773",
+      "chunks": 3
+    },
+    {
+      "i": 44,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1118b/main/eval-000056001/audit/summary.json",
+      "bytes": 962,
+      "sha256": "9b56b2c5a63211cb095f202847fe64d9346d32ad37124461b293bdd723d2d706",
+      "chunks": 3
+    },
+    {
+      "i": 45,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1118b/main/eval-000056001/audit/initial-states.json",
+      "bytes": 720,
+      "sha256": "11b810966067a4291ac776c061bb2531f50e9340311398646a44d399bc6c1ae4",
+      "chunks": 2
+    },
+    {
+      "i": 46,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1118b/main/eval-000064001/result.json",
+      "bytes": 6644,
+      "sha256": "3d4cfa0ff1ab1007090d5e4f8e598f49962fe1f356f41a7fabbee86f3acba358",
+      "chunks": 4
+    },
+    {
+      "i": 47,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1118b/main/eval-000064001/protocol.json",
+      "bytes": 24455,
+      "sha256": "79c2401f9cd724d22f2bd443f7d8b23ae6327ac3b8f8eca8240bfc831e897570",
+      "chunks": 21
+    },
+    {
+      "i": 48,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1118b/main/eval-000064001/accounting.json",
+      "bytes": 1339,
+      "sha256": "37e2ba0db7293c7bac956cec16bded33ad5e476b0253c4375f08204f5fa42d42",
+      "chunks": 3
+    },
+    {
+      "i": 49,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1118b/main/eval-000064001/audit/summary.json",
+      "bytes": 963,
+      "sha256": "31bf9013833e59f2318f73293dbe25b78fdb0d3b614333992514096283d54d83",
+      "chunks": 3
+    },
+    {
+      "i": 50,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-locomotion18-control-1118b/main/eval-000064001/audit/initial-states.json",
+      "bytes": 720,
+      "sha256": "d21e409dd8fd06bfe18868a7545a0a85cf39c6ba9ebe12708bb1a3475b0b7938",
+      "chunks": 2
+    }
+  ]
+}

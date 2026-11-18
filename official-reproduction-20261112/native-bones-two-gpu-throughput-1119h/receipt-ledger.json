@@ -1,0 +1,46 @@
+{
+  "receipts": [
+    {
+      "i": 0,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/native-bones-two-gpu-throughput-1119h/training/result.json",
+      "bytes": 13046,
+      "sha256": "7f3a5cc1073bc0cd240334d4e31b49d89695573be73d9e272f470b47ad7f5847",
+      "chunks": 11
+    },
+    {
+      "i": 1,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/native-bones-two-gpu-throughput-1119h/training/rank-0/resolved-config.json",
+      "bytes": 41930,
+      "sha256": "8b89781a763915ae1b82bc1812aa52aa0960c81db489ff91546032dfac830951",
+      "chunks": 21
+    },
+    {
+      "i": 2,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/native-bones-two-gpu-throughput-1119h/training/rank-0/result.json",
+      "bytes": 5743,
+      "sha256": "fe5dc4653c6b76f57ecaa44200ac30b1b310b7ca9b4346cc6a8f065092b848ab",
+      "chunks": 9
+    },
+    {
+      "i": 3,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/native-bones-two-gpu-throughput-1119h/training/rank-1/resolved-config.json",
+      "bytes": 41930,
+      "sha256": "0ce00dad020c39ebfc103042c83d7f2e872575d688ab8527e6a3734ba15e75dc",
+      "chunks": 21
+    },
+    {
+      "i": 4,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/native-bones-two-gpu-throughput-1119h/training/rank-1/result.json",
+      "bytes": 5743,
+      "sha256": "c94a77409f62a84514bcfbe53624a842395c1d605c9e5b8e1dc94b8ffda1cb61",
+      "chunks": 9
+    },
+    {
+      "i": 5,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/native-bones-two-gpu-throughput-1119h/result.json",
+      "bytes": 911,
+      "sha256": "9ece6df64aa4dda34fd13bd6b00477591bec2b720d09fd16eca3333e03b365b1",
+      "chunks": 2
+    }
+  ]
+}

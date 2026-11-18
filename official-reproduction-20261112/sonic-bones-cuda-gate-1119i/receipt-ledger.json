@@ -1,0 +1,46 @@
+{
+  "receipts": [
+    {
+      "i": 0,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/sonic-bones-cuda-gate-1119i/driver.json",
+      "bytes": 1411,
+      "sha256": "5029ea09bb1cc19e6b77011886fbf786075b83fa3fdb4deaced7c03cf021c4c3",
+      "chunks": 4
+    },
+    {
+      "i": 1,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/sonic-bones-cuda-gate-1119i/evaluation/result.json",
+      "bytes": 24314,
+      "sha256": "650de867f099f41a0e9b4ba025a4d18d83784bddbc4679d1e6a1e5e90e35ffc4",
+      "chunks": 14
+    },
+    {
+      "i": 2,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/sonic-bones-cuda-gate-1119i/evaluation/protocol.json",
+      "bytes": 12634,
+      "sha256": "854ef23a84aa97895e05ac53c674d59ea92c55147d8e2814a522368736f1b6eb",
+      "chunks": 11
+    },
+    {
+      "i": 3,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/sonic-bones-cuda-gate-1119i/evaluation/accounting.json",
+      "bytes": 1347,
+      "sha256": "147a69bb8b0f0ef89152425e04f394dae8ee6a4a8d541536dbe92d93e122be2a",
+      "chunks": 3
+    },
+    {
+      "i": 4,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/sonic-bones-cuda-gate-1119i/evaluation/audit/summary.json",
+      "bytes": 961,
+      "sha256": "1c349c660114c28624a510fee50369ad21f9c5fec3304e2d970289f66bc92781",
+      "chunks": 3
+    },
+    {
+      "i": 5,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/sonic-bones-cuda-gate-1119i/evaluation/audit/initial-states.json",
+      "bytes": 721,
+      "sha256": "d79bd8a4f9d16ca7a4753067b5a318d8783c6560a1646494845cf9d4ee1c33d8",
+      "chunks": 2
+    }
+  ]
+}

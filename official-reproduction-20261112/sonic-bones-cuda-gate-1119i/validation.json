@@ -1,0 +1,34 @@
+{
+  "status": "sonic_cuda_and_all_native_motion_scores_verified",
+  "original_JSONs": 6,
+  "log_sha256": "9c85bc89e30a31ed8319683df218a133506c9df51423810ca4f98cf10e86e79b",
+  "source_commit": "a7ebd070daca2962be6a803328caa89b0f0e6ae8",
+  "clips": 64,
+  "successes": 64,
+  "mean_normalized_full_motion_return": 0.8996743919532247,
+  "reference_frames": 20397,
+  "CUDA_compute_profiles": {
+    "encoder": {
+      "providers": {
+        "CUDAExecutionProvider": 29
+      },
+      "cuda_compute_ops": {
+        "Gemm": 5
+      },
+      "profile_sha256": "5e68cb72119fe193cc5c64d318f926f3d632c9dec0737b0b8cb224fa11409827"
+    },
+    "decoder": {
+      "providers": {
+        "CUDAExecutionProvider": 26
+      },
+      "cuda_compute_ops": {
+        "MatMul": 7
+      },
+      "profile_sha256": "8e13965110ee6369353999e3cbfb160ad3bdf6f282806345b7d8985bc244cb20"
+    }
+  },
+  "original_CPU_output_comparisons": 4,
+  "maximum_original_action_difference": 1.7881393432617188e-06,
+  "maximum_original_token_difference": 0.0,
+  "paper_exact_membership": false
+}

@@ -23,6 +23,13 @@ def read(path):
     return json.loads(path.read_bytes())
 
 
+def plain_log(path):
+    blob = path.read_bytes()
+    raw = gzip.decompress(blob) if path.suffix == ".gz" else blob
+    return "\n".join(re.sub(r"^\[[0-9TZ: .+-]+\] ", "", line)
+                     for line in raw.decode("utf-8-sig").splitlines())
+
+
 def score_evaluation(folder, identities, physical_hashes):
     result, protocol, accounting, arrays, states = [
         read(folder / name) for name in EVALUATION_FILES
@@ -155,17 +162,31 @@ def verify_sonic(args, plan, source):
 
 def verify(args):
     plan = read(args.plan)
-    blob = args.log.read_bytes()
-    raw = gzip.decompress(blob).decode("utf-8-sig") if args.log.suffix == ".gz" else blob.decode("utf-8-sig")
-    source = "\n".join(re.sub(r"^\[[0-9TZ: .+-]+\] ", "", line) for line in raw.splitlines())
+    source = plain_log(args.log)
     if args.kind == "sonic":
         verify_sonic(args, plan, source)
         return
     duration = args.kind == "duration"
     marker = "BONES_DURATION" if duration else "LOCOMOTION18_CONTROL"
-    assert marker + "_BOOTSTRAP_SHA256 " + plan["bootstrap_sha256"] in source
-    assert "NVIDIA H100 80GB HBM3" in source
+    original_execution = plain_log(args.execution_log) if args.execution_log else source
+    assert marker + "_BOOTSTRAP_SHA256 " + plan["bootstrap_sha256"] in original_execution
+    assert "NVIDIA H100 80GB HBM3" in original_execution
     points = plan["evaluation_collections"]
+    if args.recovery_plan:
+        recovery = read(args.recovery_plan)
+        assert recovery["parent_job_uid"] == plan["uid"]
+        assert recovery["original_execution_log_sha256"] == sha256(args.execution_log)
+        assert "LOCOMOTION18_CONTROL_JOB_EXIT=1" in original_execution
+        assert "TypeError: expected str, bytes or os.PathLike object, not int" in original_execution
+        assert "LOCOMOTION18_READBACK_BOOTSTRAP_SHA256 " + recovery["bootstrap_sha256"] in source
+        assert "LOCOMOTION18_READBACK_PARENT_UID " + plan["uid"] in source
+        assert "LOCOMOTION18_READBACK_BOOTSTRAP_EXIT_CODE 0" in source
+        assert "LOCOMOTION18_READBACK_EXISTING_51_ORIGINALS_COMPLETE" in source
+        matches = re.findall(r'(?m)^CURVE_POINT_RESULT \{"collection_steps": (\d+), "status": "complete", '
+                             r'"mean_normalized_full_motion_return": ([\d.eE+-]+), "successes": (\d+)',
+                             original_execution)
+        before_recovery = {int(index): (float(value), int(successes)) for index, value, successes in matches}
+        assert list(before_recovery) == points and len(matches) == len(points)
     run = (plan["cloud_output"] if duration else plan["output"]).removeprefix(ROOT + "/")
     if duration:
         launch = "launch/" + plan["source_commit"] + "-" + Path(run).name
@@ -200,7 +221,8 @@ def verify(args):
         hashes = dispatch["packs"]["common64"]["files"]
         assert sum(length for _, length in identities) == 20397
     else:
-        assert "LOCOMOTION18_CONTROL_JOB_EXIT=0" in source
+        if not args.recovery_plan:
+            assert "LOCOMOTION18_CONTROL_JOB_EXIT=0" in source
         subset = read(args.output / drivers[0])
         identities = [(r["name"], r["reference_frames"]) for r in subset["selected"]]
         assert len(identities) == 18 and sum(x[1] for x in identities) == 220352
@@ -212,23 +234,57 @@ def verify(args):
         curve = read(root / ("case-result.json" if duration else "result.json"))
         assert curve["status"] == "complete"
         model = read(training / "result.json")
+        cfg = read(training / "resolved-config.json")
+        count_file = training / "learner-counts.json"
+        counts = read(count_file)
         assert model["collection_steps"] == points[-1]
-        assert read(training / "resolved-config.json")["seed"] == 42
-        assert read(training / "learner-counts.json")["status"] == "completed_native_calls_counted"
+        assert cfg["seed"] == 42
+        assert counts["status"] == "completed_native_calls_counted"
         verified = [native_point(root / f"eval-{step:09d}", training, step, identities, hashes)
                     for step in points]
         assert len(curve["points"]) == len(verified)
         for recorded, score in zip(curve["points"], verified, strict=True):
             expected = recorded["mean_normalized_return" if duration else "mean_normalized_full_motion_return"]
             assert math.isclose(expected, score["mean_normalized_full_motion_return"], rel_tol=1e-13)
+            if args.recovery_plan:
+                old_value, old_successes = before_recovery[score["collection_steps"]]
+                assert math.isclose(old_value, score["mean_normalized_full_motion_return"], rel_tol=1e-13)
+                assert old_successes == score["successes"]
+            if not duration:
+                step = score["collection_steps"]
+                measured = next(row for row in counts["snapshots"] if row["collection_steps"] == step)
+                assert measured == recorded["learner_counts"]
+                assert measured["real_simulator_steps"] == score["real_transitions"]
+                calls = measured["completed_policy_update_calls"]
+                assert calls == measured["completed_WM_update_calls"]
+                assert measured["counts_exclude_internal_CUDA_graph_warmup_and_capture"]
+                policy = cfg["runner"]["policy"]
+                imagined = calls * policy["num_batches"] * policy["batch_size"] * policy["horizon"]
+                assert imagined == measured["configured_imagined_training_transitions"]
+                recorded_time = recorded["checkpoint_time"]
+                expected_time = next(row for row in read(training / "checkpoint-times.json")["checkpoints"]
+                                     if row["collection_steps"] == step)
+                assert recorded_time == expected_time
+                seconds = recorded_time["retained_snapshot_complete"]["seconds_since_runner_run_entry"]
+                score.update(completed_policy_update_calls=calls, configured_imagined_training_transitions=imagined,
+                             checkpoint_seconds_since_runner_entry=seconds)
         summaries[case] = {"points": verified}
         if duration:
             summaries[case]["forecast"] = verify_forecast(root / f"eval-{points[-1]:09d}")
             summaries[case]["data_hours"] = curve["pack"]["hours_at_50hz"]
+        else:
+            assert model["learner_counts_sha256"] == sha256(count_file)
+            summaries[case]["first_observed_at_or_above_082"] = next(
+                (score for score in verified if score["mean_normalized_full_motion_return"] >= .82), None)
+            summaries[case]["motion_files"] = hashes
     result = {"status": "all_originals_and_native_scores_verified", "kind": args.kind,
               "original_JSONs": len(ledger), "log_sha256": sha256(args.log),
               "source_commit": plan["source_commit"], "cases": summaries,
               "paper_exact_membership": False}
+    if args.recovery_plan:
+        result.update(execution_log_sha256=sha256(args.execution_log), original_execution_exit_code=1,
+                      original_export_error="non-string max-bytes argument", original_job_uid=plan["uid"],
+                      recovery_performed_training_or_evaluation=False, release_log_all_nine_scores_matched=True)
     write_json(args.output / "validation.json", result)
     print(json.dumps(result, indent=2))
 
@@ -242,9 +298,13 @@ if __name__ == "__main__":
     parser.add_argument("--feasible-mask", type=Path)
     parser.add_argument("--filter-report", type=Path)
     parser.add_argument("--duration-study", type=Path)
+    parser.add_argument("--execution-log", type=Path)
+    parser.add_argument("--recovery-plan", type=Path)
     args = parser.parse_args()
     if args.kind in {"duration", "sonic"} and not (args.raw_bones and args.feasible_mask):
         parser.error("BONES audit needs the local raw pack and feasibility mask")
     if args.kind == "sonic" and not (args.filter_report and args.duration_study):
         parser.error("SONIC audit needs the frozen filter report and the duration-study receipt")
+    if (args.execution_log or args.recovery_plan) and not (args.kind == "same18" and args.execution_log and args.recovery_plan):
+        parser.error("Use both execution log and recovery plan for a recovered same18 job")
     verify(args)

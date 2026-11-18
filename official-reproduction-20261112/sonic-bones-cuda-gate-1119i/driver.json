@@ -1,0 +1,22 @@
+{
+  "status": "completed",
+  "wheel": "onnxruntime_gpu-1.26.0-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+  "wheel_sha256": "cfda2fad535595bfc3e570eb588092717711dcb2957656d814695e0c9ceb1508",
+  "ONNX_runtime_version": "1.26.0",
+  "original_SONIC_revision": "6733128a3d8a523b1418b06bca3cdf61c8b0987f",
+  "script_commit_scope": "CUDA inference gate on common64",
+  "paper_benchmark_equivalence": false,
+  "motion_files": {
+    "joint_names.json": "30355b480e4f89c97a693c72f8baf23902fd458d25e49b5df4741dd47aefce0d",
+    "joint_pos.npy": "5c9ab3235a030a81e8ea58bd63458b854b304fdf7b71459558d1901065bc7a9d",
+    "joint_vel.npy": "eed1559192d58105f6f6462e8bc1339d7fbc0e1a2604c13c07029d202d45e5fe",
+    "motion_ends.npy": "7bedabe59f0df9ad823c53b136d08e086268b26f6bc46ca97d63fa0612867354",
+    "motion_names.json": "e936cb587f5f46550dee1735c41ca8ef79f416c60bd47a69987a04172d69862c",
+    "root_ang_vel_w.npy": "38d211866d902c05e476ab16d38fa2c09c421428347f033654b93b836ae25280",
+    "root_lin_vel_w.npy": "6c50f3388a79db62c5c04175e7727f76378a7bb2b35167f995d445286714d186",
+    "root_pos_w.npy": "2185d114427d56870390eae843e9f4c26ad160fa5f08b7f6c37f4b45fc8fc705",
+    "root_quat_w.npy": "913c3fd1d39a6948636695f5540631c2a3a4b14da24b3b495ba882bbed9d15c3"
+  },
+  "original_comparison_and_cuda_kernels_verified": true,
+  "result_sha256": "650de867f099f41a0e9b4ba025a4d18d83784bddbc4679d1e6a1e5e90e35ffc4"
+}
