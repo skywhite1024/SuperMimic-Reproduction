@@ -1081,3 +1081,35 @@ The official remote main moved to
 Upstream removed its PPO world-model runner and collection action noise.
 The November experiments run the earlier pinned official code used by the
 retained checkpoints and the matched baselines.
+
+## 71. LAFAN first-frame push follow-up
+
+We froze the first canonical frame of `walk1_subject1`, following the
+reference choice in the
+[independent implementation](https://github.com/Camtrixxx/SuperMimic/blob/a6ae3e2fb5231b0f1b99eb8d70c4cb1e2b8ba6c5/src/supermimic/evaluation/push_test.py).
+The pose retains the original root and joints, with reference velocities
+set to zero. Both policies use the same checkpoints, two-second pre-push
+period and 32 velocity increments as in Section 69. The first cloud attempt
+ended before inference because the static-pack JSON checksums differed
+across Windows and Linux. The retry wrote line feeds consistently and
+matched every static-pack hash. The numeric arrays were byte-identical
+before and after this fix.
+
+Both policies stayed nearly motionless during each unforced LAFAN control.
+In the final second, maximum planar speed was below 0.001 m/s. The maximum
+joint RMS error from the reference was 11.85 degrees for critic H32 and
+10.32 degrees for no critic H64. Both exceed the original 10-degree limit.
+With recovery measured from the mean posture in the 0.5 seconds before
+the impulse, both zero-push controls passed. The critic policy recovered
+in 27 of 32 trials (five falls, median 2.42 s among recoveries). The
+critic-free policy recovered in 26 of 32 trials (six falls, median 2.69 s).
+The same re-scoring on the four saved Section 69 arrays showed that every
+survivor met the relative-posture criterion. Absolute reference tracking and
+return to the policy's equilibrium are different measurements here.
+
+This checkpoint pair showed similar balance response under the local
+perturbations. The two horizons differ, the sample covers one model per
+condition, and the paper's exact intervention and study pair remain unknown.
+The new results contain 66 trial records and eight original JSONs. All four
+older raw arrays were re-read after verifying their original hashes.
+[Follow-up verification](../official-reproduction-20261112/push-lafan-frame-1119e/validation.json).

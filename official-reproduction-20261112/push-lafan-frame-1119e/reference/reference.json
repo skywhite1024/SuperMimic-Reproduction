@@ -1,0 +1,61 @@
+{
+  "canonical_clip": "walk1_subject1",
+  "canonical_clip_frame": 0,
+  "canonical_packed_frame": 296364,
+  "fps": 50,
+  "frames": 600,
+  "pose_unchanged": true,
+  "reference_velocities_zero": true,
+  "root_height_m": 0.7965530157089233,
+  "g1_xml_sha256": "febdcbeffbbf84051556ae41a5ac1b43fb479a5d76bdb3f54824dbc2721c20aa",
+  "shoulder_to_wrist_m": {
+    "left": [
+      0.009405491964114578,
+      0.3656402185546885,
+      0.045702445713007744
+    ],
+    "right": [
+      0.028657618308692897,
+      -0.3662205540833936,
+      0.023460082651122205
+    ]
+  },
+  "foot_floor_distances_m": [
+    0.0068143168281615315,
+    0.0055629146905029105,
+    0.005196606889524254,
+    0.005112121311587789,
+    0.005248909317821319,
+    0.0056570590614376266,
+    0.006950303141733899,
+    0.006550392864053173,
+    0.005796132639164018,
+    0.005704421336356484,
+    0.00586929503435024,
+    0.006199805962864404,
+    0.006687824966878272,
+    0.007838392892973766
+  ],
+  "source_pack_sha256": {
+    "joint_names.json": "30355b480e4f89c97a693c72f8baf23902fd458d25e49b5df4741dd47aefce0d",
+    "joint_pos.npy": "64f0dff0d2e0d678a1f78213233124588044ba5781aa599c31b08d1348509a9b",
+    "joint_vel.npy": "11efc4b4b37b0818ea25a2dfa8676ed8f564a3443c97bf9c9680a346c06b23e0",
+    "motion_ends.npy": "fa4db64df8fe4d1f9362883b8c7b32d303a3865aeeab1c92fad0e89144cf8be5",
+    "motion_names.json": "b2b46cceb62efa50b159e13928b4c991b80b27a59b381ed603392cfa87e3c8b9",
+    "root_ang_vel_w.npy": "88ff137fd4a6dde1626dceae086c8a810da624d650855d69af1adc052565f9b5",
+    "root_lin_vel_w.npy": "7738f75d8de3b070a1d6407a06e1a971d5723abccc1e46a90a1aa86e93c486a0",
+    "root_pos_w.npy": "a57c5a8efc209c345ea4f7d83ef36936c0edfefb60f137757af69c6f4f7272fe",
+    "root_quat_w.npy": "9934171fce73559ec04d63db2bafee95575cd46196fe39aea425d677eae5303e"
+  },
+  "static_pack_sha256": {
+    "joint_names.json": "4674408eab42a3a3cd5414072f2c7874217db6bc6394fb3efeb594be62593682",
+    "joint_pos.npy": "cf7f69a0bd697aecc0973e653a4114a19cfac4c89793bfd2fc10f2678420e1c7",
+    "joint_vel.npy": "278dc6340d8f1c7ac874c74aef0441ce3c5476e65b18826556409336d75504a0",
+    "motion_ends.npy": "e662c70234797e0014078614ae7efce981e332c4d39064ee0521129b0f6365a0",
+    "motion_names.json": "5aedbb8a3d3e00115e4d0b97e338e90e363562578804a9f4940fff5fe6c620f4",
+    "root_ang_vel_w.npy": "edc74c5056468d96fee97984940bc2afa7429382ba37c5bbf492cf85b3f98283",
+    "root_lin_vel_w.npy": "edc74c5056468d96fee97984940bc2afa7429382ba37c5bbf492cf85b3f98283",
+    "root_pos_w.npy": "4691e081609d9346c5add8f848cb660a147909c166dbb4a177aeab20f3734132",
+    "root_quat_w.npy": "5b05b702036c0d99c8eda20700b332f311c17c7e46b0d17860b1e165db7c30f6"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "task": "SuperMimic-GenCoord-G1",
+  "policy": {
+    "label": "critic_h32",
+    "parent": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-curve-64k-1113ag/main/training",
+    "collection": 24001,
+    "horizon": 32,
+    "critic_enabled": true,
+    "full40_successes": 39,
+    "full40_normalized_return": 0.8290067885958701,
+    "selection": {
+      "parent_result_sha256": "39dbe053a498283bde51f025e485f552945e4a1c83477ff050411dce05129825",
+      "parent_collection_steps": 64001,
+      "evaluated_collection_steps": 24001,
+      "kind": "retained_snapshot",
+      "files": [
+        {
+          "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-curve-64k-1113ag/main/training/checkpoint-series/step-000024001/world_model.pt",
+          "bytes": 34990357,
+          "sha256": "4243b8199fed045495bc319d92678d2643598139e30a147b69ee111b646af01f"
+        },
+        {
+          "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-curve-64k-1113ag/main/training/checkpoint-series/step-000024001/actor.pt",
+          "bytes": 46439949,
+          "sha256": "4bfc66171230b98be838561cfea3e49e98eebaec260aeec9b0aa39b775ba400e"
+        },
+        {
+          "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-curve-64k-1113ag/main/training/checkpoint-series/step-000024001/critic.pt",
+          "bytes": 929269,
+          "sha256": "3d73f7c80fb7158dccadff7b4a333d056fac95b012dcec1acbf8c6c2ba92f620"
+        }
+      ],
+      "manifest_sha256": "33b1dd7575136aa16db81bea63d8412d41ca5ec0a77ac050bd1295aaadb00bc3",
+      "resolved_config_sha256": "018a9c2cabede2f00758afc3c56551e4b8051b1350ea0ca1ef0465cda94738b5"
+    },
+    "poses": [
+      "lafan_walk1_first_frame"
+    ]
+  },
+  "seed": 42,
+  "dt_s": 0.02,
+  "cases_per_pose": 33,
+  "elapsed_steps": 400,
+  "impulse_at_step": 100,
+  "reference_poses": [
+    "lafan_walk1_first_frame"
+  ],
+  "physics": "native defaults; fixed friction coefficient 1, no noise or randomization",
+  "fall": "first fresh state with absolute pelvis height error > .25 m or projected gravity z error > .8",
+  "input": "one additive horizontal world root velocity jump after computing the action at t=2 s",
+  "recovery": "first post-impulse time within thresholds for the rest of the six-second response, at least 0.5 seconds",
+  "zero_push_criterion": "survival and all four thresholds for the last second before nominal push and at the end",
+  "thresholds": {
+    "planar_speed_m_s": 0.1,
+    "angular_speed_rad_s": 0.2,
+    "pelvis_tilt_deg": 10.0,
+    "joint_rms_deg": 10.0
+  },
+  "state_metric_order": [
+    "planar_speed_m_s",
+    "angular_speed_rad_s",
+    "pelvis_tilt_deg",
+    "joint_rms_deg",
+    "pelvis_z_m",
+    "travel_from_push_m"
+  ],
+  "goal_backend": "eager",
+  "auto_reset": false,
+  "weights_frozen": true
+}

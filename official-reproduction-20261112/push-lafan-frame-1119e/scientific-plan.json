@@ -1,0 +1,125 @@
+{
+  "status": "frozen_before_followup_outcomes",
+  "source_commit": "aa3e415d322b950e68a6ae125766930f204e87fa",
+  "job_name": "supermimic-official-push-lafan-260010076-1119e",
+  "display_name": "260010076-SuperMimic-push-LAFAN-frame-1119e",
+  "stem": "push-lafan-frame-1119e",
+  "max_job_seconds": 1800,
+  "gpu_count": 1,
+  "max_restarts": 0,
+  "policies": {
+    "critic_h32": {
+      "label": "critic_h32",
+      "parent": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-curve-64k-1113ag/main/training",
+      "collection": 24001,
+      "horizon": 32,
+      "critic_enabled": true,
+      "full40_successes": 39,
+      "full40_normalized_return": 0.8290067885958701,
+      "selection": {
+        "parent_result_sha256": "39dbe053a498283bde51f025e485f552945e4a1c83477ff050411dce05129825",
+        "parent_collection_steps": 64001,
+        "evaluated_collection_steps": 24001,
+        "kind": "retained_snapshot",
+        "files": [
+          {
+            "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-curve-64k-1113ag/main/training/checkpoint-series/step-000024001/world_model.pt",
+            "bytes": 34990357,
+            "sha256": "4243b8199fed045495bc319d92678d2643598139e30a147b69ee111b646af01f"
+          },
+          {
+            "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-curve-64k-1113ag/main/training/checkpoint-series/step-000024001/actor.pt",
+            "bytes": 46439949,
+            "sha256": "4bfc66171230b98be838561cfea3e49e98eebaec260aeec9b0aa39b775ba400e"
+          },
+          {
+            "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/lafan-curve-64k-1113ag/main/training/checkpoint-series/step-000024001/critic.pt",
+            "bytes": 929269,
+            "sha256": "3d73f7c80fb7158dccadff7b4a333d056fac95b012dcec1acbf8c6c2ba92f620"
+          }
+        ],
+        "manifest_sha256": "33b1dd7575136aa16db81bea63d8412d41ca5ec0a77ac050bd1295aaadb00bc3",
+        "resolved_config_sha256": "018a9c2cabede2f00758afc3c56551e4b8051b1350ea0ca1ef0465cda94738b5"
+      },
+      "poses": [
+        "lafan_walk1_first_frame"
+      ]
+    },
+    "no_critic_h64": {
+      "label": "no_critic_h64",
+      "parent": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h064-no-critic/main/training",
+      "collection": 16001,
+      "horizon": 64,
+      "critic_enabled": false,
+      "full40_successes": 38,
+      "full40_normalized_return": 0.8284301918901429,
+      "selection": {
+        "parent_result_sha256": "193b1785e386ee104619d2b65238bbb38e6191086946472d8b20150f0c313c3f",
+        "parent_collection_steps": 16001,
+        "evaluated_collection_steps": 16001,
+        "kind": "retained_snapshot",
+        "files": [
+          {
+            "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h064-no-critic/main/training/checkpoint-series/step-000016001/world_model.pt",
+            "bytes": 34990357,
+            "sha256": "9592acce1d3dd60803bb27c12357f6301103ff86330bfb0a93e61a04995dde1d"
+          },
+          {
+            "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/critic-grid-h64h128-1115g/h064-no-critic/main/training/checkpoint-series/step-000016001/actor.pt",
+            "bytes": 46439949,
+            "sha256": "0f59cf31a0045317a5b585220323e727e258d3ac3f628b76b18342bad20cb9e2"
+          }
+        ],
+        "manifest_sha256": "9bb8dbd175df777eab0e1e5c9325f85590a333999303f49bc94744b4a61ed4ff",
+        "resolved_config_sha256": "2275577334a81d10bb101f3fab174589a6254e84f344c1555ef2a11f310228be"
+      },
+      "poses": [
+        "lafan_walk1_first_frame"
+      ]
+    }
+  },
+  "predeclared_pose_names": [
+    "lafan_walk1_first_frame"
+  ],
+  "cases_per_policy_per_pose": 33,
+  "canonical_source_hashes": {
+    "joint_names.json": "30355b480e4f89c97a693c72f8baf23902fd458d25e49b5df4741dd47aefce0d",
+    "joint_pos.npy": "64f0dff0d2e0d678a1f78213233124588044ba5781aa599c31b08d1348509a9b",
+    "joint_vel.npy": "11efc4b4b37b0818ea25a2dfa8676ed8f564a3443c97bf9c9680a346c06b23e0",
+    "motion_ends.npy": "fa4db64df8fe4d1f9362883b8c7b32d303a3865aeeab1c92fad0e89144cf8be5",
+    "motion_names.json": "b2b46cceb62efa50b159e13928b4c991b80b27a59b381ed603392cfa87e3c8b9",
+    "root_ang_vel_w.npy": "88ff137fd4a6dde1626dceae086c8a810da624d650855d69af1adc052565f9b5",
+    "root_lin_vel_w.npy": "7738f75d8de3b070a1d6407a06e1a971d5723abccc1e46a90a1aa86e93c486a0",
+    "root_pos_w.npy": "a57c5a8efc209c345ea4f7d83ef36936c0edfefb60f137757af69c6f4f7272fe",
+    "root_quat_w.npy": "9934171fce73559ec04d63db2bafee95575cd46196fe39aea425d677eae5303e"
+  },
+  "expected_static_pack_hashes": {
+    "joint_names.json": "4674408eab42a3a3cd5414072f2c7874217db6bc6394fb3efeb594be62593682",
+    "joint_pos.npy": "cf7f69a0bd697aecc0973e653a4114a19cfac4c89793bfd2fc10f2678420e1c7",
+    "joint_vel.npy": "278dc6340d8f1c7ac874c74aef0441ce3c5476e65b18826556409336d75504a0",
+    "motion_ends.npy": "e662c70234797e0014078614ae7efce981e332c4d39064ee0521129b0f6365a0",
+    "motion_names.json": "5aedbb8a3d3e00115e4d0b97e338e90e363562578804a9f4940fff5fe6c620f4",
+    "root_ang_vel_w.npy": "edc74c5056468d96fee97984940bc2afa7429382ba37c5bbf492cf85b3f98283",
+    "root_lin_vel_w.npy": "edc74c5056468d96fee97984940bc2afa7429382ba37c5bbf492cf85b3f98283",
+    "root_pos_w.npy": "4691e081609d9346c5add8f848cb660a147909c166dbb4a177aeab20f3734132",
+    "root_quat_w.npy": "5b05b702036c0d99c8eda20700b332f311c17c7e46b0d17860b1e165db7c30f6"
+  },
+  "reference_choice_source": "https://github.com/Camtrixxx/SuperMimic/blob/a6ae3e2fb5231b0f1b99eb8d70c4cb1e2b8ba6c5/src/supermimic/evaluation/push_test.py",
+  "experiment": "Rerun the two saved policies on the actual LAFAN T-pose while preserving the original disturbance timing, direction grid and absolute stability rule. Separately measure recovery to the realized pre-push posture.",
+  "old_trace_hashes": {
+    "critic_h32/t_pose.npz": "c0b2ac6ede74ec0e3a49886afdd4fafd7662068730b5265e177fc445b8b8ce2a",
+    "critic_h32/home_stance.npz": "986148925da35b5fc5bc2341b60741ca14bd9252b9db7c9a4ec196f6b682bdf8",
+    "no_critic_h64/t_pose.npz": "09604284567d9fdff297a67aea29abe191593af34ac7679c3cf2f8908bcd7568",
+    "no_critic_h64/home_stance.npz": "111432ddd609e45c94b0998bec9898dc39866b9c8f3ea387f40280ad145cd6e5"
+  },
+  "source_files": {
+    "evaluate_push_recovery.py": "be6b2c851d59e613cc438d92dbcf147afe6ce3a5184b0ca1fe4a455376a4d730",
+    "push_recovery_contract.py": "08febd120c46d975f4c9fe910023de89f8c7341a67c980646ad34f1b3ca51e7d",
+    "prepare_lafan_static_reference.py": "38ddecd3e06aaca13e69aa1d5dfd8555bc4e8e37369c9559a4aeb860e013f282",
+    "select_completed_checkpoint.py": "45f8cd554d82b60ca7d807a3568882646b52a9d0fef135c746c8bab38d1ccf8e",
+    "manual_reset_observations.py": "3933258bdcd8c80a30d3fc256bf3d82084ff9661f0d20c620bba07b518dc1f6d",
+    "emit_json_receipts.py": "218bf4ddfa0946a54b9d2c4f8415e217da1f97b45f5dccb2fad922414646d889"
+  },
+  "retry_of": "push-lafan-frame-1119d",
+  "change": "Deterministic LF encoding for regenerated JSON indexes. Numeric static arrays verified byte-identical."
+}

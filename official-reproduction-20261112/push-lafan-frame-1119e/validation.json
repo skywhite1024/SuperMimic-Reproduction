@@ -1,0 +1,147 @@
+{
+  "status": "verified_8_originals_and_66_new_trials",
+  "original_JSONs": 8,
+  "new_trials": 66,
+  "source_commit": "aa3e415d322b950e68a6ae125766930f204e87fa",
+  "log_sha256": "a95d7bda4b5f76429f925602f814d1a330d00a8522f9f75a70feed5236c94baf",
+  "absolute_static_pose_gate_passed_by_both": false,
+  "relative_posture_gate_passed_by_both": true,
+  "old_trace_readbacks": 4,
+  "cases": [
+    {
+      "policy": "critic_h32",
+      "impulses": 32,
+      "falls_after_push": 5,
+      "zero_push_eligible": false,
+      "pushed_survived": 27,
+      "pushed_settled": 0,
+      "control_metrics": {
+        "prepush_last_second_max": {
+          "planar_speed_m_s": 0.019122883677482605,
+          "angular_speed_rad_s": 0.007341293152421713,
+          "pelvis_tilt_deg": 1.6277480125427246,
+          "joint_rms_deg": 11.835265159606934,
+          "pelvis_z_m": 0.7848717570304871,
+          "travel_from_push_m": 0.0
+        },
+        "last_second_max": {
+          "planar_speed_m_s": 0.0003175154561176896,
+          "angular_speed_rad_s": 0.0017972775967791677,
+          "pelvis_tilt_deg": 1.6527917385101318,
+          "joint_rms_deg": 11.853463172912598,
+          "pelvis_z_m": 0.7843524217605591,
+          "travel_from_push_m": 0.0008436591597273946
+        }
+      },
+      "relative_to_prepush_posture": {
+        "baseline_samples": 25,
+        "criterion": "Same fall and stabilization thresholds, joint RMS measured from each pre-push mean posture",
+        "zero_push_eligible": true,
+        "pushed_settled": 27,
+        "recovery_seconds_in_grid_order": [
+          0.02,
+          0.8,
+          1.8,
+          2.16,
+          2.3,
+          2.66,
+          2.82,
+          null,
+          null,
+          1.92,
+          2.02,
+          2.24,
+          2.74,
+          3.08,
+          null,
+          null,
+          null,
+          0.82,
+          1.18,
+          2.24,
+          2.16,
+          2.08,
+          2.44,
+          2.66,
+          3.44,
+          1.16,
+          2.42,
+          2.64,
+          2.88,
+          2.84,
+          3.52,
+          3.42,
+          4.06
+        ]
+      }
+    },
+    {
+      "policy": "no_critic_h64",
+      "impulses": 32,
+      "falls_after_push": 6,
+      "zero_push_eligible": false,
+      "pushed_survived": 26,
+      "pushed_settled": 0,
+      "control_metrics": {
+        "prepush_last_second_max": {
+          "planar_speed_m_s": 0.04286988452076912,
+          "angular_speed_rad_s": 0.011119293048977852,
+          "pelvis_tilt_deg": 3.5207386016845703,
+          "joint_rms_deg": 10.428717613220215,
+          "pelvis_z_m": 0.7852565050125122,
+          "travel_from_push_m": 0.0
+        },
+        "last_second_max": {
+          "planar_speed_m_s": 0.0003783038700930774,
+          "angular_speed_rad_s": 0.0022545447573065758,
+          "pelvis_tilt_deg": 3.3432364463806152,
+          "joint_rms_deg": 10.322665214538574,
+          "pelvis_z_m": 0.7851216793060303,
+          "travel_from_push_m": 0.0012018026318401098
+        }
+      },
+      "relative_to_prepush_posture": {
+        "baseline_samples": 25,
+        "criterion": "Same fall and stabilization thresholds, joint RMS measured from each pre-push mean posture",
+        "zero_push_eligible": true,
+        "pushed_settled": 26,
+        "recovery_seconds_in_grid_order": [
+          0.02,
+          1.7,
+          2.06,
+          2.22,
+          2.36,
+          2.88,
+          3.06,
+          null,
+          null,
+          0.96,
+          1.42,
+          2.1,
+          2.5,
+          2.9,
+          3.04,
+          null,
+          null,
+          0.84,
+          2.06,
+          2.56,
+          2.82,
+          3.6,
+          3.58,
+          3.4,
+          3.3,
+          1.62,
+          2.4,
+          3.38,
+          3.42,
+          3.34,
+          4.82,
+          null,
+          null
+        ]
+      }
+    }
+  ],
+  "state_arrays_readback_verified_in_cloud": true
+}

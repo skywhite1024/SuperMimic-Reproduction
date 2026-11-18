@@ -1,0 +1,17 @@
+{
+  "status": "completed",
+  "child_return_codes": {
+    "critic_h32": 0,
+    "no_critic_h64": 0
+  },
+  "receipt_hashes": {
+    "launch/aa3e415d322b950e68a6ae125766930f204e87fa-push-lafan-frame-1119e/scientific-plan.json": "1a020b9f39e325eba1cfd73915abb9739eed38fdc4d27766a8f2858ae8efce79",
+    "runs/push-lafan-frame-1119e/reference/reference.json": "2e088d988af164e82e9906c024ced834d090f7e26bdc1badf18aa5eec37a1bf3",
+    "runs/push-lafan-frame-1119e/original-traces-readback.json": "86edd15d13960114fb6107a6fbaf59c8be20525fea20f834f7f9cf9e9c3b1fd3",
+    "runs/push-lafan-frame-1119e/critic_h32/protocol.json": "83012d7cf8e83a44e8987517e070eb0902b9eab73b2f5d522fa01dde7e179419",
+    "runs/push-lafan-frame-1119e/critic_h32/lafan_walk1_first_frame.json": "103b69ede1c721b83c3631b8c5318f346355dba7b6c6d94ab8b5f7a56c16b604",
+    "runs/push-lafan-frame-1119e/no_critic_h64/protocol.json": "c6a67de8383f860c5e0b4dbb0d877e7312659130ddb17364125e5e9d1f57e5ff",
+    "runs/push-lafan-frame-1119e/no_critic_h64/lafan_walk1_first_frame.json": "f3633d2a6a06e7b89aece37735560184537e055f134686a093dc1f138446e42a"
+  },
+  "finished_at": "2026-11-18T16:32:28.805497+00:00"
+}

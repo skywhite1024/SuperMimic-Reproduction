@@ -1,0 +1,650 @@
+{
+  "cases": 33,
+  "impulses": 32,
+  "prepush_failures": 0,
+  "falls_after_push": 5,
+  "pushed_survived": 27,
+  "pushed_settled": 0,
+  "zero_push_eligible": false,
+  "control_metrics": {
+    "prepush_last_second_max": {
+      "planar_speed_m_s": 0.019122883677482605,
+      "angular_speed_rad_s": 0.007341293152421713,
+      "pelvis_tilt_deg": 1.6277480125427246,
+      "joint_rms_deg": 11.835265159606934,
+      "pelvis_z_m": 0.7848717570304871,
+      "travel_from_push_m": 0.0
+    },
+    "last_second_max": {
+      "planar_speed_m_s": 0.0003175154561176896,
+      "angular_speed_rad_s": 0.0017972775967791677,
+      "pelvis_tilt_deg": 1.6527917385101318,
+      "joint_rms_deg": 11.853463172912598,
+      "pelvis_z_m": 0.7843524217605591,
+      "travel_from_push_m": 0.0008436591597273946
+    }
+  },
+  "relative_to_prepush_posture": {
+    "baseline_samples": 25,
+    "criterion": "Same fall and stabilization thresholds, joint RMS measured from each pre-push mean posture",
+    "zero_push_eligible": true,
+    "pushed_settled": 27,
+    "recovery_seconds_in_grid_order": [
+      0.02,
+      0.8,
+      1.8,
+      2.16,
+      2.3,
+      2.66,
+      2.82,
+      null,
+      null,
+      1.92,
+      2.02,
+      2.24,
+      2.74,
+      3.08,
+      null,
+      null,
+      null,
+      0.82,
+      1.18,
+      2.24,
+      2.16,
+      2.08,
+      2.44,
+      2.66,
+      3.44,
+      1.16,
+      2.42,
+      2.64,
+      2.88,
+      2.84,
+      3.52,
+      3.42,
+      4.06
+    ]
+  },
+  "max_root_qvel_jump_error": 2.384185791015625e-07,
+  "records": [
+    {
+      "case": "zero",
+      "delta_velocity_m_s": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": false,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": false,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 0.0008436591597273946
+    },
+    {
+      "case": "+x:0.5",
+      "delta_velocity_m_s": [
+        0.5,
+        0.0,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": false,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 0.21470801532268524
+    },
+    {
+      "case": "+x:1.0",
+      "delta_velocity_m_s": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": false,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 0.6655077934265137
+    },
+    {
+      "case": "+x:1.5",
+      "delta_velocity_m_s": [
+        1.5,
+        0.0,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": false,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 1.1977322101593018
+    },
+    {
+      "case": "+x:2.0",
+      "delta_velocity_m_s": [
+        2.0,
+        0.0,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": false,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 1.7055410146713257
+    },
+    {
+      "case": "+x:2.5",
+      "delta_velocity_m_s": [
+        2.5,
+        0.0,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": false,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 2.24421763420105
+    },
+    {
+      "case": "+x:3.0",
+      "delta_velocity_m_s": [
+        3.0,
+        0.0,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": false,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 2.78399395942688
+    },
+    {
+      "case": "+x:3.5",
+      "delta_velocity_m_s": [
+        3.5,
+        0.0,
+        0.0
+      ],
+      "observed_steps": 126,
+      "impulse_applied": true,
+      "fell": true,
+      "fall_time_from_start_s": 2.52,
+      "fall_time_relative_to_push_s": 0.52,
+      "prepush_stable_final_1s": false,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 1.6568316221237183
+    },
+    {
+      "case": "+x:4.0",
+      "delta_velocity_m_s": [
+        4.0,
+        0.0,
+        0.0
+      ],
+      "observed_steps": 124,
+      "impulse_applied": true,
+      "fell": true,
+      "fall_time_from_start_s": 2.48,
+      "fall_time_relative_to_push_s": 0.48,
+      "prepush_stable_final_1s": false,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 1.7372108697891235
+    },
+    {
+      "case": "-x:0.5",
+      "delta_velocity_m_s": [
+        -0.5,
+        0.0,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": false,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 0.20401354134082794
+    },
+    {
+      "case": "-x:1.0",
+      "delta_velocity_m_s": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": false,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 0.662399172782898
+    },
+    {
+      "case": "-x:1.5",
+      "delta_velocity_m_s": [
+        -1.5,
+        0.0,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": false,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 1.147969365119934
+    },
+    {
+      "case": "-x:2.0",
+      "delta_velocity_m_s": [
+        -2.0,
+        0.0,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": false,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 1.7908467054367065
+    },
+    {
+      "case": "-x:2.5",
+      "delta_velocity_m_s": [
+        -2.5,
+        0.0,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": false,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 2.589962959289551
+    },
+    {
+      "case": "-x:3.0",
+      "delta_velocity_m_s": [
+        -3.0,
+        0.0,
+        0.0
+      ],
+      "observed_steps": 126,
+      "impulse_applied": true,
+      "fell": true,
+      "fall_time_from_start_s": 2.52,
+      "fall_time_relative_to_push_s": 0.52,
+      "prepush_stable_final_1s": false,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 1.4558919668197632
+    },
+    {
+      "case": "-x:3.5",
+      "delta_velocity_m_s": [
+        -3.5,
+        0.0,
+        0.0
+      ],
+      "observed_steps": 123,
+      "impulse_applied": true,
+      "fell": true,
+      "fall_time_from_start_s": 2.46,
+      "fall_time_relative_to_push_s": 0.46,
+      "prepush_stable_final_1s": false,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 1.4857122898101807
+    },
+    {
+      "case": "-x:4.0",
+      "delta_velocity_m_s": [
+        -4.0,
+        0.0,
+        0.0
+      ],
+      "observed_steps": 122,
+      "impulse_applied": true,
+      "fell": true,
+      "fall_time_from_start_s": 2.44,
+      "fall_time_relative_to_push_s": 0.44,
+      "prepush_stable_final_1s": false,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 1.6099753379821777
+    },
+    {
+      "case": "+y:0.5",
+      "delta_velocity_m_s": [
+        0.0,
+        0.5,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": false,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 0.01713118515908718
+    },
+    {
+      "case": "+y:1.0",
+      "delta_velocity_m_s": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": false,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 0.2345137596130371
+    },
+    {
+      "case": "+y:1.5",
+      "delta_velocity_m_s": [
+        0.0,
+        1.5,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": false,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 0.5206533074378967
+    },
+    {
+      "case": "+y:2.0",
+      "delta_velocity_m_s": [
+        0.0,
+        2.0,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": false,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 0.9704868197441101
+    },
+    {
+      "case": "+y:2.5",
+      "delta_velocity_m_s": [
+        0.0,
+        2.5,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": false,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 1.294728398323059
+    },
+    {
+      "case": "+y:3.0",
+      "delta_velocity_m_s": [
+        0.0,
+        3.0,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": false,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 1.942076563835144
+    },
+    {
+      "case": "+y:3.5",
+      "delta_velocity_m_s": [
+        0.0,
+        3.5,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": false,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 2.866846799850464
+    },
+    {
+      "case": "+y:4.0",
+      "delta_velocity_m_s": [
+        0.0,
+        4.0,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": false,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 4.604897975921631
+    },
+    {
+      "case": "-y:0.5",
+      "delta_velocity_m_s": [
+        0.0,
+        -0.5,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": false,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 0.0496736504137516
+    },
+    {
+      "case": "-y:1.0",
+      "delta_velocity_m_s": [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": false,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 0.7956480383872986
+    },
+    {
+      "case": "-y:1.5",
+      "delta_velocity_m_s": [
+        0.0,
+        -1.5,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": false,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 1.269386649131775
+    },
+    {
+      "case": "-y:2.0",
+      "delta_velocity_m_s": [
+        0.0,
+        -2.0,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": false,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 1.7659567594528198
+    },
+    {
+      "case": "-y:2.5",
+      "delta_velocity_m_s": [
+        0.0,
+        -2.5,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": false,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 2.317265748977661
+    },
+    {
+      "case": "-y:3.0",
+      "delta_velocity_m_s": [
+        0.0,
+        -3.0,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": false,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 3.2295515537261963
+    },
+    {
+      "case": "-y:3.5",
+      "delta_velocity_m_s": [
+        0.0,
+        -3.5,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": false,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 4.17193078994751
+    },
+    {
+      "case": "-y:4.0",
+      "delta_velocity_m_s": [
+        0.0,
+        -4.0,
+        0.0
+      ],
+      "observed_steps": 400,
+      "impulse_applied": true,
+      "fell": false,
+      "fall_time_from_start_s": null,
+      "fall_time_relative_to_push_s": null,
+      "prepush_stable_final_1s": false,
+      "final_1s_stable": false,
+      "recovery_seconds": null,
+      "final_travel_m": 5.1088056564331055
+    }
+  ],
+  "trace": {
+    "path": "lafan_walk1_first_frame.npz",
+    "bytes": 4425904,
+    "sha256": "d9f4c5abc70f81e8b996eeface36199f9df3ff4215074c099aa699198cc9bbcd",
+    "readback_recomputed": true
+  },
+  "status": "pose_sweep_completed",
+  "policy": "critic_h32",
+  "pose": "lafan_walk1_first_frame",
+  "reset": {
+    "current_physical_state_verified": true,
+    "observation_cache_reset_and_recomputed": true,
+    "actuator_histories_backfilled": true,
+    "cached_vs_fresh_state_max_abs_difference": 5.529727786779404e-08,
+    "first_state_max_abs_error": 1.750304363667965e-07
+  },
+  "elapsed_s": 111.56367088854313,
+  "protocol_sha256": "83012d7cf8e83a44e8987517e070eb0902b9eab73b2f5d522fa01dde7e179419"
+}

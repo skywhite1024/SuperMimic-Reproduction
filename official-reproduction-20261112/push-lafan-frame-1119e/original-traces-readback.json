@@ -1,0 +1,258 @@
+[
+  {
+    "trace": "critic_h32/t_pose.npz",
+    "sha256": "c0b2ac6ede74ec0e3a49886afdd4fafd7662068730b5265e177fc445b8b8ce2a",
+    "zero_push_eligible": false,
+    "control_metrics": {
+      "prepush_last_second_max": {
+        "planar_speed_m_s": 0.037244752049446106,
+        "angular_speed_rad_s": 0.01174728199839592,
+        "pelvis_tilt_deg": 0.8934499621391296,
+        "joint_rms_deg": 13.522603034973145,
+        "pelvis_z_m": 0.7872256636619568,
+        "travel_from_push_m": 0.0
+      },
+      "last_second_max": {
+        "planar_speed_m_s": 0.0004664921434596181,
+        "angular_speed_rad_s": 0.001805321080610156,
+        "pelvis_tilt_deg": 0.7593374252319336,
+        "joint_rms_deg": 13.539863586425781,
+        "pelvis_z_m": 0.7870165705680847,
+        "travel_from_push_m": 0.00207780790515244
+      }
+    },
+    "relative_to_prepush_posture": {
+      "baseline_samples": 25,
+      "criterion": "Same fall and stabilization thresholds, joint RMS measured from each pre-push mean posture",
+      "zero_push_eligible": true,
+      "pushed_settled": 26,
+      "recovery_seconds_in_grid_order": [
+        0.02,
+        0.72,
+        2.8,
+        1.9,
+        2.2,
+        2.4,
+        2.46,
+        null,
+        null,
+        1.56,
+        1.62,
+        2.0,
+        2.3,
+        4.5,
+        null,
+        null,
+        null,
+        0.94,
+        1.1,
+        2.72,
+        2.06,
+        2.34,
+        3.14,
+        4.42,
+        null,
+        2.04,
+        2.94,
+        2.56,
+        2.68,
+        2.36,
+        2.74,
+        3.98,
+        4.6
+      ]
+    }
+  },
+  {
+    "trace": "critic_h32/home_stance.npz",
+    "sha256": "986148925da35b5fc5bc2341b60741ca14bd9252b9db7c9a4ec196f6b682bdf8",
+    "zero_push_eligible": true,
+    "control_metrics": {
+      "prepush_last_second_max": {
+        "planar_speed_m_s": 0.026990903541445732,
+        "angular_speed_rad_s": 0.005100633017718792,
+        "pelvis_tilt_deg": 1.140341877937317,
+        "joint_rms_deg": 9.728103637695312,
+        "pelvis_z_m": 0.781880259513855,
+        "travel_from_push_m": 0.0
+      },
+      "last_second_max": {
+        "planar_speed_m_s": 0.0006052523967809975,
+        "angular_speed_rad_s": 0.002404755214229226,
+        "pelvis_tilt_deg": 1.0208660364151,
+        "joint_rms_deg": 9.800668716430664,
+        "pelvis_z_m": 0.7807382345199585,
+        "travel_from_push_m": 0.004786796867847443
+      }
+    },
+    "relative_to_prepush_posture": {
+      "baseline_samples": 25,
+      "criterion": "Same fall and stabilization thresholds, joint RMS measured from each pre-push mean posture",
+      "zero_push_eligible": true,
+      "pushed_settled": 29,
+      "recovery_seconds_in_grid_order": [
+        0.02,
+        0.94,
+        1.54,
+        1.38,
+        2.5,
+        2.46,
+        2.32,
+        2.82,
+        null,
+        0.96,
+        1.24,
+        1.64,
+        1.92,
+        2.44,
+        2.54,
+        null,
+        null,
+        1.12,
+        1.28,
+        2.54,
+        2.1,
+        2.08,
+        2.08,
+        2.62,
+        2.64,
+        2.82,
+        1.2,
+        1.04,
+        1.48,
+        2.06,
+        3.16,
+        2.68,
+        2.76
+      ]
+    }
+  },
+  {
+    "trace": "no_critic_h64/t_pose.npz",
+    "sha256": "09604284567d9fdff297a67aea29abe191593af34ac7679c3cf2f8908bcd7568",
+    "zero_push_eligible": false,
+    "control_metrics": {
+      "prepush_last_second_max": {
+        "planar_speed_m_s": 0.08535546064376831,
+        "angular_speed_rad_s": 0.04270734265446663,
+        "pelvis_tilt_deg": 1.7684440612792969,
+        "joint_rms_deg": 12.02590274810791,
+        "pelvis_z_m": 0.7879501581192017,
+        "travel_from_push_m": 0.0
+      },
+      "last_second_max": {
+        "planar_speed_m_s": 0.00028588727582246065,
+        "angular_speed_rad_s": 0.001971257384866476,
+        "pelvis_tilt_deg": 1.3411504030227661,
+        "joint_rms_deg": 11.712884902954102,
+        "pelvis_z_m": 0.7877655029296875,
+        "travel_from_push_m": 0.001390575198456645
+      }
+    },
+    "relative_to_prepush_posture": {
+      "baseline_samples": 25,
+      "criterion": "Same fall and stabilization thresholds, joint RMS measured from each pre-push mean posture",
+      "zero_push_eligible": true,
+      "pushed_settled": 26,
+      "recovery_seconds_in_grid_order": [
+        0.02,
+        1.36,
+        1.72,
+        2.08,
+        2.28,
+        1.84,
+        2.52,
+        null,
+        null,
+        0.84,
+        1.58,
+        2.12,
+        2.58,
+        2.68,
+        3.36,
+        null,
+        null,
+        0.88,
+        1.82,
+        2.18,
+        3.8,
+        3.46,
+        4.36,
+        2.62,
+        3.52,
+        1.3,
+        1.7,
+        2.22,
+        2.26,
+        2.82,
+        2.92,
+        null,
+        null
+      ]
+    }
+  },
+  {
+    "trace": "no_critic_h64/home_stance.npz",
+    "sha256": "111432ddd609e45c94b0998bec9898dc39866b9c8f3ea387f40280ad145cd6e5",
+    "zero_push_eligible": true,
+    "control_metrics": {
+      "prepush_last_second_max": {
+        "planar_speed_m_s": 0.008701310493052006,
+        "angular_speed_rad_s": 0.012052194215357304,
+        "pelvis_tilt_deg": 0.7114601731300354,
+        "joint_rms_deg": 8.332895278930664,
+        "pelvis_z_m": 0.7829636335372925,
+        "travel_from_push_m": 0.0
+      },
+      "last_second_max": {
+        "planar_speed_m_s": 0.00031263366690836847,
+        "angular_speed_rad_s": 0.0020335654262453318,
+        "pelvis_tilt_deg": 0.5021206736564636,
+        "joint_rms_deg": 8.233620643615723,
+        "pelvis_z_m": 0.7832128405570984,
+        "travel_from_push_m": 0.0005331711727194488
+      }
+    },
+    "relative_to_prepush_posture": {
+      "baseline_samples": 25,
+      "criterion": "Same fall and stabilization thresholds, joint RMS measured from each pre-push mean posture",
+      "zero_push_eligible": true,
+      "pushed_settled": 26,
+      "recovery_seconds_in_grid_order": [
+        0.02,
+        0.82,
+        1.64,
+        1.6,
+        2.42,
+        2.34,
+        2.94,
+        null,
+        null,
+        0.8,
+        1.04,
+        1.34,
+        1.34,
+        1.66,
+        2.14,
+        null,
+        null,
+        1.28,
+        2.46,
+        3.7,
+        3.1,
+        1.84,
+        2.24,
+        4.34,
+        null,
+        0.68,
+        1.1,
+        1.28,
+        1.2,
+        1.7,
+        2.12,
+        2.08,
+        null
+      ]
+    }
+  }
+]
