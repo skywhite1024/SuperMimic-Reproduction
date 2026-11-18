@@ -1,0 +1,46 @@
+{
+  "receipts": [
+    {
+      "i": 0,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/bones-duration-1118c/motions/full-duration-pack.json",
+      "bytes": 1342,
+      "sha256": "285fd3fea836391f4b6665d6c3605ed97d3324c339dc8057324bdee5a1e1c08c",
+      "chunks": 3
+    },
+    {
+      "i": 1,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/sonic-bones-cuda-full-1119m/result.json",
+      "bytes": 1207,
+      "sha256": "8cc73f40815dc13c4a113340cc64a0cdb142e7a6bfb039f77b79b637e424d7bf",
+      "chunks": 3
+    },
+    {
+      "i": 2,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/sonic-bones-cuda-full-1119m/evaluation/protocol.json",
+      "bytes": 12641,
+      "sha256": "73baaad68b160fa3475274fdc959e13a30a4b778ec9b1ef0275569eaa575f984",
+      "chunks": 11
+    },
+    {
+      "i": 3,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/sonic-bones-cuda-full-1119m/evaluation/accounting.json",
+      "bytes": 1445,
+      "sha256": "43eb955cd317e38b932e515c81a1dcb22a29f75741c953d2f18924ff1ad28482",
+      "chunks": 3
+    },
+    {
+      "i": 4,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/sonic-bones-cuda-full-1119m/evaluation/audit/initial-states.json",
+      "bytes": 727,
+      "sha256": "85217fe66c146bc06b5f7809b12be98b28fae98c5feb98ea66a78b9b92125859",
+      "chunks": 2
+    },
+    {
+      "i": 5,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/sonic-bones-cuda-full-1119m/evaluation/audit/summary.json",
+      "bytes": 985,
+      "sha256": "9b2b3ae1194363475f99bf6320cd72543b0910495ee6b7f053c93b1a6cc423a4",
+      "chunks": 3
+    }
+  ]
+}

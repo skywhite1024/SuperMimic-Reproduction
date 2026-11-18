@@ -1275,3 +1275,29 @@ uses the same configuration and retains one checkpoint at each of 1, 2,
 4, 8, 12, 16 and 18 training hours before fixed full40 evaluation.
 [BeyondMimic PPO configuration](https://github.com/HybridRobotics/whole_body_tracking/blob/main/source/whole_body_tracking/whole_body_tracking/tasks/tracking/config/g1/agents/rsl_rl_ppo_cfg.py),
 [timing verification](../official-reproduction-20261112/ppo-sim-clock-smoke-1119p/validation.json).
+
+## 78. Released SONIC evaluated on all 129,543 BONES proxy motions
+
+The released SONIC checkpoint completed 127 batches of corrected-v2
+deterministic CUDA simulation. The motion evaluation took 4,121 s from
+evaluator entry to exit. Reward accounting and the full stored-array and
+initial-state audit then passed. We verified six bounded originals and a
+47,389,840-byte per-motion JSON that was exported by a separate read-only
+job. Every local motion identity, reward denominator and success flag
+matched the recorded result.
+
+SONIC finished **129,351 of 129,543** motions, or **99.8518%**. Its mean
+normalized return per motion was **0.89753**. The frame-weighted return
+was **0.90188**. Of the 192 failures, 160 triggered the root-position
+term, 29 triggered the root-orientation term, and three triggered both.
+The author benchmark has 129,514 motions and reports 179 failures for
+the released checkpoint. The membership and return reductions should be
+matched before comparing the paper's exact numbers.
+[Paper and Appendix F](https://arxiv.org/abs/2610.28480).
+
+The earlier raw-trained SuperMimic checkpoint with a separately initialized
+tail scores 0.92524 with 19 failures when its verified records are reduced
+to this same local membership. The score gap is 0.02771 and the failure
+count gap is 173. The checkpoint histories and training budgets differ.
+[Full SONIC originals validation](../official-reproduction-20261112/sonic-bones-cuda-full-1119m/validation.json),
+[matched membership comparison](../official-reproduction-20261112/sonic-bones-cuda-full-1119m/comparison.json).

@@ -1,0 +1,30 @@
+{
+  "status": "original_SONIC_scores_and_native_existing_policy_subset_summary_compared_on_same_local_membership",
+  "same_local_membership_sha256": "52f5cc304479a7799222c2026656630bba671c7db437b2bc7d678477c927a739",
+  "clips": 129543,
+  "reference_frames": 47374271,
+  "released_SONIC": {
+    "successes": 129351,
+    "failures": 192,
+    "mean_normalized_return": 0.8975313273596952,
+    "success_fraction": 0.9985178666543155,
+    "frame_weighted_normalized_return": 0.9018768976089343,
+    "failure_terms": {
+      "anchor_ori": 29,
+      "anchor_pos": 160,
+      "anchor_ori+anchor_pos": 3
+    },
+    "original_result_sha256": "81b4b0b9825aa195d3c9834069541689ca098656a969df3ed0222dd7953ae071"
+  },
+  "prior_native_raw_trained_warm_tail_filtered_reduction": {
+    "successes": 129524,
+    "failures": 19,
+    "mean_normalized_return": 0.9252378030229262,
+    "source_reduction_sha256": "ab0d83726b589f6959e6fac65c736678f40cbae3f26924f8226b4dfdfb0e0781"
+  },
+  "normalized_return_gap_old_native_minus_SONIC": 0.027706475663231034,
+  "failure_count_gap_SONIC_minus_old_native": 173,
+  "both_scores_use_full_reference_denominators": true,
+  "exact_author_membership": false,
+  "training_cost_equivalence": false
+}
