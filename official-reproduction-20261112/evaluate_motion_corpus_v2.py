@@ -32,7 +32,8 @@ def main():
                         help="Select a retained snapshot from a completed parent run; default uses final models")
     parser.add_argument("--interrupted-run-evidence", type=Path,
                         help="Explicit pre-stop snapshot evidence; does not declare parent training complete")
-    parser.add_argument("--training-algorithm", choices=("first-order", "ppo-sim", "ppo-wm"), default="first-order")
+    parser.add_argument("--training-algorithm", choices=("first-order", "first-order-two-rank", "ppo-sim", "ppo-wm"),
+                        default="first-order")
     parser.add_argument("--ppo-sim-update", type=int, help="Retained PPO update, with its own parent receipt")
     parser.add_argument("--ppo-wm-update", type=int, help="Retained PPO-WM native inference snapshot")
     parser.add_argument("--score-state-forecasts", action="store_true",
@@ -43,7 +44,7 @@ def main():
         parser.error("Interrupted saved weights require first-order and an explicit collection step")
     if args.num_envs < 1 or args.expected_clips < 1:
         parser.error("positive environment and clip counts are required")
-    if args.score_state_forecasts and args.training_algorithm != "first-order":
+    if args.score_state_forecasts and args.training_algorithm not in {"first-order", "first-order-two-rank"}:
         parser.error("Forecast scoring requires a native first-order world model")
     os.environ["MUJOCO_GL"] = "disable"
     os.environ["WANDB_MODE"] = "offline"
@@ -89,7 +90,7 @@ def main():
         else:
             from select_completed_checkpoint import select_completed_checkpoint
             training, checkpoints, checkpoint_selection = select_completed_checkpoint(
-                run, args.checkpoint_collection_step)
+                run, args.checkpoint_collection_step, two_rank=args.training_algorithm == "first-order-two-rank")
         resolved = json.loads((run / "resolved-config.json").read_text(encoding="utf-8"))
         goal_backend = resolved.get("goal_assembly_backend", "official")
         runner_payload = resolved["runner"]

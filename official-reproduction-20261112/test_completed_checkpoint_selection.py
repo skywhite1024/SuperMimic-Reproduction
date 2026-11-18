@@ -53,3 +53,42 @@ def test_reject_incomplete_parent_missing_step_and_corrupt_snapshot(tmp_path):
     target.write_bytes(bytes([original[0] ^ 1]) + original[1:])
     with pytest.raises(ValueError, match="hash mismatch"):
         select_completed_checkpoint(tmp_path, 11)
+
+
+def test_two_rank_selection_binds_final_weights_to_the_completed_driver(tmp_path):
+    group_dir = tmp_path / "training"
+    rank_dir = group_dir / "rank-0"
+    rank_dir.mkdir(parents=True)
+    config = rank_dir / "resolved-config.json"
+    config.write_text('{"goal_assembly_backend": "eager"}')
+    records = []
+    for name in ("world_model.pt", "actor.pt", "critic.pt"):
+        path = rank_dir / name
+        torch.save({"weight": torch.tensor([6.0])}, path)
+        records.append({"file": name, "path": str(path), "bytes": path.stat().st_size,
+                        "sha256": digest(path), "native_model_readback_verified": True})
+    participant = {"rank": 0, "status": "two_rank_native_participant_completed", "local_collection_steps": 40001,
+                   "local_simulator_steps": 4096 * 40001, "final_model_state_hashes": {"actor": "shared"},
+                   "checkpoints": records, "resolved_config_sha256": digest(config)}
+    group = {"status": "two_rank_native_training_completed", "world_size": 2, "backend": "nccl",
+             "global_simulator_steps": 8192 * 40001,
+             "participants": [participant, dict(participant, rank=1)]}
+    group_path = group_dir / "result.json"
+    (rank_dir / "result.json").write_text(json.dumps(participant))
+    group_path.write_text(json.dumps(group))
+    driver_path = tmp_path / "result.json"
+    driver = {"status": "two_GPU_native_gate_completed", "parent_result_sha256": digest(group_path)}
+    driver_path.write_text(json.dumps(driver))
+    with pytest.raises(ValueError, match="completed parent"):
+        select_completed_checkpoint(rank_dir)
+    _, selected, evidence = select_completed_checkpoint(rank_dir, two_rank=True)
+    assert evidence["kind"] == "two_rank_final_models" and evidence["global_real_simulator_steps"] == 8192 * 40001
+    assert torch.load(selected["actor.pt"], weights_only=True)["weight"].item() == 6
+    group["participants"][1]["final_model_state_hashes"] = {"actor": "diverged"}
+    group_path.write_text(json.dumps(group))
+    with pytest.raises(ValueError, match="completed and bound"):
+        select_completed_checkpoint(rank_dir, two_rank=True)
+    driver["parent_result_sha256"] = digest(group_path)
+    driver_path.write_text(json.dumps(driver))
+    with pytest.raises(ValueError, match="weights.*disagree"):
+        select_completed_checkpoint(rank_dir, two_rank=True)

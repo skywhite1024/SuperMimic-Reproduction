@@ -8,6 +8,8 @@ from pathlib import Path
 import re
 import zlib
 
+from run_native_two_gpu_gate import BONES_CLIPS, BONES_QUALITY_COLLECTIONS
+
 
 def digest(data):return hashlib.sha256(data).hexdigest()
 
@@ -20,7 +22,8 @@ def main():
     args=parser.parse_args()
     plan=json.loads(args.plan.read_bytes());raw=gzip.decompress(args.download.read_bytes())
     collections = plan.get('collection_steps', 21)
-    assert collections in {21, 1001}
+    assert collections in {21, 1001, BONES_QUALITY_COLLECTIONS}
+    quality_training = collections == BONES_QUALITY_COLLECTIONS
     transitions = collections * 8192
     clean='\n'.join(re.sub(r'^\[[0-9TZ: .+-]+\] ','',line) for line in raw.decode().splitlines())
     assert 'NATIVE_TWO_GPU_BOOTSTRAP_SHA256 '+plan['command_sha256'] in clean
@@ -77,8 +80,9 @@ def main():
         if collections == 21:
             assert row['sampler_distribution_updates'] == 1
         else:
-            assert row['clips'] == 129543
-            assert [item['collection_steps'] for item in row['sparse_state_observations']] == [1, 201, 1001]
+            assert row['clips'] == BONES_CLIPS
+            expected = [1, 201, 1001, 10001, 20001, 30001, BONES_QUALITY_COLLECTIONS] if quality_training else [1, 201, 1001]
+            assert [item['collection_steps'] for item in row['sparse_state_observations']] == expected
         assert cfg['environment_seed']==42+rank and cfg['local_num_envs']==4096 and cfg['global_num_envs']==8192
         assert cfg['learner_CUDA_graphs_disabled'] and cfg['runner']['policy']['horizon']==32
         assert {r['file'] for r in row['checkpoints']}=={'world_model.pt','actor.pt','critic.pt'}
@@ -92,7 +96,19 @@ def main():
         native_weight_files_cloud_hash_and_tensor_readback_verified=6,raw_weights_downloaded=False,
         learner_CUDA_graphs_disabled=True,quality_evaluation_completed=False,
         full_training_state_resume_available=False,paper_performance_equivalence=False,paper_results_reproduced=False)
-    if collections == 1001:
+    if quality_training:
+        assert ranks[0]['sparse_state_observations'] == ranks[1]['sparse_state_observations']
+        assert parent['intermediate_rank0_snapshots_verified'] == 3
+        snapshots = ranks[0]['intermediate_snapshots']
+        assert [row['collection_steps_per_rank'] for row in snapshots] == [10001, 20001, 30001]
+        for row in snapshots:
+            assert row['global_real_transitions'] == 8192 * row['collection_steps_per_rank']
+            assert {record['file'] for record in row['files']} == {'world_model.pt','actor.pt','critic.pt'}
+            assert all(record['native_model_readback_verified'] for record in row['files'])
+        validation['status'] = 'actual_two_H100_NCCL_native_BONES_training_originals_verified'
+        validation['intermediate_rank0_snapshots_verified'] = len(snapshots)
+        validation['slowest_rank_training_seconds'] = max(row['elapsed_training_seconds'] for row in ranks)
+    elif collections == 1001:
         assert ranks[0]['sparse_state_observations'] == ranks[1]['sparse_state_observations']
         window = parent['steady_window']
         assert (window['first_excluded_collection'], window['last_included_collection']) == (201, 1001)

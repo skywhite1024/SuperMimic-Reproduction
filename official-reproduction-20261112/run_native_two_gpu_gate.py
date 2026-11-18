@@ -1,4 +1,4 @@
-"""Finite two-H100 native first-order gate and throughput probe.
+"""Finite two-H100 native first-order gate, throughput or training.
 
 Uses native real collection, replay, world-model and actor/critic losses. Python
 gradient collectives require eager learner updates, so the measured throughput
@@ -18,6 +18,8 @@ import time
 
 
 STEADY_WINDOW = (201, 1001)
+BONES_QUALITY_COLLECTIONS = 40001
+BONES_CLIPS = 129543
 
 
 def write(path,value):
@@ -44,15 +46,37 @@ def parameter_hash(module):
     return result.hexdigest()
 
 
+def save_rank_models(folder, runner, modules, device, torch):
+    checkpoints = []
+    payloads = {"world_model.pt": runner._wm.bundle(),
+                "actor.pt": modules["actor"].state_dict(), "critic.pt": modules["critic"].state_dict()}
+    for name, payload in payloads.items():
+        path = folder / name
+        torch.save(payload, path)
+        loaded = torch.load(path, map_location=device, weights_only=True)
+        if name == "world_model.pt":
+            assert set(loaded) == {"dynamics", "sim_context"}
+            for part, module in (("dynamics", runner._dynamics), ("sim_context", runner._sim_context)):
+                assert set(loaded[part]) == set(module.state_dict())
+                assert all(torch.equal(loaded[part][key], value) for key, value in module.state_dict().items())
+        else:
+            assert set(loaded) == set(payload)
+            assert all(torch.equal(loaded[key], value) for key, value in payload.items())
+        checkpoints.append({"file": name, "path": str(path), "bytes": path.stat().st_size,
+                            "sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
+                            "native_model_readback_verified": True})
+    return checkpoints
+
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--motions',type=Path,required=True)
     parser.add_argument('--output',type=Path,required=True)
-    parser.add_argument('--steps', type=int, choices=(21, 1001), default=21)
-    parser.add_argument('--expected-clips', type=int, choices=(40, 129543), default=40)
+    parser.add_argument('--steps', type=int, choices=(21, 1001, BONES_QUALITY_COLLECTIONS), default=21)
+    parser.add_argument('--expected-clips', type=int, choices=(40, BONES_CLIPS), default=40)
     args=parser.parse_args()
-    if (args.steps, args.expected_clips) not in {(21, 40), (1001, 129543)}:
-        parser.error('Use the 21-step LAFAN gate or the 1001-step filtered BONES probe')
+    if (args.steps, args.expected_clips) not in {(21, 40), (1001, BONES_CLIPS), (BONES_QUALITY_COLLECTIONS, BONES_CLIPS)}:
+        parser.error('Use the 21-step LAFAN gate, 1001-step BONES throughput or 40001-step BONES training')
     os.environ.update(MUJOCO_GL='disable',WANDB_MODE='offline')
     import numpy as np
     import torch
@@ -112,6 +136,7 @@ def main():
             collection_steps=args.steps,runner=dataclasses.asdict(cfg.runner),environment=dataclasses.asdict(cfg.env),
             base_learning_rates=base_lrs,learning_rate_multiplier=math.sqrt(2),
             synchronization=sync,goal_backend='author eager goal math',
+            goal_assembly_backend='eager',
             optimizer='Adam for all three native networks, existing explicit A5 adaptation',
             learning_rate_schedule='sqrt2 times existing cosine schedule, updated before each local collection',
             native_RSL_normalizer_source_sha256=hashlib.sha256(normalizer_source.read_bytes()).hexdigest(),
@@ -132,7 +157,11 @@ def main():
         should_train=Ratio(env.num_envs/cfg.runner.wm.num_batches/cfg.runner.wm.batch_size/
             cfg.runner.wm.horizon*cfg.runner.replay_ratio)
         started=time.monotonic();outer_updates=0;local_sim_steps=0;observations=[]
-        observed_steps = (1, 11, 21) if args.steps == 21 else (1, *STEADY_WINDOW)
+        intermediate_snapshots = []
+        if args.steps == BONES_QUALITY_COLLECTIONS:
+            observed_steps = (1, *STEADY_WINDOW, 10001, 20001, 30001, BONES_QUALITY_COLLECTIONS)
+        else:
+            observed_steps = (1, 11, 21) if args.steps == 21 else (1, *STEADY_WINDOW)
         steady_started = None
         steady_elapsed = None
         for step in range(args.steps):
@@ -160,6 +189,21 @@ def main():
                     row['model_state_hashes']={name:model_hash(module) for name,module in modules.items()}
                     observations.append(row)
                 print('NATIVE_TWO_GPU_RANK_UPDATE '+json.dumps(dict(rank=rank,**row)),flush=True)
+            if args.steps == BONES_QUALITY_COLLECTIONS and collections in {10001, 20001, 30001}:
+                peers = [None, None]
+                dist.all_gather_object(peers, observations[-1])
+                if peers[0] != peers[1]:
+                    raise RuntimeError(f"Two-rank learner state diverged at collection {collections}")
+                if rank == 0:
+                    checkpoint_folder = folder / "checkpoint-series" / f"step-{collections:09d}"
+                    checkpoint_folder.mkdir(parents=True, exist_ok=False)
+                    manifest = {"collection_steps_per_rank": collections, "global_real_transitions": collections * 8192,
+                                "files": save_rank_models(checkpoint_folder, runner, modules, device, torch),
+                                "seconds_since_runner_entry": time.monotonic() - started}
+                    write(checkpoint_folder / "manifest.json", manifest)
+                    intermediate_snapshots.append(manifest)
+                    print("NATIVE_TWO_GPU_INTERMEDIATE_SNAPSHOT " + json.dumps(manifest), flush=True)
+                dist.barrier(device_ids=[local_rank])
             if collections == STEADY_WINDOW[0]:
                 torch.cuda.synchronize(device)
                 dist.barrier(device_ids=[local_rank])
@@ -174,21 +218,7 @@ def main():
         final_parameters={name:parameter_hash(module) for name,module in modules.items()}
         assert all(final[name]!=report['initial_model_state_hashes'][name] for name in modules)
         assert all(final_parameters[name]!=report['initial_learned_parameter_hashes'][name] for name in modules)
-        checkpoints=[]
-        for name,payload in [('world_model.pt',runner._wm.bundle()),
-                ('actor.pt',runner.policy_learner.actor.state_dict()),('critic.pt',runner.policy_learner.critic.state_dict())]:
-            path=folder/name;torch.save(payload,path)
-            loaded=torch.load(path,map_location=device,weights_only=True)
-            if name=='world_model.pt':
-                assert set(loaded)=={'dynamics','sim_context'}
-                for part,module in [('dynamics',runner._dynamics),('sim_context',runner._sim_context)]:
-                    assert set(loaded[part])==set(module.state_dict())
-                    assert all(torch.equal(loaded[part][key],value) for key,value in module.state_dict().items())
-            else:
-                module=modules['actor' if name=='actor.pt' else 'critic']
-                assert all(torch.equal(loaded[key],value) for key,value in module.state_dict().items())
-            checkpoints.append(dict(file=name,path=str(path),bytes=path.stat().st_size,
-                sha256=hashlib.sha256(path.read_bytes()).hexdigest(),native_model_readback_verified=True))
+        checkpoints = save_rank_models(folder, runner, modules, device, torch)
         report.update(status='two_rank_native_participant_completed',local_collection_steps=args.steps,
             local_simulator_steps=local_sim_steps,native_learner_outer_updates=outer_updates,
             optimizer_steps=dict(runner._native_dp_optimizer_counts),sparse_state_observations=observations,
@@ -202,12 +232,14 @@ def main():
             shared_sampler_count_sha256=tensor_hash(runner._sampler.native.count),
             shared_sampler_effort_sha256=tensor_hash(runner._sampler.native.effort),
             checkpoints=checkpoints,resolved_config_sha256=hashlib.sha256((folder/'resolved-config.json').read_bytes()).hexdigest())
+        if args.steps == BONES_QUALITY_COLLECTIONS:
+            report["intermediate_snapshots"] = intermediate_snapshots
         write(folder/'result.json',report)
         participants=[None,None];dist.all_gather_object(participants,report)
         assert all(row['status']=='two_rank_native_participant_completed' for row in participants)
         assert participants[0]['initial_model_state_hashes']==participants[1]['initial_model_state_hashes']
         assert participants[0]['final_model_state_hashes']==participants[1]['final_model_state_hashes']
-        if args.steps == 1001:
+        if args.steps > 21:
             assert participants[0]['sparse_state_observations'] == participants[1]['sparse_state_observations']
         assert participants[0]['initial_real_state_sha256']!=participants[1]['initial_real_state_sha256']
         assert {row['local_rank'] for row in participants}=={0,1}
