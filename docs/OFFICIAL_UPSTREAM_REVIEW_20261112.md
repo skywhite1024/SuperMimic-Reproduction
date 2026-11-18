@@ -1254,3 +1254,24 @@ was **1.465×**, corresponding to **73.3%** parallel efficiency relative to
 ideal doubling. Each setting ran once. The evidence covers eager-learner
 throughput. Tracking quality at these checkpoints remains open.
 [Paired timing receipt](../official-reproduction-20261112/native-bones-one-gpu-eager-1119n/comparison.json).
+
+## 77. PPO-Sim training clock verified on one H100
+
+The timing check ran PPO against 8,192 simulated G1 environments with 24
+collections per update. Its first 20 s checkpoint was update 1 and its
+60 s checkpoint was update 15, retained 62.59 s after training entry. The
+15 updates covered 2,949,120 real simulator transitions. Local checks bound
+the first completed update at each time target to the original clock,
+manifest and checkpoint files. All nine original JSONs were recovered,
+including the final checkpoint's deterministic 40-motion evaluation and
+both saved-trajectory audits.
+
+The resolved local configuration matches the 12 explicitly listed PPO
+algorithm coefficients in the public BeyondMimic G1 file. The 24-step
+rollout and initial action standard deviation of 1.0 match as well. This
+implementation uses the pinned MuJoCo-Warp runtime, SuperMimic networks and
+its locally wired return-based reset sampling. The timed one-H100 study
+uses the same configuration and retains one checkpoint at each of 1, 2,
+4, 8, 12, 16 and 18 training hours before fixed full40 evaluation.
+[BeyondMimic PPO configuration](https://github.com/HybridRobotics/whole_body_tracking/blob/main/source/whole_body_tracking/whole_body_tracking/tasks/tracking/config/g1/agents/rsl_rl_ppo_cfg.py),
+[timing verification](../official-reproduction-20261112/ppo-sim-clock-smoke-1119p/validation.json).

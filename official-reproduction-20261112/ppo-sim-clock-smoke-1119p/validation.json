@@ -1,0 +1,27 @@
+{
+  "status": "timed_ppo_sim_training_and_native_eval_verified",
+  "timing_smoke": true,
+  "original_JSONs": 9,
+  "log_sha256": "4e0fe1aa0a1eca7231628a6f231a58ed96164e78e612f32386eab77d0833f201",
+  "source_commit": "deeb2138369ff2ab5e0ebbf388c55f2c8d19c38f",
+  "checkpoints": [
+    20,
+    60
+  ],
+  "updates": 15,
+  "real_simulator_steps": 2949120,
+  "clock_seconds": 62.66084845922887,
+  "scores": [
+    {
+      "clips": 40,
+      "successes": 0,
+      "mean_normalized_full_motion_return": 0.0003236952017992647,
+      "reference_frames": 441140,
+      "ppo_update": 15,
+      "crossed_training_clock_seconds": [
+        60.0
+      ]
+    }
+  ],
+  "paper_exact_sampler_confirmed": false
+}

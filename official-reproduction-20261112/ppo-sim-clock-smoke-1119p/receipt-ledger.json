@@ -1,0 +1,67 @@
+{
+  "receipts": [
+    {
+      "i": 0,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-clock-smoke-1119p/result.json",
+      "bytes": 3368,
+      "sha256": "12a23c7a8b108a7e8057fc62fd8e92e946cd849c5176ea880addf18964483df9",
+      "chunks": 5
+    },
+    {
+      "i": 1,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-clock-smoke-1119p/training/resolved-config.json",
+      "bytes": 44366,
+      "sha256": "17803fcebcdeda4ad90ed4c00169a4cfa4eee7f57db346a6d3fff4c84a7abbdf",
+      "chunks": 23
+    },
+    {
+      "i": 2,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-clock-smoke-1119p/training/checkpoint-manifest.json",
+      "bytes": 3064,
+      "sha256": "0f023cb66d8d201b05c9d6a054acf5ae96d1360957c6f07514940bd1a327681b",
+      "chunks": 4
+    },
+    {
+      "i": 3,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-clock-smoke-1119p/eval-000015/evaluation/result.json",
+      "bytes": 14172,
+      "sha256": "290f5c029a6fedcf212a79b143f6f0f4ebd0d0cf9548d542574b691698ad53ff",
+      "chunks": 6
+    },
+    {
+      "i": 4,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-clock-smoke-1119p/eval-000015/evaluation/protocol.json",
+      "bytes": 39791,
+      "sha256": "2992d494d8e3d4ea83c84fe991a14dfd10ccbc1e1ccc53af07721cbd02128b05",
+      "chunks": 28
+    },
+    {
+      "i": 5,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-clock-smoke-1119p/eval-000015/evaluation/accounting.json",
+      "bytes": 1383,
+      "sha256": "4cda49a424a3271f5420aaa3c25c8d84cb48c05389adb68820b4ab5a1652acc7",
+      "chunks": 3
+    },
+    {
+      "i": 6,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-clock-smoke-1119p/eval-000015/evaluation/audit/summary.json",
+      "bytes": 958,
+      "sha256": "2e7146a848728bf90614d855c6cb59d08cb634e1be5672487921a5eb6bf1b940",
+      "chunks": 3
+    },
+    {
+      "i": 7,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-clock-smoke-1119p/eval-000015/evaluation/audit/initial-states.json",
+      "bytes": 720,
+      "sha256": "478d7736025ad1b5a0471ee9453d83eb17302d216ab06a04951c49b3635e65f4",
+      "chunks": 2
+    },
+    {
+      "i": 8,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-clock-smoke-1119p/training/result.json",
+      "bytes": 30660,
+      "sha256": "29a6daf6cab57dbf6ea8bfe10d08dcaa47372bee17704cf0d1fc13cb07e018bb",
+      "chunks": 20
+    }
+  ]
+}
