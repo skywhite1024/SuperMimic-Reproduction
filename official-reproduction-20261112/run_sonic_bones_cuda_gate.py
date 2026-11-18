@@ -1,12 +1,14 @@
 """Verify actual SONIC CUDA inference on the fixed 64-motion BONES probe."""
 
 import argparse
+import http.client
 import json
 import os
 from pathlib import Path
 import subprocess
 import sys
 import tempfile
+import time
 import urllib.request
 
 from push_recovery_contract import sha256, write_json
@@ -18,32 +20,56 @@ ORT_VERSION = "1.26.0"
 WHEEL = f"onnxruntime_gpu-{ORT_VERSION}-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl"
 WHEEL_URL = ("https://files.pythonhosted.org/packages/dd/97/"
              "fe8979f44b9275654b42f7bb556e30789b71a1b22998c83b540df2b1b774/" + WHEEL)
+WHEEL_MIRROR = WHEEL_URL.replace("https://files.pythonhosted.org/", "https://mirrors.aliyun.com/pypi/")
 WHEEL_HASH = "cfda2fad535595bfc3e570eb588092717711dcb2957656d814695e0c9ceb1508"
 WHEEL_BYTES = 276974871
 FLAT = "flatbuffers-25.12.19-py2.py3-none-any.whl"
 FLAT_HASH = "7634f50c427838bb021c2d66a3d1168e9d199b0607e6329399f04846d42e20b4"
 
 
+def fetch_wheel(wheel):
+    chunk_size = 1 << 20
+    for source, url in (("aliyun", WHEEL_MIRROR), ("pypi", WHEEL_URL)):
+        part = None
+        started = time.monotonic()
+        print(f"SONIC_ORT_WHEEL_TRANSFER_START source={source} total_bytes={WHEEL_BYTES}", flush=True)
+        try:
+            with tempfile.NamedTemporaryFile(dir=wheel.parent, prefix=".ort-gpu-", delete=False) as target:
+                part = Path(target.name)
+                with urllib.request.urlopen(url, timeout=25) as remote:
+                    size = 0
+                    while chunk := remote.read(chunk_size):
+                        if time.monotonic() - started > 300:
+                            raise TimeoutError("ONNX Runtime wheel exceeded the five-minute transfer window")
+                        size += len(chunk)
+                        if size > WHEEL_BYTES:
+                            raise ValueError("ONNX Runtime wheel exceeds the manifest size")
+                        target.write(chunk)
+                        if size % (32 * chunk_size) == 0:
+                            print(f"SONIC_ORT_WHEEL_TRANSFER_PROGRESS source={source} bytes={size}", flush=True)
+            if size != WHEEL_BYTES or sha256(part) != WHEEL_HASH:
+                raise ValueError("ONNX Runtime GPU wheel digest differs from PyPI")
+            part.replace(wheel)
+            print(f"SONIC_ORT_WHEEL_TRANSFER_VERIFIED source={source} bytes={size}", flush=True)
+            return
+        except (OSError, ValueError, http.client.HTTPException) as error:
+            print(f"SONIC_ORT_WHEEL_TRANSFER_FAILED source={source} error={type(error).__name__}", flush=True)
+        finally:
+            if part is not None:
+                part.unlink(missing_ok=True)
+    raise RuntimeError("Both ONNX Runtime wheel transports failed")
+
+
 def install(root, output):
     wheel_cache = root / "data/sonic-inference-wheels"
     wheel = wheel_cache / WHEEL
     if not wheel.is_file():
-        with tempfile.NamedTemporaryFile(dir=wheel_cache, prefix=".ort-gpu-", delete=False) as target:
-            part = Path(target.name)
-            with urllib.request.urlopen(WHEEL_URL, timeout=45) as remote:
-                size = 0
-                while chunk := remote.read(1 << 20):
-                    size += len(chunk)
-                    if size > WHEEL_BYTES:
-                        raise RuntimeError("ONNX Runtime transfer exceeds the manifest size")
-                    target.write(chunk)
-        if part.stat().st_size != WHEEL_BYTES or sha256(part) != WHEEL_HASH:
-            raise RuntimeError("ONNX Runtime GPU wheel digest does not match PyPI")
-        part.replace(wheel)
+        fetch_wheel(wheel)
     flat = wheel_cache / FLAT
     if (wheel.stat().st_size != WHEEL_BYTES or sha256(wheel) != WHEEL_HASH
             or sha256(flat) != FLAT_HASH):
         raise RuntimeError("An inference wheel failed verification")
+    print("SONIC_ORT_INPUT_WHEELS_VERIFIED", flush=True)
     env = output / "onnx-gpu-venv"
     subprocess.run([sys.executable, "-m", "venv", "--system-site-packages", str(env)],
                    check=True, timeout=180)

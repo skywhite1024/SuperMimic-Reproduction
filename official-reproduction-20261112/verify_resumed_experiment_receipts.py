@@ -1,4 +1,4 @@
-"""Recover and verify original results for the continuous same18 and duration jobs."""
+"""Recover original results and verify native motion scores for resumed jobs."""
 
 import argparse
 import gzip
@@ -23,7 +23,7 @@ def read(path):
     return json.loads(path.read_bytes())
 
 
-def native_point(folder, train, step, identities, physical_hashes):
+def score_evaluation(folder, identities, physical_hashes):
     result, protocol, accounting, arrays, states = [
         read(folder / name) for name in EVALUATION_FILES
     ]
@@ -35,17 +35,6 @@ def native_point(folder, train, step, identities, physical_hashes):
     assert protocol["num_envs"] == n and protocol["batch_order"] == "index"
     assert not protocol["domain_randomization"] and not protocol["observation_noise"]
     assert protocol["motion_files"] == physical_hashes
-    selected = protocol["checkpoint_selection"]
-    assert selected["evaluated_collection_steps"] == step
-    assert selected["parent_result_sha256"] == sha256(train / "result.json")
-    assert selected["resolved_config_sha256"] == sha256(train / "resolved-config.json")
-    trained = read(train / "result.json")
-    assert trained["status"] == "pilot_completed"
-    assert selected["parent_collection_steps"] == trained["collection_steps"]
-    snapshot = next(s for s in trained["retained_checkpoint_series"] if s["collection_steps"] == step)
-    assert {Path(r["path"]).name: r["sha256"] for r in selected["files"]} == {
-        r["file"]: r["sha256"] for r in snapshot["files"]
-    }
     assert accounting["maximum_step_reward"] == .1
     assert [r["index"] for r in rows] == list(range(n))
     count, duration, denom = 0, 0, 0
@@ -73,9 +62,24 @@ def native_point(folder, train, step, identities, physical_hashes):
     assert states["trajectory_integrity_summary_sha256"] == sha256(folder / "audit/summary.json")
     assert arrays["all_trajectory_arrays_verified"] and arrays["verified_steps"] == duration
     assert states["all_saved_initial_states_verified"] and states["saved_initial_states_verified"] == n
-    return {"collection_steps": step, "clips": n, "successes": count,
-            "mean_normalized_full_motion_return": mean, "real_transitions": step * 4096,
+    return {"clips": n, "successes": count, "mean_normalized_full_motion_return": mean,
             "reference_frames": denom}
+
+
+def native_point(folder, train, step, identities, physical_hashes):
+    selected = read(folder / "protocol.json")["checkpoint_selection"]
+    assert selected["evaluated_collection_steps"] == step
+    assert selected["parent_result_sha256"] == sha256(train / "result.json")
+    assert selected["resolved_config_sha256"] == sha256(train / "resolved-config.json")
+    trained = read(train / "result.json")
+    assert trained["status"] == "pilot_completed"
+    assert selected["parent_collection_steps"] == trained["collection_steps"]
+    snapshot = next(s for s in trained["retained_checkpoint_series"] if s["collection_steps"] == step)
+    assert {Path(r["path"]).name: r["sha256"] for r in selected["files"]} == {
+        r["file"]: r["sha256"] for r in snapshot["files"]
+    }
+    return {"collection_steps": step, **score_evaluation(folder, identities, physical_hashes),
+            "real_transitions": step * 4096}
 
 
 def verify_forecast(folder):
@@ -103,11 +107,60 @@ def verify_forecast(folder):
             "mean_normalized_state_mse_over_horizons": float(independently.mean())}
 
 
+def verify_sonic(args, plan, source):
+    assert "SONIC_BONES_CUDA_BOOTSTRAP_SHA256 " + plan["bootstrap_sha256"] in source
+    assert "NVIDIA H100 80GB HBM3" in source
+    allowed = {"driver.json", *(f"evaluation/{name}" for name in EVALUATION_FILES)}
+    args.output.mkdir(parents=True, exist_ok=True)
+    names, ledger = (decode_group(source, plan["cloud_output"], args.output, allowed)
+                     if "\nRECEIPT_META " in source else ([], []))
+    write_json(args.output / "receipt-ledger.json", {"receipts": ledger})
+    validation = {"status": "incomplete_originals_preserved", "original_JSONs": len(names),
+                  "log_sha256": sha256(args.log), "source_commit": plan["source_commit"]}
+    if set(names) == allowed:
+        driver = read(args.output / "driver.json")
+        assert driver["status"] == "completed" and driver["original_comparison_and_cuda_kernels_verified"]
+        assert driver["wheel_sha256"] == plan["wheel_sha256"] and driver["ONNX_runtime_version"] == plan["ORT_version"]
+        assert "SONIC_BONES_CUDA_BOOTSTRAP_EXIT_CODE 0" in source
+        study = read(args.duration_study)
+        assert study["status"] == "complete" and study["filter_sha256"] == sha256(args.filter_report)
+        hashes = study["packs"]["common64"]["files"]
+        assert hashes == driver["motion_files"]
+        names_raw, _, sizes, keep = read_identity(args.raw_bones, read(args.filter_report), args.feasible_mask)
+        identities = [(names_raw[i], int(sizes[i])) for i in choose_subsets(sizes, keep)["common64"]]
+        ev = args.output / "evaluation"
+        result = read(ev / "result.json")
+        protocol = read(ev / "protocol.json")
+        assert driver["result_sha256"] == sha256(ev / "result.json")
+        assert protocol["SONIC_ONNX_provider"] == result["ONNX_provider"] == "CUDAExecutionProvider"
+        assert protocol["SONIC_control_contract_sha256"] == plan["source_file_hashes"]["sonic-g1-control-contract.json"]
+        assert protocol["all_compiled_CPU_and_live_CUDA_control_fields_verified"]
+        assert result["original_batch1_vs_batched_observed_state_comparisons"] >= 2
+        profiles = result["ONNX_runtime_compute_profiles"]
+        assert set(profiles) == {"encoder", "decoder"}
+        for profile in profiles.values():
+            assert len(profile["profile_sha256"]) == 64 and sum(profile["cuda_compute_ops"].values()) > 0
+        assert len(identities) == 64 and sum(length for _, length in identities) == 20397
+        validation.update(status="sonic_cuda_and_all_native_motion_scores_verified",
+                          **score_evaluation(ev, identities, hashes), CUDA_compute_profiles=profiles,
+                          original_CPU_output_comparisons=result["original_batch1_vs_batched_observed_state_comparisons"],
+                          maximum_original_action_difference=result["maximum_original_action_difference"],
+                          maximum_original_token_difference=result["maximum_original_token_difference"],
+                          paper_exact_membership=False)
+    write_json(args.output / "validation.json", validation)
+    print(json.dumps(validation, indent=2))
+    if validation["status"] != "sonic_cuda_and_all_native_motion_scores_verified":
+        raise RuntimeError("SONIC has no complete original evaluation")
+
+
 def verify(args):
     plan = read(args.plan)
     blob = args.log.read_bytes()
     raw = gzip.decompress(blob).decode("utf-8-sig") if args.log.suffix == ".gz" else blob.decode("utf-8-sig")
     source = "\n".join(re.sub(r"^\[[0-9TZ: .+-]+\] ", "", line) for line in raw.splitlines())
+    if args.kind == "sonic":
+        verify_sonic(args, plan, source)
+        return
     duration = args.kind == "duration"
     marker = "BONES_DURATION" if duration else "LOCOMOTION18_CONTROL"
     assert marker + "_BOOTSTRAP_SHA256 " + plan["bootstrap_sha256"] in source
@@ -182,12 +235,16 @@ def verify(args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--kind", choices=("same18", "duration"), required=True)
+    parser.add_argument("--kind", choices=("same18", "duration", "sonic"), required=True)
     for name in ("plan", "log", "output"):
         parser.add_argument("--" + name, type=Path, required=True)
     parser.add_argument("--raw-bones", type=Path)
     parser.add_argument("--feasible-mask", type=Path)
+    parser.add_argument("--filter-report", type=Path)
+    parser.add_argument("--duration-study", type=Path)
     args = parser.parse_args()
-    if args.kind == "duration" and not (args.raw_bones and args.feasible_mask):
-        parser.error("Duration audit needs the local raw pack and feasibility mask")
+    if args.kind in {"duration", "sonic"} and not (args.raw_bones and args.feasible_mask):
+        parser.error("BONES audit needs the local raw pack and feasibility mask")
+    if args.kind == "sonic" and not (args.filter_report and args.duration_study):
+        parser.error("SONIC audit needs the frozen filter report and the duration-study receipt")
     verify(args)
