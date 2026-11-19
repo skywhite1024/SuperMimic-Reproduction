@@ -1,0 +1,41 @@
+{
+  "baseline_label": "Native single H100, 80,001 collections",
+  "candidate_label": "Native single H100, 320,001 collections",
+  "clips": 129543,
+  "reference_frames": 47374271,
+  "exact_ordered_identities_match": true,
+  "baseline": {
+    "successes": 129469,
+    "failures": 74,
+    "success_fraction": 0.9994287611063508,
+    "mean_normalized_full_motion_return": 0.9393554501540412,
+    "frame_weighted_normalized_return": 0.9408896883880623,
+    "failure_terms": {
+      "anchor_ori": 12,
+      "anchor_pos": 62
+    },
+    "original_sha256": "7b62c116ee698c69118bdf4e92b726aa62388f65fa5f0468b0608fce35266024"
+  },
+  "candidate": {
+    "successes": 129535,
+    "failures": 8,
+    "success_fraction": 0.9999382444439299,
+    "mean_normalized_full_motion_return": 0.9542036811006622,
+    "frame_weighted_normalized_return": 0.9559960415521749,
+    "failure_terms": {
+      "anchor_pos": 8
+    },
+    "original_sha256": "6b22a5abd887c5a3cf1190758190bc21689b1cb58de86877384577b0cac28f9c"
+  },
+  "paired_completion": {
+    "both": 129463,
+    "candidate_only": 72,
+    "baseline_only": 6,
+    "neither": 2
+  },
+  "paired_return": {
+    "mean_candidate_minus_baseline": 0.014848230946621068,
+    "median_candidate_minus_baseline": 0.009107417573329446,
+    "mean_candidate_minus_baseline_on_shared_completed_clips": 0.014621142642799399
+  }
+}

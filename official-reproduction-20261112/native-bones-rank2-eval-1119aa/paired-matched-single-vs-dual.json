@@ -1,0 +1,42 @@
+{
+  "baseline_label": "Native single H100, 80,001 collections",
+  "candidate_label": "Native two H100s, 40,001 collections per rank",
+  "clips": 129543,
+  "reference_frames": 47374271,
+  "exact_ordered_identities_match": true,
+  "baseline": {
+    "successes": 129469,
+    "failures": 74,
+    "success_fraction": 0.9994287611063508,
+    "mean_normalized_full_motion_return": 0.9393554501540412,
+    "frame_weighted_normalized_return": 0.9408896883880623,
+    "failure_terms": {
+      "anchor_ori": 12,
+      "anchor_pos": 62
+    },
+    "original_sha256": "7b62c116ee698c69118bdf4e92b726aa62388f65fa5f0468b0608fce35266024"
+  },
+  "candidate": {
+    "successes": 129471,
+    "failures": 72,
+    "success_fraction": 0.9994441999953684,
+    "mean_normalized_full_motion_return": 0.9356997732445016,
+    "frame_weighted_normalized_return": 0.9377336822405096,
+    "failure_terms": {
+      "anchor_ori": 11,
+      "anchor_pos": 61
+    },
+    "original_sha256": "1f7690820021bd65bfa70d9829331cc15c7a96fe5123f5bf5e23dc192fd4ed71"
+  },
+  "paired_completion": {
+    "both": 129414,
+    "candidate_only": 57,
+    "baseline_only": 55,
+    "neither": 17
+  },
+  "paired_return": {
+    "mean_candidate_minus_baseline": -0.003655676909539511,
+    "median_candidate_minus_baseline": -0.0025464273173059215,
+    "mean_candidate_minus_baseline_on_shared_completed_clips": -0.0036317167218488733
+  }
+}

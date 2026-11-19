@@ -1,0 +1,19 @@
+{
+  "status": "all_proxy_per_motion_records_and_original_audits_verified",
+  "kind": "two-rank",
+  "original_bounded_JSONs": 6,
+  "original_large_per_motion_JSONs": 1,
+  "main_log_sha256": "a408d1c545014ffb6e8c37761348c5140efc32c32fa334eabd2999800e53dc1c",
+  "source_commit": "5988e285ae2a38bd72518898ffc0f421b6ac2d7d",
+  "membership_sha256": "52f5cc304479a7799222c2026656630bba671c7db437b2bc7d678477c927a739",
+  "exact_author_membership": false,
+  "scores": [
+    {
+      "clips": 129543,
+      "successes": 129471,
+      "mean_normalized_full_motion_return": 0.9356997732445016,
+      "reference_frames": 47374271,
+      "per_motion_original_sha256": "1f7690820021bd65bfa70d9829331cc15c7a96fe5123f5bf5e23dc192fd4ed71"
+    }
+  ]
+}

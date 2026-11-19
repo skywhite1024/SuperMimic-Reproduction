@@ -1,0 +1,32 @@
+{
+  "status": "all_proxy_per_motion_records_and_original_audits_verified",
+  "kind": "continuous",
+  "original_bounded_JSONs": 14,
+  "original_large_per_motion_JSONs": 2,
+  "main_log_sha256": "7399946946a90dcff198a53505fe5492f69f1ed6e08c08308e29cc9405c4a20d",
+  "source_commit": "a3f45a8d4f4ba8249eee99bf7bbf64cc5ac59170",
+  "membership_sha256": "52f5cc304479a7799222c2026656630bba671c7db437b2bc7d678477c927a739",
+  "exact_author_membership": false,
+  "scores": [
+    {
+      "collection_steps": 80001,
+      "clips": 129543,
+      "successes": 129469,
+      "mean_normalized_full_motion_return": 0.9393554501540412,
+      "reference_frames": 47374271,
+      "real_transitions": 327684096,
+      "saved_snapshot_wall_seconds": 9295.920103691518,
+      "per_motion_original_sha256": "7b62c116ee698c69118bdf4e92b726aa62388f65fa5f0468b0608fce35266024"
+    },
+    {
+      "collection_steps": 320001,
+      "clips": 129543,
+      "successes": 129535,
+      "mean_normalized_full_motion_return": 0.9542036811006622,
+      "reference_frames": 47374271,
+      "real_transitions": 1310724096,
+      "saved_snapshot_wall_seconds": 36512.94987105206,
+      "per_motion_original_sha256": "6b22a5abd887c5a3cf1190758190bc21689b1cb58de86877384577b0cac28f9c"
+    }
+  ]
+}

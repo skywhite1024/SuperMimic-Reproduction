@@ -1434,3 +1434,56 @@ rate scaling. Timing comparisons also account for the single-H100 run's
 captured learner updates. The fixed-start tracking evaluation runs separately
 on the same ordered proxy membership as the single-H100 evaluation.
 [Verified two-H100 training records](../official-reproduction-20261112/native-bones-rank2-quality-1119z/validation.json).
+
+## 85. Full BONES tracking after continuous single-H100 training
+
+One training process retained the 80,001- and 320,001-collection snapshots
+after 2.58 and 10.14 hours of training. Both fixed-start evaluations used the
+same ordered 129,543-motion proxy and 47,374,271 reference frames. All 14
+bounded JSON records and both original per-motion results passed SHA256 and
+independent score checks. The cloud audits reread the saved initial states
+and trajectory arrays.
+
+| Policy | Real training transitions | Mean normalized return | Completed | Failed |
+| --- | ---: | ---: | ---: | ---: |
+| SuperMimic, single H100, 80,001 collections | 327,684,096 | 0.939355 | 129,469 | 74 |
+| SuperMimic, single H100, 320,001 collections | 1,310,724,096 | 0.954204 | 129,535 | 8 |
+| SONIC default | — | 0.897531 | 129,351 | 192 |
+| SONIC v1.1 | — | 0.876694 | 129,071 | 472 |
+
+Extended SuperMimic training improved mean return by 0.014848 on the full
+proxy. The final checkpoint completed 72 clips that the earlier checkpoint
+failed and failed six that it previously completed. Against SONIC default it
+completed 188 additional individual clips, lost four, and shared four failures.
+Against v1.1 the corresponding counts were 468, four and four. The final
+checkpoint's mean return advantage on jointly completed clips was 0.056022
+against SONIC default and 0.075500 against v1.1.
+
+This is a tracking comparison on our verified in-sample training proxy.
+The paper's published filtered count is 129,514 and exact membership is
+unavailable. The SONIC releases have their own training histories. Refer to
+[paper Appendix F](https://arxiv.org/abs/2610.28480),
+[continuous training verification](../official-reproduction-20261112/bones-feasible-continuous-1119f/validation.json),
+[paired training snapshots](../official-reproduction-20261112/bones-feasible-continuous-1119f/paired-80001-vs-320001.json),
+[paired SONIC default](../official-reproduction-20261112/bones-feasible-continuous-1119f/paired-sonic-default-vs-final-native.json),
+and [paired SONIC v1.1](../official-reproduction-20261112/bones-feasible-continuous-1119f/paired-sonic-v1_1-vs-final-native.json).
+
+## 86. Single- and two-H100 BONES tracking at nearly equal interaction budgets
+
+The two-rank checkpoint was evaluated over the same ordered BONES proxy with
+the same simulator, reset protocol and termination thresholds. All 129,543
+original per-motion records and the six bounded evaluation records passed
+hash, checkpoint provenance and scoring checks. The two-rank model completed
+129,471 clips, with 72 failures and mean normalized return 0.935700. Its
+single-H100 reference used 4,096 fewer training transitions, completed 129,469
+clips, and scored 0.939355. The two-rank policy alone completed 57 clips, the
+single-H100 policy alone completed 55, and both failed 17. Mean return on their
+jointly completed clips was 0.003632 lower for the two-rank checkpoint.
+
+Each configuration has one seed. Both policies track most of the proxy, and
+their completion and return comparisons favor different checkpoints. The
+one-H100 learner uses captured updates. The two-H100 learner uses eager
+updates, cross-rank synchronization and scaled learning rates, so their
+wall-clock difference reflects the full configuration.
+[Two-rank evaluation verification](../official-reproduction-20261112/native-bones-rank2-eval-1119aa/validation.json)
+and [paired scores](../official-reproduction-20261112/native-bones-rank2-eval-1119aa/paired-matched-single-vs-dual.json).
