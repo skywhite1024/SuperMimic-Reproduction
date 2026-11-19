@@ -1,0 +1,31 @@
+{
+  "status": "actual_two_H100_NCCL_native_BONES_training_originals_verified",
+  "job_uid": "d24c8c340b6a46aa84afd80cb3162c15",
+  "original_JSON_receipts": 6,
+  "all_byte_counts_and_SHA256_verified": true,
+  "source_files_bound_to_actual_log": true,
+  "source_commit": "be32160ec7cb3c530a185f4b7661bc301dd7cde0",
+  "H100": 2,
+  "ranks": 2,
+  "local_collection_steps": 40001,
+  "global_real_simulator_steps": 327688192,
+  "native_learner_outer_updates_per_rank": 15998,
+  "optimizer_steps_per_rank": {
+    "world_model_optimizer_steps": 159980,
+    "actor_optimizer_steps": 15998,
+    "critic_optimizer_steps": 319960
+  },
+  "learned_networks_changed_and_identical_across_ranks": true,
+  "independent_real_initial_states": true,
+  "actor_real_observation_count_both_ranks": 327688192,
+  "sampler_value_count_effort_hashes_identical": true,
+  "native_weight_files_cloud_hash_and_tensor_readback_verified": 6,
+  "raw_weights_downloaded": false,
+  "learner_CUDA_graphs_disabled": true,
+  "quality_evaluation_completed": false,
+  "full_training_state_resume_available": false,
+  "paper_performance_equivalence": false,
+  "paper_results_reproduced": false,
+  "intermediate_rank0_snapshots_verified": 3,
+  "slowest_rank_training_seconds": 13835.999088697135
+}

@@ -1416,3 +1416,21 @@ per-rank advantage normalization, and the shared native return sampler.
 The 60-second endpoint verifies the distributed training and evaluation
 path ahead of a four-H100 timing run.
 [Verified rank and evaluation receipts](../official-reproduction-20261112/ppo-sim-rank2-smoke-1119v/validation.json).
+
+## 84. Two-H100 BONES training at a matched real-interaction budget
+
+The first-order model trained from scratch on the full 129,543-motion proxy.
+Two H100 ranks each collected 40,001 simulator steps across 4,096 independent
+G1 environments. The slowest rank recorded 13,836 training seconds. Across
+both ranks the run used 327,688,192 real simulator transitions, within one
+4,096-environment batch of the single-H100 checkpoint at 80,001 steps.
+
+The six original JSON records confirm 15,998 learner updates per rank and
+identical learned model, running normalization and reset sampler states.
+The worker reloaded all six final model files and the retained rank-zero
+models at 10,001, 20,001 and 30,001 collections. The distributed learner uses
+eager updates for NCCL gradient averaging and the square-root-of-two learning
+rate scaling. Timing comparisons also account for the single-H100 run's
+captured learner updates. The fixed-start tracking evaluation runs separately
+on the same ordered proxy membership as the single-H100 evaluation.
+[Verified two-H100 training records](../official-reproduction-20261112/native-bones-rank2-quality-1119z/validation.json).
