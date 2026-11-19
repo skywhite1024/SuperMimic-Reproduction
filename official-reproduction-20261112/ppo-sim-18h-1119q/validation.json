@@ -1,0 +1,92 @@
+{
+  "status": "timed_ppo_sim_training_and_native_eval_verified",
+  "timing_smoke": false,
+  "original_JSONs": 38,
+  "log_sha256": "05d6f9710fb41cc9c53bb9349ebb60cce32b2cda2a3427b9f5298a785812b977",
+  "source_commit": "deeb2138369ff2ab5e0ebbf388c55f2c8d19c38f",
+  "checkpoints": [
+    3600,
+    7200,
+    14400,
+    28800,
+    43200,
+    57600,
+    64800
+  ],
+  "updates": 34275,
+  "real_simulator_steps": 6738739200,
+  "clock_seconds": 64803.61263398826,
+  "scores": [
+    {
+      "clips": 40,
+      "successes": 15,
+      "mean_normalized_full_motion_return": 0.38767345680391435,
+      "reference_frames": 441140,
+      "ppo_update": 1895,
+      "crossed_training_clock_seconds": [
+        3600.0
+      ]
+    },
+    {
+      "clips": 40,
+      "successes": 21,
+      "mean_normalized_full_motion_return": 0.43588225652448137,
+      "reference_frames": 441140,
+      "ppo_update": 3783,
+      "crossed_training_clock_seconds": [
+        7200.0
+      ]
+    },
+    {
+      "clips": 40,
+      "successes": 23,
+      "mean_normalized_full_motion_return": 0.4816094329579549,
+      "reference_frames": 441140,
+      "ppo_update": 7577,
+      "crossed_training_clock_seconds": [
+        14400.0
+      ]
+    },
+    {
+      "clips": 40,
+      "successes": 31,
+      "mean_normalized_full_motion_return": 0.5742917290433315,
+      "reference_frames": 441140,
+      "ppo_update": 15135,
+      "crossed_training_clock_seconds": [
+        28800.0
+      ]
+    },
+    {
+      "clips": 40,
+      "successes": 35,
+      "mean_normalized_full_motion_return": 0.664704255915297,
+      "reference_frames": 441140,
+      "ppo_update": 22808,
+      "crossed_training_clock_seconds": [
+        43200.0
+      ]
+    },
+    {
+      "clips": 40,
+      "successes": 39,
+      "mean_normalized_full_motion_return": 0.6860948571550411,
+      "reference_frames": 441140,
+      "ppo_update": 30404,
+      "crossed_training_clock_seconds": [
+        57600.0
+      ]
+    },
+    {
+      "clips": 40,
+      "successes": 37,
+      "mean_normalized_full_motion_return": 0.672355170009188,
+      "reference_frames": 441140,
+      "ppo_update": 34275,
+      "crossed_training_clock_seconds": [
+        64800.0
+      ]
+    }
+  ],
+  "paper_exact_sampler_confirmed": false
+}

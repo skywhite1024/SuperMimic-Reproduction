@@ -1487,3 +1487,34 @@ updates, cross-rank synchronization and scaled learning rates, so their
 wall-clock difference reflects the full configuration.
 [Two-rank evaluation verification](../official-reproduction-20261112/native-bones-rank2-eval-1119aa/validation.json)
 and [paired scores](../official-reproduction-20261112/native-bones-rank2-eval-1119aa/paired-matched-single-vs-dual.json).
+
+## 87. Single-H100 PPO-Sim at 18 hours
+
+The PPO-Sim control used 8,192 real G1 simulation environments and 24
+collections per update. It completed 34,275 updates and 6,738,739,200 real
+transitions after 64,803.61 training seconds. Local validation recovered all
+38 bounded JSONs and the 59,729,113-byte original training record, then
+checked each time crossing against the original per-update clocks and
+recomputed each fixed-start LAFAN40 score from its per-motion records.
+
+| Training hours | Real simulator transitions | Mean normalized return | Completed motions |
+| ---: | ---: | ---: | ---: |
+| 1 | 372,572,160 | 0.387673 | 15/40 |
+| 2 | 743,768,064 | 0.435882 | 21/40 |
+| 4 | 1,489,698,816 | 0.481609 | 23/40 |
+| 8 | 2,975,662,080 | 0.574292 | 31/40 |
+| 12 | 4,484,235,264 | 0.664704 | 35/40 |
+| 16 | 5,977,669,632 | 0.686095 | 39/40 |
+| 18 | 6,738,739,200 | 0.672355 | 37/40 |
+
+The highest sampled PPO-Sim result was the 16-hour checkpoint. All seven
+sampled points remained below 0.82. The earlier first-order SuperMimic H32
+control with a critic reached 0.829007 at the 24,001-collection checkpoint,
+after 98,308,096 real simulator transitions and 0.897 training hours. Both
+used the same ordered LAFAN40 pack, physics, fixed reset and termination
+settings for evaluation. The local PPO-Sim uses the pinned MuJoCo Warp
+runtime and a locally wired return-based reset sampler. Exact sampler
+equivalence to Figure 4 remains unverified.
+[Single-H100 PPO-Sim verification](../official-reproduction-20261112/ppo-sim-18h-1119q/validation.json),
+[first-order control](../official-reproduction-20261112/lafan-h32-nocritic-64k-1119j/curve-comparison.json),
+[paper Figure 4](https://arxiv.org/abs/2610.28480).
