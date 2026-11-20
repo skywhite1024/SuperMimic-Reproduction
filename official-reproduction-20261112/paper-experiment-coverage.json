@@ -2,10 +2,10 @@
   "status": "scope_audit_incomplete_paper_reproduction",
   "goal_complete": false,
   "scope_redefined": false,
-  "as_of": "2026-11-16T06:51:37.112982+08:00",
+  "as_of": "2026-11-20T12:04:33.331318+08:00",
   "paper_pdf_sha256": "fe213017ab062f4acc3965da89abd3c29969163e144a2628a662b8ce46691009",
   "upstream_supermimic_commit": "abc124c1bd5976341034668af3d12c087f2f1f55",
-  "code_and_evidence_commit": "8f0e4d8",
+  "code_and_evidence_commit": "b1f6d0181c50dd70845a63b776288c310228f544",
   "rows": [
     {
       "id": "local_environment",
@@ -48,11 +48,15 @@
         15,
         17
       ],
-      "status": "missing_exact_author_membership",
+      "status": "full_feasibility_proxy_verified_exact_author_membership_unavailable",
       "evidence": [
         "bones-raw-16k-protocol.json"
       ],
-      "qualification": "Full raw142220 is verified but differs from paper. Exact author keyword additions/survivors unavailable; never tune filters merely to match a target count."
+      "qualification": "The raw 142,220 motion pack, the 129,679 name-filtered candidates, the 136 geometric rejections and the 129,543-motion proxy were independently audited. Appendix F reports 129,514 motions. Exact author membership and the published name-filter additions remain unavailable.",
+      "new_evidence": [
+        "bones-proxy-feasibility-1118/filter-result.json",
+        "bones-proxy-feasibility-1118/geometry-direct-verification.json"
+      ]
     },
     {
       "id": "single_gpu_long",
@@ -63,16 +67,18 @@
         16,
         18
       ],
-      "status": "segmented296001_plus24000_weight_warm_tail_full142220_evaluation_and_local_recomputation_verified",
+      "status": "continuous_320001_collection_BONES_proxy_and_two_evaluations_verified",
       "evidence": [
         "checkpoint-series-gpu-validation.json"
       ],
-      "qualification": "Original320001 run interrupted;75 retained native model sets, latest296001. Explicit24000-collection weight warm tail completed with optimizer/replay/sampler/simulator/RNG reset. Combined320001 is segmented, not an exact continuation. Full142220 raw training-corpus evaluation:138010 successes,4210 failures,mean0.9017312887;13 original audit/trainingJSONs and52MB full per-motion result recovered and independently recomputed locally. Exact129514 filtered author benchmark and hardware remain missing.",
+      "qualification": "A fresh one-H100 process retained both the 80,001- and 320,001-collection checkpoints. Full verification on the 129,543-motion proxy found 74 and 8 failures, with mean normalized returns 0.939355 and 0.954204. The historical raw-corpus warm-start experiment remains separately recorded.",
       "current_attempt": "1115d",
       "exact_training_continuation": false,
       "new_evidence": [
         "bones-warm-tail-1115d/validation.json",
-        "bones-warm-tail-1115d/local-per-motion-recomputation.json"
+        "bones-warm-tail-1115d/local-per-motion-recomputation.json",
+        "bones-feasible-continuous-1119f/validation.json",
+        "bones-feasible-continuous-1119f/paired-80001-vs-320001.json"
       ]
     },
     {
@@ -82,18 +88,22 @@
         16,
         18
       ],
-      "status": "actual_two_H100_NCCL_native_gate_completed_originals_verified",
+      "status": "NCCL_BONES_training_and_matched_interaction_evaluation_verified",
       "evidence": [
         "native_data_parallel.py",
         "run_native_two_gpu_gate.py",
         "native-data-parallel-cpu/validation.json"
       ],
-      "qualification": "Corrected1115e passed on2H100/NCCL with172032 global real observations; model/normalizer/sampler value-count-effort states matched. Six originals and source hashes independently verified. First failure1115a remains preserved. No paper-quality, throughput or full-resume equivalence claim.",
+      "qualification": "Two H100s trained from scratch with 327,688,192 simulator transitions, synchronized gradient, model, normalization and sampler state, and the square-root-of-two learning rate. The two-H100 model had 72 failures and 0.935700 mean return. Its single-H100 comparison had 4,096 fewer transitions, 74 failures and 0.939355 mean return on the identical proxy. Wall time reflects eager two-rank updates and captured one-H100 updates.",
       "failure_evidence": "native-two-gpu-gate-1115a/validation.json",
       "retry": "1115e",
       "full_gate_passed": true,
       "new_evidence": [
-        "native-two-gpu-gate-1115e/validation.json"
+        "native-two-gpu-gate-1115e/validation.json",
+        "native-bones-two-gpu-throughput-1119h/validation.json",
+        "native-bones-rank2-quality-1119z/validation.json",
+        "native-bones-rank2-eval-1119aa/validation.json",
+        "native-bones-rank2-eval-1119aa/paired-matched-single-vs-dual.json"
       ]
     },
     {
@@ -104,7 +114,7 @@
         7,
         18
       ],
-      "status": "released_SONIC_common_full40_CUDA_physics_complete_originals_verified_exact_author_benchmark_missing",
+      "status": "both_SONIC_releases_and_native_paired_on_full_BONES_proxy",
       "evidence": [
         "sonic-pretrained-g1-cpu-1115/validation.json",
         "sonic-pretrained-g1-cpu-1115/source-files-read.json",
@@ -112,7 +122,7 @@
         "sonic-standing-cpu-1115/result.json",
         "sonic-standing-cpu-1115/independent-audit.json"
       ],
-      "qualification": "Released default SONIC G1 models and configurations pinned bySHA256. Original/derived batchedCPU parity passed. Common corrected-v2 LAFAN40 CUDA physics completed27successes/13failures,mean0.6019311578. All9originalJSONs and40native reward/termination records locally verified; all cloud arrays and initial states audited. Same18 posthoc subgroup15/18,mean0.7237865100. OwnSONICactuation retained; ONNXinferenceCPU. Exact129514authorfilteredbenchmark,originalSONICtrainingresetandpretrainingcomputecomparisonremainunconfirmed.",
+      "qualification": "The default and v1.1 CUDA policies had 192 and 472 failures. Fresh 320,001-collection SuperMimic had 8 failures on the same ordered proxy. Return, failure type and per-motion paired completion were checked from original records. Author-exact benchmark membership and external-policy training compute accounting remain open.",
       "latest_evidence": [
         "sonic-standing-cpu-v2-1115/independent-audit.json",
         "sonic-dynamic-cpu-v2-1115/independent-audit.json"
@@ -129,7 +139,12 @@
       },
       "new_evidence": [
         "sonic-cloud-full40-1116a/validation.json",
-        "common-lafan40-comparison-1116.json"
+        "common-lafan40-comparison-1116.json",
+        "sonic-bones-cuda-full-1119m/validation.json",
+        "sonic-v11-bones-full-1119t/full-validation.json",
+        "sonic-v11-bones-full-1119t/paired-default-vs-v1_1.json",
+        "bones-feasible-continuous-1119f/paired-sonic-default-vs-final-native.json",
+        "bones-feasible-continuous-1119f/paired-sonic-v1_1-vs-final-native.json"
       ]
     },
     {
@@ -139,7 +154,7 @@
         6,
         7
       ],
-      "status": "native9point_and_fresh_PPO2048_sixpoint_full40_learning_curves_verified",
+      "status": "one_H100_18h_and_seven_LAFAN40_evaluations_verified_four_H100_running",
       "evidence": [
         "manual-reset-v2-lafan40-result.json",
         "manual-reset-v2-lafan40-accounting.json",
@@ -151,7 +166,7 @@
         "learning-curve-paused-points-1113ag.json",
         "user-pause-20261113.json"
       ],
-      "qualification": "NativeH32 single-seed first observed fixed-evaluation mean>=.82 at24001collections/98.308096million real steps/53.84runner minutes; final64001 gives40/40 and.85498. Fresh PPO2048/402.653184million real steps gives19/40 and.41899, with no sampled point>=.82. All39PPO originals verified after re-export; original job exit1 during2MB receipt export is retained. No author-confirmed PPO hyperparameters, equal-quality speedup or18h1/4/8GPU comparison.",
+      "qualification": "The full single-H100 18-hour study recovered all 38 bounded JSONs and the original training ledger. Its best sampled return was 0.686095 at 16 hours, and its final return was 0.672355. The native H32 critic control reached 0.829007 at 0.897 training hours on the same fixed-start proxy. Four-H100 training has saved the 12-hour checkpoint. The 8-H100 configuration is outside the current four-card authorization. Exact author reset sampling remains unconfirmed.",
       "PPO_Sim_integration": {
         "status": "actual8192G1_PPO_gate_completed_and_originals_verified",
         "uid": "12b951aa6d3c4027b867c5591b1af8dc",
@@ -166,7 +181,10 @@
       },
       "new_evidence": [
         "ppo-sim-2048-1115c/validation.json",
-        "finite-comparison-1115/summary.json"
+        "finite-comparison-1115/summary.json",
+        "lafan-h32-nocritic-64k-1119j/curve-comparison.json",
+        "ppo-sim-rank2-smoke-1119v/validation.json",
+        "ppo-sim-18h-1119q/validation.json"
       ],
       "native_final_successes": 40,
       "native_final_mean": 0.8549796937353648,
@@ -220,7 +238,7 @@
         7,
         18
       ],
-      "status": "not_executed",
+      "status": "four_BONES_duration_conditions_and_eight_step_forecast_proxy_verified",
       "evidence": [
         "evaluate_saved_wm_forecasts.py",
         "saved-wm-forecast-cpu-validation.json",
@@ -228,7 +246,11 @@
         "saved-wm-forecast-validation.json",
         "saved-wm-forecast-receipt-ledger.json"
       ],
-      "qualification": "1/7/40/264hour dataset sweep not executed. Explicit8transition frozen1k/16k WM diagnostic completed on every437276 identical correctedLAFAN40 physical window; rawarrays cloud-verified and sixoriginalJSON recovered. NativewindowH8scores7; exactpaperonline distribution/aggregation remains unresolved."
+      "qualification": "The 1, 7, 40 and full 263.19-hour proxy conditions completed 16,001 collections each and were scored on 64 common training clips. The eight-step normalized forecast errors are recorded. Exact author memberships, the full reference durations and the Figure 3 evaluation protocol remain open.",
+      "new_evidence": [
+        "bones-duration-1118c/validation.json",
+        "bones-duration-1118c/study.json"
+      ]
     },
     {
       "id": "rollout_speed",
@@ -255,7 +277,7 @@
       "paper_pages": [
         8
       ],
-      "status": "four_PPO_WM_curves_and_six_interrupted_first_order_snapshot_full18_evaluations_verified",
+      "status": "four_finite_PPO_WM_curves_and_fresh_continuous_same18_control_verified",
       "evidence": [
         "ppo-wm-native-runtime-cpu-validation.json",
         "ppo-wm-integration-run-plan.json",
@@ -266,7 +288,7 @@
         "figure5-comparison-contract-review.json",
         "ppo-log-interval-local-diagnostic.json"
       ],
-      "qualification": "All104PPO-WMoriginalsplus42read-onlysame18controloriginalsverified. Allsixpre-stopnativecheckpointsrehashedand108full18recordsrecomputed. Native16001collections/65,540,096realtransitions reaches18/18,mean0.8540746311;20001gives17/18,mean0.8395342210. PPO-WMbest16kx32at2048updates/83,886,080realtransitionsgives12/18,mean0.6012684556. Allfailuresretained. Fourcasepose-sampleslocallyaudited10800frames/12decodedwindowvideos. ExactauthorFigure5membership/hypers,matchedclocks/multiseed,andpaper64x/1.67xspeedupsunverified. Original64001controltrainingremainsinterrupted;noexactcontinuationclaim.",
+      "qualification": "Four finite PPO-WM settings and the uninterrupted native 64,001-collection control were verified on the same 18 locomotion clips. The native curve first reached 0.832249 at 16,001 collections and ended at 0.880705. The best finite PPO-WM setting reached 0.601268. The matched Figure 5 training-episode metric and long imagined-transition budgets remain unverified.",
       "current_batch_learning": {
         "frozen_source_commit": "9594228b8411247729aa7d63d13150636d868f9a",
         "batch_shapes": [
@@ -363,7 +385,9 @@
       "original64001_control_training_complete": false,
       "new_evidence": [
         "interrupted-control18-1116b/validation.json",
-        "finite-same18-comparison-1116.json"
+        "finite-same18-comparison-1116.json",
+        "lafan-locomotion18-control-1118b/validation.json",
+        "lafan-locomotion18-control-1118b/comparison.json"
       ]
     },
     {
@@ -373,18 +397,19 @@
         7,
         8
       ],
-      "status": "all_ten_matched16k_horizon_critic_endpoints_originals_verified",
+      "status": "ten_16k_endpoints_and_matched_H32_64001_collection_curves_verified",
       "evidence": [
         "critic-free-h32-run-plan.json",
         "critic-free-main-1113ah/receipt-ledger.json",
         "critic-free-main-1113ah/validation.json",
         "critic-free-main-1113ah/critic-endpoint-comparison.json"
       ],
-      "qualification": "H8/16/32/64/128 each with/without critic;seed42,4096env,4k save cadence,16001collections. All400 main motion evaluations and200 paired clips retained;146 new originalJSONs plus earlierH32 pair verified. Critic helps short-horizon endpoints; no-critic higher mean atH64/H128 in this one seed. Full training-episode-return/time-to-threshold curves and multiple seeds remain missing.",
+      "qualification": "The 16,001-collection endpoints cover H8, H16, H32, H64 and H128 with and without critic. The H32 pair also has full fixed-start LAFAN40 curves through 64,001 collections. Figure 4 training-episode-return curves and long-horizon time-to-threshold comparisons remain unverified.",
       "new_evidence": [
         "critic-grid-h8h16-1115f/validation.json",
         "critic-grid-h64h128-1115g/validation.json",
-        "finite-comparison-1115/summary.json"
+        "finite-comparison-1115/summary.json",
+        "lafan-h32-nocritic-64k-1119j/curve-comparison.json"
       ],
       "remaining_16k_grid": {
         "status": "complete_originals_verified",
@@ -420,9 +445,12 @@
       "paper_pages": [
         8
       ],
-      "status": "not_executed",
+      "status": "two_same_horizon_checkpoint_pairs_and_132_push_trials_verified",
       "evidence": [],
-      "qualification": "No push trajectories/settling-time measurement; success counts and NPZ integrity do not establish recovery."
+      "qualification": "The H32 with-critic and no-critic pairs used the same recorded LAFAN first-frame pose, four directions, eight speeds and the same recovery gate. Across the nearest-return pair, falls were 5 versus 9 and recoveries 27 versus 23. In the equal-budget pair they were 3 versus 11 and 15 versus 21. This simulator replica uses the verified source motion pose. Exact author T-pose conditions and physical G1 trials remain open.",
+      "new_evidence": [
+        "push-h32-matched-1119x/validation.json"
+      ]
     },
     {
       "id": "velocity_task",
@@ -474,10 +502,10 @@
     }
   ],
   "original_scope_retained": true,
-  "no_new_cloud_jobs_submitted_by_this_audit": false,
-  "next_execution_priority": "Remaining original-scope data-duration scaling, matched-return push recovery, exact benchmark/protocol alignment and authorized multidevice work. No full-paper completion claim.",
-  "last_status_update": "2026-11-16T06:51:37.112982+08:00",
-  "execution_status": "active_finite_milestone_complete_full_paper_work_remains",
+  "no_new_cloud_jobs_submitted_by_this_audit": true,
+  "next_execution_priority": "Finish the four-H100 PPO-Sim timing run and all seven LAFAN40 evaluations. Verify its original training ledger and compare against the verified single-H100 control at the same checkpoints.",
+  "last_status_update": "2026-11-20T12:04:33.331318+08:00",
+  "execution_status": "active_four_H100_PPO_Sim_18h_training",
   "resume_requires_explicit_user_request": false,
   "execution_priorities_before_user_pause": [
     "Finish frozen raw320k and separately evaluate finalmodel with correctedv2 plus completearrayaudit",
@@ -491,5 +519,5 @@
     "previous_pause_record_preserved": "user-pause-20261115.json"
   },
   "previous_as_of_before_resumption": "2026-11-13T15:36:32.821206+08:00",
-  "requested_nonterminal_H100": 0
+  "requested_nonterminal_H100": 4
 }
