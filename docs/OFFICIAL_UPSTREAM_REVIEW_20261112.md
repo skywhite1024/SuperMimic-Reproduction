@@ -1,5 +1,7 @@
 # SuperMimic 官方开源与本地迁移审查
 
+**11月22日00:15阶段更新：** 四卡 H100 PPO-Sim 18 小时运行及七个 LAFAN40 时间点已完成原始收据回收、验证，并与单卡对照；最终四卡达到 40/40、0.785903，四卡与单卡实际仿真转移比为 3.7785。8 卡、作者精确采样器和论文精确数据成员仍未验证。
+
 **11月13日11:35阶段更新：** 全284,480份v2保存轨迹及首状态审核、11规模H100吞吐诊断、两组100k速度训练及完整5,376试验/数组审核均完成，原始收据已回收。速度命令误差中位数为RL5.53%、蒸馏23.46%，跌倒分别0/2,688与3/2,688；raw320k长训练继续。下文按阶段保留历史观察；最新验收见第33–36节，未完成项目仍列在[全论文范围表](../official-reproduction-20261112/paper-experiment-coverage.json)。
 
 **11月13日初始化协议更正：** 下列旧LAFAN40表格及第9节原始BONES成绩来自本地 `manual-reset-v1` 评估入口。手动设置参考帧后，该入口读取了上一次reset的缓存观测，初始历史也可能受影响；执行器历史还需在最终姿态写入后回填。原始文件、全部失败及计分重算均保留，但这些成绩不能作为“初始观测已验证为参考首帧”的结果。修正后的v2评估必须重跑，见[第18节](#18-手动重置缓存回归与旧评估协议纠正)。三项运行中训练使用原生自动重置，不受此本地离线评估流程影响。
@@ -1518,3 +1520,23 @@ equivalence to Figure 4 remains unverified.
 [Single-H100 PPO-Sim verification](../official-reproduction-20261112/ppo-sim-18h-1119q/validation.json),
 [first-order control](../official-reproduction-20261112/lafan-h32-nocritic-64k-1119j/curve-comparison.json),
 [paper Figure 4](https://arxiv.org/abs/2610.28480).
+
+## 88. Four-H100 PPO-Sim timing curve and matched single-H100 comparison
+
+The four-H100 run used four synchronized ranks, 8,192 local environments per rank, 32,768 global environments, rollout length 24, seed 42 and the same fixed-start LAFAN40 evaluation contract as the verified one-H100 control. The official source commit was `7f394693eba91056120be3fcfe7605dbabd6c9f1`. The cloud terminal ended with `PPO_SIM_TIMED_JOB_EXIT=0`, and the four rank receipts reported `cuda:0` through `cuda:3`. No imagined transitions or world-model updates were counted.
+
+| Training hours | Four-H100 real simulator transitions | Four-H100 mean normalized return | Completed motions | PPO updates |
+| ---: | ---: | ---: | ---: | ---: |
+| 1 | 1,380,974,592 | 0.481333 | 21/40 | 1,756 |
+| 2 | 2,782,396,416 | 0.622408 | 33/40 | 3,538 |
+| 4 | 5,589,958,656 | 0.689617 | 39/40 | 7,108 |
+| 8 | 11,244,404,736 | 0.732132 | 38/40 | 14,298 |
+| 12 | 16,946,036,736 | 0.754964 | 39/40 | 21,548 |
+| 16 | 22,626,435,072 | 0.782775 | 40/40 | 28,771 |
+| 18 | 25,462,308,864 | 0.785903 | 40/40 | 32,377 |
+
+At 18 hours, the one-H100 control had 6,738,739,200 real simulator transitions, 37/40 completed motions and mean normalized return 0.672355. The four-H100 run therefore processed 3.7785 times as many real simulator transitions in nearly the same 64,803-second wall-clock budget. The measured ratio ranged from 3.7066 to 3.7852 at the earlier checkpoints. Both curves remained below the 0.82 reference line, so neither run has a verified time-to-0.82 point.
+
+The comparison rechecked exact ordered motion identities, all protocol fields, seed, reset version, termination rules and physics fields. The paired mean return difference at the final checkpoint was +0.113548 for four H100s, and the jointly completed motions contributed +0.086131. These are matched fixed-start results for this local reproduction contract. They do not establish the paper's Figure 4 result because the author sampler semantics, the exact paper motion membership and the 8-H100 curve remain unavailable.
+
+The 53,674,975-byte four-H100 platform log and the 7,659,521-byte readback log were retained outside the publication checkout. The readback recovered the 56,479,748-byte original `training/rank-0/result.json` with SHA256 `4ff28c4a863d40f84ac5c5e1e097f2c243755dd010cc7074f27274061b785a93`. The compact publication artifacts include [four-H100 validation](../official-reproduction-20261112/ppo-sim-single-vs-four-1120a/four-h100-validation.json), [readback validation](../official-reproduction-20261112/ppo-sim-single-vs-four-1120a/four-h100-readback-validation.json), [matched comparison](../official-reproduction-20261112/ppo-sim-single-vs-four-1120a/comparison.json) and [comparison figure](../official-reproduction-20261112/ppo-sim-single-vs-four-1120a/comparison.png).

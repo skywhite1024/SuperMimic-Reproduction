@@ -1,0 +1,16 @@
+{
+  "status": "large_original_training_json_recovered",
+  "job_uid": "624d5b00deed4a4faca7a4025c3b9dbc",
+  "bootstrap_sha256": "e120f8c7abf7a351d939a4c6b45d6b074e2c105cc612c6e7df3d8e375222b243",
+  "log_sha256": "7b3beffb496054da8bb4913753e297ea78aa12f69190190c6a50ef289fb5edaf",
+  "log_bytes": 7659521,
+  "receipts": [
+    {
+      "i": 0,
+      "path": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-rank4-18h-1120a/training/rank-0/result.json",
+      "bytes": 56479748,
+      "sha256": "4ff28c4a863d40f84ac5c5e1e097f2c243755dd010cc7074f27274061b785a93",
+      "chunks": 27008
+    }
+  ]
+}

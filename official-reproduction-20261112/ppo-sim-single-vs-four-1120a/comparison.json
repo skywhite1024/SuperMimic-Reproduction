@@ -1,0 +1,306 @@
+{
+  "clips": 40,
+  "reference_frames": 441140,
+  "exact_ordered_identities_match": true,
+  "evaluation_protocol_fields_match": [
+    "motion_files",
+    "num_envs",
+    "seed",
+    "manual_reset_version",
+    "batch_order",
+    "batch_reset",
+    "termination_terms",
+    "physics",
+    "native_joint_limit_clipping_on_reset"
+  ],
+  "validation_sha256": {
+    "one_h100": "62a6a6f8e502591104b4db5e1c72b1950162c9fde7f4e57ddc07c3830c33802f",
+    "four_h100": "c552a2915e4055eec29f22a4a18c73499c5b97ece177eabc59acfb41be9dd2b0"
+  },
+  "figure_sha256": "6a763457fafbed373e01bfd7ff71c5860696d5e302bc6dd9e9fc72596e27795a",
+  "points": [
+    {
+      "target_training_hours": 1,
+      "one_h100": {
+        "successes": 15,
+        "failures": 25,
+        "success_fraction": 0.375,
+        "mean_normalized_full_motion_return": 0.38767345680391435,
+        "frame_weighted_normalized_return": 0.4061218314068256,
+        "failure_terms": {
+          "anchor_ori": 2,
+          "anchor_pos": 23
+        },
+        "original_sha256": "8cc8d3cc9a8a2765f70ed3e0a2ddeb635e990f898e803c54e46049bb56e6cc79",
+        "ppo_update": 1895,
+        "saved_at_training_seconds": 3605.7931250929832,
+        "real_simulator_transitions": 372572160
+      },
+      "four_h100": {
+        "successes": 21,
+        "failures": 19,
+        "success_fraction": 0.525,
+        "mean_normalized_full_motion_return": 0.48133339379074275,
+        "frame_weighted_normalized_return": 0.5050224985709758,
+        "failure_terms": {
+          "anchor_ori": 2,
+          "anchor_pos": 17
+        },
+        "original_sha256": "073e26d7fb08ce927497d309c2589dcd8704f0bab3e3dfeb18eb3fdaa8190bf0",
+        "ppo_update": 1756,
+        "saved_at_training_seconds": 3603.385913286358,
+        "real_simulator_transitions": 1380974592
+      },
+      "four_to_one_real_transition_ratio": 3.706596306068602,
+      "mean_paired_return_four_minus_one": 0.09365993698682837,
+      "mean_paired_return_four_minus_one_on_jointly_completed": 0.05505714051193882,
+      "completion": {
+        "both": 13,
+        "single_only": 2,
+        "four_only": 8,
+        "neither": 17
+      }
+    },
+    {
+      "target_training_hours": 2,
+      "one_h100": {
+        "successes": 21,
+        "failures": 19,
+        "success_fraction": 0.525,
+        "mean_normalized_full_motion_return": 0.43588225652448137,
+        "frame_weighted_normalized_return": 0.4537048106558175,
+        "failure_terms": {
+          "anchor_ori": 4,
+          "anchor_pos": 15
+        },
+        "original_sha256": "65e46fc3dda8100f2515a42459bd9f832465d881fa4e5960dce510161d4f719b",
+        "ppo_update": 3783,
+        "saved_at_training_seconds": 7201.949716813862,
+        "real_simulator_transitions": 743768064
+      },
+      "four_h100": {
+        "successes": 33,
+        "failures": 7,
+        "success_fraction": 0.825,
+        "mean_normalized_full_motion_return": 0.6224084989597489,
+        "frame_weighted_normalized_return": 0.635980255249774,
+        "failure_terms": {
+          "anchor_pos": 7
+        },
+        "original_sha256": "50d60a45a1f2b57490d40ea7bb7a769cc901cf1b79bc591d107192294fc85da3",
+        "ppo_update": 3538,
+        "saved_at_training_seconds": 7201.902901954949,
+        "real_simulator_transitions": 2782396416
+      },
+      "four_to_one_real_transition_ratio": 3.7409463388844832,
+      "mean_paired_return_four_minus_one": 0.1865262424352676,
+      "mean_paired_return_four_minus_one_on_jointly_completed": 0.06517754317308938,
+      "completion": {
+        "both": 21,
+        "single_only": 0,
+        "four_only": 12,
+        "neither": 7
+      }
+    },
+    {
+      "target_training_hours": 4,
+      "one_h100": {
+        "successes": 23,
+        "failures": 17,
+        "success_fraction": 0.575,
+        "mean_normalized_full_motion_return": 0.4816094329579549,
+        "frame_weighted_normalized_return": 0.5053682370501974,
+        "failure_terms": {
+          "anchor_ori": 1,
+          "anchor_pos": 16
+        },
+        "original_sha256": "eee162c5429ed23b1aca2beff38d49e415b218c4df9e01807a4382ba22a839e6",
+        "ppo_update": 7577,
+        "saved_at_training_seconds": 14415.358767863363,
+        "real_simulator_transitions": 1489698816
+      },
+      "four_h100": {
+        "successes": 39,
+        "failures": 1,
+        "success_fraction": 0.975,
+        "mean_normalized_full_motion_return": 0.6896167223400396,
+        "frame_weighted_normalized_return": 0.6930477801964086,
+        "failure_terms": {
+          "anchor_pos": 1
+        },
+        "original_sha256": "e818e0b9e453c43d6266c16c16110e2953ccb8cb9d65f1918cfe54d65519ac5d",
+        "ppo_update": 7108,
+        "saved_at_training_seconds": 14402.440185349435,
+        "real_simulator_transitions": 5589958656
+      },
+      "four_to_one_real_transition_ratio": 3.7524086049887817,
+      "mean_paired_return_four_minus_one": 0.20800728938208463,
+      "mean_paired_return_four_minus_one_on_jointly_completed": 0.09489343186735127,
+      "completion": {
+        "both": 22,
+        "single_only": 1,
+        "four_only": 17,
+        "neither": 0
+      }
+    },
+    {
+      "target_training_hours": 8,
+      "one_h100": {
+        "successes": 31,
+        "failures": 9,
+        "success_fraction": 0.775,
+        "mean_normalized_full_motion_return": 0.5742917290433315,
+        "frame_weighted_normalized_return": 0.5947191744116724,
+        "failure_terms": {
+          "anchor_ori+anchor_pos": 1,
+          "anchor_pos": 8
+        },
+        "original_sha256": "21e37d0d7ccf01c4903ebf1e4bde9d244831e151cd9a2310c55bf2a30dcee11b",
+        "ppo_update": 15135,
+        "saved_at_training_seconds": 28801.605787821114,
+        "real_simulator_transitions": 2975662080
+      },
+      "four_h100": {
+        "successes": 38,
+        "failures": 2,
+        "success_fraction": 0.95,
+        "mean_normalized_full_motion_return": 0.7321315453504749,
+        "frame_weighted_normalized_return": 0.7363838590135551,
+        "failure_terms": {
+          "anchor_ori": 1,
+          "anchor_pos": 1
+        },
+        "original_sha256": "c426b3e4d3351b307c4aad8f00693a16414cb1660e499771377f9e4583cbe8ba",
+        "ppo_update": 14298,
+        "saved_at_training_seconds": 28802.432424247265,
+        "real_simulator_transitions": 11244404736
+      },
+      "four_to_one_real_transition_ratio": 3.778790882061447,
+      "mean_paired_return_four_minus_one": 0.15783981630714333,
+      "mean_paired_return_four_minus_one_on_jointly_completed": 0.08736392208555527,
+      "completion": {
+        "both": 30,
+        "single_only": 1,
+        "four_only": 8,
+        "neither": 1
+      }
+    },
+    {
+      "target_training_hours": 12,
+      "one_h100": {
+        "successes": 35,
+        "failures": 5,
+        "success_fraction": 0.875,
+        "mean_normalized_full_motion_return": 0.664704255915297,
+        "frame_weighted_normalized_return": 0.6738943386898458,
+        "failure_terms": {
+          "anchor_pos": 5
+        },
+        "original_sha256": "032c62db076e31080e5710013572db18dc96bed56575a74d5f455ece54fa187c",
+        "ppo_update": 22808,
+        "saved_at_training_seconds": 43201.94915444031,
+        "real_simulator_transitions": 4484235264
+      },
+      "four_h100": {
+        "successes": 39,
+        "failures": 1,
+        "success_fraction": 0.975,
+        "mean_normalized_full_motion_return": 0.7549640778452289,
+        "frame_weighted_normalized_return": 0.7591713648127001,
+        "failure_terms": {
+          "anchor_pos": 1
+        },
+        "original_sha256": "741207fe1e3c4d7968c1c558f5d06da1ea3ab2454f93f407a63148dca9d0571b",
+        "ppo_update": 21548,
+        "saved_at_training_seconds": 43202.76625876501,
+        "real_simulator_transitions": 16946036736
+      },
+      "four_to_one_real_transition_ratio": 3.7790249035426164,
+      "mean_paired_return_four_minus_one": 0.09025982192993191,
+      "mean_paired_return_four_minus_one_on_jointly_completed": 0.0690837751276195,
+      "completion": {
+        "both": 35,
+        "single_only": 0,
+        "four_only": 4,
+        "neither": 1
+      }
+    },
+    {
+      "target_training_hours": 16,
+      "one_h100": {
+        "successes": 39,
+        "failures": 1,
+        "success_fraction": 0.975,
+        "mean_normalized_full_motion_return": 0.6860948571550411,
+        "frame_weighted_normalized_return": 0.6920359588083804,
+        "failure_terms": {
+          "anchor_pos": 1
+        },
+        "original_sha256": "593dfa2ab7236f737edab482c865a20329cfc4e082ac11aa32c9a4b46700121a",
+        "ppo_update": 30404,
+        "saved_at_training_seconds": 57603.38092127815,
+        "real_simulator_transitions": 5977669632
+      },
+      "four_h100": {
+        "successes": 40,
+        "failures": 0,
+        "success_fraction": 1.0,
+        "mean_normalized_full_motion_return": 0.7827750012611345,
+        "frame_weighted_normalized_return": 0.7856369833435815,
+        "failure_terms": {},
+        "original_sha256": "04fe99b5ed0c4495227739e9686cf54ad0d3bc1997012fb2ee157f9383eb0146",
+        "ppo_update": 28771,
+        "saved_at_training_seconds": 57602.11853559688,
+        "real_simulator_transitions": 22626435072
+      },
+      "four_to_one_real_transition_ratio": 3.7851598473885013,
+      "mean_paired_return_four_minus_one": 0.0966801441060934,
+      "mean_paired_return_four_minus_one_on_jointly_completed": 0.08741272433175044,
+      "completion": {
+        "both": 39,
+        "single_only": 0,
+        "four_only": 1,
+        "neither": 0
+      }
+    },
+    {
+      "target_training_hours": 18,
+      "one_h100": {
+        "successes": 37,
+        "failures": 3,
+        "success_fraction": 0.925,
+        "mean_normalized_full_motion_return": 0.672355170009188,
+        "frame_weighted_normalized_return": 0.6826015626965957,
+        "failure_terms": {
+          "anchor_ori": 1,
+          "anchor_pos": 2
+        },
+        "original_sha256": "d45854a9e63a208856436e18e8629c8ab3c454ff771dfe2e74169d9a7a5edbf7",
+        "ppo_update": 34275,
+        "saved_at_training_seconds": 64803.097070768476,
+        "real_simulator_transitions": 6738739200
+      },
+      "four_h100": {
+        "successes": 40,
+        "failures": 0,
+        "success_fraction": 1.0,
+        "mean_normalized_full_motion_return": 0.7859031455954594,
+        "frame_weighted_normalized_return": 0.7886973788772702,
+        "failure_terms": {},
+        "original_sha256": "88b44cccaaeb6f1f3958a5d6ee2e0913df35f1c0b689d9bcea456f88d33117f7",
+        "ppo_update": 32377,
+        "saved_at_training_seconds": 64802.61687835306,
+        "real_simulator_transitions": 25462308864
+      },
+      "four_to_one_real_transition_ratio": 3.7784974471188915,
+      "mean_paired_return_four_minus_one": 0.11354797558627143,
+      "mean_paired_return_four_minus_one_on_jointly_completed": 0.08613100854377703,
+      "completion": {
+        "both": 37,
+        "single_only": 0,
+        "four_only": 3,
+        "neither": 0
+      }
+    }
+  ]
+}

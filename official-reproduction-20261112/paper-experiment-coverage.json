@@ -2,7 +2,7 @@
   "status": "scope_audit_incomplete_paper_reproduction",
   "goal_complete": false,
   "scope_redefined": false,
-  "as_of": "2026-11-20T12:04:33.331318+08:00",
+  "as_of": "2026-11-22T00:15:05.103718+08:00",
   "paper_pdf_sha256": "fe213017ab062f4acc3965da89abd3c29969163e144a2628a662b8ce46691009",
   "upstream_supermimic_commit": "abc124c1bd5976341034668af3d12c087f2f1f55",
   "code_and_evidence_commit": "b1f6d0181c50dd70845a63b776288c310228f544",
@@ -154,7 +154,7 @@
         6,
         7
       ],
-      "status": "one_H100_18h_and_seven_LAFAN40_evaluations_verified_four_H100_running",
+      "status": "one_and_four_H100_18h_curves_verified_8_H100_and_exact_author_sampler_open",
       "evidence": [
         "manual-reset-v2-lafan40-result.json",
         "manual-reset-v2-lafan40-accounting.json",
@@ -164,9 +164,14 @@
         "learning-curve-integration-1113ag/validation.json",
         "learning-curve-main-interim-1113ag.json",
         "learning-curve-paused-points-1113ag.json",
-        "user-pause-20261113.json"
+        "user-pause-20261113.json",
+        "ppo-sim-18h-1119q/validation.json",
+        "ppo-sim-single-vs-four-1120a/comparison.json",
+        "ppo-sim-single-vs-four-1120a/comparison.png",
+        "ppo-sim-single-vs-four-1120a/four-h100-validation.json",
+        "ppo-sim-single-vs-four-1120a/four-h100-readback-validation.json"
       ],
-      "qualification": "The full single-H100 18-hour study recovered all 38 bounded JSONs and the original training ledger. Its best sampled return was 0.686095 at 16 hours, and its final return was 0.672355. The native H32 critic control reached 0.829007 at 0.897 training hours on the same fixed-start proxy. Four-H100 training has saved the 12-hour checkpoint. The 8-H100 configuration is outside the current four-card authorization. Exact author reset sampling remains unconfirmed.",
+      "qualification": "The one-H100 and four-H100 timed PPO-Sim runs used the same frozen LAFAN40 order, fixed-start v2 protocol, seed 42, rollout length 24, 8192 local environments per rank, and no world-model updates. Both seven-point 1, 2, 4, 8, 12, 16 and 18-hour series were recovered from original receipts. The four-H100 run completed 32,377 PPO updates and 25,462,308,864 real simulator transitions in 64,802.6 training seconds, reaching 40/40 and mean normalized return 0.785903. The single-H100 control completed 34,275 updates and 6,738,739,200 transitions, reaching 37/40 and 0.672355. The measured four-to-one transition ratio was 3.71 to 3.79 across checkpoints. The 0.82 return reference was not reached by either final checkpoint. Exact author sampler semantics and the 8-H100 curve remain unavailable.",
       "PPO_Sim_integration": {
         "status": "actual8192G1_PPO_gate_completed_and_originals_verified",
         "uid": "12b951aa6d3c4027b867c5591b1af8dc",
@@ -184,11 +189,13 @@
         "finite-comparison-1115/summary.json",
         "lafan-h32-nocritic-64k-1119j/curve-comparison.json",
         "ppo-sim-rank2-smoke-1119v/validation.json",
-        "ppo-sim-18h-1119q/validation.json"
+        "ppo-sim-18h-1119q/validation.json",
+        "../../official-execution-20261112/ppo-sim-rank4-18h-1120a-recovered/validation.json",
+        "../../official-execution-20261112/ppo-original-readback-1120b-offline-log.txt.gz"
       ],
       "native_final_successes": 40,
       "native_final_mean": 0.8549796937353648,
-      "matched_PPO_comparison_complete": false,
+      "matched_PPO_comparison_complete": true,
       "PPO_Sim_learning_curve_1113ak_interrupted": {
         "status": "user_paused_incomplete",
         "uid": "a30dd1b7e5f2479192d96dc7b80fbc29",
@@ -229,6 +236,29 @@
         "original_job_exit_code": 1,
         "export_failure_retained": true,
         "recovery_uid": "5adbfc9ca528477daffe6960f1fad16a"
+      },
+      "PPO_Sim_timed_comparison": {
+        "status": "same_protocol_single_vs_four_H100_verified",
+        "source_commit": "7f394693eba91056120be3fcfe7605dbabd6c9f1",
+        "four_job_uid": "94cb2fcc681e4c83b7d6ec1e93f8943a",
+        "four_readback_job_uid": "624d5b00deed4a4faca7a4025c3b9dbc",
+        "four_log_sha256": "2c6d67b7888c1fa484b2b9a30c3c8a22510a8ee15ea7ffd72827a511525a6c20",
+        "four_training_updates": 32377,
+        "four_real_simulator_transitions": 25462308864,
+        "four_training_seconds": 64802.61687835306,
+        "four_final_successes": 40,
+        "four_final_mean_normalized_return": 0.7859031455954594,
+        "single_training_updates": 34275,
+        "single_real_simulator_transitions": 6738739200,
+        "single_training_seconds": 64803.097070768476,
+        "single_final_successes": 37,
+        "single_final_mean_normalized_return": 0.672355170009188,
+        "transition_ratio_at_18h": 3.7784974471188915,
+        "time_to_0_82_hours": {
+          "one_H100": null,
+          "four_H100": null
+        },
+        "comparison_artifact": "ppo-sim-single-vs-four-1120a/comparison.json"
       }
     },
     {
@@ -503,9 +533,9 @@
   ],
   "original_scope_retained": true,
   "no_new_cloud_jobs_submitted_by_this_audit": true,
-  "next_execution_priority": "Finish the four-H100 PPO-Sim timing run and all seven LAFAN40 evaluations. Verify its original training ledger and compare against the verified single-H100 control at the same checkpoints.",
-  "last_status_update": "2026-11-20T12:04:33.331318+08:00",
-  "execution_status": "active_four_H100_PPO_Sim_18h_training",
+  "next_execution_priority": "Preserve the verified one-versus-four H100 PPO-Sim curve and continue only the remaining paper-scope gaps. Exact author sampler, 8-H100 curve, exact BONES membership, Figure 3 and Figure 5 conventions, and physical G1 deployment remain open.",
+  "last_status_update": "2026-11-22T00:15:05.103718+08:00",
+  "execution_status": "four_H100_PPO_Sim_18h_verified",
   "resume_requires_explicit_user_request": false,
   "execution_priorities_before_user_pause": [
     "Finish frozen raw320k and separately evaluate finalmodel with correctedv2 plus completearrayaudit",

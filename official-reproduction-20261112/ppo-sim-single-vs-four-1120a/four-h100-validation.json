@@ -1,0 +1,128 @@
+{
+  "status": "timed_ppo_sim_training_and_native_eval_verified",
+  "timing_smoke": false,
+  "original_JSONs": 44,
+  "log_sha256": "2c6d67b7888c1fa484b2b9a30c3c8a22510a8ee15ea7ffd72827a511525a6c20",
+  "source_commit": "7f394693eba91056120be3fcfe7605dbabd6c9f1",
+  "checkpoints": [
+    3600,
+    7200,
+    14400,
+    28800,
+    43200,
+    57600,
+    64800
+  ],
+  "updates": 32377,
+  "real_simulator_steps": 25462308864,
+  "clock_seconds": 64803.121622722596,
+  "scores": [
+    {
+      "clips": 40,
+      "successes": 21,
+      "mean_normalized_full_motion_return": 0.48133339379074275,
+      "reference_frames": 441140,
+      "ppo_update": 1756,
+      "crossed_training_clock_seconds": [
+        3600.0
+      ]
+    },
+    {
+      "clips": 40,
+      "successes": 33,
+      "mean_normalized_full_motion_return": 0.6224084989597489,
+      "reference_frames": 441140,
+      "ppo_update": 3538,
+      "crossed_training_clock_seconds": [
+        7200.0
+      ]
+    },
+    {
+      "clips": 40,
+      "successes": 39,
+      "mean_normalized_full_motion_return": 0.6896167223400396,
+      "reference_frames": 441140,
+      "ppo_update": 7108,
+      "crossed_training_clock_seconds": [
+        14400.0
+      ]
+    },
+    {
+      "clips": 40,
+      "successes": 38,
+      "mean_normalized_full_motion_return": 0.7321315453504749,
+      "reference_frames": 441140,
+      "ppo_update": 14298,
+      "crossed_training_clock_seconds": [
+        28800.0
+      ]
+    },
+    {
+      "clips": 40,
+      "successes": 39,
+      "mean_normalized_full_motion_return": 0.7549640778452289,
+      "reference_frames": 441140,
+      "ppo_update": 21548,
+      "crossed_training_clock_seconds": [
+        43200.0
+      ]
+    },
+    {
+      "clips": 40,
+      "successes": 40,
+      "mean_normalized_full_motion_return": 0.7827750012611345,
+      "reference_frames": 441140,
+      "ppo_update": 28771,
+      "crossed_training_clock_seconds": [
+        57600.0
+      ]
+    },
+    {
+      "clips": 40,
+      "successes": 40,
+      "mean_normalized_full_motion_return": 0.7859031455954594,
+      "reference_frames": 441140,
+      "ppo_update": 32377,
+      "crossed_training_clock_seconds": [
+        64800.0
+      ]
+    }
+  ],
+  "paper_exact_sampler_confirmed": false,
+  "world_size": 4,
+  "rank_receipts": [
+    {
+      "rank": 0,
+      "local_device": "cuda:0",
+      "local_real_transitions": 6365577216,
+      "initial_observation_sha256": "4405769b71852e960c05384eff8fc836ee08b4897c189c58fe8f833750658374",
+      "result_sha256": "4ff28c4a863d40f84ac5c5e1e097f2c243755dd010cc7074f27274061b785a93",
+      "config_sha256": "1761a94925829c694be0203d45bfe48f7bb274c0bf0bc2c0d72e50a6449955e0"
+    },
+    {
+      "rank": 1,
+      "local_device": "cuda:1",
+      "local_real_transitions": 6365577216,
+      "initial_observation_sha256": "c4fd8c0233869e114c55d1a4ecf2b8faefa3987889b026a23b9f11cffc92ce10",
+      "result_sha256": "eb76f320c38e9b58977e28a7775d2a025cb65bc40346ca03ea2610ef9aff28b9",
+      "config_sha256": "3068c8858f2ad45c4e6766b1b1e40fb73f236ed6e395edabd32ddee919e4651c"
+    },
+    {
+      "rank": 2,
+      "local_device": "cuda:2",
+      "local_real_transitions": 6365577216,
+      "initial_observation_sha256": "c88fd719bae2ab017bfa6f631053ce4fe4970ddad5a39f61859a91711f5d1c73",
+      "result_sha256": "843596a5a80d86c4b57aeb077ce422c73a8aa9875bddddb17a06ff7b1e026460",
+      "config_sha256": "ff27deba7dc29a5713177a785c89bd0b93ef7e2da790c7777322a14fa1e04851"
+    },
+    {
+      "rank": 3,
+      "local_device": "cuda:3",
+      "local_real_transitions": 6365577216,
+      "initial_observation_sha256": "87872e2656725e19c9610b1528019396c2f52e7bf132b796286efe02f9e07bf3",
+      "result_sha256": "639aaca091059accd7553fd686b5f0699c2638923080899145348f36d20c2222",
+      "config_sha256": "c3131b39ce3e214316d60b29f0c63a4482576dd505ab16f6712b0650579a7901"
+    }
+  ],
+  "global_actor_observation_count": 25462308864
+}
