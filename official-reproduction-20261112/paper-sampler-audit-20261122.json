@@ -1,0 +1,62 @@
+{
+  "status": "paper_sampler_spec_verified_local_implementation_mismatch",
+  "audited_at": "2026-11-22",
+  "primary_sources": [
+    {
+      "title": "Official SuperMimic project page",
+      "url": "https://supermimic.github.io/",
+      "facts": [
+        "1-second motion timeline bins",
+        "50 percent uniform resets",
+        "40 percent low-return softmax resets",
+        "10 percent keep distribution"
+      ]
+    },
+    {
+      "title": "SuperMimic paper arXiv v3",
+      "url": "https://arxiv.org/abs/2610.28480",
+      "facts": [
+        "paper revised 2026-11-19",
+        "return-based reset sampling described in Appendix D"
+      ]
+    }
+  ],
+  "local_files": {
+    "commands": "upstream\\mjlab_research\\src\\mjlab\\tasks\\tracking\\mdp\\commands.py",
+    "reset_sampler": "upstream\\supermimic\\src\\supermimic\\runners\\reset_sampling.py",
+    "hashes": {
+      "commands.py": {
+        "sha256": "bd93934c3a93d545f63eac126be969338c8f32c590571a6279e0153c889a77a6",
+        "bin_count_expression": "int(self.motion.time_step_total // (0.2 / env.step_dt)) + 1"
+      },
+      "reset_sampling.py": {
+        "sha256": "0d464c706af6d4ecd1fad1b9cab0a7f9fd325ea216bf2988545917aca7b6ce01",
+        "defaults": {
+          "gamma": 0.99,
+          "horizon": 20,
+          "memory": 256,
+          "steepness": 25.0,
+          "explore": 0.5,
+          "keep": 0.1
+        }
+      }
+    }
+  },
+  "comparison": {
+    "paper_timeline_bin_seconds": 1.0,
+    "local_bin_count_expression": "int(self.motion.time_step_total // (0.2 / env.step_dt)) + 1",
+    "local_timeline_bin_seconds": 0.2,
+    "ratio": 0.2,
+    "local_return_mixture": {
+      "explore": 0.5,
+      "focus": 0.4,
+      "keep": 0.1
+    },
+    "local_softmax_steepness": 25.0,
+    "local_v_max_gamma": 0.99,
+    "local_sampler_horizon": 20,
+    "local_sampler_memory": 256,
+    "implementation_match": false
+  },
+  "decision": "Keep the existing four-H100 metrics bound to the released source and record this as a protocol mismatch. A paper-spec sampler ablation requires an explicit code change and a fresh controlled run."
+}

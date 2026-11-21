@@ -169,9 +169,10 @@
         "ppo-sim-single-vs-four-1120a/comparison.json",
         "ppo-sim-single-vs-four-1120a/comparison.png",
         "ppo-sim-single-vs-four-1120a/four-h100-validation.json",
-        "ppo-sim-single-vs-four-1120a/four-h100-readback-validation.json"
+        "ppo-sim-single-vs-four-1120a/four-h100-readback-validation.json",
+        "paper-sampler-audit-20261122.json"
       ],
-      "qualification": "The one-H100 and four-H100 timed PPO-Sim runs used the same frozen LAFAN40 order, fixed-start v2 protocol, seed 42, rollout length 24, 8192 local environments per rank, and no world-model updates. Both seven-point 1, 2, 4, 8, 12, 16 and 18-hour series were recovered from original receipts. The four-H100 run completed 32,377 PPO updates and 25,462,308,864 real simulator transitions in 64,802.6 training seconds, reaching 40/40 and mean normalized return 0.785903. The single-H100 control completed 34,275 updates and 6,738,739,200 transitions, reaching 37/40 and 0.672355. The measured four-to-one transition ratio was 3.71 to 3.79 across checkpoints. The 0.82 return reference was not reached by either final checkpoint. Exact author sampler semantics and the 8-H100 curve remain unavailable.",
+      "qualification": "The one-H100 and four-H100 timed PPO-Sim runs used the same frozen LAFAN40 order, fixed-start v2 protocol, seed 42, rollout length 24, 8192 local environments per rank, and no world-model updates. Both seven-point 1, 2, 4, 8, 12, 16 and 18-hour series were recovered from original receipts. The four-H100 run completed 32,377 PPO updates and 25,462,308,864 real simulator transitions in 64,802.6 training seconds, reaching 40/40 and mean normalized return 0.785903. The single-H100 control completed 34,275 updates and 6,738,739,200 transitions, reaching 37/40 and 0.672355. The measured four-to-one transition ratio was 3.71 to 3.79 across checkpoints. The 0.82 return reference was not reached by either final checkpoint. The official project page now documents the paper sampler at the semantic level: 1-second bins with a 50/40/10 uniform, low-return focus and keep mixture. The checked-in implementation uses 0.2-second bins, so exact paper-sampler equivalence remains open. The 8-H100 curve remains unavailable.",
       "PPO_Sim_integration": {
         "status": "actual8192G1_PPO_gate_completed_and_originals_verified",
         "uid": "12b951aa6d3c4027b867c5591b1af8dc",
@@ -258,7 +259,22 @@
           "one_H100": null,
           "four_H100": null
         },
-        "comparison_artifact": "ppo-sim-single-vs-four-1120a/comparison.json"
+        "comparison_artifact": "ppo-sim-single-vs-four-1120a/comparison.json",
+        "paper_sampler_spec_verified": true,
+        "paper_sampler_implementation_match": false
+      },
+      "paper_sampler_spec": {
+        "status": "public_semantics_verified_local_bin_width_mismatch",
+        "paper_bin_seconds": 1.0,
+        "local_bin_seconds": 0.2,
+        "mixture": {
+          "uniform": 0.5,
+          "low_return_softmax": 0.4,
+          "keep": 0.1
+        },
+        "local_source": "upstream/mjlab_research/src/mjlab/tasks/tracking/mdp/commands.py",
+        "audit": "paper-sampler-audit-20261122.json",
+        "implementation_match": false
       }
     },
     {
@@ -533,9 +549,9 @@
   ],
   "original_scope_retained": true,
   "no_new_cloud_jobs_submitted_by_this_audit": true,
-  "next_execution_priority": "Preserve the verified one-versus-four H100 PPO-Sim curve and continue only the remaining paper-scope gaps. Exact author sampler, 8-H100 curve, exact BONES membership, Figure 3 and Figure 5 conventions, and physical G1 deployment remain open.",
+  "next_execution_priority": "Run a controlled paper-spec sampler ablation with 1-second bins if a fresh four-H100 job is justified. Keep the verified source curve separate. Exact BONES membership, 8-H100 curve and physical G1 deployment remain open.",
   "last_status_update": "2026-11-22T00:15:05.103718+08:00",
-  "execution_status": "four_H100_PPO_Sim_18h_verified",
+  "execution_status": "four_H100_PPO_Sim_verified_paper_sampler_audit_open",
   "resume_requires_explicit_user_request": false,
   "execution_priorities_before_user_pause": [
     "Finish frozen raw320k and separately evaluate finalmodel with correctedv2 plus completearrayaudit",
