@@ -1,0 +1,78 @@
+{
+  "status": "official_upstream_main_review_only",
+  "reviewed_at": "2026-11-22T00:22:46.329253+08:00",
+  "review_branch": "ljd/official-upstream-review-20261122",
+  "validated_baseline_branch": "ljd/official-supermimic",
+  "validated_baseline_commit": "6ffd9cfe",
+  "official_supermimic_previous_commit": "abc124c1bd5976341034668af3d12c087f2f1f55",
+  "official_supermimic_fetched_commit": "5fb92297ab4fe3d86629d9f0c635334791bb0d5f",
+  "official_mjlab_previous_commit": "dd51a9fcc98791a2f0b018b3c7f71a3eefd5ecdd",
+  "official_mjlab_fetched_commit": "379c55e88b1dec73f93943e524a879b2ebbf45c5",
+  "supermimic_changed_files": [
+    "M\t.github/workflows/ci.yml",
+    "D\tsrc/supermimic/envs/motion_tracking_env.py",
+    "D\tsrc/supermimic/envs/multi_task_world_model_env.py",
+    "M\tsrc/supermimic/envs/world_model_env.py",
+    "M\tsrc/supermimic/learners/policy_learner.py",
+    "M\tsrc/supermimic/models.py",
+    "M\tsrc/supermimic/representations.py",
+    "D\tsrc/supermimic/runners/ppo_runner.py",
+    "M\tsrc/supermimic/runners/supermimic_runner.py",
+    "D\tsrc/supermimic/scripts/train_ppo.py",
+    "M\tsrc/supermimic/utils/tracking_reward.py",
+    "M\ttests/conftest.py",
+    "M\ttests/test_buffer_schema.py",
+    "M\ttests/test_maxcoord.py",
+    "D\ttests/test_motion_tracking_env.py",
+    "M\ttests/test_policy_learner.py",
+    "M\ttests/test_runner_history.py",
+    "M\ttests/test_wm_termination.py",
+    "R069\ttests/test_multi_task_world_model_env.py\ttests/test_world_model_env.py",
+    "M\tuv.lock"
+  ],
+  "source_changes": [
+    {
+      "area": "runner",
+      "finding": "Latest main removes ppo_runner.py and train_ppo.py. The remaining supermimic_runner.py keeps world-model plus policy training, but changes reset sampling and policy-update inputs."
+    },
+    {
+      "area": "environment_api",
+      "finding": "Latest main removes motion_tracking_env.py and multi_task_world_model_env.py. WorldModelEnv now takes an mjlab wrapper and TaskSpec list, exposes sample_start, and returns three step outputs."
+    },
+    {
+      "area": "numerics",
+      "finding": "Dynamics and BPTT actor rollouts use CUDA bfloat16 autocast. The collection path no longer adds the previous policy action noise."
+    },
+    {
+      "area": "reward",
+      "finding": "Target linear and angular velocities are rotated into the predicted root heading before velocity tracking terms are scored."
+    },
+    {
+      "area": "dependency_lock",
+      "finding": "Latest lock resolves mjlab 1.6.0, MuJoCo-Warp 4.0.1, rsl-rl-lib 5.5.2, Torch 2.15.0, Warp >=1.15 and viser 1.1.1."
+    },
+    {
+      "area": "sibling_dependency",
+      "finding": "The matching mjlab main also moved to 379c55e8 with a large API and asset update. This review branch leaves the checked-in sibling at dd51a9fc, so it is not claimed as a runnable current-main pair."
+    }
+  ],
+  "compatibility_decision": {
+    "current_four_H100_results_reused": false,
+    "reason": "Changing the runner, reward velocity frame, action noise and dependency stack would invalidate the matched timing protocol. Existing four-H100 scores remain bound to source commit 7f394693eba91056120be3fcfe7605dbabd6c9f1.",
+    "new_H100_run_started": false,
+    "paper_result_claim": false
+  },
+  "local_checks": {
+    "compileall": "passed",
+    "pytest_count": 205,
+    "pytest_status": "passed_with_TORCH_COMPILE_DISABLE=1",
+    "pytest_without_compile_disable": "one test reached the existing Windows C++ compiler prerequisite failure because cl was not present in the current PowerShell environment",
+    "updated_source_training": "not run",
+    "updated_source_cuda_validation": "not run"
+  },
+  "artifacts": {
+    "source_tree": "upstream/supermimic",
+    "review_record": "official-reproduction-20261112/official-upstream-review-20261122.json",
+    "prior_curve": "official-reproduction-20261112/ppo-sim-single-vs-four-1120a/comparison.json"
+  }
+}
