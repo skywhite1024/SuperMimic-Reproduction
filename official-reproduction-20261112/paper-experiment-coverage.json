@@ -5,7 +5,7 @@
   "as_of": "2026-11-22T00:15:05.103718+08:00",
   "paper_pdf_sha256": "fe213017ab062f4acc3965da89abd3c29969163e144a2628a662b8ce46691009",
   "upstream_supermimic_commit": "abc124c1bd5976341034668af3d12c087f2f1f55",
-  "code_and_evidence_commit": "b1f6d0181c50dd70845a63b776288c310228f544",
+  "code_and_evidence_commit": "f9ecd608",
   "rows": [
     {
       "id": "local_environment",
