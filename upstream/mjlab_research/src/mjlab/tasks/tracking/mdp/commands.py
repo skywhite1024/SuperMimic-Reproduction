@@ -178,7 +178,10 @@ class MotionCommand(CommandTerm):
     )
     self.body_quat_relative_w[:, :, 0] = 1.0
 
-    self.bin_count = int(self.motion.time_step_total // (0.2 / env.step_dt)) + 1
+    # The paper describes return-sampler bins as one second of motion time.
+    # Keep this ablation explicit so its source contract cannot be confused
+    # with the released implementation's 0.2-second bins.
+    self.bin_count = int(self.motion.time_step_total // (1.0 / env.step_dt)) + 1
     self.bin_failed_count = torch.zeros(
       self.bin_count, dtype=torch.float, device=self.device
     )
