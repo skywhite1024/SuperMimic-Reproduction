@@ -1,8 +1,8 @@
 {
-  "status": "prepared_paper_sampler_1s_ablation_before_cloud_submission",
+  "status": "running_progress_verified",
   "created_at": "2026-11-22",
   "branch": "ljd/paper-sampler-1s-ablation-20261122",
-  "source_commit": "390e3cd80105b7d8ee8111c1473ee10cad10abe5",
+  "source_commit": "285e63f2158d0fb8fda09d23e2860d59d499b408",
   "source_file": "upstream/mjlab_research/src/mjlab/tasks/tracking/mdp/commands.py",
   "source_sha256": "af1dc913d7d9901652a7f1c015f6b2177307a85dbcae396fe8af57aa8597fcc7",
   "change": "0.2-second motion timeline bins to 1.0-second motion timeline bins",
@@ -16,8 +16,21 @@
   },
   "comparison_baseline": "official-execution-20261112/ppo-sim-rank4-18h-1120a-recovered",
   "planned_gpu": 4,
-  "planned_stage": "four-H100 20/60-second timing smoke before any long run",
-  "new_H100_submitted": false,
+  "planned_stage": "four-H100 smoke verified; four-H100 18-hour paper-sampler run in progress",
+  "new_H100_submitted": true,
+  "active_job": {
+    "job_name": "smimic-ppo4-paper-1s-18h-260010076-1122e",
+    "uid": "8834d19a8682489ca79d33bf518108b1",
+    "source_commit": "285e63f2158d0fb8fda09d23e2860d59d499b408",
+    "gpu": "4x NVIDIA H100 80GB HBM3",
+    "sampler_bin_seconds": 1.0,
+    "verified_checkpoints_seconds": [3600, 7200, 14400, 28800],
+    "latest_update": 14200,
+    "latest_observed_seconds": 28801.913391028065,
+    "latest_ui_time": "2026-11-22 10:19:26.795",
+    "terminal_receipt_verified": false,
+    "wrapper_warning": "outer heredoc closing-marker warning observed; inner training stage started"
+  },
   "paper_result_claim": false,
-  "notes": "The four-H100 smoke must retain the patch hash and restore the shared cloud environment after exit."
+  "notes": "The smoke retained the patch hash and restored the shared cloud environment. The long run has verified progress through 28800 training seconds. Final curve, receipts, and paper-level result remain unclaimed until terminal readback."
 }
