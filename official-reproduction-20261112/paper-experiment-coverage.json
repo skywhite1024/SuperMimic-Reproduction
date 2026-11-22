@@ -154,7 +154,7 @@
         6,
         7
       ],
-      "status": "one_and_four_H100_18h_curves_verified_8_H100_and_exact_author_sampler_open",
+      "status": "one_and_four_H100_18h_curves_verified_paper_sampler_1s_run_in_progress_8_H100_open",
       "evidence": [
         "manual-reset-v2-lafan40-result.json",
         "manual-reset-v2-lafan40-accounting.json",
@@ -170,9 +170,11 @@
         "ppo-sim-single-vs-four-1120a/comparison.png",
         "ppo-sim-single-vs-four-1120a/four-h100-validation.json",
         "ppo-sim-single-vs-four-1120a/four-h100-readback-validation.json",
-        "paper-sampler-audit-20261122.json"
+        "paper-sampler-audit-20261122.json",
+        "paper-sampler-1s-ablation-20261122-plan.json",
+        "../../official-execution-20261112/ppo-sim-rank4-paper-sampler-1s-18h-1122e-live-checkpoints-20261122.json"
       ],
-      "qualification": "The one-H100 and four-H100 timed PPO-Sim runs used the same frozen LAFAN40 order, fixed-start v2 protocol, seed 42, rollout length 24, 8192 local environments per rank, and no world-model updates. Both seven-point 1, 2, 4, 8, 12, 16 and 18-hour series were recovered from original receipts. The four-H100 run completed 32,377 PPO updates and 25,462,308,864 real simulator transitions in 64,802.6 training seconds, reaching 40/40 and mean normalized return 0.785903. The single-H100 control completed 34,275 updates and 6,738,739,200 transitions, reaching 37/40 and 0.672355. The measured four-to-one transition ratio was 3.71 to 3.79 across checkpoints. The 0.82 return reference was not reached by either final checkpoint. The official project page now documents the paper sampler at the semantic level: 1-second bins with a 50/40/10 uniform, low-return focus and keep mixture. The checked-in implementation uses 0.2-second bins, so exact paper-sampler equivalence remains open. The 8-H100 curve remains unavailable.",
+      "qualification": "The one-H100 and four-H100 timed PPO-Sim runs used the same frozen LAFAN40 order, fixed-start v2 protocol, seed 42, rollout length 24, 8192 local environments per rank, and no world-model updates. Both seven-point 1, 2, 4, 8, 12, 16 and 18-hour series were recovered from original receipts. The four-H100 run completed 32,377 PPO updates and 25,462,308,864 real simulator transitions in 64,802.6 training seconds, reaching 40/40 and mean normalized return 0.785903. The single-H100 control completed 34,275 updates and 6,738,739,200 transitions, reaching 37/40 and 0.672355. The measured four-to-one transition ratio was 3.71 to 3.79 across checkpoints. The 0.82 return reference was not reached by either final checkpoint. The official project page now documents the paper sampler at the semantic level: 1-second bins with a 50/40/10 uniform, low-return focus and keep mixture. The checked-in implementation uses 0.2-second bins. A controlled four-H100 1-second-bin run is now in progress and has verified the 1, 2, 4 and 8-hour training checkpoints. Its final curve and paper-level comparison remain open. The 8-H100 curve remains unavailable.",
       "PPO_Sim_integration": {
         "status": "actual8192G1_PPO_gate_completed_and_originals_verified",
         "uid": "12b951aa6d3c4027b867c5591b1af8dc",
@@ -261,10 +263,19 @@
         },
         "comparison_artifact": "ppo-sim-single-vs-four-1120a/comparison.json",
         "paper_sampler_spec_verified": true,
-        "paper_sampler_implementation_match": false
+        "paper_sampler_implementation_match": false,
+        "paper_sampler_1s_ablation": {
+          "status": "running_progress_verified",
+          "job_uid": "8834d19a8682489ca79d33bf518108b1",
+          "source_commit": "285e63f2158d0fb8fda09d23e2860d59d499b408",
+          "verified_training_seconds": [3600, 7200, 14400, 28800],
+          "latest_update": 14200,
+          "terminal_receipt_verified": false,
+          "paper_result_claim": false
+        }
       },
       "paper_sampler_spec": {
-        "status": "public_semantics_verified_local_bin_width_mismatch",
+        "status": "public_semantics_verified_local_mismatch_1s_ablation_running",
         "paper_bin_seconds": 1.0,
         "local_bin_seconds": 0.2,
         "mixture": {
@@ -548,10 +559,11 @@
     }
   ],
   "original_scope_retained": true,
-  "no_new_cloud_jobs_submitted_by_this_audit": true,
-  "next_execution_priority": "Run a controlled paper-spec sampler ablation with 1-second bins if a fresh four-H100 job is justified. Keep the verified source curve separate. Exact BONES membership, 8-H100 curve and physical G1 deployment remain open.",
-  "last_status_update": "2026-11-22T00:15:05.103718+08:00",
-  "execution_status": "four_H100_PPO_Sim_verified_paper_sampler_audit_open",
+  "no_new_cloud_jobs_submitted_by_this_audit": false,
+  "controlled_paper_sampler_ablation_submitted": true,
+  "next_execution_priority": "Finish the active four-H100 1-second-bin run, recover terminal receipts, and validate its curve before updating the paper comparison. Exact BONES membership, 8-H100 curve and physical G1 deployment remain open.",
+  "last_status_update": "2026-11-22T11:59:48+08:00",
+  "execution_status": "four_H100_PPO_Sim_verified_paper_sampler_run_in_progress",
   "resume_requires_explicit_user_request": false,
   "execution_priorities_before_user_pause": [
     "Finish frozen raw320k and separately evaluate finalmodel with correctedv2 plus completearrayaudit",
