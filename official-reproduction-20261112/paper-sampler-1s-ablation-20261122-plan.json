@@ -24,6 +24,8 @@
     "source_commit": "285e63f2158d0fb8fda09d23e2860d59d499b408",
     "gpu": "4x NVIDIA H100 80GB HBM3",
     "sampler_bin_seconds": 1.0,
+    "cloud_original_source_sha256": "bd93934c3a93d545f63eac126be969338c8f32c590571a6279e0153c889a77a6",
+    "cloud_patched_source_sha256": "6be95c9187f2a7eb9cd7a67e2afae8b9f3545682267c0c0ef71134e289dc3c8c",
     "verified_checkpoints_seconds": [3600, 7200, 14400, 28800],
     "latest_update": 14200,
     "latest_observed_seconds": 28801.913391028065,

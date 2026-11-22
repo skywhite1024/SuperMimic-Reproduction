@@ -268,6 +268,8 @@
           "status": "running_progress_verified",
           "job_uid": "8834d19a8682489ca79d33bf518108b1",
           "source_commit": "285e63f2158d0fb8fda09d23e2860d59d499b408",
+          "cloud_original_source_sha256": "bd93934c3a93d545f63eac126be969338c8f32c590571a6279e0153c889a77a6",
+          "cloud_patched_source_sha256": "6be95c9187f2a7eb9cd7a67e2afae8b9f3545682267c0c0ef71134e289dc3c8c",
           "verified_training_seconds": [3600, 7200, 14400, 28800],
           "latest_update": 14200,
           "terminal_receipt_verified": false,
