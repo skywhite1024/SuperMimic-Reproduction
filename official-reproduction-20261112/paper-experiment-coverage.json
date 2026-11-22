@@ -2,7 +2,7 @@
   "status": "scope_audit_incomplete_paper_reproduction",
   "goal_complete": false,
   "scope_redefined": false,
-  "as_of": "2026-11-22T00:15:05.103718+08:00",
+  "as_of": "2026-11-22T21:25:24+08:00",
   "paper_pdf_sha256": "fe213017ab062f4acc3965da89abd3c29969163e144a2628a662b8ce46691009",
   "upstream_supermimic_commit": "abc124c1bd5976341034668af3d12c087f2f1f55",
   "code_and_evidence_commit": "f9ecd608",
@@ -154,7 +154,7 @@
         6,
         7
       ],
-      "status": "one_and_four_H100_18h_curves_verified_paper_sampler_1s_run_in_progress_8_H100_open",
+      "status": "one_and_four_H100_18h_curves_verified_paper_sampler_1s_artifacts_complete_wrapper_exit_127_8_H100_open",
       "evidence": [
         "manual-reset-v2-lafan40-result.json",
         "manual-reset-v2-lafan40-accounting.json",
@@ -174,7 +174,7 @@
         "paper-sampler-1s-ablation-20261122-plan.json",
         "../../official-execution-20261112/ppo-sim-rank4-paper-sampler-1s-18h-1122e-live-checkpoints-20261122.json"
       ],
-      "qualification": "The one-H100 and four-H100 timed PPO-Sim runs used the same frozen LAFAN40 order, fixed-start v2 protocol, seed 42, rollout length 24, 8192 local environments per rank, and no world-model updates. Both seven-point 1, 2, 4, 8, 12, 16 and 18-hour series were recovered from original receipts. The four-H100 run completed 32,377 PPO updates and 25,462,308,864 real simulator transitions in 64,802.6 training seconds, reaching 40/40 and mean normalized return 0.785903. The single-H100 control completed 34,275 updates and 6,738,739,200 transitions, reaching 37/40 and 0.672355. The measured four-to-one transition ratio was 3.71 to 3.79 across checkpoints. The 0.82 return reference was not reached by either final checkpoint. The official project page now documents the paper sampler at the semantic level: 1-second bins with a 50/40/10 uniform, low-return focus and keep mixture. The checked-in implementation uses 0.2-second bins. A controlled four-H100 1-second-bin run is now in progress and has verified the 1, 2, 4 and 8-hour training checkpoints. Its final curve and paper-level comparison remain open. The 8-H100 curve remains unavailable.",
+      "qualification": "The one-H100 and four-H100 timed PPO-Sim runs used the same frozen LAFAN40 order, fixed-start v2 protocol, seed 42, rollout length 24, 8192 local environments per rank, and no world-model updates. The original four-H100 run reached 40/40 and mean normalized return 0.785903. The controlled 1-second-bin four-H100 run completed all seven checkpoints at 3600, 7200, 14400, 28800, 43200, 57600 and 64800 training seconds. Its seven curve points were recovered with 24, 33, 38, 39, 40, 40 and 40 successful clips, and means 0.505659, 0.608555, 0.693100, 0.735077, 0.771037, 0.790699 and 0.795845. The scientific pipeline marker and 44 file receipts are complete. ACP reports the platform task failed because the outer heredoc wrapper returned 127 after the complete marker, while the sampler restoration trap returned 0. The exact paper dataset membership and 8-H100 curve remain open.",
       "PPO_Sim_integration": {
         "status": "actual8192G1_PPO_gate_completed_and_originals_verified",
         "uid": "12b951aa6d3c4027b867c5591b1af8dc",
@@ -194,7 +194,9 @@
         "ppo-sim-rank2-smoke-1119v/validation.json",
         "ppo-sim-18h-1119q/validation.json",
         "../../official-execution-20261112/ppo-sim-rank4-18h-1120a-recovered/validation.json",
-        "../../official-execution-20261112/ppo-original-readback-1120b-offline-log.txt.gz"
+        "../../official-execution-20261112/ppo-original-readback-1120b-offline-log.txt.gz",
+        "../../official-execution-20261112/execution.json",
+        "../../official-execution-20261112/ppo-sim-rank4-paper-sampler-1s-18h-1122e-live-checkpoints-20261122.json"
       ],
       "native_final_successes": 40,
       "native_final_mean": 0.8549796937353648,
@@ -265,15 +267,90 @@
         "paper_sampler_spec_verified": true,
         "paper_sampler_implementation_match": false,
         "paper_sampler_1s_ablation": {
-          "status": "running_progress_verified",
+          "status": "complete_artifacts_wrapper_exit_127",
           "job_uid": "8834d19a8682489ca79d33bf518108b1",
           "source_commit": "285e63f2158d0fb8fda09d23e2860d59d499b408",
           "cloud_original_source_sha256": "bd93934c3a93d545f63eac126be969338c8f32c590571a6279e0153c889a77a6",
           "cloud_patched_source_sha256": "6be95c9187f2a7eb9cd7a67e2afae8b9f3545682267c0c0ef71134e289dc3c8c",
-          "verified_training_seconds": [3600, 7200, 14400, 28800],
-          "latest_update": 14200,
-          "terminal_receipt_verified": false,
-          "paper_result_claim": false
+          "verified_training_seconds": [
+            3600,
+            7200,
+            14400,
+            28800,
+            43200,
+            57600,
+            64800
+          ],
+          "latest_update": 32057,
+          "terminal_receipt_verified": true,
+          "paper_result_claim": false,
+          "latest_observed_seconds": 64803.101876612054,
+          "receipt_meta_count": 44,
+          "scientific_pipeline_status": "complete",
+          "platform_status": "failed",
+          "wrapper_exit_code": 127,
+          "sampler_restore_rc": 0,
+          "curve_points": [
+            {
+              "ppo_update": 1751,
+              "collection_steps": 42024,
+              "successes": 24,
+              "failures": 16,
+              "mean_normalized_full_motion_return": 0.5056588080701052,
+              "ui_time": "2026-11-22 20:26:20.776"
+            },
+            {
+              "ppo_update": 3508,
+              "collection_steps": 84192,
+              "successes": 33,
+              "failures": 7,
+              "mean_normalized_full_motion_return": 0.6085546841642657,
+              "ui_time": "2026-11-22 20:33:02.777"
+            },
+            {
+              "ppo_update": 7067,
+              "collection_steps": 169608,
+              "successes": 38,
+              "failures": 2,
+              "mean_normalized_full_motion_return": 0.6930997283060071,
+              "ui_time": "2026-11-22 20:39:42.777"
+            },
+            {
+              "ppo_update": 14200,
+              "collection_steps": 340800,
+              "successes": 39,
+              "failures": 1,
+              "mean_normalized_full_motion_return": 0.7350770746035887,
+              "ui_time": "2026-11-22 20:46:26.776"
+            },
+            {
+              "ppo_update": 21341,
+              "collection_steps": 512184,
+              "successes": 40,
+              "failures": 0,
+              "mean_normalized_full_motion_return": 0.7710372613677131,
+              "ui_time": "2026-11-22 20:53:11.777"
+            },
+            {
+              "ppo_update": 28482,
+              "collection_steps": 683568,
+              "successes": 40,
+              "failures": 0,
+              "mean_normalized_full_motion_return": 0.7906994112742023,
+              "ui_time": "2026-11-22 20:59:49.777"
+            },
+            {
+              "ppo_update": 32057,
+              "collection_steps": 769368,
+              "successes": 40,
+              "failures": 0,
+              "mean_normalized_full_motion_return": 0.7958447480321915,
+              "ui_time": "2026-11-22 21:06:36.786"
+            }
+          ],
+          "final_successes": 40,
+          "final_mean_normalized_return": 0.7958447480321915,
+          "full_complete_utc": "2026-11-22T13:06:59Z"
         }
       },
       "paper_sampler_spec": {

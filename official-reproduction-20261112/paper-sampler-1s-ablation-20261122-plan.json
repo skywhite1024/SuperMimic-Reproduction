@@ -1,5 +1,5 @@
 {
-  "status": "running_progress_verified",
+  "status": "complete_artifacts_wrapper_exit_127",
   "created_at": "2026-11-22",
   "branch": "ljd/paper-sampler-1s-ablation-20261122",
   "source_commit": "285e63f2158d0fb8fda09d23e2860d59d499b408",
@@ -16,7 +16,7 @@
   },
   "comparison_baseline": "official-execution-20261112/ppo-sim-rank4-18h-1120a-recovered",
   "planned_gpu": 4,
-  "planned_stage": "four-H100 smoke verified; four-H100 18-hour paper-sampler run in progress",
+  "planned_stage": "four-H100 18-hour paper-sampler run and seven-point curve evaluation complete at artifact level. ACP wrapper ended with 127 after complete marker.",
   "new_H100_submitted": true,
   "active_job": {
     "job_name": "smimic-ppo4-paper-1s-18h-260010076-1122e",
@@ -26,13 +26,87 @@
     "sampler_bin_seconds": 1.0,
     "cloud_original_source_sha256": "bd93934c3a93d545f63eac126be969338c8f32c590571a6279e0153c889a77a6",
     "cloud_patched_source_sha256": "6be95c9187f2a7eb9cd7a67e2afae8b9f3545682267c0c0ef71134e289dc3c8c",
-    "verified_checkpoints_seconds": [3600, 7200, 14400, 28800],
-    "latest_update": 14200,
-    "latest_observed_seconds": 28801.913391028065,
-    "latest_ui_time": "2026-11-22 10:19:26.795",
-    "terminal_receipt_verified": false,
-    "wrapper_warning": "outer heredoc closing-marker warning observed; inner training stage started"
+    "verified_checkpoints_seconds": [
+      3600,
+      7200,
+      14400,
+      28800,
+      43200,
+      57600,
+      64800
+    ],
+    "latest_update": 32057,
+    "latest_observed_seconds": 64803.101876612054,
+    "latest_ui_time": "2026-11-22 21:08:06.380",
+    "terminal_receipt_verified": true,
+    "wrapper_warning": "outer heredoc closing-marker warning observed; inner training stage started",
+    "receipt_meta_count": 44,
+    "scientific_pipeline_status": "complete",
+    "platform_status": "failed",
+    "wrapper_exit_code": 127,
+    "sampler_restore_rc": 0,
+    "full_complete_utc": "2026-11-22T13:06:59Z",
+    "curve_points": [
+      {
+        "ppo_update": 1751,
+        "collection_steps": 42024,
+        "successes": 24,
+        "failures": 16,
+        "mean_normalized_full_motion_return": 0.5056588080701052,
+        "ui_time": "2026-11-22 20:26:20.776"
+      },
+      {
+        "ppo_update": 3508,
+        "collection_steps": 84192,
+        "successes": 33,
+        "failures": 7,
+        "mean_normalized_full_motion_return": 0.6085546841642657,
+        "ui_time": "2026-11-22 20:33:02.777"
+      },
+      {
+        "ppo_update": 7067,
+        "collection_steps": 169608,
+        "successes": 38,
+        "failures": 2,
+        "mean_normalized_full_motion_return": 0.6930997283060071,
+        "ui_time": "2026-11-22 20:39:42.777"
+      },
+      {
+        "ppo_update": 14200,
+        "collection_steps": 340800,
+        "successes": 39,
+        "failures": 1,
+        "mean_normalized_full_motion_return": 0.7350770746035887,
+        "ui_time": "2026-11-22 20:46:26.776"
+      },
+      {
+        "ppo_update": 21341,
+        "collection_steps": 512184,
+        "successes": 40,
+        "failures": 0,
+        "mean_normalized_full_motion_return": 0.7710372613677131,
+        "ui_time": "2026-11-22 20:53:11.777"
+      },
+      {
+        "ppo_update": 28482,
+        "collection_steps": 683568,
+        "successes": 40,
+        "failures": 0,
+        "mean_normalized_full_motion_return": 0.7906994112742023,
+        "ui_time": "2026-11-22 20:59:49.777"
+      },
+      {
+        "ppo_update": 32057,
+        "collection_steps": 769368,
+        "successes": 40,
+        "failures": 0,
+        "mean_normalized_full_motion_return": 0.7958447480321915,
+        "ui_time": "2026-11-22 21:06:36.786"
+      }
+    ],
+    "final_successes": 40,
+    "final_mean_normalized_full_motion_return": 0.7958447480321915
   },
   "paper_result_claim": false,
-  "notes": "The smoke retained the patch hash and restored the shared cloud environment. The long run has verified progress through 28800 training seconds. Final curve, receipts, and paper-level result remain unclaimed until terminal readback."
+  "notes": "The 4x H100 scientific pipeline completed the seven checkpoints and seven curve evaluations. 44 RECEIPT_META records were emitted. ACP reports failed only because the outer heredoc wrapper returned 127 after PAPER_SAMPLER_FULL_COMPLETE. PAPER_SAMPLER_RESTORE_RC=0. Report the artifact-level curve with this wrapper caveat and keep the exact paper benchmark claim open."
 }
