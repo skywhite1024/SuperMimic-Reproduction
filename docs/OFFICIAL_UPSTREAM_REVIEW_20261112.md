@@ -1548,3 +1548,32 @@ The official project page now states the reset contract at the semantic level. T
 The imported implementation currently derives `bin_count` with `0.2 / env.step_dt`, which produces 0.2-second bins at the 50 Hz control rate. Its return sampler defaults match the documented 50/40/10 mixture and steepness 25, but the timeline discretization differs. The four-H100 timing curve therefore stays bound to the released implementation contract. A fresh paper-spec sampler ablation requires an explicit bin-width change and a new controlled run.
 
 The discrepancy is recorded in [paper-sampler-audit-20261122.json](../official-reproduction-20261112/paper-sampler-audit-20261122.json). The semantic specification is documented by the [official project page](https://supermimic.github.io/) and the current [paper version](https://arxiv.org/abs/2610.28480).
+
+## 91. Four-H100 paper-spec sampler ablation accepted at the 12-hour cutoff
+
+The corrected direct command was submitted as ACP job `1123b` on branch
+`ljd/official-supermimic`, using source commit
+`390e3cd80105b7d8ee8111c1473ee10cad10abe5` and command SHA256
+`638c5288d300269903791dcaf6317d5e268ebbd41b64f26757fbf94d49979d66`.
+The cloud log recorded four NVIDIA H100 80GB HBM3 devices, a 1.0-second
+sampler bin, and the patched and original sampler hashes.
+
+| Training hours | PPO updates | Observed training seconds |
+| ---: | ---: | ---: |
+| 1 | 1,706 | 3,602.2205 |
+| 2 | 3,425 | 7,203.0367 |
+| 4 | 6,837 | 14,402.0645 |
+| 8 | 13,942 | 28,803.2921 |
+| 12 | 20,878 | 43,203.6974 |
+
+The job was stopped after the 12-hour receipt at the user-directed acceptance
+cutoff. The terminal log recorded `PAPER_SAMPLER_RESTORE_RC=0` and
+`PAPER_SAMPLER_FULL_EXIT=0`, and the ACP list reached `已停止`. The wrapper
+restored the sampler source successfully. The planned 18-hour
+`PAPER_SAMPLER_FULL_COMPLETE` marker is absent because the run ended at the
+12-hour cutoff. This receipt accepts command persistence, four-GPU startup,
+ordered timed progress and cleanup behavior. The evidence scope ends at the
+12-hour cutoff and contains no 18-hour paper-quality curve.
+
+The compact receipt is preserved in
+[paper-sampler-1s-1123b-12h-receipt.json](../official-reproduction-20261112/paper-sampler-1s-1123b-12h-receipt.json).

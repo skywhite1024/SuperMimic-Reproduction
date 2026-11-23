@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "status": "controlled_12h_acceptance_cutoff",
+  "job": {
+    "display_name": "260010076-SuperMimic-PPO-Sim-4GPU-paper-sampler-1s-18h-1123b",
+    "name": "smimic-ppo4-paper-1s-18h-260010076-1123b",
+    "uid": "a8ea787715a84f02b352ff77f9e78444",
+    "platform_status": "stopped",
+    "created_at": "2026-11-23 02:50:35 +08:00",
+    "stop_requested_at": "2026-11-23 15:12:50 +08:00",
+    "ui_terminal_status": "已停止",
+    "ui_terminal_time": "2026-11-23 15:15:15"
+  },
+  "source": {
+    "branch": "ljd/official-supermimic",
+    "commit": "390e3cd80105b7d8ee8111c1473ee10cad10abe5",
+    "command_file": "../../official-execution-20261112/ppo-sim-rank4-paper-sampler-1s-18h-1122f.command.sh",
+    "command_sha256": "638c5288d300269903791dcaf6317d5e268ebbd41b64f26757fbf94d49979d66",
+    "correction": "Direct shell command with no outer heredoc wrapper, correcting the prior platform exit 127."
+  },
+  "runtime": {
+    "gpu": "4x NVIDIA H100 80GB HBM3",
+    "image": "ngc-pytorch:25.06-cu12.9-py3.12-ubuntu24.04",
+    "framework": "PyTorch DDP",
+    "afs": "afs-share-01g-2026 -> /mnt/afs",
+    "paper_sampler_bin_seconds": 1.0,
+    "original_sampler_sha256": "bd93934c3a93d545f63eac126be969338c8f32c590571a6279e0153c889a77a6",
+    "patched_sampler_sha256": "6be95c9187f2a7eb9cd7a67e2afae8b9f3545682267c0c0ef71134e289dc3c8c",
+    "start_marker": "PAPER_SAMPLER_FULL_START 2026-11-22T18:51:18Z",
+    "output": "/mnt/afs/260010076/SuperMimic/official-20261112/runs/ppo-sim-rank4-paper-sampler-1s-18h-1122f",
+    "log": "/mnt/afs/260010076/SuperMimic/official-20261112/logs/ppo-sim-rank4-paper-sampler-1s-18h-1122f.log"
+  },
+  "timed_snapshots": [
+    {"training_seconds": 3600.0, "observed_seconds": 3602.2204980291426, "update": 1706, "ui_time": "2026-11-23 03:54:28.103"},
+    {"training_seconds": 7200.0, "observed_seconds": 7203.036691691726, "update": 3425, "ui_time": "2026-11-23 04:54:28.089"},
+    {"training_seconds": 14400.0, "observed_seconds": 14402.064507775009, "update": 6837, "ui_time": "2026-11-23 06:54:27.104"},
+    {"training_seconds": 28800.0, "observed_seconds": 28803.29205058515, "update": 13942, "ui_time": "2026-11-23 10:54:29.105"},
+    {"training_seconds": 43200.0, "observed_seconds": 43203.69740395248, "update": 20878, "ui_time": "2026-11-23 14:54:29.103"}
+  ],
+  "terminal_receipt": {
+    "log_time": "2026-11-23 15:12:57.089",
+    "PAPER_SAMPLER_RESTORE_RC": 0,
+    "PAPER_SAMPLER_FULL_EXIT": 0,
+    "PAPER_SAMPLER_FULL_COMPLETE": false,
+    "source_restored": true,
+    "controlled_stop": true
+  },
+  "acceptance": {
+    "criteria": [
+      "The corrected direct command persisted in the ACP detail page.",
+      "Four H100 GPU lines were observed in the cloud log.",
+      "The 1, 2, 4, 8 and 12 hour timed snapshots were observed in order.",
+      "The sampler source restoration receipt and zero wrapper exit receipt were observed after the controlled stop."
+    ],
+    "accepted_at": "2026-11-23 15:15:15 +08:00",
+    "limitation": "This is a 12-hour controlled-stop acceptance. The planned 18-hour full-complete marker and a full paper-quality curve are intentionally absent."
+  },
+  "cloud_log_filter": "ACP cloud monitor tab 23"
+}
